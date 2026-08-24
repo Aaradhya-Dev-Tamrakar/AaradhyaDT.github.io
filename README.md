@@ -22,7 +22,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v49.42 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v49.43 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
@@ -39,7 +39,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   │   ├── og-image.jpg        # Open Graph social sharing preview card
 │   │   └── logos/              # Institutional logos (IEEE KEC, Fusemachines, EPC Club, Maker's Space, NSSR)
 │   ├── js/
-│   │   ├── script.js           # Core site engine: nav, theme toggle, access control, Google Sign-In & search (v49.42)
+│   │   ├── script.js           # Core site engine: nav, theme toggle, access control, Google Sign-In & search (v49.43)
 │   │   ├── bg-animations.js    # Standalone SignalWave and PCBTraces background canvas animations
 │   │   ├── modules/            # Decoupled ES/IIFE JavaScript modules (core, ui, cmdk, access, tour, audio, terminal, haptics)
 │   │   └── last-commit.json    # Commit metadata stamped on push via GitHub Actions for live commit status display
