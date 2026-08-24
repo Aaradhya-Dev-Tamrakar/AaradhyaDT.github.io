@@ -998,6 +998,19 @@ html[data-theme="light"] .card-gradient-border::before {
   word-break: break-word;
 }
 
+.resume-sheet-contact a {
+  color: #1a5c96;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  text-decoration-color: rgba(26, 92, 150, 0.35);
+  transition: color 0.15s, text-decoration-color 0.15s;
+}
+
+.resume-sheet-contact a:hover {
+  color: #0f3a61;
+  text-decoration-color: currentColor;
+}
+
 .resume-sheet-section {
   margin-bottom: 1.25rem;
 }

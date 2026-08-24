@@ -183,6 +183,11 @@
     line-height: 1.35 !important;
   }
 
+  .resume-sheet-contact a {
+    color: #111111 !important;
+    text-decoration: underline !important;
+  }
+
   .resume-sheet-section {
     margin-bottom: 11pt !important;
     break-inside: auto;

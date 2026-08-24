@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v49.47)
+   MODULE: ui.js — aaradhyadt.github.io (v49.48)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -889,6 +889,28 @@ function initSkillRadar(shouldScroll) {
 }
 
 /* ── Tailored ATS Resume Generator & Exporter (v43) ── */
+function getResumeContactHTML() {
+  const raw = RESUME_DATA.contact || '';
+  // Escape HTML then linkify known patterns; keep location plain
+  const esc = s => s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+  let html = esc(raw);
+  html = html.replace(/aaradhyadevtmr@gmail\.com/g, '<a href="mailto:aaradhyadevtmr@gmail.com">aaradhyadevtmr@gmail.com</a>');
+  html = html.replace(/\+977 9844602050/g, '<a href="tel:+9779844602050">+977 9844602050</a>');
+  html = html.replace(/linkedin\.com\/in\/aaradhya-dev-tamrakar/g, '<a href="https://linkedin.com/in/aaradhya-dev-tamrakar" target="_blank" rel="noopener noreferrer">linkedin.com/in/aaradhya-dev-tamrakar</a>');
+  html = html.replace(/github\.com\/AaradhyaDT/g, '<a href="https://github.com/AaradhyaDT" target="_blank" rel="noopener noreferrer">github.com/AaradhyaDT</a>');
+  html = html.replace(/aaradhyadt\.github\.io/g, '<a href="https://aaradhyadt.github.io" target="_blank" rel="noopener noreferrer">aaradhyadt.github.io</a>');
+  return html;
+}
+function getResumeContactMarkdown() {
+  const raw = RESUME_DATA.contact || '';
+  let md = raw;
+  md = md.replace('aaradhyadevtmr@gmail.com', '[aaradhyadevtmr@gmail.com](mailto:aaradhyadevtmr@gmail.com)');
+  md = md.replace('+977 9844602050', '[+977 9844602050](tel:+9779844602050)');
+  md = md.replace('linkedin.com/in/aaradhya-dev-tamrakar', '[linkedin.com/in/aaradhya-dev-tamrakar](https://linkedin.com/in/aaradhya-dev-tamrakar)');
+  md = md.replace('github.com/AaradhyaDT', '[github.com/AaradhyaDT](https://github.com/AaradhyaDT)');
+  md = md.replace('aaradhyadt.github.io', '[aaradhyadt.github.io](https://aaradhyadt.github.io)');
+  return md;
+}
 function generateResumePlainText(roleKey) {
   const roleData = RESUME_DATA.roles[roleKey] || RESUME_DATA.roles.all;
   let lines = [];
@@ -922,7 +944,7 @@ function generateResumeMarkdown(roleKey) {
   let md = [];
   md.push(`# ${RESUME_DATA.name}`);
   md.push(`### ${roleData.title}`);
-  md.push(`**Contact:** ${RESUME_DATA.contact}`);
+  md.push(`**Contact:** ${getResumeContactMarkdown()}`);
   md.push('');
   md.push(`## Professional Summary`);
   md.push(RESUME_DATA.summary);
@@ -1105,7 +1127,7 @@ function renderTailoredResumePreview(roleKey) {
     <div class="resume-sheet-head">
       <div class="resume-sheet-name">${RESUME_DATA.name}</div>
       <div class="resume-sheet-subtitle">${roleData.title}</div>
-      <div class="resume-sheet-contact">${RESUME_DATA.contact}</div>
+      <div class="resume-sheet-contact">${getResumeContactHTML()}</div>
     </div>
     <div class="resume-sheet-section">
       <div class="resume-sheet-sec-title">Professional Summary</div>
