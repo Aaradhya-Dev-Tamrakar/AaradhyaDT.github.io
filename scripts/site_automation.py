@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v49.38)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v49.39)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -183,7 +183,7 @@ def sync_metadata(version_tag=None):
     # 2. Update script.js Header & Dynamic Module Loader
     if SCRIPT_JS.exists():
         script_text = SCRIPT_JS.read_text(encoding="utf-8")
-        new_script = re.sub(r"SHARED SCRIPT.*?\(v[\d.]+\)", f"SHARED SCRIPT — aaradhya-dev-tamrakar.github.io ({clean_v})", script_text)
+        new_script = re.sub(r"SHARED SCRIPT.*?\(v[\d.]+\)", f"SHARED SCRIPT — aaradhyadt.github.io ({clean_v})", script_text)
         new_script = re.sub(r"Dynamic Module Loader\s*\(v[\d.]+\)", f"Dynamic Module Loader ({clean_v})", new_script)
         SCRIPT_JS.write_text(new_script, encoding="utf-8")
         results.append(f"Updated script.js headers to '{clean_v}'")
@@ -191,7 +191,7 @@ def sync_metadata(version_tag=None):
     # 3. Update verify.py
     if VERIFY_PY.exists():
         v_text = VERIFY_PY.read_text(encoding="utf-8")
-        new_v = re.sub(r"aaradhya-dev-tamrakar\.github\.io\s*\(v[\d.]+\)", f"aaradhya-dev-tamrakar.github.io ({clean_v})", v_text)
+        new_v = re.sub(r"aaradhya-dev-tamrakar\.github\.io\s*\(v[\d.]+\)", f"aaradhyadt.github.io ({clean_v})", v_text)
         new_v = re.sub(r"Portfolio Site Verification Suite\s*\(v[\d.]+\)", f"Portfolio Site Verification Suite ({clean_v})", new_v)
         VERIFY_PY.write_text(new_v, encoding="utf-8")
         results.append(f"Updated verify.py suite headers to '{clean_v}'")
@@ -218,7 +218,7 @@ def sync_metadata(version_tag=None):
     # 6. Update style.css Header
     if CSS_STYLE.exists():
         css_text = CSS_STYLE.read_text(encoding="utf-8")
-        new_css = re.sub(r"SHARED STYLES.*?\(v[\d.]+\)", f"SHARED STYLES — aaradhya-dev-tamrakar.github.io ({clean_v})", css_text)
+        new_css = re.sub(r"SHARED STYLES.*?\(v[\d.]+\)", f"SHARED STYLES — aaradhyadt.github.io ({clean_v})", css_text)
         CSS_STYLE.write_text(new_css, encoding="utf-8")
         results.append(f"Updated style.css header to '{clean_v}'")
 

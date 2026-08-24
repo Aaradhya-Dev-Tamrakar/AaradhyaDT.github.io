@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhya-dev-tamrakar.github.io (v49.38)
+   MODULE: terminal.js — aaradhyadt.github.io (v49.39)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 

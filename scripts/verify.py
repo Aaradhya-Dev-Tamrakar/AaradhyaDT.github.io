@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhya-dev-tamrakar.github.io (v49.38)
+aaradhyadt.github.io (v49.38)
 
 22 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS runtime safety, CSS URL integrity, deep a11y & SEO,
@@ -905,7 +905,7 @@ def check_js_safety():
             if re.search(r"document\.addEventListener\(['\"]DOMContentLoaded['\"].*?initSkillRadar", mod_text):
                 log_error(cat, f"{mod_path.name} contains orphan DOMContentLoaded -> initSkillRadar listener")
                 all_ok = False
-            if "SHARED SCRIPT — aaradhya-dev-tamrakar.github.io" in mod_text:
+            if "SHARED SCRIPT — aaradhyadt.github.io" in mod_text:
                 log_error(cat, f"{mod_path.name} contains deprecated monolithic 'SHARED SCRIPT' header")
                 all_ok = False
 
@@ -1125,7 +1125,7 @@ def check_tracker_hygiene():
 # ════════════════════════════════════════════════════════════════════
 def main():
     parser = argparse.ArgumentParser(
-        description="Structural integrity checker for aaradhya-dev-tamrakar.github.io"
+        description="Structural integrity checker for aaradhyadt.github.io"
     )
     parser.add_argument("--verbose", "-v", action="store_true",
                         help="Show passing checks too")
@@ -1134,7 +1134,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v49.38)"))
+    print(bold("  Portfolio Site Verification Suite (v49.39)"))
     print(bold("=" * 60))
     print()
 
