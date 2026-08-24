@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v49.39)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v49.40)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -191,7 +191,7 @@ def sync_metadata(version_tag=None):
     # 3. Update verify.py
     if VERIFY_PY.exists():
         v_text = VERIFY_PY.read_text(encoding="utf-8")
-        new_v = re.sub(r"aaradhya-dev-tamrakar\.github\.io\s*\(v[\d.]+\)", f"aaradhyadt.github.io ({clean_v})", v_text)
+        new_v = re.sub(r"aaradhyadt\.github\.io\s*\(v[\d.]+\)", f"aaradhyadt.github.io ({clean_v})", v_text)
         new_v = re.sub(r"Portfolio Site Verification Suite\s*\(v[\d.]+\)", f"Portfolio Site Verification Suite ({clean_v})", new_v)
         VERIFY_PY.write_text(new_v, encoding="utf-8")
         results.append(f"Updated verify.py suite headers to '{clean_v}'")
