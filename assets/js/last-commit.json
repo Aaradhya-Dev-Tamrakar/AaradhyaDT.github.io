@@ -1,6 +1,6 @@
 {
-  "sha": "72ef496ca3bb88eba51e86a85823dafe493bb4e4",
-  "shortSha": "72ef496",
-  "date": "2026-08-24T11:55:31+05:45",
-  "message": "fix(metadata): resolve page diagnostics and manifest compatibility"
+  "sha": "d9675fa1f69deedd813392a6b17f9489f5953057",
+  "shortSha": "d9675fa",
+  "date": "2026-08-24T11:59:11+05:45",
+  "message": "fix(graph): restore viewer compatibility metadata"
 }
