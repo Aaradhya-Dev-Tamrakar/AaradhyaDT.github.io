@@ -10,6 +10,7 @@
           "img[fetchpriority]"
         ]
       }
-    ]
+    ],
+    "css-prefix-order": "off"
   }
 }

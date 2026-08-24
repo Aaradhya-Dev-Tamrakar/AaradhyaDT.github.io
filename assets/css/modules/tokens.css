@@ -8,11 +8,13 @@
   navigation: auto;
 }
 
-.nav-logo {
-  view-transition-name: site-logo;
-}
-.page-title {
-  view-transition-name: page-title;
+@supports (view-transition-name: site-logo) {
+  .nav-logo {
+    view-transition-name: site-logo;
+  }
+  .page-title {
+    view-transition-name: page-title;
+  }
 }
 
 ::view-transition-old(site-logo),

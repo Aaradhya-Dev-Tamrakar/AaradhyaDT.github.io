@@ -1,7 +1,7 @@
 # Graph Report - AaradhyaDT.github.io  (2026-08-24)
 
 ## Corpus Check
-- 25 files · ~292,569 words
+- 25 files · ~292,479 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2f787fc7`
+- Built from commit: `0964d682`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -111,7 +111,7 @@
 1. `bootSite()` - 34 edges
 2. `main()` - 29 edges
 3. `log_pass()` - 23 edges
-4. `Portfolio Website Tracker — v49.43` - 22 edges
+4. `Portfolio Website Tracker — v49.44` - 22 edges
 5. `log_error()` - 20 edges
 6. `log_warning()` - 15 edges
 7. `playAudioCue()` - 14 edges
@@ -210,7 +210,7 @@ Nodes (3): SimOps AI for Graduates Certificate, SimOps Expert Certificate, SimOp
 
 ### Community 94 - "Community 94"
 Cohesion: 0.10
-Nodes (32): AI-Assisted Coding for Developers Certificate, AI Fluency Foundations Certificate, Evidence & Verification Log — v20 additions, Meta, Portfolio Website Tracker — v49.43, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out (+24 more)
+Nodes (32): AI-Assisted Coding for Developers Certificate, AI Fluency Foundations Certificate, Evidence & Verification Log — v20 additions, Meta, Portfolio Website Tracker — v49.44, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out (+24 more)
 
 ### Community 95 - "Community 95"
 Cohesion: 0.08

@@ -1,7 +1,7 @@
 {
   "id": "aaradhya-dev-tamrakar-portfolio",
-  "name": "ADT — Aaradhya Dev Tamrakar Portfolio",
-  "short_name": "ADT Portfolio",
+  "name": "ADT Portfolio",
+  "short_name": "ADT",
   "description": "Portfolio of ADT (Aaradhya Dev Tamrakar) — Electronics Engineer & AI/ML Developer",
   "categories": ["portfolio", "personal", "engineering"],
   "start_url": "/",

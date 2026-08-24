@@ -1,10 +1,10 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v49.43)
+   SHARED SCRIPT — aaradhyadt.github.io (v49.44)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v49.43) ───────────────────────────── */
+/* ── Dynamic Module Loader (v49.44) ───────────────────────────── */
 window.__modulesLoadedPromise = (function () {
   const MODULES = [
     'assets/js/modules/core.js',
@@ -48,7 +48,7 @@ window.__modulesLoadedPromise = (function () {
 /* ── Site release history ─────────────────────────────────── */
 const SITE_RELEASES = [
   {
-    version: 'v49.43',
+    version: 'v49.44',
     date: '2026-08-19',
     sha: 'xtool20',
     title: 'xTool Laser Safety Awareness Training & Printer Maintenance Certifications',

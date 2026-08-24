@@ -48,8 +48,8 @@
   border-radius: 16px;
   padding: 12px;
   box-shadow: 0 16px 40px rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 8px;
@@ -439,7 +439,6 @@ html[data-theme="light"] .tag {
   .terminal-quick-cmds {
     overflow-x: auto;
     white-space: nowrap;
-    -webkit-overflow-scrolling: touch;
     padding-bottom: 0.5rem;
   }
 

@@ -69,6 +69,7 @@
       }
     </script>
 <link rel="manifest" href="site.webmanifest" />
+<link rel="apple-touch-icon" href="assets/images/photo.png" />
 <link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%230d0e11'/&gt;&lt;text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='400' fill='%23d4a85a'&gt;ADT&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -351,6 +352,14 @@
       box-shadow: 0 0 6px var(--swatch-accent);
     }
 
+    .journey-legend-swatch--red { --swatch-accent: var(--glow-red); }
+    .journey-legend-swatch--green { --swatch-accent: var(--glow-green); }
+    .journey-legend-swatch--coral { --swatch-accent: var(--glow-coral); }
+    .journey-legend-swatch--blue { --swatch-accent: var(--glow-blue); }
+    .journey-legend-swatch--violet { --swatch-accent: var(--glow-violet); }
+    .journey-legend-swatch--teal { --swatch-accent: var(--glow-teal); }
+    .journey-legend-swatch--gold { --swatch-accent: var(--glow-gold); }
+
     .journey-card-toggle {
       display: flex;
       align-items: center;
@@ -462,10 +471,10 @@
     .journey-desc code {
       font-family: var(--mono);
       font-size: 0.82em;
-      background: color-mix(in srgb, var(--accent) 12%, transparent);
+      background: var(--accent-a12);
       padding: 0.15em 0.4em;
       border-radius: 4px;
-      border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
+      border: 1px solid var(--accent-a35);
       color: var(--heading);
     }
 
@@ -503,7 +512,7 @@
       font-size: 0.72rem;
       color: var(--accent);
       text-decoration: none;
-      border-bottom: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+      border-bottom: 1px solid var(--accent-a40);
       padding-bottom: 1px;
       transition: border-color 0.25s ease, color 0.25s ease, transform 0.25s ease;
     }
@@ -572,7 +581,7 @@
       width: 19px;
       height: 19px;
       top: 0.45rem;
-      border-color: color-mix(in srgb, var(--accent) 35%, var(--line));
+      border-color: var(--accent-a35);
     }
 
     .journey-item--nested > .journey-node svg {
@@ -738,13 +747,13 @@
       </p>
 <div class="journey-list-controls">
 <div aria-label="Checkpoint type legend" class="journey-legends">
-<span class="journey-legend-item"><span class="journey-legend-swatch" style="--swatch-accent: var(--glow-red)"></span>Security fix</span>
-<span class="journey-legend-item"><span class="journey-legend-swatch" style="--swatch-accent: var(--glow-green)"></span>Feature</span>
-<span class="journey-legend-item"><span class="journey-legend-swatch" style="--swatch-accent: var(--glow-coral)"></span>Bug fix</span>
-<span class="journey-legend-item"><span class="journey-legend-swatch" style="--swatch-accent: var(--glow-blue)"></span>Infra / CI</span>
-<span class="journey-legend-item"><span class="journey-legend-swatch" style="--swatch-accent: var(--glow-violet)"></span>Architecture</span>
-<span class="journey-legend-item"><span class="journey-legend-swatch" style="--swatch-accent: var(--glow-teal)"></span>Repo A</span>
-<span class="journey-legend-item"><span class="journey-legend-swatch" style="--swatch-accent: var(--glow-gold)"></span>Origin</span>
+<span class="journey-legend-item"><span class="journey-legend-swatch journey-legend-swatch--red"></span>Security fix</span>
+<span class="journey-legend-item"><span class="journey-legend-swatch journey-legend-swatch--green"></span>Feature</span>
+<span class="journey-legend-item"><span class="journey-legend-swatch journey-legend-swatch--coral"></span>Bug fix</span>
+<span class="journey-legend-item"><span class="journey-legend-swatch journey-legend-swatch--blue"></span>Infra / CI</span>
+<span class="journey-legend-item"><span class="journey-legend-swatch journey-legend-swatch--violet"></span>Architecture</span>
+<span class="journey-legend-item"><span class="journey-legend-swatch journey-legend-swatch--teal"></span>Repo A</span>
+<span class="journey-legend-item"><span class="journey-legend-swatch journey-legend-swatch--gold"></span>Origin</span>
 </div>
 <button class="journey-toggle-all" id="journeyToggleAllBtn" type="button">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
