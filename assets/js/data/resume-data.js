@@ -7,11 +7,11 @@
 const RESUME_DATA = {
   name: "Aaradhya Dev Tamrakar",
   subtitle: "Electronics, Communication & Information Engineer | AI/ML & Embedded Edge Systems",
-  contact: "Kathmandu, Nepal ┬À aaradhyadevtmr@gmail.com ┬À +977 9844602050 ┬À linkedin.com/in/aaradhya-dev-tamrakar ┬À github.com/AaradhyaDT ┬À aaradhyadt.github.io",
+  contact: "Kathmandu, Nepal · aaradhyadevtmr@gmail.com · +977 9844602050 · linkedin.com/in/aaradhya-dev-tamrakar · github.com/AaradhyaDT · aaradhyadt.github.io",
   summary: "Electronics, Communication and Information student at IOE, Kathmandu Engineering College (Year IV/I). Builds ML pipelines spanning classification, regression, tree-based ensembles, and agentic Text-to-SQL systems; deploys via FastAPI and Docker; develops Android apps with Kotlin/Jetpack Compose. Advancing through the Fusemachines AI Fellowship and NSSR DataCamp Fellowship, while leading SPARK, an ESP32-S3 edge-AI wearable fall-detection system.",
   roles: {
     all: {
-      title: "Master CV ÔÇö Electronics, Embedded & AI Engineering",
+      title: "Master CV — Electronics, Embedded & AI Engineering",
       sections: [
         {
           title: "Education",
@@ -20,7 +20,7 @@ const RESUME_DATA = {
               header: "Bachelor of Engineering (B.E.) in Electronics, Communication & Information",
               sub: "Institute of Engineering (IOE), Kathmandu Engineering College | Year IV / Part I (Expected: January 2027)",
               bullets: [
-                "Coursework: Machine Learning ┬À Signals and Systems ┬À Digital Electronics ┬À Control Systems ┬À Communication Systems."
+                "Coursework: Machine Learning · Signals and Systems · Digital Electronics · Control Systems · Communication Systems."
               ]
             }
           ]
@@ -29,38 +29,38 @@ const RESUME_DATA = {
           title: "Experience & Leadership",
           items: [
             {
-              header: "Vice Chair ÔÇö IEEE KEC KTM Student Branch",
-              sub: "2026 ÔÇô Present",
+              header: "Vice Chair — IEEE KEC KTM Student Branch",
+              sub: "2026 – Present",
               bullets: [
                 "Directed branch strategy, scaling initiatives and member engagement across executive committees.",
                 "Managed relations across the broader technical community."
               ]
             },
             {
-              header: "Event Manager ÔÇö Electronics Project Club (EPC), KEC",
-              sub: "2026 ÔÇô Present",
+              header: "Event Manager — Electronics Project Club (EPC), KEC",
+              sub: "2026 – Present",
               bullets: [
                 "Coordinated logistics for club workshops and department activities."
               ]
             },
             {
-              header: "Makerspace Ambassador ÔÇö KEC Maker's Space",
-              sub: "June 2026 ÔÇô Present",
+              header: "Makerspace Ambassador — KEC Maker's Space",
+              sub: "June 2026 – Present",
               bullets: [
-                "Shipped site-wide fixes to the Maker's Space website ÔÇö image repair, content consistency, UI cleanup."
+                "Shipped site-wide fixes to the Maker's Space website — image repair, content consistency, UI cleanup."
               ]
             },
             {
-              header: "Vice Secretary ÔÇö IEEE KEC KTM Student Branch",
-              sub: "2025 ÔÇô 2026",
+              header: "Vice Secretary — IEEE KEC KTM Student Branch",
+              sub: "2025 – 2026",
               bullets: [
                 "Streamlined operations and grew program participation by managing documentation and orchestrating workshop logistics.",
                 "Coordinated volunteers alongside the committee for seamless execution."
               ]
             },
             {
-              header: "Resource Manager ÔÇö Electronics Project Club (EPC), KEC",
-              sub: "2024 ÔÇô 2026",
+              header: "Resource Manager — Electronics Project Club (EPC), KEC",
+              sub: "2024 – 2026",
               bullets: [
                 "Allocated scheduling and resources for workshops across multiple departments."
               ]
@@ -71,7 +71,7 @@ const RESUME_DATA = {
           title: "Fellowships & Recognitions",
           items: [
             {
-              header: "Fuse AI Fellow ÔÇö Fusemachines AI Fellowship 2026",
+              header: "Fuse AI Fellow — Fusemachines AI Fellowship 2026",
               sub: "Fusemachines | Active (Selected via competitive entrance exam in linear algebra, calculus, probability, Python, ML)",
               bullets: [
                 "Engineered a five-stage agentic Text-to-SQL pipeline (Planner ÔåÆ Generator ÔåÆ Validator ÔåÆ Executor ÔåÆ Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
@@ -81,8 +81,8 @@ const RESUME_DATA = {
               ]
             },
             {
-              header: "NSSR DataCamp Fellow ÔÇö Cohort 2",
-              sub: "Nepalese Society of Student Researchers | 2026 ÔÇô Present",
+              header: "NSSR DataCamp Fellow — Cohort 2",
+              sub: "Nepalese Society of Student Researchers | 2026 – Present",
               bullets: [
                 "Secured competitive selection (April 2026) for a sponsored DataCamp Premium license in a limited cohort.",
                 "Delivered six applied GenAI solutions automating null filtering, deduplication, and schema normalization across workflows.",
@@ -95,17 +95,17 @@ const RESUME_DATA = {
           title: "Projects",
           items: [
             {
-              header: "SPARK ÔÇö Wearable Fall Detection System (Major Project)",
-              sub: "ESP32-S3 ┬À TensorFlow Lite Micro ┬À SHAP ┬À MQTT ┬À FastAPI ┬À PostgreSQL (Target Demo: March 2027)",
+              header: "SPARK — Wearable Fall Detection System (Major Project)",
+              sub: "ESP32-S3 · TensorFlow Lite Micro · SHAP · MQTT · FastAPI · PostgreSQL (Target Demo: March 2027)",
               bullets: [
                 "Designed a two-layer ESP32-S3 fall-detection system combining a <5ms threshold gate with an INT8 1D CNN confirmation layer under 100ms.",
                 "Computed per-event SHAP explanations at a local, non-cloud gateway.",
-                "Led the AI and backend work package (WP 1.0) ÔÇö CNN training pipeline, FastAPI/PostgreSQL gateway ÔÇö within a 4-person team supervised by Er. Dipen Manandhar."
+                "Led the AI and backend work package (WP 1.0) — CNN training pipeline, FastAPI/PostgreSQL gateway — within a 4-person team supervised by Er. Dipen Manandhar."
               ]
             },
             {
-              header: "Gesture-Controlled Self-Balancing Robot (GCSBR) ÔÇö Minor Project",
-              sub: "Computer Vision ┬À Arduino ┬À MPU6050 ┬À Stepper Motors ┬À Android ┬À MATLAB",
+              header: "Gesture-Controlled Self-Balancing Robot (GCSBR) — Minor Project",
+              sub: "Computer Vision · Arduino · MPU6050 · Stepper Motors · Android · MATLAB",
               bullets: [
                 "Earned a 'major project level' rating from the academic examiner.",
                 "Implemented PID stabilization firmware validated via a MATLAB-simulation-to-hardware pipeline.",
@@ -114,21 +114,21 @@ const RESUME_DATA = {
             },
             {
               header: "Edge AI Stability Detection System",
-              sub: "Python ┬À Scikit-learn ┬À FastAPI ┬À Joblib",
+              sub: "Python · Scikit-learn · FastAPI · Joblib",
               bullets: [
                 "Predicted platform stability from simulated IMU data using a Random Forest model, reaching 99.8% test accuracy; served via FastAPI."
               ]
             },
             {
               header: "Alpha Android Super-App",
-              sub: "Kotlin ┬À Jetpack Compose ┬À Material3 ┬À DataStore ┬À Apache POI",
+              sub: "Kotlin · Jetpack Compose · Material3 · DataStore · Apache POI",
               bullets: [
                 "Assembled a modular Android super-app (SDK 36) with gesture control, an eSewa Gmail budget tracker, and a Material3 design system."
               ]
             },
             {
-              header: "Nexus ÔÇö Personal AI Operating System",
-              sub: "React (Vite) ┬À FastAPI ┬À SQLite + FTS5 ┬À httpx ┬À asyncio",
+              header: "Nexus — Personal AI Operating System",
+              sub: "React (Vite) · FastAPI · SQLite + FTS5 · httpx · asyncio",
               bullets: [
                 "Unified Groq (Llama 3.3 70B) and Gemini into an AI workspace via parallel fan-out routing, with SQLite + FTS5 context injection."
               ]
@@ -173,7 +173,7 @@ const RESUME_DATA = {
           items: [
             {
               header: "Selected Credentials & Memberships",
-              sub: "IEEE WIE Nepal LaTeX Workshop (May 2026) ┬À IEEE SPAx organizing team ┬À Prompt Engineering Fundamentals (TechAxis) ┬À IEEEXtreme 19.0 (Team ShadowXTREME) ┬À PCB Design & Fabrication Workshop (KEC Robotics Club) ┬À AWS Cloud Computing Workshop ┬À Microsoft Learn Student Ambassador ┬À Member of IEEE KEC KTM Student Branch, Electronics Project Club, KEC Maker's Space, KEC Music Club"
+              sub: "IEEE WIE Nepal LaTeX Workshop (May 2026) · IEEE SPAx organizing team · Prompt Engineering Fundamentals (TechAxis) · IEEEXtreme 19.0 (Team ShadowXTREME) · PCB Design & Fabrication Workshop (KEC Robotics Club) · AWS Cloud Computing Workshop · Microsoft Learn Student Ambassador · Member of IEEE KEC KTM Student Branch, Electronics Project Club, KEC Maker's Space, KEC Music Club"
             }
           ]
         }
@@ -199,7 +199,7 @@ const RESUME_DATA = {
           title: "AI/ML Experience & Fellowships",
           items: [
             {
-              header: "Fuse AI Fellow ÔÇö Fusemachines AI Fellowship 2026",
+              header: "Fuse AI Fellow — Fusemachines AI Fellowship 2026",
               sub: "Fusemachines | Active (Selected via competitive entrance exam in linear algebra, calculus, probability, Python, ML)",
               bullets: [
                 "Engineered a five-stage agentic Text-to-SQL pipeline (Planner ÔåÆ Generator ÔåÆ Validator ÔåÆ Executor ÔåÆ Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
@@ -209,8 +209,8 @@ const RESUME_DATA = {
               ]
             },
             {
-              header: "NSSR DataCamp Fellow ÔÇö Cohort 2",
-              sub: "Nepalese Society of Student Researchers | 2026 ÔÇô Present",
+              header: "NSSR DataCamp Fellow — Cohort 2",
+              sub: "Nepalese Society of Student Researchers | 2026 – Present",
               bullets: [
                 "Delivered 6 applied GenAI workflow automation solutions (null filtering, deduplication, schema normalization).",
                 "Advanced through SQL Associate and Python Data Associate tracks across PostgreSQL, Pandas, and scikit-learn."
@@ -222,8 +222,8 @@ const RESUME_DATA = {
           title: "Selected Machine Learning Projects",
           items: [
             {
-              header: "SPARK ÔÇö Edge AI Wearable Fall Detection (Major Project)",
-              sub: "ESP32-S3 ┬À TensorFlow Lite Micro ┬À SHAP ┬À FastAPI ┬À PostgreSQL",
+              header: "SPARK — Edge AI Wearable Fall Detection (Major Project)",
+              sub: "ESP32-S3 · TensorFlow Lite Micro · SHAP · FastAPI · PostgreSQL",
               bullets: [
                 "Designed two-layer fall detection architecture: <5ms threshold gate + INT8 1D CNN confirmation layer under 100ms.",
                 "Integrated local per-event SHAP explainability on non-cloud edge gateway."
@@ -231,14 +231,14 @@ const RESUME_DATA = {
             },
             {
               header: "Edge AI Stability Detection System",
-              sub: "Python ┬À Scikit-learn ┬À FastAPI ┬À Joblib",
+              sub: "Python · Scikit-learn · FastAPI · Joblib",
               bullets: [
                 "Trained Random Forest classifier reaching 99.8% test accuracy on simulated IMU telemetry; served via FastAPI REST endpoint."
               ]
             },
             {
-              header: "Nexus ÔÇö Personal AI Operating System",
-              sub: "React ┬À FastAPI ┬À SQLite + FTS5 ┬À LLM Fan-Out Routing",
+              header: "Nexus — Personal AI Operating System",
+              sub: "React · FastAPI · SQLite + FTS5 · LLM Fan-Out Routing",
               bullets: [
                 "Unified Groq (Llama 3.3 70B) and Gemini models via asynchronous parallel fan-out routing with FTS5 semantic context injection."
               ]
@@ -276,16 +276,16 @@ const RESUME_DATA = {
           title: "Hardware & Robotics Projects",
           items: [
             {
-              header: "SPARK ÔÇö Wearable Fall Detection System (Major Project)",
-              sub: "ESP32-S3 ┬À TensorFlow Lite Micro ┬À MPU6050 ┬À MQTT ┬À Gateway Architecture",
+              header: "SPARK — Wearable Fall Detection System (Major Project)",
+              sub: "ESP32-S3 · TensorFlow Lite Micro · MPU6050 · MQTT · Gateway Architecture",
               bullets: [
                 "Engineered two-tier detection combining a <5ms physical threshold interrupt gate with an INT8 1D CNN inference model (<100ms latency) running on ESP32-S3.",
                 "Constructed edge MQTT gateway on local hardware providing deterministic per-event telemetry and explainability."
               ]
             },
             {
-              header: "Gesture-Controlled Self-Balancing Robot (GCSBR) ÔÇö Minor Project",
-              sub: "Arduino ┬À MPU6050 ┬À Stepper Motors ┬À PID Control ┬À MATLAB ┬À Android CameraX",
+              header: "Gesture-Controlled Self-Balancing Robot (GCSBR) — Minor Project",
+              sub: "Arduino · MPU6050 · Stepper Motors · PID Control · MATLAB · Android CameraX",
               bullets: [
                 "Designed inverted pendulum PID stabilization firmware validated through a MATLAB simulation-to-hardware pipeline.",
                 "Built custom Android control app with MediaPipe & CameraX over HC-05 Bluetooth for real-time motor actuation.",
@@ -299,7 +299,7 @@ const RESUME_DATA = {
           items: [
             {
               header: "IEEE KEC KTM Student Branch & EPC Club",
-              sub: "Vice Chair (2026ÔÇôPresent) ┬À Event Manager (2026ÔÇôPresent) ┬À Former Vice Secretary (2025ÔÇô2026) ┬À Resource Manager (2024ÔÇô2026)",
+              sub: "Vice Chair (2026–Present) · Event Manager (2026–Present) · Former Vice Secretary (2025–2026) · Resource Manager (2024–2026)",
               bullets: [
                 "Directed student branch strategy, organized technical workshops in robotics, micro-controllers, PCB design, and LaTeX.",
                 "Managed scheduling and resources for workshops across multiple engineering departments."
@@ -338,21 +338,21 @@ const RESUME_DATA = {
           items: [
             {
               header: "Alpha Android Super-App",
-              sub: "Kotlin ┬À Jetpack Compose ┬À Material3 ┬À DataStore ┬À Apache POI",
+              sub: "Kotlin · Jetpack Compose · Material3 · DataStore · Apache POI",
               bullets: [
                 "Engineered a modular Android super-app targeting SDK 36 with gesture-based controls, eSewa Gmail budget parsing, and a Material3 design system."
               ]
             },
             {
-              header: "Nexus ÔÇö Personal AI Operating System",
-              sub: "React (Vite) ┬À FastAPI ┬À SQLite + FTS5 ┬À httpx ┬À asyncio",
+              header: "Nexus — Personal AI Operating System",
+              sub: "React (Vite) · FastAPI · SQLite + FTS5 · httpx · asyncio",
               bullets: [
                 "Created an AI workspace aggregating Groq (Llama 3.3 70B) and Gemini via asynchronous fan-out routing with SQLite + FTS5 context injection."
               ]
             },
             {
               header: "Containerized Agentic REST API & Microservices",
-              sub: "FastAPI ┬À PostgreSQL ┬À Docker ┬À asyncio",
+              sub: "FastAPI · PostgreSQL · Docker · asyncio",
               bullets: [
                 "Developed containerized REST API microservices with PostgreSQL and Docker under the Fusemachines AI Fellowship, featuring high-throughput async handlers."
               ]

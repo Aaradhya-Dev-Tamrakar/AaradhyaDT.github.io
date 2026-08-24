@@ -9,7 +9,7 @@ const SITE_RELEASES = [
 
   {
 
-    version: 'v49.46',
+    version: 'v49.47',
 
     date: '2026-08-19',
 
@@ -65,11 +65,11 @@ const SITE_RELEASES = [
 
     sha: 'upg47',
 
-    title: 'Comprehensive Upgrade Suite ÔÇö Diagnostics, Terminal Expansion & Visual Polish',
+    title: 'Comprehensive Upgrade Suite — Diagnostics, Terminal Expansion & Visual Polish',
 
     highlights: [
 
-      'Diagnostics: Fixed verify.py JSON-LD schema validation to handle array-wrapped structured data blocks; excluded 404.html from sitemap sync warnings ÔÇö suite now passes 0 errors, 0 warnings',
+      'Diagnostics: Fixed verify.py JSON-LD schema validation to handle array-wrapped structured data blocks; excluded 404.html from sitemap sync warnings — suite now passes 0 errors, 0 warnings',
 
       'Dev Terminal v47: Added stats, benchmark, run prakopnet, run pulselive commands; implemented ArrowUp/ArrowDown command history traversal',
 
@@ -117,13 +117,13 @@ const SITE_RELEASES = [
 
     highlights: [
 
-      'Verification Engine: Expanded verify.py from 5 to 17 check categories ÔÇö cross-page links, asset validation, JS syntax, version consistency, JSON-LD schemas, file size budgets, and more',
+      'Verification Engine: Expanded verify.py from 5 to 17 check categories — cross-page links, asset validation, JS syntax, version consistency, JSON-LD schemas, file size budgets, and more',
 
-      'Pre-Commit Gate: sync.ps1 now runs verify.py before every commit ÔÇö blocks pushes with errors, -SkipVerify escape hatch for emergencies',
+      'Pre-Commit Gate: sync.ps1 now runs verify.py before every commit — blocks pushes with errors, -SkipVerify escape hatch for emergencies',
 
       'Dev Server Fix: Fixed ROOT path bug in dev-serve.py, added CORS headers and MIME type support for .webmanifest/.webp',
 
-      'Dev Terminal: New healthcheck command for client-side diagnostics ÔÇö module loading, SW status, performance metrics, nav link validation',
+      'Dev Terminal: New healthcheck command for client-side diagnostics — module loading, SW status, performance metrics, nav link validation',
 
       'CI Enhancement: verify.yml now includes Node.js syntax checking step alongside Python structural checks'
 
@@ -139,7 +139,7 @@ const SITE_RELEASES = [
 
     sha: 'u7g7r44',
 
-    title: 'Site-Wide v44 Upgrade Suite ÔÇö Performance Hardening, A11y/SEO & Visual Polish',
+    title: 'Site-Wide v44 Upgrade Suite — Performance Hardening, A11y/SEO & Visual Polish',
 
     highlights: [
 
@@ -163,7 +163,7 @@ const SITE_RELEASES = [
 
     sha: 'r4d4r43',
 
-    title: 'Site-Wide v43 Upgrade Suite ÔÇö Skill Radar, ATS Resume Builder & Interactive Sandbox',
+    title: 'Site-Wide v43 Upgrade Suite — Skill Radar, ATS Resume Builder & Interactive Sandbox',
 
     highlights: [
 
@@ -189,7 +189,7 @@ const SITE_RELEASES = [
 
     sha: 'm0du42l',
 
-    title: 'Site-Wide v42 Upgrade Suite ÔÇö Performance & Modular Code Quality Architecture',
+    title: 'Site-Wide v42 Upgrade Suite — Performance & Modular Code Quality Architecture',
 
     highlights: [
 
@@ -239,7 +239,7 @@ const SITE_RELEASES = [
 
     sha: '94bef09',
 
-    title: 'Site-Wide v40 Upgrade Suite ÔÇö Inter Typography & Performance Core',
+    title: 'Site-Wide v40 Upgrade Suite — Inter Typography & Performance Core',
 
     highlights: [
 
@@ -291,7 +291,7 @@ const SITE_RELEASES = [
 
     sha: 'a7b8c9d',
 
-    title: 'Site-Wide v38 Upgrade Suite ÔÇö Web Audio Micro-Sounds, Reading Time & Verification',
+    title: 'Site-Wide v38 Upgrade Suite — Web Audio Micro-Sounds, Reading Time & Verification',
 
     highlights: [
 
@@ -343,7 +343,7 @@ const SITE_RELEASES = [
 
     sha: '9f8e7d6',
 
-    title: 'Site-Wide v36 Upgrade Suite ÔÇö Visual Polish, Performance & Mobile UX',
+    title: 'Site-Wide v36 Upgrade Suite — Visual Polish, Performance & Mobile UX',
 
     highlights: [
 
@@ -373,7 +373,7 @@ const SITE_RELEASES = [
 
     sha: 'c5d35e1',
 
-    title: 'Site-Wide v35 Upgrade Suite ÔÇö Motion, Interactions & Performance',
+    title: 'Site-Wide v35 Upgrade Suite — Motion, Interactions & Performance',
 
     highlights: [
 
@@ -475,7 +475,7 @@ const SITE_RELEASES = [
 
     sha: '8761335',
 
-    title: 'Site Upgrade Suite ÔÇö Hash Sync, Accessibility & PWA Refresh',
+    title: 'Site Upgrade Suite — Hash Sync, Accessibility & PWA Refresh',
 
     highlights: [
 
