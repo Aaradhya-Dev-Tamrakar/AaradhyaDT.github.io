@@ -1,6 +1,6 @@
 {
-  "sha": "2211ff47f3582056671ef6d48dc3a288bae51ad7",
-  "shortSha": "2211ff4",
-  "date": "2026-08-24T10:52:58+05:45",
-  "message": "feat(resume): update ATS resume generator with actual uploaded CV"
+  "sha": "cbf810d3f15c1f56618d1e8657c948bb62a6c021",
+  "shortSha": "cbf810d",
+  "date": "2026-08-24T11:24:20+05:45",
+  "message": "style(resume): improve ATS resume contact info typography and alignment"
 }
