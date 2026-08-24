@@ -1,6 +1,6 @@
 {
-  "sha": "d9675fa1f69deedd813392a6b17f9489f5953057",
-  "shortSha": "d9675fa",
-  "date": "2026-08-24T11:59:11+05:45",
-  "message": "fix(graph): restore viewer compatibility metadata"
+  "sha": "a2b1a0c1d39c0230c60aba663a8bf6c1c205ea69",
+  "shortSha": "a2b1a0c",
+  "date": "2026-08-24T13:20:39+05:45",
+  "message": "refactor(assets): extract static data blobs to js/data, delete dead style.css orchestrator, modularize home widgets"
 }
