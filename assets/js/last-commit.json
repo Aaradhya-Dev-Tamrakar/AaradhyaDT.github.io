@@ -1,6 +1,6 @@
 {
-  "sha": "19f4f497ef9c78d964c2386c2ca44060b6a707fa",
-  "shortSha": "19f4f49",
-  "date": "2026-08-24T11:30:12+05:45",
-  "message": "chore: update version to v49.39 across multiple files and improve documentation"
+  "sha": "e53c13748c1d0991fddb527ffd5bb76214b1be79",
+  "shortSha": "e53c137",
+  "date": "2026-08-24T11:32:49+05:45",
+  "message": "fix(resume): update portfolio website link"
 }
