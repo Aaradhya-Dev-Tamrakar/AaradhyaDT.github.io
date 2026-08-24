@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v49.40)
+   MODULE: ui.js — aaradhyadt.github.io (v49.41)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -892,7 +892,7 @@ function initSkillRadar(shouldScroll) {
 const RESUME_DATA = {
   name: "Aaradhya Dev Tamrakar",
   subtitle: "Electronics, Communication & Information Engineer | AI/ML & Embedded Edge Systems",
-  contact: "Kathmandu, Nepal · aaradhyadevtmr@gmail.com · +977 9844602050 · linkedin.com/in/aaradhya-dev-tamrakar · github.com/AaradhyaDT · github.com/AaradhyaDT/AaradhyaDT.github.io",
+  contact: "Kathmandu, Nepal · aaradhyadevtmr@gmail.com · +977 9844602050 · linkedin.com/in/aaradhya-dev-tamrakar · github.com/AaradhyaDT · aaradhyadt.github.io",
   summary: "Electronics, Communication and Information student at IOE, Kathmandu Engineering College (Year IV/I). Builds ML pipelines spanning classification, regression, tree-based ensembles, and agentic Text-to-SQL systems; deploys via FastAPI and Docker; develops Android apps with Kotlin/Jetpack Compose. Advancing through the Fusemachines AI Fellowship and NSSR DataCamp Fellowship, while leading SPARK, an ESP32-S3 edge-AI wearable fall-detection system.",
   roles: {
     all: {

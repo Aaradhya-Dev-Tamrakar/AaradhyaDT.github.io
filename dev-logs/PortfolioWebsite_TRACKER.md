@@ -1,4 +1,4 @@
-# Portfolio Website Tracker — v49.40
+# Portfolio Website Tracker — v49.41
 
 Last updated: _2026-08-24_
 
