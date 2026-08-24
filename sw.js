@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Service Worker — Aaradhya Dev Tamrakar Portfolio (v49.45)
+   Service Worker — Aaradhya Dev Tamrakar Portfolio (v49.46)
    Provides offline capability & asset caching for fast return visits.
    ========================================================================== */
 
-const CACHE_NAME = 'aaradhya-portfolio-v49.45';
+const CACHE_NAME = 'aaradhya-portfolio-v49.46';
 
 const STATIC_ASSETS = [
   './',
@@ -18,7 +18,6 @@ const STATIC_ASSETS = [
   './terms.html',
   './404.html',
   './site.webmanifest',
-  './assets/css/style.css',
   './assets/css/modules/tokens.css',
   './assets/css/modules/base.css',
   './assets/css/modules/layout.css',
@@ -30,6 +29,9 @@ const STATIC_ASSETS = [
   './assets/css/modules/print.css',
   './assets/js/script.js',
   './assets/js/bg-animations.js',
+  './assets/js/data/releases.js',
+  './assets/js/data/search-index.js',
+  './assets/js/data/resume-data.js',
   './assets/js/modules/core.js',
   './assets/js/modules/tour.js',
   './assets/js/modules/cmdk.js',
@@ -38,6 +40,7 @@ const STATIC_ASSETS = [
   './assets/js/modules/audio.js',
   './assets/js/modules/terminal.js',
   './assets/js/modules/haptics.js',
+  './assets/js/modules/home-widgets.js',
   './assets/images/photo.webp',
   './assets/images/og-image.jpg',
   './assets/images/logos/ieee-kec.webp',

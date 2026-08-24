@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """
-extract_index.py — regenerates SEARCH_STATIC_INDEX in assets/js/script.js
-from the current contents of achievements.html and projects.html.
+extract_index.py — regenerates SEARCH_STATIC_INDEX in
+assets/js/data/search-index.js from the current contents of
+achievements.html and projects.html.
 
-Why this exists: buildSearchIndex() in script.js merges a hardcoded
+Why this exists: buildSearchIndex() in cmdk.js merges a hardcoded
 SEARCH_STATIC_INDEX snapshot with a live DOM scan. The live scan only
 runs on achievements.html / projects.html themselves (since only those
 pages render #achievementsList / #projectsGrid), so every other page
@@ -27,7 +28,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 ROOT = Path(__file__).resolve().parent.parent
-SCRIPT_JS = ROOT / "assets" / "js" / "script.js"
+INDEX_FILE = ROOT / "assets" / "js" / "data" / "search-index.js"
 
 START_MARK = "const SEARCH_STATIC_INDEX = {"
 END_MARK = "\n};"
@@ -125,19 +126,19 @@ def main():
     if not achievements or not projects:
         print("ERROR: extracted zero achievements or zero projects — DOM selectors "
               "likely no longer match achievements.html / projects.html. Aborting "
-              "without touching script.js.", file=sys.stderr)
+              "without touching search-index.js.", file=sys.stderr)
         sys.exit(1)
 
     new_block = render_block(achievements, projects)
 
-    src = SCRIPT_JS.read_text(encoding="utf-8")
+    src = INDEX_FILE.read_text(encoding="utf-8")
     start = src.find(START_MARK)
     if start == -1:
-        print(f"ERROR: could not find '{START_MARK}' in {SCRIPT_JS}", file=sys.stderr)
+        print(f"ERROR: could not find '{START_MARK}' in {INDEX_FILE}", file=sys.stderr)
         sys.exit(1)
     end = src.find(END_MARK, start)
     if end == -1:
-        print(f"ERROR: could not find end of SEARCH_STATIC_INDEX block in {SCRIPT_JS}", file=sys.stderr)
+        print(f"ERROR: could not find end of SEARCH_STATIC_INDEX block in {INDEX_FILE}", file=sys.stderr)
         sys.exit(1)
     end += len(END_MARK)
 
@@ -147,7 +148,7 @@ def main():
         print(f"No change — index already up to date ({len(achievements)} achievements, {len(projects)} projects).")
         return
 
-    SCRIPT_JS.write_text(updated, encoding="utf-8")
+    INDEX_FILE.write_text(updated, encoding="utf-8")
     print(f"Updated SEARCH_STATIC_INDEX: {len(achievements)} achievements, {len(projects)} projects.")
 
 

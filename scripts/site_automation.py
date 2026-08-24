@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v49.45)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v49.46)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -28,7 +28,7 @@ EXTRACT_INDEX_PY = SCRIPTS_DIR / "extract_index.py"
 TRACKER_MD = ROOT / "dev-logs" / "PortfolioWebsite_TRACKER.md"
 SW_JS = ROOT / "sw.js"
 SCRIPT_JS = ROOT / "assets" / "js" / "script.js"
-CSS_STYLE = ROOT / "assets" / "css" / "style.css"
+RELEASES_JS = ROOT / "assets" / "js" / "data" / "releases.js"
 CSS_MODULES_DIR = ROOT / "assets" / "css" / "modules"
 MODULES_DIR = ROOT / "assets" / "js" / "modules"
 SITEMAP_XML = ROOT / "sitemap.xml"
@@ -70,7 +70,7 @@ def audit(verbose=False):
 
 
 def rebuild_search_index():
-    """Regenerates SEARCH_STATIC_INDEX in assets/js/script.js using extract_index.py."""
+    """Regenerates SEARCH_STATIC_INDEX in assets/js/data/search-index.js via extract_index.py."""
     code, stdout, stderr = run_command([sys.executable, str(EXTRACT_INDEX_PY)])
     return {
         "success": code == 0,
@@ -130,10 +130,10 @@ def get_site_stats():
 
 
 def get_current_version():
-    """Extracts the latest version string from SITE_RELEASES[0] in script.js."""
-    if SCRIPT_JS.exists():
-        script_text = SCRIPT_JS.read_text(encoding="utf-8")
-        m = re.search(r"version:\s*['\"]v?([\d.]+)['\"]", script_text)
+    """Extracts the latest version string from SITE_RELEASES[0] in assets/js/data/releases.js."""
+    if RELEASES_JS.exists():
+        releases_text = RELEASES_JS.read_text(encoding="utf-8")
+        m = re.search(r"version:\s*['\"]v?([\d.]+)['\"]", releases_text)
         if m:
             return f"v{m.group(1)}"
     return "v49"
@@ -215,14 +215,7 @@ def sync_metadata(version_tag=None):
         SITEMAP_XML.write_text(new_sitemap, encoding="utf-8")
         results.append(f"Updated sitemap.xml timestamps to '{today_ymd}'")
 
-    # 6. Update style.css Header
-    if CSS_STYLE.exists():
-        css_text = CSS_STYLE.read_text(encoding="utf-8")
-        new_css = re.sub(r"SHARED STYLES.*?\(v[\d.]+\)", f"SHARED STYLES — aaradhyadt.github.io ({clean_v})", css_text)
-        CSS_STYLE.write_text(new_css, encoding="utf-8")
-        results.append(f"Updated style.css header to '{clean_v}'")
-
-    # 7. Update JS Module Headers
+    # 6. Update JS Module Headers
     if MODULES_DIR.exists():
         mod_count = 0
         for mod_path in sorted(MODULES_DIR.glob("*.js")):
@@ -233,7 +226,7 @@ def sync_metadata(version_tag=None):
                 mod_count += 1
         results.append(f"Updated {mod_count} JS module headers in assets/js/modules/ to '{clean_v}'")
 
-    # 8. Update site_automation.py Header Docstring
+    # 7. Update site_automation.py Header Docstring
     self_path = Path(__file__).resolve()
     if self_path.exists():
         self_text = self_path.read_text(encoding="utf-8")
@@ -276,9 +269,9 @@ def bump_version(bump_type="patch", explicit_version=None, title=None, highlight
 
     actions = [f"Bumping version from {current_v} -> {new_v} ({bump_type})"]
 
-    # 1. Update SITE_RELEASES in script.js
-    if SCRIPT_JS.exists():
-        script_text = SCRIPT_JS.read_text(encoding="utf-8")
+    # 1. Update SITE_RELEASES in assets/js/data/releases.js
+    if RELEASES_JS.exists():
+        releases_text = RELEASES_JS.read_text(encoding="utf-8")
         today = datetime.date.today().strftime("%Y-%m-%d")
 
         if bump_type == "major" or (explicit_version and not explicit_version.startswith(current_v)):
@@ -290,17 +283,17 @@ def bump_version(bump_type="patch", explicit_version=None, title=None, highlight
             hl_json = ",\n".join([f"      {json.dumps(h)}" for h in rel_highlights])
             clean_sha = f"rel{new_v.replace('.', '').replace('v', '')}"
             new_block = f"""  {{\n    version: '{new_v}',\n    date: '{today}',\n    sha: '{clean_sha}',\n    title: {json.dumps(rel_title)},\n    highlights: [\n{hl_json}\n    ]\n  }},"""
-            new_script = re.sub(r"(const SITE_RELEASES = \[\s*)", r"\1" + new_block + "\n", script_text, count=1)
-            SCRIPT_JS.write_text(new_script, encoding="utf-8")
-            actions.append(f"Prepended new release block for {new_v} in script.js")
-            
+            new_releases = re.sub(r"(const SITE_RELEASES = \[\s*)", r"\1" + new_block + "\n", releases_text, count=1)
+            RELEASES_JS.write_text(new_releases, encoding="utf-8")
+            actions.append(f"Prepended new release block for {new_v} in releases.js")
+
             # Update Tracker log for major bump
             update_tracker(new_v, rel_title, rel_highlights)
         else:
-            new_script = re.sub(r"(const SITE_RELEASES = \[\s*\{\s*version:\s*['\"])[^'\"]+(['\"])",
-                                rf"\g<1>{new_v}\g<2>", script_text, count=1)
-            SCRIPT_JS.write_text(new_script, encoding="utf-8")
-            actions.append(f"Updated SITE_RELEASES[0].version to '{new_v}' in script.js")
+            new_releases = re.sub(r"(const SITE_RELEASES = \[\s*\{\s*version:\s*['\"])[^'\"]+(['\"])",
+                                  rf"\g<1>{new_v}\g<2>", releases_text, count=1)
+            RELEASES_JS.write_text(new_releases, encoding="utf-8")
+            actions.append(f"Updated SITE_RELEASES[0].version to '{new_v}' in releases.js")
 
     # 2. Sync all metadata
     sync_results = sync_metadata(new_v)

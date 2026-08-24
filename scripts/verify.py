@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v49.45)
+aaradhyadt.github.io (v49.46)
 
 22 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS runtime safety, CSS URL integrity, deep a11y & SEO,
@@ -42,9 +42,11 @@ SW_JS = ROOT / "sw.js"
 SITEMAP_XML = ROOT / "sitemap.xml"
 MANIFEST = ROOT / "site.webmanifest"
 ROBOTS_TXT = ROOT / "robots.txt"
-CSS_STYLE = ROOT / "assets" / "css" / "style.css"
 CSS_MODULES_DIR = ROOT / "assets" / "css" / "modules"
 MODULES_DIR = ROOT / "assets" / "js" / "modules"
+DATA_DIR = ROOT / "assets" / "js" / "data"
+RELEASES_JS = DATA_DIR / "releases.js"
+RESUME_DATA_JS = DATA_DIR / "resume-data.js"
 TRACKER_MD = ROOT / "dev-logs" / "PortfolioWebsite_TRACKER.md"
 SITE_AUTOMATION_PY = ROOT / "scripts" / "site_automation.py"
 
@@ -265,11 +267,11 @@ def check_search_index_sync():
             return
 
         expected_block = ei.render_block(achievements, projects)
-        src = ei.SCRIPT_JS.read_text(encoding="utf-8")
+        src = ei.INDEX_FILE.read_text(encoding="utf-8")
         start = src.find(ei.START_MARK)
         end = src.find(ei.END_MARK, start) + len(ei.END_MARK) if start != -1 else -1
         if start == -1 or end == -1:
-            log_error(cat, "could not locate SEARCH_STATIC_INDEX block in script.js")
+            log_error(cat, "could not locate SEARCH_STATIC_INDEX block in search-index.js")
             return
         current_block = src[start:end]
 
@@ -466,8 +468,9 @@ def check_js_syntax():
 #  CHECK 9: Comprehensive Version Consistency across All Sources
 # ════════════════════════════════════════════════════════════════════
 def check_version_consistency():
-    """Assert sw.js, script.js, style.css, all 8 JS modules, tracker, verify.py,
-    and site_automation.py all report the exact same version number."""
+    """Assert sw.js, script.js, releases.js data file, all 8 JS modules,
+    tracker, verify.py, and site_automation.py all report the exact same
+    version number."""
     cat = "version"
     versions = {}
 
@@ -496,20 +499,16 @@ def check_version_consistency():
         if m:
             versions["script.js module loader"] = m.group(1)
 
-        m = re.search(r"version:\s*['\"]v?([\d.]+)['\"]", script_text[:2000])
+    # 3. SITE_RELEASES[0] in the releases data file
+    if RELEASES_JS.exists():
+        rel_text = RELEASES_JS.read_text(encoding="utf-8")
+        m = re.search(r"version:\s*['\"]v?([\d.]+)['\"]", rel_text[:3000])
         if m:
             versions["SITE_RELEASES[0]"] = m.group(1)
-
-    # 3. style.css header
-    if CSS_STYLE.exists():
-        css_text = CSS_STYLE.read_text(encoding="utf-8")
-        m = re.search(r"SHARED STYLES.*?\(v([\d.]+)\)", css_text[:500])
-        if m:
-            versions["style.css header"] = m.group(1)
         else:
-            log_error(cat, "style.css header version not found")
+            log_error(cat, "releases.js SITE_RELEASES[0] version not found")
 
-    # 4. All 8 JS module headers
+    # 4. All JS module headers
     if MODULES_DIR.exists():
         for mod_path in sorted(MODULES_DIR.glob("*.js")):
             mod_text = mod_path.read_text(encoding="utf-8")
@@ -556,18 +555,18 @@ def check_version_consistency():
 #  CHECK 10: Module file existence
 # ════════════════════════════════════════════════════════════════════
 def check_module_files():
-    """Parse the MODULES array from script.js and @import rules from style.css,
-    and verify every listed module path exists on disk."""
+    """Parse the MODULES array from script.js and verify every listed
+    module path exists on disk."""
     cat = "modules"
     all_ok = True
 
-    # JS Modules
+    # JS Modules (incl. data/ files loaded via the same array)
     if not SCRIPT_JS.exists():
         log_error(cat, "script.js not found")
         all_ok = False
     else:
         text = SCRIPT_JS.read_text(encoding="utf-8")
-        js_modules = re.findall(r"['\"]([^'\"]*modules/[^'\"]+\.js)['\"]", text[:1000])
+        js_modules = re.findall(r"['\"](assets/js/(?:modules|data)/[^'\"]+\.js)['\"]", text[:1500])
         if not js_modules:
             log_error(cat, "could not parse MODULES array from script.js")
             all_ok = False
@@ -578,25 +577,8 @@ def check_module_files():
                     log_error(cat, f"JS module '{mod_path}' listed in MODULES but file not found")
                     all_ok = False
 
-    # CSS Modules
-    if not CSS_STYLE.exists():
-        log_error(cat, "style.css not found")
-        all_ok = False
-    else:
-        css_text = CSS_STYLE.read_text(encoding="utf-8")
-        css_imports = re.findall(r"@import\s+['\"]\.?/?([^'\"]+)['\"];", css_text)
-        if not css_imports:
-            log_error(cat, "could not parse @import rules from style.css")
-            all_ok = False
-        else:
-            for imp_path in css_imports:
-                full = CSS_STYLE.parent / imp_path
-                if not full.exists():
-                    log_error(cat, f"CSS module '{imp_path}' imported in style.css but file not found")
-                    all_ok = False
-
     if all_ok:
-        log_pass(cat, f"all JS & CSS modules referenced in orchestrators exist on disk")
+        log_pass(cat, f"all {len(js_modules)} JS modules/data files referenced in script.js exist on disk")
 
 
 # ════════════════════════════════════════════════════════════════════
@@ -715,7 +697,6 @@ def check_file_sizes():
     """Warn when files exceed size thresholds."""
     cat = "size"
     thresholds = {
-        "CSS (style.css)": (CSS_STYLE, 50_000),
         "JS (script.js)": (SCRIPT_JS, 60_000),
     }
     if CSS_MODULES_DIR.exists():
@@ -783,13 +764,20 @@ def check_sw_cache_completeness():
         for c in sorted(uncached_css):
             log_warning(cat, f"CSS module '{c}' not in sw.js STATIC_ASSETS")
 
-    # Check all JS modules are cached
+    # Check all JS modules & data files are cached
     if MODULES_DIR.exists():
         js_modules = {f"assets/js/modules/{f.name}" for f in MODULES_DIR.glob("*.js")}
         cached_js = set(cached_paths)
         uncached_js = js_modules - cached_js
         for j in sorted(uncached_js):
             log_warning(cat, f"JS module '{j}' not in sw.js STATIC_ASSETS")
+
+    if DATA_DIR.exists():
+        data_files = {f"assets/js/data/{f.name}" for f in DATA_DIR.glob("*.js")}
+        cached_data = set(cached_paths)
+        uncached_data = data_files - cached_data
+        for d in sorted(uncached_data):
+            log_warning(cat, f"JS data file '{d}' not in sw.js STATIC_ASSETS")
 
     if not missing and not uncached_pages:
         log_pass(cat, f"all {len(cached_paths)} cached assets exist, "
@@ -930,8 +918,6 @@ def check_css_integrity():
     """Scan all CSS files for url(...) references and verify assets exist."""
     cat = "css-integrity"
     css_files = []
-    if CSS_STYLE.exists():
-        css_files.append(CSS_STYLE)
     if CSS_MODULES_DIR.exists():
         css_files.extend(sorted(CSS_MODULES_DIR.glob("*.css")))
 
@@ -1039,12 +1025,12 @@ def check_data_consistency():
     cat = "data-consistency"
     all_ok = True
 
-    # 1. RESUME_DATA in ui.js should say Vice Chair for current leadership
-    ui_js_path = MODULES_DIR / "ui.js"
-    if ui_js_path.exists():
-        ui_text = ui_js_path.read_text(encoding="utf-8")
-        if "Vice Chair" not in ui_text:
-            log_error(cat, "ui.js RESUME_DATA missing current leadership title 'Vice Chair'")
+    # 1. RESUME_DATA in data/resume-data.js should say Vice Chair for current leadership
+    if RESUME_DATA_JS.exists():
+        resume_text = RESUME_DATA_JS.read_text(encoding="utf-8")
+        if "Vice Chair" not in resume_text:
+            log_error(cat, "resume-data.js missing current leadership title 'Vice Chair'")
+            all_ok = False
             all_ok = False
 
     # 2. SITE constants in core.js
@@ -1134,7 +1120,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v49.45)"))
+    print(bold("  Portfolio Site Verification Suite (v49.46)"))
     print(bold("=" * 60))
     print()
 

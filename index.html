@@ -713,9 +713,10 @@
       color: #1f1b16;
     }
 
-    /* ── Quick-nav cards: base styles in shared style.css. Padding values
-       below are entangled with #stats in the same media queries, so they
-       stay inline; #quick-nav's own numbers match style.css exactly. ── */
+    /* ── Quick-nav cards: base styles in shared modules/layout.css.
+       Padding values below are entangled with #stats in the same media
+       queries, so they stay inline; #quick-nav's own numbers match
+       layout.css exactly. ── */
 
     /* ── 16:10 & 16:9 Screen Layout Optimization ──────────────── */
     @media (min-width: 901px) and (max-height: 980px) {
@@ -960,7 +961,7 @@
       }
     }
 
-    /* CV lightbox: page-specific 80vh body sizing (vs default in style.css) */
+    /* CV lightbox: page-specific 80vh body sizing (vs default in modules/components.css) */
 
     .lightbox-body {
       flex: 1;
@@ -1443,100 +1444,10 @@
 
   <!-- Cert/CV lightbox logic lives in assets/js/script.js (initLightbox) -->
 
-  <!-- Early discovery for dynamically-loaded JS modules -->
-  <link rel="preload" href="assets/js/modules/core.js" as="script" />
-  <link rel="preload" href="assets/js/modules/ui.js" as="script" />
-
-  <!-- Shared site script — must be last -->
+  <!-- Shared site script — must be last. Home-page widgets (Kathmandu
+       clock, live dates, last-commit badge) live in
+       assets/js/modules/home-widgets.js, loaded via its MODULES list. -->
   <script src="assets/js/script.js" defer></script>
-
-
-
-
-  <!-- Digital clock — Kathmandu local time, status card -->
-  <script>
-    (function () {
-      var el = document.getElementById('statusClockTime');
-      if (!el) return;
-      var fmt = new Intl.DateTimeFormat('en-GB', {
-        timeZone: 'Asia/Kathmandu',
-        hour: '2-digit', minute: '2-digit', second: '2-digit',
-        hour12: false,
-      });
-      function tick() { el.textContent = fmt.format(new Date()); }
-      tick();
-      setInterval(tick, 1000);
-    })();
-  </script>
-
-  <!-- Live date auto-update: Fuse week + BEI semester -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      if (!window.applyLiveDates) return;
-      applyLiveDates({
-        'live-hero-tag': function (L) { return L.heroTag; },
-        'live-focus': function (L) {
-          var propDeadline = new Date(2026, 6, 2); // Jul 2 2026
-          var defenceDate = new Date(2026, 6, 10); // Jul 10 2026
-          var now = new Date();
-          var propPart = now < propDeadline
-            ? 'SPARK proposal due Jul 2'
-            : now < defenceDate
-              ? 'SPARK proposal defended · Major Project'
-              : 'SPARK Major Project — proposal defended'
-            ;
-          return propPart + ' · ' + L.fuseLabel;
-        },
-        'live-fellowship': function (L) {
-          return L.fuseLabel + ' · NSSR DataCamp (C2)';
-        },
-        'live-stat-sem': function (L) {
-          return 'BEI ' + L.semLabel + ' at KEC, IOE';
-        },
-      });
-    });
-  </script>
-
-  <!--
-      Last-commit widget — static, offline-safe.
-      Reads assets/js/last-commit.json, a file written by the "Stamp last
-      commit" GitHub Action on every push to main. No call to api.github.com
-      (that's Repo A's approach, and it breaks offline/downloaded — see
-      Repo A's fetchLastCommitDate() for the mechanism this deliberately
-      avoids). The fetch below is a same-origin read of a local static
-      file, so it works online, offline, and from a downloaded copy alike.
-    -->
-  <script>
-    (function () {
-      var el = document.getElementById('live-last-updated');
-      if (!el) return;
-
-      function pad(n) { return String(n).padStart(2, '0'); }
-
-      function formatDateTime(isoString) {
-        var d = new Date(isoString);
-        return d.getFullYear() + '-' + pad(d.getMonth() + 1) + '-' + pad(d.getDate()) +
-          ' ' + pad(d.getHours()) + ':' + pad(d.getMinutes()) + ':' + pad(d.getSeconds());
-      }
-
-      fetch('assets/js/last-commit.json', { cache: 'no-store' })
-        .then(function (res) {
-          if (!res.ok) throw new Error('status ' + res.status);
-          return res.json();
-        })
-        .then(function (data) {
-          el.textContent = formatDateTime(data.date);
-          el.title = data.shortSha + ' — ' + data.message;
-        })
-        .catch(function (err) {
-          // Reachable if last-commit.json is missing/malformed — e.g.
-          // before the Action has run once. NOT reachable due to being
-          // offline, since this is a local file read, not a live API call.
-          el.textContent = 'Last commit unavailable';
-          console.warn('last-commit widget:', err);
-        });
-    })();
-  </script>
 </body>
 
 </html>

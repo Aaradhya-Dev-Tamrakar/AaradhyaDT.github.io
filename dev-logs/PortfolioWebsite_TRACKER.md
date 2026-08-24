@@ -1,9 +1,14 @@
-# Portfolio Website Tracker — v49.45
+﻿# Portfolio Website Tracker — v49.46
 
 Last updated: _2026-08-24_
 
 ## Meta
 
+- **v49.46 (Refactor) — Technical Debt Purge: Data Extraction, Dead CSS Removal & Home Widget Modularization.** Three-part architectural cleanup of the shared runtime:
+  - **Dead Orchestrator Removed (`assets/css/style.css`)**: Deleted the orphaned @import stylesheet that zero pages linked to; corrected stale comments in `index.html` and `404.html` to point at `modules/layout.css` / `modules/components.css`; purged references from `sw.js`, `verify.py`, `site_automation.py`, and README.
+  - **Static Data Extraction (`assets/js/data/`)**: Moved `SITE_RELEASES` (282 lines), `SEARCH_STATIC_INDEX` (492 lines) out of `script.js` (46.9KB → 7.7KB, −84%) and `RESUME_DATA` out of `ui.js` into three dedicated data files loaded first via the MODULES array; retargeted the full automation pipeline — `extract_index.py`, `site_automation.py` version read/bump, `update-search-index.yml` commit path, and `verify.py` block/staleness checks — to the new locations; `sw.js` precaches all three for offline search & What's-New.
+  - **Home Widget Modularization (`assets/js/modules/home-widgets.js`)**: Migrated index-only inline scripts (Kathmandu clock, live date labels, last-commit badge) into a guarded module that boots after `__modulesLoadedPromise`; removed duplicate `core.js`/`ui.js` preload hints from `index.html` (1542 → 1453 lines).
+  - **Verification Gate**: Passed `python scripts/verify.py` cleanly across all 22 diagnostic categories (0 errors, 0 warnings); `node --check` green on all 6 touched JS files; search-index regeneration confirmed idempotent.
 - **v49.37 (Update) — Synchronized ATS Resume Generator with Actual Uploaded CV.** Aligned the interactive ATS Resume Generator in `assets/js/modules/ui.js` with the official master curriculum vitae (`AARADHYA_DEV_TAMRAKAR_CV.docx` / `.pdf`):
   - **Comprehensive Master CV & Role Profiles (`assets/js/modules/ui.js`)**: Updated `RESUME_DATA` with full canonical profile data including Year IV/I BEI at KEC (IOE Tribhuvan University, expected Jan 2027), active Fuse AI Fellowship (5-stage Text-to-SQL at 100% benchmark, Churn/CLV ROC-AUC 0.841, Bayesian PyMC inference, time series forecasting ensemble MASE 2.44), NSSR DataCamp Fellowship, SPARK edge-AI wearable with TFLite Micro CNN INT8 & local SHAP attribution, GCSBR examiner-rated minor project, Edge AI Stability Detection, Alpha Android Super-App (Kotlin/Compose SDK 36), Nexus Personal AI OS, and verified leadership (IEEE KEC KTM Student Branch Vice Chair & former Vice Secretary, EPC Event & Resource Manager, KEC Makerspace Ambassador).
   - **Tailored Role Tracks**: Refreshed role-specific views across Master CV (`all`), AI / ML Engineer (`aiml`), Electronics & Embedded (`hardware`), and Software & Android (`fullstack`) with exact matching skills, projects, and summaries for Plain Text ATS copy, Markdown (.md) download, and A4 print/PDF.

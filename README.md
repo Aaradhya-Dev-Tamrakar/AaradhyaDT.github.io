@@ -1,4 +1,4 @@
-# aaradhydt.github.io
+﻿# aaradhydt.github.io
 
 Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronics Engineer & AI/ML Developer. Built as a high-performance, responsive static web app hosted on GitHub Pages, featuring zero-leak client-side AES-256-GCM encryption, Google OAuth 2.0 authentication, dynamic command-palette search, and an interactive milestone build log.
 
@@ -22,13 +22,12 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v49.45 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v49.46 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
 │   ├── certificates/          # PDF downloads and WebP image previews for all 39 certifications
 │   ├── css/
-│   │   ├── style.css          # Primary stylesheet entry orchestrator (@import './modules/*.css')
 │   │   └── modules/           # Modular CSS architecture (tokens, base, layout, components, cmdk, access, terminal, tour, print)
 │   ├── docs/
 │   │   ├── AARADHYA_DEV_TAMRAKAR_CV.pdf # Official downloadable Curriculum Vitae
@@ -39,9 +38,10 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   │   ├── og-image.jpg        # Open Graph social sharing preview card
 │   │   └── logos/              # Institutional logos (IEEE KEC, Fusemachines, EPC Club, Maker's Space, NSSR)
 │   ├── js/
-│   │   ├── script.js           # Core site engine: nav, theme toggle, access control, Google Sign-In & search (v49.45)
+│   │   ├── script.js           # Boot orchestrator: dynamic MODULES loader, bootSite() wiring, SW registration & offline contact queue
 │   │   ├── bg-animations.js    # Standalone SignalWave and PCBTraces background canvas animations
-│   │   ├── modules/            # Decoupled ES/IIFE JavaScript modules (core, ui, cmdk, access, tour, audio, terminal, haptics)
+│   │   ├── data/               # Static runtime data loaded via MODULES (releases, search index, resume)
+│   │   ├── modules/            # Decoupled ES/IIFE JavaScript modules (core, ui, cmdk, access, tour, audio, terminal, haptics, home-widgets)
 │   │   └── last-commit.json    # Commit metadata stamped on push via GitHub Actions for live commit status display
 │   └── videos/                 # Project video demonstrations (e.g., GCSBR working demo) & poster stills
 │
