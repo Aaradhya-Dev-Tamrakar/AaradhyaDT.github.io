@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v49.35)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v49.36)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -36,6 +36,8 @@ MANIFEST_JSON = ROOT / "site.webmanifest"
 PROJECTS_HTML = ROOT / "projects.html"
 ACHIEVEMENTS_HTML = ROOT / "achievements.html"
 GRAPH_REPORT = ROOT / "graphify-out" / "GRAPH_REPORT.md"
+README_MD = ROOT / "README.md"
+WORKFLOW_VERIFY_YML = ROOT / ".github" / "workflows" / "verify.yml"
 
 
 def run_command(cmd, cwd=ROOT):
@@ -239,6 +241,24 @@ def sync_metadata(version_tag=None):
         if new_self != self_text:
             self_path.write_text(new_self, encoding="utf-8")
             results.append(f"Updated site_automation.py header to '{clean_v}'")
+
+    # 9. Update README.md version comments
+    if README_MD.exists():
+        readme_text = README_MD.read_text(encoding="utf-8")
+        new_readme = re.sub(r"(sw\.js\s*#\s*PWA Service Worker\s*\()(v[\d.]+)", rf"\g<1>{clean_v}", readme_text)
+        new_readme = re.sub(r"(script\.js\s*#\s*Core site engine[^\n]*\()(v[\d.]+)", rf"\g<1>{clean_v}", new_readme)
+        if new_readme != readme_text:
+            README_MD.write_text(new_readme, encoding="utf-8")
+            results.append(f"Updated README.md version annotations to '{clean_v}'")
+
+    # 10. Update .github/workflows/verify.yml header
+    if WORKFLOW_VERIFY_YML.exists():
+        wf_text = WORKFLOW_VERIFY_YML.read_text(encoding="utf-8")
+        today_ymd = datetime.date.today().strftime("%Y-%m-%d")
+        new_wf = re.sub(r"# Last updated:\s*[\d-]+\s*\(v[\d.]+\)", f"# Last updated: {today_ymd} ({clean_v})", wf_text)
+        if new_wf != wf_text:
+            WORKFLOW_VERIFY_YML.write_text(new_wf, encoding="utf-8")
+            results.append(f"Updated verify.yml workflow header to '{clean_v}'")
 
     return results
 
