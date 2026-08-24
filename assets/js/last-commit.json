@@ -1,6 +1,6 @@
 {
-  "sha": "94741515e6327a3b262a8c679d1a1e9ec0841cbe",
-  "shortSha": "9474151",
-  "date": "2026-08-24T10:48:04+05:45",
-  "message": "docs(meta): update stale version annotations, terminal fallbacks, and sync automation"
+  "sha": "2211ff47f3582056671ef6d48dc3a288bae51ad7",
+  "shortSha": "2211ff4",
+  "date": "2026-08-24T10:52:58+05:45",
+  "message": "feat(resume): update ATS resume generator with actual uploaded CV"
 }
