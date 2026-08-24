@@ -1,6 +1,6 @@
 {
-  "sha": "3c862e4c972d696d1de2794b17bdf9f5e3a23766",
-  "shortSha": "3c862e4",
-  "date": "2026-08-24T11:45:58+05:45",
-  "message": "style(css): update verify.yml, README.md +18 more - # Last updated: 2026-08-24 (v49.42) (+87/-87)"
+  "sha": "d0cc7c6f05a353f48a26255cecca0acaf62d658f",
+  "shortSha": "d0cc7c6",
+  "date": "2026-08-24T11:50:02+05:45",
+  "message": "fix(pdf): remove procedural grain from ATS print export"
 }
