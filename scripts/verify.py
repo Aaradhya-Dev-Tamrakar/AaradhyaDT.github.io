@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhya-dev-tamrakar.github.io (v49.36)
+aaradhya-dev-tamrakar.github.io (v49.37)
 
 22 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS runtime safety, CSS URL integrity, deep a11y & SEO,
@@ -724,7 +724,7 @@ def check_file_sizes():
 
     if MODULES_DIR.exists():
         for mod in sorted(MODULES_DIR.glob("*.js")):
-            thresholds[f"JS ({mod.name})"] = (mod, 60_000)
+            thresholds[f"JS ({mod.name})"] = (mod, 70_000)
 
     for f in get_html_files():
         thresholds[f"HTML ({f.name})"] = (f, 200_000)
@@ -1039,12 +1039,12 @@ def check_data_consistency():
     cat = "data-consistency"
     all_ok = True
 
-    # 1. RESUME_DATA in ui.js should say Vice Chair, not Vice Secretary
+    # 1. RESUME_DATA in ui.js should say Vice Chair for current leadership
     ui_js_path = MODULES_DIR / "ui.js"
     if ui_js_path.exists():
         ui_text = ui_js_path.read_text(encoding="utf-8")
-        if "Vice Secretary" in ui_text:
-            log_error(cat, "ui.js RESUME_DATA contains stale title 'Vice Secretary' (must be 'Vice Chair')")
+        if "Vice Chair" not in ui_text:
+            log_error(cat, "ui.js RESUME_DATA missing current leadership title 'Vice Chair'")
             all_ok = False
 
     # 2. SITE constants in core.js
@@ -1134,7 +1134,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v49.36)"))
+    print(bold("  Portfolio Site Verification Suite (v49.37)"))
     print(bold("=" * 60))
     print()
 

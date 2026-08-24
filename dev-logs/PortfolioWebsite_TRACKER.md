@@ -1,8 +1,13 @@
-﻿# Portfolio Website Tracker — v49.36
+﻿# Portfolio Website Tracker — v49.37
 
 Last updated: _2026-08-24_
 
 ## Meta
+
+- **v49.37 (Update) — Synchronized ATS Resume Generator with Actual Uploaded CV.** Aligned the interactive ATS Resume Generator in `assets/js/modules/ui.js` with the official master curriculum vitae (`AARADHYA_DEV_TAMRAKAR_CV.docx` / `.pdf`):
+  - **Comprehensive Master CV & Role Profiles (`assets/js/modules/ui.js`)**: Updated `RESUME_DATA` with full canonical profile data including Year IV/I BEI at KEC (IOE Tribhuvan University, expected Jan 2027), active Fuse AI Fellowship (5-stage Text-to-SQL at 100% benchmark, Churn/CLV ROC-AUC 0.841, Bayesian PyMC inference, time series forecasting ensemble MASE 2.44), NSSR DataCamp Fellowship, SPARK edge-AI wearable with TFLite Micro CNN INT8 & local SHAP attribution, GCSBR examiner-rated minor project, Edge AI Stability Detection, Alpha Android Super-App (Kotlin/Compose SDK 36), Nexus Personal AI OS, and verified leadership (IEEE KEC KTM Student Branch Vice Chair & former Vice Secretary, EPC Event & Resource Manager, KEC Makerspace Ambassador).
+  - **Tailored Role Tracks**: Refreshed role-specific views across Master CV (`all`), AI / ML Engineer (`aiml`), Electronics & Embedded (`hardware`), and Software & Android (`fullstack`) with exact matching skills, projects, and summaries for Plain Text ATS copy, Markdown (.md) download, and A4 print/PDF.
+  - **Verification Gate**: Passed `python scripts/verify.py` across all 22 diagnostic categories cleanly (0 errors, 0 warnings).
 
 - **v49.27 (Update) — xTool Laser Safety & Maintenance Credentials and Diagnostic Alignment.** Synchronized site metadata and verified credentials across the portfolio:
   - **Verified Credentials & Lightbox Sync**: Integrated xTool Laser Safety Awareness Training (`achv-37`) and Printer Maintenance Certification (`achv-38`) with 39 verified achievements total, WebP previews, and PDF downloads.

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhya-dev-tamrakar.github.io (v49.36)
+   MODULE: ui.js — aaradhya-dev-tamrakar.github.io (v49.37)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -888,12 +888,12 @@ function initSkillRadar(shouldScroll) {
   }
 }
 
-/* ── Tailored ATS Resume Generator & Exporter (v43) ── */
+/* ── Tailored ATS Resume Generator & Exporter (v49) ── */
 const RESUME_DATA = {
   name: "Aaradhya Dev Tamrakar",
-  subtitle: "Electronics Engineer | AI/ML Developer & Embedded Systems Specialist",
-  contact: "Kathmandu, Nepal · aaradhyadevtmr@gmail.com · github.com/Aaradhya-Dev-Tamrakar · linkedin.com/in/aaradhya-dev-tamrakar",
-  summary: "Final-year Electronics, Communication & Information Engineering student with hands-on expertise in Agentic AI, Deep Learning pipelines, Embedded C/C++ firmware (ESP32/STM32), and custom PCB design. Fusemachines AI Fellow (2026) and active tech lead in robotics, embedded systems, and machine learning research.",
+  subtitle: "Electronics, Communication & Information Engineer | AI/ML & Embedded Edge Systems",
+  contact: "Kathmandu, Nepal · aaradhyadevtmr@gmail.com · +977 9844602050 · linkedin.com/in/aaradhya-dev-tamrakar · github.com/AaradhyaDT · aaradhya-dev-tamrakar.github.io",
+  summary: "Electronics, Communication and Information student at IOE, Kathmandu Engineering College (Year IV/I). Builds ML pipelines spanning classification, regression, tree-based ensembles, and agentic Text-to-SQL systems; deploys via FastAPI and Docker; develops Android apps with Kotlin/Jetpack Compose. Advancing through the Fusemachines AI Fellowship and NSSR DataCamp Fellowship, while leading SPARK, an ESP32-S3 edge-AI wearable fall-detection system.",
   roles: {
     all: {
       title: "Master CV — Electronics, Embedded & AI Engineering",
@@ -902,51 +902,120 @@ const RESUME_DATA = {
           title: "Education",
           items: [
             {
-              header: "Kathmandu Engineering College (Tribhuvan University)",
-              sub: "Bachelor of Engineering in Electronics, Communication & Information Engineering (2022 – 2026)",
+              header: "Bachelor of Engineering (B.E.) in Electronics, Communication & Information",
+              sub: "Institute of Engineering (IOE), Kathmandu Engineering College | Year IV / Part I (Expected: January 2027)",
               bullets: [
-                "Curriculum: Embedded Systems, Signal Processing, Microprocessors, Control Systems, Machine Learning, Communication Networks.",
-                "Vice Chair of IEEE KEC Student Branch (2026–2027); Executive Member & Mentor at Electronics & Propagation Club (EPC)."
+                "Coursework: Machine Learning · Signals and Systems · Digital Electronics · Control Systems · Communication Systems."
               ]
             }
           ]
         },
         {
-          title: "Fellowships & Leadership",
+          title: "Experience & Leadership",
           items: [
             {
-              header: "Fusemachines AI Fellowship (AIF 2026)",
-              sub: "AI Fellow (Computer Vision, NLP & Agentic Systems) | Jan 2026 – Present",
+              header: "Vice Chair — IEEE KEC KTM Student Branch",
+              sub: "2026 – Present",
               bullets: [
-                "Architected 20+ ML/DL projects spanning Telco Churn trees, Text-to-SQL Agentic RAG, and multimodal computer vision pipelines.",
-                "Engineered scalable PyTorch models and deployed production-grade REST APIs."
+                "Directed branch strategy, scaling initiatives and member engagement across executive committees.",
+                "Managed relations across the broader technical community."
               ]
             },
             {
-              header: "IEEE KEC Student Branch & EPC Club",
-              sub: "Vice Chair & Electronics Mentor | 2024 – Present",
+              header: "Event Manager — Electronics Project Club (EPC), KEC",
+              sub: "2026 – Present",
               bullets: [
-                "Organized PCB design workshops (KiCAD), micro-controller bootcamps, and mentored 100+ junior engineering students in embedded hardware."
+                "Coordinated logistics for club workshops and department activities."
+              ]
+            },
+            {
+              header: "Makerspace Ambassador — KEC Maker's Space",
+              sub: "June 2026 – Present",
+              bullets: [
+                "Shipped site-wide fixes to the Maker's Space website — image repair, content consistency, UI cleanup."
+              ]
+            },
+            {
+              header: "Vice Secretary — IEEE KEC KTM Student Branch",
+              sub: "2025 – 2026",
+              bullets: [
+                "Streamlined operations and grew program participation by managing documentation and orchestrating workshop logistics.",
+                "Coordinated volunteers alongside the committee for seamless execution."
+              ]
+            },
+            {
+              header: "Resource Manager — Electronics Project Club (EPC), KEC",
+              sub: "2024 – 2026",
+              bullets: [
+                "Allocated scheduling and resources for workshops across multiple departments."
               ]
             }
           ]
         },
         {
-          title: "Key Projects",
+          title: "Fellowships & Recognitions",
           items: [
             {
-              header: "SPARK — Smart Pulse & Activity Recognition Kit",
-              sub: "Embedded C/C++, KiCAD PCB, ESP32, FreeRTOS, Signal Processing (2025–2026)",
+              header: "Fuse AI Fellow — Fusemachines AI Fellowship 2026",
+              sub: "Fusemachines | Active (Selected via competitive entrance exam in linear algebra, calculus, probability, Python, ML)",
               bullets: [
-                "Designed a wearable biomedical monitor with custom PCB, active analog filtering, and real-time ESP32 digital signal processing.",
-                "Achieved ultra-low latency sensor telemetry and wireless streaming via Bluetooth Low Energy (BLE)."
+                "Engineered a five-stage agentic Text-to-SQL pipeline (Planner → Generator → Validator → Executor → Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
+                "Developed an end-to-end churn & CLV pipeline achieving 5-fold CV ROC-AUC 0.841, threshold-tuned for top-200 high-risk segment with Random Forest/XGBoost ensembles, SMOTE, and SHAP explainability.",
+                "Implemented probabilistic models (Bayesian estimation, Gaussian process regression via PyMC/ArviZ) and UCI Online Retail II customer segmentation (K-Means/DBSCAN).",
+                "Benchmarked nine time-series forecasting models and built a 4-model ensemble achieving MASE 2.44; deployed containerized REST API with FastAPI, PostgreSQL, and Docker."
               ]
             },
             {
-              header: "Gesture-Controlled Self-Balancing Robot (GCSBR)",
-              sub: "Micro-controllers, IMU 6-DOF PID Control, RF Wireless, Robotics (2025)",
+              header: "NSSR DataCamp Fellow — Cohort 2",
+              sub: "Nepalese Society of Student Researchers | 2026 – Present",
               bullets: [
-                "Engineered a two-wheeled self-balancing inverted pendulum robot using MPU6050 IMU sensor fusion and real-time PID motor tuning."
+                "Secured competitive selection (April 2026) for a sponsored DataCamp Premium license in a limited cohort.",
+                "Delivered six applied GenAI solutions automating null filtering, deduplication, and schema normalization across workflows.",
+                "Completed coursework toward SQL Associate and Python Data Associate certifications in PostgreSQL, Pandas, statistics, and scikit-learn."
+              ]
+            }
+          ]
+        },
+        {
+          title: "Projects",
+          items: [
+            {
+              header: "SPARK — Wearable Fall Detection System (Major Project)",
+              sub: "ESP32-S3 · TensorFlow Lite Micro · SHAP · MQTT · FastAPI · PostgreSQL (Target Demo: March 2027)",
+              bullets: [
+                "Designed a two-layer ESP32-S3 fall-detection system combining a <5ms threshold gate with an INT8 1D CNN confirmation layer under 100ms.",
+                "Computed per-event SHAP explanations at a local, non-cloud gateway.",
+                "Led the AI and backend work package (WP 1.0) — CNN training pipeline, FastAPI/PostgreSQL gateway — within a 4-person team supervised by Er. Dipen Manandhar."
+              ]
+            },
+            {
+              header: "Gesture-Controlled Self-Balancing Robot (GCSBR) — Minor Project",
+              sub: "Computer Vision · Arduino · MPU6050 · Stepper Motors · Android · MATLAB",
+              bullets: [
+                "Earned a 'major project level' rating from the academic examiner.",
+                "Implemented PID stabilization firmware validated via a MATLAB-simulation-to-hardware pipeline.",
+                "Developed an Android gesture-control app (MediaPipe, CameraX, HC-05 BT) driving motors for real-time actuation."
+              ]
+            },
+            {
+              header: "Edge AI Stability Detection System",
+              sub: "Python · Scikit-learn · FastAPI · Joblib",
+              bullets: [
+                "Predicted platform stability from simulated IMU data using a Random Forest model, reaching 99.8% test accuracy; served via FastAPI."
+              ]
+            },
+            {
+              header: "Alpha Android Super-App",
+              sub: "Kotlin · Jetpack Compose · Material3 · DataStore · Apache POI",
+              bullets: [
+                "Assembled a modular Android super-app (SDK 36) with gesture control, an eSewa Gmail budget tracker, and a Material3 design system."
+              ]
+            },
+            {
+              header: "Nexus — Personal AI Operating System",
+              sub: "React (Vite) · FastAPI · SQLite + FTS5 · httpx · asyncio",
+              bullets: [
+                "Unified Groq (Llama 3.3 70B) and Gemini into an AI workspace via parallel fan-out routing, with SQLite + FTS5 context injection."
               ]
             }
           ]
@@ -955,12 +1024,41 @@ const RESUME_DATA = {
           title: "Technical Skills",
           items: [
             {
-              header: "Hardware & Embedded Systems",
-              sub: "KiCAD, ESP32, STM32, Arduino, FreeRTOS, I2C/SPI/UART, PCB Layout, Circuit Analysis, Signal Integrity"
+              header: "Programming Languages",
+              sub: "Python, C, C++, Kotlin, SQL (PostgreSQL / SQLite), VHDL"
             },
             {
-              header: "AI / Machine Learning & Software",
-              sub: "Python, PyTorch, Scikit-Learn, Transformers, OpenCV, SQL, Agentic AI, JavaScript (ES6+), C/C++20, Git, Linux"
+              header: "Machine Learning & Data Science",
+              sub: "scikit-learn, NumPy, Pandas, XGBoost, Random Forest, Logistic/Ridge/SGD Classifiers, Lasso, ElasticNet, SMOTE (ImbPipeline), SHAP, GridSearchCV, Stratified K-Fold CV, Joblib, PyMC, ArviZ, pgmpy, Bayesian Inference, Gaussian Process Regression, K-Means, Hierarchical Clustering, DBSCAN, Time Series (SARIMA, Holt-Winters, Prophet, LightGBM, LSTM)"
+            },
+            {
+              header: "Android Development",
+              sub: "Kotlin, Jetpack Compose, Material3, DataStore, CameraX, MediaPipe, Apache POI"
+            },
+            {
+              header: "Deployment & Backend",
+              sub: "FastAPI, REST APIs, Docker, PostgreSQL, Streamlit, asyncio, Joblib"
+            },
+            {
+              header: "Embedded Systems & Hardware",
+              sub: "Arduino, ESP32-S3, MPU6050, Stepper Motors, HC-05 BT, UART, MQTT, FPGA, Vivado"
+            },
+            {
+              header: "AI & Local LLM Systems",
+              sub: "Ollama, AnythingLLM, Prompt Chaining, Agentic Query Systems, LangChain"
+            },
+            {
+              header: "Tools & Environments",
+              sub: "Git, GitHub, VS Code, Jupyter Notebook, Google Colab, MATLAB, LaTeX / Overleaf, SSMS"
+            }
+          ]
+        },
+        {
+          title: "Certifications & Activities",
+          items: [
+            {
+              header: "Selected Credentials & Memberships",
+              sub: "IEEE WIE Nepal LaTeX Workshop (May 2026) · IEEE SPAx organizing team · Prompt Engineering Fundamentals (TechAxis) · IEEEXtreme 19.0 (Team ShadowXTREME) · PCB Design & Fabrication Workshop (KEC Robotics Club) · AWS Cloud Computing Workshop · Microsoft Learn Student Ambassador · Member of IEEE KEC KTM Student Branch, Electronics Project Club, KEC Maker's Space, KEC Music Club"
             }
           ]
         }
@@ -973,41 +1071,71 @@ const RESUME_DATA = {
           title: "Summary",
           items: [
             {
-              header: "AI/ML Focus",
-              sub: "Specialized in Computer Vision, LLM Agentic Pipelines, PyTorch, and NLP Systems.",
+              header: "AI / Machine Learning Specialization",
+              sub: "Focus on Agentic Systems, Tree Ensembles with Explainability (SHAP), Bayesian Inference, and Edge-AI ML Pipelines.",
               bullets: [
-                "Fusemachines AI Fellow (2026) with deep practical experience in RAG pipelines, tree ensembles, and deep neural networks.",
-                "Proven track record building end-to-end ML workflows from data preprocessing to API deployment."
+                "Fusemachines AI Fellow (2026) experienced in building 5-stage Agentic Text-to-SQL workflows (100% benchmark accuracy), customer segmentation, and time-series forecasting ensembles.",
+                "Engineering edge AI neural network pipelines (TFLite Micro 1D CNN INT8) with local SHAP attribution for real-time safety wearables."
               ]
             }
           ]
         },
         {
-          title: "AI/ML Experience & Projects",
+          title: "AI/ML Experience & Fellowships",
           items: [
             {
-              header: "Fusemachines AI Fellowship (AIF 2026)",
-              sub: "AI Fellow (2026)",
+              header: "Fuse AI Fellow — Fusemachines AI Fellowship 2026",
+              sub: "Fusemachines | Active (Selected via competitive entrance exam in linear algebra, calculus, probability, Python, ML)",
               bullets: [
-                "Built Text-to-SQL Agentic Pipeline using LangChain and LLMs for dynamic relational database querying.",
-                "Developed Telco Churn & CLV ensemble pipelines using XGBoost and LightGBM with automated hyperparameter tuning."
+                "Engineered a five-stage agentic Text-to-SQL pipeline (Planner → Generator → Validator → Executor → Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
+                "Built end-to-end churn & CLV pipeline achieving 5-fold CV ROC-AUC 0.841 with Random Forest/XGBoost ensembles, SMOTE, and SHAP explainability.",
+                "Implemented Bayesian estimation & Gaussian process regression via PyMC/ArviZ; segmented UCI Online Retail II customers using K-Means and DBSCAN.",
+                "Benchmarked 9 forecasting models with 4-model ensemble achieving MASE 2.44; deployed containerized REST APIs with FastAPI, PostgreSQL, and Docker."
               ]
             },
             {
-              header: "Genomic Data Processing & Machine Learning (GCSBR/Omics)",
-              sub: "Data Science & Bioinformatics",
+              header: "NSSR DataCamp Fellow — Cohort 2",
+              sub: "Nepalese Society of Student Researchers | 2026 – Present",
               bullets: [
-                "Applied statistical modeling and ML classification on high-dimensional biological dataset arrays."
+                "Delivered 6 applied GenAI workflow automation solutions (null filtering, deduplication, schema normalization).",
+                "Advanced through SQL Associate and Python Data Associate tracks across PostgreSQL, Pandas, and scikit-learn."
               ]
             }
           ]
         },
         {
-          title: "Technical Skills",
+          title: "Selected Machine Learning Projects",
           items: [
             {
-              header: "Core AI Toolstack",
-              sub: "PyTorch, Python, Scikit-Learn, Transformers, OpenCV, SQL, Pandas, NumPy, Agentic RAG, Git, Linux"
+              header: "SPARK — Edge AI Wearable Fall Detection (Major Project)",
+              sub: "ESP32-S3 · TensorFlow Lite Micro · SHAP · FastAPI · PostgreSQL",
+              bullets: [
+                "Designed two-layer fall detection architecture: <5ms threshold gate + INT8 1D CNN confirmation layer under 100ms.",
+                "Integrated local per-event SHAP explainability on non-cloud edge gateway."
+              ]
+            },
+            {
+              header: "Edge AI Stability Detection System",
+              sub: "Python · Scikit-learn · FastAPI · Joblib",
+              bullets: [
+                "Trained Random Forest classifier reaching 99.8% test accuracy on simulated IMU telemetry; served via FastAPI REST endpoint."
+              ]
+            },
+            {
+              header: "Nexus — Personal AI Operating System",
+              sub: "React · FastAPI · SQLite + FTS5 · LLM Fan-Out Routing",
+              bullets: [
+                "Unified Groq (Llama 3.3 70B) and Gemini models via asynchronous parallel fan-out routing with FTS5 semantic context injection."
+              ]
+            }
+          ]
+        },
+        {
+          title: "AI/ML Technical Skills",
+          items: [
+            {
+              header: "Core Machine Learning Stack",
+              sub: "Python, scikit-learn, NumPy, Pandas, XGBoost, Random Forest, SMOTE, SHAP, PyMC, ArviZ, pgmpy, K-Means, DBSCAN, Time Series (SARIMA, Prophet, LightGBM, LSTM), TensorFlow Lite Micro, FastAPI, Docker, PostgreSQL"
             }
           ]
         }
@@ -1020,78 +1148,108 @@ const RESUME_DATA = {
           title: "Summary",
           items: [
             {
-              header: "Embedded & Hardware Focus",
-              sub: "Specialized in PCB Layout (KiCAD), Firmware Engineering (C/C++), and Sensor Fusion.",
+              header: "Embedded Systems & Edge Hardware Specialization",
+              sub: "Focus on ESP32-S3, Arduino, Sensor Fusion, Robotics PID Control, and Edge-AI micro-deployments.",
               bullets: [
-                "Proven track record building custom ESP32/STM32 hardware, biomedical sensor platforms, and robotics control systems."
+                "Electronics, Communication & Information Engineering student at IOE, Kathmandu Engineering College (Year IV/I).",
+                "Lead developer for SPARK (ESP32-S3 edge-AI fall detection) and GCSBR (examiner-rated 'major project level' self-balancing robot)."
               ]
             }
           ]
         },
         {
-          title: "Hardware Projects & Mentorship",
+          title: "Hardware & Robotics Projects",
           items: [
             {
-              header: "SPARK Biomedical Hardware Monitor",
-              sub: "Lead Embedded & Hardware Developer",
+              header: "SPARK — Wearable Fall Detection System (Major Project)",
+              sub: "ESP32-S3 · TensorFlow Lite Micro · MPU6050 · MQTT · Gateway Architecture",
               bullets: [
-                "Designed multi-layer PCB in KiCAD with active analog signal conditioning for bio-pulse extraction.",
-                "Developed FreeRTOS multi-threaded firmware on ESP32 micro-controller."
+                "Engineered two-tier detection combining a <5ms physical threshold interrupt gate with an INT8 1D CNN inference model (<100ms latency) running on ESP32-S3.",
+                "Constructed edge MQTT gateway on local hardware providing deterministic per-event telemetry and explainability."
               ]
             },
             {
-              header: "Gesture-Controlled Self-Balancing Robot",
-              sub: "Robotics & Control Engineer",
+              header: "Gesture-Controlled Self-Balancing Robot (GCSBR) — Minor Project",
+              sub: "Arduino · MPU6050 · Stepper Motors · PID Control · MATLAB · Android CameraX",
               bullets: [
-                "Implemented 6-DOF IMU complementary filter and PID loop running at 100Hz control frequency."
+                "Designed inverted pendulum PID stabilization firmware validated through a MATLAB simulation-to-hardware pipeline.",
+                "Built custom Android control app with MediaPipe & CameraX over HC-05 Bluetooth for real-time motor actuation.",
+                "Awarded 'major project level' evaluation by academic examiner."
               ]
             }
           ]
         },
         {
-          title: "Technical Skills",
+          title: "Leadership & Mentorship",
           items: [
             {
-              header: "Hardware & Tools",
-              sub: "KiCAD, ESP32, STM32, Arduino, C/C++20, FreeRTOS, Oscilloscopes, Multimeters, SPI/I2C/UART, Soldering"
+              header: "IEEE KEC KTM Student Branch & EPC Club",
+              sub: "Vice Chair (2026–Present) · Event Manager (2026–Present) · Former Vice Secretary (2025–2026) · Resource Manager (2024–2026)",
+              bullets: [
+                "Directed student branch strategy, organized technical workshops in robotics, micro-controllers, PCB design, and LaTeX.",
+                "Managed scheduling and resources for workshops across multiple engineering departments."
+              ]
+            }
+          ]
+        },
+        {
+          title: "Embedded Technical Skills",
+          items: [
+            {
+              header: "Hardware & Firmware Stack",
+              sub: "C, C++, VHDL, Arduino, ESP32-S3, MPU6050 IMU, Stepper Motors, HC-05 BT, UART, MQTT, FPGA (Vivado), MATLAB, Signals & Systems, Control Systems, Digital Electronics"
             }
           ]
         }
       ]
     },
     fullstack: {
-      title: "Full-Stack Web & Software Engineer Resume",
+      title: "Software & Android Engineer Resume",
       sections: [
         {
           title: "Summary",
           items: [
             {
-              header: "Software Engineering Focus",
-              sub: "Specialized in Modern JavaScript (ES6+), PWA, Responsive UI Systems, and Web Security.",
+              header: "Software & Mobile Development Specialization",
+              sub: "Specialized in Python (FastAPI/asyncio), Android (Kotlin/Jetpack Compose), Modern JavaScript, and Containerization (Docker).",
               bullets: [
-                "Creator of high-performance web applications featuring Web Crypto PBKDF2 encryption, Web Audio API, and PWA offline caching."
+                "Proven capability building native Android applications (Jetpack Compose, CameraX, MediaPipe) and containerized backend microservices (FastAPI, PostgreSQL, Docker)."
               ]
             }
           ]
         },
         {
-          title: "Software & Web Projects",
+          title: "Software & App Projects",
           items: [
             {
-              header: "Personal Developer Portfolio & Web App Platform",
-              sub: "Full-Stack Architecture & Design",
+              header: "Alpha Android Super-App",
+              sub: "Kotlin · Jetpack Compose · Material3 · DataStore · Apache POI",
               bullets: [
-                "Engineered modular JS architecture across 8 decoupled modules, Service Worker offline caching (PWA), and custom CMDK palette."
+                "Engineered a modular Android super-app targeting SDK 36 with gesture-based controls, eSewa Gmail budget parsing, and a Material3 design system."
+              ]
+            },
+            {
+              header: "Nexus — Personal AI Operating System",
+              sub: "React (Vite) · FastAPI · SQLite + FTS5 · httpx · asyncio",
+              bullets: [
+                "Created an AI workspace aggregating Groq (Llama 3.3 70B) and Gemini via asynchronous fan-out routing with SQLite + FTS5 context injection."
+              ]
+            },
+            {
+              header: "Containerized Agentic REST API & Microservices",
+              sub: "FastAPI · PostgreSQL · Docker · asyncio",
+              bullets: [
+                "Developed containerized REST API microservices with PostgreSQL and Docker under the Fusemachines AI Fellowship, featuring high-throughput async handlers."
               ]
             }
           ]
         },
         {
-          title: "Technical Skills",
+          title: "Software Technical Skills",
           items: [
             {
-              header: "Web & Software Toolstack",
-              sub: "JavaScript (ES6+), HTML5, CSS3, Node.js, Web Crypto, PWA, Service Workers, REST APIs, Git, Python"
+              header: "Software & App Toolstack",
+              sub: "Kotlin, Jetpack Compose, Material3, Python, FastAPI, Docker, PostgreSQL, SQLite, JavaScript (ES6+), React, Git, REST APIs, asyncio, Apache POI"
             }
           ]
         }
@@ -1212,7 +1370,7 @@ function openResumeGenerator() {
         <button type="button" class="resume-role-btn active" data-role="all">Master CV</button>
         <button type="button" class="resume-role-btn" data-role="aiml">AI / ML Engineer</button>
         <button type="button" class="resume-role-btn" data-role="hardware">Electronics & Embedded</button>
-        <button type="button" class="resume-role-btn" data-role="fullstack">Full-Stack Software</button>
+        <button type="button" class="resume-role-btn" data-role="fullstack">Software & Android</button>
       </div>
       <div class="resume-preview-body">
         <div class="resume-preview-sheet" id="resumeSheet"></div>
