@@ -8,20 +8,25 @@ Clone github links added as prompt rather than fetching as fetching generally re
 
 If sync.ps1 exists in the repo, use the format mentioned below:
 
-### Local Git Workflow & Auto-Sync (`sync.ps1`)
+## Local Git Workflow & Auto-Sync (`sync.ps1`)
 
 To prevent merge conflicts on `assets/js/last-commit.json` (which is updated automatically on GitHub by a commit-back bot on every push), use `sync.ps1`:
 
 - **Minor / Routine Changes** (Auto-generates a conventional commit message and updates tracker timestamp):
+
   ```powershell
   .\sync.ps1
   ```
+
 - **Major Features / Architectural Changes**:
   Update `dev-logs/PortfolioWebsite_TRACKER.md` with detailed release notes first, then pass a descriptive message:
+
   ```powershell
   .\sync.ps1 -m "feat(scope): detailed architectural summary"
   ```
+
 - **Safe Pull Only** (Uses `--autostash` to safely pull remote updates):
+
   ```powershell
   .\sync.ps1 -PullOnly
   ```

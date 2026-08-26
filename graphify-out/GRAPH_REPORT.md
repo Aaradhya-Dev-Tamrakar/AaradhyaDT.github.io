@@ -1,16 +1,16 @@
-# Graph Report - AaradhyaDT.github.io  (2026-08-24)
+# Graph Report - AaradhyaDT.github.io  (2026-08-26)
 
 ## Corpus Check
-- 29 files · ~292,902 words
+- 30 files · ~293,100 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 507 nodes · 686 edges · 101 communities (28 shown, 73 thin omitted)
+- 510 nodes · 689 edges · 104 communities (30 shown, 74 thin omitted)
 - Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 63 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `75c708e5`
+- Built from commit: `b55593f3`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -106,7 +106,10 @@
 - [[_COMMUNITY_Community 94|Community 94]]
 - [[_COMMUNITY_Community 95|Community 95]]
 - [[_COMMUNITY_Community 96|Community 96]]
+- [[_COMMUNITY_Community 97|Community 97]]
+- [[_COMMUNITY_Community 98|Community 98]]
 - [[_COMMUNITY_Community 99|Community 99]]
+- [[_COMMUNITY_Community 100|Community 100]]
 - [[_COMMUNITY_Community 101|Community 101]]
 - [[_COMMUNITY_Community 102|Community 102]]
 - [[_COMMUNITY_Community 103|Community 103]]
@@ -138,23 +141,23 @@
 ## Import Cycles
 - None detected.
 
-## Communities (101 total, 73 thin omitted)
+## Communities (104 total, 74 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.06
 Nodes (38): Aaradhya Dev Tamrakar, DataCamp Statement of Accomplishment: AI-Assisted Product Launch, Certificate of Completion: AI Fluency: Framework & Foundations, Anthropic, Amazon Web Services (AWS), DataCamp Statement of Accomplishment: Building a Go-To-Market Strategy, DataCamp Statement of Accomplishment: Cleaning Data with Generative AI, DataCamp (+30 more)
 
 ### Community 1 - "Community 1"
-Cohesion: 0.12
-Nodes (6): KEC EPC Club Logo, Fusemachines Logo, KEC Maker's Space Logo, Social Preview Card (OG Image), OG image source, STATIC_ASSETS
+Cohesion: 0.07
+Nodes (12): KEC EPC Club Logo, Fusemachines Logo, KEC Maker's Space Logo, Social Preview Card (OG Image), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), OG image source (+4 more)
 
 ### Community 2 - "Community 2"
-Cohesion: 0.06
-Nodes (41): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), AD_MONTHS, adToBs(), applyAccent(), applyLiveDates() (+33 more)
+Cohesion: 0.10
+Nodes (24): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+16 more)
 
 ### Community 3 - "Community 3"
-Cohesion: 0.11
-Nodes (27): getAudioContext(), initAudioCues(), playAudioCue(), syncAudioToggleUI(), toggleAudioCues(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal() (+19 more)
+Cohesion: 0.13
+Nodes (23): playAudioCue(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeMarkdown(), generateResumeMarkdown(), generateResumePlainText() (+15 more)
 
 ### Community 4 - "Community 4"
 Cohesion: 0.15
@@ -217,12 +220,20 @@ Cohesion: 0.06
 Nodes (31): AI-Assisted Coding for Developers Certificate, AI Fluency Foundations Certificate, Evidence & Verification Log — v20 additions, Meta, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available (+23 more)
 
 ### Community 95 - "Community 95"
-Cohesion: 0.08
-Nodes (25): File delivery, Local Git Workflow & Auto-Sync (`sync.ps1`), Output constraints (strict), Working conventions for this repo, 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 2. Knowledge Graph & Codebase Navigation (Graphify), 3. Operational Rules & Efficiency, Antigravity IDE & Gemini Agent Rules for Portfolio Repository (+17 more)
+Cohesion: 0.10
+Nodes (22): File delivery, Local Git Workflow & Auto-Sync (`sync.ps1`), Output constraints (strict), Working conventions for this repo, 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 2. Knowledge Graph & Codebase Navigation (Graphify), 3. Operational Rules & Efficiency, Antigravity IDE & Gemini Agent Rules for Portfolio Repository (+14 more)
 
 ### Community 96 - "Community 96"
 Cohesion: 0.12
 Nodes (15): Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`), Key Features, 📄 License, ⚡ Local Development & Git Workflow (+7 more)
+
+### Community 97 - "Community 97"
+Cohesion: 0.15
+Nodes (14): bootSite(), initAccentPicker(), initCursor(), initHamburger(), initReveal(), initScroll(), initThemeToggle(), renderSiteFooter() (+6 more)
+
+### Community 98 - "Community 98"
+Cohesion: 0.70
+Nodes (4): getAudioContext(), initAudioCues(), syncAudioToggleUI(), toggleAudioCues()
 
 ### Community 99 - "Community 99"
 Cohesion: 0.70
@@ -231,17 +242,17 @@ Nodes (4): bootHomeWidgets(), initLastCommitBadge(), initLiveDates(), initStatus
 ## Knowledge Gaps
 - **171 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+166 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **73 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **74 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `bootSite()` connect `Community 2` to `Community 11`, `Community 3`, `Community 4`, `Community 6`?**
-  _High betweenness centrality (0.174) - this node is a cross-community bridge._
-- **Why does `Verify workflow` connect `Community 95` to `Community 2`, `Community 12`?**
-  _High betweenness centrality (0.128) - this node is a cross-community bridge._
-- **Why does `initAccessControl()` connect `Community 4` to `Community 2`?**
-  _High betweenness centrality (0.034) - this node is a cross-community bridge._
+- **Why does `bootSite()` connect `Community 97` to `Community 1`, `Community 2`, `Community 98`, `Community 4`, `Community 3`, `Community 6`, `Community 11`?**
+  _High betweenness centrality (0.172) - this node is a cross-community bridge._
+- **Why does `Verify workflow` connect `Community 1` to `Community 12`?**
+  _High betweenness centrality (0.126) - this node is a cross-community bridge._
+- **Why does `initAccessControl()` connect `Community 4` to `Community 97`?**
+  _High betweenness centrality (0.033) - this node is a cross-community bridge._
 - **Are the 30 inferred relationships involving `bootSite()` (e.g. with `initAccessControl()` and `initAudioCues()`) actually correct?**
   _`bootSite()` has 30 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**
@@ -249,4 +260,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.05689900426742532 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**
-  _Cohesion score 0.125 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07407407407407407 - nodes in this community are weakly interconnected._

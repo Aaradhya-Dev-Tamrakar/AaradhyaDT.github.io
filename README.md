@@ -1,4 +1,4 @@
-﻿# aaradhydt.github.io
+# aaradhydt.github.io
 
 Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronics Engineer & AI/ML Developer. Built as a high-performance, responsive static web app hosted on GitHub Pages, featuring zero-leak client-side AES-256-GCM encryption, Google OAuth 2.0 authentication, dynamic command-palette search, and an interactive milestone build log.
 
@@ -22,11 +22,11 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v49.48 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v49.49 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
-│   ├── certificates/          # PDF downloads and WebP image previews for all 39 certifications
+│   ├── certificates/          # PDF downloads and WebP image previews for linked credentials
 │   ├── css/
 │   │   └── modules/           # Modular CSS architecture (tokens, base, layout, components, cmdk, access, terminal, tour, print)
 │   ├── docs/
@@ -45,18 +45,17 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   │   └── last-commit.json    # Commit metadata stamped on push via GitHub Actions for live commit status display
 │   └── videos/                 # Project video demonstrations (e.g., GCSBR working demo) & poster stills
 │
-├── 🤖 MCP Server & Automation (`mcp-server/` & `scripts/`)
-│   ├── mcp-server/
-│   │   ├── site_mcp.py         # Standard Model Context Protocol (MCP) server exposing site resources, telemetry & tools
-│   │   └── mcp_config.json     # MCP server registration config for AI IDEs & desktop clients
-│   └── scripts/
-│       ├── site_automation.py  # Hyper-automation engine: site telemetry, version syncing & tracker logging
-│       ├── verify.py           # 22-category diagnostic suite: cross-page links, asset references, JS syntax, versions, JSON-LD, size budgets
-│       ├── extract_index.py    # Python script to extract searchable items into the static command palette index
-│       └── dev-serve.py        # Local HTTP dev testing server with project root resolution, CORS headers & MIME type handling
+├── 🤖 MCP Server (`mcp-server/`)
+│   ├── site_mcp.py             # Standard Model Context Protocol (MCP) server exposing site resources, telemetry & tools
+│   └── mcp_config.json         # MCP server registration config for AI IDEs & desktop clients
+├── 🛠️ Automation Scripts (`scripts/`)
+│   ├── site_automation.py      # Hyper-automation engine: site telemetry, version syncing & tracker logging
+│   ├── verify.py               # 22-category diagnostic suite: cross-page links, asset references, JS syntax, versions, JSON-LD, size budgets
+│   ├── extract_index.py        # Python script to extract searchable items into the static command palette index
+│   └── dev-serve.py            # Local HTTP dev testing server with project root resolution, CORS headers & MIME type handling
 │
 ├── 🤖 GitHub Workflows (`.github/workflows/`)
-│   ├── deploy-pages.yml        # Automated GitHub Pages deployment with Git LFS media asset resolution
+│   ├── deploy-pages.yml        # Automated GitHub Pages deployment
 │   ├── stamp-last-commit.yml   # CI bot stamping last commit hash, timestamp & message on every push (with retry loop)
 │   ├── update-search-index.yml # CI bot auto-regenerating search index on HTML content changes
 │   ├── verify.yml              # CI workflow running Node.js syntax checks & Python verification suite
@@ -183,7 +182,7 @@ Alternatively, open `index.html` directly in any web browser.
 
 To prevent merge conflicts with GitHub Actions commit-back bots and ensure code quality:
 
-- **Routine & Minor Updates** (Auto-runs index extraction, graphify knowledge update, `verify.py` pre-commit gate, LFS sync, conventional commit generation & push):
+- **Routine & Minor Updates** (Auto-runs index extraction, graphify knowledge update, `verify.py` pre-commit gate, conventional commit generation & push):
 
   ```powershell
   .\sync.ps1
@@ -209,7 +208,7 @@ To prevent merge conflicts with GitHub Actions commit-back bots and ensure code 
   .\sync.ps1 -WhatIf
   ```
 
-- **Safe Remote Pull** (Safely pulls with `--autostash` and synchronizes Git LFS pointers):
+- **Safe Remote Pull** (Safely pulls with `--autostash`):
 
   ```powershell
   .\sync.ps1 -PullOnly
@@ -233,7 +232,7 @@ To prevent merge conflicts with GitHub Actions commit-back bots and ensure code 
 
 This repository uses **Graphify** for local AST-level knowledge graph extraction, mapping code abstractions, script functions, HTML components, and cross-file dependencies.
 
-> ℹ️ **Note**: `graphify-out/` is a local analysis directory (`.gitignore`d) generated during development.
+> ℹ️ **Note**: `graphify-out/` is a local analysis directory; generated cache and dated snapshots are ignored.
 
 - **Local Report**: View metrics & god nodes locally at `graphify-out/GRAPH_REPORT.md`.
 - **Update Graph**: Regenerate the knowledge graph locally after modifying code:
