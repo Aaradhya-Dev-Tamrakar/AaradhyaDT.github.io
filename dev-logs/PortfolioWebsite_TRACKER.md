@@ -1,8 +1,15 @@
-# Portfolio Website Tracker — v49.49
+﻿# Portfolio Website Tracker — v49.50
 
-Last updated: _2026-08-26_
+Last updated: _2026-08-29_
 
 ## Meta
+
+- **v49.49 (Update) — Dev Terminal Autocomplete & Aliases, ATS JSON Resume Exporter, Speculation Rules & LLM Full Context Suite.** Shipped 5-track feature and architecture upgrades:
+  - **Dev Terminal Tab Autocomplete & Developer Aliases (`terminal.js`)**: Added `Tab` autocompletion for top-level commands (`help`, `skills`, `radar`, `resume`, `projects`, etc.) and subcommands (`goto`, `filter`, `run`, `cat`, `accent`), with inline suggestions on multiple matches. Added developer aliases: `ls` (directory & module index), `whoami` (identity & fellowship overview), `cat` (quick viewer for `cv`, `bio`, `spark`, `skills`), `ping` (network latency benchmark), and `cls` (clear screen).
+  - **ATS Resume JSON Standard Exporter (`ui.js`)**: Added one-click **Download .JSON** button conforming to standard JSON Resume schema (`basics`, `education`, `sections`, `profiles`), enabling automated ATS parsing and profile imports alongside Markdown, Plain Text, and A4 print exports.
+  - **Speculative Rules API & Hardened Referrer Privacy (`*.html`)**: Integrated `<script type="speculationrules">` across all 10 HTML head blocks for instant pre-rendering of core navigation destinations in modern Chromium browsers, paired with `<meta name="referrer" content="strict-origin-when-cross-origin">`.
+  - **AI Engine Optimization & Full Context (`llms-full.txt`, `llms.txt`, `sw.js`)**: Published comprehensive `llms-full.txt` context specification detailing all engineering projects (SPARK, Fuse AI pipelines, GCSBR, Nexus, Alpha), coursework, and verified leadership; registered in `llms.txt` and precached in Service Worker for offline AI tool availability.
+  - **Verification Gate**: Passed `python scripts/verify.py` cleanly across all 22 diagnostic categories (0 errors, 0 warnings); `node -c` validated syntax across all modified JS files.
 
 - **v49.46 (Refactor) — Technical Debt Purge: Data Extraction, Dead CSS Removal & Home Widget Modularization.** Three-part architectural cleanup of the shared runtime:
   - **Dead Orchestrator Removed (`assets/css/style.css`)**: Deleted the orphaned @import stylesheet that zero pages linked to; corrected stale comments in `index.html` and `404.html` to point at `modules/layout.css` / `modules/components.css`; purged references from `sw.js`, `verify.py`, `site_automation.py`, and README.

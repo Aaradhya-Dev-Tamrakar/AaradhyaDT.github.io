@@ -1,0 +1,93 @@
+# Aaradhya Dev Tamrakar (ADT) — Full Context
+
+> **Aaradhya Dev Tamrakar (ADT)** is an Electronics, Communication & Information Engineering student (BEI IV/I) at Kathmandu Engineering College (IOE, Tribhuvan University, Nepal), expected graduation January 2027. He is a **Fuse AI Fellow** (Fusemachines 2026), **NSSR DataCamp Fellow** (Cohort 2), and **Vice Chair of the IEEE KEC KTM Student Branch**, specializing in Edge AI, embedded systems, robotics, machine learning, and full-stack software development.
+
+---
+
+## 1. Biography & Contact Information
+- **Full Name:** Aaradhya Dev Tamrakar (ADT)
+- **Email:** aaradhyadevtmr@gmail.com
+- **Phone:** +977 9844602050
+- **Location:** Kathmandu, Nepal
+- **Primary Website:** https://aaradhyadt.github.io/
+- **GitHub:** https://github.com/AaradhyaDT
+- **LinkedIn:** https://www.linkedin.com/in/aaradhya-dev-tamrakar
+- **X (Twitter):** https://x.com/AaradhyaDT
+- **YouTube:** https://www.youtube.com/@aaradhyadevtamrakar
+
+---
+
+## 2. Academic Background & Coursework
+- **Degree:** Bachelor of Engineering in Electronics, Communication & Information Engineering (BEI)
+- **Institution:** Kathmandu Engineering College (KEC), Institute of Engineering (IOE), Tribhuvan University (TU)
+- **Current Semester:** Year IV, Part I (7th Semester)
+- **Key Coursework:**
+  - Artificial Intelligence, Digital Signal Analysis & Processing, Wireless Communication
+  - RF & Microwave Engineering, Aeronautical Telecommunications, Organization & Management
+  - Embedded Systems, Microprocessors, Control Systems, Object-Oriented Programming (C++/Python)
+
+---
+
+## 3. Flagship Engineering Projects
+
+### SPARK — Intelligent Fall Detection & Bio-Telemetry Wearable
+- **Category:** Edge AI / Embedded Systems / Assistive Health Tech
+- **Architecture:** Two-layer, fully on-device fall detection wearable for eldercare.
+- **Hardware:** ESP32-S3 microcontroller, MPU6050 6-DOF IMU (accelerometer/gyroscope), optical PPG pulse sensor.
+- **AI/ML:** Quantized TFLite Micro 1D-CNN INT8 on-device model running at 50Hz with complementary filtering.
+- **Gateway & Explainability:** Raspberry Pi 4B edge gateway with local SHAP (SHapley Additive exPlanations) attribution, BLE 5.0 mesh, and local fallback alert buzzer.
+
+### Fuse AI Fellowship 14-Week Capstone & Pipelines
+- **Week 14 (Capstone):** BiasAperture — Vision-model fairness & demographic disparity diagnostic suite.
+- **Week 13:** Text-to-SQL Agentic Pipeline — 5-stage agentic LLM code generation pipeline achieving 100% benchmark execution accuracy.
+- **Week 12:** Customer Churn & CLV Modeling with XGBoost, LightGBM, and Bayesian PyMC survival analysis (ROC-AUC 0.841).
+- **Week 11:** Production PyTorch Deep Learning with DDP, mixed-precision (FP16), and TensorBoard profiling.
+- **Week 10:** Multi-horizon time-series demand forecasting ensemble (AutoARIMA + Prophet + LightGBM, MASE 2.44).
+- **Weeks 1–9:** Statistical foundations, feature engineering, unsupervised clustering, classification benchmarks, and regression pipelines.
+
+### GCSBR — Gyroscopic Self-Balancing Robot
+- **Category:** Robotics & Control Systems (BEI Minor Project)
+- **Specs:** Dual-wheel inverted pendulum balancing robot using STM32/Arduino, MPU6050 complementary filter, PID closed-loop feedback control, and L298N dual H-bridge motor driver.
+
+### Alpha — Android Engineering Super-App
+- **Category:** Mobile & System Software
+- **Stack:** Modern Android (Kotlin, Jetpack Compose, Material 3, Coroutines, Room DB, Target SDK 36).
+
+### Nexus — Personal AI Operating System & Assistant
+- **Category:** Full-Stack & Agentic AI
+- **Stack:** FastAPI, WebSockets, Local Vector DB (ChromaDB), Ollama / OpenAI API orchestration.
+
+---
+
+## 4. Leadership & Professional Fellowships
+- **Fuse AI Fellow (2026):** Intensive 14-week fellowship in applied machine learning, computer vision, and NLP hosted by Fusemachines.
+- **NSSR DataCamp Fellow (Cohort 2):** Data science and machine learning research fellow under Nepal Social Science Research / DataCamp initiative.
+- **Vice Chair, IEEE KEC KTM Student Branch (2025–2026):** Executive leadership of engineering workshops, hackathons, IEEEXtreme competitive programming (Team #3 nationwide), and technical seminars.
+- **Former Vice Secretary, IEEE KEC Student Branch (2024–2025):** Event coordination, technical documentation, and student member mentorship.
+- **Event & Resource Manager, Electronics and Propagation Club (EPC) (2024–2025):** Led hands-on PCB design, Proteus simulation, and micro-electronics workshops.
+- **KEC Makerspace Ambassador:** Laser cutter safety training, 3D printing maintenance, and fabrication prototyping.
+
+---
+
+## 5. Technical Skillset & Competencies
+- **Embedded & Hardware:** ESP32-S3, STM32, Arduino, Raspberry Pi, MPU6050, FreeRTOS, I2C/SPI/UART, BLE 5.0, PCB Design (EasyEDA / Proteus).
+- **Machine Learning & Edge AI:** PyTorch, TensorFlow Lite Micro, Scikit-Learn, OpenCV, NumPy, Pandas, XGBoost, LightGBM, SHAP, Hugging Face Transformers.
+- **Software & Systems:** Python, C, C++, JavaScript (ES6+), Kotlin, HTML5/CSS3, FastAPI, SQLite, Git/GitHub, Linux/Bash, Docker.
+- **Design & Tools:** LaTeX, xTool Laser Studio, KiCad, Figma, VS Code, Antigravity IDE.
+
+---
+
+## 6. Portfolio Website Architecture
+- **Tech Stack:** Vanilla HTML5, CSS3 Custom Properties (Design Tokens), Modular ES6 JavaScript (Zero Build Step).
+- **PWA & Offline:** Cache-first Service Worker (`sw.js`), Web App Manifest, offline form queueing with auto-sync.
+- **Security:** Web Crypto API (AES-256-GCM zero-leak payload decryption), client-side rate limiting, subresource integrity pinning.
+- **Testing & Diagnostics:** 22-category pre-commit verification suite (`scripts/verify.py`), AST syntax linting, automated CI/CD (`sync.ps1`).
+
+---
+
+## 7. Verifiable Credentials & Achievements (Summary of 39)
+- IEEEXtreme 19.0 Competitive Programming Certificate (Rank #3 in Nepal)
+- DataCamp Certifications: Supervised Learning, Deep Learning in PyTorch, Time Series Analysis, Generative AI for Data Cleaning, Go-to-Market Strategy, Product Management.
+- xTool Laser Safety Awareness Training & Printer Maintenance Certification (KEC Makerspace).
+- IEEE Day & Workshop Mentorship Credentials.
+- Complete credential PDFs and WebP previews verified in site repository under `assets/certificates/`.

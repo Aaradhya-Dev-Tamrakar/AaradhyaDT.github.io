@@ -4,6 +4,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+  <!-- Speculative Rules API — Instantaneous navigation on Chromium 121+ -->
+  <script type="speculationrules">
+    {
+      "prerender": [
+        {
+          "source": "list",
+          "urls": ["index.html", "projects.html", "experience.html", "achievements.html", "about.html", "journey.html", "contact.html"],
+          "eagerness": "moderate"
+        }
+      ]
+    }
+  </script>
 
   <title>ADT | Contact — Aaradhya Dev Tamrakar</title>
   <meta name="description"

@@ -18,6 +18,7 @@
 - **BiasAperture**: Vision-model fairness and demographic disparity diagnostic suite (Fuse AI Fellowship capstone).
 - **Text-to-SQL Agentic Pipeline**: Five-stage agentic Text-to-SQL generation pipeline with 100% benchmark execution accuracy.
 
-## Optional
+## Optional & Extended
 
+- [Full LLM Context](https://aaradhyadt.github.io/llms-full.txt): Comprehensive technical context, architecture specifications, and project breakdowns.
 - [Sitemap](https://aaradhyadt.github.io/sitemap.xml): Complete XML sitemap index.

@@ -9,7 +9,7 @@ const SITE_RELEASES = [
 
   {
 
-    version: 'v49.49',
+    version: 'v49.50',
 
     date: '2026-08-19',
 

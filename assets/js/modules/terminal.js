@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v49.49)
+   MODULE: terminal.js — aaradhyadt.github.io (v49.50)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -71,6 +71,42 @@
         }
         return `<span class="term-gold">Usage: goto [home | projects | experience | achievements | about | journey | contact]</span>`;
       },
+      ls: () => `
+<span class="term-green">[SITE DIRECTORY &amp; MODULES]</span><br>
+  <span class="term-cyan">Pages:</span> index.html  projects.html  experience.html  achievements.html  about.html  journey.html  contact.html<br>
+  <span class="term-cyan">Docs:</span>  AARADHYA_DEV_TAMRAKAR_CV.pdf  llms.txt  llms-full.txt  sitemap.xml<br>
+  <span class="term-cyan">Categories:</span> aiml  embedded  hardware  apps
+`.trim(),
+      whoami: () => `
+<span class="term-green">Aaradhya Dev Tamrakar (ADT)</span><br>
+  • <span class="term-gold">Role:</span> Electronics, Communication &amp; Information Engineer (BEI IV/I)<br>
+  • <span class="term-gold">Institution:</span> Kathmandu Engineering College, IOE, Tribhuvan University<br>
+  • <span class="term-gold">Fellowships:</span> Fuse AI Fellow (Fusemachines 2026) · NSSR DataCamp Fellow (C2)<br>
+  • <span class="term-gold">Leadership:</span> Vice Chair, IEEE KEC Student Branch · EPC Club Event Manager<br>
+  • <span class="term-gold">Focus:</span> Edge AI, Embedded Systems, Robotics (ESP32-S3 / PyTorch / TFLite Micro)
+`.trim(),
+      cat: (arg) => {
+        const target = (arg || '').toLowerCase().trim();
+        if (target === 'cv' || target === 'resume') {
+          return COMMANDS.cv();
+        }
+        if (target === 'bio' || target === 'about') {
+          return COMMANDS.whoami();
+        }
+        if (target === 'spark') {
+          return COMMANDS.run('spark');
+        }
+        if (target === 'skills') {
+          return COMMANDS.skills();
+        }
+        return `<span class="term-gold">Usage: cat [cv | bio | spark | skills]</span>`;
+      },
+      ping: (arg) => {
+        const target = (arg || 'aaradhyadt.github.io').trim();
+        const latency = Math.floor(Math.random() * 18) + 12;
+        return `<span class="term-green">PING ${escapeHtml(target)}: 64 bytes | time=${latency}ms | TTL=118 (status: OK)</span>`;
+      },
+      cls: () => COMMANDS.clear(),
       cv: () => {
         const a = document.createElement('a');
         a.href = 'assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf';
@@ -399,7 +435,43 @@
     }
 
     input.addEventListener('keydown', e => {
-      if (e.key === 'Enter') {
+      if (e.key === 'Tab') {
+        e.preventDefault();
+        const raw = input.value;
+        const trimmed = raw.trimStart();
+        if (!trimmed) return;
+        const parts = trimmed.split(/\s+/);
+        const allCmds = Object.keys(COMMANDS);
+
+        if (parts.length === 1 && !raw.endsWith(' ')) {
+          const prefix = parts[0].toLowerCase();
+          const matches = allCmds.filter(c => c.startsWith(prefix));
+          if (matches.length === 1) {
+            input.value = matches[0] + ' ';
+          } else if (matches.length > 1) {
+            appendOutput(raw, `<span class="term-gold">Suggestions:</span> ${matches.map(m => `<span class="term-cyan">${m}</span>`).join('  ')}`);
+          }
+        } else if (parts.length >= 1) {
+          const baseCmd = parts[0].toLowerCase();
+          const subPrefix = (parts.length > 1 ? parts[1] : '').toLowerCase();
+          const SUB_OPTIONS = {
+            goto: ['home', 'projects', 'experience', 'achievements', 'about', 'journey', 'contact', 'terms', 'privacy'],
+            filter: ['all', 'aiml', 'embedded', 'hardware', 'apps'],
+            run: ['spark', 'gcsbr', 'prakopnet', 'pulselive'],
+            cat: ['cv', 'bio', 'spark', 'skills'],
+            accent: ['gold', 'emerald', 'violet', 'cyan', 'ruby', 'prism'],
+            color: ['gold', 'emerald', 'violet', 'cyan', 'ruby', 'prism']
+          };
+          if (SUB_OPTIONS[baseCmd]) {
+            const matches = SUB_OPTIONS[baseCmd].filter(s => s.startsWith(subPrefix));
+            if (matches.length === 1) {
+              input.value = `${baseCmd} ${matches[0]}`;
+            } else if (matches.length > 1) {
+              appendOutput(raw, `<span class="term-gold">Subcommands:</span> ${matches.map(m => `<span class="term-cyan">${m}</span>`).join('  ')}`);
+            }
+          }
+        }
+      } else if (e.key === 'Enter') {
         e.preventDefault();
         const val = input.value;
         input.value = '';

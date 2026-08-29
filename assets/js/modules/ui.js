@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v49.49)
+   MODULE: ui.js — aaradhyadt.github.io (v49.50)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -966,6 +966,70 @@ function generateResumeMarkdown(roleKey) {
   return md.join('\n').trim();
 }
 
+function generateResumeJson(roleKey) {
+  const roleData = RESUME_DATA.roles[roleKey] || RESUME_DATA.roles.all;
+  return JSON.stringify({
+    "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+    "basics": {
+      "name": RESUME_DATA.name,
+      "label": roleData.title,
+      "email": "aaradhyadevtmr@gmail.com",
+      "phone": "+977 9844602050",
+      "url": "https://aaradhyadt.github.io",
+      "summary": RESUME_DATA.summary,
+      "location": {
+        "city": "Kathmandu",
+        "countryCode": "NP"
+      },
+      "profiles": [
+        {
+          "network": "LinkedIn",
+          "username": "aaradhya-dev-tamrakar",
+          "url": "https://linkedin.com/in/aaradhya-dev-tamrakar"
+        },
+        {
+          "network": "GitHub",
+          "username": "AaradhyaDT",
+          "url": "https://github.com/AaradhyaDT"
+        }
+      ]
+    },
+    "education": [
+      {
+        "institution": "Kathmandu Engineering College, IOE, Tribhuvan University",
+        "area": "Electronics, Communication & Information Engineering",
+        "studyType": "Bachelor of Engineering (BEI)",
+        "startDate": "2022-11-01",
+        "endDate": "2027-01-01"
+      }
+    ],
+    "sections": roleData.sections.map(sec => ({
+      "category": sec.title,
+      "items": sec.items.map(item => ({
+        "header": item.header,
+        "subtitle": item.sub || "",
+        "highlights": item.bullets || []
+      }))
+    }))
+  }, null, 2);
+}
+
+function downloadResumeJson(roleKey) {
+  const jsonStr = generateResumeJson(roleKey);
+  const blob = new Blob([jsonStr], { type: 'application/json;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const safeTitle = (RESUME_DATA.roles[roleKey]?.title || 'Master_CV').replace(/[^a-zA-Z0-9]/g, '_');
+  a.href = url;
+  a.download = `Aaradhya_Dev_Tamrakar_Resume_${safeTitle}.json`;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+  showToast('JSON Resume downloaded!');
+  if (typeof playAudioCue === 'function') playAudioCue('click');
+}
+
 function downloadResumeMarkdown(roleKey) {
   const md = generateResumeMarkdown(roleKey);
   const blob = new Blob([md], { type: 'text/markdown;charset=utf-8' });
@@ -1046,6 +1110,16 @@ function openResumeGenerator() {
             </svg>
             <span>Download .MD</span>
           </button>
+          <button type="button" class="resume-action-btn" id="resumeDownloadJsonBtn" title="Download standard JSON Resume">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/>
+              <line x1="16" y1="17" x2="8" y2="17"/>
+              <polyline points="10 9 9 9 8 9"/>
+            </svg>
+            <span>Download .JSON</span>
+          </button>
           <button type="button" class="resume-print-btn" id="resumePrintBtn">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
               <polyline points="6 9 6 2 18 2 18 9"/>
@@ -1070,6 +1144,9 @@ function openResumeGenerator() {
   });
   document.getElementById('resumeDownloadMdBtn').addEventListener('click', () => {
     downloadResumeMarkdown(currentActiveRole);
+  });
+  document.getElementById('resumeDownloadJsonBtn').addEventListener('click', () => {
+    downloadResumeJson(currentActiveRole);
   });
 
   window.addEventListener('afterprint', () => {
@@ -1140,6 +1217,7 @@ function renderTailoredResumePreview(roleKey) {
 window.openResumeGenerator = openResumeGenerator;
 window.closeResumeGenerator = closeResumeGenerator;
 window.downloadResumeMarkdown = downloadResumeMarkdown;
+window.downloadResumeJson = downloadResumeJson;
 window.copyResumePlainText = copyResumePlainText;
 window.initSkillRadar = initSkillRadar;
 window.openSkillRadarModal = openSkillRadarModal;
