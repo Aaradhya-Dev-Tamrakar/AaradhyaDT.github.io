@@ -1,6 +1,6 @@
 {
-  "sha": "3f57cd195ecde5a7be95cb07122ee01c69c5d364",
-  "shortSha": "3f57cd1",
-  "date": "2026-08-28T10:36:54+05:45",
-  "message": "Update README.md"
+  "sha": "a9f4eb6c18e8040bdd3ce3ac3e3aa7cb827dc53f",
+  "shortSha": "a9f4eb6",
+  "date": "2026-08-29T09:21:07+05:45",
+  "message": "feat(site): terminal autocomplete, json resume exporter, speculation rules & llm context"
 }
