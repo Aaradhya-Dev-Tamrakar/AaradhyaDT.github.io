@@ -1,6 +1,6 @@
 {
-  "sha": "f7ad4fd9c0402e561ff88912fb9ceab5d33e6672",
-  "shortSha": "f7ad4fd",
-  "date": "2026-08-29T11:56:18+05:45",
-  "message": "fix(site): address repository review issues and enhance resilience"
+  "sha": "b3d1337b822fa4bf9e312081064f00f2a9707eee",
+  "shortSha": "b3d1337",
+  "date": "2026-08-29T12:20:55+05:45",
+  "message": "feat(quality): add JS unit test suite, E2E smoke runner, strict CSP, and 24-check gate"
 }
