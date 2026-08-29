@@ -38,6 +38,16 @@ For `.ipynb` notebooks, do not execute — run manually in Google Colab or local
 - Small/targeted edits: output the changed code block(s) inline.
 - Whole files, multi-file fixes, or explicit "output the file(s)/zip" requests: package into a zip preserving exact repo-relative paths, deliver as a file — don't paste full files as chat code blocks.
 
+## Encrypted Sections & VIP Payloads (`access.js`)
+
+To inspect, debug, or edit AES-256-GCM encrypted payloads without manual decryption overhead, use `scripts/manage_payloads.py` or MCP tools:
+- `python scripts/manage_payloads.py list`
+- `python scripts/manage_payloads.py get <key>`
+- `python scripts/manage_payloads.py set <key> --content "<text>"`
+- `python scripts/manage_payloads.py export --out dev-logs/payloads_plaintext.json`
+- `python scripts/manage_payloads.py import --file dev-logs/payloads_plaintext.json`
+- `python scripts/manage_payloads.py verify`
+
 ## Output constraints (strict)
 
 1. Output ONLY the modified/updated code blocks, edits, or targeted CV/text change.

@@ -43,4 +43,7 @@ dev-logs/*
 !dev-logs/PortfolioWebsite_TRACKER.md
 !dev-logs/PortfolioWebsite_TRACKER_*.md
 dev-logs/secrets/
+dev-logs/payloads_plaintext.json
+dev-logs/*.plaintext.json
+dev-logs/payloads/
 

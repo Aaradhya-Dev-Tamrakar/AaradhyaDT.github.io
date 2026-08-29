@@ -56,6 +56,26 @@ if site_automation is None:
     except ImportError:
         site_automation = None
 
+manage_payloads = None
+PAYLOADS_PATH = SCRIPTS_DIR / "manage_payloads.py"
+if PAYLOADS_PATH.exists():
+    try:
+        spec_p = importlib.util.spec_from_file_location("manage_payloads", str(PAYLOADS_PATH))
+        if spec_p and spec_p.loader:
+            mod_p = importlib.util.module_from_spec(spec_p)
+            spec_p.loader.exec_module(mod_p)
+            manage_payloads = mod_p
+    except Exception as e:
+        sys.stderr.write(f"Warning: Failed loading manage_payloads directly: {e}\n")
+
+if manage_payloads is None:
+    if str(SCRIPTS_DIR) not in sys.path:
+        sys.path.insert(0, str(SCRIPTS_DIR))
+    try:
+        import manage_payloads
+    except ImportError:
+        manage_payloads = None
+
 # MCP Server Metadata
 SERVER_NAME = "site-mcp"
 SERVER_VERSION = "1.0.0"
@@ -96,6 +116,12 @@ RESOURCES = [
         "uri": "site://stats",
         "name": "Site Telemetry & Metrics",
         "description": "Live counts of HTML pages, projects, achievements, service worker version, and graph metrics.",
+        "mimeType": "application/json"
+    },
+    {
+        "uri": "site://payloads",
+        "name": "Encrypted Access Control Payloads",
+        "description": "Decrypted overview of all VIP and Master payloads from access.js.",
         "mimeType": "application/json"
     }
 ]
@@ -175,6 +201,62 @@ TOOLS = [
             "type": "object",
             "properties": {}
         }
+    },
+    {
+        "name": "list_encrypted_payloads",
+        "description": "Lists all 25 encrypted payload keys in access.js with their tier, character length, and preview.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {}
+        }
+    },
+    {
+        "name": "read_encrypted_payload",
+        "description": "Decrypts and returns the plaintext content of an encrypted payload in access.js.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "description": "Payload key ID (e.g. 'index-vip', 'proj-gcsbr', 'index-master')"
+                },
+                "passcode": {
+                    "type": "string",
+                    "description": "Optional passcode override (defaults to 'vip2026' or 'master2026')"
+                }
+            },
+            "required": ["key"]
+        }
+    },
+    {
+        "name": "write_encrypted_payload",
+        "description": "Encrypts a plaintext string and updates the payload in access.js.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {
+                "key": {
+                    "type": "string",
+                    "description": "Payload key ID (e.g. 'index-vip', 'proj-gcsbr')"
+                },
+                "content": {
+                    "type": "string",
+                    "description": "Plaintext content to encrypt and store"
+                },
+                "passcode": {
+                    "type": "string",
+                    "description": "Optional passcode override"
+                }
+            },
+            "required": ["key", "content"]
+        }
+    },
+    {
+        "name": "verify_encrypted_payloads",
+        "description": "Tests decryption across all payloads in access.js to guarantee cryptographic integrity.",
+        "inputSchema": {
+            "type": "object",
+            "properties": {}
+        }
     }
 ]
 
@@ -242,6 +324,22 @@ def handle_resource_read(uri):
             certs.append({"title": title})
         return json.dumps({"count": len(certs), "achievements": certs}, indent=2), "application/json"
 
+    elif uri == "site://payloads":
+        if not manage_payloads:
+            return json.dumps({"error": "manage_payloads module unavailable"}, indent=2), "application/json"
+        payloads = manage_payloads.read_access_payloads()
+        out = {}
+        for key, hex_str in payloads.items():
+            code = manage_payloads.get_default_passcode_for_key(key)
+            try:
+                out[key] = {
+                    "tier": "master" if key in manage_payloads.KNOWN_MASTER_KEYS else "vip",
+                    "content": manage_payloads.decrypt_payload(hex_str, code)
+                }
+            except Exception as e:
+                out[key] = {"error": str(e), "raw_hex": hex_str}
+        return json.dumps(out, indent=2), "application/json"
+
     else:
         return None, None
 
@@ -276,6 +374,68 @@ def handle_tool_call(name, args):
     elif name == "get_site_telemetry":
         res = site_automation.get_site_stats() if site_automation else {"error": "Automation module unavailable"}
         return json.dumps(res, indent=2)
+
+    elif name == "list_encrypted_payloads":
+        if not manage_payloads:
+            return json.dumps({"error": "manage_payloads module unavailable"}, indent=2)
+        payloads = manage_payloads.read_access_payloads()
+        result = []
+        for key, hex_str in payloads.items():
+            code = manage_payloads.get_default_passcode_for_key(key)
+            tier = "master" if key in manage_payloads.KNOWN_MASTER_KEYS else "vip"
+            try:
+                dec = manage_payloads.decrypt_payload(hex_str, code)
+                preview = dec.replace("\n", " ").strip()[:60]
+                status = "ok"
+            except Exception as e:
+                preview = str(e)
+                status = "decrypt_failed"
+            result.append({"key": key, "tier": tier, "length": len(hex_str), "status": status, "preview": preview})
+        return json.dumps(result, indent=2)
+
+    elif name == "read_encrypted_payload":
+        if not manage_payloads:
+            return json.dumps({"error": "manage_payloads module unavailable"}, indent=2)
+        key = args.get("key")
+        code = args.get("passcode") or manage_payloads.get_default_passcode_for_key(key)
+        payloads = manage_payloads.read_access_payloads()
+        if key not in payloads:
+            return json.dumps({"error": f"Payload key '{key}' not found"}, indent=2)
+        try:
+            content = manage_payloads.decrypt_payload(payloads[key], code)
+            return json.dumps({"key": key, "content": content}, indent=2)
+        except Exception as e:
+            return json.dumps({"error": f"Decryption failed: {e}"}, indent=2)
+
+    elif name == "write_encrypted_payload":
+        if not manage_payloads:
+            return json.dumps({"error": "manage_payloads module unavailable"}, indent=2)
+        key = args.get("key")
+        content = args.get("content")
+        code = args.get("passcode") or manage_payloads.get_default_passcode_for_key(key)
+        payloads = manage_payloads.read_access_payloads()
+        new_hex = manage_payloads.encrypt_payload(content, code)
+        payloads[key] = new_hex
+        manage_payloads.write_access_payloads(payloads)
+        return json.dumps({"status": "success", "key": key, "hex_length": len(new_hex)}, indent=2)
+
+    elif name == "verify_encrypted_payloads":
+        if not manage_payloads:
+            return json.dumps({"error": "manage_payloads module unavailable"}, indent=2)
+        payloads = manage_payloads.read_access_payloads()
+        verified = 0
+        failed = []
+        for key, hex_str in payloads.items():
+            code = manage_payloads.get_default_passcode_for_key(key)
+            try:
+                dec = manage_payloads.decrypt_payload(hex_str, code)
+                if dec:
+                    verified += 1
+                else:
+                    failed.append(key)
+            except Exception:
+                failed.append(key)
+        return json.dumps({"total": len(payloads), "verified": verified, "failed": failed}, indent=2)
 
     else:
         return None

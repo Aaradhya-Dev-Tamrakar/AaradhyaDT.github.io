@@ -8,7 +8,7 @@
 const SITE_RELEASES = [
 
     {
-    version: 'v50.15',
+    version: 'v50.16',
     date: '2026-08-29',
     sha: 'rel50',
     title: "Native JS Unit Testing Suite, E2E Smoke Runner, Strict CSP & 24-Check Verification Gate",
