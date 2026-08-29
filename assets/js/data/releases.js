@@ -8,12 +8,16 @@
 const SITE_RELEASES = [
 
     {
-    version: 'v50.5',
+    version: 'v50.6',
     date: '2026-08-29',
     sha: 'rel50',
-    title: "Dev Terminal Tab Autocomplete, JSON Resume & Speculation Rules Suite",
+    title: "Keyboard Shortcuts HUD, Web Share API, Terminal History & CV Alignment Suite",
     highlights: [
-      "Terminal: Tab autocompletion for commands and subcommands with developer aliases (ls, whoami, cat, ping, cls)"
+      "Keyboard Shortcuts HUD: Zero-scroll at-a-glance cheat sheet modal (binds ? / Shift+/) highlighting instant page jumps (1-7), theme/date toggles, and global actions",
+      "Web Share API: Native OS share sheet integration (navigator.share) with clipboard fallback across ATS Resume modal, Command Palette, and CLI",
+      "Dev Terminal: Persistent cross-session command history in localStorage (ArrowUp/ArrowDown), tab autocompletion, and developer aliases (ls, whoami, cat, ping, cls, share, history)",
+      "ATS Resume Generator: Strict alignment with official master CV standards, clean two-column geometry, standard JSON Resume (.json), Markdown (.md), and A4 print PDF export",
+      "Speculation Rules: Instant pre-rendering of core page destinations in Chromium-based browsers"
     ]
   },
 {

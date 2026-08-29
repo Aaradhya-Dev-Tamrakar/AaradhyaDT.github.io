@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-08-29)
 
 ## Corpus Check
-- 30 files · ~296,231 words
+- 30 files · ~296,451 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 516 nodes · 702 edges · 102 communities (28 shown, 74 thin omitted)
-- Extraction: 90% EXTRACTED · 10% INFERRED · 0% AMBIGUOUS · INFERRED: 67 edges (avg confidence: 0.81)
+- 517 nodes · 724 edges · 102 communities (28 shown, 74 thin omitted)
+- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 67 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `70988af3`
+- Built from commit: `2d12a92b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -116,13 +116,13 @@
 1. `bootSite()` - 34 edges
 2. `main()` - 29 edges
 3. `log_pass()` - 23 edges
-4. `log_error()` - 20 edges
-5. `playAudioCue()` - 17 edges
-6. `log_warning()` - 15 edges
-7. `get_html_files()` - 13 edges
-8. `showToast()` - 9 edges
-9. `main()` - 8 edges
-10. `parse_html()` - 8 edges
+4. `Portfolio Website Tracker — v50.6` - 22 edges
+5. `log_error()` - 20 edges
+6. `playAudioCue()` - 17 edges
+7. `log_warning()` - 15 edges
+8. `get_html_files()` - 13 edges
+9. `showToast()` - 9 edges
+10. `main()` - 8 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Printer Maintenance Certification Certificate` --semantically_similar_to--> `Printer Maintenance Certification PDF`  [INFERRED] [semantically similar]
@@ -151,15 +151,15 @@ Nodes (6): KEC EPC Club Logo, Fusemachines Logo, KEC Maker's Space Logo, Social 
 
 ### Community 2 - "Community 2"
 Cohesion: 0.06
-Nodes (41): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), AD_MONTHS, adToBs(), applyAccent(), applyLiveDates() (+33 more)
+Nodes (43): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), AD_MONTHS, adToBs(), applyAccent(), applyLiveDates() (+35 more)
 
 ### Community 3 - "Community 3"
 Cohesion: 0.10
 Nodes (32): getAudioContext(), initAudioCues(), playAudioCue(), syncAudioToggleUI(), toggleAudioCues(), closeResumeGenerator(), closeShortcutsModal(), closeSkillRadarModal() (+24 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.15
-Nodes (25): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+17 more)
+Cohesion: 0.17
+Nodes (23): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+15 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.16
@@ -214,12 +214,12 @@ Cohesion: 1.00
 Nodes (3): SimOps AI for Graduates Certificate, SimOps Expert Certificate, SimOps Platform
 
 ### Community 94 - "Community 94"
-Cohesion: 0.05
-Nodes (35): AI-Assisted Coding for Developers Certificate, AI Fluency Foundations Certificate, File delivery, Local Git Workflow & Auto-Sync (`sync.ps1`), Output constraints (strict), Working conventions for this repo, Evidence & Verification Log — v20 additions, Meta (+27 more)
+Cohesion: 0.10
+Nodes (32): AI-Assisted Coding for Developers Certificate, AI Fluency Foundations Certificate, Evidence & Verification Log — v20 additions, Meta, Portfolio Website Tracker — v50.6, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out (+24 more)
 
 ### Community 95 - "Community 95"
-Cohesion: 0.10
-Nodes (21): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 2. Knowledge Graph & Codebase Navigation (Graphify), 3. Operational Rules & Efficiency, Antigravity IDE & Gemini Agent Rules for Portfolio Repository, Commands, graphify update, extract_achievements(), extract_projects() (+13 more)
+Cohesion: 0.08
+Nodes (25): File delivery, Local Git Workflow & Auto-Sync (`sync.ps1`), Output constraints (strict), Working conventions for this repo, 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 2. Knowledge Graph & Codebase Navigation (Graphify), 3. Operational Rules & Efficiency, Antigravity IDE & Gemini Agent Rules for Portfolio Repository (+17 more)
 
 ### Community 96 - "Community 96"
 Cohesion: 0.12
@@ -230,7 +230,7 @@ Cohesion: 0.70
 Nodes (4): bootHomeWidgets(), initLastCommitBadge(), initLiveDates(), initStatusClock()
 
 ## Knowledge Gaps
-- **171 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+166 more)
+- **151 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+146 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **74 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -246,7 +246,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Are the 30 inferred relationships involving `bootSite()` (e.g. with `initAccessControl()` and `initAudioCues()`) actually correct?**
   _`bootSite()` has 30 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**
-  _205 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _185 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.05689900426742532 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

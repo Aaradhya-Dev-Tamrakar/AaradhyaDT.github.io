@@ -1,10 +1,14 @@
-﻿# Portfolio Website Tracker — v50.5
+﻿# Portfolio Website Tracker — v50.6
 
 Last updated: _2026-08-29_
 
 ## Meta
-- **v50 — Dev Terminal Tab Autocomplete, JSON Resume & Speculation Rules Suite.** Shipped dev terminal tab autocomplete, json resume & speculation rules suite.
-  - Terminal: Tab autocompletion for commands and subcommands with developer aliases (ls, whoami, cat, ping, cls)
+- **v50 — Keyboard Shortcuts HUD, Web Share API, Terminal History & CV Alignment Suite.** Shipped major UX, developer ergonomics, and CV alignment features:
+  - **Keyboard Shortcuts HUD Modal (`?` / `Shift+/`)**: Zero-scroll at-a-glance cheat sheet modal with instant page navigation (`1-7`), theme toggle (`0`), date toggle (`` ` ``), release history (`Shift+N`), tour (`Shift+T`), audio cues (`Shift+A`), and master close (`Esc`).
+  - **Web Share API (`navigator.share`)**: Integrated native OS share sheet with automatic clipboard fallback across ATS Resume modal (`#resumeShareBtn`), Command Palette (`cmdk.js`), and Dev Terminal (`share`).
+  - **Dev Terminal History Persistence & Aliases (`terminal.js`)**: Added cross-session `localStorage` command history traversal (`ArrowUp`/`ArrowDown`), `Tab` autocompletion for commands and subcommands, and developer aliases (`ls`, `whoami`, `cat`, `ping`, `cls`, `share`, `history`).
+  - **Tailored ATS Resume Generator & CV Alignment (`ui.js`, `resume-data.js`)**: Aligned section hierarchy (`PROFILE`, `EDUCATION`, `EXPERIENCE`, `FELLOWSHIPS`, `PROJECTS`, `TECHNICAL SKILLS`, `CERTIFICATIONS & ACTIVITIES`), typography, and multi-format exports (`.MD`, `.JSON`, `.TXT`, `@media print` A4 PDF) with the official master CV.
+  - **Speculation Rules & Modern Performance**: Instant pre-rendering of core page destinations in Chromium-based browsers.
 
 
 - **v49.49 (Update) — Dev Terminal Autocomplete & Aliases, ATS JSON Resume Exporter, Speculation Rules & LLM Full Context Suite.** Shipped 5-track feature and architecture upgrades:
