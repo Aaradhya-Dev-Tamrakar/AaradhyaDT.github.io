@@ -74,7 +74,7 @@ const RESUME_DATA = {
               header: "Fuse AI Fellow — Fusemachines AI Fellowship 2026",
               sub: "Fusemachines | Active (Selected via competitive entrance exam in linear algebra, calculus, probability, Python, ML)",
               bullets: [
-                "Engineered a five-stage agentic Text-to-SQL pipeline (Planner ÔåÆ Generator ÔåÆ Validator ÔåÆ Executor ÔåÆ Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
+                "Engineered a five-stage agentic Text-to-SQL pipeline (Planner → Generator → Validator → Executor → Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
                 "Developed an end-to-end churn & CLV pipeline achieving 5-fold CV ROC-AUC 0.841, threshold-tuned for top-200 high-risk segment with Random Forest/XGBoost ensembles, SMOTE, and SHAP explainability.",
                 "Implemented probabilistic models (Bayesian estimation, Gaussian process regression via PyMC/ArviZ) and UCI Online Retail II customer segmentation (K-Means/DBSCAN).",
                 "Benchmarked nine time-series forecasting models and built a 4-model ensemble achieving MASE 2.44; deployed containerized REST API with FastAPI, PostgreSQL, and Docker."
@@ -202,7 +202,7 @@ const RESUME_DATA = {
               header: "Fuse AI Fellow — Fusemachines AI Fellowship 2026",
               sub: "Fusemachines | Active (Selected via competitive entrance exam in linear algebra, calculus, probability, Python, ML)",
               bullets: [
-                "Engineered a five-stage agentic Text-to-SQL pipeline (Planner ÔåÆ Generator ÔåÆ Validator ÔåÆ Executor ÔåÆ Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
+                "Engineered a five-stage agentic Text-to-SQL pipeline (Planner → Generator → Validator → Executor → Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
                 "Built end-to-end churn & CLV pipeline achieving 5-fold CV ROC-AUC 0.841 with Random Forest/XGBoost ensembles, SMOTE, and SHAP explainability.",
                 "Implemented Bayesian estimation & Gaussian process regression via PyMC/ArviZ; segmented UCI Online Retail II customers using K-Means and DBSCAN.",
                 "Benchmarked 9 forecasting models with 4-model ensemble achieving MASE 2.44; deployed containerized REST APIs with FastAPI, PostgreSQL, and Docker."
