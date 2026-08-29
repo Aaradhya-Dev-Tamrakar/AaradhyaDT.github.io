@@ -1,6 +1,14 @@
-﻿# Portfolio Website Tracker — v50.10
+# Portfolio Website Tracker — v50.11
 
 Last updated: _2026-08-29_
+
+- **v50.10 (Architecture & Optimization) — PWA Raster Icons, Modular Constants, Zero-Dependency CSS Minifier & Centralized Versioning.** Shipped comprehensive structural and optimization refinements:
+  - **PWA Raster Icons & Manifest Compliance (`site.webmanifest`, `sw.js`, `generate_pwa_icons.py`)**: Generated standard 192x192 and 512x512 PNG icons alongside existing SVG icon, ensuring 100% PWA installability and compliance across Chromium/Safari.
+  - **Constants Modularization (`assets/js/modules/constants.js`)**: Decomposed monolithic `core.js` by extracting `SITE` configuration, `SOCIAL_ICONS`, `QUICK_NAV_PAGES`, `CMDK_TYPE_LABEL`, and `CMDK_ICONS` into a dedicated constants module loaded ahead of `core.js`.
+  - **Zero-Dependency CSS Module Minifier (`scripts/build_css.py`, `sync.ps1`)**: Implemented standalone Python CSS module compressor achieving ~24.4% size reduction across all 9 CSS modules (~30.7 KB saved), integrated directly into `sync.ps1` workflow.
+  - **Single-Source Version Centralization (`VERSION`, `verify.py`, `site_automation.py`)**: Introduced root `VERSION` file as the unified source of truth, integrated into the 22-category `verify.py` test suite and `site_automation.py` auto-propagation pipeline.
+  - **Speculative Rules Optimization (`404.html`)**: Trimmed speculation rules on 404 error page to only pre-render the homepage destination.
+  - **Verification Gate**: Passed `python scripts/verify.py` across all 22 diagnostic categories cleanly (0 errors, 0 warnings); `node --check` validated syntax across all JS files.
 
 - **v50.9 (Update) — Service Worker Dynamic Push Notification Suite & Client Notification API.** Shipped dynamic push notification and client notification ergonomics:
   - **Dynamic Background Push Notification Hooks (`sw.js`)**: Implemented `push` event handler with resilient fallback parsing, rich notification parameters (vibrations, action buttons, icons, project routing tags), and `notificationclick` matching logic to focus active tabs or launch destination windows.

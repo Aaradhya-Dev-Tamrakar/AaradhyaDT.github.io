@@ -648,6 +648,15 @@ else {
     if ($SkipIndex) { Write-Badge "Index" "Skipped search index extraction (-SkipIndex set)." "Yellow" "Gray" }
 }
 
+# Step 4b: CSS Module Optimization
+if (-not $PushOnly -and (Test-Path "scripts/build_css.py") -and $pythonExe) {
+    Write-Badge "CSS" "Minifying CSS modules (scripts/build_css.py)..." "Cyan" "White"
+    $cssOutput = & $pythonExe scripts/build_css.py 2>&1 | Out-String
+    if ($VerboseLog) {
+        Write-Host $cssOutput.Trim() -ForegroundColor Gray
+    }
+}
+
 # Step 5: Knowledge Graph AST Update (Graphify)
 if (-not $SkipGraph -and -not $PushOnly) {
     $graphifyCmd = Get-Command graphify -ErrorAction SilentlyContinue

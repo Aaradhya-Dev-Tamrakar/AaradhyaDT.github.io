@@ -1,15 +1,16 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v50.10)
+   SHARED SCRIPT — aaradhyadt.github.io (v50.11)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v50.10) ───────────────────────────── */
+/* ── Dynamic Module Loader (v50.11) ───────────────────────────── */
 window.__modulesLoadedPromise = (function () {
   const MODULES = [
     'assets/js/data/releases.js',
     'assets/js/data/search-index.js',
     'assets/js/data/resume-data.js',
+    'assets/js/modules/constants.js',
     'assets/js/modules/core.js',
     'assets/js/modules/tour.js',
     'assets/js/modules/cmdk.js',
@@ -160,7 +161,7 @@ function syncQueuedContactMessages() {
 
     pending.forEach(async (formData) => {
       try {
-        const FORMSPREE_ID = "xnnjkrrn";
+        const FORMSPREE_ID = (typeof SITE !== 'undefined' && SITE.formspreeId) ? SITE.formspreeId : "xnnjkrrn";
         const res = await fetch("https://formspree.io/f/" + FORMSPREE_ID, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v50.10)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v50.11)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -38,6 +38,7 @@ ACHIEVEMENTS_HTML = ROOT / "achievements.html"
 GRAPH_REPORT = ROOT / "graphify-out" / "GRAPH_REPORT.md"
 README_MD = ROOT / "README.md"
 WORKFLOW_VERIFY_YML = ROOT / ".github" / "workflows" / "verify.yml"
+VERSION_FILE = ROOT / "VERSION"
 
 
 def run_command(cmd, cwd=ROOT):
@@ -252,6 +253,11 @@ def sync_metadata(version_tag=None):
         if new_wf != wf_text:
             WORKFLOW_VERIFY_YML.write_text(new_wf, encoding="utf-8")
             results.append(f"Updated verify.yml workflow header to '{clean_v}'")
+
+    # 11. Update VERSION file
+    if VERSION_FILE.exists():
+        VERSION_FILE.write_text(f"{clean_v}\n", encoding="utf-8")
+        results.append(f"Updated VERSION file to '{clean_v}'")
 
     return results
 

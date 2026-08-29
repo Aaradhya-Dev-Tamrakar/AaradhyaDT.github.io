@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v50.10)
+aaradhyadt.github.io (v50.11)
 
 22 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS runtime safety, CSS URL integrity, deep a11y & SEO,
@@ -49,6 +49,7 @@ RELEASES_JS = DATA_DIR / "releases.js"
 RESUME_DATA_JS = DATA_DIR / "resume-data.js"
 TRACKER_MD = ROOT / "dev-logs" / "PortfolioWebsite_TRACKER.md"
 SITE_AUTOMATION_PY = ROOT / "scripts" / "site_automation.py"
+VERSION_FILE = ROOT / "VERSION"
 
 # ── State ───────────────────────────────────────────────────────────
 errors = []
@@ -540,6 +541,15 @@ def check_version_consistency():
         if m:
             versions["site_automation.py header"] = m.group(1)
 
+    # 8. VERSION file
+    if VERSION_FILE.exists():
+        ver_file_text = VERSION_FILE.read_text(encoding="utf-8").strip()
+        m = re.search(r"v?([\d.]+)", ver_file_text)
+        if m:
+            versions["VERSION file"] = m.group(1)
+        else:
+            log_error(cat, "VERSION file malformed")
+
     unique_versions = set(versions.values())
     if len(unique_versions) == 0:
         log_error(cat, "could not extract any version numbers")
@@ -756,9 +766,9 @@ def check_sw_cache_completeness():
     for p in sorted(uncached_pages):
         log_warning(cat, f"'{p}' is a site page but not in sw.js STATIC_ASSETS")
 
-    # Check all CSS modules are cached
+    # Check all CSS modules are cached (ignoring generated *.min.css artifacts)
     if CSS_MODULES_DIR.exists():
-        css_modules = {f"assets/css/modules/{f.name}" for f in CSS_MODULES_DIR.glob("*.css")}
+        css_modules = {f"assets/css/modules/{f.name}" for f in CSS_MODULES_DIR.glob("*.css") if not f.name.endswith(".min.css")}
         cached_css = set(cached_paths)
         uncached_css = css_modules - cached_css
         for c in sorted(uncached_css):
@@ -1033,15 +1043,16 @@ def check_data_consistency():
             all_ok = False
             all_ok = False
 
-    # 2. SITE constants in core.js
-    core_js_path = MODULES_DIR / "core.js"
-    if core_js_path.exists():
-        core_text = core_js_path.read_text(encoding="utf-8")
+    # 2. SITE constants in constants.js (or core.js)
+    constants_js_path = MODULES_DIR / "constants.js"
+    target_const_path = constants_js_path if constants_js_path.exists() else (MODULES_DIR / "core.js")
+    if target_const_path.exists():
+        core_text = target_const_path.read_text(encoding="utf-8")
         if "aaradhyadevtmr@gmail.com" not in core_text:
-            log_warning(cat, "core.js SITE.masterEmails missing primary contact email")
+            log_warning(cat, f"{target_const_path.name} SITE.masterEmails missing primary contact email")
             all_ok = False
         if "https://github.com/AaradhyaDT" not in core_text:
-            log_warning(cat, "core.js SITE.socials missing primary GitHub profile URL")
+            log_warning(cat, f"{target_const_path.name} SITE.socials missing primary GitHub profile URL")
             all_ok = False
 
     # 3. contact.html email and github consistency
@@ -1120,7 +1131,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v50.10)"))
+    print(bold("  Portfolio Site Verification Suite (v50.11)"))
     print(bold("=" * 60))
     print()
 
