@@ -3044,6 +3044,16 @@
       "norm_label": "readme.md"
     },
     {
+      "label": "aaradhyadt.github.io",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_aaradhyadt_github_io",
+      "community": 96,
+      "norm_label": "aaradhyadt.github.io"
+    },
+    {
       "label": "\ud83d\udcc1 Repository Structure & Directory Map",
       "file_type": "document",
       "source_file": "README.md",
@@ -3214,14 +3224,14 @@
       "norm_label": "portfoliowebsite_tracker.md"
     },
     {
-      "label": "Portfolio Website Tracker \u2014 v50.8",
+      "label": "Portfolio Website Tracker \u2014 v50.9",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "community": 94,
-      "norm_label": "portfolio website tracker \u2014 v50.8"
+      "norm_label": "portfolio website tracker \u2014 v50.9"
     },
     {
       "label": "State of Play",
@@ -9062,9 +9072,9 @@
       "source_file": "scripts/generate_og_cards.py",
       "source_location": "L162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_og_cards",
-      "target": "scripts_generate_og_cards_generate_cards",
-      "confidence_score": 1.0
+      "target": "scripts_generate_og_cards_generate_cards"
     },
     {
       "relation": "contains",
@@ -9072,9 +9082,9 @@
       "source_file": "scripts/generate_og_cards.py",
       "source_location": "L191",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_og_cards",
-      "target": "scripts_generate_og_cards_main",
-      "confidence_score": 1.0
+      "target": "scripts_generate_og_cards_main"
     },
     {
       "relation": "contains",
@@ -9082,9 +9092,9 @@
       "source_file": "scripts/generate_og_cards.py",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_og_cards",
-      "target": "scripts_generate_og_cards_render_svg_card",
-      "confidence_score": 1.0
+      "target": "scripts_generate_og_cards_render_svg_card"
     },
     {
       "relation": "calls",
@@ -9093,9 +9103,9 @@
       "source_file": "scripts/generate_og_cards.py",
       "source_location": "L177",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_og_cards_generate_cards",
-      "target": "scripts_generate_og_cards_render_svg_card",
-      "confidence_score": 1.0
+      "target": "scripts_generate_og_cards_render_svg_card"
     },
     {
       "relation": "rationale_for",
@@ -9103,9 +9113,9 @@
       "source_file": "scripts/generate_og_cards.py",
       "source_location": "L81",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_og_cards_rationale_81",
-      "target": "scripts_generate_og_cards_render_svg_card",
-      "confidence_score": 1.0
+      "target": "scripts_generate_og_cards_render_svg_card"
     },
     {
       "relation": "references",
@@ -9114,9 +9124,9 @@
       "source_file": "scripts/generate_og_cards.py",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_og_cards_render_svg_card",
-      "target": "any",
-      "confidence_score": 1.0
+      "target": "any"
     },
     {
       "relation": "calls",
@@ -9125,9 +9135,9 @@
       "source_file": "scripts/generate_og_cards.py",
       "source_location": "L209",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_og_cards_main",
-      "target": "scripts_generate_og_cards_generate_cards",
-      "confidence_score": 1.0
+      "target": "scripts_generate_og_cards_generate_cards"
     },
     {
       "relation": "rationale_for",
@@ -9135,9 +9145,9 @@
       "source_file": "scripts/generate_og_cards.py",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_og_cards_rationale_163",
-      "target": "scripts_generate_og_cards_generate_cards",
-      "confidence_score": 1.0
+      "target": "scripts_generate_og_cards_generate_cards"
     },
     {
       "relation": "contains",
@@ -11649,6 +11659,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_aaradhyadt_github_io",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
       "source_location": "L232",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -11671,9 +11691,9 @@
       "source_file": "README.md",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_global_keyboard_navigation_shortcuts_hud",
-      "confidence_score": 1.0
+      "target": "readme_global_keyboard_navigation_shortcuts_hud"
     },
     {
       "relation": "contains",
@@ -11744,6 +11764,106 @@
       "confidence_score": 1.0,
       "source": "readme",
       "target": "readme_site_search_unified_command_palette"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L252",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_codebase_knowledge_graph_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L267",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_contact_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L171",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_global_keyboard_navigation_shortcuts_hud",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L104",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_google_oauth_2_0_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_interactive_developer_terminal_widget_adtterminal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L276",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_license",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_local_development_git_workflow",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_multi_tier_access_control_security_model",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_repository_structure_directory_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "readme_aaradhyadt_github_io",
+      "target": "readme_site_search_unified_command_palette",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11832,7 +11952,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "dev_logs_portfoliowebsite_tracker",
-      "target": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "target": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "confidence_score": 1.0
     },
     {
@@ -12051,7 +12171,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L238",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
       "confidence_score": 1.0
     },
@@ -12061,7 +12181,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L210",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_state_of_play",
       "confidence_score": 1.0
     },
@@ -12071,7 +12191,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L249",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
       "confidence_score": 1.0
     },
@@ -12081,7 +12201,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L257",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v22_addition_kec_it_club_introduction_to_git_2024_card_closed_no_source_file_available",
       "confidence_score": 1.0
     },
@@ -12091,7 +12211,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L265",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v23_addition_latest_site_refinements_2026_07_18",
       "confidence_score": 1.0
     },
@@ -12101,7 +12221,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L283",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v24_addition_site_optimization_pass_mobile_legend_line_break_fix_2026_07_18",
       "confidence_score": 1.0
     },
@@ -12111,7 +12231,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L334",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v25_addition_bug_check_sweep_pages_1_3_4_2026_07_27",
       "confidence_score": 1.0
     },
@@ -12121,7 +12241,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L360",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v26_addition_bug_check_sweep_page_2_about_2026_07_27",
       "confidence_score": 1.0
     },
@@ -12131,7 +12251,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L384",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v28_addition_site_wide_bug_audit_structural_hardening_pass_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12141,7 +12261,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L398",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v29_addition_site_wide_performance_pwa_seo_styling_upgrades_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12151,7 +12271,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L412",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v30_addition_pwa_service_worker_skip_links_font_preconnects_content_visibility_optimization_expanded_verification_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12161,7 +12281,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L438",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v31_1_addition_interactive_what_s_new_major_commit_showcase_journey_nodes_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12171,7 +12291,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L425",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v31_addition_url_hash_filter_sync_screen_reader_accessibility_pwa_v31_cache_bump_seo_verification_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12181,7 +12301,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L450",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v32_addition_pwa_offline_resilience_reading_progress_bar_3d_card_tilt_journey_node_j_028_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12191,7 +12311,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L463",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v33_addition_interactive_dev_terminal_cmdk_filter_pills_cursor_light_trail_journey_node_j_029_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12201,7 +12321,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L476",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v34_addition_mobile_touch_ux_ios_safe_area_web_haptics_suite_journey_node_j_030_2026_08_08",
       "confidence_score": 1.0
     },
@@ -12211,7 +12331,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L490",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v35_addition_motion_typed_captions_count_up_counters_view_transitions_journey_node_j_031_2026_08_08",
       "confidence_score": 1.0
     },
@@ -12221,7 +12341,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L506",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v36_addition_visual_polish_performance_skill_matrix_mobile_ux_suite_journey_node_j_032_2026_08_08",
       "confidence_score": 1.0
     },
@@ -12231,7 +12351,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L522",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v37_addition_guided_cross_page_site_tour_with_spotlight_overlay_journey_node_j_033_2026_08_08",
       "confidence_score": 1.0
     },
@@ -12241,7 +12361,7 @@
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L533",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
       "target": "dev_logs_portfoliowebsite_tracker_v38_addition_web_audio_micro_sounds_reading_metrics_live_result_indicators_verification_suite_journey_node_j_034_2026_08_08",
       "confidence_score": 1.0
     },
@@ -13173,5 +13293,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "8bd0f66244ab3bdf6fb426975ec7aa66e54d4cdb"
+  "built_at_commit": "ba44c2aa166d4baa49c4f0693322cc86428ffee1"
 }
