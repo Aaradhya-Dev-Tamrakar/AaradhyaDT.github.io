@@ -1571,20 +1571,20 @@ html[data-theme="light"] .card-gradient-border::before {
   .resume-btn-group {
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.45rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.4rem;
   }
 
   .resume-action-btn {
     width: 100%;
     min-width: 0;
     justify-content: center;
-    font-size: 0.65rem;
-    padding: 0.52rem 0.6rem;
+    font-size: 0.62rem;
+    padding: 0.5rem 0.35rem;
   }
 
   .resume-print-btn {
-    grid-column: span 2;
+    grid-column: span 3;
     width: 100%;
     justify-content: center;
     font-size: 0.72rem;

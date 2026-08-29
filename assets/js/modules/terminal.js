@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v50.3)
+   MODULE: terminal.js — aaradhyadt.github.io (v50.4)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -20,8 +20,15 @@
       welcomeSpan.textContent = `Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal (${SITE_RELEASES[0].version}).`;
     }
 
-    const history = [];
-    let historyIndex = -1;
+    let history = [];
+    try {
+      const saved = localStorage.getItem('adt_terminal_history');
+      if (saved) history = JSON.parse(saved);
+      if (!Array.isArray(history)) history = [];
+    } catch (e) {
+      history = [];
+    }
+    let historyIndex = history.length;
 
     const COMMANDS = {
       help: () => `
@@ -34,6 +41,8 @@
   <span class="term-gold">goto [page]</span>  - Quick navigation ('goto projects', 'goto about', 'goto contact')<br>
   <span class="term-gold">cv</span>           - Download official Curriculum Vitae (PDF)<br>
   <span class="term-gold">email</span>        - Copy direct contact email to clipboard<br>
+  <span class="term-gold">share</span>        - Share portfolio link via Web Share API<br>
+  <span class="term-gold">history</span>      - View recent terminal command execution history<br>
   <span class="term-gold">run [name]</span>   - Run simulation ('run spark', 'run gcsbr', 'run prakopnet', 'run pulselive')<br>
   <span class="term-gold">stats</span>        - Site telemetry summary (projects, achievements, milestones)<br>
   <span class="term-gold">benchmark</span>    - Client runtime performance &amp; DOM metrics<br>
@@ -268,6 +277,22 @@
   • GitHub:   <a href="https://github.com/AaradhyaDT" target="_blank" rel="noopener noreferrer" class="term-link">github.com/AaradhyaDT</a><br>
   • LinkedIn: <a href="https://www.linkedin.com/in/aaradhya-dev-tamrakar" target="_blank" rel="noopener noreferrer" class="term-link">linkedin.com/in/aaradhya-dev-tamrakar</a>
 `.trim(),
+      share: () => {
+        if (typeof shareContent === 'function') {
+          shareContent({
+            title: 'Aaradhya Dev Tamrakar — Portfolio',
+            text: 'Explore the engineering portfolio, projects, and research of Aaradhya Dev Tamrakar.',
+            url: window.location.origin + '/index.html'
+          });
+          return '<span class="term-green">Opened Web Share dialog / copied portfolio link to clipboard.</span>';
+        }
+        return '<span class="term-gold">Portfolio URL: https://aaradhyadt.github.io</span>';
+      },
+      history: () => {
+        if (!history.length) return '<span class="term-gold">No command history recorded yet.</span>';
+        return '<span class="term-green">▶ Recent Command History:</span><br>' +
+          history.map((c, i) => `  <span class="term-gold">${i + 1}.</span> ${escapeHtml(c)}`).join('<br>');
+      },
       shortcuts: () => {
         if (typeof openShortcutsModal === 'function') openShortcutsModal();
         return '<span class="term-green">Opening Keyboard Shortcuts Cheat Sheet HUD...</span>';
@@ -429,7 +454,15 @@
       const trimmed = rawCmd.trim();
       if (!trimmed) return;
       if (typeof triggerHapticFeedback === 'function') triggerHapticFeedback(10);
-      history.push(rawCmd);
+      
+      // Avoid duplicate consecutive entries in history
+      if (history[history.length - 1] !== rawCmd) {
+        history.push(rawCmd);
+        if (history.length > 50) history.shift();
+        try {
+          localStorage.setItem('adt_terminal_history', JSON.stringify(history));
+        } catch (e) {}
+      }
       historyIndex = history.length;
       const parts = trimmed.split(/\s+/);
       const baseCmd = parts[0].toLowerCase();

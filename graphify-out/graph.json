@@ -537,7 +537,7 @@
       "label": "buildSearchIndex()",
       "file_type": "code",
       "source_file": "assets/js/modules/cmdk.js",
-      "source_location": "L64",
+      "source_location": "L65",
       "_origin": "ast",
       "id": "modules_cmdk_buildsearchindex",
       "community": 11,
@@ -547,7 +547,7 @@
       "label": "renderCmdk()",
       "file_type": "code",
       "source_file": "assets/js/modules/cmdk.js",
-      "source_location": "L121",
+      "source_location": "L122",
       "_origin": "ast",
       "id": "modules_cmdk_rendercmdk",
       "community": 11,
@@ -557,7 +557,7 @@
       "label": "revealSearchTarget()",
       "file_type": "code",
       "source_file": "assets/js/modules/cmdk.js",
-      "source_location": "L149",
+      "source_location": "L150",
       "_origin": "ast",
       "id": "modules_cmdk_revealsearchtarget",
       "community": 11,
@@ -567,7 +567,7 @@
       "label": "initGlobalSearch()",
       "file_type": "code",
       "source_file": "assets/js/modules/cmdk.js",
-      "source_location": "L179",
+      "source_location": "L180",
       "_origin": "ast",
       "id": "modules_cmdk_initglobalsearch",
       "community": 11,
@@ -1554,10 +1554,20 @@
       "norm_label": "openresumegenerator()"
     },
     {
+      "label": "shareContent()",
+      "file_type": "code",
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L1378",
+      "_origin": "ast",
+      "id": "modules_ui_sharecontent",
+      "community": 3,
+      "norm_label": "sharecontent()"
+    },
+    {
       "label": "closeResumeGenerator()",
       "file_type": "code",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1358",
+      "source_location": "L1409",
       "_origin": "ast",
       "id": "modules_ui_closeresumegenerator",
       "community": 3,
@@ -1567,7 +1577,7 @@
       "label": "renderTailoredResumePreview()",
       "file_type": "code",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1367",
+      "source_location": "L1418",
       "_origin": "ast",
       "id": "modules_ui_rendertailoredresumepreview",
       "community": 3,
@@ -8294,6 +8304,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "assets/js/modules/ui.js",
+      "source_location": "L1378",
+      "weight": 1.0,
+      "source": "modules_ui",
+      "target": "modules_ui_sharecontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "assets/js/modules/ui.js",
       "source_location": "L595",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -12780,5 +12800,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "b8fff6b107aa2b9fd8381afaf6da556042e949da"
+  "built_at_commit": "70988af309636e2a2dc852a5ce66297d8cbcbea4"
 }

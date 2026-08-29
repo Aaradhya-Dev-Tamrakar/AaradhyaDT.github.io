@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v50.3)
+   MODULE: ui.js — aaradhyadt.github.io (v50.4)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -1302,6 +1302,16 @@ function openResumeGenerator() {
             </svg>
             <span>Download .JSON</span>
           </button>
+          <button type="button" class="resume-action-btn" id="resumeShareBtn" title="Share resume & portfolio link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+              <circle cx="18" cy="5" r="3"/>
+              <circle cx="6" cy="12" r="3"/>
+              <circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/>
+              <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+            <span>Share</span>
+          </button>
           <button type="button" class="resume-print-btn" id="resumePrintBtn" title="Print or Save as PDF">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
               <polyline points="6 9 6 2 18 2 18 9"/>
@@ -1333,6 +1343,16 @@ function openResumeGenerator() {
   document.getElementById('resumeDownloadJsonBtn').addEventListener('click', () => {
     downloadResumeJson(currentActiveRole);
   });
+  const shareBtn = document.getElementById('resumeShareBtn');
+  if (shareBtn) {
+    shareBtn.addEventListener('click', () => {
+      shareContent({
+        title: `Aaradhya Dev Tamrakar — ${RESUME_DATA.roles[currentActiveRole]?.title || 'Resume'}`,
+        text: `Check out Aaradhya Dev Tamrakar's verified resume and engineering portfolio (${RESUME_DATA.roles[currentActiveRole]?.title || 'Master CV'}).`,
+        url: window.location.origin + '/experience.html'
+      });
+    });
+  }
 
   window.addEventListener('afterprint', () => {
     document.body.classList.remove('printing-resume');
@@ -1353,6 +1373,37 @@ function openResumeGenerator() {
   requestAnimationFrame(() => modal.classList.add('open'));
   document.body.style.overflow = 'hidden';
   if (typeof playAudioCue === 'function') playAudioCue('open');
+}
+
+function shareContent(opts = {}) {
+  const shareData = {
+    title: opts.title || 'Aaradhya Dev Tamrakar — Engineering Portfolio',
+    text: opts.text || 'Explore the engineering portfolio, projects, and research of Aaradhya Dev Tamrakar.',
+    url: opts.url || window.location.href
+  };
+
+  if (navigator.share) {
+    navigator.share(shareData).then(() => {
+      showToast('Shared successfully!');
+      if (typeof playAudioCue === 'function') playAudioCue('chime');
+    }).catch(err => {
+      if (err.name !== 'AbortError') {
+        if (navigator.clipboard) {
+          navigator.clipboard.writeText(shareData.url).then(() => {
+            showToast('Link copied to clipboard!');
+            if (typeof playAudioCue === 'function') playAudioCue('chime');
+          });
+        }
+      }
+    });
+  } else if (navigator.clipboard) {
+    navigator.clipboard.writeText(shareData.url).then(() => {
+      showToast('Portfolio link copied to clipboard!');
+      if (typeof playAudioCue === 'function') playAudioCue('chime');
+    }).catch(() => {
+      showToast('Share URL: ' + shareData.url);
+    });
+  }
 }
 
 function closeResumeGenerator() {
@@ -1404,6 +1455,7 @@ window.closeResumeGenerator = closeResumeGenerator;
 window.downloadResumeMarkdown = downloadResumeMarkdown;
 window.downloadResumeJson = downloadResumeJson;
 window.copyResumePlainText = copyResumePlainText;
+window.shareContent = shareContent;
 window.openShortcutsModal = openShortcutsModal;
 window.closeShortcutsModal = closeShortcutsModal;
 window.toggleShortcutsModal = toggleShortcutsModal;

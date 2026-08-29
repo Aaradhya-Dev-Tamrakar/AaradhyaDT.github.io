@@ -8,7 +8,7 @@
 const SITE_RELEASES = [
 
     {
-    version: 'v50.3',
+    version: 'v50.4',
     date: '2026-08-29',
     sha: 'rel50',
     title: "Dev Terminal Tab Autocomplete, JSON Resume & Speculation Rules Suite",
