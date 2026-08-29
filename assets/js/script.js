@@ -1,10 +1,10 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v50.12)
+   SHARED SCRIPT — aaradhyadt.github.io (v50.13)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v50.12) ───────────────────────────── */
+/* ── Dynamic Module Loader (v50.13) ───────────────────────────── */
 window.__modulesLoadedPromise = (function () {
   const MODULES = [
     'assets/js/data/releases.js',
@@ -22,31 +22,43 @@ window.__modulesLoadedPromise = (function () {
     'assets/js/modules/home-widgets.js'
   ];
 
+  window.__failedModules = [];
   const promises = MODULES.map(function (src) {
     var existing = document.querySelector('script[src="' + src + '"]');
-    if (existing) return Promise.resolve();
+    if (existing) return Promise.resolve({ src: src, ok: true, cached: true });
     return new Promise(function (resolve) {
       var s = document.createElement('script');
       s.src = src;
       s.async = false;
       var timer = setTimeout(function () {
-        console.warn('Module load timed out after 5s:', src);
-        resolve();
+        console.warn('[Module Loader] Module load timed out after 5s:', src);
+        window.__failedModules.push({ src: src, reason: 'timeout' });
+        resolve({ src: src, ok: false, reason: 'timeout' });
       }, 5000);
       s.onload = function () {
         clearTimeout(timer);
-        resolve();
+        resolve({ src: src, ok: true });
       };
       s.onerror = function (err) {
         clearTimeout(timer);
-        console.error('Failed to load module:', src, err);
-        resolve();
+        console.error('[Module Loader] Failed to load module:', src, err);
+        window.__failedModules.push({ src: src, reason: 'error', error: err });
+        resolve({ src: src, ok: false, reason: 'error' });
       };
       document.head.appendChild(s);
     });
   });
 
-  return Promise.all(promises);
+  return Promise.all(promises).then(function (results) {
+    var failed = (results || []).filter(function (r) { return r && !r.ok; });
+    if (failed.length > 0) {
+      console.error('[Module Loader] Critical: ' + failed.length + ' module(s) failed to load:', failed.map(function (f) { return f.src; }).join(', '));
+      if (typeof window.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
+        window.dispatchEvent(new CustomEvent('moduleloadererror', { detail: { failed: failed } }));
+      }
+    }
+    return results;
+  });
 })();
 
 

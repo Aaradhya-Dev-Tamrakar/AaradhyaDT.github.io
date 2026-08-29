@@ -500,7 +500,7 @@ function Format-MarkdownHygiene {
 function Sync-BotStamp {
     Write-Badge "BotSync" "Awaiting GitHub Actions stamp bot commit..." "Yellow" "White"
     
-    $maxAttempts = 5
+    $maxAttempts = 12
     $botSynced = $false
 
     for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {

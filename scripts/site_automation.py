@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v50.12)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v50.13)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -19,6 +19,11 @@ import re
 import subprocess
 import sys
 from pathlib import Path
+
+try:
+    from bs4 import BeautifulSoup
+except ImportError:
+    BeautifulSoup = None
 
 # Paths
 ROOT = Path(__file__).resolve().parent.parent
@@ -96,11 +101,21 @@ def get_site_stats():
     
     if PROJECTS_HTML.exists():
         content = PROJECTS_HTML.read_text(encoding="utf-8")
-        projects_count = len(re.findall(r'<h3[^>]*class="[^"]*project-title', content)) or len(re.findall(r'<details[^>]*class="[^"]*project-card', content))
+        if BeautifulSoup:
+            soup = BeautifulSoup(content, "html.parser")
+            projects = soup.select("#projectsGrid .project-card") or soup.select(".project-card, h3.project-title")
+            projects_count = len(projects)
+        else:
+            projects_count = len(re.findall(r'<h3[^>]*class="[^"]*project-title', content)) or len(re.findall(r'<details[^>]*class="[^"]*project-card', content))
         
     if ACHIEVEMENTS_HTML.exists():
         content = ACHIEVEMENTS_HTML.read_text(encoding="utf-8")
-        achievements_count = len(re.findall(r'<h3[^>]*class="[^"]*achievement-title', content)) or len(re.findall(r'class="[^"]*achievement-item', content))
+        if BeautifulSoup:
+            soup = BeautifulSoup(content, "html.parser")
+            achievements = soup.select("#achievementsList .achievement-item") or soup.select(".achievement-item, h3.achievement-title")
+            achievements_count = len(achievements)
+        else:
+            achievements_count = len(re.findall(r'<h3[^>]*class="[^"]*achievement-title', content)) or len(re.findall(r'class="[^"]*achievement-item', content))
 
     sw_version = "unknown"
     if SW_JS.exists():

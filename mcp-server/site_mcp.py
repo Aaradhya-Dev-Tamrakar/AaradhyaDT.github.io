@@ -25,21 +25,36 @@ Standard Usage:
   python mcp-server/site_mcp.py
 """
 
+import importlib.util
 import json
 import os
 import re
 import sys
 from pathlib import Path
 
-# Add scripts directory to path to reuse site_automation logic
+# Resolve absolute root and scripts paths relative to this file
 ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS_DIR = ROOT / "scripts"
-sys.path.insert(0, str(SCRIPTS_DIR))
+SITE_AUTO_PATH = SCRIPTS_DIR / "site_automation.py"
 
-try:
-    import site_automation
-except ImportError:
-    site_automation = None
+site_automation = None
+if SITE_AUTO_PATH.exists():
+    try:
+        spec = importlib.util.spec_from_file_location("site_automation", str(SITE_AUTO_PATH))
+        if spec and spec.loader:
+            mod = importlib.util.module_from_spec(spec)
+            spec.loader.exec_module(mod)
+            site_automation = mod
+    except Exception as e:
+        sys.stderr.write(f"Warning: Failed loading site_automation directly: {e}\n")
+
+if site_automation is None:
+    if str(SCRIPTS_DIR) not in sys.path:
+        sys.path.insert(0, str(SCRIPTS_DIR))
+    try:
+        import site_automation
+    except ImportError:
+        site_automation = None
 
 # MCP Server Metadata
 SERVER_NAME = "site-mcp"
