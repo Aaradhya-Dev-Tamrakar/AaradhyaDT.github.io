@@ -1,6 +1,6 @@
 {
-  "sha": "1e105a0ccc489c0d9ac130fdaf1679f1c2418298",
-  "shortSha": "1e105a0",
-  "date": "2026-08-29T09:40:00+05:45",
-  "message": "refactor(ui): streamline keyboard shortcuts HUD into compact zero-scroll 2-column layout"
+  "sha": "6707fd149a7d73da2b5eba4f84ecb1607d9798e8",
+  "shortSha": "6707fd1",
+  "date": "2026-08-29T09:47:33+05:45",
+  "message": "feat(core): persist terminal history and integrate Web Share API across resume and CLI"
 }
