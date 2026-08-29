@@ -287,17 +287,20 @@
 /* ── Tag chip ─────────────────────────────────────────────── */
 .tag {
   font-family: var(--mono);
-  font-size: 0.6rem;
-  letter-spacing: 0.1em;
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
+  background: var(--text-a10);
   border: 1px solid var(--line);
-  padding: 0.3rem 0.6rem;
-  border-radius: 2px;
+  padding: 0.28rem 0.6rem;
+  border-radius: 3px;
 }
 
 html[data-theme="light"] .tag {
   color: var(--text);
+  background: rgba(0, 0, 0, 0.04);
   border-color: rgba(0, 0, 0, 0.18);
 }
 

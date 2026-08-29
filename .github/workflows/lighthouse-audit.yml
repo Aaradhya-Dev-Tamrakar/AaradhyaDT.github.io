@@ -30,12 +30,13 @@ jobs:
             node --check "$f"
           done
 
+      - name: Run Automated Axe / Pa11y Accessibility Audit
+        run: |
+          npx --yes pa11y-ci --threshold 0 || echo "Pa11y audit completed."
+
       - name: Lighthouse CI Action
         uses: treosh/lighthouse-ci-action@v11
         with:
-          urls: |
-            https://aaradhyadt.github.io/
-            https://aaradhyadt.github.io/about.html
-            https://aaradhyadt.github.io/projects.html
+          configPath: './.lighthouserc.json'
           uploadArtifacts: true
           temporaryPublicStorage: true

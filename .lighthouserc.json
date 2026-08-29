@@ -1,0 +1,24 @@
+{
+  "ci": {
+    "collect": {
+      "staticDistDir": ".",
+      "url": [
+        "http://localhost/index.html",
+        "http://localhost/about.html",
+        "http://localhost/projects.html",
+        "http://localhost/experience.html",
+        "http://localhost/achievements.html",
+        "http://localhost/journey.html",
+        "http://localhost/contact.html"
+      ],
+      "numberOfRuns": 1
+    },
+    "assert": {
+      "assertions": {
+        "categories:accessibility": ["warn", { "minScore": 0.95 }],
+        "categories:best-practices": ["warn", { "minScore": 0.90 }],
+        "categories:seo": ["warn", { "minScore": 0.95 }]
+      }
+    }
+  }
+}

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: haptics.js — aaradhyadt.github.io (v50.7)
+   MODULE: haptics.js — aaradhyadt.github.io (v50.8)
    Touch gesture recognition and haptic feedback.
    ============================================================ */
 

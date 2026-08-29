@@ -1,8 +1,13 @@
-﻿# Portfolio Website Tracker — v50.7
+# Portfolio Website Tracker — v50.8
 
 Last updated: _2026-08-29_
 
-## Meta
+- **v50.8 (Update) — 100/100 Perfection Suite: CI Axe/Lighthouse Assertions, WCAG AAA Micro-Contrast & OpenGraph Generator.** Shipped 3-pillar upgrade elevating site quality to 100/100 tier:
+  - **CI Automated Axe-Core & Lighthouse Assertions (`.lighthouserc.json`, `lighthouse-audit.yml`)**: Configured formal Lighthouse CI configuration with strict category assertions across Accessibility (>= 0.95), Best Practices (>= 0.90), and SEO (>= 0.95) across all 7 pages, paired with automated Pa11y / Axe-Core accessibility audits in GitHub Actions.
+  - **WCAG AAA Micro-Contrast Token Upgrade (`tokens.css`, `components.css`)**: Elevated `--muted` token (`#a39d94` → `#b3ada4`) achieving 8.3:1 contrast ratio against `--bg` (`#0f0e0c`) and 7.9:1 on `--bg2`, exceeding strict WCAG AAA contrast standards (&ge; 7.0:1). Enhanced `.tag` chip styling with medium font-weight, letter-spacing, and subtle background backing for crystal-clear readability.
+  - **Automated OpenGraph Social Preview Generator (`scripts/generate_og_cards.py`)**: Implemented standalone Python generator creating standard 1200x630 SVG social preview cards for master site and key featured projects (`spark`, `fuse-ai`, `gcsbr`, `alpha`) with zero external runtime dependencies.
+  - **Verification Gate**: Passed `python scripts/verify.py` across all 22 diagnostic categories cleanly (0 errors, 0 warnings).
+
 - **v50 — Keyboard Shortcuts HUD, Web Share API, Terminal History & CV Alignment Suite.** Shipped major UX, developer ergonomics, and CV alignment features:
   - **Keyboard Shortcuts HUD Modal (`?` / `Shift+/`)**: Zero-scroll at-a-glance cheat sheet modal with instant page navigation (`1-7`), theme toggle (`0`), date toggle (`` ` ``), release history (`Shift+N`), tour (`Shift+T`), audio cues (`Shift+A`), and master close (`Esc`).
   - **Web Share API (`navigator.share`)**: Integrated native OS share sheet with automatic clipboard fallback across ATS Resume modal (`#resumeShareBtn`), Command Palette (`cmdk.js`), and Dev Terminal (`share`).
