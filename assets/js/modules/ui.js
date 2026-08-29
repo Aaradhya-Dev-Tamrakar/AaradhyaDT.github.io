@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v50.2)
+   MODULE: ui.js — aaradhyadt.github.io (v50.3)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -88,9 +88,9 @@ function openShortcutsModal() {
 
   modal.innerHTML = `
     <div class="access-modal-card shortcuts-modal-card">
-      <div class="access-modal-header">
-        <div class="access-modal-title">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+      <div class="shortcuts-header">
+        <div class="shortcuts-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
             <rect x="2" y="4" width="20" height="16" rx="2" ry="2"/>
             <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M8 12h.001M12 12h.001M16 12h.001M18 12h.001M7 16h10"/>
           </svg>
@@ -103,130 +103,98 @@ function openShortcutsModal() {
         </button>
       </div>
       <div class="shortcuts-modal-body">
-        
-        <div class="shortcuts-group">
-          <div class="shortcuts-group-header">
-            <span class="shortcuts-group-tag">GLOBAL</span>
-            <h4 class="shortcuts-group-title">Global Controls & Search</h4>
-          </div>
-          <div class="shortcuts-grid">
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>?</kbd> <span class="shortcut-or">or</span> <kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>/</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Shortcuts Cheat Sheet</span>
-                <span class="shortcut-context">Open/close this visual HUD modal</span>
-              </div>
+        <div class="shortcuts-columns">
+          
+          <!-- Column 1: Global Actions & Controls -->
+          <div class="shortcuts-col">
+            <div class="shortcuts-col-title">
+              <span class="shortcuts-tag">GLOBAL</span>
+              <span>Actions &amp; Tools</span>
             </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>/</kbd> <span class="shortcut-or">or</span> <kbd>Ctrl</kbd><span class="shortcut-plus">+</span><kbd>K</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Command Palette</span>
-                <span class="shortcut-context">Global omnibar fuzzy search</span>
+            <div class="shortcuts-list">
+              <div class="shortcut-row">
+                <span class="shortcut-label">Command Palette</span>
+                <div class="shortcut-keys"><kbd>/</kbd> <span class="shortcut-sep">or</span> <kbd>Ctrl</kbd><span class="shortcut-plus">+</span><kbd>K</kbd></div>
               </div>
-            </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>0</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Toggle Theme Mode</span>
-                <span class="shortcut-context">Switch Dark / Light theme</span>
+              <div class="shortcut-row">
+                <span class="shortcut-label">Shortcuts Cheat Sheet</span>
+                <div class="shortcut-keys"><kbd>?</kbd> <span class="shortcut-sep">or</span> <kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>/</kbd></div>
               </div>
-            </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>\`</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Toggle Date Format</span>
-                <span class="shortcut-context">Switch Bikram Sambat (B.S.) / A.D.</span>
+              <div class="shortcut-row">
+                <span class="shortcut-label">Toggle Dark / Light Theme</span>
+                <div class="shortcut-keys"><kbd>0</kbd></div>
               </div>
-            </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>N</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">What's New Modal</span>
-                <span class="shortcut-context">Release history & changelog</span>
+              <div class="shortcut-row">
+                <span class="shortcut-label">Toggle Date (B.S. / A.D.)</span>
+                <div class="shortcut-keys"><kbd>\`</kbd></div>
               </div>
-            </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>T</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Guided Site Tour</span>
-                <span class="shortcut-context">Interactive portfolio walkthrough</span>
+              <div class="shortcut-row">
+                <span class="shortcut-label">What's New Releases</span>
+                <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>N</kbd></div>
               </div>
-            </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>Esc</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Universal Master Close</span>
-                <span class="shortcut-context">Dismiss any active modal / overlay</span>
+              <div class="shortcut-row">
+                <span class="shortcut-label">Guided Site Tour</span>
+                <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>T</kbd></div>
+              </div>
+              <div class="shortcut-row">
+                <span class="shortcut-label">Audio Micro-Sounds</span>
+                <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>A</kbd></div>
+              </div>
+              <div class="shortcut-row">
+                <span class="shortcut-label">Universal Master Close</span>
+                <div class="shortcut-keys"><kbd>Esc</kbd></div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="shortcuts-group">
-          <div class="shortcuts-group-header">
-            <span class="shortcuts-group-tag">NAV</span>
-            <h4 class="shortcuts-group-title">Instant Page Navigation (1 – 7)</h4>
+          <!-- Column 2: Page Navigation & Scroll -->
+          <div class="shortcuts-col">
+            <div class="shortcuts-col-title">
+              <span class="shortcuts-tag">NAV</span>
+              <span>Jump to Page</span>
+            </div>
+            <div class="shortcuts-list">
+              <a href="index.html" class="shortcut-row shortcut-link">
+                <span class="shortcut-label">Home</span>
+                <div class="shortcut-keys"><kbd>1</kbd></div>
+              </a>
+              <a href="projects.html" class="shortcut-row shortcut-link">
+                <span class="shortcut-label">Projects</span>
+                <div class="shortcut-keys"><kbd>2</kbd></div>
+              </a>
+              <a href="experience.html" class="shortcut-row shortcut-link">
+                <span class="shortcut-label">Experience</span>
+                <div class="shortcut-keys"><kbd>3</kbd></div>
+              </a>
+              <a href="achievements.html" class="shortcut-row shortcut-link">
+                <span class="shortcut-label">Achievements</span>
+                <div class="shortcut-keys"><kbd>4</kbd></div>
+              </a>
+              <a href="about.html" class="shortcut-row shortcut-link">
+                <span class="shortcut-label">About</span>
+                <div class="shortcut-keys"><kbd>5</kbd></div>
+              </a>
+              <a href="journey.html" class="shortcut-row shortcut-link">
+                <span class="shortcut-label">Journey</span>
+                <div class="shortcut-keys"><kbd>6</kbd></div>
+              </a>
+              <a href="contact.html" class="shortcut-row shortcut-link">
+                <span class="shortcut-label">Contact</span>
+                <div class="shortcut-keys"><kbd>7</kbd></div>
+              </a>
+              <div class="shortcut-row">
+                <span class="shortcut-label">Scroll Top / Bottom</span>
+                <div class="shortcut-keys"><kbd>=</kbd> <span class="shortcut-sep">/</span> <kbd>-</kbd></div>
+              </div>
+            </div>
           </div>
-          <div class="shortcuts-nav-grid">
-            <a href="index.html" class="shortcut-nav-pill"><kbd>1</kbd><span>Home</span></a>
-            <a href="projects.html" class="shortcut-nav-pill"><kbd>2</kbd><span>Projects</span></a>
-            <a href="experience.html" class="shortcut-nav-pill"><kbd>3</kbd><span>Experience</span></a>
-            <a href="achievements.html" class="shortcut-nav-pill"><kbd>4</kbd><span>Achievements</span></a>
-            <a href="about.html" class="shortcut-nav-pill"><kbd>5</kbd><span>About</span></a>
-            <a href="journey.html" class="shortcut-nav-pill"><kbd>6</kbd><span>Journey</span></a>
-            <a href="contact.html" class="shortcut-nav-pill"><kbd>7</kbd><span>Contact</span></a>
-          </div>
-        </div>
 
-        <div class="shortcuts-group">
-          <div class="shortcuts-group-header">
-            <span class="shortcuts-group-tag">TOOLS & CONTEXT</span>
-            <h4 class="shortcuts-group-title">Page Controls & Utilities</h4>
-          </div>
-          <div class="shortcuts-grid">
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>A</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Audio Micro-Sounds</span>
-                <span class="shortcut-context">Synthesized UI audio feedback</span>
-              </div>
-            </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>Alt</kbd><span class="shortcut-plus">+</span><kbd>2</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Expand / Collapse Projects</span>
-                <span class="shortcut-context">Toggle all cards on Projects page</span>
-              </div>
-            </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>Alt</kbd><span class="shortcut-plus">+</span><kbd>4</kbd> <span class="shortcut-or">/</span> <kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>4</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Years / Track Toggle</span>
-                <span class="shortcut-context">Achievements timeline & category filters</span>
-              </div>
-            </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>Alt</kbd><span class="shortcut-plus">+</span><kbd>6</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Expand / Collapse Journey</span>
-                <span class="shortcut-context">Toggle all milestones on Journey page</span>
-              </div>
-            </div>
-            <div class="shortcut-card">
-              <div class="shortcut-keys"><kbd>=</kbd> <span class="shortcut-or">/</span> <kbd>-</kbd></div>
-              <div class="shortcut-info">
-                <span class="shortcut-desc">Fast Page Scroll Jump</span>
-                <span class="shortcut-context">Jump to top / bottom (+Shift for 25% / 75%)</span>
-              </div>
-            </div>
-          </div>
         </div>
-
       </div>
       <div class="shortcuts-modal-footer">
-        <span class="shortcuts-footer-hint">Shortcuts paused inside text inputs</span>
+        <span class="shortcuts-footer-hint">Paused inside text inputs</span>
         <button type="button" class="shortcuts-dismiss-btn" id="shortcutsDismissBtn">
-          <span>Got it</span>
+          <span>Dismiss</span>
           <kbd>Esc</kbd>
         </button>
       </div>

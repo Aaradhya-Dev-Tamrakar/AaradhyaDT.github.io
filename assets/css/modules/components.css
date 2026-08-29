@@ -1236,107 +1236,146 @@ html[data-theme="light"] .card-gradient-border::before {
 }
 
 .shortcuts-modal-card {
-  max-width: 680px !important;
-  width: 100% !important;
-  max-height: 88vh;
+  max-width: 660px !important;
+  width: 94% !important;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   padding: 0 !important;
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
+  box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--line), 0 0 24px var(--accent-a15);
 }
 
-.shortcuts-modal-card .access-modal-header {
-  padding: 1.1rem 1.4rem;
-  margin-bottom: 0;
+.shortcuts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.25rem;
   border-bottom: 1px solid var(--line);
   background: var(--bg2);
 }
 
+.shortcuts-title {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  font-family: var(--serif);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.shortcuts-title svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
 .shortcuts-modal-body {
-  padding: 1.25rem 1.4rem;
+  padding: 1rem 1.25rem;
   overflow-y: auto;
+  overflow-x: hidden !important;
   display: flex;
   flex-direction: column;
+}
+
+.shortcuts-columns {
+  display: grid;
+  grid-template-columns: 1.12fr 0.88fr;
   gap: 1.25rem;
+  width: 100%;
 }
 
-.shortcuts-group {
+.shortcuts-col {
   display: flex;
   flex-direction: column;
-  gap: 0.65rem;
+  gap: 0.45rem;
+  min-width: 0;
 }
 
-.shortcuts-group-header {
+.shortcuts-col-title {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.45rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--heading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 0.15rem;
 }
 
-.shortcuts-group-tag {
-  font-family: var(--mono);
-  font-size: 0.62rem;
+.shortcuts-tag {
+  font-size: 0.58rem;
   font-weight: 700;
-  letter-spacing: 0.08em;
-  padding: 0.15rem 0.45rem;
+  padding: 0.1rem 0.35rem;
   border-radius: 3px;
   background: var(--accent-a12);
   color: var(--accent);
   border: 1px solid var(--accent-a25);
-  text-transform: uppercase;
 }
 
-.shortcuts-group-title {
-  font-family: var(--sans);
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--heading);
-  letter-spacing: 0.02em;
-  margin: 0;
+.shortcuts-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
 }
 
-.shortcuts-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 0.55rem;
-}
-
-.shortcut-card {
+.shortcut-row {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.75rem;
-  padding: 0.65rem 0.85rem;
+  gap: 0.5rem;
+  padding: 0.38rem 0.55rem;
+  border-radius: 6px;
   background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  transition: border-color 0.2s, background-color 0.2s;
+  border: 1px solid transparent;
+  transition: background 0.15s, border-color 0.15s, transform 0.15s;
+  text-decoration: none;
 }
 
-.shortcut-card:hover {
-  border-color: var(--accent-a40);
-  background: var(--surface-hover, var(--surface));
+.shortcut-row:hover {
+  background: var(--bg3, rgba(255, 255, 255, 0.04));
+  border-color: var(--accent-a30);
+}
+
+.shortcut-link:hover {
+  transform: translateX(2px);
+}
+
+.shortcut-label {
+  font-size: 0.76rem;
+  color: var(--text);
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.shortcut-link:hover .shortcut-label {
+  color: var(--heading);
 }
 
 .shortcut-keys {
   display: inline-flex;
   align-items: center;
-  gap: 0.25rem;
+  gap: 0.2rem;
   flex-shrink: 0;
 }
 
 .shortcut-keys kbd,
-.shortcut-nav-pill kbd,
-.shortcuts-modal-footer kbd,
-.shortcuts-dismiss-btn kbd {
+.shortcuts-modal-footer kbd {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 1.6rem;
-  height: 1.5rem;
-  padding: 0 0.35rem;
+  min-width: 1.45rem;
+  height: 1.35rem;
+  padding: 0 0.3rem;
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   font-weight: 600;
   line-height: 1;
   color: var(--heading);
@@ -1344,77 +1383,18 @@ html[data-theme="light"] .card-gradient-border::before {
   border: 1px solid var(--line);
   border-bottom: 2px solid var(--line-strong, var(--line));
   border-radius: 4px;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.shortcut-plus,
-.shortcut-or {
+.shortcut-sep,
+.shortcut-plus {
   font-family: var(--mono);
-  font-size: 0.65rem;
+  font-size: 0.62rem;
   color: var(--muted);
-}
-
-.shortcut-info {
-  display: flex;
-  flex-direction: column;
-  gap: 0.1rem;
-  min-width: 0;
-  text-align: right;
-}
-
-.shortcut-desc {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--text);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.shortcut-context {
-  font-size: 0.68rem;
-  color: var(--muted);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.shortcuts-nav-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
-  gap: 0.45rem;
-}
-
-.shortcut-nav-pill {
-  display: flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.45rem 0.65rem;
-  background: var(--surface);
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  color: var(--text);
-  text-decoration: none;
-  font-size: 0.76rem;
-  font-weight: 500;
-  transition: all 0.2s;
-}
-
-.shortcut-nav-pill:hover {
-  background: var(--accent-a07);
-  border-color: var(--accent-a40);
-  color: var(--heading);
-  transform: translateY(-1px);
-}
-
-.shortcut-nav-pill kbd {
-  background: var(--accent-a12);
-  border-color: var(--accent-a30);
-  color: var(--accent);
 }
 
 .shortcuts-modal-footer {
-  padding: 0.85rem 1.4rem;
+  padding: 0.7rem 1.25rem;
   border-top: 1px solid var(--line);
   background: var(--bg2);
   display: flex;
@@ -1425,20 +1405,22 @@ html[data-theme="light"] .card-gradient-border::before {
 
 .shortcuts-footer-hint {
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.68rem;
   color: var(--muted);
   white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .shortcuts-dismiss-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
+  gap: 0.4rem;
   font-family: var(--mono);
-  font-size: 0.72rem;
+  font-size: 0.7rem;
   font-weight: 600;
-  padding: 0.42rem 0.9rem;
-  border-radius: 6px;
+  padding: 0.35rem 0.8rem;
+  border-radius: 5px;
   background: var(--surface);
   color: var(--heading);
   border: 1px solid var(--line);
@@ -1614,23 +1596,19 @@ html[data-theme="light"] .card-gradient-border::before {
   }
 
   .shortcuts-modal-body {
-    padding: 0.9rem;
-    gap: 1rem;
+    padding: 0.85rem 1rem;
   }
 
-  .shortcuts-grid {
+  .shortcuts-columns {
     grid-template-columns: 1fr;
-  }
-
-  .shortcuts-nav-grid {
-    grid-template-columns: repeat(4, 1fr);
+    gap: 0.85rem;
   }
 
   .shortcuts-modal-footer {
     flex-direction: column;
     align-items: stretch;
     gap: 0.5rem;
-    padding: 0.75rem 0.9rem;
+    padding: 0.65rem 1rem;
   }
 
   .shortcuts-dismiss-btn {
