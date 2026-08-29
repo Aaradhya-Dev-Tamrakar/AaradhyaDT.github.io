@@ -1,6 +1,6 @@
 {
-  "sha": "80b3250b89014176e1237521dc8e184e32b01af9",
-  "shortSha": "80b3250",
-  "date": "2026-08-29T11:39:23+05:45",
-  "message": "feat(infra): add pwa raster icons, constants module, css minifier, and centralized versioning"
+  "sha": "f73ae2d59afcdea760cd75d6f112e6ac81c9554b",
+  "shortSha": "f73ae2d",
+  "date": "2026-08-29T11:47:05+05:45",
+  "message": "docs(license): clarify proprietary all rights reserved terms"
 }
