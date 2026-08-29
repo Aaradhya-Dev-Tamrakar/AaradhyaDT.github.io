@@ -8,7 +8,7 @@
 const SITE_RELEASES = [
 
     {
-    version: 'v50.11',
+    version: 'v50.12',
     date: '2026-08-29',
     sha: 'rel50',
     title: "Keyboard Shortcuts HUD, Web Share API, Terminal History & CV Alignment Suite",
