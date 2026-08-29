@@ -1,6 +1,6 @@
 {
-  "sha": "a9f4eb6c18e8040bdd3ce3ac3e3aa7cb827dc53f",
-  "shortSha": "a9f4eb6",
-  "date": "2026-08-29T09:21:07+05:45",
-  "message": "feat(site): terminal autocomplete, json resume exporter, speculation rules & llm context"
+  "sha": "a594a731fb4590ecbae3554bb1bd2de8d23be620",
+  "shortSha": "a594a73",
+  "date": "2026-08-29T09:22:29+05:45",
+  "message": "feat(site): release v50 — terminal autocomplete, json resume & speculation rules suite"
 }
