@@ -1021,9 +1021,46 @@ html[data-theme="light"] .card-gradient-border::before {
 }
 
 .resume-sheet-head {
+<<<<<<< Updated upstream
   border-bottom: 2px solid #111;
   padding-bottom: 0.85rem;
   margin-bottom: 1.15rem;
+=======
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 2px solid #222;
+  padding-bottom: 1rem;
+  margin-bottom: 1.25rem;
+>>>>>>> Stashed changes
+}
+
+.resume-sheet-head-left {
+  flex: 1;
+  min-width: 0;
+}
+
+.resume-sheet-photo {
+  width: 82px;
+  height: 82px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: top center;
+  border: 1.5px solid #ddd;
+  background: #f3f3f3;
+  align-self: flex-start;
+}
+
+@media (max-width: 540px) {
+  .resume-sheet-head {
+    gap: 0.75rem;
+  }
+  .resume-sheet-photo {
+    width: 64px;
+    height: 64px;
+  }
 }
 
 .resume-sheet-name {

@@ -148,11 +148,28 @@
   }
 
   .resume-sheet-head {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    gap: 10pt !important;
     border-bottom: 2pt solid #111111 !important;
     padding-bottom: 6pt !important;
     margin-bottom: 10pt !important;
     break-inside: avoid;
     page-break-inside: avoid;
+  }
+
+  .resume-sheet-head-left {
+    flex: 1 !important;
+  }
+
+  .resume-sheet-photo {
+    width: 68pt !important;
+    height: 68pt !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    border: 1pt solid #999 !important;
+    flex-shrink: 0 !important;
   }
 
   .resume-sheet-name {

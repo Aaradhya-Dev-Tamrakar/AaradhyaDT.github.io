@@ -1,6 +1,7 @@
 {
   "communities": {
     "0": [
+<<<<<<< Updated upstream
       "scripts_verify",
       "scripts_verify_bold",
       "scripts_verify_c",
@@ -219,6 +220,44 @@
       "verify_yml"
     ],
     "5": [
+=======
+      "aaradhya_dev_tamrakar",
+      "aaradhya_dev_tamrakar_cv_pdf",
+      "ai_assisted_product_launch_img",
+      "ai_fluency_framework_and_foundations_img",
+      "anthropic",
+      "aws_concept",
+      "building_a_go_to_market_strategy_img",
+      "cleaning_data_with_generative_ai_img",
+      "datacamp",
+      "generate_a_study_guide_img",
+      "ieee_ieeextreme_19_0_2025_certificate",
+      "ieee_kec_agile_workshop_2025_certificate",
+      "ieee_kec_electronics_for_all_mentorship_2025_certificate",
+      "ieee_kec_ieee_day_organizer_2025_certificate",
+      "ieee_kec_spax_organization_2026_certificate",
+      "ieee_kec_volunteering_vice_secretary_2025_2026_certificate",
+      "ieee_pulchowk_prextreme_cp_workshop_certificate",
+      "ieee_wie_latex_training_2026_certificate",
+      "introduction_to_git_certificate",
+      "introduction_to_python_certificate",
+      "kec_it_club_aws_fundamentals_2025_certificate",
+      "kec_it_club_org",
+      "kec_robotics_club_pcb_design_fabrication_workshop_2025_certificate",
+      "llms_txt",
+      "microsoft_learn_html_css_github_pages_certificate",
+      "nepatronix_drone_hub_nepal_3day_drone_training_2026_certificate",
+      "nepatronix_drone_hub_nepal_3day_drone_training_2026_nepatronix",
+      "offenso_security_bypass_webinar_2025_certificate",
+      "offenso_security_bypass_webinar_2025_offenso",
+      "recommending_skincare_products_certificate",
+      "simops_ai_for_graduates_badge",
+      "simops_ai_for_graduates_certificate",
+      "spark_project",
+      "template_html"
+    ],
+    "1": [
+>>>>>>> Stashed changes
       "modules_access",
       "modules_access_access_control",
       "modules_access_access_control_payloads",
@@ -243,10 +282,73 @@
       "modules_access_showerror",
       "modules_access_showtoast",
       "modules_access_updategatedcontentvisibility",
+<<<<<<< Updated upstream
       "modules_core_requestnotificationpermission",
       "modules_core_subscribepushnotifications"
     ],
     "6": [
+=======
+      "modules_audio",
+      "modules_audio_getaudiocontext",
+      "modules_audio_initaudiocues",
+      "modules_audio_playaudiocue",
+      "modules_audio_syncaudiotoggleui",
+      "modules_audio_toggleaudiocues"
+    ],
+    "2": [
+      "404_html",
+      "99947412_pdf",
+      "about_html",
+      "ai_security_pdf",
+      "assets_images_og_image_jpg",
+      "cmdk_js",
+      "core_js",
+      "ev_ratings_pdf",
+      "index_html",
+      "js_modules",
+      "lighthouse_audit_yml",
+      "og_image_readme",
+      "og_image_readme_og_image_source",
+      "portfoliowebsite_tracker_md",
+      "privacy_html",
+      "projects_html",
+      "readme_md",
+      "script_js",
+      "site_mcp_py",
+      "terms_html",
+      "ui_js",
+      "update_search_index_yml",
+      "verify_py",
+      "verify_yml"
+    ],
+    "3": [
+      "claude",
+      "claude_file_delivery",
+      "claude_local_git_workflow_auto_sync_sync_ps1",
+      "claude_output_constraints_strict",
+      "claude_working_conventions_for_this_repo",
+      "gemini",
+      "gemini_1_git_workflow_automation_critical_strict_enforcement",
+      "gemini_2_knowledge_graph_codebase_navigation_graphify",
+      "gemini_3_operational_rules_efficiency",
+      "gemini_antigravity_ide_gemini_agent_rules_for_portfolio_repository",
+      "gemini_commands",
+      "graphify_update",
+      "last_commit_json",
+      "sync",
+      "sync_format_markdownhygiene",
+      "sync_get_autocommitmessage",
+      "sync_get_lfsinstalled",
+      "sync_get_pythonpath",
+      "sync_show_diagnostics",
+      "sync_show_helpguide",
+      "sync_sync_botstamp",
+      "sync_update_trackerlog",
+      "sync_write_badge",
+      "workflow_stamp_last_commit"
+    ],
+    "4": [
+>>>>>>> Stashed changes
       "scripts_site_automation",
       "scripts_site_automation_audit",
       "scripts_site_automation_bump_version",
@@ -254,6 +356,7 @@
       "scripts_site_automation_get_current_version",
       "scripts_site_automation_get_site_stats",
       "scripts_site_automation_main",
+<<<<<<< Updated upstream
       "scripts_site_automation_rationale_149",
       "scripts_site_automation_rationale_159",
       "scripts_site_automation_rationale_176",
@@ -264,13 +367,29 @@
       "scripts_site_automation_rationale_79",
       "scripts_site_automation_rationale_88",
       "scripts_site_automation_rationale_97",
+=======
+      "scripts_site_automation_rationale_133",
+      "scripts_site_automation_rationale_143",
+      "scripts_site_automation_rationale_160",
+      "scripts_site_automation_rationale_260",
+      "scripts_site_automation_rationale_311",
+      "scripts_site_automation_rationale_44",
+      "scripts_site_automation_rationale_60",
+      "scripts_site_automation_rationale_73",
+      "scripts_site_automation_rationale_82",
+      "scripts_site_automation_rationale_91",
+>>>>>>> Stashed changes
       "scripts_site_automation_rebuild_search_index",
       "scripts_site_automation_run_command",
       "scripts_site_automation_sync_metadata",
       "scripts_site_automation_update_knowledge_graph",
       "scripts_site_automation_update_tracker"
     ],
+<<<<<<< Updated upstream
     "7": [
+=======
+    "5": [
+>>>>>>> Stashed changes
       "modules_tour",
       "modules_tour_closetouroverlay",
       "modules_tour_ensuretouroverlay",
@@ -292,6 +411,7 @@
       "modules_tour_tourreducedmotion",
       "modules_tour_updatetourspotlight"
     ],
+<<<<<<< Updated upstream
     "8": [
       "scripts_manage_payloads",
       "scripts_manage_payloads_cmd_export",
@@ -349,6 +469,35 @@
       "scripts_generate_og_cards_render_svg_card"
     ],
     "13": [
+=======
+    "6": [
+      "js_bg_animations",
+      "js_bg_animations_initbackgroundanimations",
+      "js_bg_animations_pcbtraces",
+      "js_bg_animations_pcbtraces_animate",
+      "js_bg_animations_pcbtraces_buildtraces",
+      "js_bg_animations_pcbtraces_constructor",
+      "js_bg_animations_pcbtraces_initobserver",
+      "js_bg_animations_pcbtraces_resize",
+      "js_bg_animations_pcbtraces_start",
+      "js_bg_animations_signalwavebackground",
+      "js_bg_animations_signalwavebackground_animate",
+      "js_bg_animations_signalwavebackground_constructor",
+      "js_bg_animations_signalwavebackground_initobserver",
+      "js_bg_animations_signalwavebackground_resize",
+      "js_bg_animations_signalwavebackground_start"
+    ],
+    "7": [
+      "agile_methodology",
+      "ieee_ieeextreme_19_0_2025_pdf",
+      "ieee_kec_agile_workshop_2025_pdf",
+      "ieee_organization",
+      "ieee_wie_organization",
+      "memieee500_certificate",
+      "memwie050_certificate"
+    ],
+    "8": [
+>>>>>>> Stashed changes
       "ieee_global_organization",
       "ieee_kec_volunteering_vice_secretary_2025_2026_ieee_kec_student_branch",
       "ieee_kec_volunteering_vice_secretary_2025_2026_vice_secretary_role",
@@ -357,13 +506,27 @@
       "ieee_wie_latex_training_2026_ieee_wie_affinity_group",
       "ieee_wie_latex_training_2026_latex_training_2026"
     ],
+<<<<<<< Updated upstream
     "14": [
+=======
+    "9": [
+      "scripts_extract_index",
+      "scripts_extract_index_extract_achievements",
+      "scripts_extract_index_extract_projects",
+      "scripts_extract_index_main",
+      "scripts_extract_index_render_block",
+      "scripts_extract_index_render_entry",
+      "scripts_extract_index_text_of"
+    ],
+    "10": [
+>>>>>>> Stashed changes
       "achievements_html",
       "ai_assisted_coding_webp",
       "ai_fluency_webp",
       "intro_git_webp",
       "intro_python_webp",
       "intro_security_ai_webp"
+<<<<<<< Updated upstream
     ],
     "15": [
       "claude",
@@ -397,12 +560,41 @@
       "terms_privacy_link"
     ],
     "19": [
+=======
+    ],
+    "11": [
+      "agents",
+      "agents_1_git_workflow_automation_critical_strict_enforcement",
+      "agents_2_knowledge_graph_codebase_navigation_graphify",
+      "agents_3_operational_rules_efficiency",
+      "agents_agent_rules_workflow_guidelines",
+      "agents_commands"
+    ],
+    "12": [
+      "assets_images_logos_epc_club_png",
+      "assets_images_logos_fusemachines_png",
+      "assets_images_logos_makerspace_png",
+      "experience_html",
+      "fuse_ai_fellowship",
+      "fusemachines_logo_webp"
+    ],
+    "13": [
+      "modules_haptics",
+      "modules_haptics_initscrollparallax",
+      "modules_haptics_initskillbars",
+      "modules_haptics_initswipenav",
+      "modules_haptics_inittouchgestures",
+      "modules_haptics_triggerhapticfeedback"
+    ],
+    "14": [
+>>>>>>> Stashed changes
       "modules_home_widgets",
       "modules_home_widgets_boothomewidgets",
       "modules_home_widgets_initlastcommitbadge",
       "modules_home_widgets_initlivedates",
       "modules_home_widgets_initstatusclock"
     ],
+<<<<<<< Updated upstream
     "20": [
       "scripts_build_css",
       "scripts_build_css_build_all",
@@ -432,11 +624,15 @@
       "unit_test_crypto_test_key_cache"
     ],
     "24": [
+=======
+    "15": [
+>>>>>>> Stashed changes
       "ai_fluency_concept",
       "ai_fluency_framework_and_foundations_certificate",
       "cleaning_data_with_generative_ai_certificate",
       "generative_ai_data_cleaning_concept"
     ],
+<<<<<<< Updated upstream
     "25": [
       "assets_images_logos_epc_club_png",
       "assets_images_logos_fusemachines_png",
@@ -450,32 +646,59 @@
       "scripts_dev_serve_handler_send_error"
     ],
     "27": [
+=======
+    "16": [
+>>>>>>> Stashed changes
       "gnome_nepal",
       "gnome_nepal_linux_opensource_workshop_2024_img",
       "javascript_bootcamp_certificate_kec_it_club_2023_cert",
       "kec_it_club"
     ],
+<<<<<<< Updated upstream
     "28": [
+=======
+    "17": [
+>>>>>>> Stashed changes
       "ieee_kec_electronics_for_all_mentorship_2025_electronics_for_all_mentorship",
       "ieee_kec_electronics_for_all_mentorship_2025_ieee_kec_student_branch",
       "ieee_kec_ieee_day_organizer_2025_ieee_day_2025",
       "ieee_kec_spax_organization_2026_spax_2026"
     ],
+<<<<<<< Updated upstream
     "29": [
+=======
+    "18": [
+      "scripts_dev_serve",
+      "scripts_dev_serve_handler",
+      "scripts_dev_serve_handler_end_headers",
+      "scripts_dev_serve_handler_send_error"
+    ],
+    "19": [
+>>>>>>> Stashed changes
       "epc_basic_electronics_2025_banner_webp",
       "epc_club_logo_webp",
       "pcb_design_fabrication_workshop_2025_day3_webp"
     ],
+<<<<<<< Updated upstream
     "30": [
       "sanitize_and_payload",
       "sanitize_and_payload_generate_payload",
       "sanitize_and_payload_sanitize_content"
     ],
     "31": [
+=======
+    "20": [
+      "extract_index_py",
+      "search_index_js",
+      "workflow_update_search_index"
+    ],
+    "21": [
+>>>>>>> Stashed changes
       "simops_ai_for_graduates_98452248595354_certificate",
       "simops_expert_12836702612982_certificate",
       "simops_platform"
     ],
+<<<<<<< Updated upstream
     "32": [
       "unit_test_core_helpers_test",
       "unit_test_core_helpers_test_computelivedates",
@@ -794,6 +1017,274 @@
       "update_search_index_yml"
     ],
     "131": [
+=======
+    "22": [
+      "ai_security_concept",
+      "introduction_to_security_in_the_world_of_ai_certificate"
+    ],
+    "23": [
+      "building_a_go_to_market_strategy_certificate",
+      "go_to_market_strategy_concept"
+    ],
+    "24": [
+      "concept_python_programming",
+      "introduction_to_python_certificate_python_course"
+    ],
+    "25": [
+      "data_releases",
+      "data_releases_site_releases"
+    ],
+    "26": [
+      "data_resume_data",
+      "data_resume_data_resume_data"
+    ],
+    "27": [
+      "data_search_index",
+      "data_search_index_search_static_index"
+    ],
+    "28": [
+      "eu_ai_act_literacy_pdf",
+      "eu_ai_act_literacy_webp"
+    ],
+    "29": [
+      "generate_a_study_guide_certificate",
+      "generative_ai_concept"
+    ],
+    "30": [
+      "git_concept",
+      "introduction_to_git_cpe0469867571113_certificate"
+    ],
+    "31": [
+      "introduction_to_python_47717251_certificate",
+      "python_programming_concept"
+    ],
+    "32": [
+      "introduction_to_python_itp0014139470763_certificate",
+      "python_concept"
+    ],
+    "33": [
+      "laser_safety_awareness_training_certificate",
+      "laser_safety_concept"
+    ],
+    "34": [
+      "modules_terminal",
+      "modules_terminal_setup"
+    ],
+    "35": [
+      "robots_txt",
+      "sitemap_xml"
+    ],
+    "36": [
+      "simops_fundamentals_25303246876434_certificate",
+      "simops_fundamentals_25303246876434_simops"
+    ],
+    "37": [
+      "sw",
+      "sw_static_assets"
+    ],
+    "38": [
+      "adt_logo_png"
+    ],
+    "39": [
+      "ai_assisted_coding_pdf"
+    ],
+    "40": [
+      "ai_assisted_product_launch_pdf"
+    ],
+    "41": [
+      "ai_fluency_pdf"
+    ],
+    "42": [
+      "assets_css_modules_base_css"
+    ],
+    "43": [
+      "assets_css_modules_tokens_css"
+    ],
+    "44": [
+      "assets_css_style_css"
+    ],
+    "45": [
+      "autocad_workshop_webp"
+    ],
+    "46": [
+      "competitive_programming_concept"
+    ],
+    "47": [
+      "concept_cloud_computing"
+    ],
+    "48": [
+      "concept_cybersecurity"
+    ],
+    "49": [
+      "concept_drones"
+    ],
+    "50": [
+      "concept_pcb_design"
+    ],
+    "51": [
+      "concept_web_development"
+    ],
+    "52": [
+      "contact_html"
+    ],
+    "53": [
+      "cybersecurity_concept"
+    ],
+    "54": [
+      "deploypagesyml_deploypagesyml"
+    ],
+    "55": [
+      "dristi_3_0_webp"
+    ],
+    "56": [
+      "drone_technology_concept"
+    ],
+    "57": [
+      "epc_basic_electronics_2025_2_webp"
+    ],
+    "58": [
+      "epc_basic_electronics_webp"
+    ],
+    "59": [
+      "gcsbr_demo_poster_jpg"
+    ],
+    "60": [
+      "generate_a_study_guide_pdf"
+    ],
+    "61": [
+      "google3e772e11a3eb8313_verification"
+    ],
+    "62": [
+      "ieee_kec_ktm"
+    ],
+    "63": [
+      "ieee_kec_logo"
+    ],
+    "64": [
+      "ieee_kec_webp"
+    ],
+    "65": [
+      "ieee_nepal_clw_webp"
+    ],
+    "66": [
+      "ieee_plus2_orientation_2026_webp"
+    ],
+    "67": [
+      "intro_to_git_pdf"
+    ],
+    "68": [
+      "javascript_bootcamp_kec_webp"
+    ],
+    "69": [
+      "journey_html"
+    ],
+    "70": [
+      "kec_music_club_svg"
+    ],
+    "71": [
+      "kec_robotics_pcb_workshop_pdf"
+    ],
+    "72": [
+      "kecit_git_github_session_2024_poster"
+    ],
+    "73": [
+      "laser_safety_webp"
+    ],
+    "74": [
+      "machine_learning_hackathon_2024_webp"
+    ],
+    "75": [
+      "makerspace_logo_webp"
+    ],
+    "76": [
+      "microsoft_learn_html_css_github_pdf"
+    ],
+    "77": [
+      "mr_kec_2025_1_webp"
+    ],
+    "78": [
+      "mr_kec_2025_2_webp"
+    ],
+    "79": [
+      "mr_kec_2025_3_webp"
+    ],
+    "80": [
+      "nssr_logo"
+    ],
+    "81": [
+      "nssr_webp"
+    ],
+    "82": [
+      "org_kec_it_club"
+    ],
+    "83": [
+      "org_kec_robotics_club"
+    ],
+    "84": [
+      "pcb_design_fabrication_workshop_2025_day1_webp"
+    ],
+    "85": [
+      "pcb_design_fabrication_workshop_2025_day2_webp"
+    ],
+    "86": [
+      "photo_png"
+    ],
+    "87": [
+      "photo_webp"
+    ],
+    "88": [
+      "printer_maintenance_certification_pdf"
+    ],
+    "89": [
+      "printer_maintenance_webp"
+    ],
+    "90": [
+      "proteus_workshop_2024_banner_webp"
+    ],
+    "91": [
+      "proteus_workshop_2024_day1_webp"
+    ],
+    "92": [
+      "proteus_workshop_2024_day2_webp"
+    ],
+    "93": [
+      "proteus_workshop_2024_svg"
+    ],
+    "94": [
+      "simops_expert_badge_webp"
+    ],
+    "95": [
+      "simops_expert_webp"
+    ],
+    "96": [
+      "simops_fundamentals_badge_webp"
+    ],
+    "97": [
+      "simops_fundamentals_webp"
+    ],
+    "98": [
+      "simops_practitioner_52653675650240_cert"
+    ],
+    "99": [
+      "simops_practitioner_badge_webp"
+    ],
+    "100": [
+      "simops_practitioner_webp"
+    ],
+    "101": [
+      "sports_week_2026_svg"
+    ],
+    "102": [
+      "techaxis_prompt_engineering_2026_cert"
+    ],
+    "103": [
+      "techaxis_prompt_engineering_webp"
+    ],
+    "104": [
+      "uh3001_certificate"
+    ],
+    "105": [
+>>>>>>> Stashed changes
       "web_development_concept"
     ],
     "132": [
@@ -804,6 +1295,7 @@
     ]
   },
   "cohesion": {
+<<<<<<< Updated upstream
     "0": 0.09726775956284153,
     "1": 0.07342995169082125,
     "2": 0.09523809523809523,
@@ -834,6 +1326,38 @@
     "27": 0.5,
     "28": 0.5,
     "29": 0.6666666666666666,
+=======
+    "0": 0.06417112299465241,
+    "1": 0.13793103448275862,
+    "2": 0.09057971014492754,
+    "3": 0.09782608695652174,
+    "4": 0.15584415584415584,
+    "5": 0.20526315789473684,
+    "6": 0.21904761904761905,
+    "7": 0.3333333333333333,
+    "8": 0.2857142857142857,
+    "9": 0.5714285714285714,
+    "10": 0.3333333333333333,
+    "11": 0.3333333333333333,
+    "12": 0.3333333333333333,
+    "13": 0.3333333333333333,
+    "14": 0.7,
+    "15": 0.5,
+    "16": 0.5,
+    "17": 0.5,
+    "18": 0.6666666666666666,
+    "19": 0.6666666666666666,
+    "20": 0.6666666666666666,
+    "21": 1.0,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 1.0,
+>>>>>>> Stashed changes
     "30": 1.0,
     "31": 1.0,
     "32": 0.6666666666666666,
@@ -909,6 +1433,7 @@
     "102": 1.0,
     "103": 1.0,
     "104": 1.0,
+<<<<<<< Updated upstream
     "105": 1.0,
     "106": 1.0,
     "107": 1.0,
@@ -982,17 +1507,71 @@
     },
     {
       "id": "scripts_manage_payloads_main",
+=======
+    "105": 1.0
+  },
+  "gods": [
+    {
+      "id": "scripts_site_automation_main",
+>>>>>>> Stashed changes
       "label": "main()",
       "degree": 9
     },
     {
+<<<<<<< Updated upstream
       "id": "scripts_verify_parse_html",
       "label": "parse_html()",
       "degree": 9
+=======
+      "id": "js_bg_animations_pcbtraces",
+      "label": "PCBTraces",
+      "degree": 7
+    },
+    {
+      "id": "modules_access_showtoast",
+      "label": "showToast()",
+      "degree": 7
+    },
+    {
+      "id": "modules_audio_playaudiocue",
+      "label": "playAudioCue()",
+      "degree": 7
+    },
+    {
+      "id": "modules_tour_tourgoto",
+      "label": "tourGoTo()",
+      "degree": 7
+    },
+    {
+      "id": "scripts_site_automation_bump_version",
+      "label": "bump_version()",
+      "degree": 7
+    },
+    {
+      "id": "js_bg_animations_signalwavebackground",
+      "label": "SignalWaveBackground",
+      "degree": 6
+    },
+    {
+      "id": "modules_access_handlegooglecredentialresponse",
+      "label": "handleGoogleCredentialResponse()",
+      "degree": 6
+    },
+    {
+      "id": "modules_tour_exittour",
+      "label": "exitTour()",
+      "degree": 6
+    },
+    {
+      "id": "modules_tour_touradvance",
+      "label": "tourAdvance()",
+      "degree": 6
+>>>>>>> Stashed changes
     }
   ],
   "surprises": [
     {
+<<<<<<< Updated upstream
       "source": "ADT PWA Icon (192x192)",
       "target": "Terms of Service",
       "source_files": [
@@ -1046,6 +1625,61 @@
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "crosses file types (doc \u2194 code); connects across different repos/directories"
+=======
+      "source": "AI-Assisted Coding for Developers Certificate",
+      "target": "Achievements Page",
+      "source_files": [
+        "assets/certificates/AI-Assisted_Coding_for_Developers_48952793.webp",
+        "achievements.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (image \u2194 doc); connects across different repos/directories; peripheral node `AI-Assisted Coding for Developers Certificate` unexpectedly reaches hub `Achievements Page`"
+    },
+    {
+      "source": "AI Fluency Foundations Certificate",
+      "target": "Achievements Page",
+      "source_files": [
+        "assets/certificates/AI-Fluency_Foundations_of_Coworking_with_AI.webp",
+        "achievements.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (image \u2194 doc); connects across different repos/directories; peripheral node `AI Fluency Foundations Certificate` unexpectedly reaches hub `Achievements Page`"
+    },
+    {
+      "source": "Introduction to Git Certificate",
+      "target": "Achievements Page",
+      "source_files": [
+        "assets/certificates/Introduction_to_Git_48697649.webp",
+        "achievements.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (image \u2194 doc); connects across different repos/directories; peripheral node `Introduction to Git Certificate` unexpectedly reaches hub `Achievements Page`"
+    },
+    {
+      "source": "Introduction to Python Certificate",
+      "target": "Achievements Page",
+      "source_files": [
+        "assets/certificates/Introduction_to_Python_47717251.webp",
+        "achievements.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (image \u2194 doc); connects across different repos/directories; peripheral node `Introduction to Python Certificate` unexpectedly reaches hub `Achievements Page`"
+    },
+    {
+      "source": "Introduction to Security in the World of AI Certificate",
+      "target": "Achievements Page",
+      "source_files": [
+        "assets/certificates/Introduction_to_Security_in_the_World_of_AI.webp",
+        "achievements.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (image \u2194 doc); connects across different repos/directories; peripheral node `Introduction to Security in the World of AI Certificate` unexpectedly reaches hub `Achievements Page`"
+>>>>>>> Stashed changes
     }
   ],
   "tokens": {

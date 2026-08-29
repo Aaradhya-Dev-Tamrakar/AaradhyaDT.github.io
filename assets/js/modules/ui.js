@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v50.19)
+   MODULE: ui.js — aaradhyadt.github.io (v50.20)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -1438,9 +1438,12 @@ function renderTailoredResumePreview(roleKey) {
 
   sheet.innerHTML = `
     <div class="resume-sheet-head">
-      <div class="resume-sheet-name">${RESUME_DATA.name}</div>
-      <div class="resume-sheet-subtitle">${roleData.title}</div>
-      <div class="resume-sheet-contact">${getResumeContactHTML()}</div>
+      <div class="resume-sheet-head-left">
+        <div class="resume-sheet-name">${RESUME_DATA.name}</div>
+        <div class="resume-sheet-subtitle">${roleData.title}</div>
+        <div class="resume-sheet-contact">${getResumeContactHTML()}</div>
+      </div>
+      <img class="resume-sheet-photo" src="assets/images/photo.webp" alt="Aaradhya Dev Tamrakar" width="82" height="82" loading="lazy" onerror="this.onerror=null;this.src='assets/images/photo.png'" />
     </div>
     <div class="resume-sheet-section">
       <div class="resume-sheet-sec-title">Professional Summary</div>
