@@ -8,16 +8,15 @@
 const SITE_RELEASES = [
 
     {
-    version: 'v50.13',
+    version: 'v50.15',
     date: '2026-08-29',
     sha: 'rel50',
-    title: "Keyboard Shortcuts HUD, Web Share API, Terminal History & CV Alignment Suite",
+    title: "Native JS Unit Testing Suite, E2E Smoke Runner, Strict CSP & 24-Check Verification Gate",
     highlights: [
-      "Keyboard Shortcuts HUD: Zero-scroll at-a-glance cheat sheet modal (binds ? / Shift+/) highlighting instant page jumps (1-7), theme/date toggles, and global actions",
-      "Web Share API: Native OS share sheet integration (navigator.share) with clipboard fallback across ATS Resume modal, Command Palette, and CLI",
-      "Dev Terminal: Persistent cross-session command history in localStorage (ArrowUp/ArrowDown), tab autocompletion, and developer aliases (ls, whoami, cat, ping, cls, share, history)",
-      "ATS Resume Generator: Strict alignment with official master CV standards, clean two-column geometry, standard JSON Resume (.json), Markdown (.md), and A4 print PDF export",
-      "Speculation Rules: Instant pre-rendering of core page destinations in Chromium-based browsers"
+      "Native JS Unit Testing Suite: Zero-dependency node:test suite covering PBKDF2/AES-256-GCM crypto, CmdK search ranking, live dates, and CLI command parsing",
+      "E2E Smoke Runner: Standalone HTTP/DOM verification engine testing status codes, 404 routing, 37 precached assets, and noscript fallbacks across all 10 pages",
+      "Strict Content Security Policy: Deployed <meta http-equiv='Content-Security-Policy'> across all HTML pages for hardened XSS defense",
+      "Verification Gate: Expanded pre-commit test suite to 24 check categories, fully passing with zero errors"
     ]
   },
 {

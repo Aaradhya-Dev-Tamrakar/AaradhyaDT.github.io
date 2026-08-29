@@ -10,7 +10,7 @@ Resources exposed:
 - site://achievements  : Certifications, badges, and verification links
 - site://tracker       : Portfolio tracker release history & state of play
 - site://graph         : Codebase knowledge graph analysis (God nodes, communities)
-- site://health        : Structural verification status (22 check categories)
+- site://health        : Structural verification status (24 check categories)
 - site://stats         : Structured site metrics and telemetry
 
 Tools exposed:
@@ -83,19 +83,19 @@ RESOURCES = [
     {
         "uri": "site://graph",
         "name": "Codebase Knowledge Graph",
-        "description": "Graphify report, god nodes, and community structures.",
+        "description": "AST knowledge graph report, god nodes, and community structures.",
         "mimeType": "text/markdown"
     },
     {
         "uri": "site://health",
-        "name": "Site Structural Verification Report",
-        "description": "Live status of the 22-category diagnostic verification suite.",
+        "name": "Verification Health Check",
+        "description": "Live status of the 24-category diagnostic verification suite.",
         "mimeType": "application/json"
     },
     {
         "uri": "site://stats",
-        "name": "Site Metrics & Telemetry",
-        "description": "Live HTML page count, Service Worker version, and node statistics.",
+        "name": "Site Telemetry & Metrics",
+        "description": "Live counts of HTML pages, projects, achievements, service worker version, and graph metrics.",
         "mimeType": "application/json"
     }
 ]
@@ -104,7 +104,7 @@ RESOURCES = [
 TOOLS = [
     {
         "name": "run_verification",
-        "description": "Executes the 22-category site verification suite (scripts/verify.py).",
+        "description": "Executes the 24-category site verification suite (scripts/verify.py).",
         "inputSchema": {
             "type": "object",
             "properties": {

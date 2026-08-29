@@ -676,6 +676,14 @@ else {
 if (-not $SkipVerify -and -not $BypassVerify -and -not $PushOnly) {
     if (Test-Path "scripts/verify.py") {
         if ($pythonExe) {
+            if (Test-Path "scripts/test_e2e.py") {
+                Write-Badge "E2E" "Running E2E integration & smoke testing suite..." "Cyan" "White"
+                & $pythonExe scripts/test_e2e.py
+                if ($LASTEXITCODE -ne 0) {
+                    Write-Badge "E2E" "E2E SMOKE TESTS FAILED -- Commit aborted." "Red" "Red"
+                    exit 1
+                }
+            }
             Write-Badge "Verify" "Running pre-commit diagnostic verification suite..." "Cyan" "White"
             & $pythonExe scripts/verify.py
             $verifyExit = $LASTEXITCODE

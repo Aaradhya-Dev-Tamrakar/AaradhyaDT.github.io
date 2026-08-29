@@ -1,6 +1,6 @@
 name: Verify
 
-# Last updated: 2026-08-29 (v50.13)
+# Last updated: 2026-08-29 (v50.15)
 
 # Runs scripts/verify.py (22 check categories: ids, tags, links, assets,
 # JS syntax, version consistency, modules, sitemap, manifest, JSON-LD,
@@ -71,6 +71,12 @@ jobs:
             node --check "$f"
           done
           echo "All JS files pass syntax check."
+
+      - name: Run JS Unit Tests
+        run: node --test
+
+      - name: Run E2E Smoke Tests
+        run: python3 scripts/test_e2e.py
 
       - name: Run verify.py (full suite)
         run: python3 scripts/verify.py --verbose

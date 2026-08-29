@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-08-29)
 
 ## Corpus Check
-- 35 files · ~302,012 words
+- 40 files · ~305,476 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 538 nodes · 761 edges · 105 communities (31 shown, 74 thin omitted)
+- 564 nodes · 792 edges · 110 communities (34 shown, 76 thin omitted)
 - Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 72 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c1c56610`
+- Built from commit: `cb8ad59d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -114,16 +114,19 @@
 - [[_COMMUNITY_Community 102|Community 102]]
 - [[_COMMUNITY_Community 103|Community 103]]
 - [[_COMMUNITY_Community 104|Community 104]]
+- [[_COMMUNITY_Community 105|Community 105]]
+- [[_COMMUNITY_Community 106|Community 106]]
+- [[_COMMUNITY_Community 107|Community 107]]
 
 ## God Nodes (most connected - your core abstractions)
 1. `bootSite()` - 34 edges
-2. `main()` - 29 edges
-3. `log_pass()` - 23 edges
-4. `Portfolio Website Tracker — v50.12` - 21 edges
-5. `log_error()` - 20 edges
+2. `main()` - 31 edges
+3. `log_pass()` - 25 edges
+4. `log_error()` - 22 edges
+5. `Portfolio Website Tracker — v50.15` - 21 edges
 6. `playAudioCue()` - 18 edges
-7. `log_warning()` - 15 edges
-8. `get_html_files()` - 13 edges
+7. `log_warning()` - 16 edges
+8. `get_html_files()` - 14 edges
 9. `showToast()` - 11 edges
 10. `aaradhyadt.github.io` - 11 edges
 
@@ -142,7 +145,7 @@
 ## Import Cycles
 - None detected.
 
-## Communities (105 total, 74 thin omitted)
+## Communities (110 total, 76 thin omitted)
 
 ### Community 0 - "Community 0"
 Cohesion: 0.06
@@ -190,7 +193,7 @@ Nodes (5): buildSearchIndex(), CMDK_ENTRIES, initGlobalSearch(), renderCmdk(), r
 
 ### Community 12 - "Community 12"
 Cohesion: 0.10
-Nodes (56): bold(), _c(), check_asset_references(), check_cross_page_links(), check_css_integrity(), check_data_consistency(), check_file_sizes(), check_global_id_uniqueness() (+48 more)
+Nodes (60): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+52 more)
 
 ### Community 13 - "Community 13"
 Cohesion: 0.67
@@ -218,7 +221,7 @@ Nodes (3): SimOps AI for Graduates Certificate, SimOps Expert Certificate, SimOp
 
 ### Community 94 - "Community 94"
 Cohesion: 0.10
-Nodes (31): AI-Assisted Coding for Developers Certificate, AI Fluency Foundations Certificate, Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v50.12, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available (+23 more)
+Nodes (31): AI-Assisted Coding for Developers Certificate, AI Fluency Foundations Certificate, Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v50.15, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available (+23 more)
 
 ### Community 95 - "Community 95"
 Cohesion: 0.08
@@ -244,24 +247,28 @@ Nodes (4): bootHomeWidgets(), initLastCommitBadge(), initLiveDates(), initStatus
 Cohesion: 0.50
 Nodes (4): build_all(), minify_css(), Safely minifies CSS content without breaking modern syntax., Minifies all CSS files in assets/css/modules/.
 
+### Community 107 - "Community 107"
+Cohesion: 0.50
+Nodes (3): decryptHexPayload(), getDecryptionKey(), KEY_CACHE
+
 ## Knowledge Gaps
-- **147 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+142 more)
+- **150 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+145 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **74 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **76 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `bootSite()` connect `Community 2` to `Community 11`, `Community 3`, `Community 4`, `Community 6`?**
-  _High betweenness centrality (0.179) - this node is a cross-community bridge._
+  _High betweenness centrality (0.166) - this node is a cross-community bridge._
 - **Why does `Verify workflow` connect `Community 95` to `Community 2`, `Community 12`?**
-  _High betweenness centrality (0.142) - this node is a cross-community bridge._
+  _High betweenness centrality (0.133) - this node is a cross-community bridge._
 - **Why does `check_version_consistency()` connect `Community 12` to `Community 5`?**
-  _High betweenness centrality (0.053) - this node is a cross-community bridge._
+  _High betweenness centrality (0.049) - this node is a cross-community bridge._
 - **Are the 30 inferred relationships involving `bootSite()` (e.g. with `initAccessControl()` and `initAudioCues()`) actually correct?**
   _`bootSite()` has 30 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**
-  _185 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _190 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `Community 0` be split into smaller, more focused modules?**
   _Cohesion score 0.05689900426742532 - nodes in this community are weakly interconnected._
 - **Should `Community 1` be split into smaller, more focused modules?**

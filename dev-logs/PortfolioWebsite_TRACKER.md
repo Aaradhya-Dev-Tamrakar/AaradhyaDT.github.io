@@ -1,6 +1,13 @@
-﻿# Portfolio Website Tracker — v50.13
+﻿# Portfolio Website Tracker — v50.15
 
 Last updated: _2026-08-29_
+
+- **v50.14 (Quality & Testing) — Native Node.js Unit Testing Suite, E2E Smoke Runner, Strict Content Security Policy & 24-Check Verification Gate.** Shipped enterprise testing and security hardening:
+  - **Native JS Unit Testing Suite (`tests/unit/`, `node:test`)**: Implemented zero-dependency unit tests using Node.js built-in `node:test` and `node:assert/strict` covering PBKDF2/AES-256-GCM crypto roundtrips & error handling (`test_crypto.test.mjs`), CmdK multi-token search index matching & ranking (`test_cmdk_search.test.mjs`), live date calculations & path resolution helpers (`test_core_helpers.test.mjs`), and Dev Terminal command/alias parsing (`test_terminal.test.mjs`). All 14 tests execute in ~240ms.
+  - **E2E & Integration Smoke Testing Engine (`scripts/test_e2e.py`)**: Built standalone HTTP/DOM smoke runner validating HTTP 200 responses, Content-Types, 404 template routing, 37 Service Worker precached assets, and `<noscript>` navigation/footer fallbacks across all 10 HTML pages (42 passing assertions).
+  - **Strict Content Security Policy (`<meta>` CSP)**: Deployed strict Content-Security-Policy meta tags across all 10 HTML documents restricting script, style, font, image, connect, and frame sources to authorized origins (Google OAuth, GA4, Formspree, EmailJS, Google Fonts, Calendar).
+  - **Verification Gate Expanded to 24 Categories (`scripts/verify.py`, `sync.ps1`, `verify.yml`)**: Integrated `check_unit_tests()` (Check 23) and `check_csp_integrity()` (Check 24) into the core verification gate, CI workflow, and `sync.ps1` pre-commit routine.
+  - **Verification Gate**: Passed all 24 diagnostic categories cleanly (0 errors, 0 warnings); all 14 unit tests and 42 E2E smoke assertions green.
 
 - **v50.10 (Architecture & Optimization) — PWA Raster Icons, Modular Constants, Zero-Dependency CSS Minifier & Centralized Versioning.** Shipped comprehensive structural and optimization refinements:
   - **PWA Raster Icons & Manifest Compliance (`site.webmanifest`, `sw.js`, `generate_pwa_icons.py`)**: Generated standard 192x192 and 512x512 PNG icons alongside existing SVG icon, ensuring 100% PWA installability and compliance across Chromium/Safari.

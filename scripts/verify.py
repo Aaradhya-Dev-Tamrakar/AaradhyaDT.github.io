@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v50.13)
+aaradhyadt.github.io (v50.15)
 
-22 check categories covering HTML structure, cross-page links, asset
-references, JS syntax, JS runtime safety, CSS URL integrity, deep a11y & SEO,
-version consistency across all modules, semantic data consistency, PWA
-compliance, file size budgets, markdown hygiene, and more.
+24 check categories covering HTML structure, cross-page links, asset
+references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
+CSS URL integrity, deep a11y & SEO, version consistency across all modules,
+semantic data consistency, PWA compliance, file size budgets, markdown hygiene,
+and more.
 
 Run:  python scripts/verify.py            # standard output
       python scripts/verify.py --verbose  # show passes too
@@ -1118,6 +1119,73 @@ def check_tracker_hygiene():
 
 
 # ════════════════════════════════════════════════════════════════════
+#  CHECK 23: JavaScript Unit Tests Execution
+# ════════════════════════════════════════════════════════════════════
+def check_unit_tests():
+    """Execute node --test across tests/unit/ and assert all tests pass."""
+    cat = "unit-tests"
+    node_bin = shutil.which("node")
+    if not node_bin:
+        log_warning(cat, "node binary not found on PATH — skipping unit tests")
+        return
+
+    tests_dir = ROOT / "tests" / "unit"
+    if not tests_dir.exists() or not list(tests_dir.glob("*.test.mjs")):
+        log_warning(cat, "no unit tests found under tests/unit/")
+        return
+
+    try:
+        proc = subprocess.run(
+            [node_bin, "--test"],
+            cwd=str(ROOT),
+            capture_output=True,
+            text=True,
+            timeout=15,
+            encoding="utf-8",
+            errors="replace"
+        )
+        if proc.returncode != 0:
+            err_line = proc.stderr.strip() or proc.stdout.strip()
+            first_err = err_line.splitlines()[-1] if err_line else "non-zero exit"
+            log_error(cat, f"unit tests failed: {first_err}")
+        else:
+            m = re.search(r"pass (\d+)", proc.stdout)
+            count_str = f" ({m.group(1)} tests passed)" if m else ""
+            log_pass(cat, f"all JS unit tests passed cleanly{count_str}")
+    except subprocess.TimeoutExpired:
+        log_error(cat, "unit tests timed out after 15s")
+    except Exception as e:
+        log_error(cat, f"failed to execute unit tests: {e}")
+
+
+# ════════════════════════════════════════════════════════════════════
+#  CHECK 24: Content Security Policy (CSP) Meta Tag Integrity
+# ════════════════════════════════════════════════════════════════════
+def check_csp_integrity():
+    """Verify that every HTML page includes a valid Content-Security-Policy meta tag."""
+    cat = "csp"
+    required_directives = ["default-src", "script-src", "style-src", "img-src", "connect-src", "frame-src"]
+    all_ok = True
+
+    for f in get_html_files():
+        soup = parse_html(f)
+        csp_meta = soup.find("meta", attrs={"http-equiv": re.compile(r"^Content-Security-Policy$", re.I)})
+        if not csp_meta or not csp_meta.get("content"):
+            log_error(cat, f"{f.name}: missing <meta http-equiv='Content-Security-Policy'> tag in <head>")
+            all_ok = False
+            continue
+
+        content = csp_meta["content"]
+        missing_dirs = [d for d in required_directives if d not in content]
+        if missing_dirs:
+            log_error(cat, f"{f.name}: CSP missing required directives: {', '.join(missing_dirs)}")
+            all_ok = False
+
+    if all_ok:
+        log_pass(cat, f"all {len(get_html_files())} HTML pages contain valid, directive-complete CSP meta tags")
+
+
+# ════════════════════════════════════════════════════════════════════
 #  MAIN
 # ════════════════════════════════════════════════════════════════════
 def main():
@@ -1131,7 +1199,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v50.13)"))
+    print(bold("  Portfolio Site Verification Suite (v50.15)"))
     print(bold("=" * 60))
     print()
 
@@ -1208,6 +1276,12 @@ def main():
     # 22. Tracker & Markdown Hygiene (NEW)
     check_tracker_hygiene()
 
+    # 23. JS Unit Tests (NEW)
+    check_unit_tests()
+
+    # 24. Content Security Policy Meta Tag Integrity (NEW)
+    check_csp_integrity()
+
     # ── Output ──────────────────────────────────────────────────
     all_cats = set()
     for cat, _ in errors + warnings + passes:
@@ -1242,7 +1316,7 @@ def main():
 
     # Summary dashboard
     print(bold("-" * 60))
-    print(bold("  Category Summary (22 Categories)"))
+    print(bold(f"  Category Summary ({len(all_cats)} Categories)"))
     print(bold("-" * 60))
     for cat in all_cats:
         cat_e, cat_w, cat_p = cat_status[cat]
@@ -1269,7 +1343,7 @@ def main():
         print(yellow(bold(f"OK with {len(warnings)} warning(s).")))
         sys.exit(2)
     else:
-        print(green(bold("ALL 22 CHECKS PASSED")))
+        print(green(bold(f"ALL {len(all_cats)} CHECKS PASSED")))
         sys.exit(0)
 
 
