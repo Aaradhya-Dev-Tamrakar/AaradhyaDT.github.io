@@ -22,7 +22,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v50.6 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v50.7 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
@@ -133,7 +133,7 @@ Located directly on the Home page (`index.html`), the **Interactive Dev Terminal
 
 - `skills`: Overview of core firmware, AI/ML, robotics, and software toolstacks.
 - `radar`: Opens the interactive 5-axis Skill Radar visualizer.
-- `resume`: Opens the recruiter ATS Resume Generator & PDF Exporter.
+- `resume`: Opens the recruiter ATS Resume Generator & Multi-Format Exporter.
 - `projects`: Summary of featured engineering projects (SPARK, GCSBR, Pulse Live, PrakopNet).
 - `run [name]`: Runs interactive hardware telemetry simulations (`run spark`, `run gcsbr`, `run prakopnet`, `run pulselive`).
 - `stats`: Structured site telemetry summary (projects, achievements, milestones, target hardware).
@@ -142,24 +142,45 @@ Located directly on the Home page (`index.html`), the **Interactive Dev Terminal
 - `experience`: Engineering leadership roles (IEEE KEC Vice Chair, Fuse AI Fellow, NSSR Fellow).
 - `achievements`: Overview of 39 verified certifications and competition awards.
 - `contact`: Direct email, GitHub, and LinkedIn links.
-- `whatsnew`: Triggers the **What's New** major releases modal.
+- `shortcuts`: Opens the **Keyboard Shortcuts HUD** cheat sheet modal (`?`).
+- `share`: Triggers native Web Share API dialog or copies portfolio URL.
+- `history`: Inspects recent command execution history traversal.
+- `whatsnew`: Triggers the **What's New** major releases modal (`Shift+N`).
 - `healthcheck`: Runs **client-side site diagnostics** (modules, SW, version, timing, nav links).
-- `theme`: Toggles site light/dark color scheme.
+- `theme`: Toggles site light/dark color scheme (`0`).
 - `accent [theme]`: Easter egg color theme switcher (gold, emerald, violet, cyan, ruby, prism).
-- `sound / audio`: Toggles UI micro-sound audio cues.
-- `tour`: Launches the interactive guided spotlight tour across the site.
+- `sound / audio`: Toggles UI micro-sound audio cues (`Shift+A`).
+- `tour`: Launches the interactive guided spotlight tour across the site (`Shift+T`).
 - `matrix`: Renders cybernetic digital rain animation stream.
 - `goto [page]`: Direct terminal navigation to any site page (`home`, `projects`, `experience`, `achievements`, `about`, `journey`, `contact`).
-- `cv`: Quick download/view Curriculum Vitae.
+- `cv`: Quick download/view official Curriculum Vitae (PDF).
 - `email`: Direct mailto trigger.
 - `filter [category]`: Filter projects by category (`aiml`, `robotics`, `hardware`, `web`).
 - `clear`: Clears terminal screen.
 
 ### UX Features
 
+- **Tab Autocompletion**: Press `Tab` to autoplete commands and subcommands with inline suggestions.
+- **Cross-Session Command History**: Persistent `localStorage` history buffer navigated with `ArrowUp` / `ArrowDown`.
 - **1-Click Quick Preset Pills**: Clickable command buttons (`help`, `skills`, `projects`, etc.) for instant command execution without typing.
 - **HTML Output Formatting**: Color-coded text (`.term-green`, `.term-gold`, `.term-cyan`), prompt indicators (`visitor@adt:~$&nbsp;`), and clickable links.
 - **Keyboard-Friendly**: Binds to `Enter` for execution and auto-scrolls to latest prompt output.
+
+---
+
+## ⌨️ Global Keyboard Navigation & Shortcuts HUD
+
+Press **`?`** (or **`Shift+/`**) anywhere on the site to trigger the **Keyboard Shortcuts HUD Modal**:
+
+- **`1` – `7`**: Instant direct page navigation (`Home`, `Projects`, `Experience`, `Achievements`, `About`, `Journey`, `Contact`).
+- **`/`** or **`Ctrl+K`**: Global omnibar Command Palette search.
+- **`0`**: Toggle dark / light theme mode.
+- **`` ` ``**: Toggle Bikram Sambat (B.S.) / A.D. date formats.
+- **`Shift+N`**: What's New release history & changelog.
+- **`Shift+T`**: Interactive guided site tour.
+- **`Shift+A`**: Toggle synthesized Web Audio micro-sounds.
+- **`=` / `-`**: Fast depth page scroll jump (top / bottom).
+- **`Esc`**: Universal master dismiss for active modals, drawers, and popovers.
 
 ---
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: tour.js — aaradhyadt.github.io (v50.6)
+   MODULE: tour.js — aaradhyadt.github.io (v50.7)
    Cross-page spotlight tour with keyboard navigation.
    ============================================================ */
 
@@ -32,7 +32,7 @@ const TOUR_STEPS = {
     { sel: '#faq', title: 'Frequently Asked Questions', body: 'Interactive FAQ section covering core background, SPARK major project, and direct contact options.' },
   ],
   'journey.html': [
-    { sel: '#page-header', title: 'Engineering Journey', body: 'A 35-node narrative timeline tracing site architecture, commit milestones, and engineering releases.' },
+    { sel: '#page-header', title: 'Engineering Journey', body: 'A 36-node narrative timeline tracing site architecture, commit milestones, and engineering releases.' },
     { sel: '#journeyTrack .journey-card', title: 'Milestone Checkpoints', body: 'Expandable checkpoint nodes — press Alt+6 anytime to toggle all timeline nodes at once.' },
   ],
   'contact.html': [
