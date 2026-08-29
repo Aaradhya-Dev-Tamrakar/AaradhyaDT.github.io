@@ -33,8 +33,8 @@ ITERATIONS = 100000
 KEY_LENGTH = 32
 
 DEFAULT_PASSCODES = {
-    "vip": "vip2026",
-    "master": "master2026"
+    "vip": os.environ.get("ADT_VIP_PASSCODE", "vip2026"),
+    "master": os.environ.get("ADT_MASTER_PASSCODE", "master2026")
 }
 
 KNOWN_MASTER_KEYS = {"index-master", "proj-claude-desktop"}
@@ -47,6 +47,13 @@ def get_crypto_engine():
     except ImportError:
         sys.stderr.write("Error: 'cryptography' package is required. Run: pip install cryptography\n")
         sys.exit(1)
+
+
+def get_default_passcodes() -> dict:
+    return {
+        "vip": os.environ.get("ADT_VIP_PASSCODE", "vip2026"),
+        "master": os.environ.get("ADT_MASTER_PASSCODE", "master2026")
+    }
 
 
 def derive_key(passcode: str, salt: bytes = SALT, iterations: int = ITERATIONS) -> bytes:
@@ -113,15 +120,42 @@ def write_access_payloads(payloads: dict) -> None:
         replacement,
         content
     )
-    ACCESS_JS.write_text(new_content, encoding="utf-8")
+    # Atomic write to temp file then replace
+    tmp_path = ACCESS_JS.parent / f"{ACCESS_JS.name}.tmp"
+    try:
+        tmp_path.write_text(new_content, encoding="utf-8")
+        os.replace(tmp_path, ACCESS_JS)
+    finally:
+        if tmp_path.exists():
+            try:
+                tmp_path.unlink()
+            except OSError:
+                pass
 
 
 def get_default_passcode_for_key(key: str) -> str:
-    return DEFAULT_PASSCODES["master"] if key in KNOWN_MASTER_KEYS else DEFAULT_PASSCODES["vip"]
+    codes = get_default_passcodes()
+    return codes["master"] if key in KNOWN_MASTER_KEYS else codes["vip"]
 
 
-def cmd_list():
+def cmd_list(as_json: bool = False):
     payloads = read_access_payloads()
+    if as_json:
+        result = []
+        for key, hex_str in payloads.items():
+            passcode = get_default_passcode_for_key(key)
+            tier = "master" if key in KNOWN_MASTER_KEYS else "vip"
+            try:
+                dec = decrypt_payload(hex_str, passcode)
+                preview = dec.replace("\n", " ").strip()[:60]
+                status = "ok"
+            except Exception as e:
+                preview = str(e)
+                status = "decrypt_failed"
+            result.append({"key": key, "tier": tier, "length": len(hex_str), "status": status, "preview": preview})
+        print(json.dumps(result, indent=2))
+        return
+
     print(f"\nFound {len(payloads)} encrypted payloads in {ACCESS_JS.name}:\n")
     print(f"  {'KEY':<22s} {'TIER':<8s} {'CHARS':<8s} {'PREVIEW'}")
     print("  " + "-" * 75)
@@ -142,7 +176,7 @@ def cmd_list():
     print()
 
 
-def cmd_get(key: str, passcode: str = None):
+def cmd_get(key: str, passcode: str = None, as_json: bool = False):
     payloads = read_access_payloads()
     if key not in payloads:
         print(f"Error: Payload key '{key}' not found.", file=sys.stderr)
@@ -151,7 +185,10 @@ def cmd_get(key: str, passcode: str = None):
     code = passcode or get_default_passcode_for_key(key)
     try:
         dec = decrypt_payload(payloads[key], code)
-        print(dec)
+        if as_json:
+            print(json.dumps({"key": key, "content": dec}, indent=2))
+        else:
+            print(dec)
     except Exception as e:
         print(f"Decryption failed: {e}", file=sys.stderr)
         sys.exit(1)
@@ -159,11 +196,13 @@ def cmd_get(key: str, passcode: str = None):
 
 def cmd_set(key: str, content: str, passcode: str = None):
     payloads = read_access_payloads()
+    is_new = key not in payloads
     code = passcode or get_default_passcode_for_key(key)
     new_hex = encrypt_payload(content, code)
     payloads[key] = new_hex
     write_access_payloads(payloads)
-    print(f"Successfully updated and re-encrypted '{key}' ({len(content)} chars -> {len(new_hex)} hex bytes) in access.js.")
+    action = "Created" if is_new else "Updated"
+    print(f"Successfully {action.lower()} and re-encrypted '{key}' ({len(content)} chars -> {len(new_hex)} hex bytes) in access.js.")
 
 
 def cmd_export(out_file: Path):
@@ -208,23 +247,43 @@ def cmd_import(in_file: Path):
     print(f"Successfully imported and re-encrypted {updated} payloads into access.js.")
 
 
-def cmd_verify():
+def cmd_verify(as_json: bool = False):
     payloads = read_access_payloads()
     all_ok = True
-    print(f"Verifying {len(payloads)} payloads in access.js...")
+    verified_count = 0
+    failed_keys = []
+
+    if not as_json:
+        print(f"Verifying {len(payloads)} payloads in access.js...")
 
     for key, hex_str in payloads.items():
         code = get_default_passcode_for_key(key)
         try:
             dec = decrypt_payload(hex_str, code)
             if not dec:
-                print(f"  [FAIL] {key}: Empty decrypted string")
+                if not as_json:
+                    print(f"  [FAIL] {key}: Empty decrypted string")
+                failed_keys.append(key)
                 all_ok = False
             else:
-                print(f"  [PASS] {key} ({len(dec)} chars)")
+                if not as_json:
+                    print(f"  [PASS] {key} ({len(dec)} chars)")
+                verified_count += 1
         except Exception as e:
-            print(f"  [FAIL] {key}: Decryption failed ({e})")
+            if not as_json:
+                print(f"  [FAIL] {key}: Decryption failed ({e})")
+            failed_keys.append(key)
             all_ok = False
+
+    if as_json:
+        res = {
+            "total": len(payloads),
+            "verified": verified_count,
+            "failed": failed_keys,
+            "ok": all_ok
+        }
+        print(json.dumps(res, indent=2))
+        sys.exit(0 if all_ok else 1)
 
     if all_ok:
         print("\nAll encrypted payloads verified successfully.")
@@ -239,12 +298,14 @@ def main():
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     # list
-    subparsers.add_parser("list", help="List all payloads with decrypted preview")
+    p_list = subparsers.add_parser("list", help="List all payloads with decrypted preview")
+    p_list.add_argument("--json", action="store_true", help="Output in JSON format")
 
     # get
     p_get = subparsers.add_parser("get", help="Print decrypted plaintext of a payload")
     p_get.add_argument("key", help="Payload ID (e.g. index-vip, proj-spark)")
     p_get.add_argument("--passcode", "-p", help="Passcode override")
+    p_get.add_argument("--json", action="store_true", help="Output in JSON format")
 
     # set
     p_set = subparsers.add_parser("set", help="Encrypt and update a payload in access.js")
@@ -262,7 +323,8 @@ def main():
     p_import.add_argument("--file", "-f", type=Path, required=True)
 
     # verify
-    subparsers.add_parser("verify", help="Verify decryption of all payloads")
+    p_verify = subparsers.add_parser("verify", help="Verify decryption of all payloads")
+    p_verify.add_argument("--json", action="store_true", help="Output in JSON format")
 
     # encrypt / decrypt
     p_enc = subparsers.add_parser("encrypt", help="Encrypt a plaintext string")
@@ -276,9 +338,9 @@ def main():
     args = parser.parse_args()
 
     if args.command == "list":
-        cmd_list()
+        cmd_list(as_json=args.json)
     elif args.command == "get":
-        cmd_get(args.key, args.passcode)
+        cmd_get(args.key, args.passcode, as_json=args.json)
     elif args.command == "set":
         content = args.content
         if args.file:
@@ -292,7 +354,7 @@ def main():
     elif args.command == "import":
         cmd_import(args.file)
     elif args.command == "verify":
-        cmd_verify()
+        cmd_verify(as_json=args.json)
     elif args.command == "encrypt":
         print(encrypt_payload(args.text, args.passcode))
     elif args.command == "decrypt":

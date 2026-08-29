@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-08-29)
 
 ## Corpus Check
-- 41 files · ~307,216 words
+- 41 files · ~307,411 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 581 nodes · 809 edges · 112 communities (36 shown, 76 thin omitted)
+- 582 nodes · 811 edges · 112 communities (36 shown, 76 thin omitted)
 - Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 70 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `27129535`
+- Built from commit: `679ef4b1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -254,8 +254,8 @@ Cohesion: 0.50
 Nodes (3): decryptHexPayload(), getDecryptionKey(), KEY_CACHE
 
 ### Community 110 - "Community 110"
-Cohesion: 0.40
-Nodes (15): cmd_export(), cmd_get(), cmd_import(), cmd_list(), cmd_set(), cmd_verify(), decrypt_payload(), derive_key() (+7 more)
+Cohesion: 0.37
+Nodes (16): cmd_export(), cmd_get(), cmd_import(), cmd_list(), cmd_set(), cmd_verify(), decrypt_payload(), derive_key() (+8 more)
 
 ### Community 111 - "Community 111"
 Cohesion: 0.60
@@ -270,11 +270,11 @@ Nodes (4): find_browser(), generate_icon(), main(), Path
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `bootSite()` connect `Community 2` to `Community 11`, `Community 3`, `Community 4`, `Community 6`?**
-  _High betweenness centrality (0.137) - this node is a cross-community bridge._
+  _High betweenness centrality (0.136) - this node is a cross-community bridge._
 - **Why does `Verify workflow` connect `Community 95` to `Community 2`, `Community 12`?**
   _High betweenness centrality (0.103) - this node is a cross-community bridge._
 - **Why does `initAccessControl()` connect `Community 4` to `Community 2`?**
-  _High betweenness centrality (0.026) - this node is a cross-community bridge._
+  _High betweenness centrality (0.025) - this node is a cross-community bridge._
 - **Are the 30 inferred relationships involving `bootSite()` (e.g. with `initAccessControl()` and `initAudioCues()`) actually correct?**
   _`bootSite()` has 30 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**

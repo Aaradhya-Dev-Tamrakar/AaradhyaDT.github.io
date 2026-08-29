@@ -204,7 +204,7 @@ TOOLS = [
     },
     {
         "name": "list_encrypted_payloads",
-        "description": "Lists all 25 encrypted payload keys in access.js with their tier, character length, and preview.",
+        "description": "Lists all encrypted payload keys in access.js with their tier, character length, and preview.",
         "inputSchema": {
             "type": "object",
             "properties": {}

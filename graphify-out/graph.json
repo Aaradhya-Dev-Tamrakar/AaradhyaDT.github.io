@@ -2104,10 +2104,20 @@
       "norm_label": "get_crypto_engine()"
     },
     {
-      "label": "derive_key()",
+      "label": "get_default_passcodes()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L52",
+      "_origin": "ast",
+      "id": "scripts_manage_payloads_get_default_passcodes",
+      "community": 110,
+      "norm_label": "get_default_passcodes()"
+    },
+    {
+      "label": "derive_key()",
+      "file_type": "code",
+      "source_file": "scripts/manage_payloads.py",
+      "source_location": "L59",
       "_origin": "ast",
       "id": "scripts_manage_payloads_derive_key",
       "community": 110,
@@ -2117,7 +2127,7 @@
       "label": "encrypt_payload()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L57",
+      "source_location": "L64",
       "_origin": "ast",
       "id": "scripts_manage_payloads_encrypt_payload",
       "community": 110,
@@ -2127,7 +2137,7 @@
       "label": "decrypt_payload()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L72",
+      "source_location": "L79",
       "_origin": "ast",
       "id": "scripts_manage_payloads_decrypt_payload",
       "community": 110,
@@ -2137,7 +2147,7 @@
       "label": "read_access_payloads()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L89",
+      "source_location": "L96",
       "_origin": "ast",
       "id": "scripts_manage_payloads_read_access_payloads",
       "community": 110,
@@ -2147,7 +2157,7 @@
       "label": "write_access_payloads()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L107",
+      "source_location": "L114",
       "_origin": "ast",
       "id": "scripts_manage_payloads_write_access_payloads",
       "community": 110,
@@ -2157,7 +2167,7 @@
       "label": "get_default_passcode_for_key()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L119",
+      "source_location": "L136",
       "_origin": "ast",
       "id": "scripts_manage_payloads_get_default_passcode_for_key",
       "community": 110,
@@ -2167,7 +2177,7 @@
       "label": "cmd_list()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L123",
+      "source_location": "L141",
       "_origin": "ast",
       "id": "scripts_manage_payloads_cmd_list",
       "community": 110,
@@ -2177,7 +2187,7 @@
       "label": "cmd_get()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L145",
+      "source_location": "L179",
       "_origin": "ast",
       "id": "scripts_manage_payloads_cmd_get",
       "community": 110,
@@ -2187,7 +2197,7 @@
       "label": "cmd_set()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L160",
+      "source_location": "L197",
       "_origin": "ast",
       "id": "scripts_manage_payloads_cmd_set",
       "community": 110,
@@ -2197,7 +2207,7 @@
       "label": "cmd_export()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L169",
+      "source_location": "L208",
       "_origin": "ast",
       "id": "scripts_manage_payloads_cmd_export",
       "community": 110,
@@ -2207,7 +2217,7 @@
       "label": "Path",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L169",
+      "source_location": "L208",
       "_origin": "ast",
       "id": "scripts_manage_payloads_py_path",
       "community": 110,
@@ -2217,7 +2227,7 @@
       "label": "cmd_import()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L186",
+      "source_location": "L225",
       "_origin": "ast",
       "id": "scripts_manage_payloads_cmd_import",
       "community": 110,
@@ -2227,7 +2237,7 @@
       "label": "cmd_verify()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L211",
+      "source_location": "L250",
       "_origin": "ast",
       "id": "scripts_manage_payloads_cmd_verify",
       "community": 110,
@@ -2237,7 +2247,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "scripts/manage_payloads.py",
-      "source_location": "L237",
+      "source_location": "L296",
       "_origin": "ast",
       "id": "scripts_manage_payloads_main",
       "community": 110,
@@ -9428,9 +9438,9 @@
       "source_file": "mcp-server/site_mcp.py",
       "source_location": "L290",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "mcp_server_site_mcp_rationale_290",
-      "target": "mcp_server_site_mcp_handle_resource_read",
-      "confidence_score": 1.0
+      "target": "mcp_server_site_mcp_handle_resource_read"
     },
     {
       "relation": "calls",
@@ -9449,9 +9459,9 @@
       "source_file": "mcp-server/site_mcp.py",
       "source_location": "L348",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "mcp_server_site_mcp_rationale_348",
-      "target": "mcp_server_site_mcp_handle_tool_call",
-      "confidence_score": 1.0
+      "target": "mcp_server_site_mcp_handle_tool_call"
     },
     {
       "relation": "rationale_for",
@@ -9459,9 +9469,9 @@
       "source_file": "mcp-server/site_mcp.py",
       "source_location": "L445",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "mcp_server_site_mcp_rationale_445",
-      "target": "mcp_server_site_mcp_process_request",
-      "confidence_score": 1.0
+      "target": "mcp_server_site_mcp_process_request"
     },
     {
       "relation": "calls",
@@ -9480,9 +9490,9 @@
       "source_file": "mcp-server/site_mcp.py",
       "source_location": "L604",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "mcp_server_site_mcp_rationale_604",
-      "target": "mcp_server_site_mcp_run_stdio_server",
-      "confidence_score": 1.0
+      "target": "mcp_server_site_mcp_run_stdio_server"
     },
     {
       "relation": "contains",
@@ -9872,9 +9882,9 @@
       "source_file": "scripts/generate_pwa_icons.py",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_generate_pwa_icons_generate_icon",
-      "target": "scripts_generate_pwa_icons_py_path",
-      "confidence_score": 1.0
+      "target": "scripts_generate_pwa_icons_py_path"
     },
     {
       "relation": "calls",
@@ -9893,9 +9903,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_cmd_export",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_export"
     },
     {
       "relation": "contains",
@@ -9903,9 +9913,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L145",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_cmd_get",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_get"
     },
     {
       "relation": "contains",
@@ -9913,9 +9923,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L186",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_cmd_import",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_import"
     },
     {
       "relation": "contains",
@@ -9923,9 +9933,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L123",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_cmd_list",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_list"
     },
     {
       "relation": "contains",
@@ -9933,9 +9943,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_cmd_set",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_set"
     },
     {
       "relation": "contains",
@@ -9943,9 +9953,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L211",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_cmd_verify",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_verify"
     },
     {
       "relation": "contains",
@@ -9953,9 +9963,49 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L72",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_decrypt_payload",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_decrypt_payload"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manage_payloads.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manage_payloads",
+      "target": "scripts_manage_payloads_derive_key"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manage_payloads.py",
+      "source_location": "L57",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manage_payloads",
+      "target": "scripts_manage_payloads_encrypt_payload"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manage_payloads.py",
+      "source_location": "L43",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manage_payloads",
+      "target": "scripts_manage_payloads_get_crypto_engine"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manage_payloads.py",
+      "source_location": "L119",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "scripts_manage_payloads",
+      "target": "scripts_manage_payloads_get_default_passcode_for_key"
     },
     {
       "relation": "contains",
@@ -9964,37 +10014,7 @@
       "source_location": "L52",
       "weight": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_derive_key",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/manage_payloads.py",
-      "source_location": "L57",
-      "weight": 1.0,
-      "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_encrypt_payload",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/manage_payloads.py",
-      "source_location": "L43",
-      "weight": 1.0,
-      "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_get_crypto_engine",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "scripts/manage_payloads.py",
-      "source_location": "L119",
-      "weight": 1.0,
-      "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_get_default_passcode_for_key",
+      "target": "scripts_manage_payloads_get_default_passcodes",
       "confidence_score": 1.0
     },
     {
@@ -10003,9 +10023,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L237",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_main",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_main"
     },
     {
       "relation": "contains",
@@ -10013,9 +10033,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_read_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_read_access_payloads"
     },
     {
       "relation": "contains",
@@ -10023,9 +10043,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L107",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads",
-      "target": "scripts_manage_payloads_write_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_write_access_payloads"
     },
     {
       "relation": "calls",
@@ -10034,9 +10054,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_decrypt_payload",
-      "target": "scripts_manage_payloads_get_crypto_engine",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_get_crypto_engine"
     },
     {
       "relation": "calls",
@@ -10045,8 +10065,19 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L58",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_encrypt_payload",
-      "target": "scripts_manage_payloads_get_crypto_engine",
+      "target": "scripts_manage_payloads_get_crypto_engine"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "scripts/manage_payloads.py",
+      "source_location": "L137",
+      "weight": 1.0,
+      "source": "scripts_manage_payloads_get_default_passcode_for_key",
+      "target": "scripts_manage_payloads_get_default_passcodes",
       "confidence_score": 1.0
     },
     {
@@ -10056,9 +10087,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_decrypt_payload",
-      "target": "scripts_manage_payloads_derive_key",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_derive_key"
     },
     {
       "relation": "calls",
@@ -10067,9 +10098,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_encrypt_payload",
-      "target": "scripts_manage_payloads_derive_key",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_derive_key"
     },
     {
       "relation": "calls",
@@ -10078,9 +10109,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L200",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_import",
-      "target": "scripts_manage_payloads_encrypt_payload",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_encrypt_payload"
     },
     {
       "relation": "calls",
@@ -10089,9 +10120,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L163",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_set",
-      "target": "scripts_manage_payloads_encrypt_payload",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_encrypt_payload"
     },
     {
       "relation": "calls",
@@ -10100,9 +10131,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L297",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_main",
-      "target": "scripts_manage_payloads_encrypt_payload",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_encrypt_payload"
     },
     {
       "relation": "calls",
@@ -10111,9 +10142,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L177",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_export",
-      "target": "scripts_manage_payloads_decrypt_payload",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_decrypt_payload"
     },
     {
       "relation": "calls",
@@ -10122,9 +10153,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L153",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_get",
-      "target": "scripts_manage_payloads_decrypt_payload",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_decrypt_payload"
     },
     {
       "relation": "calls",
@@ -10133,9 +10164,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L133",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_list",
-      "target": "scripts_manage_payloads_decrypt_payload",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_decrypt_payload"
     },
     {
       "relation": "calls",
@@ -10144,9 +10175,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L219",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_verify",
-      "target": "scripts_manage_payloads_decrypt_payload",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_decrypt_payload"
     },
     {
       "relation": "calls",
@@ -10155,9 +10186,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L299",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_main",
-      "target": "scripts_manage_payloads_decrypt_payload",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_decrypt_payload"
     },
     {
       "relation": "calls",
@@ -10166,9 +10197,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L170",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_export",
-      "target": "scripts_manage_payloads_read_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_read_access_payloads"
     },
     {
       "relation": "calls",
@@ -10177,9 +10208,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L146",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_get",
-      "target": "scripts_manage_payloads_read_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_read_access_payloads"
     },
     {
       "relation": "calls",
@@ -10188,9 +10219,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L192",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_import",
-      "target": "scripts_manage_payloads_read_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_read_access_payloads"
     },
     {
       "relation": "calls",
@@ -10199,9 +10230,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_list",
-      "target": "scripts_manage_payloads_read_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_read_access_payloads"
     },
     {
       "relation": "calls",
@@ -10210,9 +10241,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L161",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_set",
-      "target": "scripts_manage_payloads_read_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_read_access_payloads"
     },
     {
       "relation": "calls",
@@ -10221,9 +10252,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L212",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_verify",
-      "target": "scripts_manage_payloads_read_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_read_access_payloads"
     },
     {
       "relation": "calls",
@@ -10232,9 +10263,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L207",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_import",
-      "target": "scripts_manage_payloads_write_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_write_access_payloads"
     },
     {
       "relation": "calls",
@@ -10243,9 +10274,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_set",
-      "target": "scripts_manage_payloads_write_access_payloads",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_write_access_payloads"
     },
     {
       "relation": "calls",
@@ -10254,9 +10285,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_export",
-      "target": "scripts_manage_payloads_get_default_passcode_for_key",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_get_default_passcode_for_key"
     },
     {
       "relation": "calls",
@@ -10265,9 +10296,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L151",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_get",
-      "target": "scripts_manage_payloads_get_default_passcode_for_key",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_get_default_passcode_for_key"
     },
     {
       "relation": "calls",
@@ -10276,9 +10307,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L203",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_import",
-      "target": "scripts_manage_payloads_get_default_passcode_for_key",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_get_default_passcode_for_key"
     },
     {
       "relation": "calls",
@@ -10287,9 +10318,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_list",
-      "target": "scripts_manage_payloads_get_default_passcode_for_key",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_get_default_passcode_for_key"
     },
     {
       "relation": "calls",
@@ -10298,9 +10329,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L162",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_set",
-      "target": "scripts_manage_payloads_get_default_passcode_for_key",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_get_default_passcode_for_key"
     },
     {
       "relation": "calls",
@@ -10309,9 +10340,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L217",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_verify",
-      "target": "scripts_manage_payloads_get_default_passcode_for_key",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_get_default_passcode_for_key"
     },
     {
       "relation": "calls",
@@ -10320,9 +10351,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L279",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_main",
-      "target": "scripts_manage_payloads_cmd_list",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_list"
     },
     {
       "relation": "calls",
@@ -10331,9 +10362,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L281",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_main",
-      "target": "scripts_manage_payloads_cmd_get",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_get"
     },
     {
       "relation": "calls",
@@ -10342,9 +10373,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L289",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_main",
-      "target": "scripts_manage_payloads_cmd_set",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_set"
     },
     {
       "relation": "references",
@@ -10353,9 +10384,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L169",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_export",
-      "target": "scripts_manage_payloads_py_path",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_py_path"
     },
     {
       "relation": "calls",
@@ -10364,9 +10395,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L291",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_main",
-      "target": "scripts_manage_payloads_cmd_export",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_export"
     },
     {
       "relation": "references",
@@ -10375,9 +10406,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L186",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_cmd_import",
-      "target": "scripts_manage_payloads_py_path",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_py_path"
     },
     {
       "relation": "calls",
@@ -10386,9 +10417,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L293",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_main",
-      "target": "scripts_manage_payloads_cmd_import",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_import"
     },
     {
       "relation": "calls",
@@ -10397,9 +10428,9 @@
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L295",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "scripts_manage_payloads_main",
-      "target": "scripts_manage_payloads_cmd_verify",
-      "confidence_score": 1.0
+      "target": "scripts_manage_payloads_cmd_verify"
     },
     {
       "relation": "contains",
@@ -13117,9 +13148,9 @@
       "source_file": "AGENTS.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "agents_agent_rules_workflow_guidelines",
-      "target": "agents_4_encrypted_payloads_vip_sections_access_js",
-      "confidence_score": 1.0
+      "target": "agents_4_encrypted_payloads_vip_sections_access_js"
     },
     {
       "relation": "contains",
@@ -13155,9 +13186,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_working_conventions_for_this_repo",
-      "target": "claude_encrypted_sections_vip_payloads_access_js",
-      "confidence_score": 1.0
+      "target": "claude_encrypted_sections_vip_payloads_access_js"
     },
     {
       "relation": "contains",
@@ -13243,9 +13274,9 @@
       "source_file": "GEMINI.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "gemini_antigravity_ide_gemini_agent_rules_for_portfolio_repository",
-      "target": "gemini_4_encrypted_payloads_vip_sections_access_js",
-      "confidence_score": 1.0
+      "target": "gemini_4_encrypted_payloads_vip_sections_access_js"
     },
     {
       "relation": "contains",
@@ -14575,5 +14606,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "27129535e767ceb49c42afbe7adad7c0cea68152"
+  "built_at_commit": "679ef4b190eb8f2be5c7997a42e7c28a34e53cbf"
 }
