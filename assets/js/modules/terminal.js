@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v50)
+   MODULE: terminal.js — aaradhyadt.github.io (v50.1)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -41,6 +41,7 @@
   <span class="term-gold">experience</span>   - Leadership &amp; technical roles<br>
   <span class="term-gold">achievements</span> - Credentials &amp; competition milestones<br>
   <span class="term-gold">contact</span>      - Direct communication channels<br>
+  <span class="term-gold">shortcuts</span>    - Open Keyboard Shortcuts Cheat Sheet HUD (?)<br>
   <span class="term-gold">whatsnew</span>     - View latest major release highlights<br>
   <span class="term-gold">healthcheck</span> - Run client-side site diagnostics<br>
   <span class="term-gold">theme</span>        - Toggle site color scheme (Dark / Light)<br>
@@ -267,6 +268,22 @@
   • GitHub:   <a href="https://github.com/AaradhyaDT" target="_blank" rel="noopener noreferrer" class="term-link">github.com/AaradhyaDT</a><br>
   • LinkedIn: <a href="https://www.linkedin.com/in/aaradhya-dev-tamrakar" target="_blank" rel="noopener noreferrer" class="term-link">linkedin.com/in/aaradhya-dev-tamrakar</a>
 `.trim(),
+      shortcuts: () => {
+        if (typeof openShortcutsModal === 'function') openShortcutsModal();
+        return '<span class="term-green">Opening Keyboard Shortcuts Cheat Sheet HUD...</span>';
+      },
+      keys: () => {
+        if (typeof openShortcutsModal === 'function') openShortcutsModal();
+        return '<span class="term-green">Opening Keyboard Shortcuts Cheat Sheet HUD...</span>';
+      },
+      keymap: () => {
+        if (typeof openShortcutsModal === 'function') openShortcutsModal();
+        return '<span class="term-green">Opening Keyboard Shortcuts Cheat Sheet HUD...</span>';
+      },
+      hud: () => {
+        if (typeof openShortcutsModal === 'function') openShortcutsModal();
+        return '<span class="term-green">Opening Keyboard Shortcuts Cheat Sheet HUD...</span>';
+      },
       whatsnew: () => {
         if (typeof openWhatsNewModal === 'function') openWhatsNewModal();
         return '<span class="term-green">Opening What\'s New modal...</span>';

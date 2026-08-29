@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: cmdk.js — aaradhyadt.github.io (v50)
+   MODULE: cmdk.js — aaradhyadt.github.io (v50.1)
    Command palette (Cmd+K) search and quick navigation.
    ============================================================ */
 
@@ -43,6 +43,7 @@ const CMDK_ENTRIES = [
   { title: 'Contact Form & Direct Channels', type: 'section', meta: 'Contact · Section', href: '/contact.html#contact', text: 'contact form get in touch email aaradhyadevtmr@gmail.com social channels message' },
 
   // ── Actions & Interactive Tools ──────────────────────────
+  { title: 'Keyboard Shortcuts Cheat Sheet (?)', type: 'action', meta: 'Shortcut: ?', href: 'javascript:openShortcutsModal()', text: 'keyboard shortcuts cheat sheet keymap hotkeys keys hud help modal bindings guide' },
   { title: 'Generate Tailored Resume (ATS & PDF)', type: 'action', meta: 'Action', href: 'javascript:openResumeGenerator()', text: 'generate resume tailored ats cv export pdf print resume builder' },
   { title: 'Interactive Skill Radar Visualizer', type: 'action', meta: 'Action', href: 'javascript:initSkillRadar()', text: 'interactive skill radar visualizer radar chart skills competency' },
   { title: 'Access Control & VIP Login', type: 'action', meta: 'Passcode: vip2026', href: 'javascript:openAccessModal(1)', text: 'access control login vip higher tier passcode password security' },
@@ -291,7 +292,7 @@ function initGlobalSearch() {
 
   document.addEventListener('keydown', e => {
     if (cmdk.classList.contains('open')) return;
-    const isSlash = (e.key === '/') && !e.metaKey && !e.ctrlKey && !e.altKey;
+    const isSlash = (e.key === '/') && !e.metaKey && !e.ctrlKey && !e.altKey && !e.shiftKey;
     const isCmdK = (e.metaKey || e.ctrlKey) && (e.key === 'k' || e.key === 'K');
     if (!isSlash && !isCmdK) return;
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v50)
+   MODULE: ui.js — aaradhyadt.github.io (v50.1)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -71,6 +71,190 @@ function closeWhatsNewModal() {
   modal.classList.remove('open');
   document.body.style.overflow = '';
   if (typeof playAudioCue === 'function') playAudioCue('close');
+}
+
+/* ── Keyboard Shortcuts Cheat Sheet HUD Modal ──────────────── */
+function openShortcutsModal() {
+  let modal = document.getElementById('shortcutsModal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'shortcutsModal';
+    modal.className = 'access-modal-overlay shortcuts-modal-overlay';
+    modal.setAttribute('role', 'dialog');
+    modal.setAttribute('aria-modal', 'true');
+    modal.setAttribute('aria-label', "Keyboard Shortcuts Cheat Sheet HUD");
+    document.body.appendChild(modal);
+  }
+
+  modal.innerHTML = `
+    <div class="access-modal-card shortcuts-modal-card">
+      <div class="access-modal-header">
+        <div class="access-modal-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+            <rect x="2" y="4" width="20" height="16" rx="2" ry="2"/>
+            <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M8 12h.001M12 12h.001M16 12h.001M18 12h.001M7 16h10"/>
+          </svg>
+          <span>Keyboard Shortcuts HUD</span>
+        </div>
+        <button type="button" class="access-modal-close" id="shortcutsModalClose" aria-label="Close">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
+            <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+          </svg>
+        </button>
+      </div>
+      <div class="shortcuts-modal-body">
+        
+        <div class="shortcuts-group">
+          <div class="shortcuts-group-header">
+            <span class="shortcuts-group-tag">GLOBAL</span>
+            <h4 class="shortcuts-group-title">Global Controls & Search</h4>
+          </div>
+          <div class="shortcuts-grid">
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>?</kbd> <span class="shortcut-or">or</span> <kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>/</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Shortcuts Cheat Sheet</span>
+                <span class="shortcut-context">Open/close this visual HUD modal</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>/</kbd> <span class="shortcut-or">or</span> <kbd>Ctrl</kbd><span class="shortcut-plus">+</span><kbd>K</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Command Palette</span>
+                <span class="shortcut-context">Global omnibar fuzzy search</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>0</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Toggle Theme Mode</span>
+                <span class="shortcut-context">Switch Dark / Light theme</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>\`</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Toggle Date Format</span>
+                <span class="shortcut-context">Switch Bikram Sambat (B.S.) / A.D.</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>N</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">What's New Modal</span>
+                <span class="shortcut-context">Release history & changelog</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>T</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Guided Site Tour</span>
+                <span class="shortcut-context">Interactive portfolio walkthrough</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>Esc</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Universal Master Close</span>
+                <span class="shortcut-context">Dismiss any active modal / overlay</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="shortcuts-group">
+          <div class="shortcuts-group-header">
+            <span class="shortcuts-group-tag">NAV</span>
+            <h4 class="shortcuts-group-title">Instant Page Navigation (1 – 7)</h4>
+          </div>
+          <div class="shortcuts-nav-grid">
+            <a href="index.html" class="shortcut-nav-pill"><kbd>1</kbd><span>Home</span></a>
+            <a href="projects.html" class="shortcut-nav-pill"><kbd>2</kbd><span>Projects</span></a>
+            <a href="experience.html" class="shortcut-nav-pill"><kbd>3</kbd><span>Experience</span></a>
+            <a href="achievements.html" class="shortcut-nav-pill"><kbd>4</kbd><span>Achievements</span></a>
+            <a href="about.html" class="shortcut-nav-pill"><kbd>5</kbd><span>About</span></a>
+            <a href="journey.html" class="shortcut-nav-pill"><kbd>6</kbd><span>Journey</span></a>
+            <a href="contact.html" class="shortcut-nav-pill"><kbd>7</kbd><span>Contact</span></a>
+          </div>
+        </div>
+
+        <div class="shortcuts-group">
+          <div class="shortcuts-group-header">
+            <span class="shortcuts-group-tag">TOOLS & CONTEXT</span>
+            <h4 class="shortcuts-group-title">Page Controls & Utilities</h4>
+          </div>
+          <div class="shortcuts-grid">
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>A</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Audio Micro-Sounds</span>
+                <span class="shortcut-context">Synthesized UI audio feedback</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>Alt</kbd><span class="shortcut-plus">+</span><kbd>2</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Expand / Collapse Projects</span>
+                <span class="shortcut-context">Toggle all cards on Projects page</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>Alt</kbd><span class="shortcut-plus">+</span><kbd>4</kbd> <span class="shortcut-or">/</span> <kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>4</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Years / Track Toggle</span>
+                <span class="shortcut-context">Achievements timeline & category filters</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>Alt</kbd><span class="shortcut-plus">+</span><kbd>6</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Expand / Collapse Journey</span>
+                <span class="shortcut-context">Toggle all milestones on Journey page</span>
+              </div>
+            </div>
+            <div class="shortcut-card">
+              <div class="shortcut-keys"><kbd>=</kbd> <span class="shortcut-or">/</span> <kbd>-</kbd></div>
+              <div class="shortcut-info">
+                <span class="shortcut-desc">Fast Page Scroll Jump</span>
+                <span class="shortcut-context">Jump to top / bottom (+Shift for 25% / 75%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="shortcuts-modal-footer">
+        <span class="shortcuts-footer-hint">Shortcuts are paused inside inputs & text areas</span>
+        <button type="button" class="shortcuts-dismiss-btn" id="shortcutsDismissBtn">Got it (<kbd>Esc</kbd>)</button>
+      </div>
+    </div>
+  `;
+
+  document.getElementById('shortcutsModalClose').addEventListener('click', closeShortcutsModal);
+  const dismissBtn = document.getElementById('shortcutsDismissBtn');
+  if (dismissBtn) dismissBtn.addEventListener('click', closeShortcutsModal);
+  modal.addEventListener('click', e => { if (e.target === modal) closeShortcutsModal(); });
+
+  requestAnimationFrame(() => modal.classList.add('open'));
+  document.body.style.overflow = 'hidden';
+  if (typeof playAudioCue === 'function') playAudioCue('open');
+}
+
+function closeShortcutsModal() {
+  const modal = document.getElementById('shortcutsModal');
+  if (!modal) return;
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+  if (typeof playAudioCue === 'function') playAudioCue('close');
+}
+
+function toggleShortcutsModal() {
+  const modal = document.getElementById('shortcutsModal');
+  if (modal && modal.classList.contains('open')) {
+    closeShortcutsModal();
+  } else {
+    openShortcutsModal();
+  }
 }
 
 
@@ -385,8 +569,14 @@ function initKeyNav() {
   };
   document.addEventListener('keydown', e => {
     const tag = (document.activeElement || {}).tagName || '';
-    if (/^(INPUT|TEXTAREA|SELECT)$/i.test(tag)) return;
+    if (/^(INPUT|TEXTAREA|SELECT)$/i.test(tag) || document.activeElement?.isContentEditable) return;
     if (e.metaKey || e.ctrlKey) return;
+
+    if (e.key === '?' || (e.shiftKey && (e.key === '/' || e.code === 'Slash'))) {
+      e.preventDefault();
+      toggleShortcutsModal();
+      return;
+    }
 
     if (e.altKey && e.key === '2') {
       const projectToggleAllBtn = document.getElementById('projectToggleAllBtn');
@@ -523,6 +713,13 @@ function initKeyNav() {
     const cmdk = document.getElementById('cmdk');
     if (cmdk && cmdk.classList.contains('open')) {
       if (typeof closeCmdk === 'function') closeCmdk();
+      return;
+    }
+
+    // 3.5. Keyboard Shortcuts Cheat Sheet HUD (v51)
+    const shortcutsModal = document.getElementById('shortcutsModal');
+    if (shortcutsModal && shortcutsModal.classList.contains('open')) {
+      if (typeof closeShortcutsModal === 'function') closeShortcutsModal();
       return;
     }
 
@@ -1046,11 +1243,25 @@ function downloadResumeMarkdown(roleKey) {
   if (typeof playAudioCue === 'function') playAudioCue('click');
 }
 
-function copyResumePlainText(roleKey) {
+function copyResumePlainText(roleKey, btnEl) {
   const text = generateResumePlainText(roleKey);
   navigator.clipboard.writeText(text).then(() => {
     showToast('ATS Plain-Text Resume copied to clipboard!');
     if (typeof playAudioCue === 'function') playAudioCue('chime');
+    if (btnEl) {
+      const origHtml = btnEl.innerHTML;
+      btnEl.classList.add('copied');
+      btnEl.innerHTML = `
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" width="14" height="14">
+          <polyline points="20 6 9 17 4 12"/>
+        </svg>
+        <span class="resume-copy-label">Copied!</span>
+      `;
+      setTimeout(() => {
+        btnEl.classList.remove('copied');
+        btnEl.innerHTML = origHtml;
+      }, 2000);
+    }
   }).catch(err => {
     console.error('Clipboard copy failed:', err);
     showToast('Failed to copy to clipboard.');
@@ -1091,17 +1302,17 @@ function openResumeGenerator() {
       </div>
       <div class="resume-preview-body">
         <div class="resume-preview-sheet" id="resumeSheet"></div>
+        <button type="button" class="resume-floating-copy-btn" id="resumeCopyTextBtn" title="Copy ATS plain text to clipboard" aria-label="Copy ATS plain text to clipboard">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+            <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+          </svg>
+          <span class="resume-copy-label">Copy ATS Text</span>
+        </button>
       </div>
       <div class="resume-modal-footer">
-        <span style="font-family: var(--mono); font-size: 0.72rem; color: var(--muted)">ATS-Optimized Formats</span>
+        <span class="resume-footer-label">ATS-Optimized Formats</span>
         <div class="resume-btn-group">
-          <button type="button" class="resume-action-btn" id="resumeCopyTextBtn" title="Copy standard ATS plain text to clipboard">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-            </svg>
-            <span>Copy ATS Text</span>
-          </button>
           <button type="button" class="resume-action-btn" id="resumeDownloadMdBtn" title="Download resume in Markdown format">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
               <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
@@ -1120,7 +1331,7 @@ function openResumeGenerator() {
             </svg>
             <span>Download .JSON</span>
           </button>
-          <button type="button" class="resume-print-btn" id="resumePrintBtn">
+          <button type="button" class="resume-print-btn" id="resumePrintBtn" title="Print or Save as PDF">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="15" height="15">
               <polyline points="6 9 6 2 18 2 18 9"/>
               <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/>
@@ -1139,9 +1350,12 @@ function openResumeGenerator() {
     document.body.classList.add('printing-resume');
     window.print();
   });
-  document.getElementById('resumeCopyTextBtn').addEventListener('click', () => {
-    copyResumePlainText(currentActiveRole);
-  });
+  const copyBtn = document.getElementById('resumeCopyTextBtn');
+  if (copyBtn) {
+    copyBtn.addEventListener('click', () => {
+      copyResumePlainText(currentActiveRole, copyBtn);
+    });
+  }
   document.getElementById('resumeDownloadMdBtn').addEventListener('click', () => {
     downloadResumeMarkdown(currentActiveRole);
   });
@@ -1219,6 +1433,9 @@ window.closeResumeGenerator = closeResumeGenerator;
 window.downloadResumeMarkdown = downloadResumeMarkdown;
 window.downloadResumeJson = downloadResumeJson;
 window.copyResumePlainText = copyResumePlainText;
+window.openShortcutsModal = openShortcutsModal;
+window.closeShortcutsModal = closeShortcutsModal;
+window.toggleShortcutsModal = toggleShortcutsModal;
 window.initSkillRadar = initSkillRadar;
 window.openSkillRadarModal = openSkillRadarModal;
 window.closeSkillRadarModal = closeSkillRadarModal;

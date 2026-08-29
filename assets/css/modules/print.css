@@ -117,7 +117,8 @@
 
   .resume-modal-header,
   .resume-role-selector,
-  .resume-modal-footer {
+  .resume-modal-footer,
+  .resume-floating-copy-btn {
     display: none !important;
   }
 
