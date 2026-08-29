@@ -1,6 +1,6 @@
 {
-  "sha": "533a35019ccc713f035dedf9b1f86bd9d1d0e4a9",
-  "shortSha": "533a350",
-  "date": "2026-08-29T12:25:21+05:45",
-  "message": "feat(security): add manage_payloads CLI and MCP tools for instant encrypted section editing"
+  "sha": "15905a1f794f79a61a4d9765742881dc09dc8100",
+  "shortSha": "15905a1",
+  "date": "2026-08-29T12:29:41+05:45",
+  "message": "fix(security): add atomic writes, env passcode fallback, and JSON output to payload manager"
 }
