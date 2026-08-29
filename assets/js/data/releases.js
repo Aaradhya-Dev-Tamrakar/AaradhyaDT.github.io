@@ -7,7 +7,16 @@
    ============================================================ */
 const SITE_RELEASES = [
 
-  {
+    {
+    version: 'v50',
+    date: '2026-08-29',
+    sha: 'rel50',
+    title: "Dev Terminal Tab Autocomplete, JSON Resume & Speculation Rules Suite",
+    highlights: [
+      "Terminal: Tab autocompletion for commands and subcommands with developer aliases (ls, whoami, cat, ping, cls)"
+    ]
+  },
+{
 
     version: 'v49.50',
 

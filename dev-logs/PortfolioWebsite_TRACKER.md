@@ -1,8 +1,11 @@
-﻿# Portfolio Website Tracker — v49.50
+﻿# Portfolio Website Tracker — v50
 
 Last updated: _2026-08-29_
 
 ## Meta
+- **v50 — Dev Terminal Tab Autocomplete, JSON Resume & Speculation Rules Suite.** Shipped dev terminal tab autocomplete, json resume & speculation rules suite.
+  - Terminal: Tab autocompletion for commands and subcommands with developer aliases (ls, whoami, cat, ping, cls)
+
 
 - **v49.49 (Update) — Dev Terminal Autocomplete & Aliases, ATS JSON Resume Exporter, Speculation Rules & LLM Full Context Suite.** Shipped 5-track feature and architecture upgrades:
   - **Dev Terminal Tab Autocomplete & Developer Aliases (`terminal.js`)**: Added `Tab` autocompletion for top-level commands (`help`, `skills`, `radar`, `resume`, `projects`, etc.) and subcommands (`goto`, `filter`, `run`, `cat`, `accent`), with inline suggestions on multiple matches. Added developer aliases: `ls` (directory & module index), `whoami` (identity & fellowship overview), `cat` (quick viewer for `cv`, `bio`, `spark`, `skills`), `ping` (network latency benchmark), and `cls` (clear screen).
