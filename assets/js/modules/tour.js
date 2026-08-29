@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: tour.js — aaradhyadt.github.io (v50.1)
+   MODULE: tour.js — aaradhyadt.github.io (v50.2)
    Cross-page spotlight tour with keyboard navigation.
    ============================================================ */
 

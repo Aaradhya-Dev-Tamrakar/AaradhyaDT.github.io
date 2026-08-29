@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v50.1)
+   MODULE: ui.js — aaradhyadt.github.io (v50.2)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -224,8 +224,11 @@ function openShortcutsModal() {
 
       </div>
       <div class="shortcuts-modal-footer">
-        <span class="shortcuts-footer-hint">Shortcuts are paused inside inputs & text areas</span>
-        <button type="button" class="shortcuts-dismiss-btn" id="shortcutsDismissBtn">Got it (<kbd>Esc</kbd>)</button>
+        <span class="shortcuts-footer-hint">Shortcuts paused inside text inputs</span>
+        <button type="button" class="shortcuts-dismiss-btn" id="shortcutsDismissBtn">
+          <span>Got it</span>
+          <kbd>Esc</kbd>
+        </button>
       </div>
     </div>
   `;
