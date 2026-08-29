@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v50.9)
+   MODULE: core.js — aaradhyadt.github.io (v50.10)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -822,3 +822,48 @@ function initStatusDate() {
   el.addEventListener('click', toggleStatusDate);
   renderStatusDate();
 }
+
+/* ── Notification & Push Helpers ────────────────────────────── */
+async function requestNotificationPermission() {
+  if (!('Notification' in window)) {
+    if (typeof showToast === 'function') showToast('Notifications not supported in this browser.');
+    return 'unsupported';
+  }
+  try {
+    const permission = await Notification.requestPermission();
+    if (permission === 'granted') {
+      if (typeof showToast === 'function') showToast('🔔 Notifications enabled for new releases & updates!');
+      if (typeof playAudioCue === 'function') playAudioCue('chime');
+    } else if (permission === 'denied') {
+      if (typeof showToast === 'function') showToast('Notification permission denied.');
+    }
+    return permission;
+  } catch (err) {
+    console.warn('Notification permission request failed:', err);
+    return 'error';
+  }
+}
+
+async function subscribePushNotifications() {
+  if (!('serviceWorker' in navigator) || !('PushManager' in window)) {
+    if (typeof showToast === 'function') showToast('Push notifications not supported.');
+    return null;
+  }
+  const permission = await requestNotificationPermission();
+  if (permission !== 'granted') return null;
+
+  try {
+    const reg = await navigator.serviceWorker.ready;
+    let sub = await reg.pushManager.getSubscription();
+    if (!sub) {
+      console.info('Service Worker ready for push subscriptions.');
+    }
+    return sub;
+  } catch (err) {
+    console.warn('Push subscription failed:', err);
+    return null;
+  }
+}
+
+window.requestNotificationPermission = requestNotificationPermission;
+window.subscribePushNotifications = subscribePushNotifications;

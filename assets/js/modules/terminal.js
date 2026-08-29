@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v50.9)
+   MODULE: terminal.js — aaradhyadt.github.io (v50.10)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -55,6 +55,7 @@
   <span class="term-gold">healthcheck</span> - Run client-side site diagnostics<br>
   <span class="term-gold">theme</span>        - Toggle site color scheme (Dark / Light)<br>
   <span class="term-gold">accent [name]</span> - Easter egg color themes (gold, emerald, violet, cyan, ruby, prism)<br>
+  <span class="term-gold">notify</span>        - Enable browser &amp; push notifications for site updates<br>
   <span class="term-gold">sound / audio</span> - Toggle UI micro-sound cues<br>
   <span class="term-gold">tour</span>         - Launch interactive guided site tour<br>
   <span class="term-gold">matrix</span>       - Trigger cybernetic digital rain<br>
@@ -379,6 +380,20 @@
       audio: () => {
         if (typeof toggleAudioCues === 'function') toggleAudioCues();
         return '<span class="term-green">Audio micro-sounds toggled!</span>';
+      },
+      notify: async () => {
+        if (typeof requestNotificationPermission === 'function') {
+          const res = await requestNotificationPermission();
+          return `<span class="term-green">Notification permission status: ${res}</span>`;
+        }
+        return '<span class="term-gold">Notification API not available in this browser.</span>';
+      },
+      notifications: async () => {
+        if (typeof requestNotificationPermission === 'function') {
+          const res = await requestNotificationPermission();
+          return `<span class="term-green">Notification permission status: ${res}</span>`;
+        }
+        return '<span class="term-gold">Notification API not available in this browser.</span>';
       },
       tour: () => {
         if (typeof startTour === 'function') startTour();

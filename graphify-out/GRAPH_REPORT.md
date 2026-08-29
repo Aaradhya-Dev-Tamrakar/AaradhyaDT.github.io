@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-08-29)
 
 ## Corpus Check
-- 32 files · ~299,931 words
+- 32 files · ~300,468 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 525 nodes · 742 edges · 103 communities (29 shown, 74 thin omitted)
-- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 67 edges (avg confidence: 0.81)
+- 527 nodes · 748 edges · 103 communities (29 shown, 74 thin omitted)
+- Extraction: 91% EXTRACTED · 9% INFERRED · 0% AMBIGUOUS · INFERRED: 70 edges (avg confidence: 0.81)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ba44c2aa`
+- Built from commit: `36043733`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -117,13 +117,13 @@
 1. `bootSite()` - 34 edges
 2. `main()` - 29 edges
 3. `log_pass()` - 23 edges
-4. `Portfolio Website Tracker — v50.9` - 21 edges
+4. `Portfolio Website Tracker — v50.10` - 21 edges
 5. `log_error()` - 20 edges
-6. `playAudioCue()` - 17 edges
+6. `playAudioCue()` - 18 edges
 7. `log_warning()` - 15 edges
 8. `get_html_files()` - 13 edges
-9. `aaradhyadt.github.io` - 11 edges
-10. `showToast()` - 9 edges
+9. `showToast()` - 11 edges
+10. `aaradhyadt.github.io` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Printer Maintenance Certification Certificate` --semantically_similar_to--> `Printer Maintenance Certification PDF`  [INFERRED] [semantically similar]
@@ -159,8 +159,8 @@ Cohesion: 0.10
 Nodes (32): getAudioContext(), initAudioCues(), playAudioCue(), syncAudioToggleUI(), toggleAudioCues(), closeResumeGenerator(), closeShortcutsModal(), closeSkillRadarModal() (+24 more)
 
 ### Community 4 - "Community 4"
-Cohesion: 0.17
-Nodes (23): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+15 more)
+Cohesion: 0.15
+Nodes (25): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+17 more)
 
 ### Community 5 - "Community 5"
 Cohesion: 0.16
@@ -216,7 +216,7 @@ Nodes (3): SimOps AI for Graduates Certificate, SimOps Expert Certificate, SimOp
 
 ### Community 94 - "Community 94"
 Cohesion: 0.10
-Nodes (31): AI-Assisted Coding for Developers Certificate, AI Fluency Foundations Certificate, Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v50.9, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available (+23 more)
+Nodes (31): AI-Assisted Coding for Developers Certificate, AI Fluency Foundations Certificate, Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v50.10, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available (+23 more)
 
 ### Community 95 - "Community 95"
 Cohesion: 0.08
@@ -243,11 +243,11 @@ Nodes (4): bootHomeWidgets(), initLastCommitBadge(), initLiveDates(), initStatus
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `bootSite()` connect `Community 2` to `Community 11`, `Community 3`, `Community 4`, `Community 6`?**
-  _High betweenness centrality (0.171) - this node is a cross-community bridge._
+  _High betweenness centrality (0.169) - this node is a cross-community bridge._
 - **Why does `Verify workflow` connect `Community 95` to `Community 2`, `Community 12`?**
-  _High betweenness centrality (0.124) - this node is a cross-community bridge._
+  _High betweenness centrality (0.125) - this node is a cross-community bridge._
 - **Why does `initAccessControl()` connect `Community 4` to `Community 2`?**
-  _High betweenness centrality (0.031) - this node is a cross-community bridge._
+  _High betweenness centrality (0.030) - this node is a cross-community bridge._
 - **Are the 30 inferred relationships involving `bootSite()` (e.g. with `initAccessControl()` and `initAudioCues()`) actually correct?**
   _`bootSite()` has 30 INFERRED edges - model-reasoned connections that need verification._
 - **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**

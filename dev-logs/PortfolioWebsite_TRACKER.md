@@ -1,6 +1,12 @@
-# Portfolio Website Tracker — v50.9
+﻿# Portfolio Website Tracker — v50.10
 
 Last updated: _2026-08-29_
+
+- **v50.9 (Update) — Service Worker Dynamic Push Notification Suite & Client Notification API.** Shipped dynamic push notification and client notification ergonomics:
+  - **Dynamic Background Push Notification Hooks (`sw.js`)**: Implemented `push` event handler with resilient fallback parsing, rich notification parameters (vibrations, action buttons, icons, project routing tags), and `notificationclick` matching logic to focus active tabs or launch destination windows.
+  - **Client Notification & Push Utilities (`assets/js/modules/core.js`)**: Added `requestNotificationPermission()` and `subscribePushNotifications()` with full browser capability checking, audio cues, and toast status feedback.
+  - **Dev Terminal Integration (`assets/js/modules/terminal.js`)**: Added `notify` / `notifications` terminal commands allowing users to trigger and test browser notifications directly from `#adtTerminal`.
+  - **Verification Gate**: Passed `python scripts/verify.py` across all 22 diagnostic categories cleanly (0 errors, 0 warnings).
 
 - **v50.8 (Update) — 100/100 Perfection Suite: CI Axe/Lighthouse Assertions, WCAG AAA Micro-Contrast & OpenGraph Generator.** Shipped 3-pillar upgrade elevating site quality to 100/100 tier:
   - **CI Automated Axe-Core & Lighthouse Assertions (`.lighthouserc.json`, `lighthouse-audit.yml`)**: Configured formal Lighthouse CI configuration with strict category assertions across Accessibility (>= 0.95), Best Practices (>= 0.90), and SEO (>= 0.95) across all 7 pages, paired with automated Pa11y / Axe-Core accessibility audits in GitHub Actions.

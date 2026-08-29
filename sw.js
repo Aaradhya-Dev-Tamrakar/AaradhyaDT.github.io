@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Service Worker — Aaradhya Dev Tamrakar Portfolio (v50.9)
+   Service Worker — Aaradhya Dev Tamrakar Portfolio (v50.10)
    Provides offline capability & asset caching for fast return visits.
    ========================================================================== */
 
-const CACHE_NAME = 'aaradhya-portfolio-v50.9';
+const CACHE_NAME = 'aaradhya-portfolio-v50.10';
 
 const STATIC_ASSETS = [
   './',
@@ -123,6 +123,59 @@ self.addEventListener('fetch', (event) => {
         }
         return response;
       });
+    })
+  );
+});
+
+// Push Notifications: dynamic background push event handler
+self.addEventListener('push', (event) => {
+  let data = {};
+  if (event.data) {
+    try {
+      data = event.data.json();
+    } catch (_) {
+      data = { title: 'Aaradhya Dev Tamrakar', body: event.data.text() };
+    }
+  } else {
+    data = {
+      title: 'Aaradhya Dev Tamrakar',
+      body: 'New update available on the portfolio website!'
+    };
+  }
+
+  const options = {
+    body: data.body || 'Check out recent engineering projects and updates.',
+    icon: data.icon || './assets/images/photo.webp',
+    badge: data.badge || './assets/images/photo.webp',
+    data: {
+      url: data.url || './projects.html'
+    },
+    vibrate: [100, 50, 100],
+    actions: data.actions || [
+      { action: 'explore', title: 'Explore' }
+    ]
+  };
+
+  event.waitUntil(
+    self.registration.showNotification(data.title || 'Aaradhya Dev Tamrakar', options)
+  );
+});
+
+// Notification click event handler: focus matching tab or open destination
+self.addEventListener('notificationclick', (event) => {
+  event.notification.close();
+  const targetUrl = event.notification.data?.url || './';
+
+  event.waitUntil(
+    clients.matchAll({ type: 'window', includeUncontrolled: true }).then((clientList) => {
+      for (const client of clientList) {
+        if (client.url.includes(targetUrl) && 'focus' in client) {
+          return client.focus();
+        }
+      }
+      if (clients.openWindow) {
+        return clients.openWindow(targetUrl);
+      }
     })
   );
 });

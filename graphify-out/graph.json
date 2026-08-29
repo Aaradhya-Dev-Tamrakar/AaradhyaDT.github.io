@@ -954,6 +954,26 @@
       "norm_label": "initstatusdate()"
     },
     {
+      "label": "requestNotificationPermission()",
+      "file_type": "code",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L827",
+      "_origin": "ast",
+      "id": "modules_core_requestnotificationpermission",
+      "community": 4,
+      "norm_label": "requestnotificationpermission()"
+    },
+    {
+      "label": "subscribePushNotifications()",
+      "file_type": "code",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L847",
+      "_origin": "ast",
+      "id": "modules_core_subscribepushnotifications",
+      "community": 4,
+      "norm_label": "subscribepushnotifications()"
+    },
+    {
       "label": "haptics.js",
       "file_type": "code",
       "source_file": "assets/js/modules/haptics.js",
@@ -3224,20 +3244,20 @@
       "norm_label": "portfoliowebsite_tracker.md"
     },
     {
-      "label": "Portfolio Website Tracker \u2014 v50.9",
+      "label": "Portfolio Website Tracker \u2014 v50.10",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L1",
       "_origin": "ast",
-      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "community": 94,
-      "norm_label": "portfolio website tracker \u2014 v50.9"
+      "norm_label": "portfolio website tracker \u2014 v50.10"
     },
     {
       "label": "State of Play",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L210",
+      "source_location": "L216",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_state_of_play",
       "community": 94,
@@ -3247,7 +3267,7 @@
       "label": "Evidence & Verification Log \u2014 v20 additions",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L238",
+      "source_location": "L244",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
       "community": 94,
@@ -3257,7 +3277,7 @@
       "label": "v21 addition \u2014 both v20-flagged unmatched PDFs closed out",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L249",
+      "source_location": "L255",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
       "community": 94,
@@ -3267,7 +3287,7 @@
       "label": "v22 addition \u2014 KEC IT Club \"Introduction to Git\" (2024) card: closed, no source file available",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L257",
+      "source_location": "L263",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v22_addition_kec_it_club_introduction_to_git_2024_card_closed_no_source_file_available",
       "community": 94,
@@ -3277,7 +3297,7 @@
       "label": "v23 addition \u2014 latest site refinements (2026-07-18)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L265",
+      "source_location": "L271",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v23_addition_latest_site_refinements_2026_07_18",
       "community": 94,
@@ -3287,7 +3307,7 @@
       "label": "Status",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L275",
+      "source_location": "L281",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_status",
       "community": 94,
@@ -3297,7 +3317,7 @@
       "label": "v24 addition \u2014 site-optimization pass + mobile legend line-break fix (2026-07-18)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L283",
+      "source_location": "L289",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v24_addition_site_optimization_pass_mobile_legend_line_break_fix_2026_07_18",
       "community": 94,
@@ -3307,7 +3327,7 @@
       "label": "v25 addition \u2014 bug-check sweep, pages 1/3/4 (2026-07-27)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L334",
+      "source_location": "L340",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v25_addition_bug_check_sweep_pages_1_3_4_2026_07_27",
       "community": 94,
@@ -3317,7 +3337,7 @@
       "label": "v26 addition \u2014 bug-check sweep, page 2 + about (2026-07-27)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L360",
+      "source_location": "L366",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v26_addition_bug_check_sweep_page_2_about_2026_07_27",
       "community": 94,
@@ -3327,7 +3347,7 @@
       "label": "v28 addition \u2014 site-wide bug audit & structural hardening pass (2026-08-04)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L384",
+      "source_location": "L390",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v28_addition_site_wide_bug_audit_structural_hardening_pass_2026_08_04",
       "community": 94,
@@ -3337,7 +3357,7 @@
       "label": "v29 addition \u2014 site-wide performance, PWA, SEO & styling upgrades (2026-08-04)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L398",
+      "source_location": "L404",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v29_addition_site_wide_performance_pwa_seo_styling_upgrades_2026_08_04",
       "community": 94,
@@ -3347,7 +3367,7 @@
       "label": "v30 addition \u2014 PWA service worker, skip-links, font preconnects, content-visibility optimization & expanded verification (2026-08-04)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L412",
+      "source_location": "L418",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v30_addition_pwa_service_worker_skip_links_font_preconnects_content_visibility_optimization_expanded_verification_2026_08_04",
       "community": 94,
@@ -3357,7 +3377,7 @@
       "label": "v31 addition \u2014 URL hash filter sync, screen reader accessibility, PWA v31 cache bump & SEO verification (2026-08-04)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L425",
+      "source_location": "L431",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v31_addition_url_hash_filter_sync_screen_reader_accessibility_pwa_v31_cache_bump_seo_verification_2026_08_04",
       "community": 94,
@@ -3367,7 +3387,7 @@
       "label": "v31.1 addition \u2014 Interactive \"What's New\" Major Commit Showcase & Journey Nodes (2026-08-04)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L438",
+      "source_location": "L444",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v31_1_addition_interactive_what_s_new_major_commit_showcase_journey_nodes_2026_08_04",
       "community": 94,
@@ -3377,7 +3397,7 @@
       "label": "v32 addition \u2014 PWA offline resilience, reading progress bar, 3D card tilt & journey node j-028 (2026-08-04)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L450",
+      "source_location": "L456",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v32_addition_pwa_offline_resilience_reading_progress_bar_3d_card_tilt_journey_node_j_028_2026_08_04",
       "community": 94,
@@ -3387,7 +3407,7 @@
       "label": "v33 addition \u2014 interactive dev terminal, CMDK filter pills, cursor light trail & journey node j-029 (2026-08-04)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L463",
+      "source_location": "L469",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v33_addition_interactive_dev_terminal_cmdk_filter_pills_cursor_light_trail_journey_node_j_029_2026_08_04",
       "community": 94,
@@ -3397,7 +3417,7 @@
       "label": "v34 addition \u2014 mobile touch UX, iOS safe area & web haptics suite, journey node j-030 (2026-08-08)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L476",
+      "source_location": "L482",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v34_addition_mobile_touch_ux_ios_safe_area_web_haptics_suite_journey_node_j_030_2026_08_08",
       "community": 94,
@@ -3407,7 +3427,7 @@
       "label": "v35 addition \u2014 motion, typed captions, count-up counters, view transitions & journey node j-031 (2026-08-08)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L490",
+      "source_location": "L496",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v35_addition_motion_typed_captions_count_up_counters_view_transitions_journey_node_j_031_2026_08_08",
       "community": 94,
@@ -3417,7 +3437,7 @@
       "label": "v36 addition \u2014 visual polish, performance, skill matrix & mobile UX suite, journey node j-032 (2026-08-08)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L506",
+      "source_location": "L512",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v36_addition_visual_polish_performance_skill_matrix_mobile_ux_suite_journey_node_j_032_2026_08_08",
       "community": 94,
@@ -3427,7 +3447,7 @@
       "label": "v37 addition \u2014 guided cross-page site tour with spotlight overlay, journey node j-033 (2026-08-08)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L522",
+      "source_location": "L528",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v37_addition_guided_cross_page_site_tour_with_spotlight_overlay_journey_node_j_033_2026_08_08",
       "community": 94,
@@ -3437,7 +3457,7 @@
       "label": "v38 addition \u2014 Web Audio micro-sounds, reading metrics, live result indicators & verification suite, journey node j-034 (2026-08-08)",
       "file_type": "document",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L533",
+      "source_location": "L539",
       "_origin": "ast",
       "id": "dev_logs_portfoliowebsite_tracker_v38_addition_web_audio_micro_sounds_reading_metrics_live_result_indicators_verification_suite_journey_node_j_034_2026_08_08",
       "community": 94,
@@ -6505,6 +6525,28 @@
       "context": "call",
       "confidence": "INFERRED",
       "confidence_score": 0.8,
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L829",
+      "weight": 1.0,
+      "source": "modules_core_requestnotificationpermission",
+      "target": "modules_access_showtoast"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L849",
+      "weight": 1.0,
+      "source": "modules_core_subscribepushnotifications",
+      "target": "modules_access_showtoast"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
       "source_file": "assets/js/modules/tour.js",
       "source_location": "L193",
       "weight": 1.0,
@@ -6636,6 +6678,17 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "modules_audio_toggleaudiocues",
+      "target": "modules_audio_playaudiocue"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L836",
+      "weight": 1.0,
+      "source": "modules_core_requestnotificationpermission",
       "target": "modules_audio_playaudiocue"
     },
     {
@@ -7200,6 +7253,16 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "assets/js/modules/core.js",
+      "source_location": "L827",
+      "weight": 1.0,
+      "source": "modules_core",
+      "target": "modules_core_requestnotificationpermission",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "assets/js/modules/core.js",
       "source_location": "L659",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7235,6 +7298,16 @@
       "confidence_score": 1.0,
       "source": "modules_core",
       "target": "modules_core_social_icons"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L847",
+      "weight": 1.0,
+      "source": "modules_core",
+      "target": "modules_core_subscribepushnotifications",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -7541,6 +7614,17 @@
       "weight": 1.0,
       "source": "js_script_bootsite",
       "target": "modules_core_initstatusdate"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L852",
+      "weight": 1.0,
+      "source": "modules_core_subscribepushnotifications",
+      "target": "modules_core_requestnotificationpermission",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -11661,9 +11745,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_aaradhyadt_github_io",
-      "confidence_score": 1.0
+      "target": "readme_aaradhyadt_github_io"
     },
     {
       "relation": "contains",
@@ -11771,9 +11855,9 @@
       "source_file": "README.md",
       "source_location": "L252",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_codebase_knowledge_graph_graphify",
-      "confidence_score": 1.0
+      "target": "readme_codebase_knowledge_graph_graphify"
     },
     {
       "relation": "contains",
@@ -11781,9 +11865,9 @@
       "source_file": "README.md",
       "source_location": "L267",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_contact_connect",
-      "confidence_score": 1.0
+      "target": "readme_contact_connect"
     },
     {
       "relation": "contains",
@@ -11791,9 +11875,9 @@
       "source_file": "README.md",
       "source_location": "L171",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_global_keyboard_navigation_shortcuts_hud",
-      "confidence_score": 1.0
+      "target": "readme_global_keyboard_navigation_shortcuts_hud"
     },
     {
       "relation": "contains",
@@ -11801,9 +11885,9 @@
       "source_file": "README.md",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_google_oauth_2_0_integration",
-      "confidence_score": 1.0
+      "target": "readme_google_oauth_2_0_integration"
     },
     {
       "relation": "contains",
@@ -11811,9 +11895,9 @@
       "source_file": "README.md",
       "source_location": "L128",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_interactive_developer_terminal_widget_adtterminal",
-      "confidence_score": 1.0
+      "target": "readme_interactive_developer_terminal_widget_adtterminal"
     },
     {
       "relation": "contains",
@@ -11821,9 +11905,9 @@
       "source_file": "README.md",
       "source_location": "L276",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_license",
-      "confidence_score": 1.0
+      "target": "readme_license"
     },
     {
       "relation": "contains",
@@ -11831,9 +11915,9 @@
       "source_file": "README.md",
       "source_location": "L187",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_local_development_git_workflow",
-      "confidence_score": 1.0
+      "target": "readme_local_development_git_workflow"
     },
     {
       "relation": "contains",
@@ -11841,9 +11925,9 @@
       "source_file": "README.md",
       "source_location": "L85",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_multi_tier_access_control_security_model",
-      "confidence_score": 1.0
+      "target": "readme_multi_tier_access_control_security_model"
     },
     {
       "relation": "contains",
@@ -11851,9 +11935,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_repository_structure_directory_map",
-      "confidence_score": 1.0
+      "target": "readme_repository_structure_directory_map"
     },
     {
       "relation": "contains",
@@ -11861,9 +11945,9 @@
       "source_file": "README.md",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_aaradhyadt_github_io",
-      "target": "readme_site_search_unified_command_palette",
-      "confidence_score": 1.0
+      "target": "readme_site_search_unified_command_palette"
     },
     {
       "relation": "contains",
@@ -11952,7 +12036,7 @@
       "source_location": "L1",
       "weight": 1.0,
       "source": "dev_logs_portfoliowebsite_tracker",
-      "target": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "target": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "confidence_score": 1.0
     },
     {
@@ -12169,9 +12253,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L238",
+      "source_location": "L244",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
       "confidence_score": 1.0
     },
@@ -12179,9 +12263,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L210",
+      "source_location": "L216",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_state_of_play",
       "confidence_score": 1.0
     },
@@ -12189,9 +12273,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L249",
+      "source_location": "L255",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
       "confidence_score": 1.0
     },
@@ -12199,9 +12283,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L257",
+      "source_location": "L263",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v22_addition_kec_it_club_introduction_to_git_2024_card_closed_no_source_file_available",
       "confidence_score": 1.0
     },
@@ -12209,9 +12293,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L265",
+      "source_location": "L271",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v23_addition_latest_site_refinements_2026_07_18",
       "confidence_score": 1.0
     },
@@ -12219,9 +12303,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L283",
+      "source_location": "L289",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v24_addition_site_optimization_pass_mobile_legend_line_break_fix_2026_07_18",
       "confidence_score": 1.0
     },
@@ -12229,9 +12313,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L334",
+      "source_location": "L340",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v25_addition_bug_check_sweep_pages_1_3_4_2026_07_27",
       "confidence_score": 1.0
     },
@@ -12239,9 +12323,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L360",
+      "source_location": "L366",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v26_addition_bug_check_sweep_page_2_about_2026_07_27",
       "confidence_score": 1.0
     },
@@ -12249,9 +12333,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L384",
+      "source_location": "L390",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v28_addition_site_wide_bug_audit_structural_hardening_pass_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12259,9 +12343,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L398",
+      "source_location": "L404",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v29_addition_site_wide_performance_pwa_seo_styling_upgrades_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12269,9 +12353,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L412",
+      "source_location": "L418",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v30_addition_pwa_service_worker_skip_links_font_preconnects_content_visibility_optimization_expanded_verification_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12279,9 +12363,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L438",
+      "source_location": "L444",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v31_1_addition_interactive_what_s_new_major_commit_showcase_journey_nodes_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12289,9 +12373,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L425",
+      "source_location": "L431",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v31_addition_url_hash_filter_sync_screen_reader_accessibility_pwa_v31_cache_bump_seo_verification_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12299,9 +12383,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L450",
+      "source_location": "L456",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v32_addition_pwa_offline_resilience_reading_progress_bar_3d_card_tilt_journey_node_j_028_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12309,9 +12393,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L463",
+      "source_location": "L469",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v33_addition_interactive_dev_terminal_cmdk_filter_pills_cursor_light_trail_journey_node_j_029_2026_08_04",
       "confidence_score": 1.0
     },
@@ -12319,9 +12403,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L476",
+      "source_location": "L482",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v34_addition_mobile_touch_ux_ios_safe_area_web_haptics_suite_journey_node_j_030_2026_08_08",
       "confidence_score": 1.0
     },
@@ -12329,9 +12413,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L490",
+      "source_location": "L496",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v35_addition_motion_typed_captions_count_up_counters_view_transitions_journey_node_j_031_2026_08_08",
       "confidence_score": 1.0
     },
@@ -12339,9 +12423,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L506",
+      "source_location": "L512",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v36_addition_visual_polish_performance_skill_matrix_mobile_ux_suite_journey_node_j_032_2026_08_08",
       "confidence_score": 1.0
     },
@@ -12349,9 +12433,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L522",
+      "source_location": "L528",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v37_addition_guided_cross_page_site_tour_with_spotlight_overlay_journey_node_j_033_2026_08_08",
       "confidence_score": 1.0
     },
@@ -12359,9 +12443,9 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L533",
+      "source_location": "L539",
       "weight": 1.0,
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_9",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_10",
       "target": "dev_logs_portfoliowebsite_tracker_v38_addition_web_audio_micro_sounds_reading_metrics_live_result_indicators_verification_suite_journey_node_j_034_2026_08_08",
       "confidence_score": 1.0
     },
@@ -13293,5 +13377,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ba44c2aa166d4baa49c4f0693322cc86428ffee1"
+  "built_at_commit": "36043733b782cb1fb64959dfe271ecfca3a88a97"
 }
