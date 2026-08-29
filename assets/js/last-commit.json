@@ -1,6 +1,6 @@
 {
-  "sha": "f73ae2d59afcdea760cd75d6f112e6ac81c9554b",
-  "shortSha": "f73ae2d",
-  "date": "2026-08-29T11:47:05+05:45",
-  "message": "docs(license): clarify proprietary all rights reserved terms"
+  "sha": "f7ad4fd9c0402e561ff88912fb9ceab5d33e6672",
+  "shortSha": "f7ad4fd",
+  "date": "2026-08-29T11:56:18+05:45",
+  "message": "fix(site): address repository review issues and enhance resilience"
 }
