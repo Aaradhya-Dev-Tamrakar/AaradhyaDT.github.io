@@ -1203,7 +1203,7 @@ def main():
     print(bold("=" * 60))
     print()
 
-    # ── Run all 22 check categories ─────────────────────────────
+    # ── Run all 24 check categories ─────────────────────────────
     # 1. Content IDs
     id_results = {}
     for name, cfg in PAGES.items():

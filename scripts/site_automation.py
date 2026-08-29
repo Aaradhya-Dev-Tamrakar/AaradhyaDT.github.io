@@ -63,7 +63,7 @@ def run_command(cmd, cwd=ROOT):
 
 
 def audit(verbose=False):
-    """Runs the 22-category verification suite from scripts/verify.py."""
+    """Runs the 24-category verification suite from scripts/verify.py."""
     cmd = [sys.executable, str(VERIFY_PY)]
     if verbose:
         cmd.append("--verbose")
