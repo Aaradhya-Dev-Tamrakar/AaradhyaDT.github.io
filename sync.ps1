@@ -657,19 +657,28 @@ if (-not $PushOnly -and (Test-Path "scripts/build_css.py") -and $pythonExe) {
     }
 }
 
-# Step 5: Knowledge Graph AST Update (Graphify)
+# Step 5: Knowledge Graph Full Sync (Graphify)
+#   Order: 1) graphify .            — Establish/refresh baseline cache & initial graph
+#          2) graphify cluster-only . — Re-run Leiden layout for clean macro-level topology
+#          3) graphify update .      — Incremental AST diff-merge into graph reports
 if (-not $SkipGraph -and -not $PushOnly) {
     $graphifyCmd = Get-Command graphify -ErrorAction SilentlyContinue
     if ($graphifyCmd) {
-        Write-Badge "Graph" "Updating AST knowledge graph (graphify update .)..." "Cyan" "White"
+        Write-Badge "Graph" "Step 5a: Initializing baseline graph cache (graphify .)..." "Cyan" "White"
+        & $graphifyCmd.Source .
+
+        Write-Badge "Graph" "Step 5b: Optimizing graph topology (graphify cluster-only .)..." "Cyan" "White"
+        & $graphifyCmd.Source cluster-only .
+
+        Write-Badge "Graph" "Step 5c: Incremental AST sync (graphify update .)..." "Cyan" "White"
         & $graphifyCmd.Source update .
     }
     else {
-        Write-Badge "Graph" "Graphify CLI not found in PATH -- skipping graph AST sync." "DarkGray" "Gray"
+        Write-Badge "Graph" "Graphify CLI not found in PATH -- skipping graph sync." "DarkGray" "Gray"
     }
 }
 else {
-    if ($SkipGraph) { Write-Badge "Graph" "Skipped knowledge graph update (-SkipGraph set)." "Yellow" "Gray" }
+    if ($SkipGraph) { Write-Badge "Graph" "Skipped knowledge graph sync (-SkipGraph set)." "Yellow" "Gray" }
 }
 
 # Step 6: Pre-Commit Diagnostic Verification Gate
