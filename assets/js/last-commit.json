@@ -1,6 +1,6 @@
 {
-  "sha": "d2bdc213da13ceb75a2fb73beb2e26415f8b7c2b",
-  "shortSha": "d2bdc21",
-  "date": "2026-08-29T09:37:03+05:45",
-  "message": "fix(ui): polish keyboard shortcuts HUD modal width, card grid, and footer button layout"
+  "sha": "1e105a0ccc489c0d9ac130fdaf1679f1c2418298",
+  "shortSha": "1e105a0",
+  "date": "2026-08-29T09:40:00+05:45",
+  "message": "refactor(ui): streamline keyboard shortcuts HUD into compact zero-scroll 2-column layout"
 }
