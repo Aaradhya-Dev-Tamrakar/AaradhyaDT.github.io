@@ -1,6 +1,6 @@
 {
-  "sha": "a594a731fb4590ecbae3554bb1bd2de8d23be620",
-  "shortSha": "a594a73",
-  "date": "2026-08-29T09:22:29+05:45",
-  "message": "feat(site): release v50 — terminal autocomplete, json resume & speculation rules suite"
+  "sha": "71537136baf376fc7a40b3b8c165afb18957f6f5",
+  "shortSha": "7153713",
+  "date": "2026-08-29T09:33:10+05:45",
+  "message": "feat(ui): add keyboard shortcut HUD modal and refine ATS resume copy button layout"
 }
