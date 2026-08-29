@@ -1,6 +1,6 @@
 {
-  "sha": "9daba5d48ba81500a62c9987c75ecddc357fd148",
-  "shortSha": "9daba5d",
-  "date": "2026-08-29T09:53:07+05:45",
-  "message": "refactor(resume): align ATS generator typography, layout, and content with official CV standard"
+  "sha": "10ed6b9eaaa95b5a0e31febbe187a24127a675ee",
+  "shortSha": "10ed6b9",
+  "date": "2026-08-29T09:54:36+05:45",
+  "message": "docs: refresh release notes, tracker log, and metadata for v50 suite"
 }
