@@ -1,6 +1,6 @@
 {
-  "sha": "15905a1f794f79a61a4d9765742881dc09dc8100",
-  "shortSha": "15905a1",
-  "date": "2026-08-29T12:29:41+05:45",
-  "message": "fix(security): add atomic writes, env passcode fallback, and JSON output to payload manager"
+  "sha": "ce9682cd11d7338c48a25ed9a7a60063083e48b8",
+  "shortSha": "ce9682c",
+  "date": "2026-08-29T12:31:45+05:45",
+  "message": "fix(hygiene): synchronize verification category counts and terminal version fallbacks"
 }
