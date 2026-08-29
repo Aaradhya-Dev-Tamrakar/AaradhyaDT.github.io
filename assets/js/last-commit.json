@@ -1,6 +1,6 @@
 {
-  "sha": "71537136baf376fc7a40b3b8c165afb18957f6f5",
-  "shortSha": "7153713",
-  "date": "2026-08-29T09:33:10+05:45",
-  "message": "feat(ui): add keyboard shortcut HUD modal and refine ATS resume copy button layout"
+  "sha": "d2bdc213da13ceb75a2fb73beb2e26415f8b7c2b",
+  "shortSha": "d2bdc21",
+  "date": "2026-08-29T09:37:03+05:45",
+  "message": "fix(ui): polish keyboard shortcuts HUD modal width, card grid, and footer button layout"
 }
