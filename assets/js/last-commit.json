@@ -1,6 +1,6 @@
 {
-  "sha": "0ba69ba1ddbcff2cec0d40ed2f82202a03652bb0",
-  "shortSha": "0ba69ba",
-  "date": "2026-08-29T11:21:14+05:45",
-  "message": "feat(pwa): integrate dynamic push notification hooks and terminal notify suite"
+  "sha": "80b3250b89014176e1237521dc8e184e32b01af9",
+  "shortSha": "80b3250",
+  "date": "2026-08-29T11:39:23+05:45",
+  "message": "feat(infra): add pwa raster icons, constants module, css minifier, and centralized versioning"
 }
