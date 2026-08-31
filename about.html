@@ -8,16 +8,21 @@
   <meta http-equiv="Content-Security-Policy"
     content="default-src 'self'; script-src 'self' 'unsafe-inline' https://accounts.google.com https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://api.emailjs.com https://www.google-analytics.com https://analytics.google.com https://accounts.google.com; frame-src 'self' https://accounts.google.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;" />
 
-  <!-- Speculative Rules API — Instantaneous navigation on Chromium 121+ -->
-  <script type="speculationrules">
-    {
-      "prerender": [
-        {
-          "source": "list",
-          "urls": ["index.html", "projects.html", "experience.html", "achievements.html", "about.html", "journey.html", "contact.html"],
-          "eagerness": "moderate"
-        }
-      ]
+  <!-- Speculative Rules API — Progressive enhancement for Chromium 121+ -->
+  <script>
+    if (typeof HTMLScriptElement !== 'undefined' && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+      var specScript = document.createElement('script');
+      specScript.type = 'speculationrules';
+      specScript.textContent = JSON.stringify({
+        prerender: [
+          {
+            source: 'list',
+            urls: ['index.html', 'projects.html', 'experience.html', 'achievements.html', 'about.html', 'journey.html', 'contact.html'],
+            eagerness: 'moderate'
+          }
+        ]
+      });
+      document.head.appendChild(specScript);
     }
   </script>
 

@@ -109,9 +109,12 @@
       "modules_haptics_initskillbars",
       "modules_haptics_initswipenav",
       "modules_haptics_inittouchgestures",
-      "modules_haptics_triggerhapticfeedback"
+      "modules_haptics_triggerhapticfeedback",
+      "modules_ui_initkeynav"
     ],
     "2": [
+      "ieee_kec_webp",
+      "makerspace_webp",
       "modules_audio",
       "modules_audio_getaudiocontext",
       "modules_audio_initaudiocues",
@@ -133,7 +136,6 @@
       "modules_ui_getresumecontactmarkdown",
       "modules_ui_initcountup",
       "modules_ui_initfiltercountindicators",
-      "modules_ui_initkeynav",
       "modules_ui_initlightbox",
       "modules_ui_initradarcanvas",
       "modules_ui_initreadingmetrics",
@@ -147,9 +149,77 @@
       "modules_ui_sharecontent",
       "modules_ui_skill_radar_domains",
       "modules_ui_spawnparticle",
-      "modules_ui_toggleshortcutsmodal"
+      "modules_ui_toggleshortcutsmodal",
+      "nssr_webp"
     ],
     "3": [
+      "generate_pwa_icons_py",
+      "mcp_server_site_mcp_py",
+      "modules_cmdk",
+      "modules_cmdk_buildsearchindex",
+      "modules_cmdk_cmdk_entries",
+      "modules_cmdk_initglobalsearch",
+      "modules_cmdk_rendercmdk",
+      "modules_cmdk_revealsearchtarget",
+      "modules_constants",
+      "modules_constants_cmdk_icons",
+      "modules_constants_cmdk_type_label",
+      "modules_constants_quick_nav_pages",
+      "modules_constants_site",
+      "modules_constants_social_icons",
+      "modules_home_widgets",
+      "modules_home_widgets_boothomewidgets",
+      "modules_home_widgets_initlastcommitbadge",
+      "modules_home_widgets_initlivedates",
+      "modules_home_widgets_initstatusclock",
+      "modules_terminal",
+      "modules_terminal_setup",
+      "og_image_readme_md",
+      "portfoliowebsite_tracker_v50_23",
+      "scripts_build_css_py",
+      "scripts_generate_og_cards_py",
+      "scripts_test_e2e_py",
+      "site_webmanifest",
+      "sw",
+      "sw_static_assets",
+      "sync_ps1",
+      "tests_unit_test_cmdk_search_test_mjs",
+      "tests_unit_test_core_helpers_test_mjs",
+      "tests_unit_test_crypto_test_mjs",
+      "tests_unit_test_terminal_test_mjs",
+      "verify_yml",
+      "version"
+    ],
+    "4": [
+      "aaradhya_dev_tamrakar",
+      "ai_assisted_coding_for_developers_certificate",
+      "ai_assisted_product_launch_certificate",
+      "ai_fluency_concept",
+      "ai_fluency_foundations_of_coworking_with_ai_certificate",
+      "ai_fluency_framework_and_foundations_certificate",
+      "anthropic_org",
+      "building_a_go_to_market_strategy_certificate",
+      "cleaning_data_with_generative_ai_certificate",
+      "concept_ai_fluency",
+      "datacamp_org",
+      "eu_ai_act_literacy_certificate",
+      "generative_ai_data_cleaning_concept",
+      "go_to_market_strategy_concept",
+      "ieee_kec_spax_organization_2026_certificate",
+      "ieee_kec_student_branch",
+      "ieee_kec_volunteering_vice_secretary_2025_2026_certificate",
+      "ieee_plus2_orientation_2026",
+      "ieee_pulchowk_prextreme_cp_workshop_certificate",
+      "ieee_pulchowk_student_branch",
+      "kathmandu_engineering_college",
+      "mr_kec_2025_1",
+      "og_image",
+      "photo_png",
+      "prextreme_cp_workshop",
+      "spax_2026",
+      "template_html"
+    ],
+    "5": [
       "modules_access",
       "modules_access_access_control",
       "modules_access_access_control_payloads",
@@ -177,32 +247,7 @@
       "modules_core_requestnotificationpermission",
       "modules_core_subscribepushnotifications"
     ],
-    "4": [
-      "dev_logs_portfoliowebsite_tracker",
-      "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
-      "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_21",
-      "dev_logs_portfoliowebsite_tracker_state_of_play",
-      "dev_logs_portfoliowebsite_tracker_status",
-      "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
-      "dev_logs_portfoliowebsite_tracker_v22_addition_kec_it_club_introduction_to_git_2024_card_closed_no_source_file_available",
-      "dev_logs_portfoliowebsite_tracker_v23_addition_latest_site_refinements_2026_07_18",
-      "dev_logs_portfoliowebsite_tracker_v24_addition_site_optimization_pass_mobile_legend_line_break_fix_2026_07_18",
-      "dev_logs_portfoliowebsite_tracker_v25_addition_bug_check_sweep_pages_1_3_4_2026_07_27",
-      "dev_logs_portfoliowebsite_tracker_v26_addition_bug_check_sweep_page_2_about_2026_07_27",
-      "dev_logs_portfoliowebsite_tracker_v28_addition_site_wide_bug_audit_structural_hardening_pass_2026_08_04",
-      "dev_logs_portfoliowebsite_tracker_v29_addition_site_wide_performance_pwa_seo_styling_upgrades_2026_08_04",
-      "dev_logs_portfoliowebsite_tracker_v30_addition_pwa_service_worker_skip_links_font_preconnects_content_visibility_optimization_expanded_verification_2026_08_04",
-      "dev_logs_portfoliowebsite_tracker_v31_1_addition_interactive_what_s_new_major_commit_showcase_journey_nodes_2026_08_04",
-      "dev_logs_portfoliowebsite_tracker_v31_addition_url_hash_filter_sync_screen_reader_accessibility_pwa_v31_cache_bump_seo_verification_2026_08_04",
-      "dev_logs_portfoliowebsite_tracker_v32_addition_pwa_offline_resilience_reading_progress_bar_3d_card_tilt_journey_node_j_028_2026_08_04",
-      "dev_logs_portfoliowebsite_tracker_v33_addition_interactive_dev_terminal_cmdk_filter_pills_cursor_light_trail_journey_node_j_029_2026_08_04",
-      "dev_logs_portfoliowebsite_tracker_v34_addition_mobile_touch_ux_ios_safe_area_web_haptics_suite_journey_node_j_030_2026_08_08",
-      "dev_logs_portfoliowebsite_tracker_v35_addition_motion_typed_captions_count_up_counters_view_transitions_journey_node_j_031_2026_08_08",
-      "dev_logs_portfoliowebsite_tracker_v36_addition_visual_polish_performance_skill_matrix_mobile_ux_suite_journey_node_j_032_2026_08_08",
-      "dev_logs_portfoliowebsite_tracker_v37_addition_guided_cross_page_site_tour_with_spotlight_overlay_journey_node_j_033_2026_08_08",
-      "dev_logs_portfoliowebsite_tracker_v38_addition_web_audio_micro_sounds_reading_metrics_live_result_indicators_verification_suite_journey_node_j_034_2026_08_08"
-    ],
-    "5": [
+    "6": [
       "scripts_site_automation",
       "scripts_site_automation_audit",
       "scripts_site_automation_bump_version",
@@ -226,7 +271,7 @@
       "scripts_site_automation_update_knowledge_graph",
       "scripts_site_automation_update_tracker"
     ],
-    "6": [
+    "7": [
       "modules_tour",
       "modules_tour_closetouroverlay",
       "modules_tour_ensuretouroverlay",
@@ -248,8 +293,26 @@
       "modules_tour_tourreducedmotion",
       "modules_tour_updatetourspotlight"
     ],
-    "7": [
-      "path",
+    "8": [
+      "aaradhya_dev_tamrakar_cv",
+      "adt_logo",
+      "javascript_bootcamp_certificate_kec_it_club_2023",
+      "microsoft_learn_html_css_github_pages",
+      "nepatronix_drone_hub_nepal_3day_drone_training_2026",
+      "offenso_security_bypass_webinar_2025",
+      "printer_maintenance_certification",
+      "recommending_skincare_products",
+      "simops_ai_for_graduates",
+      "simops_ai_for_graduates_badge",
+      "simops_expert",
+      "simops_expert_badge",
+      "simops_fundamentals",
+      "simops_fundamentals_badge",
+      "simops_practitioner",
+      "simops_practitioner_badge",
+      "techaxis_prompt_engineering_2026"
+    ],
+    "9": [
       "scripts_manage_payloads",
       "scripts_manage_payloads_cmd_export",
       "scripts_manage_payloads_cmd_get",
@@ -264,27 +327,45 @@
       "scripts_manage_payloads_get_default_passcode_for_key",
       "scripts_manage_payloads_get_default_passcodes",
       "scripts_manage_payloads_main",
+      "scripts_manage_payloads_py_path",
       "scripts_manage_payloads_read_access_payloads",
       "scripts_manage_payloads_write_access_payloads"
     ],
-    "8": [
+    "10": [
       "404_html",
       "about_html",
       "achievements_html",
-      "base_css",
-      "cmdk_js",
       "contact_html",
       "experience_html",
+      "extract_index_py",
       "index_html",
       "journey_html",
+      "privacy_html",
       "projects_html",
+      "readme_md",
       "script_js",
-      "tokens_css",
-      "update_search_index_yml",
-      "verify_py",
-      "verify_yml"
+      "site_mcp_py",
+      "terms_html",
+      "verify_py"
     ],
-    "9": [
+    "11": [
+      "js_bg_animations",
+      "js_bg_animations_initbackgroundanimations",
+      "js_bg_animations_pcbtraces",
+      "js_bg_animations_pcbtraces_animate",
+      "js_bg_animations_pcbtraces_buildtraces",
+      "js_bg_animations_pcbtraces_constructor",
+      "js_bg_animations_pcbtraces_initobserver",
+      "js_bg_animations_pcbtraces_resize",
+      "js_bg_animations_pcbtraces_start",
+      "js_bg_animations_signalwavebackground",
+      "js_bg_animations_signalwavebackground_animate",
+      "js_bg_animations_signalwavebackground_constructor",
+      "js_bg_animations_signalwavebackground_initobserver",
+      "js_bg_animations_signalwavebackground_resize",
+      "js_bg_animations_signalwavebackground_start"
+    ],
+    "12": [
       "agents",
       "agents_1_git_workflow_automation_critical_strict_enforcement",
       "agents_2_knowledge_graph_codebase_navigation_graphify",
@@ -293,16 +374,7 @@
       "agents_agent_rules_workflow_guidelines",
       "agents_commands"
     ],
-    "10": [
-      "any",
-      "scripts_generate_og_cards",
-      "scripts_generate_og_cards_generate_cards",
-      "scripts_generate_og_cards_main",
-      "scripts_generate_og_cards_rationale_163",
-      "scripts_generate_og_cards_rationale_81",
-      "scripts_generate_og_cards_render_svg_card"
-    ],
-    "11": [
+    "13": [
       "gemini",
       "gemini_1_git_workflow_automation_critical_strict_enforcement",
       "gemini_2_knowledge_graph_codebase_navigation_graphify",
@@ -311,16 +383,7 @@
       "gemini_antigravity_ide_gemini_agent_rules_for_portfolio_repository",
       "gemini_commands"
     ],
-    "12": [
-      "ieee_kec_spax_organization_2026_certificate",
-      "ieee_kec_student_branch",
-      "ieee_kec_volunteering_vice_secretary_2025_2026_certificate",
-      "ieee_pulchowk_prextreme_cp_workshop_certificate",
-      "ieee_pulchowk_student_branch",
-      "prextreme_cp_workshop",
-      "spax_2026"
-    ],
-    "13": [
+    "14": [
       "claude",
       "claude_encrypted_sections_vip_payloads_access_js",
       "claude_file_delivery",
@@ -328,317 +391,332 @@
       "claude_output_constraints_strict",
       "claude_working_conventions_for_this_repo"
     ],
-    "14": [
-      "google_oauth",
-      "og_image_readme",
-      "og_image_readme_og_image_source",
-      "site_mcp_py",
-      "sw",
-      "sw_static_assets"
-    ],
     "15": [
-      "modules_cmdk",
-      "modules_cmdk_buildsearchindex",
-      "modules_cmdk_cmdk_entries",
-      "modules_cmdk_initglobalsearch",
-      "modules_cmdk_rendercmdk",
-      "modules_cmdk_revealsearchtarget"
+      "d_aaradhyadt_aaradhyadt_github_io_scripts_dev_serve_py",
+      "scripts_dev_serve_handler",
+      "scripts_dev_serve_handler_end_headers",
+      "scripts_dev_serve_handler_send_error"
     ],
     "16": [
-      "modules_constants",
-      "modules_constants_cmdk_icons",
-      "modules_constants_cmdk_type_label",
-      "modules_constants_quick_nav_pages",
-      "modules_constants_site",
-      "modules_constants_social_icons"
-    ],
-    "17": [
-      "scripts_test_e2e",
-      "scripts_test_e2e_quiettesthandler",
-      "scripts_test_e2e_quiettesthandler_init",
-      "scripts_test_e2e_quiettesthandler_log_message",
-      "scripts_test_e2e_quiettesthandler_send_error",
-      "scripts_test_e2e_run_e2e_suite"
-    ],
-    "18": [
-      "icon_192_png",
-      "icon_512_png",
-      "privacy_html",
-      "terms_html",
-      "terms_privacy_link"
-    ],
-    "19": [
-      "modules_home_widgets",
-      "modules_home_widgets_boothomewidgets",
-      "modules_home_widgets_initlastcommitbadge",
-      "modules_home_widgets_initlivedates",
-      "modules_home_widgets_initstatusclock"
-    ],
-    "20": [
-      "scripts_build_css",
-      "scripts_build_css_build_all",
-      "scripts_build_css_minify_css",
-      "scripts_build_css_rationale_17",
-      "scripts_build_css_rationale_48"
-    ],
-    "21": [
-      "scripts_generate_pwa_icons",
-      "scripts_generate_pwa_icons_find_browser",
-      "scripts_generate_pwa_icons_generate_icon",
-      "scripts_generate_pwa_icons_main",
-      "scripts_generate_pwa_icons_py_path"
-    ],
-    "22": [
-      "unit_test_cmdk_search_test",
-      "unit_test_cmdk_search_test_buildsearchindex",
-      "unit_test_cmdk_search_test_cmdk_entries",
-      "unit_test_cmdk_search_test_executequery",
-      "unit_test_cmdk_search_test_search_static_index"
-    ],
-    "23": [
-      "unit_test_crypto_test",
-      "unit_test_crypto_test_decrypthexpayload",
-      "unit_test_crypto_test_encryptpayload",
-      "unit_test_crypto_test_getdecryptionkey",
-      "unit_test_crypto_test_key_cache"
-    ],
-    "24": [
-      "ai_fluency_concept",
-      "ai_fluency_framework_and_foundations_certificate",
-      "cleaning_data_with_generative_ai_certificate",
-      "generative_ai_data_cleaning_concept"
-    ],
-    "25": [
       "ieee_kec_agile_workshop_2025_ieee_kec_agile_workshop_2025",
       "ieee_kec_electronics_for_all_mentorship_2025_ieee_kec_electronics_for_all_mentorship_2025",
       "ieee_kec_ieee_day_organizer_2025_ieee_kec_ieee_day_organizer_2025",
       "ieee_kec_organization"
     ],
-    "26": [
+    "17": [
       "ieee_organization",
       "ieee_wie_organization",
       "memieee500_certificate",
       "memwie050_certificate"
     ],
-    "27": [
+    "18": [
       "concept_python_programming",
       "introduction_to_python_47717251_certificate",
       "introduction_to_python_itp0014139470763_certificate"
     ],
-    "28": [
+    "19": [
+      "ieee_kec_ieee_day_organizer_2025",
+      "ieee_kec_spax_organization_2026",
+      "ieee_kec_volunteering_vice_secretary_2025_2026"
+    ],
+    "20": [
       "introduction_to_git_48697649_certificate",
       "introduction_to_git_cpe0469867571113_certificate",
       "shared_git_concept"
     ],
-    "29": [
+    "21": [
       "kec_robotics_club_pcb_design_fabrication_workshop_2025_kec_robotics_club",
       "kec_robotics_club_pcb_design_fabrication_workshop_2025_pcb_design_fabrication",
       "laser_safety_awareness_training_laser_safety"
     ],
-    "30": [
+    "22": [
       "sanitize_and_payload",
       "sanitize_and_payload_generate_payload",
       "sanitize_and_payload_sanitize_content"
     ],
-    "31": [
+    "23": [
       "simops_ai_for_graduates_98452248595354_certificate",
       "simops_expert_12836702612982_certificate",
       "simops_platform"
     ],
-    "32": [
+    "24": [
       "simops_concept",
       "simops_fundamentals_25303246876434_certificate",
       "simops_practitioner_52653675650240_certificate"
     ],
-    "33": [
-      "unit_test_core_helpers_test",
-      "unit_test_core_helpers_test_computelivedates",
-      "unit_test_core_helpers_test_getcurrentpagefile"
-    ],
-    "34": [
-      "unit_test_terminal_test",
-      "unit_test_terminal_test_parseterminalcommand",
-      "unit_test_terminal_test_resolvenavigationtarget"
-    ],
-    "35": [
-      "aaradhya_dev_tamrakar",
-      "template_html"
-    ],
-    "36": [
-      "ai_fluency_foundations_of_coworking_with_ai_certificate",
-      "concept_ai_fluency"
-    ],
-    "37": [
-      "building_a_go_to_market_strategy_certificate",
-      "go_to_market_strategy_concept"
-    ],
-    "38": [
+    "25": [
       "concept_cybersecurity",
       "offenso_security_bypass_webinar_2025_certificate"
     ],
-    "39": [
+    "26": [
       "concept_hardware_maintenance",
       "printer_maintenance_certification_certificate"
     ],
-    "40": [
+    "27": [
       "concept_uav_technology",
       "nepatronix_drone_hub_nepal_3day_drone_training_2026_certificate"
     ],
-    "41": [
+    "28": [
       "concept_web_development",
       "microsoft_learn_html_css_github_pages_certificate"
     ],
-    "42": [
+    "29": [
       "data_releases",
       "data_releases_site_releases"
     ],
-    "43": [
+    "30": [
       "data_resume_data",
       "data_resume_data_resume_data"
     ],
-    "44": [
+    "31": [
       "data_search_index",
       "data_search_index_search_static_index"
     ],
-    "45": [
+    "32": [
+      "epc_basic_electronics_2025_1",
+      "epc_basic_electronics_2025_2"
+    ],
+    "33": [
+      "epc_basic_electronics_2025_banner",
+      "epc_club_logo"
+    ],
+    "34": [
       "eu_ai_act_literacy_eu0028355472158_certificate",
       "eu_ai_act_literacy_eu_ai_act"
     ],
-    "46": [
+    "35": [
+      "gnome_nepal_linux_opensource_workshop_2024",
+      "kecit_git_github_session_2024"
+    ],
+    "36": [
+      "ieee_ieeextreme_19_0_2025",
+      "ieee_pulchowk_prextreme_cp_workshop"
+    ],
+    "37": [
       "ieee_ieeextreme_19_0_2025_certificate",
       "ieee_ieeextreme_19_0_2025_ieee"
     ],
-    "47": [
+    "38": [
       "ieee_wie_latex_training_2026_certificate",
       "ieee_wie_latex_training_2026_latex"
     ],
-    "48": [
+    "39": [
+      "kec_electrical_club",
+      "proteus_workshop_2024_banner"
+    ],
+    "40": [
       "kec_it_club_aws_fundamentals_2025_aws_fundamentals",
       "kec_it_club_aws_fundamentals_2025_kec_it_club"
     ],
-    "49": [
-      "modules_terminal",
-      "modules_terminal_setup"
-    ],
-    "50": [
+    "41": [
       "prompt_engineering_concept",
       "techaxis_prompt_engineering_2026_certificate"
     ],
-    "51": [
+    "42": [
       "99947412_pdf"
     ],
-    "52": [
+    "43": [
       "ai_assisted_coding_pdf"
     ],
-    "53": [
+    "44": [
       "ai_product_launch_pdf"
     ],
-    "54": [
+    "45": [
       "ai_security_pdf"
     ],
-    "55": [
+    "46": [
+      "autocad_workshop_2025"
+    ],
+    "47": [
+      "base_css"
+    ],
+    "48": [
       "bg_animations_js"
     ],
-    "56": [
+    "49": [
       "deploy_pages_yml"
     ],
-    "57": [
+    "50": [
+      "dristi_3_0_2025"
+    ],
+    "51": [
       "ev_ratings_pdf"
     ],
-    "58": [
-      "extract_index_py"
+    "52": [
+      "fusemachines_logo"
     ],
-    "59": [
+    "53": [
+      "gcsbr_poster_jpg"
+    ],
+    "54": [
+      "generate_a_study_guide"
+    ],
+    "55": [
       "generate_a_study_guide_certificate"
     ],
+    "56": [
+      "google_oauth"
+    ],
+    "57": [
+      "icon_192_png"
+    ],
+    "58": [
+      "icon_512_png"
+    ],
+    "59": [
+      "ieee_kec_agile_workshop_2025"
+    ],
     "60": [
-      "lighthouse_audit_yml"
+      "ieee_kec_electronics_for_all_mentorship_2025"
     ],
     "61": [
-      "og_alpha_svg"
+      "ieee_kec_logo"
     ],
     "62": [
-      "og_fuse_ai_svg"
+      "ieee_nepal_section_clw_2026"
     ],
     "63": [
-      "og_gcsbr_svg"
+      "ieee_wie_latex_training_2026"
     ],
     "64": [
-      "og_master_svg"
+      "introduction_to_git_48697649"
     ],
     "65": [
-      "og_spark_svg"
+      "introduction_to_git_cpe0469867571113"
     ],
     "66": [
-      "readme_404_html"
+      "introduction_to_python_47717251"
     ],
     "67": [
-      "readme_biasaperture_project"
+      "introduction_to_python_itp0014139470763"
     ],
     "68": [
-      "readme_dev_serve_py"
+      "introduction_to_security_in_the_world_of_ai"
     ],
     "69": [
-      "readme_privacy_html"
+      "kec_it_club_aws_fundamentals_2025"
     ],
     "70": [
-      "readme_site_webmanifest"
+      "kec_music_club_svg"
     ],
     "71": [
-      "readme_sync_ps1"
+      "kec_robotics_club_pcb_design_fabrication_workshop_2025"
     ],
     "72": [
-      "readme_terms_html"
+      "laser_safety_awareness_training"
     ],
     "73": [
-      "recommending_skincare_products_certificate"
+      "lighthouse_audit_yml"
     ],
     "74": [
-      "robots_txt"
+      "machine_learning_hackathon_2024"
     ],
     "75": [
-      "uh3001_certificate"
+      "makerspace_png"
     ],
     "76": [
+      "mr_kec_2025_2"
+    ],
+    "77": [
+      "mr_kec_2025_3"
+    ],
+    "78": [
+      "nssr_png"
+    ],
+    "79": [
+      "og_alpha_svg"
+    ],
+    "80": [
+      "og_fuse_ai_svg"
+    ],
+    "81": [
+      "og_gcsbr_svg"
+    ],
+    "82": [
+      "og_master_svg"
+    ],
+    "83": [
+      "og_spark_svg"
+    ],
+    "84": [
+      "pcb_design_fabrication_workshop_2025_day1"
+    ],
+    "85": [
+      "pcb_design_fabrication_workshop_2025_day2"
+    ],
+    "86": [
+      "pcb_design_fabrication_workshop_2025_day3"
+    ],
+    "87": [
+      "proteus_workshop_2024_day1"
+    ],
+    "88": [
+      "proteus_workshop_2024_day2"
+    ],
+    "89": [
+      "proteus_workshop_2024_svg"
+    ],
+    "90": [
+      "readme_biasaperture_project"
+    ],
+    "91": [
+      "recommending_skincare_products_certificate"
+    ],
+    "92": [
+      "robots_txt"
+    ],
+    "93": [
+      "sports_week_2026_svg"
+    ],
+    "94": [
+      "tokens_css"
+    ],
+    "95": [
+      "uh3001_certificate"
+    ],
+    "96": [
+      "update_search_index_yml"
+    ],
+    "97": [
       "workflow_stamp_last_commit"
     ]
   },
   "cohesion": {
     "0": 0.09726775956284153,
-    "1": 0.07342995169082125,
-    "2": 0.09523809523809523,
-    "3": 0.15076923076923077,
-    "4": 0.16600790513833993,
-    "5": 0.15584415584415584,
-    "6": 0.20526315789473684,
-    "7": 0.36764705882352944,
-    "8": 0.1523809523809524,
-    "9": 0.2857142857142857,
-    "10": 0.38095238095238093,
-    "11": 0.2857142857142857,
+    "1": 0.07123034227567067,
+    "2": 0.08819345661450925,
+    "3": 0.06666666666666667,
+    "4": 0.09401709401709402,
+    "5": 0.15076923076923077,
+    "6": 0.15584415584415584,
+    "7": 0.20526315789473684,
+    "8": 0.11764705882352941,
+    "9": 0.36764705882352944,
+    "10": 0.2,
+    "11": 0.21904761904761905,
     "12": 0.2857142857142857,
-    "13": 0.3333333333333333,
+    "13": 0.2857142857142857,
     "14": 0.3333333333333333,
-    "15": 0.5333333333333333,
-    "16": 0.3333333333333333,
-    "17": 0.3333333333333333,
-    "18": 0.4,
-    "19": 0.7,
-    "20": 0.5,
-    "21": 0.6,
-    "22": 0.4,
-    "23": 0.5,
-    "24": 0.5,
-    "25": 0.5,
-    "26": 0.5,
+    "15": 0.6666666666666666,
+    "16": 0.5,
+    "17": 0.5,
+    "18": 1.0,
+    "19": 0.6666666666666666,
+    "20": 1.0,
+    "21": 0.6666666666666666,
+    "22": 1.0,
+    "23": 1.0,
+    "24": 1.0,
+    "25": 1.0,
+    "26": 1.0,
     "27": 1.0,
     "28": 1.0,
-    "29": 0.6666666666666666,
+    "29": 1.0,
     "30": 1.0,
     "31": 1.0,
     "32": 1.0,
-    "33": 0.6666666666666666,
-    "34": 0.6666666666666666,
+    "33": 1.0,
+    "34": 1.0,
     "35": 1.0,
     "36": 1.0,
     "37": 1.0,
@@ -680,7 +758,28 @@
     "73": 1.0,
     "74": 1.0,
     "75": 1.0,
-    "76": 1.0
+    "76": 1.0,
+    "77": 1.0,
+    "78": 1.0,
+    "79": 1.0,
+    "80": 1.0,
+    "81": 1.0,
+    "82": 1.0,
+    "83": 1.0,
+    "84": 1.0,
+    "85": 1.0,
+    "86": 1.0,
+    "87": 1.0,
+    "88": 1.0,
+    "89": 1.0,
+    "90": 1.0,
+    "91": 1.0,
+    "92": 1.0,
+    "93": 1.0,
+    "94": 1.0,
+    "95": 1.0,
+    "96": 1.0,
+    "97": 1.0
   },
   "gods": [
     {
@@ -704,9 +803,9 @@
       "degree": 22
     },
     {
-      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_21",
-      "label": "Portfolio Website Tracker \u2014 v50.21",
-      "degree": 21
+      "id": "portfoliowebsite_tracker_v50_23",
+      "label": "Portfolio Website Tracker \u2014 v50.23",
+      "degree": 22
     },
     {
       "id": "modules_audio_playaudiocue",
@@ -724,75 +823,75 @@
       "degree": 14
     },
     {
-      "id": "modules_access_showtoast",
-      "label": "showToast()",
-      "degree": 11
+      "id": "aaradhya_dev_tamrakar",
+      "label": "Aaradhya Dev Tamrakar",
+      "degree": 12
     },
     {
-      "id": "scripts_manage_payloads_main",
-      "label": "main()",
-      "degree": 9
+      "id": "aaradhya_dev_tamrakar_cv",
+      "label": "Aaradhya Dev Tamrakar CV",
+      "degree": 12
     }
   ],
   "surprises": [
     {
-      "source": "ADT PWA Icon (192x192)",
-      "target": "Terms of Service",
+      "source": "Certificate: AI-Assisted Coding for Developers",
+      "target": "Aaradhya Dev Tamrakar",
       "source_files": [
-        "assets/images/icon-192.png",
-        "terms.html"
-      ],
-      "confidence": "INFERRED",
-      "relation": "references",
-      "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 image); connects across different repos/directories"
-    },
-    {
-      "source": "ADT PWA Icon (512x512)",
-      "target": "Terms of Service",
-      "source_files": [
-        "assets/images/icon-512.png",
-        "terms.html"
-      ],
-      "confidence": "INFERRED",
-      "relation": "references",
-      "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 image); connects across different repos/directories"
-    },
-    {
-      "source": ".github/workflows/verify.yml",
-      "target": "assets/js/script.js",
-      "source_files": [
-        ".github/workflows/verify.yml",
-        "assets/js/script.js"
+        "assets/certificates/AI-Assisted_Coding_for_Developers_48952793.webp",
+        "dev-logs/og-image/template.html"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
+      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Certificate: AI-Assisted Coding for Developers` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
     },
     {
-      "source": ".github/workflows/verify.yml",
-      "target": "scripts/verify.py",
+      "source": "Certificate: AI-Assisted Product Launch",
+      "target": "Aaradhya Dev Tamrakar",
       "source_files": [
-        ".github/workflows/verify.yml",
-        "scripts/verify.py"
+        "assets/certificates/AI-Assisted_Product_Launch.webp",
+        "dev-logs/og-image/template.html"
       ],
       "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Certificate: AI-Assisted Product Launch` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
     },
     {
-      "source": "bootSite()",
-      "target": "initCountUp()",
+      "source": "Specialist Certification: EU AI Act Literacy",
+      "target": "Aaradhya Dev Tamrakar",
       "source_files": [
-        "assets/js/script.js",
-        "assets/js/modules/ui.js"
+        "assets/certificates/EU_AI_Act_Literacy_EU0028355472158.webp",
+        "dev-logs/og-image/template.html"
       ],
-      "confidence": "INFERRED",
-      "relation": "calls",
-      "why": "inferred connection - not explicitly stated in source; bridges separate communities; peripheral node `initCountUp()` unexpectedly reaches hub `bootSite()`"
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Specialist Certification: EU AI Act Literacy` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
+    },
+    {
+      "source": "Aaradhya Dev Tamrakar Portfolio Banner",
+      "target": "Aaradhya Dev Tamrakar",
+      "source_files": [
+        "assets/images/og-image.jpg",
+        "dev-logs/og-image/template.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Aaradhya Dev Tamrakar Portfolio Banner` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
+    },
+    {
+      "source": "Aaradhya Dev Tamrakar Portrait (PNG)",
+      "target": "Aaradhya Dev Tamrakar",
+      "source_files": [
+        "assets/images/photo.png",
+        "dev-logs/og-image/template.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Aaradhya Dev Tamrakar Portrait (PNG)` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
     }
   ],
   "tokens": {
-    "input": 24586,
-    "output": 6559
+    "input": 182758,
+    "output": 18027
   }
 }
