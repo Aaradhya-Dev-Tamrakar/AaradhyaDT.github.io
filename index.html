@@ -344,6 +344,38 @@
       animation: fadeUp .9s .5s forwards;
     }
 
+    .hero-pills {
+      margin-top: 1.3rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      max-width: 520px;
+      opacity: 0;
+      animation: fadeUp .9s .58s forwards;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      background: rgba(255, 255, 255, 0.02);
+      color: var(--muted);
+      border-radius: 999px;
+      padding: 0.45rem 0.8rem;
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      transition: border-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+    }
+
+    .hero-pill:hover {
+      color: var(--heading);
+      border-color: var(--accent-a35);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02), 0 0 16px rgba(212,168,90,0.08);
+      transform: translateY(-1px);
+    }
+
     .hero-caption {
       margin-top: 0.9rem;
       font-family: var(--mono);
@@ -406,6 +438,14 @@
       box-shadow: 0 16px 40px -16px rgba(0, 0, 0, .5);
       transition: box-shadow .35s ease, border-color .35s ease, transform .35s ease;
       overflow: hidden;
+    }
+
+    .status-card::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(212, 168, 90, 0.08), transparent 38%, rgba(0, 0, 0, 0));
+      pointer-events: none;
     }
 
     .status-card:hover {
@@ -1046,6 +1086,13 @@
           and machine learning. Fuse AI Fellow · NSSR DataCamp Fellow ·
           IEEE KEC KTM Vice Chair · Robotics enthusiast.
         </p>
+        <div class="hero-pills" aria-label="Core focus areas">
+          <span class="hero-pill">Embedded AI</span>
+          <span class="hero-pill">Robotics</span>
+          <span class="hero-pill">FastAPI</span>
+          <span class="hero-pill">Firmware</span>
+          <span class="hero-pill">Edge Systems</span>
+        </div>
         <p class="hero-caption" id="hero-caption" aria-live="off"></p>
         <div class="hero-actions">
           <div class="magnetic-wrap">

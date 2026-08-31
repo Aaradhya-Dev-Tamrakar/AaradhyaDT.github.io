@@ -1,6 +1,6 @@
-# Portfolio Website Tracker — v50.21
+# Portfolio Website Tracker — v50.22
 
-Last updated: _2026-08-29_
+Last updated: _2026-08-31_
 
 - **v50.17 (Quality & Testing) — Native Node.js Unit Testing Suite, E2E Smoke Runner, Strict Content Security Policy & 24-Check Verification Gate.** Shipped enterprise testing and security hardening:
   - **Native JS Unit Testing Suite (`tests/unit/`, `node:test`)**: Implemented zero-dependency unit tests using Node.js built-in `node:test` and `node:assert/strict` covering PBKDF2/AES-256-GCM crypto roundtrips & error handling (`test_crypto.test.mjs`), CmdK multi-token search index matching & ranking (`test_cmdk_search.test.mjs`), live date calculations & path resolution helpers (`test_core_helpers.test.mjs`), and Dev Terminal command/alias parsing (`test_terminal.test.mjs`). All 14 tests execute in ~240ms.

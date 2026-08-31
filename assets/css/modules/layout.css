@@ -508,6 +508,11 @@ html[data-theme="light"] #quick-nav::before {
   box-shadow: 0 6px 20px rgba(0, 0, 0, .3), 0 0 16px var(--glow-green-a35);
 }
 
+.quick-nav-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
 .quick-nav-card--current {
   border-color: var(--glow-green-a50);
   cursor: default;

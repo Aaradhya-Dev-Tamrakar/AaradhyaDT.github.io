@@ -177,6 +177,14 @@
   transform: translate(2px, -2px);
 }
 
+.btn-primary:focus-visible,
+.btn-ghost:focus-visible,
+.nav-links a:focus-visible,
+.quick-nav-card:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
 .btn-ghost {
   font-family: var(--mono);
   font-size: 0.68rem;
@@ -1021,11 +1029,6 @@ html[data-theme="light"] .card-gradient-border::before {
 }
 
 .resume-sheet-head {
-<<<<<<< Updated upstream
-  border-bottom: 2px solid #111;
-  padding-bottom: 0.85rem;
-  margin-bottom: 1.15rem;
-=======
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -1033,7 +1036,6 @@ html[data-theme="light"] .card-gradient-border::before {
   border-bottom: 2px solid #222;
   padding-bottom: 1rem;
   margin-bottom: 1.25rem;
->>>>>>> Stashed changes
 }
 
 .resume-sheet-head-left {
@@ -1274,10 +1276,6 @@ html[data-theme="light"] .card-gradient-border::before {
 }
 
 /* ── Keyboard Shortcuts Cheat Sheet HUD Modal (v51) ────────── */
-.shortcuts-modal-overlay {
-  /* inherits standard .access-modal-overlay styles */
-}
-
 .shortcuts-modal-card {
   max-width: 660px !important;
   width: 94% !important;

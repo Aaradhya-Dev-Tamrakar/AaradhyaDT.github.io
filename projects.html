@@ -244,6 +244,11 @@
       box-shadow: 0 6px 20px rgba(0, 0, 0, .3), 0 0 16px var(--glow-green-a35);
     }
 
+    details.project-card:focus-within {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px var(--accent-a35), 0 8px 28px rgba(0, 0, 0, 0.28);
+    }
+
     details.project-card.project-card--gold,
     .project-card--gold {
       border: 3px solid var(--glow-gold);
@@ -303,6 +308,12 @@
       padding-right: 2.25rem;
       min-height: 72px;
       box-sizing: border-box;
+      border-radius: 8px;
+    }
+
+    summary.project-summary:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
     }
 
     summary.project-summary::-webkit-details-marker {

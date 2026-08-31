@@ -180,6 +180,7 @@
     "4": [
       "dev_logs_portfoliowebsite_tracker",
       "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
+      "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_21",
       "dev_logs_portfoliowebsite_tracker_state_of_play",
       "dev_logs_portfoliowebsite_tracker_status",
       "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
@@ -248,45 +249,7 @@
       "modules_tour_updatetourspotlight"
     ],
     "7": [
-      "404_html",
-      "about_html",
-      "achievements_html",
-      "contact_html",
-      "experience_html",
-      "fuse_ai_fellowship",
-      "index_html",
-      "journey_html",
-      "lighthouse_audit_yml",
-      "privacy_html",
-      "projects_html",
-      "script_js",
-      "spark_project",
-      "sync_ps1",
-      "terms_html",
-      "test_e2e_py",
-      "verify_py",
-      "verify_yml"
-    ],
-    "8": [
-      "readme",
-      "readme_automated_git_workflow_pre_commit_gate_sync_ps1",
-      "readme_codebase_knowledge_graph_graphify",
-      "readme_contact_connect",
-      "readme_global_keyboard_navigation_shortcuts_hud",
-      "readme_google_oauth_2_0_integration",
-      "readme_interactive_developer_terminal_widget_adtterminal",
-      "readme_key_features",
-      "readme_license",
-      "readme_local_development_git_workflow",
-      "readme_multi_tier_access_control_security_model",
-      "readme_repository_structure_directory_map",
-      "readme_site_search_unified_command_palette",
-      "readme_technical_security_architecture",
-      "readme_terminal_commands",
-      "readme_ux_features",
-      "readme_verification_diagnostic_suite"
-    ],
-    "9": [
+      "path",
       "scripts_manage_payloads",
       "scripts_manage_payloads_cmd_export",
       "scripts_manage_payloads_cmd_get",
@@ -301,51 +264,27 @@
       "scripts_manage_payloads_get_default_passcode_for_key",
       "scripts_manage_payloads_get_default_passcodes",
       "scripts_manage_payloads_main",
-      "scripts_manage_payloads_py_path",
       "scripts_manage_payloads_read_access_payloads",
       "scripts_manage_payloads_write_access_payloads"
     ],
-    "10": [
-      "js_bg_animations",
-      "js_bg_animations_initbackgroundanimations",
-      "js_bg_animations_pcbtraces",
-      "js_bg_animations_pcbtraces_animate",
-      "js_bg_animations_pcbtraces_buildtraces",
-      "js_bg_animations_pcbtraces_constructor",
-      "js_bg_animations_pcbtraces_initobserver",
-      "js_bg_animations_pcbtraces_resize",
-      "js_bg_animations_pcbtraces_start",
-      "js_bg_animations_signalwavebackground",
-      "js_bg_animations_signalwavebackground_animate",
-      "js_bg_animations_signalwavebackground_constructor",
-      "js_bg_animations_signalwavebackground_initobserver",
-      "js_bg_animations_signalwavebackground_resize",
-      "js_bg_animations_signalwavebackground_start"
+    "8": [
+      "404_html",
+      "about_html",
+      "achievements_html",
+      "base_css",
+      "cmdk_js",
+      "contact_html",
+      "experience_html",
+      "index_html",
+      "journey_html",
+      "projects_html",
+      "script_js",
+      "tokens_css",
+      "update_search_index_yml",
+      "verify_py",
+      "verify_yml"
     ],
-    "11": [
-      "sync",
-      "sync_format_markdownhygiene",
-      "sync_get_autocommitmessage",
-      "sync_get_lfsinstalled",
-      "sync_get_pythonpath",
-      "sync_show_diagnostics",
-      "sync_show_helpguide",
-      "sync_sync_botstamp",
-      "sync_update_trackerlog",
-      "sync_write_badge"
-    ],
-    "12": [
-      "mcp_server_site_mcp",
-      "mcp_server_site_mcp_handle_resource_read",
-      "mcp_server_site_mcp_handle_tool_call",
-      "mcp_server_site_mcp_process_request",
-      "mcp_server_site_mcp_rationale_290",
-      "mcp_server_site_mcp_rationale_348",
-      "mcp_server_site_mcp_rationale_445",
-      "mcp_server_site_mcp_rationale_604",
-      "mcp_server_site_mcp_run_stdio_server"
-    ],
-    "13": [
+    "9": [
       "agents",
       "agents_1_git_workflow_automation_critical_strict_enforcement",
       "agents_2_knowledge_graph_codebase_navigation_graphify",
@@ -354,7 +293,7 @@
       "agents_agent_rules_workflow_guidelines",
       "agents_commands"
     ],
-    "14": [
+    "10": [
       "any",
       "scripts_generate_og_cards",
       "scripts_generate_og_cards_generate_cards",
@@ -363,7 +302,7 @@
       "scripts_generate_og_cards_rationale_81",
       "scripts_generate_og_cards_render_svg_card"
     ],
-    "15": [
+    "11": [
       "gemini",
       "gemini_1_git_workflow_automation_critical_strict_enforcement",
       "gemini_2_knowledge_graph_codebase_navigation_graphify",
@@ -372,25 +311,16 @@
       "gemini_antigravity_ide_gemini_agent_rules_for_portfolio_repository",
       "gemini_commands"
     ],
-    "16": [
+    "12": [
       "ieee_kec_spax_organization_2026_certificate",
       "ieee_kec_student_branch",
       "ieee_kec_volunteering_vice_secretary_2025_2026_certificate",
       "ieee_pulchowk_prextreme_cp_workshop_certificate",
       "ieee_pulchowk_student_branch",
       "prextreme_cp_workshop",
-      "spax_event"
+      "spax_2026"
     ],
-    "17": [
-      "scripts_extract_index",
-      "scripts_extract_index_extract_achievements",
-      "scripts_extract_index_extract_projects",
-      "scripts_extract_index_main",
-      "scripts_extract_index_render_block",
-      "scripts_extract_index_render_entry",
-      "scripts_extract_index_text_of"
-    ],
-    "18": [
+    "13": [
       "claude",
       "claude_encrypted_sections_vip_payloads_access_js",
       "claude_file_delivery",
@@ -398,7 +328,15 @@
       "claude_output_constraints_strict",
       "claude_working_conventions_for_this_repo"
     ],
-    "19": [
+    "14": [
+      "google_oauth",
+      "og_image_readme",
+      "og_image_readme_og_image_source",
+      "site_mcp_py",
+      "sw",
+      "sw_static_assets"
+    ],
+    "15": [
       "modules_cmdk",
       "modules_cmdk_buildsearchindex",
       "modules_cmdk_cmdk_entries",
@@ -406,7 +344,7 @@
       "modules_cmdk_rendercmdk",
       "modules_cmdk_revealsearchtarget"
     ],
-    "20": [
+    "16": [
       "modules_constants",
       "modules_constants_cmdk_icons",
       "modules_constants_cmdk_type_label",
@@ -414,7 +352,7 @@
       "modules_constants_site",
       "modules_constants_social_icons"
     ],
-    "21": [
+    "17": [
       "scripts_test_e2e",
       "scripts_test_e2e_quiettesthandler",
       "scripts_test_e2e_quiettesthandler_init",
@@ -422,199 +360,285 @@
       "scripts_test_e2e_quiettesthandler_send_error",
       "scripts_test_e2e_run_e2e_suite"
     ],
-    "22": [
+    "18": [
+      "icon_192_png",
+      "icon_512_png",
+      "privacy_html",
+      "terms_html",
+      "terms_privacy_link"
+    ],
+    "19": [
       "modules_home_widgets",
       "modules_home_widgets_boothomewidgets",
       "modules_home_widgets_initlastcommitbadge",
       "modules_home_widgets_initlivedates",
       "modules_home_widgets_initstatusclock"
     ],
-    "23": [
+    "20": [
       "scripts_build_css",
       "scripts_build_css_build_all",
       "scripts_build_css_minify_css",
       "scripts_build_css_rationale_17",
       "scripts_build_css_rationale_48"
     ],
-    "24": [
+    "21": [
       "scripts_generate_pwa_icons",
       "scripts_generate_pwa_icons_find_browser",
       "scripts_generate_pwa_icons_generate_icon",
       "scripts_generate_pwa_icons_main",
       "scripts_generate_pwa_icons_py_path"
     ],
-    "25": [
+    "22": [
       "unit_test_cmdk_search_test",
       "unit_test_cmdk_search_test_buildsearchindex",
       "unit_test_cmdk_search_test_cmdk_entries",
       "unit_test_cmdk_search_test_executequery",
       "unit_test_cmdk_search_test_search_static_index"
     ],
-    "26": [
+    "23": [
       "unit_test_crypto_test",
       "unit_test_crypto_test_decrypthexpayload",
       "unit_test_crypto_test_encryptpayload",
       "unit_test_crypto_test_getdecryptionkey",
       "unit_test_crypto_test_key_cache"
     ],
-    "27": [
+    "24": [
       "ai_fluency_concept",
       "ai_fluency_framework_and_foundations_certificate",
       "cleaning_data_with_generative_ai_certificate",
       "generative_ai_data_cleaning_concept"
     ],
-    "28": [
+    "25": [
       "ieee_kec_agile_workshop_2025_ieee_kec_agile_workshop_2025",
       "ieee_kec_electronics_for_all_mentorship_2025_ieee_kec_electronics_for_all_mentorship_2025",
       "ieee_kec_ieee_day_organizer_2025_ieee_kec_ieee_day_organizer_2025",
       "ieee_kec_organization"
     ],
-    "29": [
+    "26": [
       "ieee_organization",
       "ieee_wie_organization",
       "memieee500_certificate",
       "memwie050_certificate"
     ],
-    "30": [
-      "scripts_dev_serve",
-      "scripts_dev_serve_handler",
-      "scripts_dev_serve_handler_end_headers",
-      "scripts_dev_serve_handler_send_error"
+    "27": [
+      "concept_python_programming",
+      "introduction_to_python_47717251_certificate",
+      "introduction_to_python_itp0014139470763_certificate"
     ],
-    "31": [
+    "28": [
+      "introduction_to_git_48697649_certificate",
+      "introduction_to_git_cpe0469867571113_certificate",
+      "shared_git_concept"
+    ],
+    "29": [
+      "kec_robotics_club_pcb_design_fabrication_workshop_2025_kec_robotics_club",
+      "kec_robotics_club_pcb_design_fabrication_workshop_2025_pcb_design_fabrication",
+      "laser_safety_awareness_training_laser_safety"
+    ],
+    "30": [
       "sanitize_and_payload",
       "sanitize_and_payload_generate_payload",
       "sanitize_and_payload_sanitize_content"
     ],
+    "31": [
+      "simops_ai_for_graduates_98452248595354_certificate",
+      "simops_expert_12836702612982_certificate",
+      "simops_platform"
+    ],
     "32": [
+      "simops_concept",
+      "simops_fundamentals_25303246876434_certificate",
+      "simops_practitioner_52653675650240_certificate"
+    ],
+    "33": [
       "unit_test_core_helpers_test",
       "unit_test_core_helpers_test_computelivedates",
       "unit_test_core_helpers_test_getcurrentpagefile"
     ],
-    "33": [
+    "34": [
       "unit_test_terminal_test",
       "unit_test_terminal_test_parseterminalcommand",
       "unit_test_terminal_test_resolvenavigationtarget"
     ],
-    "34": [
+    "35": [
       "aaradhya_dev_tamrakar",
       "template_html"
     ],
-    "35": [
+    "36": [
+      "ai_fluency_foundations_of_coworking_with_ai_certificate",
+      "concept_ai_fluency"
+    ],
+    "37": [
       "building_a_go_to_market_strategy_certificate",
       "go_to_market_strategy_concept"
     ],
-    "36": [
+    "38": [
+      "concept_cybersecurity",
+      "offenso_security_bypass_webinar_2025_certificate"
+    ],
+    "39": [
+      "concept_hardware_maintenance",
+      "printer_maintenance_certification_certificate"
+    ],
+    "40": [
+      "concept_uav_technology",
+      "nepatronix_drone_hub_nepal_3day_drone_training_2026_certificate"
+    ],
+    "41": [
+      "concept_web_development",
+      "microsoft_learn_html_css_github_pages_certificate"
+    ],
+    "42": [
       "data_releases",
       "data_releases_site_releases"
     ],
-    "37": [
+    "43": [
       "data_resume_data",
       "data_resume_data_resume_data"
     ],
-    "38": [
+    "44": [
       "data_search_index",
       "data_search_index_search_static_index"
     ],
-    "39": [
-      "eu_ai_act_literacy_concept",
-      "eu_ai_act_literacy_eu0028355472158_certificate"
+    "45": [
+      "eu_ai_act_literacy_eu0028355472158_certificate",
+      "eu_ai_act_literacy_eu_ai_act"
     ],
-    "40": [
+    "46": [
       "ieee_ieeextreme_19_0_2025_certificate",
-      "ieee_ieeextreme_competition"
+      "ieee_ieeextreme_19_0_2025_ieee"
     ],
-    "41": [
+    "47": [
+      "ieee_wie_latex_training_2026_certificate",
+      "ieee_wie_latex_training_2026_latex"
+    ],
+    "48": [
+      "kec_it_club_aws_fundamentals_2025_aws_fundamentals",
+      "kec_it_club_aws_fundamentals_2025_kec_it_club"
+    ],
+    "49": [
       "modules_terminal",
       "modules_terminal_setup"
     ],
-    "42": [
-      "og_image_readme",
-      "og_image_readme_og_image_source"
-    ],
-    "43": [
-      "sw",
-      "sw_static_assets"
-    ],
-    "44": [
-      "99947412_pdf"
-    ],
-    "45": [
-      "ai_assisted_coding_pdf"
-    ],
-    "46": [
-      "ai_fluency_pdf"
-    ],
-    "47": [
-      "ai_product_launch_pdf"
-    ],
-    "48": [
-      "ai_security_pdf"
-    ],
-    "49": [
-      "deploy_pages_yml"
-    ],
     "50": [
-      "ev_ratings_pdf"
+      "prompt_engineering_concept",
+      "techaxis_prompt_engineering_2026_certificate"
     ],
     "51": [
-      "generate_a_study_guide_certificate"
+      "99947412_pdf"
     ],
     "52": [
-      "manage_payloads_py"
+      "ai_assisted_coding_pdf"
     ],
     "53": [
-      "robots_txt"
+      "ai_product_launch_pdf"
     ],
     "54": [
-      "uh3001_certificate"
+      "ai_security_pdf"
     ],
     "55": [
-      "update_search_index_yml"
+      "bg_animations_js"
     ],
     "56": [
-      "workflow_stamp_last_commit"
+      "deploy_pages_yml"
     ],
     "57": [
-      "workflow_update_search_index"
+      "ev_ratings_pdf"
+    ],
+    "58": [
+      "extract_index_py"
+    ],
+    "59": [
+      "generate_a_study_guide_certificate"
+    ],
+    "60": [
+      "lighthouse_audit_yml"
+    ],
+    "61": [
+      "og_alpha_svg"
+    ],
+    "62": [
+      "og_fuse_ai_svg"
+    ],
+    "63": [
+      "og_gcsbr_svg"
+    ],
+    "64": [
+      "og_master_svg"
+    ],
+    "65": [
+      "og_spark_svg"
+    ],
+    "66": [
+      "readme_404_html"
+    ],
+    "67": [
+      "readme_biasaperture_project"
+    ],
+    "68": [
+      "readme_dev_serve_py"
+    ],
+    "69": [
+      "readme_privacy_html"
+    ],
+    "70": [
+      "readme_site_webmanifest"
+    ],
+    "71": [
+      "readme_sync_ps1"
+    ],
+    "72": [
+      "readme_terms_html"
+    ],
+    "73": [
+      "recommending_skincare_products_certificate"
+    ],
+    "74": [
+      "robots_txt"
+    ],
+    "75": [
+      "uh3001_certificate"
+    ],
+    "76": [
+      "workflow_stamp_last_commit"
     ]
   },
   "cohesion": {
     "0": 0.09726775956284153,
-    "1": 0.07246376811594203,
+    "1": 0.07342995169082125,
     "2": 0.09523809523809523,
     "3": 0.15076923076923077,
-    "4": 0.09090909090909091,
+    "4": 0.16600790513833993,
     "5": 0.15584415584415584,
     "6": 0.20526315789473684,
-    "7": 0.13071895424836602,
-    "8": 0.11764705882352941,
-    "9": 0.36764705882352944,
-    "10": 0.21904761904761905,
-    "11": 0.28888888888888886,
-    "12": 0.3055555555555556,
-    "13": 0.2857142857142857,
-    "14": 0.38095238095238093,
-    "15": 0.2857142857142857,
-    "16": 0.2857142857142857,
-    "17": 0.5714285714285714,
-    "18": 0.3333333333333333,
-    "19": 0.5333333333333333,
-    "20": 0.3333333333333333,
-    "21": 0.3333333333333333,
-    "22": 0.7,
+    "7": 0.36764705882352944,
+    "8": 0.1523809523809524,
+    "9": 0.2857142857142857,
+    "10": 0.38095238095238093,
+    "11": 0.2857142857142857,
+    "12": 0.2857142857142857,
+    "13": 0.3333333333333333,
+    "14": 0.3333333333333333,
+    "15": 0.5333333333333333,
+    "16": 0.3333333333333333,
+    "17": 0.3333333333333333,
+    "18": 0.4,
+    "19": 0.7,
+    "20": 0.5,
+    "21": 0.6,
+    "22": 0.4,
     "23": 0.5,
-    "24": 0.6,
-    "25": 0.4,
+    "24": 0.5,
+    "25": 0.5,
     "26": 0.5,
-    "27": 0.5,
-    "28": 0.8333333333333334,
-    "29": 0.5,
-    "30": 0.6666666666666666,
+    "27": 1.0,
+    "28": 1.0,
+    "29": 0.6666666666666666,
+    "30": 1.0,
     "31": 1.0,
-    "32": 0.6666666666666666,
+    "32": 1.0,
     "33": 0.6666666666666666,
-    "34": 1.0,
+    "34": 0.6666666666666666,
     "35": 1.0,
     "36": 1.0,
     "37": 1.0,
@@ -637,13 +661,32 @@
     "54": 1.0,
     "55": 1.0,
     "56": 1.0,
-    "57": 1.0
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0,
+    "60": 1.0,
+    "61": 1.0,
+    "62": 1.0,
+    "63": 1.0,
+    "64": 1.0,
+    "65": 1.0,
+    "66": 1.0,
+    "67": 1.0,
+    "68": 1.0,
+    "69": 1.0,
+    "70": 1.0,
+    "71": 1.0,
+    "72": 1.0,
+    "73": 1.0,
+    "74": 1.0,
+    "75": 1.0,
+    "76": 1.0
   },
   "gods": [
     {
       "id": "js_script_bootsite",
       "label": "bootSite()",
-      "degree": 33
+      "degree": 34
     },
     {
       "id": "scripts_verify_main",
@@ -659,6 +702,11 @@
       "id": "scripts_verify_log_error",
       "label": "log_error()",
       "degree": 22
+    },
+    {
+      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_21",
+      "label": "Portfolio Website Tracker \u2014 v50.21",
+      "degree": 21
     },
     {
       "id": "modules_audio_playaudiocue",
@@ -684,72 +732,67 @@
       "id": "scripts_manage_payloads_main",
       "label": "main()",
       "degree": 9
-    },
-    {
-      "id": "scripts_verify_parse_html",
-      "label": "parse_html()",
-      "degree": 9
     }
   ],
   "surprises": [
     {
-      "source": "Terms of Service \u2014 Aaradhya Dev Tamrakar",
-      "target": "Main Script",
+      "source": "ADT PWA Icon (192x192)",
+      "target": "Terms of Service",
       "source_files": [
-        "terms.html",
+        "assets/images/icon-192.png",
+        "terms.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 image); connects across different repos/directories"
+    },
+    {
+      "source": "ADT PWA Icon (512x512)",
+      "target": "Terms of Service",
+      "source_files": [
+        "assets/images/icon-512.png",
+        "terms.html"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source; crosses file types (doc \u2194 image); connects across different repos/directories"
+    },
+    {
+      "source": ".github/workflows/verify.yml",
+      "target": "assets/js/script.js",
+      "source_files": [
+        ".github/workflows/verify.yml",
         "assets/js/script.js"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "crosses file types (doc \u2194 code); connects across different repos/directories"
+      "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
     },
     {
-      "source": "Home",
-      "target": "Main Script",
+      "source": ".github/workflows/verify.yml",
+      "target": "scripts/verify.py",
       "source_files": [
-        "index.html",
-        "assets/js/script.js"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "crosses file types (doc \u2194 code); connects across different repos/directories"
-    },
-    {
-      "source": "Lighthouse & Site Audit Workflow",
-      "target": "Main Script",
-      "source_files": [
-        ".github/workflows/lighthouse-audit.yml",
-        "assets/js/script.js"
+        ".github/workflows/verify.yml",
+        "scripts/verify.py"
       ],
       "confidence": "EXTRACTED",
       "relation": "calls",
       "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
     },
     {
-      "source": "Verify Workflow",
-      "target": "Main Script",
+      "source": "bootSite()",
+      "target": "initCountUp()",
       "source_files": [
-        ".github/workflows/verify.yml",
-        "assets/js/script.js"
+        "assets/js/script.js",
+        "assets/js/modules/ui.js"
       ],
-      "confidence": "EXTRACTED",
+      "confidence": "INFERRED",
       "relation": "calls",
-      "why": "crosses file types (code \u2194 doc); connects across different repos/directories"
-    },
-    {
-      "source": "Verify Workflow",
-      "target": "E2E Smoke Tests",
-      "source_files": [
-        ".github/workflows/verify.yml",
-        "scripts/test_e2e.py"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "calls",
-      "why": "crosses file types (doc \u2194 code); connects across different repos/directories"
+      "why": "inferred connection - not explicitly stated in source; bridges separate communities; peripheral node `initCountUp()` unexpectedly reaches hub `bootSite()`"
     }
   ],
   "tokens": {
-    "input": 80818,
-    "output": 7784
+    "input": 24586,
+    "output": 6559
   }
 }
