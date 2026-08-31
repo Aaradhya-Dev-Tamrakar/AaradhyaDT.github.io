@@ -24,6 +24,12 @@ To avoid merge conflicts on `assets/js/last-commit.json` (bot-managed) and preve
      .\sync.ps1 -m "type(scope): detailed commit summary"
      ```
 
+- **Fast Sync (Skip Knowledge Graph)**:
+
+  ```powershell
+  .\sync.ps1 -SkipGraphify
+  ```
+
 - **Safe Pull Only**:
 
   ```powershell

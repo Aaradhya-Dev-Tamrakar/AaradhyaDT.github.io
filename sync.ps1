@@ -45,6 +45,7 @@
 
 .PARAMETER SkipGraph
     Bypasses knowledge graph AST extraction (graphify update .).
+    Aliases: -SkipGraphify, -NoGraph, -NoGraphify, -Skip_Graphify
 
 .PARAMETER SkipVerify
     Bypasses pre-commit verification gate (scripts/verify.py).
@@ -99,6 +100,7 @@ param (
     [switch]$PullOnly,
     [switch]$PushOnly,
     [switch]$NoPush,
+    [Alias("SkipGraphify", "NoGraph", "NoGraphify", "Skip_Graphify")]
     [switch]$SkipGraph,
     [switch]$SkipVerify,
     [switch]$SkipIndex,
@@ -116,6 +118,11 @@ param (
 
 $ErrorActionPreference = "Continue"
 $stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
+
+# Honor SKIP_GRAPHIFY / NO_GRAPHIFY environment variables if configured
+if ($env:SKIP_GRAPHIFY -eq "1" -or $env:SKIP_GRAPHIFY -eq "true" -or $env:NO_GRAPHIFY -eq "1" -or $env:NO_GRAPHIFY -eq "true") {
+    $SkipGraph = $true
+}
 
 # -----------------------------------------------------------------------------
 # Color Logging & UI Utilities
@@ -163,7 +170,7 @@ function Show-HelpGuide {
     Write-Host '  -PullOnly                Safe pull with autostash and LFS pull only'
     Write-Host '  -PushOnly                Push staged/committed work and sync stamp bot'
     Write-Host '  -NoPush                  Commit locally without pushing to remote origin'
-    Write-Host '  -SkipGraph               Skip Graphify AST knowledge graph update'
+    Write-Host '  -SkipGraph, -SkipGraphify, -NoGraph  Skip Graphify AST knowledge graph update'
     Write-Host '  -SkipVerify / -Force     Bypass pre-commit verification suite (scripts/verify.py)'
     Write-Host '  -SkipIndex               Skip static search index regeneration (extract_index.py)'
     Write-Host '  -WhatIf / -DryRun        Preview changes and commit message without modifying git'

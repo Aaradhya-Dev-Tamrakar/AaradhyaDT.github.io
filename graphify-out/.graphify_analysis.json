@@ -110,11 +110,57 @@
       "modules_haptics_initswipenav",
       "modules_haptics_inittouchgestures",
       "modules_haptics_triggerhapticfeedback",
-      "modules_ui_initkeynav"
+      "modules_home_widgets",
+      "modules_home_widgets_boothomewidgets",
+      "modules_home_widgets_initlastcommitbadge",
+      "modules_home_widgets_initlivedates",
+      "modules_home_widgets_initstatusclock"
     ],
     "2": [
-      "ieee_kec_webp",
-      "makerspace_webp",
+      "mcp_server_site_mcp",
+      "mcp_server_site_mcp_handle_resource_read",
+      "mcp_server_site_mcp_handle_tool_call",
+      "mcp_server_site_mcp_process_request",
+      "mcp_server_site_mcp_rationale_290",
+      "mcp_server_site_mcp_rationale_348",
+      "mcp_server_site_mcp_rationale_445",
+      "mcp_server_site_mcp_rationale_604",
+      "mcp_server_site_mcp_run_stdio_server",
+      "modules_cmdk",
+      "modules_cmdk_buildsearchindex",
+      "modules_cmdk_cmdk_entries",
+      "modules_cmdk_initglobalsearch",
+      "modules_cmdk_rendercmdk",
+      "modules_cmdk_revealsearchtarget",
+      "modules_constants",
+      "modules_constants_cmdk_icons",
+      "modules_constants_cmdk_type_label",
+      "modules_constants_quick_nav_pages",
+      "modules_constants_site",
+      "modules_constants_social_icons",
+      "modules_terminal",
+      "modules_terminal_setup",
+      "portfoliowebsite_tracker_v50_23",
+      "scripts_test_e2e",
+      "scripts_test_e2e_quiettesthandler",
+      "scripts_test_e2e_quiettesthandler_init",
+      "scripts_test_e2e_quiettesthandler_log_message",
+      "scripts_test_e2e_quiettesthandler_send_error",
+      "scripts_test_e2e_run_e2e_suite",
+      "unit_test_cmdk_search_test",
+      "unit_test_cmdk_search_test_buildsearchindex",
+      "unit_test_cmdk_search_test_cmdk_entries",
+      "unit_test_cmdk_search_test_executequery",
+      "unit_test_cmdk_search_test_search_static_index",
+      "unit_test_crypto_test",
+      "unit_test_crypto_test_decrypthexpayload",
+      "unit_test_crypto_test_encryptpayload",
+      "unit_test_crypto_test_getdecryptionkey",
+      "unit_test_crypto_test_key_cache"
+    ],
+    "3": [
+      "data_resume_data",
+      "data_resume_data_resume_data",
       "modules_audio",
       "modules_audio_getaudiocontext",
       "modules_audio_initaudiocues",
@@ -136,6 +182,7 @@
       "modules_ui_getresumecontactmarkdown",
       "modules_ui_initcountup",
       "modules_ui_initfiltercountindicators",
+      "modules_ui_initkeynav",
       "modules_ui_initlightbox",
       "modules_ui_initradarcanvas",
       "modules_ui_initreadingmetrics",
@@ -149,46 +196,7 @@
       "modules_ui_sharecontent",
       "modules_ui_skill_radar_domains",
       "modules_ui_spawnparticle",
-      "modules_ui_toggleshortcutsmodal",
-      "nssr_webp"
-    ],
-    "3": [
-      "generate_pwa_icons_py",
-      "mcp_server_site_mcp_py",
-      "modules_cmdk",
-      "modules_cmdk_buildsearchindex",
-      "modules_cmdk_cmdk_entries",
-      "modules_cmdk_initglobalsearch",
-      "modules_cmdk_rendercmdk",
-      "modules_cmdk_revealsearchtarget",
-      "modules_constants",
-      "modules_constants_cmdk_icons",
-      "modules_constants_cmdk_type_label",
-      "modules_constants_quick_nav_pages",
-      "modules_constants_site",
-      "modules_constants_social_icons",
-      "modules_home_widgets",
-      "modules_home_widgets_boothomewidgets",
-      "modules_home_widgets_initlastcommitbadge",
-      "modules_home_widgets_initlivedates",
-      "modules_home_widgets_initstatusclock",
-      "modules_terminal",
-      "modules_terminal_setup",
-      "og_image_readme_md",
-      "portfoliowebsite_tracker_v50_23",
-      "scripts_build_css_py",
-      "scripts_generate_og_cards_py",
-      "scripts_test_e2e_py",
-      "site_webmanifest",
-      "sw",
-      "sw_static_assets",
-      "sync_ps1",
-      "tests_unit_test_cmdk_search_test_mjs",
-      "tests_unit_test_core_helpers_test_mjs",
-      "tests_unit_test_crypto_test_mjs",
-      "tests_unit_test_terminal_test_mjs",
-      "verify_yml",
-      "version"
+      "modules_ui_toggleshortcutsmodal"
     ],
     "4": [
       "aaradhya_dev_tamrakar",
@@ -248,6 +256,54 @@
       "modules_core_subscribepushnotifications"
     ],
     "6": [
+      "404_html",
+      "about_html",
+      "achievements_html",
+      "cert_ai_coding",
+      "cert_ai_launch",
+      "cert_js_bootcamp",
+      "contact_html",
+      "experience_html",
+      "extract_index_py",
+      "index_html",
+      "journey_html",
+      "logo_epc",
+      "logo_fusemachines",
+      "privacy_html",
+      "projects_html",
+      "readme_portfolio",
+      "script_js",
+      "site_mcp_py",
+      "sw_js",
+      "sync_ps1",
+      "terms_html",
+      "verify_py"
+    ],
+    "7": [
+      "dev_logs_portfoliowebsite_tracker",
+      "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
+      "dev_logs_portfoliowebsite_tracker_state_of_play",
+      "dev_logs_portfoliowebsite_tracker_status",
+      "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
+      "dev_logs_portfoliowebsite_tracker_v22_addition_kec_it_club_introduction_to_git_2024_card_closed_no_source_file_available",
+      "dev_logs_portfoliowebsite_tracker_v23_addition_latest_site_refinements_2026_07_18",
+      "dev_logs_portfoliowebsite_tracker_v24_addition_site_optimization_pass_mobile_legend_line_break_fix_2026_07_18",
+      "dev_logs_portfoliowebsite_tracker_v25_addition_bug_check_sweep_pages_1_3_4_2026_07_27",
+      "dev_logs_portfoliowebsite_tracker_v26_addition_bug_check_sweep_page_2_about_2026_07_27",
+      "dev_logs_portfoliowebsite_tracker_v28_addition_site_wide_bug_audit_structural_hardening_pass_2026_08_04",
+      "dev_logs_portfoliowebsite_tracker_v29_addition_site_wide_performance_pwa_seo_styling_upgrades_2026_08_04",
+      "dev_logs_portfoliowebsite_tracker_v30_addition_pwa_service_worker_skip_links_font_preconnects_content_visibility_optimization_expanded_verification_2026_08_04",
+      "dev_logs_portfoliowebsite_tracker_v31_1_addition_interactive_what_s_new_major_commit_showcase_journey_nodes_2026_08_04",
+      "dev_logs_portfoliowebsite_tracker_v31_addition_url_hash_filter_sync_screen_reader_accessibility_pwa_v31_cache_bump_seo_verification_2026_08_04",
+      "dev_logs_portfoliowebsite_tracker_v32_addition_pwa_offline_resilience_reading_progress_bar_3d_card_tilt_journey_node_j_028_2026_08_04",
+      "dev_logs_portfoliowebsite_tracker_v33_addition_interactive_dev_terminal_cmdk_filter_pills_cursor_light_trail_journey_node_j_029_2026_08_04",
+      "dev_logs_portfoliowebsite_tracker_v34_addition_mobile_touch_ux_ios_safe_area_web_haptics_suite_journey_node_j_030_2026_08_08",
+      "dev_logs_portfoliowebsite_tracker_v35_addition_motion_typed_captions_count_up_counters_view_transitions_journey_node_j_031_2026_08_08",
+      "dev_logs_portfoliowebsite_tracker_v36_addition_visual_polish_performance_skill_matrix_mobile_ux_suite_journey_node_j_032_2026_08_08",
+      "dev_logs_portfoliowebsite_tracker_v37_addition_guided_cross_page_site_tour_with_spotlight_overlay_journey_node_j_033_2026_08_08",
+      "dev_logs_portfoliowebsite_tracker_v38_addition_web_audio_micro_sounds_reading_metrics_live_result_indicators_verification_suite_journey_node_j_034_2026_08_08"
+    ],
+    "8": [
       "scripts_site_automation",
       "scripts_site_automation_audit",
       "scripts_site_automation_bump_version",
@@ -271,7 +327,7 @@
       "scripts_site_automation_update_knowledge_graph",
       "scripts_site_automation_update_tracker"
     ],
-    "7": [
+    "9": [
       "modules_tour",
       "modules_tour_closetouroverlay",
       "modules_tour_ensuretouroverlay",
@@ -293,7 +349,7 @@
       "modules_tour_tourreducedmotion",
       "modules_tour_updatetourspotlight"
     ],
-    "8": [
+    "10": [
       "aaradhya_dev_tamrakar_cv",
       "adt_logo",
       "javascript_bootcamp_certificate_kec_it_club_2023",
@@ -312,7 +368,26 @@
       "simops_practitioner_badge",
       "techaxis_prompt_engineering_2026"
     ],
-    "9": [
+    "11": [
+      "readme",
+      "readme_automated_git_workflow_pre_commit_gate_sync_ps1",
+      "readme_codebase_knowledge_graph_graphify",
+      "readme_contact_connect",
+      "readme_global_keyboard_navigation_shortcuts_hud",
+      "readme_google_oauth_2_0_integration",
+      "readme_interactive_developer_terminal_widget_adtterminal",
+      "readme_key_features",
+      "readme_license",
+      "readme_local_development_git_workflow",
+      "readme_multi_tier_access_control_security_model",
+      "readme_repository_structure_directory_map",
+      "readme_site_search_unified_command_palette",
+      "readme_technical_security_architecture",
+      "readme_terminal_commands",
+      "readme_ux_features",
+      "readme_verification_diagnostic_suite"
+    ],
+    "12": [
       "scripts_manage_payloads",
       "scripts_manage_payloads_cmd_export",
       "scripts_manage_payloads_cmd_get",
@@ -331,24 +406,7 @@
       "scripts_manage_payloads_read_access_payloads",
       "scripts_manage_payloads_write_access_payloads"
     ],
-    "10": [
-      "404_html",
-      "about_html",
-      "achievements_html",
-      "contact_html",
-      "experience_html",
-      "extract_index_py",
-      "index_html",
-      "journey_html",
-      "privacy_html",
-      "projects_html",
-      "readme_md",
-      "script_js",
-      "site_mcp_py",
-      "terms_html",
-      "verify_py"
-    ],
-    "11": [
+    "13": [
       "js_bg_animations",
       "js_bg_animations_initbackgroundanimations",
       "js_bg_animations_pcbtraces",
@@ -365,7 +423,19 @@
       "js_bg_animations_signalwavebackground_resize",
       "js_bg_animations_signalwavebackground_start"
     ],
-    "12": [
+    "14": [
+      "sync",
+      "sync_format_markdownhygiene",
+      "sync_get_autocommitmessage",
+      "sync_get_lfsinstalled",
+      "sync_get_pythonpath",
+      "sync_show_diagnostics",
+      "sync_show_helpguide",
+      "sync_sync_botstamp",
+      "sync_update_trackerlog",
+      "sync_write_badge"
+    ],
+    "15": [
       "agents",
       "agents_1_git_workflow_automation_critical_strict_enforcement",
       "agents_2_knowledge_graph_codebase_navigation_graphify",
@@ -374,7 +444,25 @@
       "agents_agent_rules_workflow_guidelines",
       "agents_commands"
     ],
-    "13": [
+    "16": [
+      "any",
+      "scripts_generate_og_cards",
+      "scripts_generate_og_cards_generate_cards",
+      "scripts_generate_og_cards_main",
+      "scripts_generate_og_cards_rationale_163",
+      "scripts_generate_og_cards_rationale_81",
+      "scripts_generate_og_cards_render_svg_card"
+    ],
+    "17": [
+      "d_aaradhyadt_aaradhyadt_github_io_scripts_extract_index_py",
+      "scripts_extract_index_extract_achievements",
+      "scripts_extract_index_extract_projects",
+      "scripts_extract_index_main",
+      "scripts_extract_index_render_block",
+      "scripts_extract_index_render_entry",
+      "scripts_extract_index_text_of"
+    ],
+    "18": [
       "gemini",
       "gemini_1_git_workflow_automation_critical_strict_enforcement",
       "gemini_2_knowledge_graph_codebase_navigation_graphify",
@@ -383,7 +471,7 @@
       "gemini_antigravity_ide_gemini_agent_rules_for_portfolio_repository",
       "gemini_commands"
     ],
-    "14": [
+    "19": [
       "claude",
       "claude_encrypted_sections_vip_payloads_access_js",
       "claude_file_delivery",
@@ -391,331 +479,377 @@
       "claude_output_constraints_strict",
       "claude_working_conventions_for_this_repo"
     ],
-    "15": [
+    "20": [
+      "scripts_build_css",
+      "scripts_build_css_build_all",
+      "scripts_build_css_minify_css",
+      "scripts_build_css_rationale_17",
+      "scripts_build_css_rationale_48"
+    ],
+    "21": [
+      "scripts_generate_pwa_icons",
+      "scripts_generate_pwa_icons_find_browser",
+      "scripts_generate_pwa_icons_generate_icon",
+      "scripts_generate_pwa_icons_main",
+      "scripts_generate_pwa_icons_py_path"
+    ],
+    "22": [
       "d_aaradhyadt_aaradhyadt_github_io_scripts_dev_serve_py",
       "scripts_dev_serve_handler",
       "scripts_dev_serve_handler_end_headers",
       "scripts_dev_serve_handler_send_error"
     ],
-    "16": [
+    "23": [
       "ieee_kec_agile_workshop_2025_ieee_kec_agile_workshop_2025",
       "ieee_kec_electronics_for_all_mentorship_2025_ieee_kec_electronics_for_all_mentorship_2025",
       "ieee_kec_ieee_day_organizer_2025_ieee_kec_ieee_day_organizer_2025",
       "ieee_kec_organization"
     ],
-    "17": [
+    "24": [
       "ieee_organization",
       "ieee_wie_organization",
       "memieee500_certificate",
       "memwie050_certificate"
     ],
-    "18": [
+    "25": [
       "concept_python_programming",
       "introduction_to_python_47717251_certificate",
       "introduction_to_python_itp0014139470763_certificate"
     ],
-    "19": [
+    "26": [
       "ieee_kec_ieee_day_organizer_2025",
       "ieee_kec_spax_organization_2026",
       "ieee_kec_volunteering_vice_secretary_2025_2026"
     ],
-    "20": [
+    "27": [
       "introduction_to_git_48697649_certificate",
       "introduction_to_git_cpe0469867571113_certificate",
       "shared_git_concept"
     ],
-    "21": [
+    "28": [
       "kec_robotics_club_pcb_design_fabrication_workshop_2025_kec_robotics_club",
       "kec_robotics_club_pcb_design_fabrication_workshop_2025_pcb_design_fabrication",
       "laser_safety_awareness_training_laser_safety"
     ],
-    "22": [
+    "29": [
       "sanitize_and_payload",
       "sanitize_and_payload_generate_payload",
       "sanitize_and_payload_sanitize_content"
     ],
-    "23": [
+    "30": [
       "simops_ai_for_graduates_98452248595354_certificate",
       "simops_expert_12836702612982_certificate",
       "simops_platform"
     ],
-    "24": [
+    "31": [
       "simops_concept",
       "simops_fundamentals_25303246876434_certificate",
       "simops_practitioner_52653675650240_certificate"
     ],
-    "25": [
+    "32": [
+      "unit_test_core_helpers_test",
+      "unit_test_core_helpers_test_computelivedates",
+      "unit_test_core_helpers_test_getcurrentpagefile"
+    ],
+    "33": [
+      "unit_test_terminal_test",
+      "unit_test_terminal_test_parseterminalcommand",
+      "unit_test_terminal_test_resolvenavigationtarget"
+    ],
+    "34": [
       "concept_cybersecurity",
       "offenso_security_bypass_webinar_2025_certificate"
     ],
-    "26": [
+    "35": [
       "concept_hardware_maintenance",
       "printer_maintenance_certification_certificate"
     ],
-    "27": [
+    "36": [
       "concept_uav_technology",
       "nepatronix_drone_hub_nepal_3day_drone_training_2026_certificate"
     ],
-    "28": [
+    "37": [
       "concept_web_development",
       "microsoft_learn_html_css_github_pages_certificate"
     ],
-    "29": [
+    "38": [
+      "d_aaradhyadt_aaradhyadt_github_io_dev_logs_og_image_readme_md",
+      "og_image_readme_og_image_source"
+    ],
+    "39": [
       "data_releases",
       "data_releases_site_releases"
     ],
-    "30": [
-      "data_resume_data",
-      "data_resume_data_resume_data"
-    ],
-    "31": [
+    "40": [
       "data_search_index",
       "data_search_index_search_static_index"
     ],
-    "32": [
+    "41": [
       "epc_basic_electronics_2025_1",
       "epc_basic_electronics_2025_2"
     ],
-    "33": [
+    "42": [
       "epc_basic_electronics_2025_banner",
       "epc_club_logo"
     ],
-    "34": [
+    "43": [
       "eu_ai_act_literacy_eu0028355472158_certificate",
       "eu_ai_act_literacy_eu_ai_act"
     ],
-    "35": [
+    "44": [
       "gnome_nepal_linux_opensource_workshop_2024",
       "kecit_git_github_session_2024"
     ],
-    "36": [
+    "45": [
       "ieee_ieeextreme_19_0_2025",
       "ieee_pulchowk_prextreme_cp_workshop"
     ],
-    "37": [
+    "46": [
       "ieee_ieeextreme_19_0_2025_certificate",
       "ieee_ieeextreme_19_0_2025_ieee"
     ],
-    "38": [
+    "47": [
       "ieee_wie_latex_training_2026_certificate",
       "ieee_wie_latex_training_2026_latex"
     ],
-    "39": [
+    "48": [
       "kec_electrical_club",
       "proteus_workshop_2024_banner"
     ],
-    "40": [
+    "49": [
       "kec_it_club_aws_fundamentals_2025_aws_fundamentals",
       "kec_it_club_aws_fundamentals_2025_kec_it_club"
     ],
-    "41": [
+    "50": [
       "prompt_engineering_concept",
       "techaxis_prompt_engineering_2026_certificate"
     ],
-    "42": [
-      "99947412_pdf"
-    ],
-    "43": [
-      "ai_assisted_coding_pdf"
-    ],
-    "44": [
-      "ai_product_launch_pdf"
-    ],
-    "45": [
-      "ai_security_pdf"
-    ],
-    "46": [
-      "autocad_workshop_2025"
-    ],
-    "47": [
-      "base_css"
-    ],
-    "48": [
-      "bg_animations_js"
-    ],
-    "49": [
-      "deploy_pages_yml"
-    ],
-    "50": [
-      "dristi_3_0_2025"
-    ],
     "51": [
-      "ev_ratings_pdf"
+      "sw",
+      "sw_static_assets"
     ],
     "52": [
-      "fusemachines_logo"
+      "99947412_pdf"
     ],
     "53": [
-      "gcsbr_poster_jpg"
+      "ai_security_pdf"
     ],
     "54": [
-      "generate_a_study_guide"
+      "autocad_workshop_2025"
     ],
     "55": [
-      "generate_a_study_guide_certificate"
+      "base_css"
     ],
     "56": [
-      "google_oauth"
+      "bg_animations_js"
     ],
     "57": [
-      "icon_192_png"
+      "deploy_pages_yml"
     ],
     "58": [
-      "icon_512_png"
+      "dristi_3_0_2025"
     ],
     "59": [
-      "ieee_kec_agile_workshop_2025"
+      "ev_ratings_pdf"
     ],
     "60": [
-      "ieee_kec_electronics_for_all_mentorship_2025"
+      "fusemachines_logo"
     ],
     "61": [
-      "ieee_kec_logo"
+      "gcsbr_poster_jpg"
     ],
     "62": [
-      "ieee_nepal_section_clw_2026"
+      "generate_a_study_guide"
     ],
     "63": [
-      "ieee_wie_latex_training_2026"
+      "generate_a_study_guide_certificate"
     ],
     "64": [
-      "introduction_to_git_48697649"
+      "google_oauth"
     ],
     "65": [
-      "introduction_to_git_cpe0469867571113"
+      "google_verification"
     ],
     "66": [
-      "introduction_to_python_47717251"
+      "icon_192_png"
     ],
     "67": [
-      "introduction_to_python_itp0014139470763"
+      "icon_512_png"
     ],
     "68": [
-      "introduction_to_security_in_the_world_of_ai"
+      "ieee_kec_agile_workshop_2025"
     ],
     "69": [
-      "kec_it_club_aws_fundamentals_2025"
+      "ieee_kec_electronics_for_all_mentorship_2025"
     ],
     "70": [
-      "kec_music_club_svg"
+      "ieee_kec_logo"
     ],
     "71": [
-      "kec_robotics_club_pcb_design_fabrication_workshop_2025"
+      "ieee_kec_webp"
     ],
     "72": [
-      "laser_safety_awareness_training"
+      "ieee_nepal_section_clw_2026"
     ],
     "73": [
-      "lighthouse_audit_yml"
+      "ieee_wie_latex_training_2026"
     ],
     "74": [
-      "machine_learning_hackathon_2024"
+      "introduction_to_git_48697649"
     ],
     "75": [
-      "makerspace_png"
+      "introduction_to_git_cpe0469867571113"
     ],
     "76": [
-      "mr_kec_2025_2"
+      "introduction_to_python_47717251"
     ],
     "77": [
-      "mr_kec_2025_3"
+      "introduction_to_python_itp0014139470763"
     ],
     "78": [
-      "nssr_png"
+      "introduction_to_security_in_the_world_of_ai"
     ],
     "79": [
-      "og_alpha_svg"
+      "kec_it_club_aws_fundamentals_2025"
     ],
     "80": [
-      "og_fuse_ai_svg"
+      "kec_music_club_svg"
     ],
     "81": [
-      "og_gcsbr_svg"
+      "kec_robotics_club_pcb_design_fabrication_workshop_2025"
     ],
     "82": [
-      "og_master_svg"
+      "laser_safety_awareness_training"
     ],
     "83": [
-      "og_spark_svg"
+      "lighthouse_audit_yml"
     ],
     "84": [
-      "pcb_design_fabrication_workshop_2025_day1"
+      "machine_learning_hackathon_2024"
     ],
     "85": [
-      "pcb_design_fabrication_workshop_2025_day2"
+      "makerspace_png"
     ],
     "86": [
-      "pcb_design_fabrication_workshop_2025_day3"
+      "makerspace_webp"
     ],
     "87": [
-      "proteus_workshop_2024_day1"
+      "mr_kec_2025_2"
     ],
     "88": [
-      "proteus_workshop_2024_day2"
+      "mr_kec_2025_3"
     ],
     "89": [
-      "proteus_workshop_2024_svg"
+      "nssr_png"
     ],
     "90": [
-      "readme_biasaperture_project"
+      "nssr_webp"
     ],
     "91": [
-      "recommending_skincare_products_certificate"
+      "og_alpha_svg"
     ],
     "92": [
-      "robots_txt"
+      "og_fuse_ai_svg"
     ],
     "93": [
-      "sports_week_2026_svg"
+      "og_gcsbr_svg"
     ],
     "94": [
-      "tokens_css"
+      "og_image_readme_md"
     ],
     "95": [
-      "uh3001_certificate"
+      "og_master_svg"
     ],
     "96": [
-      "update_search_index_yml"
+      "og_spark_svg"
     ],
     "97": [
+      "pcb_design_fabrication_workshop_2025_day1"
+    ],
+    "98": [
+      "pcb_design_fabrication_workshop_2025_day2"
+    ],
+    "99": [
+      "pcb_design_fabrication_workshop_2025_day3"
+    ],
+    "100": [
+      "proteus_workshop_2024_day1"
+    ],
+    "101": [
+      "proteus_workshop_2024_day2"
+    ],
+    "102": [
+      "proteus_workshop_2024_svg"
+    ],
+    "103": [
+      "readme_biasaperture_project"
+    ],
+    "104": [
+      "recommending_skincare_products_certificate"
+    ],
+    "105": [
+      "robots_txt"
+    ],
+    "106": [
+      "site_webmanifest"
+    ],
+    "107": [
+      "sports_week_2026_svg"
+    ],
+    "108": [
+      "tokens_css"
+    ],
+    "109": [
+      "uh3001_certificate"
+    ],
+    "110": [
+      "update_search_index_yml"
+    ],
+    "111": [
+      "verify_yml"
+    ],
+    "112": [
+      "version"
+    ],
+    "113": [
       "workflow_stamp_last_commit"
     ]
   },
   "cohesion": {
     "0": 0.09726775956284153,
-    "1": 0.07123034227567067,
-    "2": 0.08819345661450925,
-    "3": 0.06666666666666667,
+    "1": 0.06509803921568627,
+    "2": 0.05897435897435897,
+    "3": 0.08819345661450925,
     "4": 0.09401709401709402,
     "5": 0.15076923076923077,
-    "6": 0.15584415584415584,
-    "7": 0.20526315789473684,
-    "8": 0.11764705882352941,
-    "9": 0.36764705882352944,
-    "10": 0.2,
-    "11": 0.21904761904761905,
-    "12": 0.2857142857142857,
-    "13": 0.2857142857142857,
-    "14": 0.3333333333333333,
-    "15": 0.6666666666666666,
-    "16": 0.5,
-    "17": 0.5,
-    "18": 1.0,
-    "19": 0.6666666666666666,
-    "20": 1.0,
-    "21": 0.6666666666666666,
-    "22": 1.0,
-    "23": 1.0,
-    "24": 1.0,
+    "6": 0.1341991341991342,
+    "7": 0.09090909090909091,
+    "8": 0.15584415584415584,
+    "9": 0.20526315789473684,
+    "10": 0.11764705882352941,
+    "11": 0.11764705882352941,
+    "12": 0.36764705882352944,
+    "13": 0.21904761904761905,
+    "14": 0.28888888888888886,
+    "15": 0.2857142857142857,
+    "16": 0.38095238095238093,
+    "17": 0.5714285714285714,
+    "18": 0.2857142857142857,
+    "19": 0.3333333333333333,
+    "20": 0.5,
+    "21": 0.6,
+    "22": 0.6666666666666666,
+    "23": 0.5,
+    "24": 0.5,
     "25": 1.0,
-    "26": 1.0,
+    "26": 0.6666666666666666,
     "27": 1.0,
-    "28": 1.0,
+    "28": 0.6666666666666666,
     "29": 1.0,
     "30": 1.0,
     "31": 1.0,
-    "32": 1.0,
-    "33": 1.0,
+    "32": 0.6666666666666666,
+    "33": 0.6666666666666666,
     "34": 1.0,
     "35": 1.0,
     "36": 1.0,
@@ -779,13 +913,29 @@
     "94": 1.0,
     "95": 1.0,
     "96": 1.0,
-    "97": 1.0
+    "97": 1.0,
+    "98": 1.0,
+    "99": 1.0,
+    "100": 1.0,
+    "101": 1.0,
+    "102": 1.0,
+    "103": 1.0,
+    "104": 1.0,
+    "105": 1.0,
+    "106": 1.0,
+    "107": 1.0,
+    "108": 1.0,
+    "109": 1.0,
+    "110": 1.0,
+    "111": 1.0,
+    "112": 1.0,
+    "113": 1.0
   },
   "gods": [
     {
       "id": "js_script_bootsite",
       "label": "bootSite()",
-      "degree": 34
+      "degree": 33
     },
     {
       "id": "scripts_verify_main",
@@ -800,11 +950,6 @@
     {
       "id": "scripts_verify_log_error",
       "label": "log_error()",
-      "degree": 22
-    },
-    {
-      "id": "portfoliowebsite_tracker_v50_23",
-      "label": "Portfolio Website Tracker \u2014 v50.23",
       "degree": 22
     },
     {
@@ -830,6 +975,11 @@
     {
       "id": "aaradhya_dev_tamrakar_cv",
       "label": "Aaradhya Dev Tamrakar CV",
+      "degree": 12
+    },
+    {
+      "id": "script_js",
+      "label": "Boot Orchestrator",
       "degree": 12
     }
   ],
@@ -891,7 +1041,7 @@
     }
   ],
   "tokens": {
-    "input": 182758,
-    "output": 18027
+    "input": 0,
+    "output": 0
   }
 }
