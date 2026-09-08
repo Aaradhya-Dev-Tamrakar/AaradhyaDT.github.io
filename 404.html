@@ -214,6 +214,10 @@
     <div id="not-found-actions">
       <a href="/index.html" class="btn-primary" aria-label="Return to homepage">Back to Home</a>
       <a href="/contact.html" class="btn-ghost" aria-label="Report a broken link">Report a Broken Link →</a>
+      <button type="button" class="btn-ghost" onclick="if(typeof initGlobalSearch==='function')initGlobalSearch(true); else if(typeof window.__openCmdk==='function')window.__openCmdk();" aria-label="Open site search (Ctrl+K)" title="Search the site">
+        <span aria-hidden="true">⌘</span> Search the site
+        <span style="font-family:var(--mono,monospace);font-size:0.7em;opacity:0.6;margin-left:0.35em;">(Ctrl+K)</span>
+      </button>
     </div>
 
     <section id="quick-nav" aria-label="Explore the site">

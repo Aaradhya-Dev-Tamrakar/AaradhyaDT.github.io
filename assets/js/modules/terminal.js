@@ -1,9 +1,8 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v53.8)
+   MODULE: terminal.js — aaradhyadt.github.io (v53.9)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
-/* ── Interactive Dev Terminal Widget (v33) ─────────────────── */
 (function initTerminalWidget() {
   function setup() {
     const term = document.getElementById('adtTerminal');
@@ -14,7 +13,11 @@
     const quickBtns = term.querySelectorAll('.terminal-quick-cmd');
     if (!body || !input) return;
 
-    // Dynamically set terminal welcome banner version from latest SITE_RELEASES
+    // Make terminal output accessible to screen readers
+    body.setAttribute('aria-live', 'polite');
+    body.setAttribute('aria-relevant', 'additions');
+    body.setAttribute('aria-atomic', 'false');
+
     const welcomeSpan = body.querySelector('.term-green');
     if (welcomeSpan && typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]) {
       welcomeSpan.textContent = `Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal (${SITE_RELEASES[0].version}).`;
@@ -159,7 +162,7 @@
       stats: () => {
         const achvCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.achievement || []).length : 39;
         const projCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.project || []).length : 30;
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.8';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.9';
         return `
 <span class="term-green">[ADT PORTFOLIO TELEMETRY ${currentVer}]</span><br>
   • <span class="term-gold">Published Projects:</span> ${projCount} verified repositories &amp; systems<br>
@@ -190,7 +193,7 @@
       },
       run: (arg) => {
         const sub = (arg || '').toLowerCase().trim();
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.8';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.9';
         if (sub === 'spark') {
           return `
 <span class="term-green">[SPARK TELEMETRY SIMULATOR ${currentVer}]</span><br>
@@ -370,7 +373,7 @@
         } else {
           checks.push('<span class="term-red">\u2717</span> Search index: SEARCH_STATIC_INDEX not found');
         }
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.8';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.9';
         return `<span class="term-green">[SITE HEALTHCHECK ${currentVer}]</span><br>` + checks.map(c => '  ' + c).join('<br>');
       },
       sound: () => {

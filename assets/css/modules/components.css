@@ -1726,4 +1726,66 @@ html[data-theme="light"] .card-gradient-border::before {
 }
 
 
+/* ── Skeleton / Loading State Utilities ─────────────────────────
+   Use these classes to show placeholder shimmers while content loads.
+   .skeleton          — base shimmer (apply to any block element)
+   .skeleton-text     — single text line placeholder
+   .skeleton-card     — card-shaped placeholder
+   .skeleton-avatar   — circular avatar placeholder
+   .skeleton-title    — wider title-line placeholder
+   ────────────────────────────────────────────────────────────── */
+@keyframes skeleton-shimmer {
+  0%   { background-position: -200% 0; }
+  100% { background-position:  200% 0; }
+}
 
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--glass-bg, rgba(255, 255, 255, 0.04)) 25%,
+    var(--glass-border, rgba(255, 255, 255, 0.10)) 50%,
+    var(--glass-bg, rgba(255, 255, 255, 0.04)) 75%
+  );
+  background-size: 200% 100%;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+  border-radius: 6px;
+  display: block;
+}
+
+.skeleton-text {
+  height: 1em;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.skeleton-text + .skeleton-text {
+  margin-top: 0.5em;
+  width: 75%;
+}
+
+.skeleton-card {
+  border-radius: var(--radius-card, 12px);
+  min-height: 120px;
+  border: 1px solid var(--line);
+}
+
+.skeleton-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.skeleton-title {
+  height: 1.4em;
+  width: 55%;
+  border-radius: 4px;
+}
+
+/* Disable shimmer for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton {
+    animation: none;
+    background: var(--glass-bg, rgba(255, 255, 255, 0.04));
+  }
+}

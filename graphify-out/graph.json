@@ -59,6 +59,32 @@
       "source_location": "L77"
     },
     {
+      "id": "tests_unit_test_shortcuts_test_mockdocument",
+      "label": "MockDocument",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": "mockdocument",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L32"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockelement",
+      "label": "MockElement",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": "mockelement",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L5"
+    },
+    {
       "id": "scripts_test_e2e_quiettesthandler",
       "label": "QuietTestHandler",
       "_callable": true,
@@ -562,19 +588,7 @@
       "file_type": "code",
       "norm_label": "closeresumegenerator()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1409"
-    },
-    {
-      "id": "assets_js_modules_ui_closeshortcutsmodal",
-      "label": "closeShortcutsModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ui.js",
-      "file_type": "code",
-      "norm_label": "closeshortcutsmodal()",
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L214"
+      "source_location": "L1254"
     },
     {
       "id": "assets_js_modules_ui_closeskillradarmodal",
@@ -586,7 +600,7 @@
       "file_type": "code",
       "norm_label": "closeskillradarmodal()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1038"
+      "source_location": "L883"
     },
     {
       "id": "assets_js_modules_ui_closewhatsnewmodal",
@@ -610,7 +624,7 @@
       "file_type": "code",
       "norm_label": "copyresumeplaintext()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1217"
+      "source_location": "L1062"
     },
     {
       "id": "assets_js_modules_ui_downloadresumejson",
@@ -622,7 +636,7 @@
       "file_type": "code",
       "norm_label": "downloadresumejson()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1185"
+      "source_location": "L1030"
     },
     {
       "id": "assets_js_modules_ui_downloadresumemarkdown",
@@ -634,7 +648,7 @@
       "file_type": "code",
       "norm_label": "downloadresumemarkdown()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1201"
+      "source_location": "L1046"
     },
     {
       "id": "assets_js_modules_ui_generateresumejson",
@@ -646,7 +660,7 @@
       "file_type": "code",
       "norm_label": "generateresumejson()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1137"
+      "source_location": "L982"
     },
     {
       "id": "assets_js_modules_ui_generateresumemarkdown",
@@ -658,7 +672,7 @@
       "file_type": "code",
       "norm_label": "generateresumemarkdown()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1110"
+      "source_location": "L955"
     },
     {
       "id": "assets_js_modules_ui_generateresumeplaintext",
@@ -670,7 +684,7 @@
       "file_type": "code",
       "norm_label": "generateresumeplaintext()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1082"
+      "source_location": "L927"
     },
     {
       "id": "assets_js_modules_ui_getresumecontacthtml",
@@ -682,7 +696,7 @@
       "file_type": "code",
       "norm_label": "getresumecontacthtml()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1060"
+      "source_location": "L905"
     },
     {
       "id": "assets_js_modules_ui_getresumecontactmarkdown",
@@ -694,7 +708,7 @@
       "file_type": "code",
       "norm_label": "getresumecontactmarkdown()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1072"
+      "source_location": "L917"
     },
     {
       "id": "assets_js_modules_ui_initcountup",
@@ -706,7 +720,7 @@
       "file_type": "code",
       "norm_label": "initcountup()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L234"
+      "source_location": "L79"
     },
     {
       "id": "assets_js_modules_ui_initcountup_animatenum",
@@ -718,7 +732,7 @@
       "file_type": "code",
       "norm_label": "animatenum()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L254"
+      "source_location": "L99"
     },
     {
       "id": "assets_js_modules_ui_initcountup_animatenum_step",
@@ -730,7 +744,7 @@
       "file_type": "code",
       "norm_label": "step()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L265"
+      "source_location": "L110"
     },
     {
       "id": "assets_js_modules_ui_initfiltercountindicators",
@@ -742,7 +756,7 @@
       "file_type": "code",
       "norm_label": "initfiltercountindicators()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L364"
+      "source_location": "L209"
     },
     {
       "id": "assets_js_modules_ui_initfiltercountindicators_updateachvcount",
@@ -754,7 +768,7 @@
       "file_type": "code",
       "norm_label": "updateachvcount()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L402"
+      "source_location": "L247"
     },
     {
       "id": "assets_js_modules_ui_initfiltercountindicators_updateprojectcount",
@@ -766,7 +780,7 @@
       "file_type": "code",
       "norm_label": "updateprojectcount()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L380"
+      "source_location": "L225"
     },
     {
       "id": "assets_js_modules_ui_initkeynav",
@@ -778,7 +792,7 @@
       "file_type": "code",
       "norm_label": "initkeynav()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L531"
+      "source_location": "L376"
     },
     {
       "id": "assets_js_modules_ui_initlightbox",
@@ -790,7 +804,7 @@
       "file_type": "code",
       "norm_label": "initlightbox()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L424"
+      "source_location": "L269"
     },
     {
       "id": "assets_js_modules_ui_initlightbox_closelightbox",
@@ -802,7 +816,7 @@
       "file_type": "code",
       "norm_label": "closelightbox()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L466"
+      "source_location": "L311"
     },
     {
       "id": "assets_js_modules_ui_initlightbox_openlightbox",
@@ -814,7 +828,7 @@
       "file_type": "code",
       "norm_label": "openlightbox()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L435"
+      "source_location": "L280"
     },
     {
       "id": "assets_js_modules_ui_initradarcanvas",
@@ -826,7 +840,7 @@
       "file_type": "code",
       "norm_label": "initradarcanvas()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L772"
+      "source_location": "L617"
     },
     {
       "id": "assets_js_modules_ui_initradarcanvas_renderradar",
@@ -838,7 +852,7 @@
       "file_type": "code",
       "norm_label": "renderradar()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L782"
+      "source_location": "L627"
     },
     {
       "id": "assets_js_modules_ui_initradarcanvas_renderradar_getpointcoordinates",
@@ -850,7 +864,7 @@
       "file_type": "code",
       "norm_label": "getpointcoordinates()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L816"
+      "source_location": "L661"
     },
     {
       "id": "assets_js_modules_ui_initreadingmetrics",
@@ -862,7 +876,7 @@
       "file_type": "code",
       "norm_label": "initreadingmetrics()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L331"
+      "source_location": "L176"
     },
     {
       "id": "assets_js_modules_ui_initskillradar",
@@ -874,7 +888,7 @@
       "file_type": "code",
       "norm_label": "initskillradar()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1046"
+      "source_location": "L891"
     },
     {
       "id": "assets_js_modules_ui_inittypedcaption",
@@ -886,7 +900,7 @@
       "file_type": "code",
       "norm_label": "inittypedcaption()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L287"
+      "source_location": "L132"
     },
     {
       "id": "assets_js_modules_ui_inittypedcaption_typechar",
@@ -898,7 +912,7 @@
       "file_type": "code",
       "norm_label": "typechar()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L314"
+      "source_location": "L159"
     },
     {
       "id": "assets_js_modules_ui_openresumegenerator",
@@ -910,19 +924,7 @@
       "file_type": "code",
       "norm_label": "openresumegenerator()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1242"
-    },
-    {
-      "id": "assets_js_modules_ui_openshortcutsmodal",
-      "label": "openShortcutsModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ui.js",
-      "file_type": "code",
-      "norm_label": "openshortcutsmodal()",
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L77"
+      "source_location": "L1087"
     },
     {
       "id": "assets_js_modules_ui_openskillradarmodal",
@@ -934,7 +936,7 @@
       "file_type": "code",
       "norm_label": "openskillradarmodal()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L980"
+      "source_location": "L825"
     },
     {
       "id": "assets_js_modules_ui_openwhatsnewmodal",
@@ -958,7 +960,7 @@
       "file_type": "code",
       "norm_label": "rendertailoredresumepreview()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1418"
+      "source_location": "L1263"
     },
     {
       "id": "assets_js_modules_ui_sharecontent",
@@ -970,7 +972,7 @@
       "file_type": "code",
       "norm_label": "sharecontent()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1378"
+      "source_location": "L1223"
     },
     {
       "id": "assets_js_modules_ui_spawnparticle",
@@ -982,19 +984,7 @@
       "file_type": "code",
       "norm_label": "spawnparticle()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L640"
-    },
-    {
-      "id": "assets_js_modules_ui_toggleshortcutsmodal",
-      "label": "toggleShortcutsModal()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "ui.js",
-      "file_type": "code",
-      "norm_label": "toggleshortcutsmodal()",
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L222"
+      "source_location": "L485"
     },
     {
       "id": "scripts_manage_payloads_cmd_export",
@@ -1597,6 +1587,186 @@
       "source_location": "L97"
     },
     {
+      "id": "tests_unit_test_shortcuts_test_closemodal",
+      "label": "closeModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": "closemodal()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L73"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockdocument_appendchild",
+      "label": ".appendChild()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": ".appendchild()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L45"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockdocument_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L33"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockdocument_createelement",
+      "label": ".createElement()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": ".createelement()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L40"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockdocument_getelementbyid",
+      "label": ".getElementById()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": ".getelementbyid()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L37"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockelement_addeventlistener",
+      "label": ".addEventListener()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": ".addeventlistener()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L26"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockelement_appendchild",
+      "label": ".appendChild()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": ".appendchild()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L21"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockelement_constructor",
+      "label": ".constructor()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": ".constructor()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L6"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockelement_getattribute",
+      "label": ".getAttribute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": ".getattribute()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L25"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_mockelement_setattribute",
+      "label": ".setAttribute()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": ".setattribute()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L24"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_openmodal",
+      "label": "openModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": "openmodal()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L56"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test_togglemodal",
+      "label": "toggleModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": "togglemodal()",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L80"
+    },
+    {
+      "id": "assets_js_modules_shortcuts_closeshortcutsmodal",
+      "label": "closeShortcutsModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "shortcuts.js",
+      "file_type": "code",
+      "norm_label": "closeshortcutsmodal()",
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L144"
+    },
+    {
+      "id": "assets_js_modules_shortcuts_openshortcutsmodal",
+      "label": "openShortcutsModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "shortcuts.js",
+      "file_type": "code",
+      "norm_label": "openshortcutsmodal()",
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L7"
+    },
+    {
+      "id": "assets_js_modules_shortcuts_toggleshortcutsmodal",
+      "label": "toggleShortcutsModal()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "shortcuts.js",
+      "file_type": "code",
+      "norm_label": "toggleshortcutsmodal()",
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L152"
+    },
+    {
       "id": "mcp_server_site_mcp_handle_resource_read",
       "label": "handle_resource_read()",
       "_callable": true,
@@ -1738,7 +1908,7 @@
       "file_type": "code",
       "norm_label": "bootsite()",
       "source_file": "assets/js/script.js",
-      "source_location": "L103"
+      "source_location": "L160"
     },
     {
       "id": "assets_js_script_initnetworkstatuslisteners",
@@ -1750,7 +1920,7 @@
       "file_type": "code",
       "norm_label": "initnetworkstatuslisteners()",
       "source_file": "assets/js/script.js",
-      "source_location": "L182"
+      "source_location": "L239"
     },
     {
       "id": "assets_js_script_initreadingprogressbar",
@@ -1762,7 +1932,7 @@
       "file_type": "code",
       "norm_label": "initreadingprogressbar()",
       "source_file": "assets/js/script.js",
-      "source_location": "L167"
+      "source_location": "L224"
     },
     {
       "id": "assets_js_script_initreadingprogressbar_updateprogress",
@@ -1774,7 +1944,7 @@
       "file_type": "code",
       "norm_label": "updateprogress()",
       "source_file": "assets/js/script.js",
-      "source_location": "L170"
+      "source_location": "L227"
     },
     {
       "id": "assets_js_script_initserviceworker",
@@ -1786,7 +1956,19 @@
       "file_type": "code",
       "norm_label": "initserviceworker()",
       "source_file": "assets/js/script.js",
-      "source_location": "L157"
+      "source_location": "L214"
+    },
+    {
+      "id": "assets_js_script_loadone",
+      "label": "loadOne()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 17,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "loadone()",
+      "source_file": "assets/js/script.js",
+      "source_location": "L44"
     },
     {
       "id": "assets_js_script_queueofflinecontactmessage",
@@ -1798,7 +1980,7 @@
       "file_type": "code",
       "norm_label": "queueofflinecontactmessage()",
       "source_file": "assets/js/script.js",
-      "source_location": "L225"
+      "source_location": "L282"
     },
     {
       "id": "assets_js_script_syncqueuedcontactmessages",
@@ -1810,7 +1992,7 @@
       "file_type": "code",
       "norm_label": "syncqueuedcontactmessages()",
       "source_file": "assets/js/script.js",
-      "source_location": "L192"
+      "source_location": "L249"
     },
     {
       "id": "scripts_generate_og_cards_generate_cards",
@@ -2506,7 +2688,7 @@
       "file_type": "code",
       "norm_label": "setup()",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L8"
+      "source_location": "L7"
     },
     {
       "id": "assets_js_modules_terminal_setup_appendoutput",
@@ -2518,7 +2700,7 @@
       "file_type": "code",
       "norm_label": "appendoutput()",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L453"
+      "source_location": "L456"
     },
     {
       "id": "assets_js_modules_terminal_setup_escapehtml",
@@ -2530,7 +2712,7 @@
       "file_type": "code",
       "norm_label": "escapehtml()",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L464"
+      "source_location": "L467"
     },
     {
       "id": "assets_js_modules_terminal_setup_execcommand",
@@ -2542,7 +2724,7 @@
       "file_type": "code",
       "norm_label": "execcommand()",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L468"
+      "source_location": "L471"
     },
     {
       "id": "scripts_build_css_build_all",
@@ -3681,7 +3863,7 @@
       "file_type": "code",
       "norm_label": "skill_radar_domains",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L763"
+      "source_location": "L608"
     },
     {
       "id": "scripts_manage_payloads",
@@ -3750,7 +3932,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "53.8.0"
+      "version": "53.9.0"
     },
     {
       "id": "sync",
@@ -4147,6 +4329,28 @@
       "norm_label": "simulates total download time in milliseconds: - tcp handshake + tls...",
       "source_file": "scripts/benchmark_bundle.py",
       "source_location": "L98"
+    },
+    {
+      "id": "tests_unit_test_shortcuts_test",
+      "label": "test_shortcuts.test.mjs",
+      "_origin": "ast",
+      "community": 143,
+      "community_name": "MockElement",
+      "file_type": "code",
+      "norm_label": "test_shortcuts.test.mjs",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L1"
+    },
+    {
+      "id": "assets_js_modules_shortcuts",
+      "label": "shortcuts.js",
+      "_origin": "ast",
+      "community": 144,
+      "community_name": "shortcuts.js",
+      "file_type": "code",
+      "norm_label": "shortcuts.js",
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L1"
     },
     {
       "id": "mcp_server_site_mcp",
@@ -5008,7 +5212,7 @@
       "label": "PortfolioWebsite_TRACKER.md",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "portfoliowebsite_tracker.md",
@@ -5020,7 +5224,7 @@
       "label": "Evidence & Verification Log \u2014 v20 additions",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "evidence & verification log \u2014 v20 additions",
@@ -5028,14 +5232,14 @@
       "source_location": "L293"
     },
     {
-      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
-      "label": "Portfolio Website Tracker \u2014 v53.8",
+      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
+      "label": "Portfolio Website Tracker \u2014 v53.9",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "portfolio website tracker \u2014 v53.8",
+      "norm_label": "portfolio website tracker \u2014 v53.9",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L1"
     },
@@ -5044,7 +5248,7 @@
       "label": "State of Play",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "state of play",
@@ -5056,7 +5260,7 @@
       "label": "Status",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "status",
@@ -5068,7 +5272,7 @@
       "label": "v21 addition \u2014 both v20-flagged unmatched PDFs closed out",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v21 addition \u2014 both v20-flagged unmatched pdfs closed out",
@@ -5080,7 +5284,7 @@
       "label": "v22 addition \u2014 KEC IT Club \"Introduction to Git\" (2024) card: closed, no source file available",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v22 addition \u2014 kec it club \"introduction to git\" (2024) card: closed, no source file available",
@@ -5092,7 +5296,7 @@
       "label": "v23 addition \u2014 latest site refinements (2026-07-18)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v23 addition \u2014 latest site refinements (2026-07-18)",
@@ -5104,7 +5308,7 @@
       "label": "v24 addition \u2014 site-optimization pass + mobile legend line-break fix (2026-07-18)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v24 addition \u2014 site-optimization pass + mobile legend line-break fix (2026-07-18)",
@@ -5116,7 +5320,7 @@
       "label": "v25 addition \u2014 bug-check sweep, pages 1/3/4 (2026-07-27)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v25 addition \u2014 bug-check sweep, pages 1/3/4 (2026-07-27)",
@@ -5128,7 +5332,7 @@
       "label": "v26 addition \u2014 bug-check sweep, page 2 + about (2026-07-27)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v26 addition \u2014 bug-check sweep, page 2 + about (2026-07-27)",
@@ -5140,7 +5344,7 @@
       "label": "v28 addition \u2014 site-wide bug audit & structural hardening pass (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v28 addition \u2014 site-wide bug audit & structural hardening pass (2026-08-04)",
@@ -5152,7 +5356,7 @@
       "label": "v29 addition \u2014 site-wide performance, PWA, SEO & styling upgrades (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v29 addition \u2014 site-wide performance, pwa, seo & styling upgrades (2026-08-04)",
@@ -5164,7 +5368,7 @@
       "label": "v30 addition \u2014 PWA service worker, skip-links, font preconnects, content-visibility optimization & expanded verification (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v30 addition \u2014 pwa service worker, skip-links, font preconnects, content-visibility optimization & expanded verification (2026-08-04)",
@@ -5176,7 +5380,7 @@
       "label": "v31.1 addition \u2014 Interactive \"What's New\" Major Commit Showcase & Journey Nodes (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v31.1 addition \u2014 interactive \"what's new\" major commit showcase & journey nodes (2026-08-04)",
@@ -5188,7 +5392,7 @@
       "label": "v31 addition \u2014 URL hash filter sync, screen reader accessibility, PWA v31 cache bump & SEO verification (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v31 addition \u2014 url hash filter sync, screen reader accessibility, pwa v31 cache bump & seo verification (2026-08-04)",
@@ -5200,7 +5404,7 @@
       "label": "v32 addition \u2014 PWA offline resilience, reading progress bar, 3D card tilt & journey node j-028 (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v32 addition \u2014 pwa offline resilience, reading progress bar, 3d card tilt & journey node j-028 (2026-08-04)",
@@ -5212,7 +5416,7 @@
       "label": "v33 addition \u2014 interactive dev terminal, CMDK filter pills, cursor light trail & journey node j-029 (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v33 addition \u2014 interactive dev terminal, cmdk filter pills, cursor light trail & journey node j-029 (2026-08-04)",
@@ -5224,7 +5428,7 @@
       "label": "v34 addition \u2014 mobile touch UX, iOS safe area & web haptics suite, journey node j-030 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v34 addition \u2014 mobile touch ux, ios safe area & web haptics suite, journey node j-030 (2026-08-08)",
@@ -5236,7 +5440,7 @@
       "label": "v35 addition \u2014 motion, typed captions, count-up counters, view transitions & journey node j-031 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v35 addition \u2014 motion, typed captions, count-up counters, view transitions & journey node j-031 (2026-08-08)",
@@ -5248,7 +5452,7 @@
       "label": "v36 addition \u2014 visual polish, performance, skill matrix & mobile UX suite, journey node j-032 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v36 addition \u2014 visual polish, performance, skill matrix & mobile ux suite, journey node j-032 (2026-08-08)",
@@ -5260,7 +5464,7 @@
       "label": "v37 addition \u2014 guided cross-page site tour with spotlight overlay, journey node j-033 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v37 addition \u2014 guided cross-page site tour with spotlight overlay, journey node j-033 (2026-08-08)",
@@ -5272,7 +5476,7 @@
       "label": "v38 addition \u2014 Web Audio micro-sounds, reading metrics, live result indicators & verification suite, journey node j-034 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v38 addition \u2014 web audio micro-sounds, reading metrics, live result indicators & verification suite, journey node j-034 (2026-08-08)",
@@ -5284,7 +5488,7 @@
       "label": "RFC_PORTFOLIO_OS_SDK.md",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "rfc_portfolio_os_sdk.md",
@@ -5296,7 +5500,7 @@
       "label": "1. Executive Summary",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. executive summary",
@@ -5308,7 +5512,7 @@
       "label": "2. Productization Archetypes",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. productization archetypes",
@@ -5320,7 +5524,7 @@
       "label": "3. Architecture Decoupling Boundary",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. architecture decoupling boundary",
@@ -5332,7 +5536,7 @@
       "label": "4.1. Configuration Schema (`portfolio.config.yaml`)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.1. configuration schema (`portfolio.config.yaml`)",
@@ -5344,7 +5548,7 @@
       "label": "4.2. Zero-Leak Cryptographic Protocol",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.2. zero-leak cryptographic protocol",
@@ -5356,7 +5560,7 @@
       "label": "4.3. Universal Verification Engine",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.3. universal verification engine",
@@ -5368,7 +5572,7 @@
       "label": "4. Technical Specifications",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. technical specifications",
@@ -5380,7 +5584,7 @@
       "label": "5. Implementation Roadmap",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5. implementation roadmap",
@@ -5392,7 +5596,7 @@
       "label": "Layer 1: The Zero-Dependency Starter Template (Target: Phase 1)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "layer 1: the zero-dependency starter template (target: phase 1)",
@@ -5404,7 +5608,7 @@
       "label": "Layer 2: Embedded HUD & Runtime Library (Target: Phase 2)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "layer 2: embedded hud & runtime library (target: phase 2)",
@@ -5416,7 +5620,7 @@
       "label": "Layer 3: Unified Developer CLI (Target: Phase 3)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "layer 3: unified developer cli (target: phase 3)",
@@ -5428,7 +5632,7 @@
       "label": "Phase 1: Engine & Content Separation",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "phase 1: engine & content separation",
@@ -5440,7 +5644,7 @@
       "label": "Phase 2: Template Extraction & Hygiene",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "phase 2: template extraction & hygiene",
@@ -5452,7 +5656,7 @@
       "label": "Phase 3: Community Release & Package Distribution",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "phase 3: community release & package distribution",
@@ -5464,7 +5668,7 @@
       "label": "RFC: Portfolio-OS \u2014 Open Architecture, Template & Developer SDK",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v53.8",
+      "community_name": "Portfolio Website Tracker \u2014 v53.9",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "rfc: portfolio-os \u2014 open architecture, template & developer sdk",
@@ -9545,6 +9749,30 @@
       "weight": 1.0
     },
     {
+      "source": "assets_js_modules_shortcuts_toggleshortcutsmodal",
+      "target": "assets_js_modules_shortcuts_closeshortcutsmodal",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L155",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_shortcuts_toggleshortcutsmodal",
+      "target": "assets_js_modules_shortcuts_openshortcutsmodal",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L157",
+      "weight": 1.0
+    },
+    {
       "source": "assets_js_modules_terminal_setup_appendoutput",
       "target": "assets_js_modules_terminal_setup_escapehtml",
       "relation": "calls",
@@ -9553,7 +9781,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L457",
+      "source_location": "L460",
       "weight": 1.0
     },
     {
@@ -9565,7 +9793,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L493",
+      "source_location": "L496",
       "weight": 1.0
     },
     {
@@ -9577,7 +9805,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L495",
+      "source_location": "L498",
       "weight": 1.0
     },
     {
@@ -9961,7 +10189,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1218",
+      "source_location": "L1063",
       "weight": 1.0
     },
     {
@@ -9973,7 +10201,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1186",
+      "source_location": "L1031",
       "weight": 1.0
     },
     {
@@ -9985,7 +10213,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1202",
+      "source_location": "L1047",
       "weight": 1.0
     },
     {
@@ -9997,19 +10225,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1115",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui_initkeynav",
-      "target": "assets_js_modules_ui_toggleshortcutsmodal",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L548",
+      "source_location": "L960",
       "weight": 1.0
     },
     {
@@ -10021,7 +10237,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L587",
+      "source_location": "L432",
       "weight": 1.0
     },
     {
@@ -10033,7 +10249,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1049",
+      "source_location": "L894",
       "weight": 1.0
     },
     {
@@ -10045,7 +10261,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1055",
+      "source_location": "L900",
       "weight": 1.0
     },
     {
@@ -10057,7 +10273,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1337",
+      "source_location": "L1182",
       "weight": 1.0
     },
     {
@@ -10069,7 +10285,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1341",
+      "source_location": "L1186",
       "weight": 1.0
     },
     {
@@ -10081,7 +10297,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1344",
+      "source_location": "L1189",
       "weight": 1.0
     },
     {
@@ -10093,7 +10309,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1349",
+      "source_location": "L1194",
       "weight": 1.0
     },
     {
@@ -10105,7 +10321,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1367",
+      "source_location": "L1212",
       "weight": 1.0
     },
     {
@@ -10117,7 +10333,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1035",
+      "source_location": "L880",
       "weight": 1.0
     },
     {
@@ -10129,31 +10345,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1444",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui_toggleshortcutsmodal",
-      "target": "assets_js_modules_ui_closeshortcutsmodal",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L225",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui_toggleshortcutsmodal",
-      "target": "assets_js_modules_ui_openshortcutsmodal",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L227",
+      "source_location": "L1289",
       "weight": 1.0
     },
     {
@@ -10165,7 +10357,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L124",
+      "source_location": "L181",
       "weight": 1.0
     },
     {
@@ -10177,7 +10369,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L125",
+      "source_location": "L182",
       "weight": 1.0
     },
     {
@@ -10189,7 +10381,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L126",
+      "source_location": "L183",
       "weight": 1.0
     },
     {
@@ -10201,7 +10393,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L185",
+      "source_location": "L242",
       "weight": 1.0
     },
     {
@@ -10213,7 +10405,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L214",
+      "source_location": "L271",
       "weight": 1.0
     },
     {
@@ -12725,6 +12917,126 @@
       "weight": 1.0
     },
     {
+      "source": "tests_unit_test_shortcuts_test_closemodal",
+      "target": "tests_unit_test_shortcuts_test_mockdocument_getelementbyid",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L74",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockdocument_constructor",
+      "target": "tests_unit_test_shortcuts_test_mockelement",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockdocument_createelement",
+      "target": "tests_unit_test_shortcuts_test_mockelement",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_openmodal",
+      "target": "tests_unit_test_shortcuts_test_mockdocument_getelementbyid",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L57",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_openmodal",
+      "target": "tests_unit_test_shortcuts_test_mockdocument_createelement",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_openmodal",
+      "target": "tests_unit_test_shortcuts_test_mockelement_setattribute",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L62",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_openmodal",
+      "target": "tests_unit_test_shortcuts_test_mockdocument_appendchild",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_togglemodal",
+      "target": "tests_unit_test_shortcuts_test_mockdocument_getelementbyid",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_togglemodal",
+      "target": "tests_unit_test_shortcuts_test_closemodal",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_togglemodal",
+      "target": "tests_unit_test_shortcuts_test_openmodal",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L85",
+      "weight": 1.0
+    },
+    {
       "source": "assets_js_modules_cmdk_initglobalsearch",
       "target": "assets_js_modules_cmdk_initglobalsearch_setactiveresult",
       "relation": "contains",
@@ -12817,7 +13129,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L453",
+      "source_location": "L456",
       "weight": 1.0
     },
     {
@@ -12829,7 +13141,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L464",
+      "source_location": "L467",
       "weight": 1.0
     },
     {
@@ -12841,7 +13153,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L468",
+      "source_location": "L471",
       "weight": 1.0
     },
     {
@@ -12853,7 +13165,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L254",
+      "source_location": "L99",
       "weight": 1.0
     },
     {
@@ -12865,7 +13177,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L435",
+      "source_location": "L280",
       "weight": 1.0
     },
     {
@@ -12877,7 +13189,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L466",
+      "source_location": "L311",
       "weight": 1.0
     },
     {
@@ -12889,7 +13201,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L782",
+      "source_location": "L627",
       "weight": 1.0
     },
     {
@@ -12901,7 +13213,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L816",
+      "source_location": "L661",
       "weight": 1.0
     },
     {
@@ -14166,6 +14478,39 @@
       "weight": 1.0
     },
     {
+      "source": "assets_js_modules_shortcuts",
+      "target": "assets_js_modules_shortcuts_closeshortcutsmodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_shortcuts",
+      "target": "assets_js_modules_shortcuts_toggleshortcutsmodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L152",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_shortcuts",
+      "target": "assets_js_modules_shortcuts_openshortcutsmodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
       "source": "assets_js_modules_terminal",
       "target": "assets_js_modules_terminal_setup",
       "relation": "contains",
@@ -14173,7 +14518,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/terminal.js",
-      "source_location": "L8",
+      "source_location": "L7",
       "weight": 1.0
     },
     {
@@ -14387,90 +14732,13 @@
     },
     {
       "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_closeskillradarmodal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1038",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_initskillradar",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1046",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_getresumecontacthtml",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1060",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_getresumecontactmarkdown",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1072",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_generateresumeplaintext",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1082",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_generateresumemarkdown",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1110",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_generateresumejson",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1137",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
       "target": "assets_js_modules_ui_downloadresumejson",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1185",
+      "source_location": "L1030",
       "weight": 1.0
     },
     {
@@ -14481,7 +14749,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1201",
+      "source_location": "L1046",
       "weight": 1.0
     },
     {
@@ -14492,7 +14760,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1217",
+      "source_location": "L1062",
       "weight": 1.0
     },
     {
@@ -14503,7 +14771,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1242",
+      "source_location": "L1087",
       "weight": 1.0
     },
     {
@@ -14514,7 +14782,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1378",
+      "source_location": "L1223",
       "weight": 1.0
     },
     {
@@ -14525,7 +14793,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1409",
+      "source_location": "L1254",
       "weight": 1.0
     },
     {
@@ -14536,40 +14804,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1418",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_closeshortcutsmodal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L214",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_toggleshortcutsmodal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L222",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_initcountup",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L234",
+      "source_location": "L1263",
       "weight": 1.0
     },
     {
@@ -14580,7 +14815,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L287",
+      "source_location": "L132",
       "weight": 1.0
     },
     {
@@ -14591,7 +14826,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L331",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -14602,7 +14837,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L364",
+      "source_location": "L209",
       "weight": 1.0
     },
     {
@@ -14613,7 +14848,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L424",
+      "source_location": "L269",
       "weight": 1.0
     },
     {
@@ -14624,7 +14859,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L531",
+      "source_location": "L376",
       "weight": 1.0
     },
     {
@@ -14635,7 +14870,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L640",
+      "source_location": "L485",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui",
+      "target": "assets_js_modules_ui_skill_radar_domains",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L608",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui",
+      "target": "assets_js_modules_ui_initradarcanvas",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L617",
       "weight": 1.0
     },
     {
@@ -14662,35 +14919,13 @@
     },
     {
       "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_skill_radar_domains",
+      "target": "assets_js_modules_ui_initcountup",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L763",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_openshortcutsmodal",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L77",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui",
-      "target": "assets_js_modules_ui_initradarcanvas",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L772",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
@@ -14701,7 +14936,84 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L980",
+      "source_location": "L825",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui",
+      "target": "assets_js_modules_ui_closeskillradarmodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L883",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui",
+      "target": "assets_js_modules_ui_initskillradar",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L891",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui",
+      "target": "assets_js_modules_ui_getresumecontacthtml",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L905",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui",
+      "target": "assets_js_modules_ui_getresumecontactmarkdown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L917",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui",
+      "target": "assets_js_modules_ui_generateresumeplaintext",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L927",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui",
+      "target": "assets_js_modules_ui_generateresumemarkdown",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L955",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui",
+      "target": "assets_js_modules_ui_generateresumejson",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L982",
       "weight": 1.0
     },
     {
@@ -14712,7 +15024,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L157",
+      "source_location": "L214",
       "weight": 1.0
     },
     {
@@ -14723,7 +15035,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L167",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -14734,7 +15046,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L182",
+      "source_location": "L239",
       "weight": 1.0
     },
     {
@@ -14745,7 +15057,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L192",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -14756,7 +15068,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L225",
+      "source_location": "L282",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_script",
+      "target": "assets_js_script_loadone",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/script.js",
+      "source_location": "L44",
       "weight": 1.0
     },
     {
@@ -14937,7 +15260,7 @@
     },
     {
       "source": "dev_logs_portfoliowebsite_tracker",
-      "target": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "target": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -14947,7 +15270,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_state_of_play",
       "relation": "contains",
       "_origin": "ast",
@@ -14958,7 +15281,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
       "relation": "contains",
       "_origin": "ast",
@@ -14969,7 +15292,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
       "relation": "contains",
       "_origin": "ast",
@@ -14980,7 +15303,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v22_addition_kec_it_club_introduction_to_git_2024_card_closed_no_source_file_available",
       "relation": "contains",
       "_origin": "ast",
@@ -14991,7 +15314,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v23_addition_latest_site_refinements_2026_07_18",
       "relation": "contains",
       "_origin": "ast",
@@ -15002,7 +15325,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v24_addition_site_optimization_pass_mobile_legend_line_break_fix_2026_07_18",
       "relation": "contains",
       "_origin": "ast",
@@ -15013,7 +15336,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v25_addition_bug_check_sweep_pages_1_3_4_2026_07_27",
       "relation": "contains",
       "_origin": "ast",
@@ -15024,7 +15347,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v26_addition_bug_check_sweep_page_2_about_2026_07_27",
       "relation": "contains",
       "_origin": "ast",
@@ -15035,7 +15358,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v28_addition_site_wide_bug_audit_structural_hardening_pass_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -15046,7 +15369,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v29_addition_site_wide_performance_pwa_seo_styling_upgrades_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -15057,7 +15380,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v30_addition_pwa_service_worker_skip_links_font_preconnects_content_visibility_optimization_expanded_verification_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -15068,7 +15391,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v31_addition_url_hash_filter_sync_screen_reader_accessibility_pwa_v31_cache_bump_seo_verification_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -15079,7 +15402,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v31_1_addition_interactive_what_s_new_major_commit_showcase_journey_nodes_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -15090,7 +15413,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v32_addition_pwa_offline_resilience_reading_progress_bar_3d_card_tilt_journey_node_j_028_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -15101,7 +15424,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v33_addition_interactive_dev_terminal_cmdk_filter_pills_cursor_light_trail_journey_node_j_029_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -15112,7 +15435,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v34_addition_mobile_touch_ux_ios_safe_area_web_haptics_suite_journey_node_j_030_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -15123,7 +15446,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v35_addition_motion_typed_captions_count_up_counters_view_transitions_journey_node_j_031_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -15134,7 +15457,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v36_addition_visual_polish_performance_skill_matrix_mobile_ux_suite_journey_node_j_032_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -15145,7 +15468,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v37_addition_guided_cross_page_site_tour_with_spotlight_overlay_journey_node_j_033_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -15156,7 +15479,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_8",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_9",
       "target": "dev_logs_portfoliowebsite_tracker_v38_addition_web_audio_micro_sounds_reading_metrics_live_result_indicators_verification_suite_journey_node_j_034_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -17048,6 +17371,61 @@
       "weight": 1.0
     },
     {
+      "source": "tests_unit_test_shortcuts_test",
+      "target": "tests_unit_test_shortcuts_test_mockdocument",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L32",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test",
+      "target": "tests_unit_test_shortcuts_test_mockelement",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test",
+      "target": "tests_unit_test_shortcuts_test_openmodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L56",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test",
+      "target": "tests_unit_test_shortcuts_test_closemodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test",
+      "target": "tests_unit_test_shortcuts_test_togglemodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
       "source": "tests_unit_test_terminal_test",
       "target": "tests_unit_test_terminal_test_resolvenavigationtarget",
       "relation": "contains",
@@ -17265,6 +17643,105 @@
       "confidence_score": 1.0,
       "source_file": "scripts/test_visual_regression.py",
       "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockdocument",
+      "target": "tests_unit_test_shortcuts_test_mockdocument_constructor",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L33",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockdocument",
+      "target": "tests_unit_test_shortcuts_test_mockdocument_getelementbyid",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L37",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockdocument",
+      "target": "tests_unit_test_shortcuts_test_mockdocument_createelement",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L40",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockdocument",
+      "target": "tests_unit_test_shortcuts_test_mockdocument_appendchild",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockelement",
+      "target": "tests_unit_test_shortcuts_test_mockelement_appendchild",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockelement",
+      "target": "tests_unit_test_shortcuts_test_mockelement_setattribute",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockelement",
+      "target": "tests_unit_test_shortcuts_test_mockelement_getattribute",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockelement",
+      "target": "tests_unit_test_shortcuts_test_mockelement_addeventlistener",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L26",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_shortcuts_test_mockelement",
+      "target": "tests_unit_test_shortcuts_test_mockelement_constructor",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_shortcuts.test.mjs",
+      "source_location": "L6",
       "weight": 1.0
     },
     {
@@ -18017,6 +18494,18 @@
       "weight": 1.0
     },
     {
+      "source": "assets_js_modules_shortcuts_openshortcutsmodal",
+      "target": "assets_js_modules_shortcuts_closeshortcutsmodal",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "assets/js/modules/shortcuts.js",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
       "source": "assets_js_modules_tour_rendertourstep",
       "target": "assets_js_modules_tour_touradvance",
       "relation": "indirect_call",
@@ -18049,7 +18538,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L280",
+      "source_location": "L125",
       "weight": 1.0
     },
     {
@@ -18061,7 +18550,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L386",
+      "source_location": "L231",
       "weight": 1.0
     },
     {
@@ -18073,7 +18562,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L408",
+      "source_location": "L253",
       "weight": 1.0
     },
     {
@@ -18085,7 +18574,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L325",
+      "source_location": "L170",
       "weight": 1.0
     },
     {
@@ -18097,19 +18586,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1328",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_ui_openshortcutsmodal",
-      "target": "assets_js_modules_ui_closeshortcutsmodal",
-      "relation": "indirect_call",
-      "_origin": "ast",
-      "confidence": "INFERRED",
-      "confidence_score": 0.85,
-      "context": "argument",
-      "source_file": "assets/js/modules/ui.js",
-      "source_location": "L204",
+      "source_location": "L1173",
       "weight": 1.0
     },
     {
@@ -18121,7 +18598,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1028",
+      "source_location": "L873",
       "weight": 1.0
     },
     {
@@ -18145,7 +18622,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/script.js",
-      "source_location": "L150",
+      "source_location": "L207",
       "weight": 1.0
     },
     {
@@ -18157,7 +18634,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/script.js",
-      "source_location": "L137",
+      "source_location": "L194",
       "weight": 1.0
     },
     {
@@ -18169,7 +18646,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/script.js",
-      "source_location": "L177",
+      "source_location": "L234",
       "weight": 1.0
     },
     {
@@ -19303,5 +19780,5 @@
       "source_file": "llms-full.txt"
     }
   ],
-  "built_at_commit": "a5e971d275739feab23f0fe92ac893f5d3d7c12b"
+  "built_at_commit": "5b9ee2a6a1589c89b3d8539eb5004def0622733c"
 }

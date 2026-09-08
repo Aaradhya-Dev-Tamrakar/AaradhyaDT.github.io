@@ -792,20 +792,20 @@
 </header>
 <section aria-label="Projects grid" id="projects">
 <div class="projects-header-bar">
-<div class="projects-filter-bar" id="projectsFilterBar" role="tablist" aria-label="Filter projects by domain">
-<button type="button" class="proj-filter-btn active" data-filter="all" role="tab" aria-selected="true">
+<div class="projects-filter-bar" id="projectsFilterBar" role="toolbar" aria-label="Filter projects by domain">
+<button type="button" class="proj-filter-btn active" data-filter="all" aria-pressed="true">
 <span>All</span><span class="proj-filter-count">30</span>
 </button>
-<button type="button" class="proj-filter-btn" data-filter="aiml" role="tab" aria-selected="false">
+<button type="button" class="proj-filter-btn" data-filter="aiml" aria-pressed="false">
 <span>AI / ML &amp; Agentic</span><span class="proj-filter-count">21</span>
 </button>
-<button type="button" class="proj-filter-btn" data-filter="embedded" role="tab" aria-selected="false">
+<button type="button" class="proj-filter-btn" data-filter="embedded" aria-pressed="false">
 <span>Robotics &amp; Embedded</span><span class="proj-filter-count">5</span>
 </button>
-<button type="button" class="proj-filter-btn" data-filter="hardware" role="tab" aria-selected="false">
+<button type="button" class="proj-filter-btn" data-filter="hardware" aria-pressed="false">
 <span>Hardware &amp; Systems</span><span class="proj-filter-count">5</span>
 </button>
-<button type="button" class="proj-filter-btn" data-filter="apps" role="tab" aria-selected="false">
+<button type="button" class="proj-filter-btn" data-filter="apps" aria-pressed="false">
 <span>Web &amp; Apps</span><span class="proj-filter-count">9</span>
 </button>
 </div>
@@ -1645,6 +1645,16 @@
       const sections = document.querySelectorAll('#projectsGrid .projects-section-title');
       if (!filterBar || !cards.length) return;
 
+      // Inject empty-state message (shown when a filter yields zero results)
+      let emptyState = document.getElementById('projects-empty-state');
+      if (!emptyState) {
+        emptyState = document.createElement('p');
+        emptyState.id = 'projects-empty-state';
+        emptyState.setAttribute('aria-live', 'polite');
+        emptyState.style.cssText = 'display:none;text-align:center;color:var(--muted);font-family:var(--mono);font-size:0.9rem;padding:3rem 1rem;letter-spacing:0.04em;';
+        document.getElementById('projectsGrid').after(emptyState);
+      }
+
       const btns = filterBar.querySelectorAll('.proj-filter-btn');
 
       btns.forEach(btn => {
@@ -1652,15 +1662,17 @@
           const filter = btn.dataset.filter;
           btns.forEach(b => {
             b.classList.remove('active');
-            b.setAttribute('aria-selected', 'false');
+            b.setAttribute('aria-pressed', 'false');
           });
           btn.classList.add('active');
-          btn.setAttribute('aria-selected', 'true');
+          btn.setAttribute('aria-pressed', 'true');
 
+          let visibleCount = 0;
           cards.forEach(card => {
             const cats = (card.dataset.category || '').split(' ');
             const match = filter === 'all' || cats.includes(filter);
             card.style.display = match ? '' : 'none';
+            if (match) visibleCount++;
           });
 
           // Toggle visibility of section headers based on whether they contain visible cards
@@ -1676,6 +1688,15 @@
             }
             sec.style.display = hasVisible ? '' : 'none';
           });
+
+          // Show/hide empty state
+          if (emptyState) {
+            const label = btn.querySelector('span:first-child')?.textContent || filter;
+            emptyState.style.display = visibleCount === 0 ? '' : 'none';
+            emptyState.textContent = visibleCount === 0
+              ? `No projects match the "${label}" filter. Try a different category.`
+              : '';
+          }
 
           if (typeof playAudioCue === 'function') playAudioCue('click');
           if (typeof triggerHapticFeedback === 'function') triggerHapticFeedback('light');

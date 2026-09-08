@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: 'v53.8',
+    version: 'v53.9',
     date: '2026-09-08',
     sha: 'rel53',
     title: "Visual Regression Engine & Native Dynamic ESM Suite",

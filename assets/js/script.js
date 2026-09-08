@@ -1,48 +1,58 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v53.8)
+   SHARED SCRIPT — aaradhyadt.github.io (v53.9)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v53.8) ───────────────────────────── */
+/* ── Dynamic Module Loader (v53.9) — Tiered Parallel ─────────── */
 window.__modulesLoadedPromise = (async function () {
-  const MODULES = [
-    'assets/js/data/releases.js',
-    'assets/js/data/search-index.js',
-    'assets/js/data/resume-data.js',
-    'assets/js/modules/constants.js',
-    'assets/js/modules/core.js',
-    'assets/js/modules/tour.js',
-    'assets/js/modules/cmdk.js',
-    'assets/js/modules/ui.js',
-    'assets/js/modules/access.js',
-    'assets/js/modules/audio.js',
-    'assets/js/modules/terminal.js',
-    'assets/js/modules/haptics.js',
-    'assets/js/modules/home-widgets.js'
+  // Modules grouped by dependency tier — each group loads concurrently via
+  // Promise.all, but tiers execute sequentially (tier N+1 waits for tier N).
+  // Tier 0: data & constants have no dependencies; loading them in parallel
+  // cuts the boot waterfall from 13 sequential round-trips to ~3.
+  const GROUPS = [
+    // Tier 0 — Data & constants (no inter-dependencies)
+    [
+      'assets/js/data/releases.js',
+      'assets/js/data/search-index.js',
+      'assets/js/data/resume-data.js',
+      'assets/js/modules/constants.js',
+    ],
+    // Tier 1 — Core runtime (depends on data/constants globals)
+    [
+      'assets/js/modules/core.js',
+      'assets/js/modules/tour.js',
+      'assets/js/modules/cmdk.js',
+    ],
+    // Tier 2 — UI & feature modules (depend on core globals)
+    [
+      'assets/js/modules/ui.js',
+      'assets/js/modules/shortcuts.js',
+      'assets/js/modules/access.js',
+      'assets/js/modules/audio.js',
+      'assets/js/modules/terminal.js',
+      'assets/js/modules/haptics.js',
+      'assets/js/modules/home-widgets.js',
+    ],
   ];
 
   window.__failedModules = [];
-  const results = [];
+  const allResults = [];
+  const isHttp = typeof window !== 'undefined' && window.location &&
+    window.location.protocol !== 'file:';
 
-  for (let i = 0; i < MODULES.length; i++) {
-    const src = MODULES[i];
-    let loaded = false;
-
+  async function loadOne(src) {
     // Fast path: Native ES Module dynamic import (HTTP / HTTPS / localhost)
-    if (typeof window !== 'undefined' && window.location && window.location.protocol !== 'file:') {
+    if (isHttp) {
       try {
         const importUrl = new URL(src, document.baseURI).href;
         const mod = await import(importUrl);
         if (mod && typeof mod === 'object') {
           for (const [key, val] of Object.entries(mod)) {
-            if (key !== 'default' && !(key in window)) {
-              window[key] = val;
-            }
+            if (key !== 'default' && !(key in window)) window[key] = val;
           }
         }
-        results.push({ src: src, ok: true, type: 'esm' });
-        loaded = true;
+        return { src: src, ok: true, type: 'esm' };
       } catch (esmErr) {
         // Fall through to script element injection fallback
         console.debug('[Module Loader] Native ESM dynamic import bypassed for ' + src + ':', esmErr);
@@ -50,43 +60,90 @@ window.__modulesLoadedPromise = (async function () {
     }
 
     // Resilient fallback: Classic script tag injection (file:// or legacy environments)
-    if (!loaded) {
-      const res = await new Promise(function (resolve) {
-        var existing = document.querySelector('script[src="' + src + '"]');
-        if (existing) return resolve({ src: src, ok: true, cached: true });
+    return new Promise(function (resolve) {
+      var existing = document.querySelector('script[src="' + src + '"]');
+      if (existing) return resolve({ src: src, ok: true, cached: true });
 
-        var s = document.createElement('script');
-        s.src = src;
-        s.async = false;
-        var timer = setTimeout(function () {
-          console.warn('[Module Loader] Module load timed out after 5s:', src);
-          window.__failedModules.push({ src: src, reason: 'timeout' });
-          resolve({ src: src, ok: false, reason: 'timeout' });
-        }, 5000);
-        s.onload = function () {
-          clearTimeout(timer);
-          resolve({ src: src, ok: true, type: 'classic' });
-        };
-        s.onerror = function (err) {
-          clearTimeout(timer);
-          console.error('[Module Loader] Failed to load module:', src, err);
-          window.__failedModules.push({ src: src, reason: 'error', error: err });
-          resolve({ src: src, ok: false, reason: 'error' });
-        };
-        document.head.appendChild(s);
-      });
-      results.push(res);
-    }
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = false;
+      var timer = setTimeout(function () {
+        console.warn('[Module Loader] Module load timed out after 5s:', src);
+        window.__failedModules.push({ src: src, reason: 'timeout' });
+        resolve({ src: src, ok: false, reason: 'timeout' });
+      }, 5000);
+      s.onload = function () {
+        clearTimeout(timer);
+        resolve({ src: src, ok: true, type: 'classic' });
+      };
+      s.onerror = function (err) {
+        clearTimeout(timer);
+        console.error('[Module Loader] Failed to load module:', src, err);
+        window.__failedModules.push({ src: src, reason: 'error', error: err });
+        resolve({ src: src, ok: false, reason: 'error' });
+      };
+      document.head.appendChild(s);
+    });
   }
 
-  const failed = results.filter(function (r) { return r && !r.ok; });
+  // Load each tier concurrently; tiers are sequential (dependency order preserved)
+  for (const group of GROUPS) {
+    const tierResults = await Promise.all(group.map(loadOne));
+    allResults.push(...tierResults);
+  }
+
+  const failed = allResults.filter(function (r) { return r && !r.ok; });
   if (failed.length > 0) {
-    console.error('[Module Loader] Critical: ' + failed.length + ' module(s) failed to load:', failed.map(function (f) { return f.src; }).join(', '));
+    const CRITICAL = ['core.js', 'ui.js'];
+    const criticalFailed = failed.filter(function (f) {
+      return CRITICAL.some(function (c) { return f.src.includes(c); });
+    });
+    console.error('[Module Loader] ' + failed.length + ' module(s) failed to load:', failed.map(function (f) { return f.src; }).join(', '));
     if (typeof window.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
       window.dispatchEvent(new CustomEvent('moduleloadererror', { detail: { failed: failed } }));
     }
+    // Show a user-visible banner if critical modules failed to load
+    if (criticalFailed.length > 0) {
+      var showBanner = function () {
+        if (document.getElementById('adt-module-err-banner')) return;
+        var banner = document.createElement('div');
+        banner.id = 'adt-module-err-banner';
+        banner.setAttribute('role', 'alert');
+        banner.setAttribute('aria-live', 'assertive');
+        banner.style.cssText = [
+          'position:fixed;top:0;left:0;right:0;z-index:99999',
+          'background:rgba(127,29,29,0.97)',
+          'color:#fef2f2',
+          'font-family:var(--mono,monospace)',
+          'font-size:0.78rem',
+          'padding:0.55rem 1.2rem',
+          'text-align:center',
+          'letter-spacing:0.03em',
+          'display:flex;align-items:center;justify-content:center;gap:0.75rem',
+        ].join(';');
+        var msg = document.createElement('span');
+        msg.textContent = 'Some site features could not load. Try refreshing the page — if the issue persists, check your connection.';
+        var closeBtn = document.createElement('button');
+        closeBtn.textContent = '×';
+        closeBtn.setAttribute('aria-label', 'Dismiss notice');
+        closeBtn.style.cssText = 'background:none;border:none;color:inherit;font-size:1.1rem;cursor:pointer;padding:0 0.2rem;flex-shrink:0;';
+        closeBtn.onclick = function () { banner.remove(); };
+        banner.appendChild(msg);
+        banner.appendChild(closeBtn);
+        if (document.body) {
+          document.body.prepend(banner);
+        } else {
+          document.addEventListener('DOMContentLoaded', function () { document.body.prepend(banner); });
+        }
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', showBanner);
+      } else {
+        showBanner();
+      }
+    }
   }
-  return results;
+  return allResults;
 })();
 
 

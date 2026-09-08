@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-08)
 
 ## Corpus Check
-- 46 files · ~452,119 words
+- 48 files · ~452,779 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 699 nodes · 942 edges · 143 communities (41 shown, 90 thin omitted)
+- 716 nodes · 966 edges · 145 communities (43 shown, 90 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 56 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a5e971d2`
+- Built from commit: `5b9ee2a6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- Portfolio Website Tracker — v53.8
+- Portfolio Website Tracker — v53.9
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -146,12 +146,14 @@
 - test_visual_regression.py
 - Repository Architectural Evaluation & Evolution Roadmap
 - benchmark_bundle.py
+- MockElement
+- shortcuts.js
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v53.8` - 21 edges
+4. `Portfolio Website Tracker — v53.9` - 21 edges
 5. `log_warning()` - 16 edges
 6. `get_html_files()` - 14 edges
 7. `cmd_sync()` - 13 edges
@@ -177,7 +179,7 @@
 ## Hyperedges (group relationships)
 - **Flagship Engineering Projects** — concept_spark, concept_biasaperture, concept_novaoptimizer [EXTRACTED 0.85]
 
-## Communities (143 total, 90 thin omitted)
+## Communities (145 total, 90 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.10
@@ -185,7 +187,7 @@ Nodes (60): bold(), _c(), check_asset_references(), check_cross_page_links(), ch
 
 ### Community 1 - "ui.js"
 Cohesion: 0.08
-Nodes (30): renderSiteFooter(), closeResumeGenerator(), closeShortcutsModal(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown() (+22 more)
+Nodes (27): renderSiteFooter(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson() (+19 more)
 
 ### Community 2 - "core.js"
 Cohesion: 0.08
@@ -199,9 +201,9 @@ Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developer
 Cohesion: 0.19
 Nodes (24): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+16 more)
 
-### Community 5 - "Portfolio Website Tracker — v53.8"
+### Community 5 - "Portfolio Website Tracker — v53.9"
 Cohesion: 0.05
-Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.8, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
+Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.9, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
 
 ### Community 6 - "site_automation.py"
 Cohesion: 0.12
@@ -248,7 +250,7 @@ Cohesion: 0.39
 Nodes (6): bootHomeWidgets(), initLastCommitBadge(), formatDateTime(), pad(), initLiveDates(), initStatusClock()
 
 ### Community 17 - "script.js"
-Cohesion: 0.43
+Cohesion: 0.36
 Nodes (6): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
 
 ### Community 18 - "Agent Rules & Workflow Guidelines"
@@ -343,9 +345,17 @@ Nodes (10): 1. Multi-Dimensional Scorecard, 2. Core Architectural Strengths, 3. 
 Cohesion: 0.22
 Nodes (12): analyze_assets(), generate_benchmark_summary(), get_file_metrics(), main(), print_cli_report(), Path, Computes critical path totals and network latency models., Renders human-readable report with formatted terminal tables. (+4 more)
 
+### Community 143 - "MockElement"
+Cohesion: 0.23
+Nodes (5): closeModal(), MockDocument, MockElement, openModal(), toggleModal()
+
+### Community 144 - "shortcuts.js"
+Cohesion: 1.00
+Nodes (3): closeShortcutsModal(), openShortcutsModal(), toggleShortcutsModal()
+
 ## Knowledge Gaps
 - **210 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+205 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 341 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 346 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **90 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -360,7 +370,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
 - **Should `ui.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07957957957957958 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07823613086770982 - nodes in this community are weakly interconnected._
 - **Should `Aaradhya Dev Tamrakar` be split into smaller, more focused modules?**
