@@ -626,6 +626,29 @@ html[data-theme="light"] .tier-badge-master {
   background: rgba(248, 113, 113, 0.1);
 }
 
+.access-btn-passkey {
+  width: 100%;
+  padding: 0.65rem 0.75rem;
+  background: var(--bg2);
+  color: var(--heading);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.access-btn-passkey:hover {
+  background: var(--bg3);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
 /* ── Gated Content Blur & Overlay ──────────────────────────────── */
 .gated-content-locked {
   position: relative;

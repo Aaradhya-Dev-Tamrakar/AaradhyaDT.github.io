@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-08)
 
 ## Corpus Check
-- 48 files · ~452,779 words
+- 48 files · ~453,342 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 716 nodes · 966 edges · 145 communities (43 shown, 90 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 56 edges (avg confidence: 0.86)
+- 723 nodes · 982 edges · 145 communities (43 shown, 90 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 57 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5b9ee2a6`
+- Built from commit: `7cd38024`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- Portfolio Website Tracker — v53.9
+- Portfolio Website Tracker — v53.10
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -153,7 +153,7 @@
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v53.9` - 21 edges
+4. `Portfolio Website Tracker — v53.10` - 21 edges
 5. `log_warning()` - 16 edges
 6. `get_html_files()` - 14 edges
 7. `cmd_sync()` - 13 edges
@@ -198,12 +198,12 @@ Cohesion: 0.10
 Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developers, AI Fluency, Anthropic, Certificate: AI-Assisted Product Launch, Certificate: Introduction to Claude Cowork, Certificate: AI Fluency: Framework & Foundations, Certificate: Building a Go-To-Market Strategy (+18 more)
 
 ### Community 4 - "access.js"
-Cohesion: 0.19
-Nodes (24): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+16 more)
+Cohesion: 0.16
+Nodes (29): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), authenticateWithPasskey(), bufferToHex(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails() (+21 more)
 
-### Community 5 - "Portfolio Website Tracker — v53.9"
+### Community 5 - "Portfolio Website Tracker — v53.10"
 Cohesion: 0.05
-Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.9, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
+Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.10, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
 
 ### Community 6 - "site_automation.py"
 Cohesion: 0.12
@@ -298,7 +298,7 @@ Cohesion: 0.60
 Nodes (4): find_browser(), generate_icon(), main(), Path
 
 ### Community 31 - "test_crypto.test.mjs"
-Cohesion: 0.50
+Cohesion: 0.33
 Nodes (3): decryptHexPayload(), getDecryptionKey(), KEY_CACHE
 
 ### Community 32 - "IEEE KEC Student Branch"
@@ -355,7 +355,7 @@ Nodes (3): closeShortcutsModal(), openShortcutsModal(), toggleShortcutsModal()
 
 ## Knowledge Gaps
 - **210 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+205 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 346 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 348 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **90 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions

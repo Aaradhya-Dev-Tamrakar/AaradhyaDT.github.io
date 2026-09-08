@@ -90,7 +90,7 @@ Four high-leverage technical tracks have been identified for future release cycl
 | **Phase 1** | Track 2: Python Sync CLI Parity | Medium | **High** | **COMPLETED** | Implemented `python scripts/site_automation.py sync` with cross-platform Git status, E2E & verification calls. |
 | **Phase 2** | Track 4: Asset Waterfall & Bundle Benchmark | Low | **High** | **COMPLETED** | Built `scripts/benchmark_bundle.py` with gzip compression metrics and simulated network waterfalls. |
 | **Phase 3** | Track 1: UI Modal Decomposition | Medium | **High** | **COMPLETED** | Extracted `shortcuts.js` from `ui.js` (-7.4 KB), updated Tier 2 loading, PWA caching, and added unit tests. |
-| **Phase 4** | Track 3: WebAuthn / Passkeys | High | **Medium** | Queued | Integrate hardware-authenticator challenge for Master Admin access. |
+| **Phase 4** | Track 3: WebAuthn / Passkeys | High | **Medium** | **COMPLETED** | Integrated hardware-authenticator challenge & enrollment for Master Admin access with unit tests. |
 
 ---
 

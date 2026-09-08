@@ -120,3 +120,25 @@ test('Crypto: Corrupted ciphertext fails gracefully', async () => {
   const result = await decryptHexPayload(corruptedHex, 'vip2026');
   assert.strictEqual(result, null, 'Corrupted payload should return null without crashing');
 });
+
+function bufferToHex(buffer) {
+  return Array.from(new Uint8Array(buffer))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+function hexToBuffer(hex) {
+  const cleanHex = hex.replace(/[^0-9a-fA-F]/g, '');
+  const bytes = new Uint8Array(cleanHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+  return bytes.buffer;
+}
+
+test('WebAuthn: bufferToHex and hexToBuffer roundtrip serialization', () => {
+  const originalBytes = new Uint8Array([0xde, 0xad, 0xbe, 0xef, 0x01, 0x23, 0x45, 0x67, 0x89, 0xab, 0xcd, 0xef]);
+  const hex = bufferToHex(originalBytes.buffer);
+  assert.strictEqual(hex, 'deadbeef0123456789abcdef');
+
+  const roundtripBuf = hexToBuffer(hex);
+  const roundtripBytes = new Uint8Array(roundtripBuf);
+  assert.deepStrictEqual(Array.from(roundtripBytes), Array.from(originalBytes));
+});

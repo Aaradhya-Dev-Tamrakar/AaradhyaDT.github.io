@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v53.9)
+   MODULE: access.js — aaradhyadt.github.io (v53.10)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -371,6 +371,126 @@ function renderGoogleSignInButton() {
   }
 }
 
+/* ── WebAuthn & Hardware Passkey Authentication (FIDO2) ───── */
+function isWebAuthnSupported() {
+  return typeof window !== 'undefined' &&
+    !!window.PublicKeyCredential &&
+    typeof navigator.credentials?.get === 'function' &&
+    typeof navigator.credentials?.create === 'function';
+}
+
+function bufferToHex(buffer) {
+  return Array.from(new Uint8Array(buffer))
+    .map(b => b.toString(16).padStart(2, '0'))
+    .join('');
+}
+
+function hexToBuffer(hex) {
+  const cleanHex = hex.replace(/[^0-9a-fA-F]/g, '');
+  const bytes = new Uint8Array(cleanHex.match(/.{1,2}/g).map(byte => parseInt(byte, 16)));
+  return bytes.buffer;
+}
+
+async function registerMasterPasskey() {
+  if (!isWebAuthnSupported()) {
+    showToast('WebAuthn / Passkeys not supported in this browser.');
+    return;
+  }
+  try {
+    const challenge = new Uint8Array(32);
+    window.crypto.getRandomValues(challenge);
+    const userId = new Uint8Array([1, 9, 8, 4, 2, 0, 2, 6]);
+
+    const credential = await navigator.credentials.create({
+      publicKey: {
+        challenge,
+        rp: {
+          name: 'Aaradhya Dev Tamrakar Portfolio',
+          id: window.location.hostname || 'localhost'
+        },
+        user: {
+          id: userId,
+          name: 'aaradhyadevtmr@gmail.com',
+          displayName: 'Aaradhya Dev Tamrakar (Master Admin)'
+        },
+        pubKeyCredParams: [
+          { alg: -7, type: 'public-key' },
+          { alg: -257, type: 'public-key' }
+        ],
+        authenticatorSelection: {
+          userVerification: 'preferred',
+          residentKey: 'preferred'
+        },
+        timeout: 60000
+      }
+    });
+
+    if (credential && credential.rawId) {
+      const credIdHex = bufferToHex(credential.rawId);
+      localStorage.setItem('adt_master_passkey_id', credIdHex);
+      showToast('🔑 Hardware Passkey registered for Master Admin!');
+      if (typeof playAudioCue === 'function') playAudioCue('open');
+    }
+  } catch (err) {
+    console.warn('WebAuthn Registration:', err);
+    showToast(`Passkey registration cancelled or failed: ${err.message || 'Error'}`);
+  }
+}
+
+async function authenticateWithPasskey() {
+  if (!isWebAuthnSupported()) {
+    showError('Passkeys / WebAuthn not supported on this device/browser.');
+    return;
+  }
+
+  const errorEl = document.getElementById('accessErrorMsg');
+  if (errorEl) errorEl.classList.remove('visible');
+
+  try {
+    const challenge = new Uint8Array(32);
+    window.crypto.getRandomValues(challenge);
+
+    const savedCredIdHex = localStorage.getItem('adt_master_passkey_id');
+    const allowCredentials = savedCredIdHex ? [{
+      id: hexToBuffer(savedCredIdHex),
+      type: 'public-key'
+    }] : [];
+
+    const getOptions = {
+      challenge,
+      timeout: 60000,
+      userVerification: 'preferred'
+    };
+
+    if (allowCredentials.length > 0) {
+      getOptions.allowCredentials = allowCredentials;
+    }
+
+    const assertion = await navigator.credentials.get({
+      publicKey: getOptions
+    });
+
+    if (assertion) {
+      ACCESS_CONTROL.saveGoogleSession(
+        ACCESS_CONTROL.TIER_MASTER,
+        'master2026',
+        {
+          name: 'Aaradhya Dev Tamrakar',
+          email: 'aaradhyadevtmr@gmail.com',
+          authType: 'webauthn_passkey',
+          verified: true
+        }
+      );
+      closeAccessModal();
+      showToast('👑 Master Admin unlocked via Hardware Authenticator (Passkey)!');
+      if (typeof playAudioCue === 'function') playAudioCue('open');
+    }
+  } catch (err) {
+    console.warn('WebAuthn Authentication:', err);
+    showError(`Passkey authentication cancelled or failed: ${err.name === 'NotAllowedError' ? 'User cancelled or verification failed.' : (err.message || 'Error')}`);
+  }
+}
+
 function renderAccessNavButton() {
   const btns = [
     document.getElementById('navAccessBtn'),
@@ -624,9 +744,17 @@ function renderAccessModal() {
         <button type="button" class="access-btn-logout" id="accessLogoutBtn" hidden>Lock Session</button>
       </div>
 
-      <div class="access-divider"><span>Or Sign In With Google</span></div>
+      <div class="access-divider"><span>Or Sign In With Google / Passkey</span></div>
       <div class="google-btn-wrap" id="googleSignInBtnWrap"></div>
-      <div id="masterGoogleClientWrap" style="text-align: center; margin-top: 0.25rem; display: none;">
+      <div class="passkey-btn-wrap" id="passkeyBtnWrap" style="margin-top: 0.6rem; text-align: center;">
+        <button type="button" class="access-btn-passkey" id="accessPasskeyBtn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" width="16" height="16">
+            <path d="M12 2a5 5 0 0 0-5 5v3H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2h-1V7a5 5 0 0 0-5-5zm-3 8V7a3 3 0 0 1 6 0v3H9z"/>
+          </svg>
+          <span>Sign In with Passkey / Hardware Key</span>
+        </button>
+      </div>
+      <div id="masterGoogleClientWrap" style="text-align: center; margin-top: 0.4rem; display: none;">
         <button type="button" onclick="promptForGoogleClientId()" style="background: none; border: none; color: var(--muted); font-size: 0.68rem; font-family: var(--mono); cursor: pointer; text-decoration: underline;">
           ⚙️ Setup Google OAuth Client ID
         </button>
@@ -646,6 +774,11 @@ function openAccessModal(defaultTier = 1) {
   const logoutBtn = document.getElementById('accessLogoutBtn');
   const hintBox = document.getElementById('accessHintBox');
   const card = document.getElementById('accessModalCard');
+  const passkeyBtn = document.getElementById('accessPasskeyBtn');
+
+  if (passkeyBtn) {
+    passkeyBtn.addEventListener('click', authenticateWithPasskey);
+  }
 
   if (errorMsg) errorMsg.classList.remove('visible');
   if (passInput) passInput.value = '';
@@ -805,7 +938,10 @@ function renderMasterControlPanel() {
           <div id="masterVipListWrap" style="margin-top:0.3rem;max-height:80px;overflow-y:auto;font-family:var(--mono);font-size:0.65rem;color:var(--muted);display:flex;flex-direction:column;gap:0.2rem;"></div>
         </div>
 
-        <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.5rem;">
+        <div style="border-top:1px solid rgba(255,255,255,0.08);padding-top:0.5rem;display:flex;flex-direction:column;gap:0.35rem;">
+          <button type="button" id="masterEnrollPasskeyBtn" onclick="registerMasterPasskey()" style="background:rgba(59,130,246,0.12);border:1px solid rgba(59,130,246,0.4);color:#93c5fd;padding:0.25rem 0.5rem;font-size:0.62rem;font-family:var(--mono);border-radius:4px;cursor:pointer;width:100%;display:flex;align-items:center;justify-content:center;gap:0.35rem;">
+            <span>🔑 Enroll Hardware Passkey (FIDO2)</span>
+          </button>
           <button type="button" onclick="promptForGoogleClientId()" style="background:rgba(250,204,21,0.12);border:1px solid rgba(250,204,21,0.4);color:#fef08a;padding:0.25rem 0.5rem;font-size:0.62rem;font-family:var(--mono);border-radius:4px;cursor:pointer;width:100%;">
             ⚙️ Configure Google OAuth Client ID
           </button>
@@ -905,5 +1041,11 @@ function initAccessControl() {
   renderMasterControlPanel();
 }
 
-
-
+// Global & ESM Exports
+window.openAccessModal = openAccessModal;
+window.closeAccessModal = closeAccessModal;
+window.registerMasterPasskey = registerMasterPasskey;
+window.authenticateWithPasskey = authenticateWithPasskey;
+window.isWebAuthnSupported = isWebAuthnSupported;
+window.bufferToHex = bufferToHex;
+window.hexToBuffer = hexToBuffer;
