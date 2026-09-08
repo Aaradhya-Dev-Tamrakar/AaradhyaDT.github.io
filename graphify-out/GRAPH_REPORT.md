@@ -1,7 +1,8 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-08)
 
 ## Corpus Check
-- cluster-only mode — file stats not available
+- 41 files · ~308,714 words
+- Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
 - 621 nodes · 841 edges · 138 communities (38 shown, 89 thin omitted)
@@ -19,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- Portfolio Website Tracker — v50.26
+- Portfolio Website Tracker — v50.28
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -146,7 +147,7 @@
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v50.26` - 21 edges
+4. `Portfolio Website Tracker — v50.28` - 21 edges
 5. `log_warning()` - 16 edges
 6. `get_html_files()` - 14 edges
 7. `initTour()` - 12 edges
@@ -194,9 +195,9 @@ Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developer
 Cohesion: 0.19
 Nodes (24): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+16 more)
 
-### Community 5 - "Portfolio Website Tracker — v50.26"
+### Community 5 - "Portfolio Website Tracker — v50.28"
 Cohesion: 0.09
-Nodes (22): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v50.26, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+14 more)
+Nodes (22): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v50.28, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+14 more)
 
 ### Community 6 - "site_automation.py"
 Cohesion: 0.16
@@ -327,7 +328,7 @@ Cohesion: 1.00
 Nodes (3): SimOps Fundamentals Certificate, SimOps Practitioner Certificate, SimOps (Simulation Operations)
 
 ## Knowledge Gaps
-- **184 isolated node(s):** `SKILL_RADAR_DOMAINS`, `CMDK_ENTRIES`, `2. Knowledge Graph & Codebase Navigation (Graphify)`, `3. Operational Rules & Efficiency`, `4. Encrypted Payloads & VIP Sections (`access.js`)` (+179 more)
+- **184 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+179 more)
   These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 296 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **89 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -338,7 +339,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `loadGA4()` connect `core.js` to `script.js`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **What connects `SKILL_RADAR_DOMAINS`, `CMDK_ENTRIES`, `2. Knowledge Graph & Codebase Navigation (Graphify)` to the rest of the system?**
+- **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**
   _184 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
