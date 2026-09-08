@@ -1,6 +1,6 @@
 {
-  "sha": "a5a5307c16077a263808ec8bc81dd9885fb46680",
-  "shortSha": "a5a5307",
-  "date": "2026-09-08T17:52:29+05:45",
-  "message": "feat(sync): accelerate sync pipeline with uv, ReFS block cloning & parallel verify (v51)"
+  "sha": "ca68bbefe98915aba287fe4a9f6df16e967b9b8f",
+  "shortSha": "ca68bbe",
+  "date": "2026-09-08T17:57:28+05:45",
+  "message": "docs(sync): formalize major version automation architecture & fix tracker prepend logic"
 }
