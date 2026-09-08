@@ -57,6 +57,21 @@
 - **Category:** Full-Stack & Agentic AI
 - **Stack:** FastAPI, WebSockets, Local Vector DB (ChromaDB), Ollama / OpenAI API orchestration.
 
+### NovaOptimizer — High-Efficiency Windows Task Manager & System Optimizer
+- **Category:** Desktop Systems Software & Kernel Utilities
+- **Stack:** C# / .NET 10, WPF, Win32 NT Kernel APIs (`NtSetSystemInformation`), Windows 10/11.
+- **Specs:** Native ~25 MB RAM footprint; undocumented kernel standby list & system working set purging; Turbo Boost profiles (Game, Work, Study with integrated Pomodoro focus timer); hung-process watchdog.
+
+### Claude Desktop Multi-Profile & Autonomous Worker Fleet
+- **Category:** Distributed Agentic Systems & Developer Ergonomics
+- **Stack:** PowerShell 7, Windows Shell, FastAPI, SQLite WAL, Claude Desktop MCP, Docker.
+- **Specs:** Automated user profile isolation and concurrent multi-window session routing; distributed task coordinator with atomic leasing and autonomous worker daemons.
+
+### md2pdf — Desktop Markdown to PDF Converter
+- **Category:** Desktop Productivity Utilities
+- **Stack:** Python 3, Tkinter, Pandoc AST, wkhtmltopdf WebKit engine.
+- **Specs:** Cross-platform GUI editor with adjustable print margins, UTF-8 preservation, and system PATH dependency auto-discovery.
+
 ---
 
 ## 4. Leadership & Professional Fellowships

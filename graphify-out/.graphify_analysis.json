@@ -64,222 +64,143 @@
       "scripts_verify_yellow"
     ],
     "1": [
-      "js_script",
-      "js_script_bootsite",
-      "js_script_initnetworkstatuslisteners",
-      "js_script_initreadingprogressbar",
-      "js_script_initserviceworker",
-      "js_script_queueofflinecontactmessage",
-      "js_script_syncqueuedcontactmessages",
-      "modules_core",
-      "modules_core_ad_months",
-      "modules_core_adtobs",
-      "modules_core_applyaccent",
-      "modules_core_applylivedates",
-      "modules_core_applytheme",
-      "modules_core_bs_epoch_utc",
-      "modules_core_bs_months",
-      "modules_core_bs_years",
-      "modules_core_closelogoutmodal",
-      "modules_core_computelivedates",
-      "modules_core_getcurrentpagefile",
-      "modules_core_handleaccessbtnclick",
-      "modules_core_initaccent",
-      "modules_core_initaccentpicker",
-      "modules_core_initcursor",
-      "modules_core_inithamburger",
-      "modules_core_initreveal",
-      "modules_core_initscroll",
-      "modules_core_initstatusdate",
-      "modules_core_inittheme",
-      "modules_core_initthemetoggle",
-      "modules_core_kathmanduymd",
-      "modules_core_loadga4",
-      "modules_core_openlogoutmodal",
-      "modules_core_renderquicknav",
-      "modules_core_rendersitefooter",
-      "modules_core_rendersitenav",
-      "modules_core_renderstatusdate",
-      "modules_core_schedulega4",
-      "modules_core_setactivenav",
-      "modules_core_togglestatusdate",
-      "modules_core_toggletheme",
-      "modules_haptics",
-      "modules_haptics_initscrollparallax",
-      "modules_haptics_initskillbars",
-      "modules_haptics_initswipenav",
-      "modules_haptics_inittouchgestures",
-      "modules_haptics_triggerhapticfeedback",
-      "modules_home_widgets",
-      "modules_home_widgets_boothomewidgets",
-      "modules_home_widgets_initlastcommitbadge",
-      "modules_home_widgets_initlivedates",
-      "modules_home_widgets_initstatusclock"
+      "assets_js_modules_core_rendersitefooter",
+      "assets_js_modules_ui",
+      "assets_js_modules_ui_closeresumegenerator",
+      "assets_js_modules_ui_closeshortcutsmodal",
+      "assets_js_modules_ui_closeskillradarmodal",
+      "assets_js_modules_ui_closewhatsnewmodal",
+      "assets_js_modules_ui_copyresumeplaintext",
+      "assets_js_modules_ui_downloadresumejson",
+      "assets_js_modules_ui_downloadresumemarkdown",
+      "assets_js_modules_ui_generateresumejson",
+      "assets_js_modules_ui_generateresumemarkdown",
+      "assets_js_modules_ui_generateresumeplaintext",
+      "assets_js_modules_ui_getresumecontacthtml",
+      "assets_js_modules_ui_getresumecontactmarkdown",
+      "assets_js_modules_ui_initcountup",
+      "assets_js_modules_ui_initcountup_animatenum",
+      "assets_js_modules_ui_initcountup_animatenum_step",
+      "assets_js_modules_ui_initfiltercountindicators",
+      "assets_js_modules_ui_initfiltercountindicators_updateachvcount",
+      "assets_js_modules_ui_initfiltercountindicators_updateprojectcount",
+      "assets_js_modules_ui_initkeynav",
+      "assets_js_modules_ui_initlightbox",
+      "assets_js_modules_ui_initlightbox_closelightbox",
+      "assets_js_modules_ui_initlightbox_openlightbox",
+      "assets_js_modules_ui_initradarcanvas",
+      "assets_js_modules_ui_initradarcanvas_renderradar",
+      "assets_js_modules_ui_initradarcanvas_renderradar_getpointcoordinates",
+      "assets_js_modules_ui_initreadingmetrics",
+      "assets_js_modules_ui_initskillradar",
+      "assets_js_modules_ui_inittypedcaption",
+      "assets_js_modules_ui_inittypedcaption_typechar",
+      "assets_js_modules_ui_openresumegenerator",
+      "assets_js_modules_ui_openshortcutsmodal",
+      "assets_js_modules_ui_openskillradarmodal",
+      "assets_js_modules_ui_openwhatsnewmodal",
+      "assets_js_modules_ui_rendertailoredresumepreview",
+      "assets_js_modules_ui_sharecontent",
+      "assets_js_modules_ui_skill_radar_domains",
+      "assets_js_modules_ui_spawnparticle",
+      "assets_js_modules_ui_toggleshortcutsmodal"
     ],
     "2": [
-      "mcp_server_site_mcp",
-      "mcp_server_site_mcp_handle_resource_read",
-      "mcp_server_site_mcp_handle_tool_call",
-      "mcp_server_site_mcp_process_request",
-      "mcp_server_site_mcp_rationale_290",
-      "mcp_server_site_mcp_rationale_348",
-      "mcp_server_site_mcp_rationale_445",
-      "mcp_server_site_mcp_rationale_604",
-      "mcp_server_site_mcp_run_stdio_server",
-      "modules_cmdk",
-      "modules_cmdk_buildsearchindex",
-      "modules_cmdk_cmdk_entries",
-      "modules_cmdk_initglobalsearch",
-      "modules_cmdk_rendercmdk",
-      "modules_cmdk_revealsearchtarget",
-      "modules_constants",
-      "modules_constants_cmdk_icons",
-      "modules_constants_cmdk_type_label",
-      "modules_constants_quick_nav_pages",
-      "modules_constants_site",
-      "modules_constants_social_icons",
-      "modules_terminal",
-      "modules_terminal_setup",
-      "portfoliowebsite_tracker_v50_23",
-      "scripts_test_e2e",
-      "scripts_test_e2e_quiettesthandler",
-      "scripts_test_e2e_quiettesthandler_init",
-      "scripts_test_e2e_quiettesthandler_log_message",
-      "scripts_test_e2e_quiettesthandler_send_error",
-      "scripts_test_e2e_run_e2e_suite",
-      "unit_test_cmdk_search_test",
-      "unit_test_cmdk_search_test_buildsearchindex",
-      "unit_test_cmdk_search_test_cmdk_entries",
-      "unit_test_cmdk_search_test_executequery",
-      "unit_test_cmdk_search_test_search_static_index",
-      "unit_test_crypto_test",
-      "unit_test_crypto_test_decrypthexpayload",
-      "unit_test_crypto_test_encryptpayload",
-      "unit_test_crypto_test_getdecryptionkey",
-      "unit_test_crypto_test_key_cache"
+      "assets_js_modules_core",
+      "assets_js_modules_core_ad_months",
+      "assets_js_modules_core_adtobs",
+      "assets_js_modules_core_applyaccent",
+      "assets_js_modules_core_applylivedates",
+      "assets_js_modules_core_applytheme",
+      "assets_js_modules_core_bs_epoch_utc",
+      "assets_js_modules_core_bs_months",
+      "assets_js_modules_core_bs_years",
+      "assets_js_modules_core_closelogoutmodal",
+      "assets_js_modules_core_computelivedates",
+      "assets_js_modules_core_getcurrentpagefile",
+      "assets_js_modules_core_handleaccessbtnclick",
+      "assets_js_modules_core_initaccent",
+      "assets_js_modules_core_initaccentpicker",
+      "assets_js_modules_core_initcursor",
+      "assets_js_modules_core_initcursor_tick",
+      "assets_js_modules_core_inithamburger",
+      "assets_js_modules_core_inithamburger_setopen",
+      "assets_js_modules_core_initreveal",
+      "assets_js_modules_core_initscroll",
+      "assets_js_modules_core_initscroll_onscroll",
+      "assets_js_modules_core_initstatusdate",
+      "assets_js_modules_core_inittheme",
+      "assets_js_modules_core_initthemetoggle",
+      "assets_js_modules_core_kathmanduymd",
+      "assets_js_modules_core_loadga4",
+      "assets_js_modules_core_loadga4_gtag",
+      "assets_js_modules_core_openlogoutmodal",
+      "assets_js_modules_core_renderquicknav",
+      "assets_js_modules_core_rendersitenav",
+      "assets_js_modules_core_renderstatusdate",
+      "assets_js_modules_core_requestnotificationpermission",
+      "assets_js_modules_core_schedulega4",
+      "assets_js_modules_core_setactivenav",
+      "assets_js_modules_core_subscribepushnotifications",
+      "assets_js_modules_core_togglestatusdate",
+      "assets_js_modules_core_toggletheme"
     ],
     "3": [
-      "data_resume_data",
-      "data_resume_data_resume_data",
-      "modules_audio",
-      "modules_audio_getaudiocontext",
-      "modules_audio_initaudiocues",
-      "modules_audio_playaudiocue",
-      "modules_audio_syncaudiotoggleui",
-      "modules_audio_toggleaudiocues",
-      "modules_ui",
-      "modules_ui_closeresumegenerator",
-      "modules_ui_closeshortcutsmodal",
-      "modules_ui_closeskillradarmodal",
-      "modules_ui_closewhatsnewmodal",
-      "modules_ui_copyresumeplaintext",
-      "modules_ui_downloadresumejson",
-      "modules_ui_downloadresumemarkdown",
-      "modules_ui_generateresumejson",
-      "modules_ui_generateresumemarkdown",
-      "modules_ui_generateresumeplaintext",
-      "modules_ui_getresumecontacthtml",
-      "modules_ui_getresumecontactmarkdown",
-      "modules_ui_initcountup",
-      "modules_ui_initfiltercountindicators",
-      "modules_ui_initkeynav",
-      "modules_ui_initlightbox",
-      "modules_ui_initradarcanvas",
-      "modules_ui_initreadingmetrics",
-      "modules_ui_initskillradar",
-      "modules_ui_inittypedcaption",
-      "modules_ui_openresumegenerator",
-      "modules_ui_openshortcutsmodal",
-      "modules_ui_openskillradarmodal",
-      "modules_ui_openwhatsnewmodal",
-      "modules_ui_rendertailoredresumepreview",
-      "modules_ui_sharecontent",
-      "modules_ui_skill_radar_domains",
-      "modules_ui_spawnparticle",
-      "modules_ui_toggleshortcutsmodal"
-    ],
-    "4": [
       "aaradhya_dev_tamrakar",
       "ai_assisted_coding_for_developers_certificate",
-      "ai_assisted_product_launch_certificate",
       "ai_fluency_concept",
-      "ai_fluency_foundations_of_coworking_with_ai_certificate",
-      "ai_fluency_framework_and_foundations_certificate",
       "anthropic_org",
-      "building_a_go_to_market_strategy_certificate",
-      "cleaning_data_with_generative_ai_certificate",
-      "concept_ai_fluency",
+      "assets_certificates_ai_assisted_product_launch_certificate",
+      "assets_certificates_ai_fluency_foundations_of_coworking_with_ai_certificate",
+      "assets_certificates_ai_fluency_framework_and_foundations_certificate",
+      "assets_certificates_building_a_go_to_market_strategy_certificate",
+      "assets_certificates_cleaning_data_with_generative_ai_certificate",
+      "assets_certificates_ieee_kec_spax_organization_2026_certificate",
+      "assets_certificates_ieee_kec_volunteering_vice_secretary_2025_2026_certificate",
+      "assets_certificates_ieee_pulchowk_prextreme_cp_workshop_certificate",
+      "assets_events_ieee_plus2_orientation_2026",
+      "assets_events_mr_kec_2025_1",
+      "assets_images_og_image",
+      "assets_images_photo_webp",
       "datacamp_org",
+      "dev_logs_og_image_template_html",
       "eu_ai_act_literacy_certificate",
       "generative_ai_data_cleaning_concept",
       "go_to_market_strategy_concept",
-      "ieee_kec_spax_organization_2026_certificate",
       "ieee_kec_student_branch",
-      "ieee_kec_volunteering_vice_secretary_2025_2026_certificate",
-      "ieee_plus2_orientation_2026",
-      "ieee_pulchowk_prextreme_cp_workshop_certificate",
       "ieee_pulchowk_student_branch",
       "kathmandu_engineering_college",
-      "mr_kec_2025_1",
-      "og_image",
-      "photo_png",
       "prextreme_cp_workshop",
-      "spax_2026",
-      "template_html"
+      "spax_2026"
+    ],
+    "4": [
+      "assets_js_modules_access",
+      "assets_js_modules_access_access_control",
+      "assets_js_modules_access_access_control_payloads",
+      "assets_js_modules_access_addcustomvipemail",
+      "assets_js_modules_access_closeaccessmodal",
+      "assets_js_modules_access_decrypthexpayload",
+      "assets_js_modules_access_getcustomvipemails",
+      "assets_js_modules_access_getdecryptionkey",
+      "assets_js_modules_access_getgoogleclientid",
+      "assets_js_modules_access_handlegooglecredentialresponse",
+      "assets_js_modules_access_initaccesscontrol",
+      "assets_js_modules_access_key_cache",
+      "assets_js_modules_access_openaccessmodal",
+      "assets_js_modules_access_openaccessmodal_handleauthenticate",
+      "assets_js_modules_access_parsejwt",
+      "assets_js_modules_access_promptaddvipemail",
+      "assets_js_modules_access_promptforgoogleclientid",
+      "assets_js_modules_access_removecustomvipemail",
+      "assets_js_modules_access_renderaccessmodal",
+      "assets_js_modules_access_renderaccessnavbutton",
+      "assets_js_modules_access_rendergooglesigninbutton",
+      "assets_js_modules_access_rendermastercontrolpanel",
+      "assets_js_modules_access_showerror",
+      "assets_js_modules_access_showtoast",
+      "assets_js_modules_access_updategatedcontentvisibility"
     ],
     "5": [
-      "modules_access",
-      "modules_access_access_control",
-      "modules_access_access_control_payloads",
-      "modules_access_addcustomvipemail",
-      "modules_access_closeaccessmodal",
-      "modules_access_decrypthexpayload",
-      "modules_access_getcustomvipemails",
-      "modules_access_getdecryptionkey",
-      "modules_access_getgoogleclientid",
-      "modules_access_handlegooglecredentialresponse",
-      "modules_access_initaccesscontrol",
-      "modules_access_key_cache",
-      "modules_access_openaccessmodal",
-      "modules_access_parsejwt",
-      "modules_access_promptaddvipemail",
-      "modules_access_promptforgoogleclientid",
-      "modules_access_removecustomvipemail",
-      "modules_access_renderaccessmodal",
-      "modules_access_renderaccessnavbutton",
-      "modules_access_rendergooglesigninbutton",
-      "modules_access_rendermastercontrolpanel",
-      "modules_access_showerror",
-      "modules_access_showtoast",
-      "modules_access_updategatedcontentvisibility",
-      "modules_core_requestnotificationpermission",
-      "modules_core_subscribepushnotifications"
-    ],
-    "6": [
-      "404_html",
-      "about_html",
-      "achievements_html",
-      "cert_ai_coding",
-      "cert_ai_launch",
-      "cert_js_bootcamp",
-      "contact_html",
-      "experience_html",
-      "extract_index_py",
-      "index_html",
-      "journey_html",
-      "logo_epc",
-      "logo_fusemachines",
-      "privacy_html",
-      "projects_html",
-      "readme_portfolio",
-      "script_js",
-      "site_mcp_py",
-      "sw_js",
-      "sync_ps1",
-      "terms_html",
-      "verify_py"
-    ],
-    "7": [
       "dev_logs_portfoliowebsite_tracker",
       "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
       "dev_logs_portfoliowebsite_tracker_state_of_play",
@@ -303,7 +224,7 @@
       "dev_logs_portfoliowebsite_tracker_v37_addition_guided_cross_page_site_tour_with_spotlight_overlay_journey_node_j_033_2026_08_08",
       "dev_logs_portfoliowebsite_tracker_v38_addition_web_audio_micro_sounds_reading_metrics_live_result_indicators_verification_suite_journey_node_j_034_2026_08_08"
     ],
-    "8": [
+    "6": [
       "scripts_site_automation",
       "scripts_site_automation_audit",
       "scripts_site_automation_bump_version",
@@ -327,37 +248,38 @@
       "scripts_site_automation_update_knowledge_graph",
       "scripts_site_automation_update_tracker"
     ],
-    "9": [
-      "modules_tour",
-      "modules_tour_closetouroverlay",
-      "modules_tour_ensuretouroverlay",
-      "modules_tour_exittour",
-      "modules_tour_gettourcurrentpage",
-      "modules_tour_gettourpageurl",
-      "modules_tour_inittour",
-      "modules_tour_positiontourcard",
-      "modules_tour_promptguidedtour",
-      "modules_tour_rendertourstep",
-      "modules_tour_starttour",
-      "modules_tour_tour_flat_steps",
-      "modules_tour_tour_page_order",
-      "modules_tour_tour_steps",
-      "modules_tour_touradvance",
-      "modules_tour_tourback",
-      "modules_tour_tourcurrentindex",
-      "modules_tour_tourgoto",
-      "modules_tour_tourreducedmotion",
-      "modules_tour_updatetourspotlight"
+    "7": [
+      "assets_js_modules_tour",
+      "assets_js_modules_tour_closetouroverlay",
+      "assets_js_modules_tour_ensuretouroverlay",
+      "assets_js_modules_tour_exittour",
+      "assets_js_modules_tour_gettourcurrentpage",
+      "assets_js_modules_tour_gettourpageurl",
+      "assets_js_modules_tour_inittour",
+      "assets_js_modules_tour_positiontourcard",
+      "assets_js_modules_tour_promptguidedtour",
+      "assets_js_modules_tour_rendertourstep",
+      "assets_js_modules_tour_starttour",
+      "assets_js_modules_tour_tour_flat_steps",
+      "assets_js_modules_tour_tour_page_order",
+      "assets_js_modules_tour_tour_steps",
+      "assets_js_modules_tour_touradvance",
+      "assets_js_modules_tour_tourback",
+      "assets_js_modules_tour_tourcurrentindex",
+      "assets_js_modules_tour_tourgoto",
+      "assets_js_modules_tour_tourreducedmotion",
+      "assets_js_modules_tour_updatetourspotlight"
     ],
-    "10": [
-      "aaradhya_dev_tamrakar_cv",
-      "adt_logo",
-      "javascript_bootcamp_certificate_kec_it_club_2023",
-      "microsoft_learn_html_css_github_pages",
-      "nepatronix_drone_hub_nepal_3day_drone_training_2026",
-      "offenso_security_bypass_webinar_2025",
-      "printer_maintenance_certification",
-      "recommending_skincare_products",
+    "8": [
+      "assets_certificates_javascript_bootcamp_certificate_kec_it_club_2023",
+      "assets_certificates_microsoft_learn_html_css_github_pages",
+      "assets_certificates_nepatronix_drone_hub_nepal_3day_drone_training_2026",
+      "assets_certificates_offenso_security_bypass_webinar_2025",
+      "assets_certificates_printer_maintenance_certification",
+      "assets_certificates_recommending_skincare_products",
+      "assets_certificates_techaxis_prompt_engineering_2026",
+      "assets_docs_aaradhya_dev_tamrakar_cv",
+      "assets_docs_adt_logo",
       "simops_ai_for_graduates",
       "simops_ai_for_graduates_badge",
       "simops_expert",
@@ -365,10 +287,9 @@
       "simops_fundamentals",
       "simops_fundamentals_badge",
       "simops_practitioner",
-      "simops_practitioner_badge",
-      "techaxis_prompt_engineering_2026"
+      "simops_practitioner_badge"
     ],
-    "11": [
+    "9": [
       "readme",
       "readme_automated_git_workflow_pre_commit_gate_sync_ps1",
       "readme_codebase_knowledge_graph_graphify",
@@ -387,7 +308,7 @@
       "readme_ux_features",
       "readme_verification_diagnostic_suite"
     ],
-    "12": [
+    "10": [
       "scripts_manage_payloads",
       "scripts_manage_payloads_cmd_export",
       "scripts_manage_payloads_cmd_get",
@@ -406,7 +327,7 @@
       "scripts_manage_payloads_read_access_payloads",
       "scripts_manage_payloads_write_access_payloads"
     ],
-    "13": [
+    "11": [
       "js_bg_animations",
       "js_bg_animations_initbackgroundanimations",
       "js_bg_animations_pcbtraces",
@@ -423,6 +344,37 @@
       "js_bg_animations_signalwavebackground_resize",
       "js_bg_animations_signalwavebackground_start"
     ],
+    "12": [
+      "404_html",
+      "about_html",
+      "achievements_html",
+      "assets_js_script_js",
+      "concept_biasaperture",
+      "concept_novaoptimizer",
+      "concept_spark",
+      "contact_html",
+      "experience_html",
+      "index_html",
+      "journey_html",
+      "privacy_html",
+      "projects_html",
+      "terms_html"
+    ],
+    "13": [
+      "assets_js_modules_cmdk",
+      "assets_js_modules_cmdk_buildsearchindex",
+      "assets_js_modules_cmdk_cmdk_entries",
+      "assets_js_modules_cmdk_initglobalsearch",
+      "assets_js_modules_cmdk_initglobalsearch_closecmdk",
+      "assets_js_modules_cmdk_initglobalsearch_currentresults",
+      "assets_js_modules_cmdk_initglobalsearch_opencmdk",
+      "assets_js_modules_cmdk_initglobalsearch_refresh",
+      "assets_js_modules_cmdk_initglobalsearch_renderresults",
+      "assets_js_modules_cmdk_initglobalsearch_setactiveresult",
+      "assets_js_modules_cmdk_initglobalsearch_setactivetab",
+      "assets_js_modules_cmdk_rendercmdk",
+      "assets_js_modules_cmdk_revealsearchtarget"
+    ],
     "14": [
       "sync",
       "sync_format_markdownhygiene",
@@ -436,6 +388,37 @@
       "sync_write_badge"
     ],
     "15": [
+      "mcp_server_site_mcp",
+      "mcp_server_site_mcp_handle_resource_read",
+      "mcp_server_site_mcp_handle_tool_call",
+      "mcp_server_site_mcp_process_request",
+      "mcp_server_site_mcp_rationale_290",
+      "mcp_server_site_mcp_rationale_348",
+      "mcp_server_site_mcp_rationale_445",
+      "mcp_server_site_mcp_rationale_604",
+      "mcp_server_site_mcp_run_stdio_server"
+    ],
+    "16": [
+      "assets_js_modules_home_widgets",
+      "assets_js_modules_home_widgets_boothomewidgets",
+      "assets_js_modules_home_widgets_initlastcommitbadge",
+      "assets_js_modules_home_widgets_initlastcommitbadge_formatdatetime",
+      "assets_js_modules_home_widgets_initlastcommitbadge_pad",
+      "assets_js_modules_home_widgets_initlivedates",
+      "assets_js_modules_home_widgets_initstatusclock",
+      "assets_js_modules_home_widgets_initstatusclock_tick"
+    ],
+    "17": [
+      "assets_js_script",
+      "assets_js_script_bootsite",
+      "assets_js_script_initnetworkstatuslisteners",
+      "assets_js_script_initreadingprogressbar",
+      "assets_js_script_initreadingprogressbar_updateprogress",
+      "assets_js_script_initserviceworker",
+      "assets_js_script_queueofflinecontactmessage",
+      "assets_js_script_syncqueuedcontactmessages"
+    ],
+    "18": [
       "agents",
       "agents_1_git_workflow_automation_critical_strict_enforcement",
       "agents_2_knowledge_graph_codebase_navigation_graphify",
@@ -444,7 +427,7 @@
       "agents_agent_rules_workflow_guidelines",
       "agents_commands"
     ],
-    "16": [
+    "19": [
       "any",
       "scripts_generate_og_cards",
       "scripts_generate_og_cards_generate_cards",
@@ -453,7 +436,16 @@
       "scripts_generate_og_cards_rationale_81",
       "scripts_generate_og_cards_render_svg_card"
     ],
-    "17": [
+    "20": [
+      "assets_js_modules_haptics",
+      "assets_js_modules_haptics_initscrollparallax",
+      "assets_js_modules_haptics_initscrollparallax_onparallaxscroll",
+      "assets_js_modules_haptics_initskillbars",
+      "assets_js_modules_haptics_initswipenav",
+      "assets_js_modules_haptics_inittouchgestures",
+      "assets_js_modules_haptics_triggerhapticfeedback"
+    ],
+    "21": [
       "d_aaradhyadt_aaradhyadt_github_io_scripts_extract_index_py",
       "scripts_extract_index_extract_achievements",
       "scripts_extract_index_extract_projects",
@@ -462,7 +454,7 @@
       "scripts_extract_index_render_entry",
       "scripts_extract_index_text_of"
     ],
-    "18": [
+    "22": [
       "gemini",
       "gemini_1_git_workflow_automation_critical_strict_enforcement",
       "gemini_2_knowledge_graph_codebase_navigation_graphify",
@@ -471,7 +463,23 @@
       "gemini_antigravity_ide_gemini_agent_rules_for_portfolio_repository",
       "gemini_commands"
     ],
-    "19": [
+    "23": [
+      "assets_js_modules_audio",
+      "assets_js_modules_audio_getaudiocontext",
+      "assets_js_modules_audio_initaudiocues",
+      "assets_js_modules_audio_playaudiocue",
+      "assets_js_modules_audio_syncaudiotoggleui",
+      "assets_js_modules_audio_toggleaudiocues"
+    ],
+    "24": [
+      "assets_js_modules_constants",
+      "assets_js_modules_constants_cmdk_icons",
+      "assets_js_modules_constants_cmdk_type_label",
+      "assets_js_modules_constants_quick_nav_pages",
+      "assets_js_modules_constants_site",
+      "assets_js_modules_constants_social_icons"
+    ],
+    "25": [
       "claude",
       "claude_encrypted_sections_vip_payloads_access_js",
       "claude_file_delivery",
@@ -479,387 +487,451 @@
       "claude_output_constraints_strict",
       "claude_working_conventions_for_this_repo"
     ],
-    "20": [
+    "26": [
+      "scripts_test_e2e",
+      "scripts_test_e2e_quiettesthandler",
+      "scripts_test_e2e_quiettesthandler_init",
+      "scripts_test_e2e_quiettesthandler_log_message",
+      "scripts_test_e2e_quiettesthandler_send_error",
+      "scripts_test_e2e_run_e2e_suite"
+    ],
+    "27": [
+      "assets_js_modules_terminal",
+      "assets_js_modules_terminal_setup",
+      "assets_js_modules_terminal_setup_appendoutput",
+      "assets_js_modules_terminal_setup_escapehtml",
+      "assets_js_modules_terminal_setup_execcommand"
+    ],
+    "28": [
       "scripts_build_css",
       "scripts_build_css_build_all",
       "scripts_build_css_minify_css",
       "scripts_build_css_rationale_17",
       "scripts_build_css_rationale_48"
     ],
-    "21": [
+    "29": [
       "scripts_generate_pwa_icons",
       "scripts_generate_pwa_icons_find_browser",
       "scripts_generate_pwa_icons_generate_icon",
       "scripts_generate_pwa_icons_main",
       "scripts_generate_pwa_icons_py_path"
     ],
-    "22": [
+    "30": [
+      "unit_test_cmdk_search_test",
+      "unit_test_cmdk_search_test_buildsearchindex",
+      "unit_test_cmdk_search_test_cmdk_entries",
+      "unit_test_cmdk_search_test_executequery",
+      "unit_test_cmdk_search_test_search_static_index"
+    ],
+    "31": [
+      "unit_test_crypto_test",
+      "unit_test_crypto_test_decrypthexpayload",
+      "unit_test_crypto_test_encryptpayload",
+      "unit_test_crypto_test_getdecryptionkey",
+      "unit_test_crypto_test_key_cache"
+    ],
+    "32": [
+      "assets_certificates_ieee_kec_agile_workshop_2025_ieee_kec_agile_workshop_2025",
+      "assets_certificates_ieee_kec_electronics_for_all_mentorship_2025_ieee_kec_electronics_for_all_mentorship_2025",
+      "assets_certificates_ieee_kec_ieee_day_organizer_2025_ieee_kec_ieee_day_organizer_2025",
+      "ieee_kec_organization"
+    ],
+    "33": [
+      "assets_certificates_memieee500_certificate",
+      "assets_certificates_memwie050_certificate",
+      "ieee_organization",
+      "ieee_wie_organization"
+    ],
+    "34": [
       "d_aaradhyadt_aaradhyadt_github_io_scripts_dev_serve_py",
       "scripts_dev_serve_handler",
       "scripts_dev_serve_handler_end_headers",
       "scripts_dev_serve_handler_send_error"
     ],
-    "23": [
-      "ieee_kec_agile_workshop_2025_ieee_kec_agile_workshop_2025",
-      "ieee_kec_electronics_for_all_mentorship_2025_ieee_kec_electronics_for_all_mentorship_2025",
-      "ieee_kec_ieee_day_organizer_2025_ieee_kec_ieee_day_organizer_2025",
-      "ieee_kec_organization"
+    "35": [
+      "assets_certificates_ieee_kec_ieee_day_organizer_2025",
+      "assets_certificates_ieee_kec_spax_organization_2026",
+      "assets_certificates_ieee_kec_volunteering_vice_secretary_2025_2026"
     ],
-    "24": [
-      "ieee_organization",
-      "ieee_wie_organization",
-      "memieee500_certificate",
-      "memwie050_certificate"
-    ],
-    "25": [
-      "concept_python_programming",
-      "introduction_to_python_47717251_certificate",
-      "introduction_to_python_itp0014139470763_certificate"
-    ],
-    "26": [
-      "ieee_kec_ieee_day_organizer_2025",
-      "ieee_kec_spax_organization_2026",
-      "ieee_kec_volunteering_vice_secretary_2025_2026"
-    ],
-    "27": [
-      "introduction_to_git_48697649_certificate",
-      "introduction_to_git_cpe0469867571113_certificate",
+    "36": [
+      "assets_certificates_introduction_to_git_48697649_certificate",
+      "assets_certificates_introduction_to_git_cpe0469867571113_certificate",
       "shared_git_concept"
     ],
-    "28": [
-      "kec_robotics_club_pcb_design_fabrication_workshop_2025_kec_robotics_club",
-      "kec_robotics_club_pcb_design_fabrication_workshop_2025_pcb_design_fabrication",
-      "laser_safety_awareness_training_laser_safety"
+    "37": [
+      "assets_certificates_introduction_to_python_47717251_certificate",
+      "assets_certificates_introduction_to_python_itp0014139470763_certificate",
+      "concept_python_programming"
     ],
-    "29": [
+    "38": [
+      "assets_certificates_kec_robotics_club_pcb_design_fabrication_workshop_2025_kec_robotics_club",
+      "assets_certificates_kec_robotics_club_pcb_design_fabrication_workshop_2025_pcb_design_fabrication",
+      "assets_certificates_laser_safety_awareness_training_laser_safety"
+    ],
+    "39": [
+      "assets_certificates_simops_ai_for_graduates_98452248595354_certificate",
+      "assets_certificates_simops_expert_12836702612982_certificate",
+      "simops_platform"
+    ],
+    "40": [
+      "assets_certificates_simops_fundamentals_25303246876434_certificate",
+      "assets_certificates_simops_practitioner_52653675650240_certificate",
+      "simops_concept"
+    ],
+    "41": [
       "sanitize_and_payload",
       "sanitize_and_payload_generate_payload",
       "sanitize_and_payload_sanitize_content"
     ],
-    "30": [
-      "simops_ai_for_graduates_98452248595354_certificate",
-      "simops_expert_12836702612982_certificate",
-      "simops_platform"
-    ],
-    "31": [
-      "simops_concept",
-      "simops_fundamentals_25303246876434_certificate",
-      "simops_practitioner_52653675650240_certificate"
-    ],
-    "32": [
+    "42": [
       "unit_test_core_helpers_test",
       "unit_test_core_helpers_test_computelivedates",
       "unit_test_core_helpers_test_getcurrentpagefile"
     ],
-    "33": [
+    "43": [
       "unit_test_terminal_test",
       "unit_test_terminal_test_parseterminalcommand",
       "unit_test_terminal_test_resolvenavigationtarget"
     ],
-    "34": [
-      "concept_cybersecurity",
-      "offenso_security_bypass_webinar_2025_certificate"
+    "44": [
+      "assets_certificates_eu_ai_act_literacy_eu0028355472158_certificate",
+      "eu_ai_act_literacy_eu_ai_act"
     ],
-    "35": [
-      "concept_hardware_maintenance",
-      "printer_maintenance_certification_certificate"
+    "45": [
+      "assets_certificates_gnome_nepal_linux_opensource_workshop_2024",
+      "assets_certificates_kecit_git_github_session_2024"
     ],
-    "36": [
-      "concept_uav_technology",
-      "nepatronix_drone_hub_nepal_3day_drone_training_2026_certificate"
+    "46": [
+      "assets_certificates_ieee_ieeextreme_19_0_2025",
+      "assets_certificates_ieee_pulchowk_prextreme_cp_workshop"
     ],
-    "37": [
-      "concept_web_development",
-      "microsoft_learn_html_css_github_pages_certificate"
+    "47": [
+      "assets_certificates_ieee_ieeextreme_19_0_2025_certificate",
+      "assets_certificates_ieee_ieeextreme_19_0_2025_ieee"
     ],
-    "38": [
+    "48": [
+      "assets_certificates_ieee_wie_latex_training_2026_certificate",
+      "assets_certificates_ieee_wie_latex_training_2026_latex"
+    ],
+    "49": [
+      "assets_certificates_kec_it_club_aws_fundamentals_2025_aws_fundamentals",
+      "assets_certificates_kec_it_club_aws_fundamentals_2025_kec_it_club"
+    ],
+    "50": [
+      "assets_certificates_microsoft_learn_html_css_github_pages_certificate",
+      "concept_web_development"
+    ],
+    "51": [
+      "assets_certificates_nepatronix_drone_hub_nepal_3day_drone_training_2026_certificate",
+      "concept_uav_technology"
+    ],
+    "52": [
+      "assets_certificates_offenso_security_bypass_webinar_2025_certificate",
+      "concept_cybersecurity"
+    ],
+    "53": [
+      "assets_certificates_printer_maintenance_certification_certificate",
+      "concept_hardware_maintenance"
+    ],
+    "54": [
+      "assets_certificates_techaxis_prompt_engineering_2026_certificate",
+      "prompt_engineering_concept"
+    ],
+    "55": [
+      "assets_events_epc_basic_electronics_2025_1",
+      "assets_events_epc_basic_electronics_2025_2"
+    ],
+    "56": [
+      "assets_events_epc_basic_electronics_2025_banner",
+      "assets_images_logos_epc_club_logo"
+    ],
+    "57": [
+      "assets_events_proteus_workshop_2024_banner",
+      "kec_electrical_club"
+    ],
+    "58": [
+      "assets_js_data_releases",
+      "assets_js_data_releases_site_releases"
+    ],
+    "59": [
+      "assets_js_data_resume_data",
+      "assets_js_data_resume_data_resume_data"
+    ],
+    "60": [
+      "assets_js_data_search_index",
+      "assets_js_data_search_index_search_static_index"
+    ],
+    "61": [
       "d_aaradhyadt_aaradhyadt_github_io_dev_logs_og_image_readme_md",
       "og_image_readme_og_image_source"
     ],
-    "39": [
-      "data_releases",
-      "data_releases_site_releases"
+    "62": [
+      "llms_full_txt",
+      "llms_txt"
     ],
-    "40": [
-      "data_search_index",
-      "data_search_index_search_static_index"
-    ],
-    "41": [
-      "epc_basic_electronics_2025_1",
-      "epc_basic_electronics_2025_2"
-    ],
-    "42": [
-      "epc_basic_electronics_2025_banner",
-      "epc_club_logo"
-    ],
-    "43": [
-      "eu_ai_act_literacy_eu0028355472158_certificate",
-      "eu_ai_act_literacy_eu_ai_act"
-    ],
-    "44": [
-      "gnome_nepal_linux_opensource_workshop_2024",
-      "kecit_git_github_session_2024"
-    ],
-    "45": [
-      "ieee_ieeextreme_19_0_2025",
-      "ieee_pulchowk_prextreme_cp_workshop"
-    ],
-    "46": [
-      "ieee_ieeextreme_19_0_2025_certificate",
-      "ieee_ieeextreme_19_0_2025_ieee"
-    ],
-    "47": [
-      "ieee_wie_latex_training_2026_certificate",
-      "ieee_wie_latex_training_2026_latex"
-    ],
-    "48": [
-      "kec_electrical_club",
-      "proteus_workshop_2024_banner"
-    ],
-    "49": [
-      "kec_it_club_aws_fundamentals_2025_aws_fundamentals",
-      "kec_it_club_aws_fundamentals_2025_kec_it_club"
-    ],
-    "50": [
-      "prompt_engineering_concept",
-      "techaxis_prompt_engineering_2026_certificate"
-    ],
-    "51": [
+    "63": [
       "sw",
       "sw_static_assets"
     ],
-    "52": [
-      "99947412_pdf"
-    ],
-    "53": [
+    "64": [
       "ai_security_pdf"
     ],
-    "54": [
-      "autocad_workshop_2025"
-    ],
-    "55": [
-      "base_css"
-    ],
-    "56": [
-      "bg_animations_js"
-    ],
-    "57": [
-      "deploy_pages_yml"
-    ],
-    "58": [
-      "dristi_3_0_2025"
-    ],
-    "59": [
-      "ev_ratings_pdf"
-    ],
-    "60": [
-      "fusemachines_logo"
-    ],
-    "61": [
-      "gcsbr_poster_jpg"
-    ],
-    "62": [
-      "generate_a_study_guide"
-    ],
-    "63": [
-      "generate_a_study_guide_certificate"
-    ],
-    "64": [
-      "google_oauth"
-    ],
     "65": [
-      "google_verification"
+      "assets_certificates_99947412_pdf"
     ],
     "66": [
-      "icon_192_png"
+      "assets_certificates_generate_a_study_guide"
     ],
     "67": [
-      "icon_512_png"
+      "assets_certificates_generate_a_study_guide_certificate"
     ],
     "68": [
-      "ieee_kec_agile_workshop_2025"
+      "assets_certificates_ieee_kec_agile_workshop_2025"
     ],
     "69": [
-      "ieee_kec_electronics_for_all_mentorship_2025"
+      "assets_certificates_ieee_kec_electronics_for_all_mentorship_2025"
     ],
     "70": [
-      "ieee_kec_logo"
+      "assets_certificates_ieee_nepal_section_clw_2026"
     ],
     "71": [
-      "ieee_kec_webp"
+      "assets_certificates_ieee_wie_latex_training_2026"
     ],
     "72": [
-      "ieee_nepal_section_clw_2026"
+      "assets_certificates_introduction_to_git_48697649"
     ],
     "73": [
-      "ieee_wie_latex_training_2026"
+      "assets_certificates_introduction_to_git_cpe0469867571113"
     ],
     "74": [
-      "introduction_to_git_48697649"
+      "assets_certificates_introduction_to_python_47717251"
     ],
     "75": [
-      "introduction_to_git_cpe0469867571113"
+      "assets_certificates_introduction_to_python_itp0014139470763"
     ],
     "76": [
-      "introduction_to_python_47717251"
+      "assets_certificates_introduction_to_security_in_the_world_of_ai"
     ],
     "77": [
-      "introduction_to_python_itp0014139470763"
+      "assets_certificates_kec_it_club_aws_fundamentals_2025"
     ],
     "78": [
-      "introduction_to_security_in_the_world_of_ai"
+      "assets_certificates_kec_robotics_club_pcb_design_fabrication_workshop_2025"
     ],
     "79": [
-      "kec_it_club_aws_fundamentals_2025"
+      "assets_certificates_laser_safety_awareness_training"
     ],
     "80": [
-      "kec_music_club_svg"
+      "assets_certificates_recommending_skincare_products_certificate"
     ],
     "81": [
-      "kec_robotics_club_pcb_design_fabrication_workshop_2025"
+      "assets_certificates_uh3001_certificate"
     ],
     "82": [
-      "laser_safety_awareness_training"
+      "assets_css_modules_base_css"
     ],
     "83": [
-      "lighthouse_audit_yml"
+      "assets_events_autocad_workshop_2025"
     ],
     "84": [
-      "machine_learning_hackathon_2024"
+      "assets_events_dristi_3_0_2025"
     ],
     "85": [
-      "makerspace_png"
+      "assets_events_kec_music_club_svg"
     ],
     "86": [
-      "makerspace_webp"
+      "assets_events_machine_learning_hackathon_2024"
     ],
     "87": [
-      "mr_kec_2025_2"
+      "assets_events_mr_kec_2025_2"
     ],
     "88": [
-      "mr_kec_2025_3"
+      "assets_events_mr_kec_2025_3"
     ],
     "89": [
-      "nssr_png"
+      "assets_events_pcb_design_fabrication_workshop_2025_day1"
     ],
     "90": [
-      "nssr_webp"
+      "assets_events_pcb_design_fabrication_workshop_2025_day2"
     ],
     "91": [
-      "og_alpha_svg"
+      "assets_events_pcb_design_fabrication_workshop_2025_day3"
     ],
     "92": [
-      "og_fuse_ai_svg"
+      "assets_events_proteus_workshop_2024_day1"
     ],
     "93": [
-      "og_gcsbr_svg"
+      "assets_events_proteus_workshop_2024_day2"
     ],
     "94": [
-      "og_image_readme_md"
+      "assets_events_proteus_workshop_2024_svg"
     ],
     "95": [
-      "og_master_svg"
+      "assets_events_sports_week_2026_svg"
     ],
     "96": [
-      "og_spark_svg"
+      "assets_images_icon_192_png"
     ],
     "97": [
-      "pcb_design_fabrication_workshop_2025_day1"
+      "assets_images_icon_512_png"
     ],
     "98": [
-      "pcb_design_fabrication_workshop_2025_day2"
+      "assets_images_logos_fusemachines_logo"
     ],
     "99": [
-      "pcb_design_fabrication_workshop_2025_day3"
+      "assets_images_logos_ieee_kec_logo"
     ],
     "100": [
-      "proteus_workshop_2024_day1"
+      "assets_images_logos_ieee_kec_webp"
     ],
     "101": [
-      "proteus_workshop_2024_day2"
+      "assets_images_logos_makerspace_png"
     ],
     "102": [
-      "proteus_workshop_2024_svg"
+      "assets_images_logos_makerspace_webp"
     ],
     "103": [
-      "readme_biasaperture_project"
+      "assets_images_logos_nssr_png"
     ],
     "104": [
-      "recommending_skincare_products_certificate"
+      "assets_images_logos_nssr_webp"
     ],
     "105": [
-      "robots_txt"
+      "assets_images_og_og_alpha_svg"
     ],
     "106": [
-      "site_webmanifest"
+      "assets_images_og_og_fuse_ai_svg"
     ],
     "107": [
-      "sports_week_2026_svg"
+      "assets_images_og_og_gcsbr_svg"
     ],
     "108": [
-      "tokens_css"
+      "assets_images_og_og_master_svg"
     ],
     "109": [
-      "uh3001_certificate"
+      "assets_images_og_og_spark_svg"
     ],
     "110": [
-      "update_search_index_yml"
+      "assets_images_photo_png"
     ],
     "111": [
-      "verify_yml"
+      "assets_js_bg_animations_js"
     ],
     "112": [
-      "version"
+      "cert_ai_coding"
     ],
     "113": [
+      "cert_ai_launch"
+    ],
+    "114": [
+      "cert_js_bootcamp"
+    ],
+    "115": [
+      "dev_logs_og_image_readme_md"
+    ],
+    "116": [
+      "ev_ratings_pdf"
+    ],
+    "117": [
+      "gcsbr_poster_jpg"
+    ],
+    "118": [
+      "github_workflows_deploy_pages_yml"
+    ],
+    "119": [
+      "github_workflows_lighthouse_audit_yml"
+    ],
+    "120": [
+      "github_workflows_update_search_index_yml"
+    ],
+    "121": [
+      "github_workflows_verify_yml"
+    ],
+    "122": [
+      "google_oauth"
+    ],
+    "123": [
+      "google_verification"
+    ],
+    "124": [
+      "logo_epc"
+    ],
+    "125": [
+      "logo_fusemachines"
+    ],
+    "126": [
+      "mcp_server_site_mcp_py"
+    ],
+    "127": [
+      "robots_txt"
+    ],
+    "128": [
+      "scripts_extract_index_py"
+    ],
+    "129": [
+      "scripts_verify_py"
+    ],
+    "130": [
+      "site_webmanifest"
+    ],
+    "131": [
+      "sw_js"
+    ],
+    "132": [
+      "sync_ps1"
+    ],
+    "133": [
+      "version"
+    ],
+    "134": [
       "workflow_stamp_last_commit"
     ]
   },
   "cohesion": {
     "0": 0.09726775956284153,
-    "1": 0.06509803921568627,
-    "2": 0.05897435897435897,
-    "3": 0.08819345661450925,
-    "4": 0.09401709401709402,
-    "5": 0.15076923076923077,
-    "6": 0.1341991341991342,
-    "7": 0.09090909090909091,
-    "8": 0.15584415584415584,
-    "9": 0.20526315789473684,
-    "10": 0.11764705882352941,
-    "11": 0.11764705882352941,
-    "12": 0.36764705882352944,
-    "13": 0.21904761904761905,
+    "1": 0.07692307692307693,
+    "2": 0.07823613086770982,
+    "3": 0.10153846153846154,
+    "4": 0.18666666666666668,
+    "5": 0.09090909090909091,
+    "6": 0.15584415584415584,
+    "7": 0.2736842105263158,
+    "8": 0.11764705882352941,
+    "9": 0.11764705882352941,
+    "10": 0.36764705882352944,
+    "11": 0.21904761904761905,
+    "12": 0.2087912087912088,
+    "13": 0.2564102564102564,
     "14": 0.28888888888888886,
-    "15": 0.2857142857142857,
-    "16": 0.38095238095238093,
-    "17": 0.5714285714285714,
+    "15": 0.3055555555555556,
+    "16": 0.39285714285714285,
+    "17": 0.42857142857142855,
     "18": 0.2857142857142857,
-    "19": 0.3333333333333333,
-    "20": 0.5,
-    "21": 0.6,
-    "22": 0.6666666666666666,
-    "23": 0.5,
-    "24": 0.5,
-    "25": 1.0,
-    "26": 0.6666666666666666,
-    "27": 1.0,
-    "28": 0.6666666666666666,
-    "29": 1.0,
-    "30": 1.0,
-    "31": 1.0,
-    "32": 0.6666666666666666,
-    "33": 0.6666666666666666,
-    "34": 1.0,
-    "35": 1.0,
+    "19": 0.38095238095238093,
+    "20": 0.38095238095238093,
+    "21": 0.5714285714285714,
+    "22": 0.2857142857142857,
+    "23": 0.8,
+    "24": 0.3333333333333333,
+    "25": 0.3333333333333333,
+    "26": 0.3333333333333333,
+    "27": 0.7,
+    "28": 0.5,
+    "29": 0.6,
+    "30": 0.4,
+    "31": 0.5,
+    "32": 0.5,
+    "33": 0.5,
+    "34": 0.6666666666666666,
+    "35": 0.6666666666666666,
     "36": 1.0,
     "37": 1.0,
-    "38": 1.0,
+    "38": 0.6666666666666666,
     "39": 1.0,
     "40": 1.0,
     "41": 1.0,
-    "42": 1.0,
-    "43": 1.0,
+    "42": 0.6666666666666666,
+    "43": 0.6666666666666666,
     "44": 1.0,
     "45": 1.0,
     "46": 1.0,
@@ -929,14 +1001,30 @@
     "110": 1.0,
     "111": 1.0,
     "112": 1.0,
-    "113": 1.0
+    "113": 1.0,
+    "114": 1.0,
+    "115": 1.0,
+    "116": 1.0,
+    "117": 1.0,
+    "118": 1.0,
+    "119": 1.0,
+    "120": 1.0,
+    "121": 1.0,
+    "122": 1.0,
+    "123": 1.0,
+    "124": 1.0,
+    "125": 1.0,
+    "126": 1.0,
+    "127": 1.0,
+    "128": 1.0,
+    "129": 1.0,
+    "130": 1.0,
+    "131": 1.0,
+    "132": 1.0,
+    "133": 1.0,
+    "134": 1.0
   },
   "gods": [
-    {
-      "id": "js_script_bootsite",
-      "label": "bootSite()",
-      "degree": 33
-    },
     {
       "id": "scripts_verify_main",
       "label": "main()",
@@ -953,11 +1041,6 @@
       "degree": 22
     },
     {
-      "id": "modules_audio_playaudiocue",
-      "label": "playAudioCue()",
-      "degree": 18
-    },
-    {
       "id": "scripts_verify_log_warning",
       "label": "log_warning()",
       "degree": 16
@@ -968,33 +1051,32 @@
       "degree": 14
     },
     {
+      "id": "assets_js_modules_tour_inittour",
+      "label": "initTour()",
+      "degree": 12
+    },
+    {
       "id": "aaradhya_dev_tamrakar",
       "label": "Aaradhya Dev Tamrakar",
       "degree": 12
     },
     {
-      "id": "aaradhya_dev_tamrakar_cv",
+      "id": "assets_docs_aaradhya_dev_tamrakar_cv",
       "label": "Aaradhya Dev Tamrakar CV",
       "degree": 12
     },
     {
-      "id": "script_js",
-      "label": "Boot Orchestrator",
-      "degree": 12
+      "id": "assets_js_modules_cmdk_initglobalsearch",
+      "label": "initGlobalSearch()",
+      "degree": 11
+    },
+    {
+      "id": "assets_js_modules_tour_rendertourstep",
+      "label": "renderTourStep()",
+      "degree": 11
     }
   ],
   "surprises": [
-    {
-      "source": "Certificate: AI-Assisted Coding for Developers",
-      "target": "Aaradhya Dev Tamrakar",
-      "source_files": [
-        "assets/certificates/AI-Assisted_Coding_for_Developers_48952793.webp",
-        "dev-logs/og-image/template.html"
-      ],
-      "confidence": "EXTRACTED",
-      "relation": "references",
-      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Certificate: AI-Assisted Coding for Developers` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
-    },
     {
       "source": "Certificate: AI-Assisted Product Launch",
       "target": "Aaradhya Dev Tamrakar",
@@ -1004,7 +1086,7 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Certificate: AI-Assisted Product Launch` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
+      "why": "crosses file types (image ↔ doc); connects across different repos/directories; peripheral node `Certificate: AI-Assisted Product Launch` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
     },
     {
       "source": "Specialist Certification: EU AI Act Literacy",
@@ -1015,7 +1097,18 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Specialist Certification: EU AI Act Literacy` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
+      "why": "crosses file types (image ↔ doc); connects across different repos/directories; peripheral node `Specialist Certification: EU AI Act Literacy` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
+    },
+    {
+      "source": "Certificate: AI-Assisted Coding for Developers",
+      "target": "Aaradhya Dev Tamrakar",
+      "source_files": [
+        "assets/certificates/AI-Assisted_Coding_for_Developers_48952793.webp",
+        "dev-logs/og-image/template.html"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "crosses file types (image ↔ doc); connects across different repos/directories; peripheral node `Certificate: AI-Assisted Coding for Developers` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
     },
     {
       "source": "Aaradhya Dev Tamrakar Portfolio Banner",
@@ -1026,22 +1119,55 @@
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Aaradhya Dev Tamrakar Portfolio Banner` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Aaradhya Dev Tamrakar Portfolio Banner` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
     },
     {
-      "source": "Aaradhya Dev Tamrakar Portrait (PNG)",
+      "source": "Aaradhya Dev Tamrakar Portrait (WebP)",
       "target": "Aaradhya Dev Tamrakar",
       "source_files": [
-        "assets/images/photo.png",
+        "assets/images/photo.webp",
         "dev-logs/og-image/template.html"
       ],
       "confidence": "EXTRACTED",
       "relation": "references",
-      "why": "crosses file types (doc \u2194 image); connects across different repos/directories; peripheral node `Aaradhya Dev Tamrakar Portrait (PNG)` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
+      "why": "crosses file types (doc ↔ image); connects across different repos/directories; peripheral node `Aaradhya Dev Tamrakar Portrait (WebP)` unexpectedly reaches hub `Aaradhya Dev Tamrakar`"
     }
   ],
-  "tokens": {
-    "input": 0,
-    "output": 0
-  }
+  "questions": [
+    {
+      "type": "bridge_node",
+      "question": "Why does `renderSiteFooter()` connect `ui.js` to `core.js`?",
+      "why": "High betweenness centrality (0.010) - this node is a cross-community bridge."
+    },
+    {
+      "type": "bridge_node",
+      "question": "Why does `loadGA4()` connect `core.js` to `script.js`?",
+      "why": "High betweenness centrality (0.004) - this node is a cross-community bridge."
+    },
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `SKILL_RADAR_DOMAINS`, `CMDK_ENTRIES`, `2. Knowledge Graph & Codebase Navigation (Graphify)` to the rest of the system?",
+      "why": "186 weakly-connected nodes found - possible documentation gaps or missing edges."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `verify.py` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `ui.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `core.js` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.07823613086770982 - nodes in this community are weakly interconnected."
+    },
+    {
+      "type": "low_cohesion",
+      "question": "Should `Aaradhya Dev Tamrakar` be split into smaller, more focused modules?",
+      "why": "Cohesion score 0.10153846153846154 - nodes in this community are weakly interconnected."
+    }
+  ]
 }

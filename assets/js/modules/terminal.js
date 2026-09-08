@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v50.24)
+   MODULE: terminal.js — aaradhyadt.github.io (v50.25)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -158,7 +158,7 @@
       },
       stats: () => {
         const achvCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.achievement || []).length : 39;
-        const projCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.project || []).length : 29;
+        const projCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.project || []).length : 30;
         const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v50.17';
         return `
 <span class="term-green">[ADT PORTFOLIO TELEMETRY ${currentVer}]</span><br>
@@ -257,7 +257,7 @@
   2. <span class="term-gold">GCSBR</span> — Gesture-Controlled Self-Balancing Robot<br>
   3. <span class="term-gold">Pulse Live</span> — Real-Time Interactive Polling Platform<br>
   4. <span class="term-gold">PrakopNet</span> — Multi-Hazard Early Warning System<br>
-  5. Type <span class="term-cyan">'2'</span> or navigate to <a href="projects.html" class="term-link">projects.html</a> for all 29 projects!
+  5. Type <span class="term-cyan">'2'</span> or navigate to <a href="projects.html" class="term-link">projects.html</a> for all 30 projects!
 `.trim(),
       experience: () => `
 <span class="term-green">▶ Engineering Leadership &amp; Experience:</span><br>

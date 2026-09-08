@@ -1,13 +1,14 @@
-# Portfolio Website Tracker — v50.24
+﻿# Portfolio Website Tracker — v50.25
 
-Last updated: _2026-08-31_
+Last updated: _2026-09-08_
 
-- **v50.17 (Quality & Testing) — Native Node.js Unit Testing Suite, E2E Smoke Runner, Strict Content Security Policy & 24-Check Verification Gate.** Shipped enterprise testing and security hardening:
-  - **Native JS Unit Testing Suite (`tests/unit/`, `node:test`)**: Implemented zero-dependency unit tests using Node.js built-in `node:test` and `node:assert/strict` covering PBKDF2/AES-256-GCM crypto roundtrips & error handling (`test_crypto.test.mjs`), CmdK multi-token search index matching & ranking (`test_cmdk_search.test.mjs`), live date calculations & path resolution helpers (`test_core_helpers.test.mjs`), and Dev Terminal command/alias parsing (`test_terminal.test.mjs`). All 14 tests execute in ~240ms.
-  - **E2E & Integration Smoke Testing Engine (`scripts/test_e2e.py`)**: Built standalone HTTP/DOM smoke runner validating HTTP 200 responses, Content-Types, 404 template routing, 37 Service Worker precached assets, and `<noscript>` navigation/footer fallbacks across all 10 HTML pages (42 passing assertions).
-  - **Strict Content Security Policy (`<meta>` CSP)**: Deployed strict Content-Security-Policy meta tags across all 10 HTML documents restricting script, style, font, image, connect, and frame sources to authorized origins (Google OAuth, GA4, Formspree, EmailJS, Google Fonts, Calendar).
-  - **Verification Gate Expanded to 24 Categories (`scripts/verify.py`, `sync.ps1`, `verify.yml`)**: Integrated `check_unit_tests()` (Check 23) and `check_csp_integrity()` (Check 24) into the core verification gate, CI workflow, and `sync.ps1` pre-commit routine.
-  - **Verification Gate**: Passed all 24 diagnostic categories cleanly (0 errors, 0 warnings); all 14 unit tests and 42 E2E smoke assertions green.
+- **v50.24 (Update) — 5-Project Ecosystem Synchronization & Encrypted Repository Integration.** Synchronized 5 flagship engineering repositories across projects showcase, interactive terminal, and zero-leak AES-256-GCM payload encryption:
+  - **NovaOptimizer (`system-optimizer`, `p-007`)**: Upgraded card from prototype SysOptimizer to native Windows Task Manager and System Optimizer engineered in C# / .NET 10 and WPF with a ~25 MB RAM footprint. Documented undocumented NT kernel memory purging (`NtSetSystemInformation` standby list & system working sets), Turbo Boost profiles (Game, Work, Study with integrated Pomodoro timer), and hung-process watchdog. Wired encrypted VIP link `proj-sys-optimizer`.
+  - **md2pdf Desktop (`md2pdf-desktop`, `p-024`)**: Integrated new desktop Markdown-to-PDF utility workstation with Tkinter GUI, Pandoc AST parsing, and wkhtmltopdf WebKit rendering. Wired encrypted VIP link `proj-md2pdf`.
+  - **Claude Desktop Multi-Profile & Autonomous Fleet (`Claude-Desktop`, `p-021`)**: Updated card with v2 cloud-native architecture including concurrent multi-monitor windows (`--user-data-dir`), FastAPI coordination backend, SQLite WAL persistence with atomic leasing, and autonomous worker client fleet.
+  - **SPARK Wearable (`SPARK`, `p-015`)**: Integrated encrypted VIP repository link `proj-spark` and updated milestone delivery progress.
+  - **BiasAperture (`BiasAperture`, `p-018`)**: Integrated encrypted VIP repository link `proj-biasaperture` and detailed completed M1–M4 detection engine milestones, AIF360/Fairlearn cross-validation, and EU AI Act Article 10 compliance reporting.
+  - **Site Metrics & Index Synchronization**: Refreshed project card counts (29 → 30 total, 8 → 9 web/apps) across `projects.html` filter bar, Dev Terminal telemetry/commands, and regenerated static search index (`extract_index.py`).
 
 - **v50.10 (Architecture & Optimization) — PWA Raster Icons, Modular Constants, Zero-Dependency CSS Minifier & Centralized Versioning.** Shipped comprehensive structural and optimization refinements:
   - **PWA Raster Icons & Manifest Compliance (`site.webmanifest`, `sw.js`, `generate_pwa_icons.py`)**: Generated standard 192x192 and 512x512 PNG icons alongside existing SVG icon, ensuring 100% PWA installability and compliance across Chromium/Safari.

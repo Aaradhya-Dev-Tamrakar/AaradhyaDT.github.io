@@ -17,6 +17,7 @@
 - **SPARK**: Two-layer, fully on-device fall-detection wearable for eldercare featuring an ESP32-S3 microcontroller, MPU6050 IMU, TFLite Micro CNN inference, and a Raspberry Pi 4B gateway with SHAP explainability.
 - **BiasAperture**: Vision-model fairness and demographic disparity diagnostic suite (Fuse AI Fellowship capstone).
 - **Text-to-SQL Agentic Pipeline**: Five-stage agentic Text-to-SQL generation pipeline with 100% benchmark execution accuracy.
+- **NovaOptimizer**: Native Windows Task Manager & System Optimizer engineered in C# / .NET 10 and WPF manipulating undocumented NT kernel memory APIs with Turbo Boost profiles.
 
 ## Optional & Extended
 

@@ -8,11 +8,12 @@
 const SITE_RELEASES = [
 
     {
-    version: 'v50.24',
-    date: '2026-08-29',
+    version: 'v50.25',
+    date: '2026-09-08',
     sha: 'rel50',
-    title: "Native JS Unit Testing Suite, E2E Smoke Runner, Strict CSP & 24-Check Verification Gate",
+    title: "5-Project Ecosystem Synchronization, Native Unit Testing Suite & Security Hardening",
     highlights: [
+      "Project Ecosystem Sync: Integrated NovaOptimizer (C#/.NET 10 & WPF), md2pdf-desktop (Tkinter/Pandoc/wkhtmltopdf), Claude Desktop v2 autonomous fleet, SPARK wearable, and BiasAperture fairness audit with zero-leak AES-256-GCM VIP links",
       "Native JS Unit Testing Suite: Zero-dependency node:test suite covering PBKDF2/AES-256-GCM crypto, CmdK search ranking, live dates, and CLI command parsing",
       "E2E Smoke Runner: Standalone HTTP/DOM verification engine testing status codes, 404 routing, 37 precached assets, and noscript fallbacks across all 10 pages",
       "Strict Content Security Policy: Deployed <meta http-equiv='Content-Security-Policy'> across all HTML pages for hardened XSS defense",

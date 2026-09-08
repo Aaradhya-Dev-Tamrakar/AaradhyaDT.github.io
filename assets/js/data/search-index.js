@@ -289,7 +289,7 @@ const SEARCH_STATIC_INDEX = {
     "title": "BiasAperture — Vision Fairness & Bias Audit",
     "meta": "In Progress · AIF360, Fairlearn, FairFace",
     "href": "projects.html#p-018",
-    "text": "biasaperture — vision fairness & bias audit diagnostic tool for deployed vision classifiers — runs a multi-demographic test matrix, flags statistical disparities, and outputs a compliance report; detects bias but doesn't correct it fellowship capstone, two-person team with tisha manandhar — full readme to follow in-repo aif360 fairlearn fairface utkface computer vision bias auditing statistical testing html/jinja2 in progress"
+    "text": "biasaperture — vision fairness & bias audit diagnostic & evaluative framework for auditing demographic bias in deployed facial-analysis classifiers — computes subgroup and intersectional fairness metrics in regulator-legible formats (eu ai act article 10 / nist rmf) analytical core computes dpd, eod, eop, and dir across 126 race × age × gender demographic bins using aif360 and fairlearn with $\\chi^2$ significance tests, bca bootstrap confidence intervals, and shap surrogate explainability fusemachines ai fellowship capstone, two-person engineering team with tisha manandhar aif360 fairlearn fairface utkface computer vision bias auditing statistical testing shap eu ai act nist rmf html/jinja2 in progress"
   },
   {
     "type": "project",
@@ -303,7 +303,7 @@ const SEARCH_STATIC_INDEX = {
     "title": "SPARK — Two-Layer Fall Detection Wearable",
     "meta": "In Progress · MPU6050, TFLite Micro, 1D CNN",
     "href": "projects.html#p-015",
-    "text": "spark — two-layer fall detection wearable on-device, two-layer fall-detection wearable for eldercare — threshold gate plus a tflite micro cnn gateway, zero imports, zero custom pcb bei major project, four-person team — proposal defended jul 9, 2026 mpu6050 tflite micro 1d cnn shap fastapi streamlit telegram in progress"
+    "text": "spark — two-layer fall detection wearable on-device, two-layer fall-detection wearable for eldercare — threshold gate plus a tflite micro cnn gateway, zero imports, zero custom pcb bei major project, four-person team — proposal defended jul 9, 2026 mpu6050 tflite micro 1d cnn shap fastapi streamlit telegram esp32-s3 in progress"
   },
   {
     "type": "project",
@@ -433,10 +433,10 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "Claude Desktop Multi-Profile & Sync Utilities",
-    "meta": "PowerShell 7, Windows Shell, Electron",
+    "title": "Claude Desktop Multi-Profile & Autonomous Fleet Utilities",
+    "meta": "PowerShell 7, FastAPI, SQLite WAL",
     "href": "projects.html#p-021",
-    "text": "claude desktop multi-profile & sync utilities powershell 7 & windows shell utility suite enabling multi-user profile isolation for anthropic's claude desktop application features native profile session swapping, single-instance browser oauth (`claude://`) deep-link routing, and automated git repository synchronization with conventional commit messaging powershell 7 windows shell electron msix / appx oauth 2.0 robocopy git automation batch cli"
+    "text": "claude desktop multi-profile & autonomous fleet utilities powershell 7 & windows shell utility suite enabling multi-user profile isolation, concurrent multi-monitor window management via `--user-data-dir`, and single-instance browser oauth (`claude://`) deep-link routing cloud-native v2 distributed fleet: fastapi coordinator backend, sqlite wal persistence with atomic leasing, automated sku pipeline decomposition, and autonomous client worker daemons with claude desktop proxy and llm adapters automated git repository synchronization with staged diff conventional commit messaging, tray uia usage watchdog, and cooldown alerts powershell 7 fastapi sqlite wal autonomous workers electron oauth 2.0 git automation windows shell"
   },
   {
     "type": "project",
@@ -468,10 +468,17 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "SysOptimizer — Windows Optimization Tool",
-    "meta": "Python, CustomTkinter, PyInstaller",
+    "title": "md2pdf — Desktop Markdown to PDF Converter",
+    "meta": "Python, Tkinter, Pandoc",
+    "href": "projects.html#p-024",
+    "text": "md2pdf — desktop markdown to pdf converter native desktop markdown editor and pdf conversion workstation built with python & tkinter high-fidelity conversion pipeline utilizing pandoc (commonmark/gfm ast → html) and wkhtmltopdf (webkit html → pdf engine with explicit utf-8 encoding) features adjustable margins (default 20mm), live system dependency validation across windows, macos, and linux, and clean save-destination dialogs python tkinter pandoc wkhtmltopdf markdown desktop app"
+  },
+  {
+    "type": "project",
+    "title": "NovaOptimizer — Windows Task Manager & System Optimizer",
+    "meta": "C# / .NET 10, WPF, Win32 NT Kernel",
     "href": "projects.html#p-007",
-    "text": "sysoptimizer — windows optimization tool standalone windows optimization tool packaged as a .exe via pyinstaller power plan switcher, ram flush, background bloat panel, startup scanner — runs silently via create_no_window python customtkinter pyinstaller wmi powershell"
+    "text": "novaoptimizer — windows task manager & system optimizer high-efficiency, native windows task manager and system optimizer engineered in c# / .net 10 and wpf with a minimal ~25 mb ram footprint direct nt kernel memory management: deep physical ram purging via undocumented `ntsetsysteminformation` (standby list, system working set, and process trimming) with an intelligent background watchdog turbo boost profiles (game, work, and study mode with integrated pomodoro focus timer), startup bloat auditor, hung-process watchdog, and system latency tweaks c# / .net 10 wpf win32 nt kernel memory management task manager turbo boost windows 11"
   },
   {
     "type": "project",

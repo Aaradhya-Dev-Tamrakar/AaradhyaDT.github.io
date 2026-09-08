@@ -794,7 +794,7 @@
 <div class="projects-header-bar">
 <div class="projects-filter-bar" id="projectsFilterBar" role="tablist" aria-label="Filter projects by domain">
 <button type="button" class="proj-filter-btn active" data-filter="all" role="tab" aria-selected="true">
-<span>All</span><span class="proj-filter-count">29</span>
+<span>All</span><span class="proj-filter-count">30</span>
 </button>
 <button type="button" class="proj-filter-btn" data-filter="aiml" role="tab" aria-selected="false">
 <span>AI / ML &amp; Agentic</span><span class="proj-filter-count">21</span>
@@ -806,7 +806,7 @@
 <span>Hardware &amp; Systems</span><span class="proj-filter-count">5</span>
 </button>
 <button type="button" class="proj-filter-btn" data-filter="apps" role="tab" aria-selected="false">
-<span>Web &amp; Apps</span><span class="proj-filter-count">8</span>
+<span>Web &amp; Apps</span><span class="proj-filter-count">9</span>
 </button>
 </div>
 <button class="project-toggle-all" id="projectToggleAllBtn" type="button">
@@ -826,29 +826,35 @@
 </summary>
 <div class="project-card-body">
 <ul class="project-desc-list">
-<li>Diagnostic tool for deployed vision classifiers — runs a multi-demographic test matrix, flags
-                statistical disparities, and outputs a compliance report; detects bias but doesn't correct it</li>
-<li>Fellowship capstone, two-person team with <a class="proj-inline-link" href="https://github.com/tiixsha" rel="noopener" target="_blank">Tisha Manandhar</a> — full README to
-                follow in-repo</li>
+<li>Diagnostic &amp; evaluative framework for auditing demographic bias in deployed facial-analysis classifiers — computes subgroup and intersectional fairness metrics in regulator-legible formats (EU AI Act Article 10 / NIST RMF)</li>
+<li>Analytical core computes DPD, EOD, EOP, and DIR across 126 race × age × gender demographic bins using AIF360 and Fairlearn with $\chi^2$ significance tests, BCa bootstrap confidence intervals, and SHAP surrogate explainability</li>
+<li>Fusemachines AI Fellowship Capstone, two-person engineering team with <a class="proj-inline-link" href="https://github.com/tiixsha" rel="noopener" target="_blank">Tisha Manandhar</a></li>
 </ul>
 <div class="project-progress">
 <div class="project-progress-track">
 <div class="project-progress-step done"></div>
-<div class="project-progress-step"></div>
+<div class="project-progress-step done"></div>
+<div class="project-progress-step done"></div>
+<div class="project-progress-step done"></div>
 <div class="project-progress-step"></div>
 </div>
 <div class="project-progress-labels">
-<span class="project-progress-label done">Feasibility &amp; Scope</span>
-<span class="project-progress-label">Test Matrix &amp; Detection Engine</span>
-<span class="project-progress-label">Report &amp; Compliance Output</span>
+<span class="project-progress-label done">M1: Schema Lock</span>
+<span class="project-progress-label done">M2: Data Ingest</span>
+<span class="project-progress-label done">M3: Compliance Report</span>
+<span class="project-progress-label done">M4: Statistical Engine</span>
+<span class="project-progress-label">M5: Audit &amp; Case Study</span>
 </div>
 </div>
 <div class="project-tags">
 <span class="tag">AIF360</span><span class="tag">Fairlearn</span>
 <span class="tag">FairFace</span><span class="tag">UTKFace</span>
 <span class="tag">Computer Vision</span><span class="tag">Bias Auditing</span>
-<span class="tag">Statistical Testing</span><span class="tag">HTML/Jinja2</span>
+<span class="tag">Statistical Testing</span><span class="tag">SHAP</span>
+<span class="tag">EU AI Act</span><span class="tag">NIST RMF</span>
+<span class="tag">HTML/Jinja2</span>
 </div>
+<a class="project-link" data-payload-link-id="proj-biasaperture" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
 <details class="project-card reveal project-card--gold" id="p-001" data-category="embedded hardware">
@@ -916,8 +922,9 @@
 <span class="tag">MPU6050</span><span class="tag">TFLite Micro</span>
 <span class="tag">1D CNN</span><span class="tag">SHAP</span>
 <span class="tag">FastAPI</span><span class="tag">Streamlit</span>
-<span class="tag">Telegram</span>
+<span class="tag">Telegram</span><span class="tag">ESP32-S3</span>
 </div>
+<a class="project-link" data-payload-link-id="proj-spark" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
 <details class="project-card reveal" id="p-013" data-category="hardware">
@@ -1294,21 +1301,20 @@
 <h2 class="projects-section-title" id="section-personal">Personal Tools &amp; Apps<span class="projects-section-sub">Side projects, utilities, and shipped tools</span></h2>
 <details class="project-card reveal" id="p-021" data-category="apps">
 <summary class="project-summary">
-<div class="project-index">P — 021 <span class="project-date">Jul 2026</span></div>
-<h3 class="project-title">Claude Desktop Multi-Profile &amp; Sync Utilities</h3>
+<div class="project-index">P — 021 <span class="project-date">Jul–Sep 2026</span></div>
+<h3 class="project-title">Claude Desktop Multi-Profile &amp; Autonomous Fleet Utilities</h3>
 </summary>
 <div class="project-card-body">
 <ul class="project-desc-list">
-<li>PowerShell 7 &amp; Windows Shell utility suite enabling multi-user profile isolation for Anthropic's
-                Claude Desktop application</li>
-<li>Features native profile session swapping, single-instance browser OAuth (`claude://`) deep-link
-                routing, and automated Git repository synchronization with conventional commit messaging</li>
+<li>PowerShell 7 &amp; Windows Shell utility suite enabling multi-user profile isolation, concurrent multi-monitor window management via `--user-data-dir`, and single-instance browser OAuth (`claude://`) deep-link routing</li>
+<li>Cloud-native v2 distributed fleet: FastAPI coordinator backend, SQLite WAL persistence with atomic leasing, automated SKU pipeline decomposition, and autonomous client worker daemons with Claude Desktop proxy and LLM adapters</li>
+<li>Automated Git repository synchronization with staged diff conventional commit messaging, tray UIA usage watchdog, and cooldown alerts</li>
 </ul>
 <div class="project-tags">
-<span class="tag">PowerShell 7</span><span class="tag">Windows Shell</span>
-<span class="tag">Electron</span><span class="tag">MSIX / AppX</span>
-<span class="tag">OAuth 2.0</span><span class="tag">Robocopy</span>
-<span class="tag">Git Automation</span><span class="tag">Batch CLI</span>
+<span class="tag">PowerShell 7</span><span class="tag">FastAPI</span>
+<span class="tag">SQLite WAL</span><span class="tag">Autonomous Workers</span>
+<span class="tag">Electron</span><span class="tag">OAuth 2.0</span>
+<span class="tag">Git Automation</span><span class="tag">Windows Shell</span>
 </div>
 <a class="project-link" data-payload-link-id="proj-claude-desktop" data-payload-tier="master" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
@@ -1403,22 +1409,43 @@
               GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-007" data-category="apps">
+<details class="project-card reveal" id="p-024" data-category="apps">
 <summary class="project-summary">
-<div class="project-index">P — 007 <span class="project-date">May 2026</span></div>
-<h3 class="project-title">SysOptimizer — Windows Optimization Tool</h3>
+<div class="project-index">P — 024 <span class="project-date">Sep 2026</span></div>
+<h3 class="project-title">md2pdf — Desktop Markdown to PDF Converter</h3>
 </summary>
 <div class="project-card-body">
 <ul class="project-desc-list">
-<li>Standalone Windows optimization tool packaged as a .exe via PyInstaller</li>
-<li>Power Plan switcher, RAM flush, Background Bloat panel, Startup Scanner — runs silently via
-                CREATE_NO_WINDOW</li>
+<li>Native desktop Markdown editor and PDF conversion workstation built with Python &amp; Tkinter</li>
+<li>High-fidelity conversion pipeline utilizing Pandoc (CommonMark/GFM AST → HTML) and wkhtmltopdf (WebKit HTML → PDF engine with explicit UTF-8 encoding)</li>
+<li>Features adjustable margins (default 20mm), live system dependency validation across Windows, macOS, and Linux, and clean save-destination dialogs</li>
 </ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">CustomTkinter</span>
-<span class="tag">PyInstaller</span><span class="tag">WMI</span>
-<span class="tag">PowerShell</span>
+<span class="tag">Python</span><span class="tag">Tkinter</span>
+<span class="tag">Pandoc</span><span class="tag">wkhtmltopdf</span>
+<span class="tag">Markdown</span><span class="tag">Desktop App</span>
 </div>
+<a class="project-link" data-payload-link-id="proj-md2pdf" rel="noopener" target="_blank">View on GitHub ↗</a>
+</div>
+</details>
+<details class="project-card reveal" id="p-007" data-category="apps">
+<summary class="project-summary">
+<div class="project-index">P — 007 <span class="project-date">Sep 2026</span></div>
+<h3 class="project-title">NovaOptimizer — Windows Task Manager &amp; System Optimizer</h3>
+</summary>
+<div class="project-card-body">
+<ul class="project-desc-list">
+<li>High-efficiency, native Windows Task Manager and system optimizer engineered in C# / .NET 10 and WPF with a minimal ~25 MB RAM footprint</li>
+<li>Direct NT kernel memory management: deep physical RAM purging via undocumented `NtSetSystemInformation` (Standby List, System Working Set, and process trimming) with an intelligent background watchdog</li>
+<li>Turbo Boost Profiles (Game, Work, and Study Mode with integrated Pomodoro focus timer), startup bloat auditor, hung-process watchdog, and system latency tweaks</li>
+</ul>
+<div class="project-tags">
+<span class="tag">C# / .NET 10</span><span class="tag">WPF</span>
+<span class="tag">Win32 NT Kernel</span><span class="tag">Memory Management</span>
+<span class="tag">Task Manager</span><span class="tag">Turbo Boost</span>
+<span class="tag">Windows 11</span>
+</div>
+<a class="project-link" data-payload-link-id="proj-sys-optimizer" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
 <details class="project-card reveal" id="p-006" data-category="aiml embedded">
