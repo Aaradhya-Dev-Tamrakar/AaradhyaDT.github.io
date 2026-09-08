@@ -1,6 +1,6 @@
 {
-  "sha": "634c8079712442921a71abea2ca997a38ec2781a",
-  "shortSha": "634c807",
-  "date": "2026-09-08T18:00:17+05:45",
-  "message": "docs(sync): codify explainable 5-pillar versioning decision matrix & milestone detection"
+  "sha": "db484f9a5e2f29771ed09c1b2573ea40fc42f6dd",
+  "shortSha": "db484f9",
+  "date": "2026-09-08T18:18:58+05:45",
+  "message": "fix(automation): resolve loose ends in version sync pipeline and calibrate decision matrix"
 }
