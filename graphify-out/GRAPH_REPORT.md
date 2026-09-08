@@ -1,16 +1,15 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-08)
 
 ## Corpus Check
-- 41 files · ~308,749 words
-- Verdict: corpus is large enough that graph structure adds value.
+- cluster-only mode — file stats not available
 
 ## Summary
-- 618 nodes · 841 edges · 135 communities (38 shown, 86 thin omitted)
+- 620 nodes · 841 edges · 137 communities (38 shown, 87 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 56 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ee0d8496`
+- Built from commit: `7ce3abfe`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -23,8 +22,8 @@
 - Portfolio Website Tracker — v50.25
 - site_automation.py
 - tour.js
-- Aaradhya Dev Tamrakar CV
 - aaradhyadt.github.io
+- Aaradhya Dev Tamrakar CV
 - manage_payloads.py
 - PCBTraces
 - Boot Orchestrator
@@ -36,8 +35,8 @@
 - Agent Rules & Workflow Guidelines
 - generate_cards
 - haptics.js
-- extract_index.py
 - Antigravity IDE & Gemini Agent Rules for Portfolio Repository
+- extract_index.py
 - audio.js
 - constants.js
 - Working conventions for this repo
@@ -139,6 +138,7 @@
 - Service Worker
 - Automation Script
 - Stamp Last Commit Workflow
+- Zero-Leak Security Model
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
@@ -170,7 +170,7 @@
 ## Hyperedges (group relationships)
 - **Flagship Engineering Projects** — concept_spark, concept_biasaperture, concept_novaoptimizer [EXTRACTED 0.85]
 
-## Communities (135 total, 86 thin omitted)
+## Communities (137 total, 87 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.10
@@ -186,7 +186,7 @@ Nodes (32): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), 
 
 ### Community 3 - "Aaradhya Dev Tamrakar"
 Cohesion: 0.10
-Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developers, AI Fluency, Anthropic, Certificate: AI-Assisted Product Launch, Certificate: Introduction to Claude Cowork, Certificate: AI Fluency: Framework & Foundations, Building a Go-To-Market Strategy Certificate (+18 more)
+Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developers, AI Fluency, Anthropic, Certificate: AI-Assisted Product Launch, AI Fluency: Foundations of Coworking with AI Certificate, Certificate: AI Fluency: Framework & Foundations, Certificate: Building a Go-To-Market Strategy (+18 more)
 
 ### Community 4 - "access.js"
 Cohesion: 0.19
@@ -204,13 +204,13 @@ Nodes (21): audit(), bump_version(), compute_next_version(), get_current_version
 Cohesion: 0.27
 Nodes (19): closeTourOverlay(), ensureTourOverlay(), exitTour(), getTourCurrentPage(), getTourPageUrl(), initTour(), positionTourCard(), promptGuidedTour() (+11 more)
 
-### Community 8 - "Aaradhya Dev Tamrakar CV"
-Cohesion: 0.12
-Nodes (17): Certificate: 9-DAYS JavaScript Bootcamp, Certificate: HTML & CSS Workshop - Design, Code, & Launch your own website using GitHub Pages, Certificate: 3-Day Drone Training Program, Certificate: How Hackers Bypass Security: A Beginners Guide Webinar, Certificate: Printer Maintenance Certification, Statement of Accomplishment: Recommending Skincare Products, Certificate: Prompt Engineering Fundamentals Workshop, Aaradhya Dev Tamrakar CV (+9 more)
-
-### Community 9 - "aaradhyadt.github.io"
+### Community 8 - "aaradhyadt.github.io"
 Cohesion: 0.11
 Nodes (17): aaradhyadt.github.io, Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`), Key Features (+9 more)
+
+### Community 9 - "Aaradhya Dev Tamrakar CV"
+Cohesion: 0.12
+Nodes (17): Certificate: 9-DAYS JavaScript Bootcamp, Certificate: HTML & CSS Workshop - Design, Code, & Launch your own website using GitHub Pages, Certificate: 3-Day Drone Training Program, Certificate: How Hackers Bypass Security: A Beginners Guide Webinar, Certificate: Printer Maintenance Certification, Statement of Accomplishment: Recommending Skincare Products, Certificate: Prompt Engineering Fundamentals Workshop, Aaradhya Dev Tamrakar CV (+9 more)
 
 ### Community 10 - "manage_payloads.py"
 Cohesion: 0.37
@@ -256,13 +256,13 @@ Nodes (6): any, generate_cards(), main(), Generates OG SVG cards into the output
 Cohesion: 0.38
 Nodes (4): initScrollParallax(), initSwipeNav(), initTouchGestures(), triggerHapticFeedback()
 
-### Community 21 - "extract_index.py"
-Cohesion: 0.57
-Nodes (6): extract_achievements(), extract_projects(), main(), render_block(), render_entry(), text_of()
-
-### Community 22 - "Antigravity IDE & Gemini Agent Rules for Portfolio Repository"
+### Community 21 - "Antigravity IDE & Gemini Agent Rules for Portfolio Repository"
 Cohesion: 0.29
 Nodes (6): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 2. Knowledge Graph & Codebase Navigation (Graphify), 3. Operational Rules & Efficiency, 4. Encrypted Payloads & VIP Sections (`access.js`), Antigravity IDE & Gemini Agent Rules for Portfolio Repository, Commands
+
+### Community 22 - "extract_index.py"
+Cohesion: 0.57
+Nodes (6): extract_achievements(), extract_projects(), main(), render_block(), render_entry(), text_of()
 
 ### Community 23 - "audio.js"
 Cohesion: 0.80
@@ -325,9 +325,9 @@ Cohesion: 1.00
 Nodes (3): SimOps Fundamentals Certificate, SimOps Practitioner Certificate, SimOps (Simulation Operations)
 
 ## Knowledge Gaps
-- **184 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+179 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 293 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **86 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **185 isolated node(s):** `SKILL_RADAR_DOMAINS`, `CMDK_ENTRIES`, `2. Knowledge Graph & Codebase Navigation (Graphify)`, `3. Operational Rules & Efficiency`, `4. Encrypted Payloads & VIP Sections (`access.js`)` (+180 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 295 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **87 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -336,8 +336,8 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `loadGA4()` connect `core.js` to `script.js`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**
-  _184 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `SKILL_RADAR_DOMAINS`, `CMDK_ENTRIES`, `2. Knowledge Graph & Codebase Navigation (Graphify)` to the rest of the system?**
+  _185 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
 - **Should `ui.js` be split into smaller, more focused modules?**
