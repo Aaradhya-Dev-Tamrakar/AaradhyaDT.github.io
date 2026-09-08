@@ -68,3 +68,34 @@ To inspect, debug, or edit AES-256-GCM encrypted payloads without manual decrypt
 - **Import all from JSON**: `python scripts/manage_payloads.py import --file dev-logs/payloads_plaintext.json`
 - **Verify all payloads**: `python scripts/manage_payloads.py verify`
 - **MCP Tools**: `read_encrypted_payload`, `write_encrypted_payload`, `list_encrypted_payloads`, `verify_encrypted_payloads`, resource `site://payloads`
+
+---
+
+## 5. Versioning & Major Release Automation Architecture
+
+The repository enforces a dual-tier versioning architecture managed through `scripts/site_automation.py` and `sync.ps1`:
+
+### 1. Patch / Point Releases (`v51.1`, `v51.2`, ...)
+- **Trigger**: Automatically computed by `.\sync.ps1` whenever uncommitted working tree changes exist.
+- **Behavior**: Increments the patch integer (`v51.1` -> `v51.2`). Updates the current release block (`SITE_RELEASES[0]`) in `assets/js/data/releases.js` in-place.
+- **Suppression**: Pass `.\sync.ps1 -NoBump` to commit without incrementing the point release.
+
+### 2. Major Releases (`v51`, `v52`, ...)
+- **Trigger**: Executed via `.\sync.ps1 -Major` (with optional `-Title "..."` and `-Highlights "..."`) or `python scripts/site_automation.py bump-major`.
+- **Automation Pipeline**:
+  1. **Major Integer Increment**: Reads current version from `assets/js/data/releases.js` (e.g. `v51` / `v51.28`), computes next clean integer (e.g. `v52`).
+  2. **Release Block Prepended**: Prepends a brand-new release definition to `SITE_RELEASES` in `assets/js/data/releases.js` containing version, date, sha (`rel52`), title, and highlights array.
+  3. **Tracker Entry Formatted**: Automatically prepends a new MD009/MD026-compliant entry to `dev-logs/PortfolioWebsite_TRACKER.md` immediately following the `Last updated:` subtitle.
+  4. **PWA Cache Invalidation**: Updates `CACHE_NAME = 'aaradhya-portfolio-v52'` in `sw.js` ensuring immediate client-side asset refresh on next visit.
+  5. **Site-Wide Metadata Synchronization (12 Targets)**:
+     - `sw.js`: Cache name and version header
+     - `assets/js/script.js`: Script header and Dynamic Module Loader
+     - `assets/js/modules/*.js`: All 10 JS module version headers
+     - `scripts/verify.py`: Test suite version and header docstring
+     - `scripts/site_automation.py`: Automation header docstring
+     - `README.md`: Version comments and annotations
+     - `.github/workflows/verify.yml`: CI workflow header
+     - `VERSION`: Root single-source version file
+     - `pyproject.toml`: Standard PEP 517/621 `version = "52.0.0"`
+     - `sitemap.xml`: XML `<lastmod>` timestamps
+     - `dev-logs/PortfolioWebsite_TRACKER.md`: Title header `# Portfolio Website Tracker — v52` and date

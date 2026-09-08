@@ -8,7 +8,7 @@
 const SITE_RELEASES = [
 
       {
-    version: 'v51.1',
+    version: 'v51.2',
     date: '2026-09-08',
     sha: 'rel51',
     title: "Tooling Hyper-Optimization & uv Acceleration Engine",

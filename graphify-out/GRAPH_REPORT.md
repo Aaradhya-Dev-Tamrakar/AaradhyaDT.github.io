@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-08)
 
 ## Corpus Check
-- 42 files · ~310,071 words
+- 42 files · ~310,701 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 626 nodes · 846 edges · 140 communities (38 shown, 90 thin omitted)
+- 632 nodes · 852 edges · 140 communities (38 shown, 90 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 56 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `52cde37a`
+- Built from commit: `d9a9a13e`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- Portfolio Website Tracker — v51.1
+- Portfolio Website Tracker — v51.2
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -148,7 +148,7 @@
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v51.1` - 21 edges
+4. `Portfolio Website Tracker — v51.2` - 21 edges
 5. `log_warning()` - 16 edges
 6. `get_html_files()` - 14 edges
 7. `initTour()` - 12 edges
@@ -196,9 +196,9 @@ Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developer
 Cohesion: 0.19
 Nodes (24): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+16 more)
 
-### Community 5 - "Portfolio Website Tracker — v51.1"
+### Community 5 - "Portfolio Website Tracker — v51.2"
 Cohesion: 0.09
-Nodes (22): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v51.1, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+14 more)
+Nodes (22): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v51.2, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+14 more)
 
 ### Community 6 - "site_automation.py"
 Cohesion: 0.16
@@ -249,8 +249,8 @@ Cohesion: 0.43
 Nodes (6): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
 
 ### Community 18 - "Agent Rules & Workflow Guidelines"
-Cohesion: 0.29
-Nodes (6): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 2. Knowledge Graph & Codebase Navigation (Graphify), 3. Operational Rules & Efficiency, 4. Encrypted Payloads & VIP Sections (`access.js`), Agent Rules & Workflow Guidelines, Commands
+Cohesion: 0.20
+Nodes (9): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 1. Patch / Point Releases (`v51.1`, `v51.2`, ...), 2. Knowledge Graph & Codebase Navigation (Graphify), 2. Major Releases (`v51`, `v52`, ...), 3. Operational Rules & Efficiency, 4. Encrypted Payloads & VIP Sections (`access.js`), 5. Versioning & Major Release Automation Architecture, Agent Rules & Workflow Guidelines (+1 more)
 
 ### Community 19 - "generate_cards"
 Cohesion: 0.38
@@ -261,8 +261,8 @@ Cohesion: 0.38
 Nodes (4): initScrollParallax(), initSwipeNav(), initTouchGestures(), triggerHapticFeedback()
 
 ### Community 21 - "Antigravity IDE & Gemini Agent Rules for Portfolio Repository"
-Cohesion: 0.29
-Nodes (6): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 2. Knowledge Graph & Codebase Navigation (Graphify), 3. Operational Rules & Efficiency, 4. Encrypted Payloads & VIP Sections (`access.js`), Antigravity IDE & Gemini Agent Rules for Portfolio Repository, Commands
+Cohesion: 0.20
+Nodes (9): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 1. Patch / Point Releases (`v51.1`, `v51.2`, ...), 2. Knowledge Graph & Codebase Navigation (Graphify), 2. Major Releases (`v51`, `v52`, ...), 3. Operational Rules & Efficiency, 4. Encrypted Payloads & VIP Sections (`access.js`), 5. Versioning & Major Release Automation Architecture, Antigravity IDE & Gemini Agent Rules for Portfolio Repository (+1 more)
 
 ### Community 22 - "extract_index.py"
 Cohesion: 0.57
@@ -329,8 +329,8 @@ Cohesion: 1.00
 Nodes (3): SimOps Fundamentals Certificate, SimOps Practitioner Certificate, SimOps (Simulation Operations)
 
 ## Knowledge Gaps
-- **185 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+180 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 299 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **189 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+184 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 303 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **90 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -339,9 +339,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `renderSiteFooter()` connect `ui.js` to `core.js`?**
   _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `loadGA4()` connect `core.js` to `script.js`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+  _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**
-  _185 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _189 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
 - **Should `ui.js` be split into smaller, more focused modules?**

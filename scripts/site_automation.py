@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v51.1)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v51.2)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -345,32 +345,47 @@ def bump_version(bump_type="patch", explicit_version=None, title=None, highlight
     }
 
 
-def update_tracker(version, title, highlights):
-    """Appends a new version entry to dev-logs/PortfolioWebsite_TRACKER.md."""
+def update_tracker(version, title, highlights=None):
+    """
+    Inserts a new major version release block into dev-logs/PortfolioWebsite_TRACKER.md.
+    Maintains Markdownlint compliance (MD009 trailing spaces, MD026 trailing colons, MD036 emphasis).
+    """
     if not TRACKER_MD.exists():
         return {"success": False, "error": "Tracker file not found."}
     
     today = datetime.date.today().strftime("%Y-%m-%d")
-    clean_highlights = [h.replace("\r", " ").replace("\n", " ").strip() for h in highlights if h.strip()]
-    highlights_md = "\n".join([f"  - {h}" for h in clean_highlights])
-    entry = f"- **{version} — {title}.** Shipped {title.lower()}.\n{highlights_md}\n\n"
+    clean_highlights = [h.replace("\r", " ").replace("\n", " ").strip() for h in (highlights or []) if h.strip()]
+    if clean_highlights:
+        highlights_md = "\n".join([f"  - {h}" for h in clean_highlights])
+        entry = f"- **{version} (Major Release) — {title}.** Shipped {title.lower()}.\n{highlights_md}\n\n"
+    else:
+        entry = f"- **{version} (Major Release) — {title}.** Core architectural updates and improvements.\n\n"
     
     content = TRACKER_MD.read_text(encoding="utf-8")
-    meta_idx = content.find("## Meta")
-    if meta_idx != -1:
-        header_end = content.find("\n", meta_idx)
-        if header_end != -1:
-            insert_pos = header_end + 1
-            new_content = content[:insert_pos] + entry + content[insert_pos:]
-            
-            new_content = re.sub(r"# Portfolio Website Tracker\s*—\s*v[\d.]+", f"# Portfolio Website Tracker — {version}", new_content)
-            new_content = re.sub(r"(?m)^(?:##\s*)?\\?[_*]?Last updated.*$", f"Last updated: _{today}_", new_content)
-            clean_lines = [line.rstrip() for line in new_content.splitlines()]
-            new_content = "\n".join(clean_lines) + "\n"
-            
-            TRACKER_MD.write_text(new_content, encoding="utf-8")
-            return {"success": True, "entry": entry.strip()}
-    return {"success": False, "error": "Failed to locate ## Meta section in tracker."}
+    
+    # Update title header and Last updated date
+    content = re.sub(r"# Portfolio Website Tracker\s*—\s*v[\d.]+", f"# Portfolio Website Tracker — {version}", content)
+    content = re.sub(r"(?m)^(?:##\s*)?\\?[_*]?Last updated.*$", f"Last updated: _{today}_", content)
+
+    # Insert new release block after the 'Last updated:' subtitle
+    match = re.search(r"(?m)^Last updated:\s*_[^_]+_\s*\n*", content)
+    if match:
+        insert_pos = match.end()
+        new_content = content[:insert_pos] + "\n" + entry + content[insert_pos:].lstrip("\r\n")
+    else:
+        heading_match = re.search(r"(?m)^#\s+[^\n]+\n*", content)
+        if heading_match:
+            insert_pos = heading_match.end()
+            new_content = content[:insert_pos] + f"\nLast updated: _{today}_\n\n" + entry + content[insert_pos:].lstrip("\r\n")
+        else:
+            new_content = f"# Portfolio Website Tracker — {version}\n\nLast updated: _{today}_\n\n{entry}" + content
+
+    # Clean trailing whitespace across all lines to satisfy MD009
+    clean_lines = [line.rstrip() for line in new_content.splitlines()]
+    new_content = "\n".join(clean_lines).strip() + "\n"
+    
+    TRACKER_MD.write_text(new_content, encoding="utf-8")
+    return {"success": True, "entry": entry.strip()}
 
 
 def main():

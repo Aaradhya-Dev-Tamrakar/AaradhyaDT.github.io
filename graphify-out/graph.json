@@ -2925,7 +2925,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L376"
+      "source_location": "L391"
     },
     {
       "id": "scripts_site_automation_rebuild_search_index",
@@ -3521,7 +3521,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "51.1.0"
+      "version": "51.2.0"
     },
     {
       "id": "sync",
@@ -3768,6 +3768,18 @@
       "source_location": "L3"
     },
     {
+      "id": "agents_1_patch_point_releases_v51_1_v51_2",
+      "label": "1. Patch / Point Releases (`v51.1`, `v51.2`, ...)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Agent Rules & Workflow Guidelines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. patch / point releases (`v51.1`, `v51.2`, ...)",
+      "source_file": "AGENTS.md",
+      "source_location": "L78"
+    },
+    {
       "id": "agents_2_knowledge_graph_codebase_navigation_graphify",
       "label": "2. Knowledge Graph & Codebase Navigation (Graphify)",
       "_origin": "ast",
@@ -3778,6 +3790,18 @@
       "norm_label": "2. knowledge graph & codebase navigation (graphify)",
       "source_file": "AGENTS.md",
       "source_location": "L41"
+    },
+    {
+      "id": "agents_2_major_releases_v51_v52",
+      "label": "2. Major Releases (`v51`, `v52`, ...)",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Agent Rules & Workflow Guidelines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. major releases (`v51`, `v52`, ...)",
+      "source_file": "AGENTS.md",
+      "source_location": "L83"
     },
     {
       "id": "agents_3_operational_rules_efficiency",
@@ -3802,6 +3826,18 @@
       "norm_label": "4. encrypted payloads & vip sections (`access.js`)",
       "source_file": "AGENTS.md",
       "source_location": "L60"
+    },
+    {
+      "id": "agents_5_versioning_major_release_automation_architecture",
+      "label": "5. Versioning & Major Release Automation Architecture",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "Agent Rules & Workflow Guidelines",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. versioning & major release automation architecture",
+      "source_file": "AGENTS.md",
+      "source_location": "L74"
     },
     {
       "id": "agents_agent_rules_workflow_guidelines",
@@ -3962,6 +3998,18 @@
       "source_location": "L3"
     },
     {
+      "id": "gemini_1_patch_point_releases_v51_1_v51_2",
+      "label": "1. Patch / Point Releases (`v51.1`, `v51.2`, ...)",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Antigravity IDE & Gemini Agent Rules for Portfolio Repository",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. patch / point releases (`v51.1`, `v51.2`, ...)",
+      "source_file": "GEMINI.md",
+      "source_location": "L78"
+    },
+    {
       "id": "gemini_2_knowledge_graph_codebase_navigation_graphify",
       "label": "2. Knowledge Graph & Codebase Navigation (Graphify)",
       "_origin": "ast",
@@ -3972,6 +4020,18 @@
       "norm_label": "2. knowledge graph & codebase navigation (graphify)",
       "source_file": "GEMINI.md",
       "source_location": "L41"
+    },
+    {
+      "id": "gemini_2_major_releases_v51_v52",
+      "label": "2. Major Releases (`v51`, `v52`, ...)",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Antigravity IDE & Gemini Agent Rules for Portfolio Repository",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. major releases (`v51`, `v52`, ...)",
+      "source_file": "GEMINI.md",
+      "source_location": "L83"
     },
     {
       "id": "gemini_3_operational_rules_efficiency",
@@ -3996,6 +4056,18 @@
       "norm_label": "4. encrypted payloads & vip sections (`access.js`)",
       "source_file": "GEMINI.md",
       "source_location": "L60"
+    },
+    {
+      "id": "gemini_5_versioning_major_release_automation_architecture",
+      "label": "5. Versioning & Major Release Automation Architecture",
+      "_origin": "ast",
+      "community": 21,
+      "community_name": "Antigravity IDE & Gemini Agent Rules for Portfolio Repository",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. versioning & major release automation architecture",
+      "source_file": "GEMINI.md",
+      "source_location": "L74"
     },
     {
       "id": "gemini_antigravity_ide_gemini_agent_rules_for_portfolio_repository",
@@ -4406,7 +4478,7 @@
       "label": "PortfolioWebsite_TRACKER.md",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "portfoliowebsite_tracker.md",
@@ -4418,7 +4490,7 @@
       "label": "Evidence & Verification Log \u2014 v20 additions",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "evidence & verification log \u2014 v20 additions",
@@ -4426,14 +4498,14 @@
       "source_location": "L269"
     },
     {
-      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
-      "label": "Portfolio Website Tracker \u2014 v51.1",
+      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
+      "label": "Portfolio Website Tracker \u2014 v51.2",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "portfolio website tracker \u2014 v51.1",
+      "norm_label": "portfolio website tracker \u2014 v51.2",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L1"
     },
@@ -4442,7 +4514,7 @@
       "label": "State of Play",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "state of play",
@@ -4454,7 +4526,7 @@
       "label": "Status",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "status",
@@ -4466,7 +4538,7 @@
       "label": "v21 addition \u2014 both v20-flagged unmatched PDFs closed out",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v21 addition \u2014 both v20-flagged unmatched pdfs closed out",
@@ -4478,7 +4550,7 @@
       "label": "v22 addition \u2014 KEC IT Club \"Introduction to Git\" (2024) card: closed, no source file available",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v22 addition \u2014 kec it club \"introduction to git\" (2024) card: closed, no source file available",
@@ -4490,7 +4562,7 @@
       "label": "v23 addition \u2014 latest site refinements (2026-07-18)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v23 addition \u2014 latest site refinements (2026-07-18)",
@@ -4502,7 +4574,7 @@
       "label": "v24 addition \u2014 site-optimization pass + mobile legend line-break fix (2026-07-18)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v24 addition \u2014 site-optimization pass + mobile legend line-break fix (2026-07-18)",
@@ -4514,7 +4586,7 @@
       "label": "v25 addition \u2014 bug-check sweep, pages 1/3/4 (2026-07-27)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v25 addition \u2014 bug-check sweep, pages 1/3/4 (2026-07-27)",
@@ -4526,7 +4598,7 @@
       "label": "v26 addition \u2014 bug-check sweep, page 2 + about (2026-07-27)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v26 addition \u2014 bug-check sweep, page 2 + about (2026-07-27)",
@@ -4538,7 +4610,7 @@
       "label": "v28 addition \u2014 site-wide bug audit & structural hardening pass (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v28 addition \u2014 site-wide bug audit & structural hardening pass (2026-08-04)",
@@ -4550,7 +4622,7 @@
       "label": "v29 addition \u2014 site-wide performance, PWA, SEO & styling upgrades (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v29 addition \u2014 site-wide performance, pwa, seo & styling upgrades (2026-08-04)",
@@ -4562,7 +4634,7 @@
       "label": "v30 addition \u2014 PWA service worker, skip-links, font preconnects, content-visibility optimization & expanded verification (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v30 addition \u2014 pwa service worker, skip-links, font preconnects, content-visibility optimization & expanded verification (2026-08-04)",
@@ -4574,7 +4646,7 @@
       "label": "v31.1 addition \u2014 Interactive \"What's New\" Major Commit Showcase & Journey Nodes (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v31.1 addition \u2014 interactive \"what's new\" major commit showcase & journey nodes (2026-08-04)",
@@ -4586,7 +4658,7 @@
       "label": "v31 addition \u2014 URL hash filter sync, screen reader accessibility, PWA v31 cache bump & SEO verification (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v31 addition \u2014 url hash filter sync, screen reader accessibility, pwa v31 cache bump & seo verification (2026-08-04)",
@@ -4598,7 +4670,7 @@
       "label": "v32 addition \u2014 PWA offline resilience, reading progress bar, 3D card tilt & journey node j-028 (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v32 addition \u2014 pwa offline resilience, reading progress bar, 3d card tilt & journey node j-028 (2026-08-04)",
@@ -4610,7 +4682,7 @@
       "label": "v33 addition \u2014 interactive dev terminal, CMDK filter pills, cursor light trail & journey node j-029 (2026-08-04)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v33 addition \u2014 interactive dev terminal, cmdk filter pills, cursor light trail & journey node j-029 (2026-08-04)",
@@ -4622,7 +4694,7 @@
       "label": "v34 addition \u2014 mobile touch UX, iOS safe area & web haptics suite, journey node j-030 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v34 addition \u2014 mobile touch ux, ios safe area & web haptics suite, journey node j-030 (2026-08-08)",
@@ -4634,7 +4706,7 @@
       "label": "v35 addition \u2014 motion, typed captions, count-up counters, view transitions & journey node j-031 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v35 addition \u2014 motion, typed captions, count-up counters, view transitions & journey node j-031 (2026-08-08)",
@@ -4646,7 +4718,7 @@
       "label": "v36 addition \u2014 visual polish, performance, skill matrix & mobile UX suite, journey node j-032 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v36 addition \u2014 visual polish, performance, skill matrix & mobile ux suite, journey node j-032 (2026-08-08)",
@@ -4658,7 +4730,7 @@
       "label": "v37 addition \u2014 guided cross-page site tour with spotlight overlay, journey node j-033 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v37 addition \u2014 guided cross-page site tour with spotlight overlay, journey node j-033 (2026-08-08)",
@@ -4670,7 +4742,7 @@
       "label": "v38 addition \u2014 Web Audio micro-sounds, reading metrics, live result indicators & verification suite, journey node j-034 (2026-08-08)",
       "_origin": "ast",
       "community": 5,
-      "community_name": "Portfolio Website Tracker \u2014 v51.1",
+      "community_name": "Portfolio Website Tracker \u2014 v51.2",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v38 addition \u2014 web audio micro-sounds, reading metrics, live result indicators & verification suite, journey node j-034 (2026-08-08)",
@@ -4778,12 +4850,12 @@
     },
     {
       "id": "scripts_site_automation_rationale_349",
-      "label": "Appends a new version entry to dev-logs/PortfolioWebsite_TRACKER.md.",
+      "label": "Inserts a new major version release block into dev-\u2026",
       "_origin": "ast",
       "community": 6,
       "community_name": "site_automation.py",
       "file_type": "rationale",
-      "norm_label": "appends a new version entry to dev-logs/portfoliowebsite_tracker.md.",
+      "norm_label": "inserts a new major version release block into dev-...",
       "source_file": "scripts/site_automation.py",
       "source_location": "L349"
     },
@@ -10013,7 +10085,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L402",
+      "source_location": "L417",
       "weight": 1.0
     },
     {
@@ -10025,7 +10097,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L405",
+      "source_location": "L420",
       "weight": 1.0
     },
     {
@@ -10037,7 +10109,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L407",
+      "source_location": "L422",
       "weight": 1.0
     },
     {
@@ -10049,7 +10121,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L410",
+      "source_location": "L425",
       "weight": 1.0
     },
     {
@@ -10061,7 +10133,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L413",
+      "source_location": "L428",
       "weight": 1.0
     },
     {
@@ -10073,7 +10145,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L419",
+      "source_location": "L434",
       "weight": 1.0
     },
     {
@@ -10085,7 +10157,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L422",
+      "source_location": "L437",
       "weight": 1.0
     },
     {
@@ -11893,6 +11965,28 @@
       "weight": 1.0
     },
     {
+      "source": "agents_5_versioning_major_release_automation_architecture",
+      "target": "agents_1_patch_point_releases_v51_1_v51_2",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_5_versioning_major_release_automation_architecture",
+      "target": "agents_2_major_releases_v51_v52",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
       "source": "agents_agent_rules_workflow_guidelines",
       "target": "agents_1_git_workflow_automation_critical_strict_enforcement",
       "relation": "contains",
@@ -11934,6 +12028,17 @@
       "confidence_score": 1.0,
       "source_file": "AGENTS.md",
       "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "agents_agent_rules_workflow_guidelines",
+      "target": "agents_5_versioning_major_release_automation_architecture",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "AGENTS.md",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -13588,7 +13693,7 @@
     },
     {
       "source": "dev_logs_portfoliowebsite_tracker",
-      "target": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "target": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13598,7 +13703,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_state_of_play",
       "relation": "contains",
       "_origin": "ast",
@@ -13609,7 +13714,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
       "relation": "contains",
       "_origin": "ast",
@@ -13620,7 +13725,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
       "relation": "contains",
       "_origin": "ast",
@@ -13631,7 +13736,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v22_addition_kec_it_club_introduction_to_git_2024_card_closed_no_source_file_available",
       "relation": "contains",
       "_origin": "ast",
@@ -13642,7 +13747,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v23_addition_latest_site_refinements_2026_07_18",
       "relation": "contains",
       "_origin": "ast",
@@ -13653,7 +13758,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v24_addition_site_optimization_pass_mobile_legend_line_break_fix_2026_07_18",
       "relation": "contains",
       "_origin": "ast",
@@ -13664,7 +13769,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v25_addition_bug_check_sweep_pages_1_3_4_2026_07_27",
       "relation": "contains",
       "_origin": "ast",
@@ -13675,7 +13780,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v26_addition_bug_check_sweep_page_2_about_2026_07_27",
       "relation": "contains",
       "_origin": "ast",
@@ -13686,7 +13791,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v28_addition_site_wide_bug_audit_structural_hardening_pass_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -13697,7 +13802,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v29_addition_site_wide_performance_pwa_seo_styling_upgrades_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -13708,7 +13813,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v30_addition_pwa_service_worker_skip_links_font_preconnects_content_visibility_optimization_expanded_verification_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -13719,7 +13824,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v31_addition_url_hash_filter_sync_screen_reader_accessibility_pwa_v31_cache_bump_seo_verification_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -13730,7 +13835,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v31_1_addition_interactive_what_s_new_major_commit_showcase_journey_nodes_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -13741,7 +13846,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v32_addition_pwa_offline_resilience_reading_progress_bar_3d_card_tilt_journey_node_j_028_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -13752,7 +13857,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v33_addition_interactive_dev_terminal_cmdk_filter_pills_cursor_light_trail_journey_node_j_029_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -13763,7 +13868,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v34_addition_mobile_touch_ux_ios_safe_area_web_haptics_suite_journey_node_j_030_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -13774,7 +13879,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v35_addition_motion_typed_captions_count_up_counters_view_transitions_journey_node_j_031_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -13785,7 +13890,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v36_addition_visual_polish_performance_skill_matrix_mobile_ux_suite_journey_node_j_032_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -13796,7 +13901,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v37_addition_guided_cross_page_site_tour_with_spotlight_overlay_journey_node_j_033_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -13807,7 +13912,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_1",
+      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v51_2",
       "target": "dev_logs_portfoliowebsite_tracker_v38_addition_web_audio_micro_sounds_reading_metrics_live_result_indicators_verification_suite_journey_node_j_034_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -13848,6 +13953,28 @@
       "confidence_score": 1.0,
       "source_file": "GEMINI.md",
       "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "gemini_5_versioning_major_release_automation_architecture",
+      "target": "gemini_1_patch_point_releases_v51_1_v51_2",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GEMINI.md",
+      "source_location": "L78",
+      "weight": 1.0
+    },
+    {
+      "source": "gemini_5_versioning_major_release_automation_architecture",
+      "target": "gemini_2_major_releases_v51_v52",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GEMINI.md",
+      "source_location": "L83",
       "weight": 1.0
     },
     {
@@ -13892,6 +14019,17 @@
       "confidence_score": 1.0,
       "source_file": "GEMINI.md",
       "source_location": "L60",
+      "weight": 1.0
+    },
+    {
+      "source": "gemini_antigravity_ide_gemini_agent_rules_for_portfolio_repository",
+      "target": "gemini_5_versioning_major_release_automation_architecture",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "GEMINI.md",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -14540,7 +14678,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L376",
+      "source_location": "L391",
       "weight": 1.0
     },
     {
@@ -17360,5 +17498,5 @@
       "source_file": "llms-full.txt"
     }
   ],
-  "built_at_commit": "52cde37ad0b4b46ccaa9ad0245118f6fad14cfe1"
+  "built_at_commit": "d9a9a13ec21aa8524c43ac5fcf7491d72a2c7cc8"
 }

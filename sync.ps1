@@ -779,6 +779,12 @@ if (-not $PushOnly) {
             if ($Title) { $majorArgs += @("--title", $Title) }
             if ($Highlights) { $majorArgs += @("--highlights") + $Highlights }
             $majorOut = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs $majorArgs -CaptureOutput
+            try {
+                $majorJson = $majorOut | ConvertFrom-Json
+                Write-Badge "Version" "Major release promoted: $($majorJson.previous_version) -> $($majorJson.new_version) across 12 targets." "Green" "Green"
+            } catch {
+                Write-Badge "Version" "Major release promoted." "Green" "Green"
+            }
             if ($VerboseLog) { Write-Host $majorOut.Trim() -ForegroundColor Gray }
         }
         elseif ($Version) {
