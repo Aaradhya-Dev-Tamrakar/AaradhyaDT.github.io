@@ -1,6 +1,6 @@
 {
-  "sha": "99689e7441c674996cadccffc695f2521c9c7802",
-  "shortSha": "99689e7",
-  "date": "2026-09-08T19:17:34+05:45",
-  "message": "feat(ui): decompose shortcuts modal from ui.js into dedicated module"
+  "sha": "724e725b75d0474d62b7269c871aa888d0551607",
+  "shortSha": "724e725",
+  "date": "2026-09-08T19:19:47+05:45",
+  "message": "ux(site-wide): parallel module loader, skeleton CSS, filter ARIA fix, terminal aria-live, 404 search cue, projects empty-state"
 }
