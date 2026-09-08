@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v51.3)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v51.4)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -181,7 +181,7 @@ def evaluate_bump_recommendation():
     """
     code, stdout, _ = run_command(["git", "status", "--porcelain"])
     status_lines = [
-        line.strip() for line in stdout.splitlines()
+        line.rstrip("\r\n") for line in stdout.splitlines()
         if line.strip() and "assets/js/last-commit.json" not in line
     ]
     
@@ -224,41 +224,41 @@ def evaluate_bump_recommendation():
     triggers = []
     major_score = 0
 
-    # Pillar 1: Core Architecture & Runtime Tooling Overhaul (+3 pts)
+    # Pillar 1: Core Architecture & Runtime Tooling Overhaul (+4 pts)
     infra_patterns = [r"pyproject\.toml$", r"uv\.lock$", r"^\.github/workflows/", r"^scripts/", r"sync\.ps1$"]
     infra_matches = [p for p in paths if any(re.search(pat, p) for pat in infra_patterns)]
     if infra_matches:
         triggers.append(
             f"Pillar 1 (Infrastructure & Tooling): Modified {len(infra_matches)} runtime/CI/automation file(s) ({', '.join(infra_matches[:3])})"
         )
-        major_score += 3
+        major_score += 4
 
-    # Pillar 2: Breaking PWA Cache & Client-Side Lifecycles (+3 pts)
+    # Pillar 2: Breaking PWA Cache & Client-Side Lifecycles (+4 pts)
     pwa_matches = [p for p in paths if re.search(r"^(sw\.js|site\.webmanifest|assets/js/script\.js)$", p)]
     if pwa_matches:
         triggers.append(
             f"Pillar 2 (PWA & Client Lifecycle): Modified core service worker or bootloader ({', '.join(pwa_matches)}) requiring global client cache invalidation"
         )
-        major_score += 3
+        major_score += 4
 
-    # Pillar 3: New Surface or Top-Level Page Addition/Removal (+3 pts)
+    # Pillar 3: New Surface or Top-Level Page Addition/Removal (+4 pts)
     html_added = [p for p in added_files if p.endswith(".html") and "/" not in p]
     html_deleted = [p for p in deleted_files if p.endswith(".html") and "/" not in p]
     if html_added or html_deleted:
         triggers.append(
             f"Pillar 3 (Surface Addition/Removal): Top-level HTML page lifecycle change (+{len(html_added)} / -{len(html_deleted)})"
         )
-        major_score += 3
+        major_score += 4
 
-    # Pillar 4: Structural Modularization & Contract Evolution (+2 pts)
+    # Pillar 4: Structural Modularization & Contract Evolution (+4 pts)
     mod_changes = [p for p in paths if re.search(r"^assets/js/(modules|data)/", p) or re.search(r"^assets/css/modules/", p)]
     if len(mod_changes) >= 3 or any(p in added_files or p in deleted_files for p in mod_changes):
         triggers.append(
             f"Pillar 4 (Structural Modularization): Broad module layer changes ({len(mod_changes)} modules touched/added/deleted)"
         )
-        major_score += 2
+        major_score += 4
 
-    # Pillar 5: Cross-System Milestone Scope Threshold (+2 pts)
+    # Pillar 5: Cross-System Milestone Scope Threshold (+4 pts)
     domains = set()
     for p in paths:
         if p.endswith(".html"):
@@ -278,19 +278,19 @@ def evaluate_bump_recommendation():
         triggers.append(
             f"Pillar 5 (Cross-Domain Milestone): Changes span {len(domains)} distinct functional domains ({', '.join(sorted(domains))})"
         )
-        major_score += 2
+        major_score += 4
 
-    # Decision Logic: score >= 4 warrants Major release
+    # Decision Logic: Any single pillar condition (score >= 4) warrants Major release
     if major_score >= 4:
         recommended = "major"
         explanation = (
-            f"Major release ({next_major}) is recommended (Confidence Score: {major_score}/10). "
+            f"Major release ({next_major}) is recommended (Pillars Triggered: {len(triggers)}/5, Confidence Score: {major_score}/20). "
             f"Changes satisfy critical architectural threshold. Pass `.\\sync.ps1 -Major` to promote."
         )
     else:
         recommended = "patch"
         explanation = (
-            f"Minor / Point release ({next_patch}) is appropriate (Score: {major_score}/10). "
+            f"Minor / Point release ({next_patch}) is appropriate (Score: {major_score}/20). "
             f"Changes are localized or routine content/styling updates."
         )
 
@@ -351,10 +351,15 @@ def sync_metadata(version_tag=None):
         tr_text = TRACKER_MD.read_text(encoding="utf-8")
         new_tr = re.sub(r"# Portfolio Website Tracker\s*—\s*v[\d.]+", f"# Portfolio Website Tracker — {clean_v}", tr_text)
         new_tr = re.sub(r"(?m)^(?:##\s*)?\\?[_*]?Last updated.*$", f"Last updated: _{today_ymd}_", new_tr)
+        new_tr = re.sub(
+            r"(\|\s*\*\*PWA Service Worker & Offline Caching\*\*\s*\|\s*\*\*Active \(`aaradhya-portfolio-)v?[\d.]+(\`\)\*\*)",
+            rf"\g<1>{clean_v}\g<2>",
+            new_tr
+        )
         clean_lines = [line.rstrip() for line in new_tr.splitlines()]
         new_tr = "\n".join(clean_lines) + "\n"
         TRACKER_MD.write_text(new_tr, encoding="utf-8")
-        results.append(f"Updated TRACKER.md title to '{clean_v}' and timestamp to '{today_ymd}'")
+        results.append(f"Updated TRACKER.md title to '{clean_v}', PWA cache status, and timestamp to '{today_ymd}'")
 
     # 5. Update sitemap.xml timestamps
     if SITEMAP_XML.exists():
@@ -364,16 +369,22 @@ def sync_metadata(version_tag=None):
         SITEMAP_XML.write_text(new_sitemap, encoding="utf-8")
         results.append(f"Updated sitemap.xml timestamps to '{today_ymd}'")
 
-    # 6. Update JS Module Headers
+    # 6. Update JS Module Headers & terminal.js Fallback Strings
     if MODULES_DIR.exists():
         mod_count = 0
         for mod_path in sorted(MODULES_DIR.glob("*.js")):
             mod_text = mod_path.read_text(encoding="utf-8")
             new_mod = re.sub(r"\(v[\d.]+\)", f"({clean_v})", mod_text, count=1)
+            if mod_path.name == "terminal.js":
+                new_mod = re.sub(
+                    r"(SITE_RELEASES\[0\](?:\?)?\.version\s*:\s*['\"])v?[\d.]+(['\"])",
+                    rf"\g<1>{clean_v}\g<2>",
+                    new_mod
+                )
             if new_mod != mod_text:
                 mod_path.write_text(new_mod, encoding="utf-8")
                 mod_count += 1
-        results.append(f"Updated {mod_count} JS module headers in assets/js/modules/ to '{clean_v}'")
+        results.append(f"Updated {mod_count} JS module headers and fallbacks in assets/js/modules/ to '{clean_v}'")
 
     # 7. Update site_automation.py Header Docstring
     self_path = Path(__file__).resolve()
@@ -384,14 +395,15 @@ def sync_metadata(version_tag=None):
             self_path.write_text(new_self, encoding="utf-8")
             results.append(f"Updated site_automation.py header to '{clean_v}'")
 
-    # 9. Update README.md version comments
+    # 9. Update README.md version comments and badge
     if README_MD.exists():
         readme_text = README_MD.read_text(encoding="utf-8")
-        new_readme = re.sub(r"(sw\.js\s*#\s*PWA Service Worker\s*\()(v[\d.]+)", rf"\g<1>{clean_v}", readme_text)
+        new_readme = re.sub(r"(img\.shields\.io/badge/version-)v?[\d.]+(-blue\.svg)", rf"\g<1>{clean_v}\g<2>", readme_text)
+        new_readme = re.sub(r"(sw\.js\s*#\s*PWA Service Worker\s*\()(v[\d.]+)", rf"\g<1>{clean_v}", new_readme)
         new_readme = re.sub(r"(script\.js\s*#\s*Core site engine[^\n]*\()(v[\d.]+)", rf"\g<1>{clean_v}", new_readme)
         if new_readme != readme_text:
             README_MD.write_text(new_readme, encoding="utf-8")
-            results.append(f"Updated README.md version annotations to '{clean_v}'")
+            results.append(f"Updated README.md version badge and annotations to '{clean_v}'")
 
     # 10. Update .github/workflows/verify.yml header
     if WORKFLOW_VERIFY_YML.exists():
@@ -452,8 +464,8 @@ def bump_version(bump_type="patch", explicit_version=None, title=None, highlight
             ]
             hl_json = ",\n".join([f"      {json.dumps(h)}" for h in rel_highlights])
             clean_sha = f"rel{new_v.replace('.', '').replace('v', '')}"
-            new_block = f"""  {{\n    version: '{new_v}',\n    date: '{today}',\n    sha: '{clean_sha}',\n    title: {json.dumps(rel_title)},\n    highlights: [\n{hl_json}\n    ]\n  }},"""
-            new_releases = re.sub(r"(const SITE_RELEASES = \[\s*)", r"\1" + new_block + "\n", releases_text, count=1)
+            new_block = f"  {{\n    version: '{new_v}',\n    date: '{today}',\n    sha: '{clean_sha}',\n    title: {json.dumps(rel_title)},\n    highlights: [\n{hl_json}\n    ]\n  }},"
+            new_releases = re.sub(r"const SITE_RELEASES = \[\s*", f"const SITE_RELEASES = [\n{new_block}\n  ", releases_text, count=1)
             RELEASES_JS.write_text(new_releases, encoding="utf-8")
             actions.append(f"Prepended new release block for {new_v} in releases.js")
 

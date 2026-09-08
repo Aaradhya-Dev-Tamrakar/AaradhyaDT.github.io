@@ -6,9 +6,8 @@
    Loads before core modules via script.js MODULES order.
    ============================================================ */
 const SITE_RELEASES = [
-
-      {
-    version: 'v51.3',
+  {
+    version: 'v51.4',
     date: '2026-09-08',
     sha: 'rel51',
     title: "Tooling Hyper-Optimization & uv Acceleration Engine",
@@ -20,7 +19,7 @@ const SITE_RELEASES = [
       "Added -FullGraph, -SkipBotSync, -NoUv flags and smart conditional git operations"
     ]
   },
-{
+  {
     version: 'v50.28',
     date: '2026-09-08',
     sha: 'rel50',

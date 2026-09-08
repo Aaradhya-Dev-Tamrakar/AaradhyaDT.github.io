@@ -286,7 +286,7 @@ function Invoke-PythonScript {
         return (& $runner.Executable $allArgs 2>&1 | Out-String)
     }
     else {
-        & $runner.Executable $allArgs
+        & $runner.Executable $allArgs | Out-Host
         return $LASTEXITCODE
     }
 }
@@ -897,14 +897,14 @@ if (-not $SkipVerify -and -not $BypassVerify -and -not $PushOnly) {
                 $cmdArgs = @($pre) + @("scripts/test_e2e.py")
                 $out = & $exe $cmdArgs 2>&1 | Out-String
                 return @{ ExitCode = $LASTEXITCODE; Output = $out }
-            } -ArgumentList $pyExe, $prefix
+            } -ArgumentList $pyExe, (,$prefix)
 
             $verifyJob = Start-ThreadJob -ScriptBlock {
                 param($exe, $pre)
                 $cmdArgs = @($pre) + @("scripts/verify.py")
                 $out = & $exe $cmdArgs 2>&1 | Out-String
                 return @{ ExitCode = $LASTEXITCODE; Output = $out }
-            } -ArgumentList $pyExe, $prefix
+            } -ArgumentList $pyExe, (,$prefix)
 
             $null = Wait-Job -Job @($e2eJob, $verifyJob)
             $e2eRes = Receive-Job -Job $e2eJob

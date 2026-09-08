@@ -1,6 +1,12 @@
-# Portfolio Website Tracker — v51.3
+﻿# Portfolio Website Tracker — v51.4
 
 Last updated: _2026-09-08_
+
+- **v51.4 (Update) — Version Bump Pipeline Hardening, 5-Pillar Decision Calibration & E2E Stream Routing.** Hardened site hyper-automation engine, version consistency verification, and process output piping:
+  - **12-Target Version Synchronization Expansion**: Added automated synchronization and strict verification for `README.md` version badge, `pyproject.toml` project semver, `dev-logs/PortfolioWebsite_TRACKER.md` State of Play PWA cache entry, `.github/workflows/verify.yml` CI header, and `assets/js/modules/terminal.js` fallback version strings.
+  - **5-Pillar Decision Matrix Calibration (`site_automation.py`)**: Calibrated scoring weights so each pillar satisfies the threshold for a major release recommendation (4 pts per pillar, score >= 4), expanded trigger explanations to show pillars satisfied count (`Pillars Triggered: X/5, Confidence Score: Y/20`), and fixed git porcelain status column parsing (`line.rstrip("\r\n")`) preventing path truncation.
+  - **Process Execution & Output Stream Routing (`sync.ps1`)**: Routed `Invoke-PythonScript` execution to `Out-Host` ensuring real-time stdout/stderr rendering to terminal without swallowing into function return value, and resolved array argument flattening in `Start-ThreadJob` scriptblocks via unary comma wrapping (`(,$prefix)`).
+  - **Verification Gate**: Passed `python scripts/verify.py` cleanly across all 24 diagnostic categories (0 errors, 0 warnings); passed all 42 `scripts/test_e2e.py` smoke tests.
 
 - **v51 (Major Release) — Tooling Hyper-Optimization, Astral uv Engine & Dev Drive ReFS Acceleration Suite.** Shipped fundamental repository workflow overhaul accelerating sync, testing, and indexing pipelines by up to 7x:
   - **Astral `uv` Package Manager & Project Standard (`pyproject.toml`, `uv.lock`)**: Integrated Astral `uv` into repository tooling with standardized PEP 517/621 project manifest (`pyproject.toml`), precompiled bytecode (`compile-bytecode = true`), and copy-on-write link mode. Added automatic fallback to system Python for environments without `uv`.
@@ -245,7 +251,7 @@ Last updated: _2026-09-08_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v50.26`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                 |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v51.4`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

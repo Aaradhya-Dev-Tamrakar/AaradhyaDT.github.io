@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v51.3)
+aaradhyadt.github.io (v51.4)
 
 24 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -51,6 +51,9 @@ RESUME_DATA_JS = DATA_DIR / "resume-data.js"
 TRACKER_MD = ROOT / "dev-logs" / "PortfolioWebsite_TRACKER.md"
 SITE_AUTOMATION_PY = ROOT / "scripts" / "site_automation.py"
 VERSION_FILE = ROOT / "VERSION"
+README_MD = ROOT / "README.md"
+PYPROJECT_TOML = ROOT / "pyproject.toml"
+WORKFLOW_VERIFY_YML = ROOT / ".github" / "workflows" / "verify.yml"
 
 # ── State ───────────────────────────────────────────────────────────
 errors = []
@@ -552,6 +555,55 @@ def check_version_consistency():
             versions["VERSION file"] = m.group(1)
         else:
             log_error(cat, "VERSION file malformed")
+
+    # 9. README.md version badge
+    if README_MD.exists():
+        rm_text = README_MD.read_text(encoding="utf-8")
+        m = re.search(r"badge/version-v?([\d.]+)-blue\.svg", rm_text)
+        if m:
+            versions["README.md badge"] = m.group(1)
+        else:
+            log_error(cat, "README.md version badge not found")
+
+    # 10. pyproject.toml version
+    if PYPROJECT_TOML.exists():
+        py_text = PYPROJECT_TOML.read_text(encoding="utf-8")
+        m = re.search(r'version\s*=\s*"([\d.]+)"', py_text)
+        if m:
+            raw_py = m.group(1)
+            norm_py = raw_py[:-4] if raw_py.endswith(".0.0") else (raw_py[:-2] if raw_py.endswith(".0") else raw_py)
+            versions["pyproject.toml"] = norm_py
+        else:
+            log_error(cat, "pyproject.toml version not found")
+
+    # 11. TRACKER.md State of Play PWA row
+    if TRACKER_MD.exists():
+        tr_text = TRACKER_MD.read_text(encoding="utf-8")
+        m = re.search(r"\|\s*\*\*PWA Service Worker & Offline Caching\*\*\s*\|\s*\*\*Active \(`aaradhya-portfolio-v?([\d.]+)`\)\*\*", tr_text)
+        if m:
+            versions["TRACKER.md State of Play PWA"] = m.group(1)
+        else:
+            log_error(cat, "TRACKER.md State of Play PWA version row not found")
+
+    # 12. verify.yml workflow header
+    if WORKFLOW_VERIFY_YML.exists():
+        wf_text = WORKFLOW_VERIFY_YML.read_text(encoding="utf-8")
+        m = re.search(r"# Last updated:\s*[\d-]+\s*\(v([\d.]+)\)", wf_text)
+        if m:
+            versions["verify.yml header"] = m.group(1)
+        else:
+            log_error(cat, "verify.yml header version not found")
+
+    # 13. terminal.js fallback versions
+    term_path = MODULES_DIR / "terminal.js"
+    if term_path.exists():
+        term_text = term_path.read_text(encoding="utf-8")
+        fallbacks = re.findall(r"SITE_RELEASES\[0\](?:\?)?\.version\s*:\s*['\"]v?([\d.]+)['\"]", term_text)
+        if fallbacks:
+            for i, fb in enumerate(fallbacks, 1):
+                versions[f"terminal.js fallback {i}"] = fb
+        else:
+            log_error(cat, "terminal.js fallback versions not found")
 
     unique_versions = set(versions.values())
     if len(unique_versions) == 0:
@@ -1201,7 +1253,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v51.3)"))
+    print(bold("  Portfolio Site Verification Suite (v51.4)"))
     print(bold("=" * 60))
     print()
 
