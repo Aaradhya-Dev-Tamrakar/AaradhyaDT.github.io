@@ -1,10 +1,10 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v53)
+   SHARED SCRIPT — aaradhyadt.github.io (v53.4)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v53) ───────────────────────────── */
+/* ── Dynamic Module Loader (v53.4) ───────────────────────────── */
 window.__modulesLoadedPromise = (async function () {
   const MODULES = [
     'assets/js/data/releases.js',

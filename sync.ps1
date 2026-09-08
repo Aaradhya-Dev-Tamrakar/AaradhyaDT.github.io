@@ -896,14 +896,38 @@ if (-not $SkipVerify -and -not $BypassVerify -and -not $PushOnly) {
             
             $e2eJob = Start-ThreadJob -ScriptBlock {
                 param($exe, $pre)
-                $cmdArgs = @($pre) + @("scripts/test_e2e.py")
+                $cmdArgs = @()
+                if ($pre) {
+                    foreach ($p in $pre) {
+                        if ($p -is [System.Collections.IEnumerable] -and $p -isnot [string]) {
+                            foreach ($sub in $p) {
+                                if (-not [string]::IsNullOrWhiteSpace($sub)) { $cmdArgs += [string]$sub }
+                            }
+                        } elseif (-not [string]::IsNullOrWhiteSpace($p)) {
+                            $cmdArgs += [string]$p
+                        }
+                    }
+                }
+                $cmdArgs += "scripts/test_e2e.py"
                 $out = & $exe $cmdArgs 2>&1 | Out-String
                 return @{ ExitCode = $LASTEXITCODE; Output = $out }
             } -ArgumentList $pyExe, (,$prefix)
 
             $verifyJob = Start-ThreadJob -ScriptBlock {
                 param($exe, $pre)
-                $cmdArgs = @($pre) + @("scripts/verify.py")
+                $cmdArgs = @()
+                if ($pre) {
+                    foreach ($p in $pre) {
+                        if ($p -is [System.Collections.IEnumerable] -and $p -isnot [string]) {
+                            foreach ($sub in $p) {
+                                if (-not [string]::IsNullOrWhiteSpace($sub)) { $cmdArgs += [string]$sub }
+                            }
+                        } elseif (-not [string]::IsNullOrWhiteSpace($p)) {
+                            $cmdArgs += [string]$p
+                        }
+                    }
+                }
+                $cmdArgs += "scripts/verify.py"
                 $out = & $exe $cmdArgs 2>&1 | Out-String
                 return @{ ExitCode = $LASTEXITCODE; Output = $out }
             } -ArgumentList $pyExe, (,$prefix)

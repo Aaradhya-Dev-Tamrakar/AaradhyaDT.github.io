@@ -43,6 +43,8 @@ dev-logs/*
 !dev-logs/og-image/**
 !dev-logs/PortfolioWebsite_TRACKER.md
 !dev-logs/PortfolioWebsite_TRACKER_*.md
+!dev-logs/EVOLUTION_AREAS.md
+!dev-logs/RFC_*.md
 dev-logs/secrets/
 dev-logs/payloads_plaintext.json
 dev-logs/*.plaintext.json
