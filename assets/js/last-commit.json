@@ -1,6 +1,6 @@
 {
-  "sha": "d2a251aee66830cf07e42209ccc8cff95a2fd77c",
-  "shortSha": "d2a251a",
-  "date": "2026-09-08T17:38:49+05:45",
-  "message": "chore(repo): resolve loose ends, synchronize metrics and expand syntax gate"
+  "sha": "a5a5307c16077a263808ec8bc81dd9885fb46680",
+  "shortSha": "a5a5307",
+  "date": "2026-09-08T17:52:29+05:45",
+  "message": "feat(sync): accelerate sync pipeline with uv, ReFS block cloning & parallel verify (v51)"
 }
