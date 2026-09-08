@@ -99,3 +99,21 @@ The repository enforces a dual-tier versioning architecture managed through `scr
      - `pyproject.toml`: Standard PEP 517/621 `version = "52.0.0"`
      - `sitemap.xml`: XML `<lastmod>` timestamps
      - `dev-logs/PortfolioWebsite_TRACKER.md`: Title header `# Portfolio Website Tracker — v52` and date
+
+### 3. Explainable Conditions: When to Bump Minor vs Major
+
+To eliminate ambiguity, release type selection follows an objective **5-Pillar Decision Matrix** evaluated by `python scripts/site_automation.py evaluate-bump` and reported by `.\sync.ps1`:
+
+| Pillar | Condition / Trigger | Release Type | Rationale |
+| :--- | :--- | :--- | :--- |
+| **Pillar 1: Infrastructure & Runtime** | New build engines (`uv`), packaging manifest (`pyproject.toml`), CI workflow rewrites (`.github/workflows/`), or sync engine overhaul (`sync.ps1`) | **Major** | Foundational change to developer and execution environment. |
+| **Pillar 2: Client Lifecycle & Cache** | Modifying `sw.js` caching strategies, PWA manifest specs, or core bootloader (`script.js` / `core.js`) | **Major** | Requires global PWA cache invalidation (`aaradhya-portfolio-vX`) to prevent client-side stale asset drift. |
+| **Pillar 3: Surface Addition / Removal** | Adding or deleting top-level HTML pages (`*.html`) or introducing major system-wide HUDs/modals | **Major** | Alters navigation topology, sitemap structure, and user discovery surface. |
+| **Pillar 4: Structural Modularization** | Splitting monolithic modules, extracting data layers (`assets/js/data/`), or adding/retiring CSS/JS modules | **Major** | Changes architecture modularity contracts and dependency graph. |
+| **Pillar 5: Cross-Domain Milestone** | Milestone delivery touching **4+ functional domains** (HTML, CSS, JS runtime, Tooling, CI, Docs) | **Major** | Represents a cohesive multi-system milestone rather than an isolated patch. |
+
+#### When Changes Remain Minor / Point Releases (`v51.1`, `v51.2`, ...)
+- **Content Updates**: Adding or updating project cards (`projects.html`), achievement credentials (`achievements.html`), or timeline milestones (`journey.html`).
+- **Styling & Aesthetics**: Refining CSS tokens, micro-contrast adjustments, typography, layout margins.
+- **Isolated Module Patches**: Fixing a bug or adding an alias to Dev Terminal (`terminal.js`), Command Palette (`cmdk.js`), or audio effects (`audio.js`).
+- **SEO & Maintenance**: Updating meta descriptions, tracker notes, verification rules, or sitemap timestamps.

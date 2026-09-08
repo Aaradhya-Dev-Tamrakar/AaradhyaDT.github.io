@@ -792,9 +792,18 @@ if (-not $PushOnly) {
             $null = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs @("sync-metadata", "--version", $Version)
         }
         elseif (-not $NoBump -and -not $WhatIf) {
-            # Auto point bump (e.g. 50.1, 50.2) if local modifications exist
+            # Auto point bump (e.g. 51.1, 51.2) if local modifications exist
             $statusCheck = git status --porcelain 2>$null | Where-Object { $_ -notmatch 'last-commit\.json' }
             if ($statusCheck) {
+                # Evaluate if major release conditions are met
+                $evalOut = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs @("evaluate-bump") -CaptureOutput
+                try {
+                    $evalJson = $evalOut | ConvertFrom-Json
+                    if ($evalJson.recommended_bump -eq "major") {
+                        Write-Badge "Version" "Architectural milestone detected ($($evalJson.triggers[0])). Consider running: .\sync.ps1 -Major" "Yellow" "White"
+                    }
+                } catch {}
+
                 Write-Badge "Version" "Auto-incrementing point release for pending updates..." "Cyan" "White"
                 $patchOut = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs @("bump-patch") -CaptureOutput
                 if ($VerboseLog) { Write-Host $patchOut.Trim() -ForegroundColor Gray }

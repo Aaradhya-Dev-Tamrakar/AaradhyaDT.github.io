@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v51.2)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v51.3)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -171,6 +171,138 @@ def compute_next_version(current_v, bump_type="patch"):
     else:
         patch = 1
     return f"v{major}.{patch}"
+
+
+def evaluate_bump_recommendation():
+    """
+    Evaluates current working tree modifications against an objective 5-pillar
+    decision matrix to determine whether a Major (v52) or Minor/Patch (v51.x) release
+    is warranted, providing human- and machine-readable explanations.
+    """
+    code, stdout, _ = run_command(["git", "status", "--porcelain"])
+    status_lines = [
+        line.strip() for line in stdout.splitlines()
+        if line.strip() and "assets/js/last-commit.json" not in line
+    ]
+    
+    current_v = get_current_version()
+    next_major = compute_next_version(current_v, bump_type="major")
+    next_patch = compute_next_version(current_v, bump_type="patch")
+
+    if not status_lines:
+        return {
+            "recommended_bump": "none",
+            "current_version": current_v,
+            "suggested_version": current_v,
+            "score": 0,
+            "triggers": [],
+            "domains_touched": [],
+            "explanation": "Working tree is clean. No version bump necessary."
+        }
+
+    paths = []
+    added_files = []
+    deleted_files = []
+    modified_files = []
+
+    for line in status_lines:
+        if len(line) < 4:
+            continue
+        status_code = line[:2].strip()
+        raw_path = line[3:].strip().strip('"')
+        if " -> " in raw_path:
+            raw_path = raw_path.split(" -> ")[-1].strip().strip('"')
+        paths.append(raw_path)
+        
+        if "A" in status_code or "??" in status_code:
+            added_files.append(raw_path)
+        elif "D" in status_code:
+            deleted_files.append(raw_path)
+        else:
+            modified_files.append(raw_path)
+
+    triggers = []
+    major_score = 0
+
+    # Pillar 1: Core Architecture & Runtime Tooling Overhaul (+3 pts)
+    infra_patterns = [r"pyproject\.toml$", r"uv\.lock$", r"^\.github/workflows/", r"^scripts/", r"sync\.ps1$"]
+    infra_matches = [p for p in paths if any(re.search(pat, p) for pat in infra_patterns)]
+    if infra_matches:
+        triggers.append(
+            f"Pillar 1 (Infrastructure & Tooling): Modified {len(infra_matches)} runtime/CI/automation file(s) ({', '.join(infra_matches[:3])})"
+        )
+        major_score += 3
+
+    # Pillar 2: Breaking PWA Cache & Client-Side Lifecycles (+3 pts)
+    pwa_matches = [p for p in paths if re.search(r"^(sw\.js|site\.webmanifest|assets/js/script\.js)$", p)]
+    if pwa_matches:
+        triggers.append(
+            f"Pillar 2 (PWA & Client Lifecycle): Modified core service worker or bootloader ({', '.join(pwa_matches)}) requiring global client cache invalidation"
+        )
+        major_score += 3
+
+    # Pillar 3: New Surface or Top-Level Page Addition/Removal (+3 pts)
+    html_added = [p for p in added_files if p.endswith(".html") and "/" not in p]
+    html_deleted = [p for p in deleted_files if p.endswith(".html") and "/" not in p]
+    if html_added or html_deleted:
+        triggers.append(
+            f"Pillar 3 (Surface Addition/Removal): Top-level HTML page lifecycle change (+{len(html_added)} / -{len(html_deleted)})"
+        )
+        major_score += 3
+
+    # Pillar 4: Structural Modularization & Contract Evolution (+2 pts)
+    mod_changes = [p for p in paths if re.search(r"^assets/js/(modules|data)/", p) or re.search(r"^assets/css/modules/", p)]
+    if len(mod_changes) >= 3 or any(p in added_files or p in deleted_files for p in mod_changes):
+        triggers.append(
+            f"Pillar 4 (Structural Modularization): Broad module layer changes ({len(mod_changes)} modules touched/added/deleted)"
+        )
+        major_score += 2
+
+    # Pillar 5: Cross-System Milestone Scope Threshold (+2 pts)
+    domains = set()
+    for p in paths:
+        if p.endswith(".html"):
+            domains.add("HTML Pages")
+        elif p.startswith("assets/css/"):
+            domains.add("CSS Styling")
+        elif p.startswith("assets/js/"):
+            domains.add("JavaScript Runtime")
+        elif p.startswith("scripts/"):
+            domains.add("Automation Tooling")
+        elif p.startswith(".github/"):
+            domains.add("CI/CD Workflows")
+        elif p.startswith("dev-logs/") or p.endswith(".md"):
+            domains.add("Documentation & Tracker")
+
+    if len(domains) >= 4:
+        triggers.append(
+            f"Pillar 5 (Cross-Domain Milestone): Changes span {len(domains)} distinct functional domains ({', '.join(sorted(domains))})"
+        )
+        major_score += 2
+
+    # Decision Logic: score >= 4 warrants Major release
+    if major_score >= 4:
+        recommended = "major"
+        explanation = (
+            f"Major release ({next_major}) is recommended (Confidence Score: {major_score}/10). "
+            f"Changes satisfy critical architectural threshold. Pass `.\\sync.ps1 -Major` to promote."
+        )
+    else:
+        recommended = "patch"
+        explanation = (
+            f"Minor / Point release ({next_patch}) is appropriate (Score: {major_score}/10). "
+            f"Changes are localized or routine content/styling updates."
+        )
+
+    return {
+        "recommended_bump": recommended,
+        "current_version": current_v,
+        "suggested_version": next_major if recommended == "major" else next_patch,
+        "score": major_score,
+        "triggers": triggers,
+        "domains_touched": sorted(list(domains)),
+        "explanation": explanation
+    }
 
 
 def sync_metadata(version_tag=None):
@@ -411,6 +543,8 @@ def main():
     tracker_p.add_argument("--title", required=True, help="Title of release")
     tracker_p.add_argument("--highlights", nargs="+", required=True, help="List of highlights")
 
+    subparsers.add_parser("evaluate-bump", help="Evaluate whether pending changes warrant a major or minor bump")
+
     args = parser.parse_args()
 
     if args.command == "audit":
@@ -423,6 +557,9 @@ def main():
         print(json.dumps(res, indent=2))
     elif args.command == "update-graph":
         res = update_knowledge_graph()
+        print(json.dumps(res, indent=2))
+    elif args.command == "evaluate-bump":
+        res = evaluate_bump_recommendation()
         print(json.dumps(res, indent=2))
     elif args.command == "bump-patch":
         res = bump_version(bump_type="patch")
