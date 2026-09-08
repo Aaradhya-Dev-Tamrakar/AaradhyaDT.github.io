@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v50.25)
+aaradhyadt.github.io (v50.26)
 
 24 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -439,6 +439,8 @@ def check_js_syntax():
         js_files.append(BG_ANIMATIONS_JS)
     if MODULES_DIR.exists():
         js_files.extend(sorted(MODULES_DIR.glob("*.js")))
+    if DATA_DIR.exists():
+        js_files.extend(sorted(DATA_DIR.glob("*.js")))
 
     all_ok = True
     for js_file in js_files:
@@ -1199,7 +1201,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v50.25)"))
+    print(bold("  Portfolio Site Verification Suite (v50.26)"))
     print(bold("=" * 60))
     print()
 

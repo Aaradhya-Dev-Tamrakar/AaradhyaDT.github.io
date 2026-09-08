@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: cmdk.js — aaradhyadt.github.io (v50.25)
+   MODULE: cmdk.js — aaradhyadt.github.io (v50.26)
    Command palette (Cmd+K) search and quick navigation.
    ============================================================ */
 
@@ -21,7 +21,7 @@ const CMDK_ENTRIES = [
   { title: 'Explore: Where to look next', type: 'section', meta: 'Home · Section', href: '/index.html#quick-nav', text: 'explore where to look next quick nav navigation site directory cards overview explore the site' },
   { title: 'CLI: Interactive Dev Terminal', type: 'section', meta: 'Home · Section', href: '/index.html#terminal-section', text: 'cli terminal interactive dev terminal developer terminal adt-shell shell zsh bash console command prompt emulator commands' },
   { title: 'Keymap & Display Guide', type: 'section', meta: 'Home · Section', href: '/index.html#keymap', text: 'keymap key map keyboard shortcuts hotkeys reference display guide oled 400 nits navigation controls shortcuts key bindings' },
-  { title: 'At a Glance: Stats & Metrics', type: 'section', meta: 'Home · Section', href: '/index.html#stats', text: 'stats statistics at a glance metrics impact 39 achievements 29 projects key numbers highlights' },
+  { title: 'At a Glance: Stats & Metrics', type: 'section', meta: 'Home · Section', href: '/index.html#stats', text: 'stats statistics at a glance metrics impact 39 achievements 30 projects key numbers highlights' },
   { title: 'About Sign In with Google', type: 'section', meta: 'Home · Section', href: '/index.html#about-sign-in', text: 'access control sign in with google login level 1 authentication privacy client storage' },
   { title: 'VIP Exclusive: Research & Specs', type: 'section', meta: 'Home · Section', href: '/index.html#vip-exclusive', text: 'vip tier exclusive research specs notes gated content passcode vip2026' },
   { title: 'Master Level: System Diagnostics & Console', type: 'section', meta: 'Home · Section', href: '/index.html#master-exclusive', text: 'master tier system diagnostics master console admin controls diagnostics health' },

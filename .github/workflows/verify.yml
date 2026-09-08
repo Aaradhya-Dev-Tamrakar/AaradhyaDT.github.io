@@ -1,6 +1,6 @@
 name: Verify
 
-# Last updated: 2026-09-08 (v50.25)
+# Last updated: 2026-09-08 (v50.26)
 
 # Runs scripts/verify.py (24 check categories: ids, tags, links, assets,
 # JS syntax, version consistency, modules, sitemap, manifest, JSON-LD,
@@ -66,7 +66,7 @@ jobs:
           echo "Checking JavaScript syntax..."
           node --check assets/js/script.js
           node --check assets/js/bg-animations.js
-          for f in assets/js/modules/*.js; do
+          for f in assets/js/modules/*.js assets/js/data/*.js; do
             echo "  node --check $f"
             node --check "$f"
           done

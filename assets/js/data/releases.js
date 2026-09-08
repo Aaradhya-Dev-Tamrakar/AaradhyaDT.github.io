@@ -8,7 +8,7 @@
 const SITE_RELEASES = [
 
     {
-    version: 'v50.25',
+    version: 'v50.26',
     date: '2026-09-08',
     sha: 'rel50',
     title: "5-Project Ecosystem Synchronization, Native Unit Testing Suite & Security Hardening",

@@ -26,7 +26,8 @@ jobs:
             echo "Checking $f..."
           done
           node --check assets/js/script.js
-          for f in assets/js/modules/*.js; do
+          node --check assets/js/bg-animations.js
+          for f in assets/js/modules/*.js assets/js/data/*.js; do
             node --check "$f"
           done
 

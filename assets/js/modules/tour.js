@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: tour.js — aaradhyadt.github.io (v50.25)
+   MODULE: tour.js — aaradhyadt.github.io (v50.26)
    Cross-page spotlight tour with keyboard navigation.
    ============================================================ */
 
@@ -14,7 +14,7 @@ const TOUR_STEPS = {
     { sel: '#keymap', title: 'Keymap & Display Guide', body: 'Complete keyboard shortcuts (1-7, 0, Shift+N, Shift+T, /, Esc) and 400-nit OLED display calibration benchmarks.' },
   ],
   'projects.html': [
-    { sel: '#page-header', title: 'Projects Portfolio', body: 'Explore 29 engineering projects across firmware, robotics, and ML with real-time tag search and count indicators.' },
+    { sel: '#page-header', title: 'Projects Portfolio', body: 'Explore 30 engineering projects across firmware, robotics, and ML with real-time tag search and count indicators.' },
     { sel: '#p-015', title: 'Featured Build (SPARK)', body: 'Deep-dive into SPARK — Intelligent Elderly Fall Detection Wearable with ESP32-S3, PyTorch, and TFLite Micro on-device inference.' },
   ],
   'experience.html': [
