@@ -85,12 +85,12 @@ Four high-leverage technical tracks have been identified for future release cycl
 
 ## 4. Priority Matrix & Implementation Sequencing
 
-| Milestone | Track | Complexity | Priority | Target Scope |
-| :--- | :--- | :---: | :---: | :--- |
-| **Phase 1 (v54)** | Track 2: Python Sync CLI Parity | Medium | **High** | Implement `python scripts/site_automation.py sync` with cross-platform Git status & verification calls. |
-| **Phase 2 (v54.x)** | Track 1: UI Modal Decomposition | Medium | **High** | Split `resume-renderer.js` and `shortcuts-renderer.js` out of `ui.js`. |
-| **Phase 3 (v55)** | Track 4: ESM & Bundle Benchmark | Low | **Medium** | Run automated network waterfall benchmarks comparing dynamic load vs unified cache bundles. |
-| **Phase 4 (v55+)** | Track 3: WebAuthn / Passkeys | High | **Medium** | Integrate hardware-authenticator challenge for Master Admin access. |
+| Milestone | Track | Complexity | Priority | Status | Target Scope |
+| :--- | :--- | :---: | :---: | :---: | :--- |
+| **Phase 1** | Track 2: Python Sync CLI Parity | Medium | **High** | **COMPLETED** | Implemented `python scripts/site_automation.py sync` with cross-platform Git status, E2E & verification calls. |
+| **Phase 2** | Track 4: Asset Waterfall & Bundle Benchmark | Low | **High** | **COMPLETED** | Built `scripts/benchmark_bundle.py` with gzip compression metrics and simulated network waterfalls. |
+| **Phase 3** | Track 1: UI Modal Decomposition | Medium | **High** | Queued | Split `resume-renderer.js` and `shortcuts-renderer.js` out of `ui.js`. |
+| **Phase 4** | Track 3: WebAuthn / Passkeys | High | **Medium** | Queued | Integrate hardware-authenticator challenge for Master Admin access. |
 
 ---
 

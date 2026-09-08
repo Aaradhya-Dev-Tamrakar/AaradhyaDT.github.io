@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-08)
 
 ## Corpus Check
-- 45 files · ~449,895 words
+- 46 files · ~452,119 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 676 nodes · 901 edges · 142 communities (40 shown, 90 thin omitted)
+- 699 nodes · 942 edges · 143 communities (41 shown, 90 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 56 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `09a6a929`
+- Built from commit: `a5e971d2`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- Portfolio Website Tracker — v53.4
+- Portfolio Website Tracker — v53.8
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -145,18 +145,19 @@
 - aaradhyadt-portfolio
 - test_visual_regression.py
 - Repository Architectural Evaluation & Evolution Roadmap
+- benchmark_bundle.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v53.4` - 21 edges
+4. `Portfolio Website Tracker — v53.8` - 21 edges
 5. `log_warning()` - 16 edges
 6. `get_html_files()` - 14 edges
-7. `initTour()` - 12 edges
-8. `Aaradhya Dev Tamrakar` - 12 edges
-9. `Aaradhya Dev Tamrakar CV` - 12 edges
-10. `initGlobalSearch()` - 11 edges
+7. `cmd_sync()` - 13 edges
+8. `initTour()` - 12 edges
+9. `Aaradhya Dev Tamrakar` - 12 edges
+10. `Aaradhya Dev Tamrakar CV` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Certificate: AI-Assisted Product Launch` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
@@ -176,7 +177,7 @@
 ## Hyperedges (group relationships)
 - **Flagship Engineering Projects** — concept_spark, concept_biasaperture, concept_novaoptimizer [EXTRACTED 0.85]
 
-## Communities (142 total, 90 thin omitted)
+## Communities (143 total, 90 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.10
@@ -198,13 +199,13 @@ Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developer
 Cohesion: 0.19
 Nodes (24): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+16 more)
 
-### Community 5 - "Portfolio Website Tracker — v53.4"
+### Community 5 - "Portfolio Website Tracker — v53.8"
 Cohesion: 0.05
-Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.4, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
+Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.8, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
 
 ### Community 6 - "site_automation.py"
-Cohesion: 0.15
-Nodes (23): audit(), bump_version(), compute_next_version(), evaluate_bump_recommendation(), get_current_version(), get_site_stats(), main(), Extracts the latest version string from SITE_RELEASES[0] in… (+15 more)
+Cohesion: 0.12
+Nodes (33): audit(), build_css_modules(), bump_version(), cmd_sync(), compute_next_version(), evaluate_bump_recommendation(), generate_commit_message(), get_current_version() (+25 more)
 
 ### Community 7 - "tour.js"
 Cohesion: 0.27
@@ -338,16 +339,20 @@ Nodes (8): calculate_image_diff(), capture_screenshot(), find_browser_executable
 Cohesion: 0.18
 Nodes (10): 1. Multi-Dimensional Scorecard, 2. Core Architectural Strengths, 3. Targeted Evolution Areas, 4. Priority Matrix & Implementation Sequencing, 5. Verification & Governance Criteria, Repository Architectural Evaluation & Evolution Roadmap, Track 1: Imperative DOM Decomposition & Component Isolation, Track 2: Cross-Platform Sync Engine & Python CLI Parity (+2 more)
 
+### Community 142 - "benchmark_bundle.py"
+Cohesion: 0.22
+Nodes (12): analyze_assets(), generate_benchmark_summary(), get_file_metrics(), main(), print_cli_report(), Path, Computes critical path totals and network latency models., Renders human-readable report with formatted terminal tables. (+4 more)
+
 ## Knowledge Gaps
 - **210 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+205 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 330 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 341 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **90 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `renderSiteFooter()` connect `ui.js` to `core.js`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **Why does `loadGA4()` connect `core.js` to `script.js`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
 - **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**

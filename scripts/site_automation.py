@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v53.4)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v53.8)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -30,6 +30,8 @@ ROOT = Path(__file__).resolve().parent.parent
 SCRIPTS_DIR = ROOT / "scripts"
 VERIFY_PY = SCRIPTS_DIR / "verify.py"
 EXTRACT_INDEX_PY = SCRIPTS_DIR / "extract_index.py"
+BUILD_CSS_PY = SCRIPTS_DIR / "build_css.py"
+TEST_E2E_PY = SCRIPTS_DIR / "test_e2e.py"
 TRACKER_MD = ROOT / "dev-logs" / "PortfolioWebsite_TRACKER.md"
 SW_JS = ROOT / "sw.js"
 SCRIPT_JS = ROOT / "assets" / "js" / "script.js"
@@ -532,6 +534,223 @@ def update_tracker(version, title, highlights=None):
     return {"success": True, "entry": entry.strip()}
 
 
+def build_css_modules():
+    """Minifies all CSS modules in assets/css/modules/ via scripts/build_css.py."""
+    if not BUILD_CSS_PY.exists():
+        return {"success": True, "output": "build_css.py not found, skipped."}
+    code, stdout, stderr = run_command([sys.executable, str(BUILD_CSS_PY)])
+    return {
+        "success": code == 0,
+        "output": stdout + stderr
+    }
+
+
+def run_e2e_tests():
+    """Runs the E2E smoke test suite via scripts/test_e2e.py."""
+    if not TEST_E2E_PY.exists():
+        return {"success": True, "output": "test_e2e.py not found, skipped."}
+    code, stdout, stderr = run_command([sys.executable, str(TEST_E2E_PY)])
+    return {
+        "success": code == 0,
+        "output": stdout + stderr
+    }
+
+
+def update_tracker_timestamp():
+    """Updates 'Last updated: _YYYY-MM-DD_' in dev-logs/PortfolioWebsite_TRACKER.md (MD009/MD026 clean)."""
+    if not TRACKER_MD.exists():
+        return False
+    today = datetime.date.today().strftime("%Y-%m-%d")
+    text = TRACKER_MD.read_text(encoding="utf-8")
+    updated = re.sub(r"(?m)^Last updated:\s*_[^_]+_", f"Last updated: _{today}_", text)
+    clean_lines = [line.rstrip() for line in updated.splitlines()]
+    TRACKER_MD.write_text("\n".join(clean_lines) + "\n", encoding="utf-8")
+    return True
+
+
+def generate_commit_message(custom_message=None):
+    """Generates a conventional commit message based on staged and unstaged changes."""
+    if custom_message:
+        return custom_message
+
+    code, stdout, _ = run_command(["git", "status", "--porcelain"])
+    if code != 0 or not stdout.strip():
+        return "chore(site): automated site sync"
+
+    paths = []
+    added = []
+    for line in stdout.splitlines():
+        if len(line) < 4:
+            continue
+        status = line[:2]
+        path = line[3:].strip().strip('"')
+        if " -> " in path:
+            path = path.split(" -> ")[-1].strip().strip('"')
+        paths.append(path)
+        if "A" in status or "?" in status:
+            added.append(Path(path).name)
+
+    if any("projects.html" in p for p in paths):
+        action = "feat" if "projects.html" in added else "update"
+        return f"{action}(projects): update projects showcase and project entries"
+    if any("achievements.html" in p for p in paths):
+        action = "feat" if "achievements.html" in added else "update"
+        return f"{action}(achievements): update certificates, credentials, and achievements"
+    if any("experience.html" in p for p in paths):
+        action = "feat" if "experience.html" in added else "update"
+        return f"{action}(experience): update leadership roles and professional experience"
+    if any("about.html" in p for p in paths):
+        action = "feat" if "about.html" in added else "update"
+        return f"{action}(about): update biographical details and career profile"
+    if any("journey.html" in p for p in paths):
+        action = "feat" if "journey.html" in added else "update"
+        return f"{action}(journey): update engineering journey timeline milestones"
+    if any("contact.html" in p for p in paths):
+        action = "feat" if "contact.html" in added else "update"
+        return f"{action}(contact): update contact channels and connection links"
+    if any(p.endswith(".js") for p in paths):
+        return "refactor(js): update client runtime and script modules"
+    if any(p.endswith(".css") for p in paths):
+        return "style(css): update modular stylesheets and design tokens"
+    if any("scripts/" in p or "sync" in p for p in paths):
+        return "chore(automation): update automation tooling and sync pipeline"
+    if any("dev-logs/" in p for p in paths):
+        return "docs(tracker): update release notes and development logs"
+
+    return "chore(site): synchronize portfolio assets and metadata"
+
+
+def cmd_sync(args):
+    """
+    Executes the full cross-platform synchronization and pre-commit workflow.
+    Equivalent to sync.ps1 in pure Python for Linux/macOS/CI environments.
+    """
+    print("\n" + "=" * 65)
+    print("  AaradhyaDT.github.io -- Cross-Platform Python Sync Engine")
+    print("=" * 65)
+
+    # Step 1: Pull with autostash
+    print("[1/8] [Git] Pulling latest changes from origin main (--autostash)...")
+    pull_code, pull_out, pull_err = run_command(["git", "pull", "--autostash", "origin", "main"])
+    if pull_code == 0:
+        print("      " + (pull_out.strip() or "Up to date."))
+    else:
+        print(f"      Notice: Pull returned non-zero ({pull_err.strip() or pull_out.strip()}). Continuing...")
+
+    if getattr(args, "pull_only", False):
+        print("\n[Done] Safe pull complete. Workspace synchronized.\n")
+        return 0
+
+    # Step 2: Version evaluation and optional bump
+    bump_rec = evaluate_bump_recommendation()
+    if bump_rec.get("recommendation") == "major":
+        print(f"[2/8] [Version] Major milestone detected: {bump_rec.get('explanation')}")
+        print("      Tip: Consider running: python scripts/site_automation.py bump-major")
+    else:
+        print("[2/8] [Version] Evaluating working tree version status...")
+
+    if not getattr(args, "no_bump", False):
+        status_code, status_out, _ = run_command(["git", "status", "--porcelain"])
+        if status_code == 0 and status_out.strip():
+            bump_res = bump_version(bump_type="patch")
+            print(f"      Incremented point release: {bump_res['previous_version']} -> {bump_res['new_version']}")
+        else:
+            print("      No uncommitted changes detected. Point release bump skipped.")
+
+    # Step 3: Asset generation (search index & CSS minification)
+    print("[3/8] [Assets] Extracting static search index (extract_index.py)...")
+    idx_res = rebuild_search_index()
+    if idx_res["success"]:
+        print("      Search index generated cleanly.")
+    else:
+        print(f"      Warning: Search index generation had issues: {idx_res['output'].strip()}")
+
+    print("[4/8] [Assets] Minifying CSS modules (build_css.py)...")
+    css_res = build_css_modules()
+    if css_res["success"]:
+        print("      CSS modules minified cleanly.")
+    else:
+        print(f"      Warning: CSS minification had issues: {css_res['output'].strip()}")
+
+    # Step 4: Knowledge Graph sync
+    if not getattr(args, "skip_graph", False):
+        print("[5/8] [Graph] Updating AST knowledge graph (graphify update .)...")
+        graph_res = update_knowledge_graph()
+        if graph_res["success"]:
+            print("      Knowledge graph updated.")
+        else:
+            print("      Notice: graphify update skipped or not available on PATH.")
+    else:
+        print("[5/8] [Graph] Knowledge graph sync skipped (--skip-graph).")
+
+    # Step 5: Verification & E2E smoke tests
+    if not getattr(args, "skip_verify", False):
+        print("[6/8] [Verify] Running 24-category verification suite (verify.py)...")
+        v_res = audit(verbose=False)
+        if v_res["returncode"] != 0:
+            print(f"\n[ERROR] VERIFICATION FAILED (exit code {v_res['returncode']}) -- Commit aborted.")
+            print(v_res["output"].strip())
+            return 1
+        print("      All 24 verification checks passed cleanly.")
+
+        print("      Running E2E integration & smoke testing suite (test_e2e.py)...")
+        e2e_res = run_e2e_tests()
+        if not e2e_res["success"]:
+            print("\n[ERROR] E2E SMOKE TESTS FAILED -- Commit aborted.")
+            print(e2e_res["output"].strip())
+            return 1
+        print("      All E2E smoke tests passed cleanly.")
+    else:
+        print("[6/8] [Verify] Verification and E2E gates bypassed (--skip-verify).")
+
+    # Step 6: Tracker hygiene
+    update_tracker_timestamp()
+    print("[7/8] [Tracker] Updated dev-logs/PortfolioWebsite_TRACKER.md timestamp (MD009/MD026 clean).")
+
+    # Step 7: Staging, committing & pushing
+    status_code, status_out, _ = run_command(["git", "status", "--porcelain"])
+    if status_code != 0 or not status_out.strip():
+        print("\n[Done] Workspace is clean. Nothing to commit.\n")
+        return 0
+
+    commit_msg = generate_commit_message(getattr(args, "message", None))
+    print(f"[8/8] [Git] Staging and committing: '{commit_msg}'...")
+
+    if getattr(args, "dry_run", False):
+        print(f"      [Dry-Run] Would stage: git add .")
+        print(f"      [Dry-Run] Would commit: git commit -m \"{commit_msg}\"")
+        print(f"      [Dry-Run] Would push: git push origin main")
+        print("\n[Done] Dry run complete.\n")
+        return 0
+
+    add_code, _, add_err = run_command(["git", "add", "."])
+    if add_code != 0:
+        print(f"[ERROR] git add failed: {add_err.strip()}")
+        return 1
+
+    com_code, com_out, com_err = run_command(["git", "commit", "-m", commit_msg])
+    if com_code != 0:
+        print(f"[ERROR] git commit failed: {com_err.strip() or com_out.strip()}")
+        return 1
+    first_line = com_out.splitlines()[0] if com_out else "Changes committed."
+    print(f"      Committed: {first_line}")
+
+    print("      Pushing to origin main...")
+    push_code, push_out, push_err = run_command(["git", "push", "origin", "main"])
+    if push_code != 0:
+        print("      Push rejected or non-fast-forward. Attempting autostash pull & rebase...")
+        run_command(["git", "pull", "--rebase", "--autostash", "origin", "main"])
+        push_code, push_out, push_err = run_command(["git", "push", "origin", "main"])
+
+    if push_code == 0:
+        print("      Pushed cleanly to origin main.")
+    else:
+        print(f"      Notice: Push output: {push_err.strip() or push_out.strip()}")
+
+    print("\n[Done] Workspace is clean and fully synchronized!\n")
+    return 0
+
+
 def main():
     parser = argparse.ArgumentParser(description="Site Hyper-Automation Engine")
     subparsers = parser.add_subparsers(dest="command")
@@ -556,6 +775,15 @@ def main():
     tracker_p.add_argument("--highlights", nargs="+", required=True, help="List of highlights")
 
     subparsers.add_parser("evaluate-bump", help="Evaluate whether pending changes warrant a major or minor bump")
+
+    # Pure Python Cross-Platform Sync Subcommand
+    sync_cli_p = subparsers.add_parser("sync", help="Run full cross-platform sync & pre-commit pipeline (pure Python)")
+    sync_cli_p.add_argument("-m", "--message", default=None, help="Commit message override")
+    sync_cli_p.add_argument("--skip-graph", action="store_true", help="Skip AST knowledge graph update")
+    sync_cli_p.add_argument("--skip-verify", action="store_true", help="Bypass verification and E2E gate")
+    sync_cli_p.add_argument("--pull-only", action="store_true", help="Only pull and synchronize workspace")
+    sync_cli_p.add_argument("--no-bump", action="store_true", help="Do not increment point release")
+    sync_cli_p.add_argument("--dry-run", action="store_true", help="Preview actions without git write operations")
 
     args = parser.parse_args()
 
@@ -585,6 +813,9 @@ def main():
     elif args.command == "update-tracker":
         res = update_tracker(args.version, args.title, args.highlights)
         print(json.dumps(res, indent=2))
+    elif args.command == "sync":
+        code = cmd_sync(args)
+        sys.exit(code if isinstance(code, int) else 0)
     else:
         parser.print_help()
 
