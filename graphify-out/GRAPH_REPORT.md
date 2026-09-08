@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-08)
 
 ## Corpus Check
-- 42 files · ~312,280 words
+- 43 files · ~447,695 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 638 nodes · 862 edges · 140 communities (38 shown, 90 thin omitted)
+- 648 nodes · 874 edges · 141 communities (39 shown, 90 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 56 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `883a6a16`
+- Built from commit: `1fb7a74d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- Portfolio Website Tracker — v51.4
+- PortfolioWebsite_TRACKER.md
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -143,18 +143,19 @@
 - Automation Script
 - Stamp Last Commit Workflow
 - aaradhyadt-portfolio
+- test_visual_regression.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v51.4` - 21 edges
-5. `log_warning()` - 16 edges
-6. `get_html_files()` - 14 edges
-7. `initTour()` - 12 edges
-8. `Aaradhya Dev Tamrakar` - 12 edges
-9. `Aaradhya Dev Tamrakar CV` - 12 edges
-10. `initGlobalSearch()` - 11 edges
+4. `log_warning()` - 16 edges
+5. `get_html_files()` - 14 edges
+6. `initTour()` - 12 edges
+7. `Aaradhya Dev Tamrakar` - 12 edges
+8. `Aaradhya Dev Tamrakar CV` - 12 edges
+9. `initGlobalSearch()` - 11 edges
+10. `renderTourStep()` - 11 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Certificate: AI-Assisted Product Launch` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
@@ -174,7 +175,7 @@
 ## Hyperedges (group relationships)
 - **Flagship Engineering Projects** — concept_spark, concept_biasaperture, concept_novaoptimizer [EXTRACTED 0.85]
 
-## Communities (140 total, 90 thin omitted)
+## Communities (141 total, 90 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.10
@@ -196,9 +197,9 @@ Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developer
 Cohesion: 0.19
 Nodes (24): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+16 more)
 
-### Community 5 - "Portfolio Website Tracker — v51.4"
+### Community 5 - "PortfolioWebsite_TRACKER.md"
 Cohesion: 0.09
-Nodes (22): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v51.4, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+14 more)
+Nodes (21): Evidence & Verification Log — v20 additions, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18), v25 addition — bug-check sweep, pages 1/3/4 (2026-07-27) (+13 more)
 
 ### Community 6 - "site_automation.py"
 Cohesion: 0.15
@@ -328,9 +329,13 @@ Nodes (3): SimOps AI for Graduates Certificate, SimOps Expert Certificate, SimOp
 Cohesion: 1.00
 Nodes (3): SimOps Fundamentals Certificate, SimOps Practitioner Certificate, SimOps (Simulation Operations)
 
+### Community 140 - "test_visual_regression.py"
+Cohesion: 0.24
+Nodes (8): calculate_image_diff(), capture_screenshot(), find_browser_executable(), main(), QuietServerHandler, Execute browser CLI in headless mode to capture a viewport snapshot., Compare baseline and current images using Pillow. Returns: (diff_ratio,…, Locate headless Chrome, Chromium, or Edge binary on the system.
+
 ## Knowledge Gaps
 - **191 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+186 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 306 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 310 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **90 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions

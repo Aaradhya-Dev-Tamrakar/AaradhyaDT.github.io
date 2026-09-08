@@ -1,11 +1,11 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v51.4)
+   SHARED SCRIPT — aaradhyadt.github.io (v53)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v51.4) ───────────────────────────── */
-window.__modulesLoadedPromise = (function () {
+/* ── Dynamic Module Loader (v53) ───────────────────────────── */
+window.__modulesLoadedPromise = (async function () {
   const MODULES = [
     'assets/js/data/releases.js',
     'assets/js/data/search-index.js',
@@ -23,42 +23,70 @@ window.__modulesLoadedPromise = (function () {
   ];
 
   window.__failedModules = [];
-  const promises = MODULES.map(function (src) {
-    var existing = document.querySelector('script[src="' + src + '"]');
-    if (existing) return Promise.resolve({ src: src, ok: true, cached: true });
-    return new Promise(function (resolve) {
-      var s = document.createElement('script');
-      s.src = src;
-      s.async = false;
-      var timer = setTimeout(function () {
-        console.warn('[Module Loader] Module load timed out after 5s:', src);
-        window.__failedModules.push({ src: src, reason: 'timeout' });
-        resolve({ src: src, ok: false, reason: 'timeout' });
-      }, 5000);
-      s.onload = function () {
-        clearTimeout(timer);
-        resolve({ src: src, ok: true });
-      };
-      s.onerror = function (err) {
-        clearTimeout(timer);
-        console.error('[Module Loader] Failed to load module:', src, err);
-        window.__failedModules.push({ src: src, reason: 'error', error: err });
-        resolve({ src: src, ok: false, reason: 'error' });
-      };
-      document.head.appendChild(s);
-    });
-  });
+  const results = [];
 
-  return Promise.all(promises).then(function (results) {
-    var failed = (results || []).filter(function (r) { return r && !r.ok; });
-    if (failed.length > 0) {
-      console.error('[Module Loader] Critical: ' + failed.length + ' module(s) failed to load:', failed.map(function (f) { return f.src; }).join(', '));
-      if (typeof window.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
-        window.dispatchEvent(new CustomEvent('moduleloadererror', { detail: { failed: failed } }));
+  for (let i = 0; i < MODULES.length; i++) {
+    const src = MODULES[i];
+    let loaded = false;
+
+    // Fast path: Native ES Module dynamic import (HTTP / HTTPS / localhost)
+    if (typeof window !== 'undefined' && window.location && window.location.protocol !== 'file:') {
+      try {
+        const importUrl = new URL(src, document.baseURI).href;
+        const mod = await import(importUrl);
+        if (mod && typeof mod === 'object') {
+          for (const [key, val] of Object.entries(mod)) {
+            if (key !== 'default' && !(key in window)) {
+              window[key] = val;
+            }
+          }
+        }
+        results.push({ src: src, ok: true, type: 'esm' });
+        loaded = true;
+      } catch (esmErr) {
+        // Fall through to script element injection fallback
+        console.debug('[Module Loader] Native ESM dynamic import bypassed for ' + src + ':', esmErr);
       }
     }
-    return results;
-  });
+
+    // Resilient fallback: Classic script tag injection (file:// or legacy environments)
+    if (!loaded) {
+      const res = await new Promise(function (resolve) {
+        var existing = document.querySelector('script[src="' + src + '"]');
+        if (existing) return resolve({ src: src, ok: true, cached: true });
+
+        var s = document.createElement('script');
+        s.src = src;
+        s.async = false;
+        var timer = setTimeout(function () {
+          console.warn('[Module Loader] Module load timed out after 5s:', src);
+          window.__failedModules.push({ src: src, reason: 'timeout' });
+          resolve({ src: src, ok: false, reason: 'timeout' });
+        }, 5000);
+        s.onload = function () {
+          clearTimeout(timer);
+          resolve({ src: src, ok: true, type: 'classic' });
+        };
+        s.onerror = function (err) {
+          clearTimeout(timer);
+          console.error('[Module Loader] Failed to load module:', src, err);
+          window.__failedModules.push({ src: src, reason: 'error', error: err });
+          resolve({ src: src, ok: false, reason: 'error' });
+        };
+        document.head.appendChild(s);
+      });
+      results.push(res);
+    }
+  }
+
+  const failed = results.filter(function (r) { return r && !r.ok; });
+  if (failed.length > 0) {
+    console.error('[Module Loader] Critical: ' + failed.length + ' module(s) failed to load:', failed.map(function (f) { return f.src; }).join(', '));
+    if (typeof window.dispatchEvent === 'function' && typeof CustomEvent === 'function') {
+      window.dispatchEvent(new CustomEvent('moduleloadererror', { detail: { failed: failed } }));
+    }
+  }
+  return results;
 })();
 
 

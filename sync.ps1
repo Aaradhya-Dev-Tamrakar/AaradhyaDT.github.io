@@ -122,6 +122,8 @@ param (
     [switch]$SkipIndex,
     [Alias("NoBot", "FastPush")]
     [switch]$SkipBotSync,
+    [Alias("VR")]
+    [switch]$VisualRegression,
     [switch]$NoUv,
     [Alias("DryRun")]
     [switch]$WhatIf,
@@ -978,6 +980,22 @@ if (-not $SkipVerify -and -not $BypassVerify -and -not $PushOnly) {
 else {
     if ($SkipVerify -or $BypassVerify) {
         Write-Badge "Verify" "Bypassed verification gate (-SkipVerify / -Force flag set)." "Yellow" "Yellow"
+    }
+}
+
+# Optional Step 6b: Visual Regression Suite
+if ($VisualRegression -and -not $PushOnly) {
+    if (Test-Path "scripts/test_visual_regression.py") {
+        Write-Badge "Visual" "Executing automated visual regression testing suite..." "Cyan" "White"
+        $vrExit = Invoke-PythonScript -ScriptPath "scripts/test_visual_regression.py"
+        if ($vrExit -ne 0) {
+            Write-Badge "Visual" "VISUAL REGRESSION DETECTED -- Commit aborted." "Red" "Red"
+            Write-Host "  Review visual diff artifacts in tests/visual/diffs/" -ForegroundColor Yellow
+            exit 1
+        }
+        else {
+            Write-Badge "Visual" "Visual pixel integrity confirmed (0 regressions across 14 views)." "Green" "Green"
+        }
     }
 }
 

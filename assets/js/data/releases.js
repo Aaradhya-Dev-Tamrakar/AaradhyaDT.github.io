@@ -7,6 +7,26 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
+    version: 'v53',
+    date: '2026-09-08',
+    sha: 'rel53',
+    title: "Visual Regression Engine & Native Dynamic ESM Suite",
+    highlights: [
+      "Core updates and architectural improvements for v53",
+      "PWA & Cache: Bumped Service Worker cache to aaradhya-portfolio-v53"
+    ]
+  },
+  {
+    version: 'v52',
+    date: '2026-09-08',
+    sha: 'rel52',
+    title: "Visual Regression Engine & Native Dynamic ESM Suite",
+    highlights: [
+      "Core updates and architectural improvements for v52",
+      "PWA & Cache: Bumped Service Worker cache to aaradhya-portfolio-v52"
+    ]
+  },
+  {
     version: 'v51.4',
     date: '2026-09-08',
     sha: 'rel51',

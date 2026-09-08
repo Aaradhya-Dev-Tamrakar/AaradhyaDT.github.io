@@ -1,6 +1,16 @@
-﻿# Portfolio Website Tracker — v51.4
+﻿# Portfolio Website Tracker — v53
 
 Last updated: _2026-09-08_
+
+
+
+- **v53 (Major Release) — Visual Regression Engine & Native Dynamic ESM Suite.** Shipped visual regression engine & native dynamic esm suite.
+  - Core updates and architectural improvements for v53
+  - PWA & Cache: Bumped Service Worker cache to aaradhya-portfolio-v53
+
+- **v52 (Major Release) — Visual Regression Engine & Native Dynamic ESM Suite.** Shipped visual regression engine & native dynamic esm suite.
+  - Core updates and architectural improvements for v52
+  - PWA & Cache: Bumped Service Worker cache to aaradhya-portfolio-v52
 
 - **v51.4 (Update) — Version Bump Pipeline Hardening, 5-Pillar Decision Calibration & E2E Stream Routing.** Hardened site hyper-automation engine, version consistency verification, and process output piping:
   - **12-Target Version Synchronization Expansion**: Added automated synchronization and strict verification for `README.md` version badge, `pyproject.toml` project semver, `dev-logs/PortfolioWebsite_TRACKER.md` State of Play PWA cache entry, `.github/workflows/verify.yml` CI header, and `assets/js/modules/terminal.js` fallback version strings.
@@ -251,7 +261,7 @@ Last updated: _2026-09-08_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v51.4`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v53`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
