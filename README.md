@@ -3,7 +3,7 @@
 [![Deploy Pages](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml)
 [![Verification Suite](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml)
 [![Lighthouse Audit](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml)
-[![Version](https://img.shields.io/badge/version-v53.10-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
+[![Version](https://img.shields.io/badge/version-v53.11-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
 [![Zero-Framework](https://img.shields.io/badge/framework-vanilla%20HTML%2FCSS%2FJS-orange.svg)](https://aaradhyadt.github.io)
 
@@ -29,7 +29,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v53.10 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v53.11 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
@@ -90,6 +90,8 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 ---
 
 ## 🔒 Multi-Tier Access Control & Security Model
+
+> **Security Demonstration Notice:** This access-control system is an educational demonstration of client-side cryptography, authentication flows, and encrypted content gating on a static GitHub Pages application. It is intentionally client-side by design and is not intended to provide server-enforced authorization for genuinely confidential resources. It showcases Web Crypto API usage (AES-256-GCM, PBKDF2), Google Identity Services integration, and encrypted DOM lifecycle management as engineering concepts.
 
 The site features an advanced **Zero-Leak Client-Side Access Control System** supporting 3 security tiers:
 
