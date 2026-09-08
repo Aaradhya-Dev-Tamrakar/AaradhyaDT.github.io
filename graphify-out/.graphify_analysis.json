@@ -203,7 +203,7 @@
     "5": [
       "dev_logs_portfoliowebsite_tracker",
       "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
-      "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_26",
+      "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_28",
       "dev_logs_portfoliowebsite_tracker_state_of_play",
       "dev_logs_portfoliowebsite_tracker_status",
       "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
@@ -826,76 +826,79 @@
       "cert_js_bootcamp"
     ],
     "114": [
-      "concept_mcp_integration"
+      "concept_access_control"
     ],
     "115": [
-      "concept_zero_leak_access_control"
+      "concept_command_palette"
     ],
     "116": [
-      "dev_logs_og_image_readme_md"
+      "concept_mcp_integration"
     ],
     "117": [
-      "ev_ratings_pdf"
+      "concept_zero_leak_access_control"
     ],
     "118": [
-      "gcsbr_poster_jpg"
+      "dev_logs_og_image_readme_md"
     ],
     "119": [
-      "github_workflows_deploy_pages_yml"
+      "ev_ratings_pdf"
     ],
     "120": [
-      "github_workflows_lighthouse_audit_yml"
+      "gcsbr_poster_jpg"
     ],
     "121": [
-      "github_workflows_update_search_index_yml"
+      "github_workflows_deploy_pages_yml"
     ],
     "122": [
-      "github_workflows_verify"
+      "github_workflows_lighthouse_audit"
     ],
     "123": [
-      "google_oauth"
+      "github_workflows_update_search_index_yml"
     ],
     "124": [
-      "google_verification"
+      "github_workflows_verify"
     ],
     "125": [
-      "graphify"
+      "google_oauth"
     ],
     "126": [
-      "logo_epc"
+      "google_verification"
     ],
     "127": [
-      "logo_fusemachines"
+      "graphify"
     ],
     "128": [
-      "mcp_server_site_mcp_py"
+      "logo_epc"
     ],
     "129": [
-      "robots_txt"
+      "logo_fusemachines"
     ],
     "130": [
-      "scripts_extract_index_py"
+      "mcp_server_site_mcp_py"
     ],
     "131": [
-      "scripts_verify_py"
+      "robots_txt"
     ],
     "132": [
-      "site_webmanifest"
+      "scripts_extract_index_py"
     ],
     "133": [
-      "sw_js"
+      "scripts_verify_py"
     ],
     "134": [
-      "sync_ps1"
+      "site_webmanifest"
     ],
     "135": [
-      "version"
+      "sw_js"
     ],
     "136": [
-      "workflow_stamp_last_commit"
+      "sync_ps1"
     ],
     "137": [
-      "zero_leak_access_control"
+      "version"
+    ],
+    "138": [
+      "workflow_stamp_last_commit"
     ]
   },
   "cohesion": {
@@ -1036,7 +1039,8 @@
     "134": 1.0,
     "135": 1.0,
     "136": 1.0,
-    "137": 1.0
+    "137": 1.0,
+    "138": 1.0
   },
   "gods": [
     {
@@ -1055,8 +1059,8 @@
       "degree": 22
     },
     {
-      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_26",
-      "label": "Portfolio Website Tracker — v50.26",
+      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v50_28",
+      "label": "Portfolio Website Tracker — v50.28",
       "degree": 21
     },
     {

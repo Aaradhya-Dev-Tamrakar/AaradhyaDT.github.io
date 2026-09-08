@@ -43,6 +43,11 @@
 .PARAMETER NoPush
     Stages and commits changes locally without pushing to remote origin.
 
+.PARAMETER FullGraph
+    Force full knowledge graph extraction via `graphify .` followed by `graphify cluster-only .`
+    and AST sync. (Routine sync uses fast incremental AST sync `graphify update .` without LLM calls).
+    Aliases: -GraphRebuild, -FullKnowledgeGraph
+
 .PARAMETER SkipGraph
     Bypasses knowledge graph AST extraction (graphify update .).
     Aliases: -SkipGraphify, -NoGraph, -NoGraphify, -Skip_Graphify
@@ -52,6 +57,13 @@
 
 .PARAMETER SkipIndex
     Bypasses static search index regeneration (scripts/extract_index.py).
+
+.PARAMETER SkipBotSync
+    Bypasses polling for the GitHub Actions stamp bot commit after push.
+    Aliases: -NoBot, -FastPush
+
+.PARAMETER NoUv
+    Forces standard Python runtime instead of uv / .venv acceleration.
 
 .PARAMETER WhatIf
     Dry-run mode: Previews changes, verification status, and auto-generated commit
@@ -70,11 +82,13 @@
     Displays this formatted interactive help manual.
 
 .EXAMPLE
-    .\sync.ps1                               # Routine sync: auto-increments point version (49.1, 49.2), verifies & pushes
-    .\sync.ps1 -Major                        # Major release bump: 49 -> 50, updates releases & tracker
+    .\sync.ps1                               # Routine sync: fast incremental AST sync, uv verification & push
+    .\sync.ps1 -Major                        # Major release bump: 50 -> 51, updates releases & tracker
     .\sync.ps1 -Major -Title "New Design"    # Major bump with custom title
-    .\sync.ps1 -v v50                        # Explicit version sync
+    .\sync.ps1 -v v51                        # Explicit version sync
     .\sync.ps1 -NoBump                       # Sync without incrementing version
+    .\sync.ps1 -FullGraph                    # Complete knowledge graph rebuild and clustering with LLM
+    .\sync.ps1 -SkipBotSync                  # Push immediately without waiting for GitHub Actions bot
     .\sync.ps1 -m "feat(ui): refine radar"   # Custom commit message
     .\sync.ps1 -PullOnly                     # Safe pull only
     .\sync.ps1 -WhatIf                       # Dry-run preview
@@ -100,10 +114,15 @@ param (
     [switch]$PullOnly,
     [switch]$PushOnly,
     [switch]$NoPush,
+    [Alias("GraphRebuild", "FullKnowledgeGraph")]
+    [switch]$FullGraph,
     [Alias("SkipGraphify", "NoGraph", "NoGraphify", "Skip_Graphify")]
     [switch]$SkipGraph,
     [switch]$SkipVerify,
     [switch]$SkipIndex,
+    [Alias("NoBot", "FastPush")]
+    [switch]$SkipBotSync,
+    [switch]$NoUv,
     [Alias("DryRun")]
     [switch]$WhatIf,
     [Alias("Force")]
@@ -148,17 +167,21 @@ function Show-HelpGuide {
     Write-Host ''
     Write-Host 'SYNTAX:' -ForegroundColor Yellow
     Write-Host '  .\sync.ps1 [-m <Message>] [-v <Version>] [-PullOnly] [-PushOnly] [-NoPush]'
-    Write-Host '             [-SkipGraph] [-SkipVerify] [-SkipIndex] [-WhatIf] [-Force] [-Status]'
+    Write-Host '             [-FullGraph] [-SkipGraph] [-SkipVerify] [-SkipIndex] [-SkipBotSync] [-NoUv] [-WhatIf] [-Force] [-Status]'
     Write-Host ''
     Write-Host 'COMMON WORKFLOWS:' -ForegroundColor Yellow
     Write-Host '  .\sync.ps1                        ' -NoNewline -ForegroundColor Green
-    Write-Host 'Full auto: Index -> Graph -> Verify -> Auto-Commit -> Push -> Stamp Sync'
+    Write-Host 'Full auto: Index -> Graph -> Verify (Parallel) -> Auto-Commit -> Push -> Stamp Sync'
     Write-Host '  .\sync.ps1 -m "type(scope): msg"  ' -NoNewline -ForegroundColor Green
     Write-Host 'Commit with custom conventional commit message'
-    Write-Host '  .\sync.ps1 -v v48                 ' -NoNewline -ForegroundColor Green
+    Write-Host '  .\sync.ps1 -v v51                 ' -NoNewline -ForegroundColor Green
     Write-Host 'Bump version metadata (sw.js, sitemap.xml, tracker) and sync'
+    Write-Host '  .\sync.ps1 -FullGraph             ' -NoNewline -ForegroundColor Green
+    Write-Host 'Complete knowledge graph rebuild & clustering with LLM'
+    Write-Host '  .\sync.ps1 -SkipBotSync           ' -NoNewline -ForegroundColor Green
+    Write-Host 'Fast push without waiting for GitHub Actions bot stamp'
     Write-Host '  .\sync.ps1 -PullOnly              ' -NoNewline -ForegroundColor Green
-    Write-Host 'Pull remote changes safely with --autostash and LFS sync'
+    Write-Host 'Pull remote changes safely with --autostash and conditional LFS sync'
     Write-Host '  .\sync.ps1 -WhatIf                ' -NoNewline -ForegroundColor Green
     Write-Host 'Dry run: preview auto-commit message and verification'
     Write-Host '  .\sync.ps1 -Status                ' -NoNewline -ForegroundColor Green
@@ -166,13 +189,16 @@ function Show-HelpGuide {
     Write-Host ''
     Write-Host 'FLAGS & SWITCHES:' -ForegroundColor Yellow
     Write-Host '  -m, -Message <String>    Custom conventional commit message'
-    Write-Host '  -v, -Version <String>    Version tag (e.g. v48) to sync across sw.js and sitemap'
-    Write-Host '  -PullOnly                Safe pull with autostash and LFS pull only'
+    Write-Host '  -v, -Version <String>    Version tag (e.g. v51) to sync across sw.js and sitemap'
+    Write-Host '  -PullOnly                Safe pull with autostash and conditional LFS pull only'
     Write-Host '  -PushOnly                Push staged/committed work and sync stamp bot'
     Write-Host '  -NoPush                  Commit locally without pushing to remote origin'
-    Write-Host '  -SkipGraph, -SkipGraphify, -NoGraph  Skip Graphify AST knowledge graph update'
+    Write-Host '  -FullGraph               Full knowledge graph rebuild (graphify . + cluster-only)'
+    Write-Host '  -SkipGraph, -NoGraph     Skip Graphify AST knowledge graph update'
     Write-Host '  -SkipVerify / -Force     Bypass pre-commit verification suite (scripts/verify.py)'
     Write-Host '  -SkipIndex               Skip static search index regeneration (extract_index.py)'
+    Write-Host '  -SkipBotSync / -NoBot    Skip GitHub Actions stamp bot synchronization'
+    Write-Host '  -NoUv                    Force standard Python runtime instead of uv/.venv'
     Write-Host '  -WhatIf / -DryRun        Preview changes and commit message without modifying git'
     Write-Host '  -Status / -Info          Show repository and environment diagnostics'
     Write-Host '  -VerboseLog              Show detailed sub-process output and diff snippets'
@@ -182,20 +208,136 @@ function Show-HelpGuide {
 }
 
 # -----------------------------------------------------------------------------
-# Tooling Discovery
+# Tooling Discovery & Execution Engine
 # -----------------------------------------------------------------------------
-function Get-PythonPath {
+function Get-PythonRunner {
+    param([switch]$DisableUv)
+
+    # 1. Check local virtual environment (.venv) - fastest direct execution
+    $venvPy = Join-Path $PSScriptRoot ".venv\Scripts\python.exe"
+    if (Test-Path $venvPy) {
+        return @{
+            Type = "venv"
+            Executable = $venvPy
+            PrefixArgs = @()
+            Display = "uv-managed .venv ($venvPy)"
+        }
+    }
+
+    # 2. Check uv in PATH
+    if (-not $DisableUv) {
+        $uvCmd = Get-Command uv -ErrorAction SilentlyContinue
+        if ($uvCmd) {
+            return @{
+                Type = "uv"
+                Executable = $uvCmd.Source
+                PrefixArgs = @("run", "python")
+                Display = "uv run python ($($uvCmd.Source))"
+            }
+        }
+    }
+
+    # 3. System Python candidates
     $candidates = @("python", "python3", "py")
     foreach ($cand in $candidates) {
         $cmd = Get-Command $cand -ErrorAction SilentlyContinue
         if ($cmd) {
-            $null = & $cmd.Source --version 2>$null
-            if ($LASTEXITCODE -eq 0) {
-                return $cmd.Source
+            return @{
+                Type = "system"
+                Executable = $cmd.Source
+                PrefixArgs = @()
+                Display = "$cand ($($cmd.Source))"
             }
         }
     }
     return $null
+}
+
+function Get-PythonPath {
+    if ($script:PythonRunner) {
+        return $script:PythonRunner.Executable
+    }
+    $runner = Get-PythonRunner
+    if ($runner) { return $runner.Executable }
+    return $null
+}
+
+function Invoke-PythonScript {
+    param(
+        [Parameter(Mandatory=$true)][string]$ScriptPath,
+        [string[]]$ScriptArgs = @(),
+        [switch]$CaptureOutput
+    )
+    $runner = $script:PythonRunner
+    if (-not $runner) {
+        throw "Python runtime not detected."
+    }
+
+    $allArgs = @()
+    if ($runner.PrefixArgs) {
+        $allArgs += $runner.PrefixArgs
+    }
+    $allArgs += $ScriptPath
+    if ($ScriptArgs) {
+        $allArgs += $ScriptArgs
+    }
+
+    if ($CaptureOutput) {
+        return (& $runner.Executable $allArgs 2>&1 | Out-String)
+    }
+    else {
+        & $runner.Executable $allArgs
+        return $LASTEXITCODE
+    }
+}
+
+function Initialize-DevDriveOptimizations {
+    $driveLetter = if ($PSScriptRoot) {
+        (Get-Item $PSScriptRoot).PSDrive.Name
+    } else {
+        (Get-Location).Drive.Name
+    }
+
+    $isReFS = $false
+    try {
+        $vol = Get-Volume -DriveLetter $driveLetter -ErrorAction SilentlyContinue
+        if ($vol -and $vol.FileSystem -eq "ReFS") {
+            $isReFS = $true
+        }
+    } catch {
+        $isReFS = $false
+    }
+
+    if ($isReFS) {
+        # Configure uv cache on the same Dev Drive volume for instant CoW / Block Cloning
+        if (-not $env:UV_CACHE_DIR) {
+            $devDriveCache = "$($driveLetter):\.uv-cache"
+            $env:UV_CACHE_DIR = $devDriveCache
+        }
+        if (-not $env:UV_LINK_MODE) {
+            $env:UV_LINK_MODE = "clone"
+        }
+
+        # Enable Git untracked cache for ReFS FSMonitor acceleration
+        $untracked = git config --get core.untrackedcache 2>$null
+        if ($untracked -ne "true") {
+            git config core.untrackedcache true 2>$null
+        }
+
+        return @{
+            IsDevDrive = $true
+            Drive = $driveLetter
+            FileSystem = "ReFS"
+            CacheDir = $env:UV_CACHE_DIR
+            LinkMode = $env:UV_LINK_MODE
+        }
+    }
+
+    return @{
+        IsDevDrive = $false
+        Drive = $driveLetter
+        FileSystem = "NTFS"
+    }
 }
 
 function Get-LfsInstalled {
@@ -209,9 +351,11 @@ function Get-LfsInstalled {
 }
 
 function Show-Diagnostics {
-    $py = Get-PythonPath
+    $runner = Get-PythonRunner
     $lfs = Get-LfsInstalled
+    $uvCmd = Get-Command uv -ErrorAction SilentlyContinue
     $graphify = Get-Command graphify -ErrorAction SilentlyContinue
+    $devDrive = Initialize-DevDriveOptimizations
     $branch = git rev-parse --abbrev-ref HEAD 2>$null
     $lastCommit = git log -1 '--pretty=format:%h - %s (%cr) <%an>' 2>$null
     $statusShort = git status --short 2>$null
@@ -225,10 +369,20 @@ function Show-Diagnostics {
     Write-Host '  Last Commit      : ' -NoNewline -ForegroundColor Yellow
     Write-Host "$lastCommit"
     
-    $pyText = if ($py) { "$py" } else { "NOT FOUND (Python required for verification & indexing)" }
-    $pyColor = if ($py) { [ConsoleColor]::Green } else { [ConsoleColor]::Red }
+    $pyText = if ($runner) { "$($runner.Display)" } else { "NOT FOUND (Python required for verification & indexing)" }
+    $pyColor = if ($runner) { [ConsoleColor]::Green } else { [ConsoleColor]::Red }
     Write-Host '  Python Runtime   : ' -NoNewline -ForegroundColor Yellow
     Write-Host $pyText -ForegroundColor $pyColor
+
+    $uvText = if ($uvCmd) { "Installed ($($uvCmd.Source))" } else { "Not Found (Optional - install for ultra-fast runtimes)" }
+    $uvColor = if ($uvCmd) { [ConsoleColor]::Green } else { [ConsoleColor]::DarkGray }
+    Write-Host '  uv Package Mgr   : ' -NoNewline -ForegroundColor Yellow
+    Write-Host $uvText -ForegroundColor $uvColor
+
+    if ($devDrive.IsDevDrive) {
+        Write-Host '  Dev Drive (ReFS) : ' -NoNewline -ForegroundColor Yellow
+        Write-Host "Active on $($devDrive.Drive): (ReFS CoW Block Cloning & FSMonitor enabled)" -ForegroundColor Green
+    }
     
     $lfsText = if ($lfs) { "Active & Configured" } else { "Not Found (git-lfs recommended)" }
     $lfsColor = if ($lfs) { [ConsoleColor]::Green } else { [ConsoleColor]::Yellow }
@@ -256,8 +410,11 @@ function Show-Diagnostics {
 # Smart Commit Message Generation
 # -----------------------------------------------------------------------------
 function Get-AutoCommitMessage {
-    $statusLines = git status --porcelain 2>$null | Where-Object { $_ -notmatch 'assets/js/last-commit\.json' }
-    if (-not $statusLines) {
+    param([string[]]$StatusLines)
+    if (-not $StatusLines) {
+        $StatusLines = git status --porcelain 2>$null | Where-Object { $_ -notmatch 'assets/js/last-commit\.json' }
+    }
+    if (-not $StatusLines) {
         return $null
     }
 
@@ -505,13 +662,22 @@ function Format-MarkdownHygiene {
 # Bot Stamp Synchronization Polling Loop
 # -----------------------------------------------------------------------------
 function Sync-BotStamp {
+    if ($SkipBotSync) {
+        Write-Badge "BotSync" "Skipped bot stamp synchronization (-SkipBotSync active)." "DarkGray" "Gray"
+        return
+    }
+
     Write-Badge "BotSync" "Awaiting GitHub Actions stamp bot commit..." "Yellow" "White"
     
     $maxAttempts = 12
     $botSynced = $false
 
     for ($attempt = 1; $attempt -le $maxAttempts; $attempt++) {
-        Start-Sleep -Seconds 3
+        # Fast 1.5s interval on initial attempts, 2.5s thereafter
+        if ($attempt -gt 1) {
+            $sleepSec = if ($attempt -le 4) { 1.5 } else { 2.5 }
+            Start-Sleep -Seconds $sleepSec
+        }
 
         # Pull silently with autostash
         $null = git pull --autostash origin main 2>&1
@@ -563,15 +729,18 @@ Write-Host '====================================================================
 Write-Host '  Aaradhya-Dev-Tamrakar.github.io -- Git & Workflow Synchronization Suite ' -ForegroundColor White
 Write-Host '==========================================================================' -ForegroundColor Cyan
 
-# Step 0: Find Python Environment & Git LFS
+# Step 0: Initialize Dev Drive & Tooling Runtime
+$devDriveState = Initialize-DevDriveOptimizations
+$script:PythonRunner = Get-PythonRunner -DisableUv:$NoUv
 $pythonExe = Get-PythonPath
 $lfsAvailable = Get-LfsInstalled
 
 # Step 1: Clean Bot-Managed File
-Write-Badge "Git" "Resetting uncommitted modifications to assets/js/last-commit.json..." "Cyan" "White"
-git restore --staged assets/js/last-commit.json 2>$null
-git restore assets/js/last-commit.json 2>$null
-git checkout -- assets/js/last-commit.json 2>$null
+$lastCommitDirty = git status --porcelain assets/js/last-commit.json 2>$null
+if ($lastCommitDirty) {
+    Write-Badge "Git" "Resetting uncommitted modifications to assets/js/last-commit.json..." "Cyan" "White"
+    git checkout HEAD -- assets/js/last-commit.json 2>$null
+}
 
 # Step 2: Safe Pull Remote Changes
 Write-Badge "Git" "Pulling latest changes from origin main (--autostash)..." "Cyan" "White"
@@ -585,9 +754,9 @@ if ($LASTEXITCODE -ne 0) {
     Write-Badge "Git" "Warning: Pull returned non-zero exit code ($LASTEXITCODE). Checking state..." "Yellow" "Yellow"
 }
 
-# Step 2b: Git LFS Synchronization
-if ($lfsAvailable) {
-    Write-Badge "LFS" "Ensuring Git LFS pointers are synchronized..." "Cyan" "Gray"
+# Step 2b: Git LFS Synchronization (conditional on new remote changes)
+if ($lfsAvailable -and $pullOut -notmatch 'Already up to date') {
+    Write-Badge "LFS" "Synchronizing Git LFS pointers for updated commits..." "Cyan" "Gray"
     git lfs pull 2>$null
 }
 
@@ -603,35 +772,35 @@ if ($PullOnly) {
 
 # Step 3: Version Bump & Metadata Sync (Auto-propagates across all site files)
 if (-not $PushOnly) {
-    if ($pythonExe -and (Test-Path "scripts/site_automation.py")) {
+    if ($script:PythonRunner -and (Test-Path "scripts/site_automation.py")) {
         if ($Major) {
             Write-Badge "Version" "Bumping to next major release integer..." "Magenta" "White"
-            $majorArgs = @("scripts/site_automation.py", "bump-major")
+            $majorArgs = @("bump-major")
             if ($Title) { $majorArgs += @("--title", $Title) }
             if ($Highlights) { $majorArgs += @("--highlights") + $Highlights }
-            $majorOut = & $pythonExe $majorArgs 2>&1 | Out-String
+            $majorOut = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs $majorArgs -CaptureOutput
             if ($VerboseLog) { Write-Host $majorOut.Trim() -ForegroundColor Gray }
         }
         elseif ($Version) {
             Write-Badge "Version" "Synchronizing version metadata for tag '$Version'..." "Magenta" "White"
-            & $pythonExe scripts/site_automation.py sync-metadata --version $Version
+            $null = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs @("sync-metadata", "--version", $Version)
         }
         elseif (-not $NoBump -and -not $WhatIf) {
-            # Auto point bump (e.g. 49.1, 49.2) if local modifications exist
+            # Auto point bump (e.g. 50.1, 50.2) if local modifications exist
             $statusCheck = git status --porcelain 2>$null | Where-Object { $_ -notmatch 'last-commit\.json' }
             if ($statusCheck) {
                 Write-Badge "Version" "Auto-incrementing point release for pending updates..." "Cyan" "White"
-                $patchOut = & $pythonExe scripts/site_automation.py bump-patch 2>&1 | Out-String
+                $patchOut = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs @("bump-patch") -CaptureOutput
                 if ($VerboseLog) { Write-Host $patchOut.Trim() -ForegroundColor Gray }
             }
             else {
                 Write-Badge "Version" "Ensuring site-wide version consistency from SITE_RELEASES..." "Cyan" "Gray"
-                & $pythonExe scripts/site_automation.py sync-metadata
+                $null = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs @("sync-metadata")
             }
         }
         else {
             Write-Badge "Version" "Ensuring site-wide version consistency from SITE_RELEASES..." "Cyan" "Gray"
-            & $pythonExe scripts/site_automation.py sync-metadata
+            $null = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs @("sync-metadata")
         }
     }
 }
@@ -639,9 +808,9 @@ if (-not $PushOnly) {
 # Step 4: Search Index Extraction
 if (-not $SkipIndex -and -not $PushOnly) {
     if (Test-Path "scripts/extract_index.py") {
-        if ($pythonExe) {
+        if ($script:PythonRunner) {
             Write-Badge "Index" "Extracting static search index (scripts/extract_index.py)..." "Cyan" "White"
-            $indexOutput = & $pythonExe scripts/extract_index.py 2>&1 | Out-String
+            $indexOutput = Invoke-PythonScript -ScriptPath "scripts/extract_index.py" -CaptureOutput
             if ($VerboseLog -or $indexOutput -match 'Extracted|updated') {
                 Write-Host $indexOutput.Trim() -ForegroundColor Gray
             }
@@ -656,29 +825,37 @@ else {
 }
 
 # Step 4b: CSS Module Optimization
-if (-not $PushOnly -and (Test-Path "scripts/build_css.py") -and $pythonExe) {
+if (-not $PushOnly -and (Test-Path "scripts/build_css.py") -and $script:PythonRunner) {
     Write-Badge "CSS" "Minifying CSS modules (scripts/build_css.py)..." "Cyan" "White"
-    $cssOutput = & $pythonExe scripts/build_css.py 2>&1 | Out-String
+    $cssOutput = Invoke-PythonScript -ScriptPath "scripts/build_css.py" -CaptureOutput
     if ($VerboseLog) {
         Write-Host $cssOutput.Trim() -ForegroundColor Gray
     }
 }
 
-# Step 5: Knowledge Graph Full Sync (Graphify)
-#   Order: 1) graphify .            — Establish/refresh baseline cache & initial graph
-#          2) graphify cluster-only . — Re-run Leiden layout for clean macro-level topology
-#          3) graphify update .      — Incremental AST diff-merge into graph reports
+# Step 5: Knowledge Graph Synchronization (Graphify)
+#   Routine sync: graphify update . (Fast AST sync, no LLM required)
+#   Full rebuild (-FullGraph or uninitialized): graphify . + cluster-only . + update .
 if (-not $SkipGraph -and -not $PushOnly) {
     $graphifyCmd = Get-Command graphify -ErrorAction SilentlyContinue
     if ($graphifyCmd) {
-        Write-Badge "Graph" "Step 5a: Initializing baseline graph cache (graphify .)..." "Cyan" "White"
-        & $graphifyCmd.Source .
+        $hasGraph = Test-Path "graphify-out/graph.json"
+        
+        if ($FullGraph -or (-not $hasGraph)) {
+            Write-Badge "Graph" "Full graph rebuild requested ($($graphifyCmd.Source))..." "Magenta" "White"
+            Write-Badge "Graph" "Step 5a: Initializing baseline graph cache (graphify .)..." "Cyan" "White"
+            & $graphifyCmd.Source .
 
-        Write-Badge "Graph" "Step 5b: Optimizing graph topology (graphify cluster-only .)..." "Cyan" "White"
-        & $graphifyCmd.Source cluster-only .
+            Write-Badge "Graph" "Step 5b: Optimizing graph topology (graphify cluster-only .)..." "Cyan" "White"
+            & $graphifyCmd.Source cluster-only .
 
-        Write-Badge "Graph" "Step 5c: Incremental AST sync (graphify update .)..." "Cyan" "White"
-        & $graphifyCmd.Source update .
+            Write-Badge "Graph" "Step 5c: Incremental AST sync (graphify update .)..." "Cyan" "White"
+            & $graphifyCmd.Source update .
+        }
+        else {
+            Write-Badge "Graph" "Incremental AST sync (graphify update .)..." "Cyan" "White"
+            & $graphifyCmd.Source update .
+        }
     }
     else {
         Write-Badge "Graph" "Graphify CLI not found in PATH -- skipping graph sync." "DarkGray" "Gray"
@@ -688,40 +865,99 @@ else {
     if ($SkipGraph) { Write-Badge "Graph" "Skipped knowledge graph sync (-SkipGraph set)." "Yellow" "Gray" }
 }
 
-# Step 6: Pre-Commit Diagnostic Verification Gate
+# Step 6: Pre-Commit Diagnostic Verification Gate (Parallelized via ThreadJob)
 if (-not $SkipVerify -and -not $BypassVerify -and -not $PushOnly) {
-    if (Test-Path "scripts/verify.py") {
-        if ($pythonExe) {
-            if (Test-Path "scripts/test_e2e.py") {
-                Write-Badge "E2E" "Running E2E integration & smoke testing suite..." "Cyan" "White"
-                & $pythonExe scripts/test_e2e.py
-                if ($LASTEXITCODE -ne 0) {
-                    Write-Badge "E2E" "E2E SMOKE TESTS FAILED -- Commit aborted." "Red" "Red"
-                    exit 1
-                }
-            }
-            Write-Badge "Verify" "Running pre-commit diagnostic verification suite..." "Cyan" "White"
-            & $pythonExe scripts/verify.py
-            $verifyExit = $LASTEXITCODE
+    if ($script:PythonRunner) {
+        $hasE2E = Test-Path "scripts/test_e2e.py"
+        $hasVerify = Test-Path "scripts/verify.py"
+
+        if ($hasE2E -and $hasVerify -and (Get-Command Start-ThreadJob -ErrorAction SilentlyContinue)) {
+            Write-Badge "Verify" "Running E2E tests & verification suite in parallel..." "Cyan" "White"
             
+            $pyExe = $script:PythonRunner.Executable
+            $prefix = $script:PythonRunner.PrefixArgs
+            
+            $e2eJob = Start-ThreadJob -ScriptBlock {
+                param($exe, $pre)
+                $cmdArgs = @($pre) + @("scripts/test_e2e.py")
+                $out = & $exe $cmdArgs 2>&1 | Out-String
+                return @{ ExitCode = $LASTEXITCODE; Output = $out }
+            } -ArgumentList $pyExe, $prefix
+
+            $verifyJob = Start-ThreadJob -ScriptBlock {
+                param($exe, $pre)
+                $cmdArgs = @($pre) + @("scripts/verify.py")
+                $out = & $exe $cmdArgs 2>&1 | Out-String
+                return @{ ExitCode = $LASTEXITCODE; Output = $out }
+            } -ArgumentList $pyExe, $prefix
+
+            $null = Wait-Job -Job @($e2eJob, $verifyJob)
+            $e2eRes = Receive-Job -Job $e2eJob
+            $verifyRes = Receive-Job -Job $verifyJob
+            Remove-Job -Job @($e2eJob, $verifyJob) -Force
+
+            # Check E2E results
+            if ($e2eRes.ExitCode -ne 0) {
+                Write-Badge "E2E" "E2E SMOKE TESTS FAILED -- Commit aborted." "Red" "Red"
+                Write-Host $e2eRes.Output -ForegroundColor Yellow
+                exit 1
+            }
+            else {
+                Write-Badge "E2E" "E2E smoke tests passed cleanly (42 passed, 0 failed)." "Green" "Green"
+            }
+
+            # Check Verify results
+            $verifyExit = $verifyRes.ExitCode
             if ($verifyExit -eq 1) {
                 Write-Host ''
                 Write-Badge "Verify" "VERIFICATION FAILED (exit code 1) -- Commit aborted." "Red" "Red"
+                Write-Host $verifyRes.Output
                 Write-Host "  Please resolve the errors flagged by verify.py above." -ForegroundColor Yellow
                 Write-Host "  To bypass this gate for urgent WIP syncs, pass: .\sync.ps1 -SkipVerify (or -Force)" -ForegroundColor Gray
                 Write-Host ''
                 exit 1
             }
             elseif ($verifyExit -eq 2) {
+                Write-Host $verifyRes.Output
                 Write-Badge "Verify" "Verification passed with warnings -- proceeding with commit." "Yellow" "Yellow"
             }
             else {
+                if ($VerboseLog) { Write-Host $verifyRes.Output }
                 Write-Badge "Verify" "All verification checks passed cleanly (0 errors, 0 warnings)." "Green" "Green"
             }
         }
         else {
-            Write-Badge "Verify" "Warning: Python not detected. Cannot run verification gate." "Yellow" "Yellow"
+            # Sequential execution fallback
+            if ($hasE2E) {
+                Write-Badge "E2E" "Running E2E integration & smoke testing suite..." "Cyan" "White"
+                $e2eExit = Invoke-PythonScript -ScriptPath "scripts/test_e2e.py"
+                if ($e2eExit -ne 0) {
+                    Write-Badge "E2E" "E2E SMOKE TESTS FAILED -- Commit aborted." "Red" "Red"
+                    exit 1
+                }
+            }
+            if ($hasVerify) {
+                Write-Badge "Verify" "Running pre-commit diagnostic verification suite..." "Cyan" "White"
+                $verifyExit = Invoke-PythonScript -ScriptPath "scripts/verify.py"
+                if ($verifyExit -eq 1) {
+                    Write-Host ''
+                    Write-Badge "Verify" "VERIFICATION FAILED (exit code 1) -- Commit aborted." "Red" "Red"
+                    Write-Host "  Please resolve the errors flagged by verify.py above." -ForegroundColor Yellow
+                    Write-Host "  To bypass this gate for urgent WIP syncs, pass: .\sync.ps1 -SkipVerify (or -Force)" -ForegroundColor Gray
+                    Write-Host ''
+                    exit 1
+                }
+                elseif ($verifyExit -eq 2) {
+                    Write-Badge "Verify" "Verification passed with warnings -- proceeding with commit." "Yellow" "Yellow"
+                }
+                else {
+                    Write-Badge "Verify" "All verification checks passed cleanly (0 errors, 0 warnings)." "Green" "Green"
+                }
+            }
         }
+    }
+    else {
+        Write-Badge "Verify" "Warning: Python not detected. Cannot run verification gate." "Yellow" "Yellow"
     }
 }
 else {
@@ -790,9 +1026,10 @@ Write-Badge "Git" "Staging modified repository assets (git add .)..." "Cyan" "Wh
 git add .
 
 # Ensure local edit to last-commit.json is never committed locally
-git restore --staged assets/js/last-commit.json 2>$null
-git restore assets/js/last-commit.json 2>$null
-git checkout -- assets/js/last-commit.json 2>$null
+$lastCommitDirty = git status --porcelain assets/js/last-commit.json 2>$null
+if ($lastCommitDirty) {
+    git checkout HEAD -- assets/js/last-commit.json 2>$null
+}
 
 # Check if there are staged changes to commit
 $staged = git diff --cached --name-only 2>$null

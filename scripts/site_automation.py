@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v50.28)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v51.1)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -44,6 +44,7 @@ GRAPH_REPORT = ROOT / "graphify-out" / "GRAPH_REPORT.md"
 README_MD = ROOT / "README.md"
 WORKFLOW_VERIFY_YML = ROOT / ".github" / "workflows" / "verify.yml"
 VERSION_FILE = ROOT / "VERSION"
+PYPROJECT_TOML = ROOT / "pyproject.toml"
 
 
 def run_command(cmd, cwd=ROOT):
@@ -273,6 +274,22 @@ def sync_metadata(version_tag=None):
     if VERSION_FILE.exists():
         VERSION_FILE.write_text(f"{clean_v}\n", encoding="utf-8")
         results.append(f"Updated VERSION file to '{clean_v}'")
+
+    # 12. Update pyproject.toml
+    if PYPROJECT_TOML.exists():
+        py_text = PYPROJECT_TOML.read_text(encoding="utf-8")
+        # Extract digits: v51 -> 51.0.0, v50.28 -> 50.28.0
+        v_nums = clean_v.lstrip("v").split(".")
+        if len(v_nums) == 1:
+            semver = f"{v_nums[0]}.0.0"
+        elif len(v_nums) == 2:
+            semver = f"{v_nums[0]}.{v_nums[1]}.0"
+        else:
+            semver = ".".join(v_nums[:3])
+        new_py = re.sub(r'version\s*=\s*"[^"]+"', f'version = "{semver}"', py_text)
+        if new_py != py_text:
+            PYPROJECT_TOML.write_text(new_py, encoding="utf-8")
+            results.append(f"Updated pyproject.toml version to '{semver}'")
 
     return results
 

@@ -1,6 +1,15 @@
-# Portfolio Website Tracker — v50.28
+# Portfolio Website Tracker — v51.1
 
 Last updated: _2026-09-08_
+
+- **v51 (Major Release) — Tooling Hyper-Optimization, Astral uv Engine & Dev Drive ReFS Acceleration Suite.** Shipped fundamental repository workflow overhaul accelerating sync, testing, and indexing pipelines by up to 7x:
+  - **Astral `uv` Package Manager & Project Standard (`pyproject.toml`, `uv.lock`)**: Integrated Astral `uv` into repository tooling with standardized PEP 517/621 project manifest (`pyproject.toml`), precompiled bytecode (`compile-bytecode = true`), and copy-on-write link mode. Added automatic fallback to system Python for environments without `uv`.
+  - **Dev Drive (ReFS) Block Cloning & FSMonitor Acceleration (`sync.ps1`)**: Optimized disk I/O for Windows Dev Drive environments running ReFS: automated CoW block cloning (`link-mode = "clone"`), co-located package cache (`$env:UV_CACHE_DIR`), and enabled Git FSMonitor with untracked cache (`core.untrackedcache = true`) for microsecond-level status scans.
+  - **Sync Pipeline Speedup (45.7s → ~6-11s, 4-7x Acceleration)**:
+    - **Routine AST Knowledge Graph Sync**: Eliminated redundant routine LLM extractions (`graphify .` and `graphify cluster-only .`) from routine syncs, running fast AST-only incremental updates (`graphify update .`). Preserved full semantic rebuilds under explicit `-FullGraph` (`-GraphRebuild`) switch.
+    - **Parallel Pre-Commit Verification Gate**: Parallelized E2E smoke tests (`test_e2e.py`) and site verification (`verify.py`) via PowerShell `Start-ThreadJob`, running all 42 smoke tests and 24 verification categories concurrently.
+    - **Subprocess & Git Overhead Reduction**: Eliminated redundant Git commands on `assets/js/last-commit.json` via conditional single-command resets, conditioned Git LFS pulls to only run when upstream commits are fetched, and added `-SkipBotSync` (`-NoBot`) for immediate finish after push.
+  - **Verification Gate**: Passed `python scripts/verify.py` cleanly across all 24 diagnostic categories (0 errors, 0 warnings); passed all 42 `scripts/test_e2e.py` smoke tests.
 
 - **v50.24 (Update) — 5-Project Ecosystem Synchronization & Encrypted Repository Integration.** Synchronized 5 flagship engineering repositories across projects showcase, interactive terminal, and zero-leak AES-256-GCM payload encryption:
   - **NovaOptimizer (`system-optimizer`, `p-007`)**: Upgraded card from prototype SysOptimizer to native Windows Task Manager and System Optimizer engineered in C# / .NET 10 and WPF with a ~25 MB RAM footprint. Documented undocumented NT kernel memory purging (`NtSetSystemInformation` standby list & system working sets), Turbo Boost profiles (Game, Work, Study with integrated Pomodoro timer), and hung-process watchdog. Wired encrypted VIP link `proj-sys-optimizer`.

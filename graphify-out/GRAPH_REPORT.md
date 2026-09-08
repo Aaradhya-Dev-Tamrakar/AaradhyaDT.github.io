@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-08)
 
 ## Corpus Check
-- 41 files · ~308,714 words
+- 42 files · ~310,071 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 621 nodes · 841 edges · 138 communities (38 shown, 89 thin omitted)
+- 626 nodes · 846 edges · 140 communities (38 shown, 90 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 56 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0d8edff7`
+- Built from commit: `52cde37a`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- Portfolio Website Tracker — v50.28
+- Portfolio Website Tracker — v51.1
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -123,13 +123,14 @@
 - AI-Assisted Coding Certificate
 - AI-Assisted Product Launch Certificate
 - JS Bootcamp Certificate
+- Zero-Leak Access Control
+- Unified Command Palette
 - Model Context Protocol Integration
 - Zero-Leak Access Control
 - OG image source README
 - Electric Vehicle Ratings, Drive Cycles, Battery Implications and Management.pdf
 - GCSBR Working Demo Poster
 - Deploy to GitHub Pages
-- Lighthouse & Site Audit Workflow
 - Google OAuth 2.0
 - Google Site Verification
 - Graphify
@@ -141,13 +142,13 @@
 - Service Worker
 - Automation Script
 - Stamp Last Commit Workflow
-- Zero-Leak Access Control
+- aaradhyadt-portfolio
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v50.28` - 21 edges
+4. `Portfolio Website Tracker — v51.1` - 21 edges
 5. `log_warning()` - 16 edges
 6. `get_html_files()` - 14 edges
 7. `initTour()` - 12 edges
@@ -173,7 +174,7 @@
 ## Hyperedges (group relationships)
 - **Flagship Engineering Projects** — concept_spark, concept_biasaperture, concept_novaoptimizer [EXTRACTED 0.85]
 
-## Communities (138 total, 89 thin omitted)
+## Communities (140 total, 90 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.10
@@ -189,15 +190,15 @@ Nodes (32): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), 
 
 ### Community 3 - "Aaradhya Dev Tamrakar"
 Cohesion: 0.10
-Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developers, AI Fluency, Anthropic, Certificate: AI-Assisted Product Launch, AI Fluency: Foundations of Coworking with AI Certificate, Certificate: AI Fluency: Framework & Foundations, Certificate: Building a Go-To-Market Strategy (+18 more)
+Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developers, AI Fluency, Anthropic, Certificate: AI-Assisted Product Launch, Certificate: Introduction to Claude Cowork, Certificate: AI Fluency: Framework & Foundations, Certificate: Building a Go-To-Market Strategy (+18 more)
 
 ### Community 4 - "access.js"
 Cohesion: 0.19
 Nodes (24): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails(), getDecryptionKey(), getGoogleClientId() (+16 more)
 
-### Community 5 - "Portfolio Website Tracker — v50.28"
+### Community 5 - "Portfolio Website Tracker — v51.1"
 Cohesion: 0.09
-Nodes (22): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v50.28, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+14 more)
+Nodes (22): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v51.1, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+14 more)
 
 ### Community 6 - "site_automation.py"
 Cohesion: 0.16
@@ -232,8 +233,8 @@ Cohesion: 0.26
 Nodes (11): buildSearchIndex(), CMDK_ENTRIES, initGlobalSearch(), currentResults(), openCmdk(), refresh(), renderResults(), setActiveResult() (+3 more)
 
 ### Community 14 - "sync.ps1"
-Cohesion: 0.29
-Nodes (6): Get-LfsInstalled(), Get-PythonPath(), Show-Diagnostics(), Sync-BotStamp(), Update-TrackerLog(), Write-Badge()
+Cohesion: 0.23
+Nodes (8): Get-LfsInstalled(), Get-PythonPath(), Get-PythonRunner(), Initialize-DevDriveOptimizations(), Show-Diagnostics(), Sync-BotStamp(), Update-TrackerLog(), Write-Badge()
 
 ### Community 15 - "site_mcp.py"
 Cohesion: 0.31
@@ -328,9 +329,9 @@ Cohesion: 1.00
 Nodes (3): SimOps Fundamentals Certificate, SimOps Practitioner Certificate, SimOps (Simulation Operations)
 
 ## Knowledge Gaps
-- **184 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+179 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 296 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **89 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **185 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+180 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 299 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **90 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -340,7 +341,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `loadGA4()` connect `core.js` to `script.js`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**
-  _184 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _185 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
 - **Should `ui.js` be split into smaller, more focused modules?**

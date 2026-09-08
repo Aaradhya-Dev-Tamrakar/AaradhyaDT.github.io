@@ -7,7 +7,20 @@
    ============================================================ */
 const SITE_RELEASES = [
 
-    {
+      {
+    version: 'v51.1',
+    date: '2026-09-08',
+    sha: 'rel51',
+    title: "Tooling Hyper-Optimization & uv Acceleration Engine",
+    highlights: [
+      "Integrated Astral uv package manager and .venv environment engine",
+      "Accelerated sync.ps1 execution from 45.7s to 6-11s (4-7x speedup)",
+      "Optimized Graphify workflow to routine incremental AST sync without LLM latency",
+      "Parallelized E2E integration and pre-commit verification gates via ThreadJob",
+      "Added -FullGraph, -SkipBotSync, -NoUv flags and smart conditional git operations"
+    ]
+  },
+{
     version: 'v50.28',
     date: '2026-09-08',
     sha: 'rel50',
