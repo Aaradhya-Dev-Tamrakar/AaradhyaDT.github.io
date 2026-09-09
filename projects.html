@@ -794,10 +794,10 @@
 <div class="projects-header-bar">
 <div class="projects-filter-bar" id="projectsFilterBar" role="toolbar" aria-label="Filter projects by domain">
 <button type="button" class="proj-filter-btn active" data-filter="all" aria-pressed="true">
-<span>All</span><span class="proj-filter-count">30</span>
+<span>All</span><span class="proj-filter-count">31</span>
 </button>
 <button type="button" class="proj-filter-btn" data-filter="aiml" aria-pressed="false">
-<span>AI / ML &amp; Agentic</span><span class="proj-filter-count">21</span>
+<span>AI / ML &amp; Agentic</span><span class="proj-filter-count">22</span>
 </button>
 <button type="button" class="proj-filter-btn" data-filter="embedded" aria-pressed="false">
 <span>Robotics &amp; Embedded</span><span class="proj-filter-count">5</span>
@@ -806,7 +806,7 @@
 <span>Hardware &amp; Systems</span><span class="proj-filter-count">5</span>
 </button>
 <button type="button" class="proj-filter-btn" data-filter="apps" aria-pressed="false">
-<span>Web &amp; Apps</span><span class="proj-filter-count">9</span>
+<span>Web &amp; Apps</span><span class="proj-filter-count">10</span>
 </button>
 </div>
 <button class="project-toggle-all" id="projectToggleAllBtn" type="button">
@@ -1299,6 +1299,26 @@
 </div>
 </details>
 <h2 class="projects-section-title" id="section-personal">Personal Tools &amp; Apps<span class="projects-section-sub">Side projects, utilities, and shipped tools</span></h2>
+<details class="project-card reveal project-card--in-progress" id="p-031" data-category="apps aiml">
+<summary class="project-summary">
+<div class="project-index">P — 031 <span class="project-status">In Progress</span></div>
+<h3 class="project-title">Super-NLM — Multi-Account NotebookLM Hub &amp; MCP Server</h3>
+</summary>
+<div class="project-card-body">
+<ul class="project-desc-list">
+<li>Unified dashboard aggregating Google NotebookLM notebooks across <em>N</em> Google accounts simultaneously — parallel fetch, global <kbd>Ctrl+K</kbd> search, in-app quick chat, and cross-account synthesis via a Pro AI engine router</li>
+<li>Built-in MCP server (<code>super-nlm-mcp</code>) with round-robin multi-account rotation and two-tiered quota cooldown (120 s burst / midnight UTC daily) — enables parallel AI agents (Antigravity / Claude) to query notebooks without exhausting any single account's rate limit</li>
+<li>Lazy auto-sharing cache invites query accounts as editors behind the scenes; notebook and profile listings served from local cache at zero API quota cost</li>
+</ul>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">MCP</span>
+<span class="tag">NotebookLM</span><span class="tag">Multi-Account</span>
+<span class="tag">Rate-Limit Routing</span><span class="tag">Agentic</span>
+<span class="tag">Round-Robin</span><span class="tag">FastAPI</span>
+</div>
+<a class="project-link" href="https://github.com/Aaradhya-Dev-Tamrakar/super-nlm" rel="noopener" target="_blank">View on GitHub ↗</a>
+</div>
+</details>
 <details class="project-card reveal" id="p-021" data-category="apps">
 <summary class="project-summary">
 <div class="project-index">P — 021 <span class="project-date">Jul–Sep 2026</span></div>

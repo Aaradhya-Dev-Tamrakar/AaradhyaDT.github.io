@@ -433,6 +433,13 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
+    "title": "Super-NLM — Multi-Account NotebookLM Hub & MCP Server",
+    "meta": "In Progress · Python, MCP, NotebookLM",
+    "href": "projects.html#p-031",
+    "text": "super-nlm — multi-account notebooklm hub & mcp server unified dashboard aggregating google notebooklm notebooks across n google accounts simultaneously — parallel fetch, global ctrl+k search, in-app quick chat, and cross-account synthesis via a pro ai engine router built-in mcp server ( super-nlm-mcp ) with round-robin multi-account rotation and two-tiered quota cooldown (120 s burst / midnight utc daily) — enables parallel ai agents (antigravity / claude) to query notebooks without exhausting any single account's rate limit lazy auto-sharing cache invites query accounts as editors behind the scenes; notebook and profile listings served from local cache at zero api quota cost python mcp notebooklm multi-account rate-limit routing agentic round-robin fastapi in progress"
+  },
+  {
+    "type": "project",
     "title": "Claude Desktop Multi-Profile & Autonomous Fleet Utilities",
     "meta": "PowerShell 7, FastAPI, SQLite WAL",
     "href": "projects.html#p-021",
