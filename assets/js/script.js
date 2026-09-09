@@ -1,10 +1,10 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v53.16)
+   SHARED SCRIPT — aaradhyadt.github.io (v53.17)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v53.16) — Tiered Parallel ─────────── */
+/* ── Dynamic Module Loader (v53.17) — Tiered Parallel ─────────── */
 window.__modulesLoadedPromise = (async function () {
   // Modules grouped by dependency tier — each group loads concurrently via
   // Promise.all, but tiers execute sequentially (tier N+1 waits for tier N).
@@ -38,28 +38,10 @@ window.__modulesLoadedPromise = (async function () {
 
   window.__failedModules = [];
   const allResults = [];
-  const isHttp = typeof window !== 'undefined' && window.location &&
-    window.location.protocol !== 'file:';
 
-  async function loadOne(src) {
-    // Fast path: Native ES Module dynamic import (HTTP / HTTPS / localhost)
-    if (isHttp) {
-      try {
-        const importUrl = new URL(src, document.baseURI).href;
-        const mod = await import(importUrl);
-        if (mod && typeof mod === 'object') {
-          for (const [key, val] of Object.entries(mod)) {
-            if (key !== 'default' && !(key in window)) window[key] = val;
-          }
-        }
-        return { src: src, ok: true, type: 'esm' };
-      } catch (esmErr) {
-        // Fall through to script element injection fallback
-        console.debug('[Module Loader] Native ESM dynamic import bypassed for ' + src + ':', esmErr);
-      }
-    }
-
-    // Resilient fallback: Classic script tag injection (file:// or legacy environments)
+  function loadOne(src) {
+    // Classic script tag injection: guarantees evaluation in the global window scope
+    // so that module functions and declarations properly attach to window.
     return new Promise(function (resolve) {
       var existing = document.querySelector('script[src="' + src + '"]');
       if (existing) return resolve({ src: src, ok: true, cached: true });

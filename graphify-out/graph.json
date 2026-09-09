@@ -1908,7 +1908,7 @@
       "file_type": "code",
       "norm_label": "bootsite()",
       "source_file": "assets/js/script.js",
-      "source_location": "L160"
+      "source_location": "L142"
     },
     {
       "id": "assets_js_script_initnetworkstatuslisteners",
@@ -1920,7 +1920,7 @@
       "file_type": "code",
       "norm_label": "initnetworkstatuslisteners()",
       "source_file": "assets/js/script.js",
-      "source_location": "L239"
+      "source_location": "L221"
     },
     {
       "id": "assets_js_script_initreadingprogressbar",
@@ -1932,7 +1932,7 @@
       "file_type": "code",
       "norm_label": "initreadingprogressbar()",
       "source_file": "assets/js/script.js",
-      "source_location": "L224"
+      "source_location": "L206"
     },
     {
       "id": "assets_js_script_initreadingprogressbar_updateprogress",
@@ -1944,7 +1944,7 @@
       "file_type": "code",
       "norm_label": "updateprogress()",
       "source_file": "assets/js/script.js",
-      "source_location": "L227"
+      "source_location": "L209"
     },
     {
       "id": "assets_js_script_initserviceworker",
@@ -1956,7 +1956,7 @@
       "file_type": "code",
       "norm_label": "initserviceworker()",
       "source_file": "assets/js/script.js",
-      "source_location": "L214"
+      "source_location": "L196"
     },
     {
       "id": "assets_js_script_loadone",
@@ -1968,7 +1968,7 @@
       "file_type": "code",
       "norm_label": "loadone()",
       "source_file": "assets/js/script.js",
-      "source_location": "L44"
+      "source_location": "L42"
     },
     {
       "id": "assets_js_script_queueofflinecontactmessage",
@@ -1980,7 +1980,7 @@
       "file_type": "code",
       "norm_label": "queueofflinecontactmessage()",
       "source_file": "assets/js/script.js",
-      "source_location": "L282"
+      "source_location": "L264"
     },
     {
       "id": "assets_js_script_syncqueuedcontactmessages",
@@ -1992,7 +1992,7 @@
       "file_type": "code",
       "norm_label": "syncqueuedcontactmessages()",
       "source_file": "assets/js/script.js",
-      "source_location": "L249"
+      "source_location": "L231"
     },
     {
       "id": "scripts_generate_og_cards_generate_cards",
@@ -4016,7 +4016,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "53.16.0"
+      "version": "53.17.0"
     },
     {
       "id": "sync",
@@ -10525,7 +10525,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L181",
+      "source_location": "L163",
       "weight": 1.0
     },
     {
@@ -10537,7 +10537,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L182",
+      "source_location": "L164",
       "weight": 1.0
     },
     {
@@ -10549,7 +10549,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L183",
+      "source_location": "L165",
       "weight": 1.0
     },
     {
@@ -10561,7 +10561,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L242",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -10573,7 +10573,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L271",
+      "source_location": "L253",
       "weight": 1.0
     },
     {
@@ -15247,7 +15247,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L214",
+      "source_location": "L196",
       "weight": 1.0
     },
     {
@@ -15258,7 +15258,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L224",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -15269,7 +15269,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L239",
+      "source_location": "L221",
       "weight": 1.0
     },
     {
@@ -15280,7 +15280,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L249",
+      "source_location": "L231",
       "weight": 1.0
     },
     {
@@ -15291,7 +15291,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L282",
+      "source_location": "L264",
       "weight": 1.0
     },
     {
@@ -15302,7 +15302,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L44",
+      "source_location": "L42",
       "weight": 1.0
     },
     {
@@ -18868,7 +18868,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/script.js",
-      "source_location": "L207",
+      "source_location": "L189",
       "weight": 1.0
     },
     {
@@ -18880,7 +18880,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/script.js",
-      "source_location": "L194",
+      "source_location": "L176",
       "weight": 1.0
     },
     {
@@ -18892,7 +18892,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/script.js",
-      "source_location": "L234",
+      "source_location": "L216",
       "weight": 1.0
     },
     {
@@ -20026,5 +20026,5 @@
       "source_file": "llms-full.txt"
     }
   ],
-  "built_at_commit": "3082cb880088b2eb2b4b72a244af4b87430c5bed"
+  "built_at_commit": "e6e076d75cf0deb431f805a836a04e119a22f4fb"
 }
