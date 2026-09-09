@@ -12,6 +12,7 @@ permissions:
   pages: write
   id-token: write
   actions: write
+  deployments: write
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # NOTE: Do NOT set cancel-in-progress to true! GitHub Pages deployments are asynchronous cloud operations.
@@ -54,6 +55,36 @@ jobs:
                   artifact_id: artifact.id,
                 });
               }
+            }
+
+      - name: Clear conflicting Pages deployments
+        uses: actions/github-script@v7
+        with:
+          script: |
+            try {
+              const deployments = await github.rest.repos.listDeployments({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                environment: 'github-pages',
+                per_page: 5
+              });
+              for (const d of deployments.data) {
+                if (d.sha !== context.sha) {
+                  try {
+                    await github.request('POST /repos/{owner}/{repo}/pages/deployments/{pages_deployment_id}/cancel', {
+                      owner: context.repo.owner,
+                      repo: context.repo.repo,
+                      pages_deployment_id: d.sha
+                    });
+                    console.log(`Cancelled conflicting Pages deployment lock for ${d.sha}`);
+                    await new Promise(r => setTimeout(r, 4000));
+                  } catch (e) {
+                    console.log(`Deployment note for ${d.sha}: ${e.message}`);
+                  }
+                }
+              }
+            } catch (err) {
+              console.log(`Deployment check notice: ${err.message}`);
             }
 
       - name: Upload artifact
