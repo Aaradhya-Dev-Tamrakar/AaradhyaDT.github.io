@@ -1,6 +1,6 @@
 {
-  "sha": "68b796fde190440a711f1ab1a0e21ea5802c9f25",
-  "shortSha": "68b796f",
-  "date": "2026-09-09T09:40:37+05:45",
-  "message": "fix(ci): restore cancel-in-progress false to prevent GitHub Pages deployment lock conflict"
+  "sha": "f0cb907d2b706d6066650daed36493ba3c9f9d53",
+  "shortSha": "f0cb907",
+  "date": "2026-09-09T09:48:50+05:45",
+  "message": "fix(ci): prune stale github-pages artifacts on workflow retries in deploy-pages.yml"
 }
