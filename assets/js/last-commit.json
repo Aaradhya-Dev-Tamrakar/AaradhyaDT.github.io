@@ -1,6 +1,6 @@
 {
-  "sha": "5185be6c32bbca1abb21ae978e0b4ebd28a8eae5",
-  "shortSha": "5185be6",
-  "date": "2026-09-09T09:58:17+05:45",
-  "message": "fix(ci): auto-cancel conflicting Pages deployment locks in deploy-pages.yml"
+  "sha": "4e597e482e322c8e5f3595a11d1757abae617fe1",
+  "shortSha": "4e597e4",
+  "date": "2026-09-09T10:07:35+05:45",
+  "message": "fix(runtime): restore classic script injection in module loader for global window binding"
 }
