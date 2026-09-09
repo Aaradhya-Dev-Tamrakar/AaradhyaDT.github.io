@@ -1,7 +1,7 @@
-# Graph Report - AaradhyaDT.github.io  (2026-09-08)
+# Graph Report - AaradhyaDT.github.io  (2026-09-09)
 
 ## Corpus Check
-- 48 files · ~453,342 words
+- 48 files · ~453,712 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `7cd38024`
+- Built from commit: `83d9c393`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- Portfolio Website Tracker — v53.10
+- Portfolio Website Tracker — v53.14
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -153,7 +153,7 @@
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v53.10` - 21 edges
+4. `Portfolio Website Tracker — v53.14` - 21 edges
 5. `log_warning()` - 16 edges
 6. `get_html_files()` - 14 edges
 7. `cmd_sync()` - 13 edges
@@ -201,9 +201,9 @@ Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developer
 Cohesion: 0.16
 Nodes (29): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), authenticateWithPasskey(), bufferToHex(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails() (+21 more)
 
-### Community 5 - "Portfolio Website Tracker — v53.10"
+### Community 5 - "Portfolio Website Tracker — v53.14"
 Cohesion: 0.05
-Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.10, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
+Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.14, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
 
 ### Community 6 - "site_automation.py"
 Cohesion: 0.12
