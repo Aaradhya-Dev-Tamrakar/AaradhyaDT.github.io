@@ -1,6 +1,6 @@
 {
-  "sha": "4705debada3a9a5959caf38a03144829a9b839b6",
-  "shortSha": "4705deb",
-  "date": "2026-09-09T09:22:28+05:45",
-  "message": "fix(ci): enable cancel-in-progress on pages deployment to prevent race conditions"
+  "sha": "68b796fde190440a711f1ab1a0e21ea5802c9f25",
+  "shortSha": "68b796f",
+  "date": "2026-09-09T09:40:37+05:45",
+  "message": "fix(ci): restore cancel-in-progress false to prevent GitHub Pages deployment lock conflict"
 }
