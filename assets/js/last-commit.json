@@ -1,6 +1,6 @@
 {
-  "sha": "d15979fd9bbdfbf93b502f86ba402aae1866d8de",
-  "shortSha": "d15979f",
-  "date": "2026-09-10T20:55:48+05:45",
-  "message": "feat(graph): implement high-performance 3D WebGL knowledge graph HUD via CodeWiki architecture"
+  "sha": "b562c7742a1a9136333b5acc5e09368eb7d2af05",
+  "shortSha": "b562c77",
+  "date": "2026-09-10T21:11:20+05:45",
+  "message": "fix(graph): resolve 3D knowledge graph viewport scaling, node illumination and dynamic instanced buffers"
 }
