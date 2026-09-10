@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v53.20)
+   MODULE: access.js — aaradhyadt.github.io (v53.21)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: graph-modal.js — aaradhyadt.github.io (v53.20)
+   MODULE: graph-modal.js — aaradhyadt.github.io (v53.21)
    High-Performance 3D WebGL Knowledge Graph HUD (CodeWiki Architecture)
    Visualizes the repository's AST & semantic knowledge graph (720+ nodes,
    980+ links) using zero-dependency WebGL 2, hardware instancing,
@@ -13,13 +13,13 @@
   let gl = null;
   let canvas = null;
   let animationFrameId = null;
-  let isDirty = true;
+  let renderPending = false;
   let isDragging = false;
   let lastMouseX = 0;
   let lastMouseY = 0;
   let rotX = 0.35;
   let rotY = -0.45;
-  let cameraDist = 95.0;
+  let cameraDist = 140.0;
   let hoveredNodeIndex = -1;
   let filterQuery = '';
   let resizeObserver = null;
@@ -151,7 +151,7 @@
       float rim = 1.0 - max(dot(vNormal, vec3(0.0, 0.0, 1.0)), 0.0);
       rim = smoothstep(0.4, 0.9, rim);
       
-      vec3 finalColor = vColor * (0.65 + 0.5 * diff) + (vColor + 0.3) * (0.45 * rim);
+      vec3 finalColor = vColor * (0.65 + 0.5 * diff) + (vColor + vec3(0.3)) * (0.45 * rim);
       fragColor = vec4(finalColor, 0.98);
     }
   `;
@@ -398,14 +398,14 @@
 
   /* ── Demand-Driven Render Loop (Pillar 2) ─────────────────── */
   function requestRender() {
-    if (!isDirty) {
-      isDirty = true;
+    if (!renderPending) {
+      renderPending = true;
       animationFrameId = requestAnimationFrame(render);
     }
   }
 
   function render() {
-    isDirty = false;
+    renderPending = false;
     if (!gl || !canvas) return;
 
     const width = canvas.clientWidth * window.devicePixelRatio;
@@ -636,10 +636,12 @@
     document.body.style.overflow = 'hidden';
     if (typeof playAudioCue === 'function') playAudioCue('open');
 
-    // Trigger initial renders (immediate + after transition settles)
+    // Trigger initial renders (immediate + progressive settling frames)
+    render();
     requestRender();
-    setTimeout(requestRender, 50);
-    setTimeout(requestRender, 200);
+    setTimeout(() => { render(); requestRender(); }, 50);
+    setTimeout(() => { render(); requestRender(); }, 150);
+    setTimeout(() => { render(); requestRender(); }, 300);
   }
 
   function bindInteractions() {
@@ -687,7 +689,7 @@
       (e) => {
         e.preventDefault();
         cameraDist += e.deltaY * 0.06;
-        cameraDist = Math.max(30.0, Math.min(220.0, cameraDist));
+        cameraDist = Math.max(35.0, Math.min(300.0, cameraDist));
         requestRender();
       },
       { passive: false }

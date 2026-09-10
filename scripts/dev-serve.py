@@ -44,8 +44,8 @@ if __name__ == '__main__':
     os.chdir(ROOT)
     with socketserver.TCPServer(("", PORT), Handler) as httpd:
         print(f"Serving at http://127.0.0.1:{PORT} (root: {ROOT})")
-        print(f"  → 404.html served for missing pages")
-        print(f"  → CORS enabled, no-cache headers active")
+        print(f"  -> 404.html served for missing pages")
+        print(f"  -> CORS enabled, no-cache headers active")
         try:
             httpd.serve_forever()
         except KeyboardInterrupt:

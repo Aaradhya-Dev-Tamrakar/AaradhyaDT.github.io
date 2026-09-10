@@ -3759,7 +3759,7 @@
       "file_type": "code",
       "norm_label": "bindinteractions()",
       "source_file": "assets/js/modules/graph-modal.js",
-      "source_location": "L645"
+      "source_location": "L647"
     },
     {
       "id": "assets_js_modules_graph_modal_buildedgebuffers",
@@ -3783,7 +3783,7 @@
       "file_type": "code",
       "norm_label": "closegraphmodal()",
       "source_file": "assets/js/modules/graph-modal.js",
-      "source_location": "L720"
+      "source_location": "L722"
     },
     {
       "id": "assets_js_modules_graph_modal_computeviewmatrix",
@@ -4223,7 +4223,7 @@
       "label": "PortfolioWebsite_TRACKER.md",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "portfoliowebsite_tracker.md",
@@ -4235,7 +4235,7 @@
       "label": "Evidence & Verification Log \u2014 v20 additions",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "evidence & verification log \u2014 v20 additions",
@@ -4243,23 +4243,11 @@
       "source_location": "L299"
     },
     {
-      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
-      "label": "Portfolio Website Tracker \u2014 v53.20",
-      "_origin": "ast",
-      "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "portfolio website tracker \u2014 v53.20",
-      "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L1"
-    },
-    {
       "id": "dev_logs_portfoliowebsite_tracker_state_of_play",
       "label": "State of Play",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "state of play",
@@ -4271,7 +4259,7 @@
       "label": "Status",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "status",
@@ -4283,7 +4271,7 @@
       "label": "v21 addition \u2014 both v20-flagged unmatched PDFs closed out",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v21 addition \u2014 both v20-flagged unmatched pdfs closed out",
@@ -4295,7 +4283,7 @@
       "label": "v22 addition \u2014 KEC IT Club \"Introduction to Git\" (2024) card: closed, no source file available",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v22 addition \u2014 kec it club \"introduction to git\" (2024) card: closed, no source file available",
@@ -4307,7 +4295,7 @@
       "label": "v23 addition \u2014 latest site refinements (2026-07-18)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v23 addition \u2014 latest site refinements (2026-07-18)",
@@ -4319,7 +4307,7 @@
       "label": "v24 addition \u2014 site-optimization pass + mobile legend line-break fix (2026-07-18)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v24 addition \u2014 site-optimization pass + mobile legend line-break fix (2026-07-18)",
@@ -4331,7 +4319,7 @@
       "label": "v25 addition \u2014 bug-check sweep, pages 1/3/4 (2026-07-27)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v25 addition \u2014 bug-check sweep, pages 1/3/4 (2026-07-27)",
@@ -4343,7 +4331,7 @@
       "label": "v26 addition \u2014 bug-check sweep, page 2 + about (2026-07-27)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v26 addition \u2014 bug-check sweep, page 2 + about (2026-07-27)",
@@ -4355,7 +4343,7 @@
       "label": "v28 addition \u2014 site-wide bug audit & structural hardening pass (2026-08-04)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v28 addition \u2014 site-wide bug audit & structural hardening pass (2026-08-04)",
@@ -4367,7 +4355,7 @@
       "label": "v29 addition \u2014 site-wide performance, PWA, SEO & styling upgrades (2026-08-04)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v29 addition \u2014 site-wide performance, pwa, seo & styling upgrades (2026-08-04)",
@@ -4379,7 +4367,7 @@
       "label": "v30 addition \u2014 PWA service worker, skip-links, font preconnects, content-visibility optimization & expanded verification (2026-08-04)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v30 addition \u2014 pwa service worker, skip-links, font preconnects, content-visibility optimization & expanded verification (2026-08-04)",
@@ -4391,7 +4379,7 @@
       "label": "v31.1 addition \u2014 Interactive \"What's New\" Major Commit Showcase & Journey Nodes (2026-08-04)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v31.1 addition \u2014 interactive \"what's new\" major commit showcase & journey nodes (2026-08-04)",
@@ -4403,7 +4391,7 @@
       "label": "v31 addition \u2014 URL hash filter sync, screen reader accessibility, PWA v31 cache bump & SEO verification (2026-08-04)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v31 addition \u2014 url hash filter sync, screen reader accessibility, pwa v31 cache bump & seo verification (2026-08-04)",
@@ -4415,7 +4403,7 @@
       "label": "v32 addition \u2014 PWA offline resilience, reading progress bar, 3D card tilt & journey node j-028 (2026-08-04)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v32 addition \u2014 pwa offline resilience, reading progress bar, 3d card tilt & journey node j-028 (2026-08-04)",
@@ -4427,7 +4415,7 @@
       "label": "v33 addition \u2014 interactive dev terminal, CMDK filter pills, cursor light trail & journey node j-029 (2026-08-04)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v33 addition \u2014 interactive dev terminal, cmdk filter pills, cursor light trail & journey node j-029 (2026-08-04)",
@@ -4439,7 +4427,7 @@
       "label": "v34 addition \u2014 mobile touch UX, iOS safe area & web haptics suite, journey node j-030 (2026-08-08)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v34 addition \u2014 mobile touch ux, ios safe area & web haptics suite, journey node j-030 (2026-08-08)",
@@ -4451,7 +4439,7 @@
       "label": "v35 addition \u2014 motion, typed captions, count-up counters, view transitions & journey node j-031 (2026-08-08)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v35 addition \u2014 motion, typed captions, count-up counters, view transitions & journey node j-031 (2026-08-08)",
@@ -4463,7 +4451,7 @@
       "label": "v36 addition \u2014 visual polish, performance, skill matrix & mobile UX suite, journey node j-032 (2026-08-08)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v36 addition \u2014 visual polish, performance, skill matrix & mobile ux suite, journey node j-032 (2026-08-08)",
@@ -4475,7 +4463,7 @@
       "label": "v37 addition \u2014 guided cross-page site tour with spotlight overlay, journey node j-033 (2026-08-08)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v37 addition \u2014 guided cross-page site tour with spotlight overlay, journey node j-033 (2026-08-08)",
@@ -4487,7 +4475,7 @@
       "label": "v38 addition \u2014 Web Audio micro-sounds, reading metrics, live result indicators & verification suite, journey node j-034 (2026-08-08)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "v38 addition \u2014 web audio micro-sounds, reading metrics, live result indicators & verification suite, journey node j-034 (2026-08-08)",
@@ -4499,7 +4487,7 @@
       "label": "RFC_PORTFOLIO_OS_SDK.md",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "rfc_portfolio_os_sdk.md",
@@ -4511,7 +4499,7 @@
       "label": "1. Executive Summary",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "1. executive summary",
@@ -4523,7 +4511,7 @@
       "label": "2. Productization Archetypes",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "2. productization archetypes",
@@ -4535,7 +4523,7 @@
       "label": "3. Architecture Decoupling Boundary",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "3. architecture decoupling boundary",
@@ -4547,7 +4535,7 @@
       "label": "4.1. Configuration Schema (`portfolio.config.yaml`)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.1. configuration schema (`portfolio.config.yaml`)",
@@ -4559,7 +4547,7 @@
       "label": "4.2. Zero-Leak Cryptographic Protocol",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.2. zero-leak cryptographic protocol",
@@ -4571,7 +4559,7 @@
       "label": "4.3. Universal Verification Engine",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4.3. universal verification engine",
@@ -4583,7 +4571,7 @@
       "label": "4. Technical Specifications",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "4. technical specifications",
@@ -4595,7 +4583,7 @@
       "label": "5. Implementation Roadmap",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "5. implementation roadmap",
@@ -4607,7 +4595,7 @@
       "label": "Layer 1: The Zero-Dependency Starter Template (Target: Phase 1)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "layer 1: the zero-dependency starter template (target: phase 1)",
@@ -4619,7 +4607,7 @@
       "label": "Layer 2: Embedded HUD & Runtime Library (Target: Phase 2)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "layer 2: embedded hud & runtime library (target: phase 2)",
@@ -4631,7 +4619,7 @@
       "label": "Layer 3: Unified Developer CLI (Target: Phase 3)",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "layer 3: unified developer cli (target: phase 3)",
@@ -4643,7 +4631,7 @@
       "label": "Phase 1: Engine & Content Separation",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "phase 1: engine & content separation",
@@ -4655,7 +4643,7 @@
       "label": "Phase 2: Template Extraction & Hygiene",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "phase 2: template extraction & hygiene",
@@ -4667,7 +4655,7 @@
       "label": "Phase 3: Community Release & Package Distribution",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "phase 3: community release & package distribution",
@@ -4679,7 +4667,7 @@
       "label": "RFC: Portfolio-OS \u2014 Open Architecture, Template & Developer SDK",
       "_origin": "ast",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "rfc: portfolio-os \u2014 open architecture, template & developer sdk",
@@ -4884,7 +4872,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "53.20.0"
+      "version": "53.21.0"
     },
     {
       "id": "scripts_benchmark_bundle",
@@ -8557,7 +8545,7 @@
       "label": "Portfolio-OS",
       "_origin": "semantic",
       "community": 1,
-      "community_name": "Portfolio Website Tracker \u2014 v53.20",
+      "community_name": "PortfolioWebsite_TRACKER.md",
       "file_type": "concept",
       "norm_label": "portfolio-os",
       "rationale": "Strategic plan to transform the codebase into a zero-dependency developer SDK.",
@@ -10549,7 +10537,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/graph-modal.js",
-      "source_location": "L667",
+      "source_location": "L669",
       "weight": 1.0
     },
     {
@@ -10561,7 +10549,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/graph-modal.js",
-      "source_location": "L669",
+      "source_location": "L671",
       "weight": 1.0
     },
     {
@@ -10573,7 +10561,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/graph-modal.js",
-      "source_location": "L672",
+      "source_location": "L674",
       "weight": 1.0
     },
     {
@@ -10730,6 +10718,18 @@
       "context": "call",
       "source_file": "assets/js/modules/graph-modal.js",
       "source_location": "L625",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_graph_modal_opengraphmodal",
+      "target": "assets_js_modules_graph_modal_render",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "assets/js/modules/graph-modal.js",
+      "source_location": "L640",
       "weight": 1.0
     },
     {
@@ -15709,7 +15709,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/graph-modal.js",
-      "source_location": "L645",
+      "source_location": "L647",
       "weight": 1.0
     },
     {
@@ -15720,7 +15720,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/graph-modal.js",
-      "source_location": "L720",
+      "source_location": "L722",
       "weight": 1.0
     },
     {
@@ -16561,17 +16561,6 @@
     },
     {
       "source": "dev_logs_portfoliowebsite_tracker",
-      "target": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
       "target": "dev_logs_portfoliowebsite_tracker_state_of_play",
       "relation": "contains",
       "_origin": "ast",
@@ -16582,7 +16571,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
       "relation": "contains",
       "_origin": "ast",
@@ -16593,7 +16582,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
       "relation": "contains",
       "_origin": "ast",
@@ -16604,7 +16593,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v22_addition_kec_it_club_introduction_to_git_2024_card_closed_no_source_file_available",
       "relation": "contains",
       "_origin": "ast",
@@ -16615,7 +16604,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v23_addition_latest_site_refinements_2026_07_18",
       "relation": "contains",
       "_origin": "ast",
@@ -16626,7 +16615,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v24_addition_site_optimization_pass_mobile_legend_line_break_fix_2026_07_18",
       "relation": "contains",
       "_origin": "ast",
@@ -16637,7 +16626,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v25_addition_bug_check_sweep_pages_1_3_4_2026_07_27",
       "relation": "contains",
       "_origin": "ast",
@@ -16648,7 +16637,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v26_addition_bug_check_sweep_page_2_about_2026_07_27",
       "relation": "contains",
       "_origin": "ast",
@@ -16659,7 +16648,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v28_addition_site_wide_bug_audit_structural_hardening_pass_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -16670,7 +16659,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v29_addition_site_wide_performance_pwa_seo_styling_upgrades_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -16681,7 +16670,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v30_addition_pwa_service_worker_skip_links_font_preconnects_content_visibility_optimization_expanded_verification_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -16692,7 +16681,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v31_addition_url_hash_filter_sync_screen_reader_accessibility_pwa_v31_cache_bump_seo_verification_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -16703,7 +16692,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v31_1_addition_interactive_what_s_new_major_commit_showcase_journey_nodes_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -16714,7 +16703,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v32_addition_pwa_offline_resilience_reading_progress_bar_3d_card_tilt_journey_node_j_028_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -16725,7 +16714,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v33_addition_interactive_dev_terminal_cmdk_filter_pills_cursor_light_trail_journey_node_j_029_2026_08_04",
       "relation": "contains",
       "_origin": "ast",
@@ -16736,7 +16725,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v34_addition_mobile_touch_ux_ios_safe_area_web_haptics_suite_journey_node_j_030_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -16747,7 +16736,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v35_addition_motion_typed_captions_count_up_counters_view_transitions_journey_node_j_031_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -16758,7 +16747,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v36_addition_visual_polish_performance_skill_matrix_mobile_ux_suite_journey_node_j_032_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -16769,7 +16758,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v37_addition_guided_cross_page_site_tour_with_spotlight_overlay_journey_node_j_033_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -16780,7 +16769,7 @@
       "weight": 1.0
     },
     {
-      "source": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_20",
+      "source": "dev_logs_portfoliowebsite_tracker",
       "target": "dev_logs_portfoliowebsite_tracker_v38_addition_web_audio_micro_sounds_reading_metrics_live_result_indicators_verification_suite_journey_node_j_034_2026_08_08",
       "relation": "contains",
       "_origin": "ast",
@@ -21227,5 +21216,5 @@
       "source_file": "dev-logs/EVOLUTION_AREAS.md"
     }
   ],
-  "built_at_commit": "80ecee800d9e16645cc696c2dc908bba1b86ad8a"
+  "built_at_commit": "3e2a6ae759bd8f6ac63be9e653494d81d6af0637"
 }

@@ -1,10 +1,10 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v53.20)
+   SHARED SCRIPT — aaradhyadt.github.io (v53.21)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v53.20) — Tiered Parallel ─────────── */
+/* ── Dynamic Module Loader (v53.21) — Tiered Parallel ─────────── */
 window.__modulesLoadedPromise = (async function () {
   // Modules grouped by dependency tier — each group loads concurrently via
   // Promise.all, but tiers execute sequentially (tier N+1 waits for tier N).
