@@ -1,4 +1,4 @@
-# Portfolio Website Tracker — v53.19
+﻿# Portfolio Website Tracker — v53.20
 
 Last updated: _2026-09-10_
 
@@ -16,7 +16,11 @@ Last updated: _2026-09-10_
     - **Track 2 (Cross-Platform Sync)**: Implement `python scripts/site_automation.py sync` for seamless POSIX/Linux/macOS developer environments.
     - **Track 3 (WebAuthn / Passkeys)**: Integrated hardware-bound FIDO2 authenticator challenge & passkey registration for Tier 2 Master Admin verification with full zero-leak fallback, modal triggers, and unit tests.
     - **Track 4 (ESM & Waterfall Benchmarking)**: Built `scripts/benchmark_bundle.py` for cold-start network waterfall comparisons across 3G, 4G, and fiber simulation.
-  - **High-Performance 3D WebGL Knowledge Graph HUD (`assets/js/modules/graph-modal.js`)**: Engineered zero-dependency WebGL 2 AST knowledge graph visualizer (723 nodes, 982 edges) modeled after Google CodeWiki's architecture. Features hardware instanced draw calls (`drawElementsInstanced` / `drawArrays`), demand-driven (dirty) throttled render loop with auto-cancellation on idle/dismiss, hybrid Canvas backplate + DOM tooltip foreplate, raycast hover detection, and multi-surface triggers via Dev Terminal (`graph`, `topology`, `ast`), CmdK search palette, and `Shift+G` hotkey. Fully verified across all 24 diagnostic categories.
+  - **High-Performance 3D WebGL Knowledge Graph HUD (`assets/js/modules/graph-modal.js`)**: Engineered zero-dependency WebGL 2 AST knowledge graph visualizer (723 nodes, 982 edges) modeled after Google CodeWiki's architecture. Features hardware instanced draw calls (`drawElementsInstanced` / `drawArrays`), demand-driven (dirty) throttled render loop with auto-cancellation on idle/dismiss, hybrid Canvas backplate + DOM tooltip foreplate, raycast hover detection, and multi-surface triggers via Dev Terminal (`graph`, `topology`, `ast`), CmdK search palette, and `Shift+G` hotkey.
+  - **3D Knowledge Graph WebGL Rendering Engine Calibration (`assets/js/modules/graph-modal.js`)**:
+    - **Dynamic Viewport Synchronization**: Bound `ResizeObserver` to `#graphCanvasWrap` with staggered multi-tick initial triggers (0ms, 50ms, 200ms) ensuring guaranteed pixel dimensions post modal transition.
+    - **Visual Geometry & Node Illumination**: Scaled sphere geometry mesh radius to 1.75 (3.2x enlargement), added directional key lighting with Fresnel rim glow shader to all nodes, and enhanced connector line alpha to 0.38 with warm gold illumination.
+    - **Dynamic Hardware Instancing**: Implemented dynamic buffer upload (`gl.bufferSubData`) for `aInstanceScale` delivering real-time 2.4x hover node scaling, and expanded raycast hit radius to 0.065 NDC for effortless mouse/touch selection. Fully verified across all 24 diagnostic categories.
 
 - **v52 (Major Release) — Visual Regression Engine & Native Dynamic ESM Suite.** Shipped visual regression engine & native dynamic esm suite.
   - Core updates and architectural improvements for v52
@@ -271,7 +275,7 @@ Last updated: _2026-09-10_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v53.19`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v53.20`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

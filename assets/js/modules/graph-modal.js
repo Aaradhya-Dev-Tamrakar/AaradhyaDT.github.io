@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: graph-modal.js — aaradhyadt.github.io (v53.19)
+   MODULE: graph-modal.js — aaradhyadt.github.io (v53.20)
    High-Performance 3D WebGL Knowledge Graph HUD (CodeWiki Architecture)
    Visualizes the repository's AST & semantic knowledge graph (720+ nodes,
    980+ links) using zero-dependency WebGL 2, hardware instancing,
@@ -19,9 +19,11 @@
   let lastMouseY = 0;
   let rotX = 0.35;
   let rotY = -0.45;
-  let cameraDist = 110.0;
+  let cameraDist = 95.0;
   let hoveredNodeIndex = -1;
   let filterQuery = '';
+  let resizeObserver = null;
+  let listenersAttached = false;
 
   // Node position & community color cache
   let nodePositions = []; // [x, y, z] per node
@@ -35,6 +37,7 @@
   let lineVAO = null;
   let instanceMatrixBuffer = null;
   let instanceColorBuffer = null;
+  let nodeScaleBuffer = null;
   let linePositionBuffer = null;
   let lineIndicesCount = 0;
 
@@ -122,10 +125,12 @@
     uniform mat4 uViewMatrix;
 
     out vec3 vColor;
+    out vec3 vNormal;
     out vec3 vFragPos;
 
     void main() {
       vColor = aInstanceColor;
+      vNormal = normalize(aVertexPos);
       vec3 pos = aVertexPos * aInstanceScale + aInstanceOffset;
       vFragPos = pos;
       gl_Position = uProjMatrix * uViewMatrix * vec4(pos, 1.0);
@@ -135,12 +140,19 @@
   const nodeFS = `#version 300 es
     precision highp float;
     in vec3 vColor;
+    in vec3 vNormal;
     in vec3 vFragPos;
     out vec4 fragColor;
 
     void main() {
-      // Soft lighting rim effect
-      fragColor = vec4(vColor, 0.92);
+      // Directional light + ambient + rim emissive glow
+      vec3 lightDir = normalize(vec3(0.5, 0.8, 1.0));
+      float diff = max(dot(vNormal, lightDir), 0.0);
+      float rim = 1.0 - max(dot(vNormal, vec3(0.0, 0.0, 1.0)), 0.0);
+      rim = smoothstep(0.4, 0.9, rim);
+      
+      vec3 finalColor = vColor * (0.65 + 0.5 * diff) + (vColor + 0.3) * (0.45 * rim);
+      fragColor = vec4(finalColor, 0.98);
     }
   `;
 
@@ -160,8 +172,8 @@
     out vec4 fragColor;
 
     void main() {
-      // Subtle glowing connector line
-      fragColor = vec4(0.83, 0.66, 0.35, 0.18);
+      // Clearly visible glowing connector lines with amber/gold tint
+      fragColor = vec4(0.88, 0.72, 0.40, 0.38);
     }
   `;
 
@@ -196,7 +208,7 @@
   function createSphereMesh(glCtx) {
     const lats = 8;
     const lons = 8;
-    const radius = 0.55;
+    const radius = 1.75;
     const positions = [];
     for (let i = 0; i <= lats; i++) {
       const theta = (i * Math.PI) / lats;
@@ -280,9 +292,9 @@
     gl.vertexAttribPointer(2, 3, gl.FLOAT, false, 0, 0);
     gl.vertexAttribDivisor(2, 1); // instanced!
 
-    const scaleBuffer = gl.createBuffer();
+    nodeScaleBuffer = gl.createBuffer();
     const scales = new Float32Array(GRAPH_DATA.nodes.length).fill(1.0);
-    gl.bindBuffer(gl.ARRAY_BUFFER, scaleBuffer);
+    gl.bindBuffer(gl.ARRAY_BUFFER, nodeScaleBuffer);
     gl.bufferData(gl.ARRAY_BUFFER, scales, gl.DYNAMIC_DRAW);
     gl.enableVertexAttribArray(3);
     gl.vertexAttribPointer(3, 1, gl.FLOAT, false, 0, 0);
@@ -429,6 +441,17 @@
       gl.useProgram(nodeProgram);
       gl.uniformMatrix4fv(gl.getUniformLocation(nodeProgram, 'uProjMatrix'), false, projMatrix);
       gl.uniformMatrix4fv(gl.getUniformLocation(nodeProgram, 'uViewMatrix'), false, viewMatrix);
+      
+      // Dynamic scale update for hovered node highlight
+      if (nodeScaleBuffer && GRAPH_DATA.nodes) {
+        const scales = new Float32Array(GRAPH_DATA.nodes.length).fill(1.0);
+        if (hoveredNodeIndex >= 0 && hoveredNodeIndex < scales.length) {
+          scales[hoveredNodeIndex] = 2.4;
+        }
+        gl.bindBuffer(gl.ARRAY_BUFFER, nodeScaleBuffer);
+        gl.bufferSubData(gl.ARRAY_BUFFER, 0, scales);
+      }
+
       gl.bindVertexArray(nodeVAO);
       gl.drawElementsInstanced(
         gl.TRIANGLES,
@@ -453,7 +476,7 @@
     const ndcX = (x / rect.width) * 2 - 1;
     const ndcY = -(y / rect.height) * 2 + 1;
 
-    const aspect = rect.width / rect.height;
+    const aspect = rect.width / (rect.height || 1);
     const proj = new Float32Array(16);
     perspective(proj, Math.PI / 4, aspect, 1.0, 500.0);
     const view = new Float32Array(16);
@@ -461,7 +484,7 @@
     const pv = new Float32Array(16);
     multiplyMatrices(pv, proj, view);
 
-    let closestDist = 0.045; // screen threshold
+    let closestDist = 0.065; // screen threshold
     let closestIndex = -1;
 
     const count = GRAPH_DATA.nodes.length;
@@ -595,6 +618,15 @@
 
     bindInteractions();
 
+    const wrap = document.getElementById('graphCanvasWrap');
+    if (wrap && typeof ResizeObserver !== 'undefined') {
+      if (resizeObserver) resizeObserver.disconnect();
+      resizeObserver = new ResizeObserver(() => {
+        requestRender();
+      });
+      resizeObserver.observe(wrap);
+    }
+
     document.getElementById('graphModalClose').addEventListener('click', closeGraphModal);
     graphModal.addEventListener('click', (e) => {
       if (e.target === graphModal) closeGraphModal();
@@ -604,8 +636,10 @@
     document.body.style.overflow = 'hidden';
     if (typeof playAudioCue === 'function') playAudioCue('open');
 
-    // Trigger initial render
+    // Trigger initial renders (immediate + after transition settles)
     requestRender();
+    setTimeout(requestRender, 50);
+    setTimeout(requestRender, 200);
   }
 
   function bindInteractions() {
@@ -617,32 +651,36 @@
       lastMouseY = e.clientY;
     });
 
-    window.addEventListener('mousemove', (e) => {
-      if (isDragging) {
-        const dx = e.clientX - lastMouseX;
-        const dy = e.clientY - lastMouseY;
-        lastMouseX = e.clientX;
-        lastMouseY = e.clientY;
+    if (!listenersAttached) {
+      listenersAttached = true;
 
-        rotY += dx * 0.008;
-        rotX += dy * 0.008;
-        rotX = Math.max(-Math.PI / 2.2, Math.min(Math.PI / 2.2, rotX));
-        requestRender();
-      } else if (graphModal && graphModal.classList.contains('open')) {
-        const nodeIdx = findNodeUnderPointer(e.clientX, e.clientY);
-        if (nodeIdx !== hoveredNodeIndex) {
-          hoveredNodeIndex = nodeIdx;
-          updateTooltip(nodeIdx, e.clientX, e.clientY);
+      window.addEventListener('mousemove', (e) => {
+        if (isDragging) {
+          const dx = e.clientX - lastMouseX;
+          const dy = e.clientY - lastMouseY;
+          lastMouseX = e.clientX;
+          lastMouseY = e.clientY;
+
+          rotY += dx * 0.008;
+          rotX += dy * 0.008;
+          rotX = Math.max(-Math.PI / 2.2, Math.min(Math.PI / 2.2, rotX));
           requestRender();
-        } else if (nodeIdx >= 0) {
-          updateTooltip(nodeIdx, e.clientX, e.clientY);
+        } else if (graphModal && graphModal.classList.contains('open')) {
+          const nodeIdx = findNodeUnderPointer(e.clientX, e.clientY);
+          if (nodeIdx !== hoveredNodeIndex) {
+            hoveredNodeIndex = nodeIdx;
+            updateTooltip(nodeIdx, e.clientX, e.clientY);
+            requestRender();
+          } else if (nodeIdx >= 0) {
+            updateTooltip(nodeIdx, e.clientX, e.clientY);
+          }
         }
-      }
-    });
+      });
 
-    window.addEventListener('mouseup', () => {
-      isDragging = false;
-    });
+      window.addEventListener('mouseup', () => {
+        isDragging = false;
+      });
+    }
 
     canvas.addEventListener(
       'wheel',
@@ -686,6 +724,10 @@
     if (animationFrameId) {
       cancelAnimationFrame(animationFrameId);
       animationFrameId = null;
+    }
+    if (resizeObserver) {
+      resizeObserver.disconnect();
+      resizeObserver = null;
     }
     const tooltip = document.getElementById('graphNodeTooltip');
     if (tooltip) tooltip.classList.remove('active');
