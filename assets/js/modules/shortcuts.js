@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: shortcuts.js — aaradhyadt.github.io (v53.17)
+   MODULE: shortcuts.js — aaradhyadt.github.io (v53.18)
    Keyboard shortcuts cheat sheet HUD modal & navigation bindings.
    ============================================================ */
 

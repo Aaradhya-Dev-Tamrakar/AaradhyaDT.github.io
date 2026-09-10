@@ -1,16 +1,16 @@
-# Graph Report - AaradhyaDT.github.io  (2026-09-09)
+# Graph Report - AaradhyaDT.github.io  (2026-09-10)
 
 ## Corpus Check
-- 48 files · ~453,754 words
+- 48 files · ~453,798 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 722 nodes · 981 edges · 145 communities (43 shown, 90 thin omitted)
+- 723 nodes · 982 edges · 145 communities (43 shown, 90 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 57 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e6e076d7`
+- Built from commit: `43489467`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- PortfolioWebsite_TRACKER.md
+- Portfolio Website Tracker — v53.18
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -153,13 +153,13 @@
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `log_warning()` - 16 edges
-5. `get_html_files()` - 14 edges
-6. `cmd_sync()` - 13 edges
-7. `initTour()` - 12 edges
-8. `Aaradhya Dev Tamrakar` - 12 edges
-9. `Aaradhya Dev Tamrakar CV` - 12 edges
-10. `initGlobalSearch()` - 11 edges
+4. `Portfolio Website Tracker — v53.18` - 21 edges
+5. `log_warning()` - 16 edges
+6. `get_html_files()` - 14 edges
+7. `cmd_sync()` - 13 edges
+8. `initTour()` - 12 edges
+9. `Aaradhya Dev Tamrakar` - 12 edges
+10. `Aaradhya Dev Tamrakar CV` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Certificate: AI-Assisted Product Launch` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
@@ -201,9 +201,9 @@ Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developer
 Cohesion: 0.16
 Nodes (29): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), authenticateWithPasskey(), bufferToHex(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails() (+21 more)
 
-### Community 5 - "PortfolioWebsite_TRACKER.md"
+### Community 5 - "Portfolio Website Tracker — v53.18"
 Cohesion: 0.05
-Nodes (36): Evidence & Verification Log — v20 additions, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18), v25 addition — bug-check sweep, pages 1/3/4 (2026-07-27) (+28 more)
+Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.18, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
 
 ### Community 6 - "site_automation.py"
 Cohesion: 0.12

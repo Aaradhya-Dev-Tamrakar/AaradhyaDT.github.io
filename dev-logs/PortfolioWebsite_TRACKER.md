@@ -1,11 +1,12 @@
-# Portfolio Website Tracker — v53.17
+# Portfolio Website Tracker — v53.18
 
-Last updated: _2026-09-09_
+Last updated: _2026-09-10_
 
 
 
 - **Future Roadmap & Strategic Architecture (Backlog)**:
   - **[RFC] Portfolio-OS SDK & Template Framework**: Strategic initiative to decouple the portfolio engine (zero-dependency Vanilla ES modules, CmdK, interactive terminal, Web Audio FX, AES-256-GCM encrypted VIP gates, 24-category diagnostic suite, and native MCP server) into an open-source starter template and developer SDK. Full design specification logged in [`dev-logs/RFC_PORTFOLIO_OS_SDK.md`](RFC_PORTFOLIO_OS_SDK.md).
+  - **[Architecture Note] High-Performance 3D WebGL & Demand-Driven Rendering Architecture**: Technical case study on Google CodeWiki (`codewiki.google`), documenting hardware instancing (`InstancedMesh`), event-driven loop throttling, Web Worker physics computation, and zero-framework implementation blueprints for future spatial knowledge graphs. Documented in [`dev-logs/REFERENCE_HIGH_PERFORMANCE_3D_WEBGL.md`](REFERENCE_HIGH_PERFORMANCE_3D_WEBGL.md).
 
 - **v53 (Major Release) — Visual Regression Engine & Native Dynamic ESM Suite.** Shipped visual regression engine & native dynamic esm suite.
   - Core updates and architectural improvements for v53
@@ -269,7 +270,7 @@ Last updated: _2026-09-09_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v53.17`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v53.18`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
