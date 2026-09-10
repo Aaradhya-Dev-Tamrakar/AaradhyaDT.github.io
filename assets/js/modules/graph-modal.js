@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: graph-modal.js — aaradhyadt.github.io (v53.22)
+   MODULE: graph-modal.js — aaradhyadt.github.io (v53.23)
    High-Performance ExplainGit-Style 2D & 3D WebGL Knowledge Graph HUD
    Dual-mode architecture:
    - 2D Mode: ExplainGit-inspired planar force clusters, hairline dark
@@ -827,7 +827,16 @@
   /* ── Modal Creation & Lifecycle ───────────────────────────── */
   function openGraphModal() {
     if (typeof GRAPH_DATA === 'undefined') {
-      console.warn('[Graph HUD] GRAPH_DATA is not defined yet.');
+      const existing = document.querySelector('script[src*="graph-data.js"]');
+      if (!existing) {
+        const s = document.createElement('script');
+        s.src = 'assets/js/data/graph-data.js';
+        s.onload = () => openGraphModal();
+        s.onerror = () => console.error('[Graph HUD] Failed to load assets/js/data/graph-data.js');
+        document.head.appendChild(s);
+        return;
+      }
+      setTimeout(openGraphModal, 80);
       return;
     }
 

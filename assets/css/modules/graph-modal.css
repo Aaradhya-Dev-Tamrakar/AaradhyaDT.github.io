@@ -1,6 +1,23 @@
 /* ── 3D AST Knowledge Graph HUD Modal ───────────────────────── */
 .graph-modal-overlay {
-  z-index: 10050;
+  position: fixed !important;
+  inset: 0 !important;
+  z-index: 10050 !important;
+  background: rgba(10, 10, 12, 0.82) !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.28s ease, visibility 0.28s ease;
+  padding: 1.5rem;
+}
+
+.graph-modal-overlay.open {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .graph-modal-card {
