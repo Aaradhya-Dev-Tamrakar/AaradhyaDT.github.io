@@ -1,0 +1,195 @@
+/* ── 3D AST Knowledge Graph HUD Modal ───────────────────────── */
+.graph-modal-overlay {
+  z-index: 10050;
+}
+
+.graph-modal-card {
+  max-width: 950px !important;
+  width: 95% !important;
+  height: 82vh !important;
+  max-height: 850px;
+  display: flex;
+  flex-direction: column;
+  padding: 0 !important;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px var(--line), 0 0 30px var(--accent-a15);
+  background: var(--bg2);
+}
+
+.graph-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 1.4rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--bg);
+  flex-shrink: 0;
+}
+
+.graph-modal-title-group {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.graph-modal-title-group svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.graph-modal-title {
+  font-family: var(--serif);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--heading);
+}
+
+.graph-modal-badge {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-a10);
+  border: 1px solid var(--accent-a25);
+  padding: 0.15rem 0.45rem;
+  border-radius: 4px;
+}
+
+.graph-modal-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.graph-stat-pill {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+}
+
+.graph-canvas-wrap {
+  position: relative;
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  background: #08080a;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.graph-canvas-wrap:active {
+  cursor: grabbing;
+}
+
+#graphWebglCanvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.graph-node-tooltip {
+  position: absolute;
+  pointer-events: none;
+  background: rgba(14, 15, 19, 0.92);
+  border: 1px solid var(--accent-a40);
+  border-radius: 8px;
+  padding: 0.55rem 0.75rem;
+  max-width: 260px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 15px var(--accent-a20);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  opacity: 0;
+  transform: scale(0.95);
+  transition: opacity 0.15s ease, transform 0.15s ease;
+  z-index: 10;
+}
+
+.graph-node-tooltip.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.graph-tooltip-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.4rem;
+  margin-bottom: 0.25rem;
+}
+
+.graph-tooltip-type {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: var(--accent-a12);
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+}
+
+.graph-tooltip-comm {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  color: var(--muted);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.graph-tooltip-title {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 0.2rem;
+  word-break: break-all;
+}
+
+.graph-tooltip-file {
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  color: var(--muted);
+  word-break: break-all;
+}
+
+.graph-controls-hint {
+  position: absolute;
+  bottom: 0.85rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: var(--mono);
+  font-size: 0.66rem;
+  color: rgba(255, 255, 255, 0.45);
+  background: rgba(0, 0, 0, 0.55);
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.graph-error-msg {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--mono);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+@media (max-width: 640px) {
+  .graph-modal-card {
+    width: 98% !important;
+    height: 88vh !important;
+  }
+  .graph-stat-pill {
+    display: none;
+  }
+}

@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Service Worker — Aaradhya Dev Tamrakar Portfolio (v53.18)
+   Service Worker — Aaradhya Dev Tamrakar Portfolio (v53.19)
    Provides offline capability & asset caching for fast return visits.
    ========================================================================== */
 
-const CACHE_NAME = 'aaradhya-portfolio-v53.18';
+const CACHE_NAME = 'aaradhya-portfolio-v53.19';
 
 const STATIC_ASSETS = [
   './',
@@ -28,12 +28,14 @@ const STATIC_ASSETS = [
   './assets/css/modules/access.css',
   './assets/css/modules/terminal.css',
   './assets/css/modules/tour.css',
+  './assets/css/modules/graph-modal.css',
   './assets/css/modules/print.css',
   './assets/js/script.js',
   './assets/js/bg-animations.js',
   './assets/js/data/releases.js',
   './assets/js/data/search-index.js',
   './assets/js/data/resume-data.js',
+  './assets/js/data/graph-data.js',
   './assets/js/modules/constants.js',
   './assets/js/modules/core.js',
   './assets/js/modules/tour.js',
@@ -43,6 +45,7 @@ const STATIC_ASSETS = [
   './assets/js/modules/access.js',
   './assets/js/modules/audio.js',
   './assets/js/modules/terminal.js',
+  './assets/js/modules/graph-modal.js',
   './assets/js/modules/haptics.js',
   './assets/js/modules/home-widgets.js',
   './assets/images/photo.webp',

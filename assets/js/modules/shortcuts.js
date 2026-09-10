@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: shortcuts.js — aaradhyadt.github.io (v53.18)
+   MODULE: shortcuts.js — aaradhyadt.github.io (v53.19)
    Keyboard shortcuts cheat sheet HUD modal & navigation bindings.
    ============================================================ */
 
@@ -69,6 +69,10 @@ function openShortcutsModal() {
               <div class="shortcut-row">
                 <span class="shortcut-label">Audio Micro-Sounds</span>
                 <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>A</kbd></div>
+              </div>
+              <div class="shortcut-row">
+                <span class="shortcut-label">3D Knowledge Graph HUD</span>
+                <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>G</kbd></div>
               </div>
               <div class="shortcut-row">
                 <span class="shortcut-label">Universal Master Close</span>

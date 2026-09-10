@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-10)
 
 ## Corpus Check
-- 48 files · ~453,798 words
+- 50 files · ~459,072 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 723 nodes · 982 edges · 145 communities (43 shown, 90 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 57 edges (avg confidence: 0.86)
+- 744 nodes · 1022 edges · 147 communities (44 shown, 91 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 59 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `43489467`
+- Built from commit: `85f9a822`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,7 +20,7 @@
 - core.js
 - Aaradhya Dev Tamrakar
 - access.js
-- Portfolio Website Tracker — v53.18
+- Portfolio Website Tracker — v53.19
 - site_automation.py
 - tour.js
 - aaradhyadt.github.io
@@ -148,12 +148,14 @@
 - benchmark_bundle.py
 - MockElement
 - shortcuts.js
+- graph-modal.js
+- graph-data.js
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v53.18` - 21 edges
+4. `Portfolio Website Tracker — v53.19` - 21 edges
 5. `log_warning()` - 16 edges
 6. `get_html_files()` - 14 edges
 7. `cmd_sync()` - 13 edges
@@ -179,7 +181,7 @@
 ## Hyperedges (group relationships)
 - **Flagship Engineering Projects** — concept_spark, concept_biasaperture, concept_novaoptimizer [EXTRACTED 0.85]
 
-## Communities (145 total, 90 thin omitted)
+## Communities (147 total, 91 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.10
@@ -201,9 +203,9 @@ Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developer
 Cohesion: 0.16
 Nodes (29): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), authenticateWithPasskey(), bufferToHex(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails() (+21 more)
 
-### Community 5 - "Portfolio Website Tracker — v53.18"
+### Community 5 - "Portfolio Website Tracker — v53.19"
 Cohesion: 0.05
-Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.18, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
+Nodes (37): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.19, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+29 more)
 
 ### Community 6 - "site_automation.py"
 Cohesion: 0.12
@@ -353,20 +355,24 @@ Nodes (5): closeModal(), MockDocument, MockElement, openModal(), toggleModal()
 Cohesion: 1.00
 Nodes (3): closeShortcutsModal(), openShortcutsModal(), toggleShortcutsModal()
 
+### Community 145 - "graph-modal.js"
+Cohesion: 0.23
+Nodes (18): bindInteractions(), buildEdgeBuffers(), closeGraphModal(), computeViewMatrix(), createProgram(), createShader(), createSphereMesh(), escapeHtml() (+10 more)
+
 ## Knowledge Gaps
-- **210 isolated node(s):** `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS`, `KEY_CACHE` (+205 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 348 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **90 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **211 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+206 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 350 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **91 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `renderSiteFooter()` connect `ui.js` to `core.js`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.006) - this node is a cross-community bridge._
 - **Why does `loadGA4()` connect `core.js` to `script.js`?**
   _High betweenness centrality (0.003) - this node is a cross-community bridge._
-- **What connects `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX` to the rest of the system?**
-  _210 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
+  _211 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
 - **Should `ui.js` be split into smaller, more focused modules?**

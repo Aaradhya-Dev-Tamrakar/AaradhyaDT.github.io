@@ -14,7 +14,9 @@ function parseTerminalCommand(input) {
     'whoami': 'about',
     'cat': 'help',
     'ping': 'stats',
-    'cls': 'clear'
+    'cls': 'clear',
+    'topology': 'graph',
+    'ast': 'graph'
   };
 
   const cmd = aliases[rawCmd] || rawCmd;
@@ -49,6 +51,8 @@ test('Terminal: aliases map correctly to canonical commands', () => {
   assert.strictEqual(parseTerminalCommand('whoami').cmd, 'about');
   assert.strictEqual(parseTerminalCommand('cls').cmd, 'clear');
   assert.strictEqual(parseTerminalCommand('ping').cmd, 'stats');
+  assert.strictEqual(parseTerminalCommand('topology').cmd, 'graph');
+  assert.strictEqual(parseTerminalCommand('ast').cmd, 'graph');
 });
 
 test('Terminal: resolveNavigationTarget resolves valid and invalid page targets', () => {

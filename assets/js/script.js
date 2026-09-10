@@ -1,10 +1,10 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v53.18)
+   SHARED SCRIPT — aaradhyadt.github.io (v53.19)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v53.18) — Tiered Parallel ─────────── */
+/* ── Dynamic Module Loader (v53.19) — Tiered Parallel ─────────── */
 window.__modulesLoadedPromise = (async function () {
   // Modules grouped by dependency tier — each group loads concurrently via
   // Promise.all, but tiers execute sequentially (tier N+1 waits for tier N).
@@ -16,6 +16,7 @@ window.__modulesLoadedPromise = (async function () {
       'assets/js/data/releases.js',
       'assets/js/data/search-index.js',
       'assets/js/data/resume-data.js',
+      'assets/js/data/graph-data.js',
       'assets/js/modules/constants.js',
     ],
     // Tier 1 — Core runtime (depends on data/constants globals)
@@ -31,6 +32,7 @@ window.__modulesLoadedPromise = (async function () {
       'assets/js/modules/access.js',
       'assets/js/modules/audio.js',
       'assets/js/modules/terminal.js',
+      'assets/js/modules/graph-modal.js',
       'assets/js/modules/haptics.js',
       'assets/js/modules/home-widgets.js',
     ],

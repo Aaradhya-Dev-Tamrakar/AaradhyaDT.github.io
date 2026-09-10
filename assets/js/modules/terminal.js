@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v53.18)
+   MODULE: terminal.js — aaradhyadt.github.io (v53.19)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -38,6 +38,7 @@
 <span class="term-green">Available Commands:</span><br>
   <span class="term-gold">skills</span>       - Overview of technical skillset &amp; engineering tools<br>
   <span class="term-gold">radar</span>        - Interactive 5-Domain Skill Radar visualizer<br>
+  <span class="term-gold">graph</span>        - Interactive 3D AST Knowledge Graph HUD (WebGL 2)<br>
   <span class="term-gold">resume</span>       - Open Tailored ATS Resume Generator &amp; Multi-Format Exporter<br>
   <span class="term-gold">projects</span>     - Key engineering &amp; AI/ML projects<br>
   <span class="term-gold">filter [cat]</span> - Filter project cards ('filter aiml', 'filter embedded', 'filter apps')<br>
@@ -155,6 +156,15 @@
         if (typeof initSkillRadar === 'function') initSkillRadar();
         return '<span class="term-green">Interactive Skill Radar rendered.</span>';
       },
+      graph: () => {
+        if (typeof openGraphModal === 'function') {
+          openGraphModal();
+          return '<span class="term-green">Opening 3D Knowledge Graph HUD (WebGL 2)...</span>';
+        }
+        return '<span class="term-gold">Graph visualizer module loading...</span>';
+      },
+      topology: () => COMMANDS.graph(),
+      ast: () => COMMANDS.graph(),
       resume: () => {
         if (typeof openResumeGenerator === 'function') openResumeGenerator();
         return '<span class="term-green">Opening Tailored ATS Resume Generator modal...</span>';
@@ -162,7 +172,7 @@
       stats: () => {
         const achvCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.achievement || []).length : 39;
         const projCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.project || []).length : 30;
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.18';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.19';
         return `
 <span class="term-green">[ADT PORTFOLIO TELEMETRY ${currentVer}]</span><br>
   • <span class="term-gold">Published Projects:</span> ${projCount} verified repositories &amp; systems<br>
@@ -193,7 +203,7 @@
       },
       run: (arg) => {
         const sub = (arg || '').toLowerCase().trim();
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.18';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.19';
         if (sub === 'spark') {
           return `
 <span class="term-green">[SPARK TELEMETRY SIMULATOR ${currentVer}]</span><br>
@@ -373,7 +383,7 @@
         } else {
           checks.push('<span class="term-red">\u2717</span> Search index: SEARCH_STATIC_INDEX not found');
         }
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.18';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.19';
         return `<span class="term-green">[SITE HEALTHCHECK ${currentVer}]</span><br>` + checks.map(c => '  ' + c).join('<br>');
       },
       sound: () => {

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v53.18)
+   MODULE: ui.js — aaradhyadt.github.io (v53.19)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -440,6 +440,11 @@ function initKeyNav() {
 
     if (e.shiftKey && (e.key === 'T' || e.key === 't')) {
       startTour();
+      return;
+    }
+
+    if (e.shiftKey && (e.key === 'G' || e.key === 'g')) {
+      if (typeof openGraphModal === 'function') openGraphModal();
       return;
     }
 
