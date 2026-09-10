@@ -1,9 +1,11 @@
 /* ============================================================
-   MODULE: graph-modal.js — aaradhyadt.github.io (v53.21)
-   High-Performance 3D WebGL Knowledge Graph HUD (CodeWiki Architecture)
-   Visualizes the repository's AST & semantic knowledge graph (720+ nodes,
-   980+ links) using zero-dependency WebGL 2, hardware instancing,
-   and a demand-driven (dirty) throttled render loop.
+   MODULE: graph-modal.js — aaradhyadt.github.io (v53.22)
+   High-Performance ExplainGit-Style 2D & 3D WebGL Knowledge Graph HUD
+   Dual-mode architecture:
+   - 2D Mode: ExplainGit-inspired planar force clusters, hairline dark
+     edges, and real-time neighbor spotlighting with background dimming.
+   - 3D Mode: Hardware-instanced spherical multi-cluster orbit HUD.
+   - Smooth animated morphing between 2D and 3D topologies.
    ============================================================ */
 
 (function initGraphModalModule() {
@@ -17,18 +19,36 @@
   let isDragging = false;
   let lastMouseX = 0;
   let lastMouseY = 0;
-  let rotX = 0.35;
-  let rotY = -0.45;
-  let cameraDist = 140.0;
+
+  // View & mode state
+  let currentMode = '2d'; // '2d' | '3d'
+  let rotX = 0.0;
+  let rotY = 0.0;
+  let targetRotX = 0.35;
+  let targetRotY = -0.45;
+  let panX = 0.0;
+  let panY = 0.0;
+  let cameraDist = 135.0;
   let hoveredNodeIndex = -1;
-  let filterQuery = '';
   let resizeObserver = null;
   let listenersAttached = false;
 
-  // Node position & community color cache
-  let nodePositions = []; // [x, y, z] per node
-  let nodeColors = [];    // [r, g, b] per node
-  let filteredIndices = [];
+  // Morph animation state
+  let isMorphing = false;
+  let morphProgress = 0.0; // 0.0 = 2D, 1.0 = 3D
+  let startMorph = 0.0;
+  let targetMorph = 0.0;
+  let morphStartTime = 0;
+  const MORPH_DURATION = 600; // ms
+
+  // Coordinates & color buffers
+  let nodePositions3D = null;
+  let nodePositions2D = null;
+  let currentPositions = null;
+  let baseColors = null;
+  let currentColors = null;
+  let currentScales = null;
+  let adjacency = []; // Array of Set()
 
   // WebGL resources
   let nodeProgram = null;
@@ -39,20 +59,25 @@
   let instanceColorBuffer = null;
   let nodeScaleBuffer = null;
   let linePositionBuffer = null;
+  let lineColorBuffer = null;
+  let lineVertices = null;
+  let lineColors = null;
   let lineIndicesCount = 0;
 
-  // 10 distinct high-contrast tech accent colors for communities
+  // ExplainGit 12-color high-contrast community palette
   const PALETTE = [
-    [0.83, 0.66, 0.35], // Gold / Primary
-    [0.26, 0.52, 0.96], // Google Blue
-    [0.20, 0.66, 0.33], // Emerald Green
-    [0.92, 0.26, 0.21], // Ruby Red
-    [0.67, 0.28, 0.94], // Royal Purple
-    [0.00, 0.74, 0.83], // Cyan Teal
-    [0.98, 0.45, 0.09], // Amber Orange
-    [0.91, 0.12, 0.39], // Neon Magenta
-    [0.46, 0.78, 0.94], // Light Sky
-    [0.60, 0.80, 0.20], // Lime Green
+    [0.345, 0.651, 1.000], // #58a6ff Signature Blue
+    [0.969, 0.471, 0.729], // #f778ba Rose Pink
+    [0.337, 0.827, 0.392], // #56d364 Mint Green
+    [0.890, 0.702, 0.255], // #e3b341 Warm Gold
+    [1.000, 0.482, 0.447], // #ff7b72 Coral Red
+    [0.737, 0.549, 1.000], // #bc8cff Royal Purple
+    [0.224, 0.773, 0.812], // #39c5cf Electric Teal
+    [1.000, 0.651, 0.341], // #ffa657 Amber Orange
+    [0.475, 0.753, 1.000], // #79c0ff Light Sky
+    [0.494, 0.906, 0.529], // #7ee787 Lime Accent
+    [0.824, 0.659, 1.000], // #d2a8ff Soft Violet
+    [1.000, 0.671, 0.439], // #ffab70 Peach
   ];
 
   function getCommunityColor(commId) {
@@ -60,25 +85,43 @@
     return PALETTE[idx];
   }
 
-  /* ── Layout Generator: Spherical Multi-Cluster Layout ─────── */
-  function generate3DPositions() {
+  /* ── Layout Generator: Dual 2D Planar & 3D Spherical Topologies ── */
+  function generatePositions() {
     if (typeof GRAPH_DATA === 'undefined' || !GRAPH_DATA.nodes) return;
     const nodes = GRAPH_DATA.nodes;
     const count = nodes.length;
-    nodePositions = new Float32Array(count * 3);
-    nodeColors = new Float32Array(count * 3);
-    filteredIndices = [];
 
-    // Group communities to compute cluster centroids
-    const communityCentroids = {};
+    nodePositions3D = new Float32Array(count * 3);
+    nodePositions2D = new Float32Array(count * 3);
+    currentPositions = new Float32Array(count * 3);
+    baseColors = new Float32Array(count * 3);
+    currentColors = new Float32Array(count * 3);
+    currentScales = new Float32Array(count).fill(1.0);
+
+    // Build adjacency graph for real-time spotlight lookups
+    adjacency = Array.from({ length: count }, () => new Set());
+    if (GRAPH_DATA.edges) {
+      for (let i = 0; i < GRAPH_DATA.edges.length; i++) {
+        const [s, t] = GRAPH_DATA.edges[i];
+        if (s < count && t < count) {
+          adjacency[s].add(t);
+          adjacency[t].add(s);
+        }
+      }
+    }
+
+    // Community Centroids
+    const centroids3D = {};
+    const commOrder = [];
     nodes.forEach((n) => {
       const c = n.comm || 0;
-      if (!communityCentroids[c]) {
-        // Deterministic cluster centroid using golden ratio spiral
+      if (!centroids3D[c]) {
+        commOrder.push(c);
+        // 3D Spherical spiral centroids
         const phi = Math.acos(1 - 2 * ((c * 17) % 100) / 100);
         const theta = Math.PI * (1 + Math.sqrt(5)) * (c * 7);
         const radius = 35 + ((c * 13) % 25);
-        communityCentroids[c] = [
+        centroids3D[c] = [
           radius * Math.sin(phi) * Math.cos(theta),
           radius * Math.sin(phi) * Math.sin(theta),
           radius * Math.cos(phi),
@@ -86,31 +129,55 @@
       }
     });
 
+    // 2D ExplainGit Planar centroids (distributed radially on golden spiral)
+    const centroids2D = {};
+    commOrder.forEach((c, idx) => {
+      const angle = idx * 2.3999632; // golden angle
+      const r = Math.sqrt(idx + 1) * 16.5 + 10.0;
+      centroids2D[c] = [r * Math.cos(angle), r * Math.sin(angle), 0.0];
+    });
+
     for (let i = 0; i < count; i++) {
       const n = nodes[i];
-      const centroid = communityCentroids[n.comm || 0] || [0, 0, 0];
-      // Offset within cluster
+      const comm = n.comm || 0;
+
+      // Deterministic spread inside cluster
       const u = ((i * 37) % 100) / 100;
       const v = ((i * 59) % 100) / 100;
-      const r = 4 + (u * 12);
-      const theta = 2 * Math.PI * v;
-      const phi = Math.PI * (u - 0.5);
 
-      const x = centroid[0] + r * Math.cos(phi) * Math.cos(theta);
-      const y = centroid[1] + r * Math.sin(phi);
-      const z = centroid[2] + r * Math.cos(phi) * Math.sin(theta);
+      // 1. 3D Spherical Cluster offset
+      const c3 = centroids3D[comm] || [0, 0, 0];
+      const r3 = 4 + (u * 12);
+      const theta3 = 2 * Math.PI * v;
+      const phi3 = Math.PI * (u - 0.5);
 
-      nodePositions[i * 3] = x;
-      nodePositions[i * 3 + 1] = y;
-      nodePositions[i * 3 + 2] = z;
+      nodePositions3D[i * 3] = c3[0] + r3 * Math.cos(phi3) * Math.cos(theta3);
+      nodePositions3D[i * 3 + 1] = c3[1] + r3 * Math.sin(phi3);
+      nodePositions3D[i * 3 + 2] = c3[2] + r3 * Math.cos(phi3) * Math.sin(theta3);
 
-      const rgb = getCommunityColor(n.comm);
-      nodeColors[i * 3] = rgb[0];
-      nodeColors[i * 3 + 1] = rgb[1];
-      nodeColors[i * 3 + 2] = rgb[2];
+      // 2. 2D Planar Cluster offset
+      const c2 = centroids2D[comm] || [0, 0, 0];
+      const r2 = 2.5 + (u * 11.0);
+      const theta2 = 2 * Math.PI * v;
 
-      filteredIndices.push(i);
+      nodePositions2D[i * 3] = c2[0] + r2 * Math.cos(theta2);
+      nodePositions2D[i * 3 + 1] = c2[1] + r2 * Math.sin(theta2);
+      nodePositions2D[i * 3 + 2] = 0.0;
+
+      // Base color assignment
+      const rgb = getCommunityColor(comm);
+      baseColors[i * 3] = rgb[0];
+      baseColors[i * 3 + 1] = rgb[1];
+      baseColors[i * 3 + 2] = rgb[2];
+
+      currentColors[i * 3] = rgb[0];
+      currentColors[i * 3 + 1] = rgb[1];
+      currentColors[i * 3 + 2] = rgb[2];
     }
+
+    // Set initial position buffer according to currentMode
+    const src = currentMode === '3d' ? nodePositions3D : nodePositions2D;
+    currentPositions.set(src);
   }
 
   /* ── WebGL Shader Sources ─────────────────────────────────── */
@@ -142,16 +209,21 @@
     in vec3 vColor;
     in vec3 vNormal;
     in vec3 vFragPos;
+    uniform float uModeProgress; // 0.0 = 2D flat, 1.0 = 3D lit
     out vec4 fragColor;
 
     void main() {
-      // Directional light + ambient + rim emissive glow
+      // 3D Lighting: directional light + ambient + rim emissive glow
       vec3 lightDir = normalize(vec3(0.5, 0.8, 1.0));
       float diff = max(dot(vNormal, lightDir), 0.0);
       float rim = 1.0 - max(dot(vNormal, vec3(0.0, 0.0, 1.0)), 0.0);
       rim = smoothstep(0.4, 0.9, rim);
-      
-      vec3 finalColor = vColor * (0.65 + 0.5 * diff) + (vColor + vec3(0.3)) * (0.45 * rim);
+      vec3 litColor = vColor * (0.65 + 0.5 * diff) + (vColor + vec3(0.3)) * (0.45 * rim);
+
+      // 2D Flat look: crisp vibrant flat discs with subtle depth rim
+      vec3 flatColor = vColor * (0.90 + 0.18 * rim);
+
+      vec3 finalColor = mix(flatColor, litColor, uModeProgress);
       fragColor = vec4(finalColor, 0.98);
     }
   `;
@@ -159,21 +231,24 @@
   const lineVS = `#version 300 es
     precision highp float;
     layout(location = 0) in vec3 aPosition;
+    layout(location = 1) in vec4 aColor;
     uniform mat4 uProjMatrix;
     uniform mat4 uViewMatrix;
+    out vec4 vLineColor;
 
     void main() {
+      vLineColor = aColor;
       gl_Position = uProjMatrix * uViewMatrix * vec4(aPosition, 1.0);
     }
   `;
 
   const lineFS = `#version 300 es
     precision highp float;
+    in vec4 vLineColor;
     out vec4 fragColor;
 
     void main() {
-      // Clearly visible glowing connector lines with amber/gold tint
-      fragColor = vec4(0.88, 0.72, 0.40, 0.38);
+      fragColor = vLineColor;
     }
   `;
 
@@ -182,7 +257,7 @@
     glCtx.shaderSource(s, source);
     glCtx.compileShader(s);
     if (!glCtx.getShaderParameter(s, glCtx.COMPILE_STATUS)) {
-      console.warn('Shader compile failed:', glCtx.getShaderInfoLog(s));
+      console.warn('[Graph HUD] Shader compile failed:', glCtx.getShaderInfoLog(s));
       glCtx.deleteShader(s);
       return null;
     }
@@ -198,7 +273,7 @@
     glCtx.attachShader(prog, fs);
     glCtx.linkProgram(prog);
     if (!glCtx.getProgramParameter(prog, glCtx.LINK_STATUS)) {
-      console.warn('Program link failed:', glCtx.getProgramInfoLog(prog));
+      console.warn('[Graph HUD] Program link failed:', glCtx.getProgramInfoLog(prog));
       return null;
     }
     return prog;
@@ -239,7 +314,7 @@
     };
   }
 
-  /* ── Initialize WebGL 2 Context & Buffers ───────────────────── */
+  /* ── Initialize WebGL 2 Context & Dynamic Buffers ───────────── */
   function initWebGL() {
     if (!canvas) return false;
     gl = canvas.getContext('webgl2', {
@@ -260,12 +335,11 @@
     lineProgram = createProgram(gl, lineVS, lineFS);
     if (!nodeProgram || !lineProgram) return false;
 
-    // Build sphere mesh
+    // 1. Build sphere mesh
     const sphere = createSphereMesh(gl);
     nodeVAO = gl.createVertexArray();
     gl.bindVertexArray(nodeVAO);
 
-    // 1. Sphere vertex positions
     const sphereVBO = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, sphereVBO);
     gl.bufferData(gl.ARRAY_BUFFER, sphere.positions, gl.STATIC_DRAW);
@@ -280,29 +354,28 @@
     // 2. Hardware Instanced Attributes: Offset, Color, Scale
     instanceMatrixBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, instanceMatrixBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, nodePositions, gl.DYNAMIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, currentPositions, gl.DYNAMIC_DRAW);
     gl.enableVertexAttribArray(1);
     gl.vertexAttribPointer(1, 3, gl.FLOAT, false, 0, 0);
-    gl.vertexAttribDivisor(1, 1); // instanced!
+    gl.vertexAttribDivisor(1, 1); // instanced
 
     instanceColorBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, instanceColorBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, nodeColors, gl.DYNAMIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, currentColors, gl.DYNAMIC_DRAW);
     gl.enableVertexAttribArray(2);
     gl.vertexAttribPointer(2, 3, gl.FLOAT, false, 0, 0);
-    gl.vertexAttribDivisor(2, 1); // instanced!
+    gl.vertexAttribDivisor(2, 1); // instanced
 
     nodeScaleBuffer = gl.createBuffer();
-    const scales = new Float32Array(GRAPH_DATA.nodes.length).fill(1.0);
     gl.bindBuffer(gl.ARRAY_BUFFER, nodeScaleBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, scales, gl.DYNAMIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, currentScales, gl.DYNAMIC_DRAW);
     gl.enableVertexAttribArray(3);
     gl.vertexAttribPointer(3, 1, gl.FLOAT, false, 0, 0);
-    gl.vertexAttribDivisor(3, 1); // instanced!
+    gl.vertexAttribDivisor(3, 1); // instanced
 
     gl.bindVertexArray(null);
 
-    // Build line mesh for edges
+    // 3. Build line mesh for edges
     buildEdgeBuffers();
 
     return true;
@@ -311,32 +384,94 @@
   function buildEdgeBuffers() {
     if (!gl || !GRAPH_DATA || !GRAPH_DATA.edges) return;
     const edges = GRAPH_DATA.edges;
-    const lineVertices = new Float32Array(edges.length * 6);
+    lineVertices = new Float32Array(edges.length * 6);
+    lineColors = new Float32Array(edges.length * 8);
 
-    let vIdx = 0;
-    for (let i = 0; i < edges.length; i++) {
-      const [sIdx, tIdx] = edges[i];
-      if (sIdx < nodePositions.length / 3 && tIdx < nodePositions.length / 3) {
-        lineVertices[vIdx++] = nodePositions[sIdx * 3];
-        lineVertices[vIdx++] = nodePositions[sIdx * 3 + 1];
-        lineVertices[vIdx++] = nodePositions[sIdx * 3 + 2];
-        lineVertices[vIdx++] = nodePositions[tIdx * 3];
-        lineVertices[vIdx++] = nodePositions[tIdx * 3 + 1];
-        lineVertices[vIdx++] = nodePositions[tIdx * 3 + 2];
-      }
-    }
+    updateEdgePositions();
 
-    lineIndicesCount = vIdx / 3;
     lineVAO = gl.createVertexArray();
     gl.bindVertexArray(lineVAO);
 
     linePositionBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, linePositionBuffer);
-    gl.bufferData(gl.ARRAY_BUFFER, lineVertices, gl.STATIC_DRAW);
+    gl.bufferData(gl.ARRAY_BUFFER, lineVertices, gl.DYNAMIC_DRAW);
     gl.enableVertexAttribArray(0);
     gl.vertexAttribPointer(0, 3, gl.FLOAT, false, 0, 0);
 
+    lineColorBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, lineColorBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, lineColors, gl.DYNAMIC_DRAW);
+    gl.enableVertexAttribArray(1);
+    gl.vertexAttribPointer(1, 4, gl.FLOAT, false, 0, 0);
+
     gl.bindVertexArray(null);
+
+    updateEdgeColors(-1);
+  }
+
+  function updateEdgePositions() {
+    if (!GRAPH_DATA || !GRAPH_DATA.edges || !lineVertices) return;
+    const edges = GRAPH_DATA.edges;
+    let vIdx = 0;
+    const totalNodes = currentPositions.length / 3;
+
+    for (let i = 0; i < edges.length; i++) {
+      const [sIdx, tIdx] = edges[i];
+      if (sIdx < totalNodes && tIdx < totalNodes) {
+        lineVertices[vIdx++] = currentPositions[sIdx * 3];
+        lineVertices[vIdx++] = currentPositions[sIdx * 3 + 1];
+        lineVertices[vIdx++] = currentPositions[sIdx * 3 + 2];
+        lineVertices[vIdx++] = currentPositions[tIdx * 3];
+        lineVertices[vIdx++] = currentPositions[tIdx * 3 + 1];
+        lineVertices[vIdx++] = currentPositions[tIdx * 3 + 2];
+      }
+    }
+    lineIndicesCount = vIdx / 3;
+  }
+
+  function updateEdgeColors(spotlightNodeIdx) {
+    if (!GRAPH_DATA || !GRAPH_DATA.edges || !lineColors) return;
+    const edges = GRAPH_DATA.edges;
+    let cIdx = 0;
+
+    const is2D = morphProgress < 0.5;
+    // 2D: ExplainGit hairline dark blue-gray (prevents hairball)
+    // 3D: Warm glowing amber/gold
+    const defColor = is2D
+      ? [0.32, 0.39, 0.55, 0.22]
+      : [0.88, 0.72, 0.40, 0.32];
+
+    const dimColor = [0.20, 0.25, 0.35, 0.04];
+    const highlightColor = [0.12, 0.72, 1.00, 0.95]; // Electric Cyan/Blue
+
+    for (let i = 0; i < edges.length; i++) {
+      const [sIdx, tIdx] = edges[i];
+      let color = defColor;
+
+      if (spotlightNodeIdx >= 0) {
+        if (sIdx === spotlightNodeIdx || tIdx === spotlightNodeIdx) {
+          color = highlightColor;
+        } else {
+          color = dimColor;
+        }
+      }
+
+      // 2 vertices per line edge
+      lineColors[cIdx++] = color[0];
+      lineColors[cIdx++] = color[1];
+      lineColors[cIdx++] = color[2];
+      lineColors[cIdx++] = color[3];
+
+      lineColors[cIdx++] = color[0];
+      lineColors[cIdx++] = color[1];
+      lineColors[cIdx++] = color[2];
+      lineColors[cIdx++] = color[3];
+    }
+
+    if (gl && lineColorBuffer) {
+      gl.bindBuffer(gl.ARRAY_BUFFER, lineColorBuffer);
+      gl.bufferSubData(gl.ARRAY_BUFFER, 0, lineColors);
+    }
   }
 
   /* ── 4x4 Matrix Mathematics ──────────────────────────────── */
@@ -355,7 +490,9 @@
     out.fill(0);
     out[0] = 1; out[5] = 1; out[10] = 1; out[15] = 1;
 
-    // Translation along -Z
+    // Translation with 2D Pan and Zoom Distance
+    out[12] = panX;
+    out[13] = panY;
     out[14] = -cameraDist;
 
     // Rotation around X axis
@@ -378,7 +515,6 @@
       0, 0, 0, 1
     ]);
 
-    // Multiply: out = translation * rotX * rotY
     const temp = new Float32Array(16);
     multiplyMatrices(temp, out, rotXMat);
     multiplyMatrices(out, temp, rotYMat);
@@ -396,7 +532,7 @@
     }
   }
 
-  /* ── Demand-Driven Render Loop (Pillar 2) ─────────────────── */
+  /* ── Demand-Driven Render Loop & Animated Morphing ────────── */
   function requestRender() {
     if (!renderPending) {
       renderPending = true;
@@ -407,6 +543,43 @@
   function render() {
     renderPending = false;
     if (!gl || !canvas) return;
+
+    // Handle smooth morphing between 2D and 3D
+    if (isMorphing) {
+      const elapsed = performance.now() - morphStartTime;
+      let t = Math.min(1.0, elapsed / MORPH_DURATION);
+      // Cubic easing
+      const ease = t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2;
+      morphProgress = startMorph + (targetMorph - startMorph) * ease;
+
+      // Interpolate node positions
+      const count = GRAPH_DATA.nodes.length;
+      for (let i = 0; i < count; i++) {
+        const i3 = i * 3;
+        currentPositions[i3] = nodePositions2D[i3] * (1 - morphProgress) + nodePositions3D[i3] * morphProgress;
+        currentPositions[i3 + 1] = nodePositions2D[i3 + 1] * (1 - morphProgress) + nodePositions3D[i3 + 1] * morphProgress;
+        currentPositions[i3 + 2] = nodePositions3D[i3 + 2] * morphProgress;
+      }
+
+      // Update WebGL instance buffers
+      gl.bindBuffer(gl.ARRAY_BUFFER, instanceMatrixBuffer);
+      gl.bufferSubData(gl.ARRAY_BUFFER, 0, currentPositions);
+
+      updateEdgePositions();
+      gl.bindBuffer(gl.ARRAY_BUFFER, linePositionBuffer);
+      gl.bufferSubData(gl.ARRAY_BUFFER, 0, lineVertices);
+
+      // Smooth camera tilt transition
+      rotX = targetRotX * morphProgress;
+      rotY = targetRotY * morphProgress;
+
+      if (t >= 1.0) {
+        isMorphing = false;
+        morphProgress = targetMorph;
+      } else {
+        requestRender();
+      }
+    }
 
     const width = canvas.clientWidth * window.devicePixelRatio;
     const height = canvas.clientHeight * window.devicePixelRatio;
@@ -421,10 +594,13 @@
 
     const aspect = width / (height || 1);
     const projMatrix = new Float32Array(16);
-    perspective(projMatrix, Math.PI / 4, aspect, 1.0, 500.0);
+    perspective(projMatrix, Math.PI / 4, aspect, 1.0, 600.0);
 
     const viewMatrix = new Float32Array(16);
     computeViewMatrix(viewMatrix);
+
+    // Update dynamic node scales & spotlight colors
+    updateSpotlightState();
 
     // 1. Draw Edges in a single draw call
     if (lineProgram && lineVAO && lineIndicesCount > 0) {
@@ -441,16 +617,7 @@
       gl.useProgram(nodeProgram);
       gl.uniformMatrix4fv(gl.getUniformLocation(nodeProgram, 'uProjMatrix'), false, projMatrix);
       gl.uniformMatrix4fv(gl.getUniformLocation(nodeProgram, 'uViewMatrix'), false, viewMatrix);
-      
-      // Dynamic scale update for hovered node highlight
-      if (nodeScaleBuffer && GRAPH_DATA.nodes) {
-        const scales = new Float32Array(GRAPH_DATA.nodes.length).fill(1.0);
-        if (hoveredNodeIndex >= 0 && hoveredNodeIndex < scales.length) {
-          scales[hoveredNodeIndex] = 2.4;
-        }
-        gl.bindBuffer(gl.ARRAY_BUFFER, nodeScaleBuffer);
-        gl.bufferSubData(gl.ARRAY_BUFFER, 0, scales);
-      }
+      gl.uniform1f(gl.getUniformLocation(nodeProgram, 'uModeProgress'), morphProgress);
 
       gl.bindVertexArray(nodeVAO);
       gl.drawElementsInstanced(
@@ -464,9 +631,61 @@
     }
   }
 
+  /* ── Real-Time Neighbor Spotlight & Dimming (ExplainGit Style) ── */
+  function updateSpotlightState() {
+    if (!GRAPH_DATA || !GRAPH_DATA.nodes) return;
+    const count = GRAPH_DATA.nodes.length;
+    const hIdx = hoveredNodeIndex;
+    const nbrSet = hIdx >= 0 ? adjacency[hIdx] : null;
+
+    for (let i = 0; i < count; i++) {
+      const i3 = i * 3;
+      const baseR = baseColors[i3];
+      const baseG = baseColors[i3 + 1];
+      const baseB = baseColors[i3 + 2];
+
+      if (hIdx >= 0) {
+        if (i === hIdx) {
+          // Hovered Node: enlarged, electric signature blue
+          currentScales[i] = 2.6;
+          currentColors[i3] = 0.12;
+          currentColors[i3 + 1] = 0.72;
+          currentColors[i3 + 2] = 1.00;
+        } else if (nbrSet && nbrSet.has(i)) {
+          // Direct Neighbor: illuminated and slightly enlarged
+          currentScales[i] = 1.65;
+          currentColors[i3] = baseR;
+          currentColors[i3 + 1] = baseG;
+          currentColors[i3 + 2] = baseB;
+        } else {
+          // Unconnected Background Node: dimmed down
+          currentScales[i] = 0.85;
+          currentColors[i3] = baseR * 0.22;
+          currentColors[i3 + 1] = baseG * 0.22;
+          currentColors[i3 + 2] = baseB * 0.22;
+        }
+      } else {
+        currentScales[i] = 1.0;
+        currentColors[i3] = baseR;
+        currentColors[i3 + 1] = baseG;
+        currentColors[i3 + 2] = baseB;
+      }
+    }
+
+    if (gl && nodeScaleBuffer && instanceColorBuffer) {
+      gl.bindBuffer(gl.ARRAY_BUFFER, nodeScaleBuffer);
+      gl.bufferSubData(gl.ARRAY_BUFFER, 0, currentScales);
+
+      gl.bindBuffer(gl.ARRAY_BUFFER, instanceColorBuffer);
+      gl.bufferSubData(gl.ARRAY_BUFFER, 0, currentColors);
+    }
+
+    updateEdgeColors(hIdx);
+  }
+
   /* ── Interaction: Raycast Hover Detection ─────────────────── */
   function findNodeUnderPointer(clientX, clientY) {
-    if (!canvas || !nodePositions.length) return -1;
+    if (!canvas || !currentPositions || !currentPositions.length) return -1;
     const rect = canvas.getBoundingClientRect();
     const x = clientX - rect.left;
     const y = clientY - rect.top;
@@ -478,20 +697,20 @@
 
     const aspect = rect.width / (rect.height || 1);
     const proj = new Float32Array(16);
-    perspective(proj, Math.PI / 4, aspect, 1.0, 500.0);
+    perspective(proj, Math.PI / 4, aspect, 1.0, 600.0);
     const view = new Float32Array(16);
     computeViewMatrix(view);
     const pv = new Float32Array(16);
     multiplyMatrices(pv, proj, view);
 
-    let closestDist = 0.065; // screen threshold
+    let closestDist = 0.058; // screen threshold
     let closestIndex = -1;
 
     const count = GRAPH_DATA.nodes.length;
     for (let i = 0; i < count; i++) {
-      const px = nodePositions[i * 3];
-      const py = nodePositions[i * 3 + 1];
-      const pz = nodePositions[i * 3 + 2];
+      const px = currentPositions[i * 3];
+      const py = currentPositions[i * 3 + 1];
+      const pz = currentPositions[i * 3 + 2];
 
       // Clip space projection
       const clipX = pv[0] * px + pv[4] * py + pv[8] * pz + pv[12];
@@ -515,7 +734,8 @@
 
   function updateTooltip(nodeIdx, clientX, clientY) {
     const tooltip = document.getElementById('graphNodeTooltip');
-    if (!tooltip) return;
+    const wrap = document.getElementById('graphCanvasWrap');
+    if (!tooltip || !wrap) return;
     if (nodeIdx < 0 || !GRAPH_DATA || !GRAPH_DATA.nodes[nodeIdx]) {
       tooltip.classList.remove('active');
       return;
@@ -524,16 +744,36 @@
     const n = GRAPH_DATA.nodes[nodeIdx];
     tooltip.innerHTML = `
       <div class="graph-tooltip-head">
-        <span class="graph-tooltip-type">${n.type || 'AST Node'}</span>
+        <span class="graph-tooltip-type">${escapeHtml(n.type || 'AST Node')}</span>
         <span class="graph-tooltip-comm">${escapeHtml(n.comm_name || 'Community')}</span>
       </div>
       <div class="graph-tooltip-title">${escapeHtml(n.label || n.id)}</div>
       <div class="graph-tooltip-file">${escapeHtml(n.file || 'source')}</div>
     `;
 
-    const modalRect = graphModal.getBoundingClientRect();
-    const posX = Math.min(clientX - modalRect.left + 15, modalRect.width - 240);
-    const posY = Math.min(clientY - modalRect.top + 15, modalRect.height - 100);
+    // Smart tooltip auto-flipping relative to #graphCanvasWrap bounds
+    const wrapRect = wrap.getBoundingClientRect();
+    const cursorX = clientX - wrapRect.left;
+    const cursorY = clientY - wrapRect.top;
+
+    const tooltipWidth = tooltip.offsetWidth || 230;
+    const tooltipHeight = tooltip.offsetHeight || 90;
+
+    // Flip horizontally if near right boundary
+    let posX = cursorX + 16;
+    if (posX + tooltipWidth > wrapRect.width - 12) {
+      posX = cursorX - tooltipWidth - 16;
+    }
+
+    // Flip vertically if near bottom boundary
+    let posY = cursorY + 16;
+    if (posY + tooltipHeight > wrapRect.height - 12) {
+      posY = cursorY - tooltipHeight - 16;
+    }
+
+    // Hard clamp within wrap borders
+    posX = Math.max(10, Math.min(wrapRect.width - tooltipWidth - 10, posX));
+    posY = Math.max(10, Math.min(wrapRect.height - tooltipHeight - 10, posY));
 
     tooltip.style.left = `${posX}px`;
     tooltip.style.top = `${posY}px`;
@@ -545,6 +785,43 @@
       .replace(/&/g, '&amp;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;');
+  }
+
+  /* ── 2D / 3D Mode Switching ───────────────────────────────── */
+  function switchMode(newMode) {
+    if (currentMode === newMode && !isMorphing) return;
+    currentMode = newMode;
+
+    const btn2D = document.getElementById('graphBtn2D');
+    const btn3D = document.getElementById('graphBtn3D');
+    const zoomControls = document.getElementById('graphZoomControls');
+    const hint = document.getElementById('graphControlsHint');
+
+    if (btn2D && btn3D) {
+      btn2D.classList.toggle('active', newMode === '2d');
+      btn3D.classList.toggle('active', newMode === '3d');
+    }
+
+    if (zoomControls) {
+      zoomControls.classList.toggle('active', newMode === '2d');
+    }
+
+    if (hint) {
+      if (newMode === '2d') {
+        hint.innerHTML = '<span>Drag to Pan</span> · <span>Scroll / Buttons to Zoom</span> · <span>Hover to Inspect & Spotlight</span>';
+      } else {
+        hint.innerHTML = '<span>Left-drag to Orbit</span> · <span>Scroll to Zoom</span> · <span>Hover to Inspect & Spotlight</span>';
+      }
+    }
+
+    // Trigger smooth coordinate morphing
+    startMorph = morphProgress;
+    targetMorph = newMode === '3d' ? 1.0 : 0.0;
+    morphStartTime = performance.now();
+    isMorphing = true;
+
+    if (typeof playAudioCue === 'function') playAudioCue('click');
+    requestRender();
   }
 
   /* ── Modal Creation & Lifecycle ───────────────────────────── */
@@ -560,7 +837,7 @@
       graphModal.className = 'access-modal-overlay graph-modal-overlay';
       graphModal.setAttribute('role', 'dialog');
       graphModal.setAttribute('aria-modal', 'true');
-      graphModal.setAttribute('aria-label', '3D AST Knowledge Graph HUD');
+      graphModal.setAttribute('aria-label', 'Interactive AST Knowledge Graph HUD');
       document.body.appendChild(graphModal);
     }
 
@@ -582,8 +859,11 @@
               <line x1="6" y1="17" x2="10" y2="14"/>
               <line x1="18" y1="17" x2="14" y2="14"/>
             </svg>
-            <span class="graph-modal-title">3D Knowledge Graph HUD</span>
-            <span class="graph-modal-badge">WebGL 2 Instanced</span>
+            <span class="graph-modal-title">Knowledge Graph HUD</span>
+            <div class="graph-mode-toggle" role="group" aria-label="View Mode">
+              <button type="button" class="graph-mode-btn ${currentMode === '2d' ? 'active' : ''}" id="graphBtn2D" aria-pressed="${currentMode === '2d'}">2D Map</button>
+              <button type="button" class="graph-mode-btn ${currentMode === '3d' ? 'active' : ''}" id="graphBtn3D" aria-pressed="${currentMode === '3d'}">3D Orbit</button>
+            </div>
           </div>
           <div class="graph-modal-actions">
             <span class="graph-stat-pill">${totalNodes} Nodes</span>
@@ -597,16 +877,28 @@
         </div>
         <div class="graph-canvas-wrap" id="graphCanvasWrap">
           <canvas id="graphWebglCanvas"></canvas>
+          <div class="graph-corner-bracket graph-corner-tl"></div>
+          <div class="graph-corner-bracket graph-corner-tr"></div>
+          <div class="graph-corner-bracket graph-corner-bl"></div>
+          <div class="graph-corner-bracket graph-corner-br"></div>
+          <div class="graph-zoom-controls ${currentMode === '2d' ? 'active' : ''}" id="graphZoomControls">
+            <button type="button" class="graph-zoom-btn" id="graphZoomIn" aria-label="Zoom in" title="Zoom in">+</button>
+            <button type="button" class="graph-zoom-btn" id="graphZoomOut" aria-label="Zoom out" title="Zoom out">−</button>
+            <button type="button" class="graph-zoom-btn" id="graphZoomReset" aria-label="Reset view" title="Reset view">⟲</button>
+          </div>
           <div class="graph-node-tooltip" id="graphNodeTooltip"></div>
-          <div class="graph-controls-hint">
-            <span>Left-drag to Orbit</span> · <span>Scroll to Zoom</span> · <span>Hover to Inspect</span>
+          <div class="graph-controls-hint" id="graphControlsHint">
+            ${currentMode === '2d' 
+              ? '<span>Drag to Pan</span> · <span>Scroll / Buttons to Zoom</span> · <span>Hover to Inspect & Spotlight</span>'
+              : '<span>Left-drag to Orbit</span> · <span>Scroll to Zoom</span> · <span>Hover to Inspect & Spotlight</span>'
+            }
           </div>
         </div>
       </div>
     `;
 
     canvas = document.getElementById('graphWebglCanvas');
-    generate3DPositions();
+    generatePositions();
 
     if (!initWebGL()) {
       const wrap = document.getElementById('graphCanvasWrap');
@@ -630,6 +922,38 @@
     document.getElementById('graphModalClose').addEventListener('click', closeGraphModal);
     graphModal.addEventListener('click', (e) => {
       if (e.target === graphModal) closeGraphModal();
+    });
+
+    // Segmented 2D/3D Mode Buttons
+    const btn2D = document.getElementById('graphBtn2D');
+    const btn3D = document.getElementById('graphBtn3D');
+    if (btn2D) btn2D.addEventListener('click', () => switchMode('2d'));
+    if (btn3D) btn3D.addEventListener('click', () => switchMode('3d'));
+
+    // Zoom Buttons
+    const zoomIn = document.getElementById('graphZoomIn');
+    const zoomOut = document.getElementById('graphZoomOut');
+    const zoomReset = document.getElementById('graphZoomReset');
+    if (zoomIn) zoomIn.addEventListener('click', () => {
+      cameraDist = Math.max(35.0, cameraDist * 0.82);
+      requestRender();
+    });
+    if (zoomOut) zoomOut.addEventListener('click', () => {
+      cameraDist = Math.min(300.0, cameraDist * 1.22);
+      requestRender();
+    });
+    if (zoomReset) zoomReset.addEventListener('click', () => {
+      cameraDist = 120.0;
+      panX = 0;
+      panY = 0;
+      if (currentMode === '3d') {
+        rotX = targetRotX;
+        rotY = targetRotY;
+      } else {
+        rotX = 0;
+        rotY = 0;
+      }
+      requestRender();
     });
 
     requestAnimationFrame(() => graphModal.classList.add('open'));
@@ -663,9 +987,17 @@
           lastMouseX = e.clientX;
           lastMouseY = e.clientY;
 
-          rotY += dx * 0.008;
-          rotX += dy * 0.008;
-          rotX = Math.max(-Math.PI / 2.2, Math.min(Math.PI / 2.2, rotX));
+          if (currentMode === '2d') {
+            // 2D Pan mode
+            const panSensitivity = cameraDist * 0.0018;
+            panX += dx * panSensitivity;
+            panY -= dy * panSensitivity;
+          } else {
+            // 3D Orbit mode
+            rotY += dx * 0.008;
+            rotX += dy * 0.008;
+            rotX = Math.max(-Math.PI / 2.2, Math.min(Math.PI / 2.2, rotX));
+          }
           requestRender();
         } else if (graphModal && graphModal.classList.contains('open')) {
           const nodeIdx = findNodeUnderPointer(e.clientX, e.clientY);
@@ -712,8 +1044,14 @@
         touchStartX = e.touches[0].clientX;
         touchStartY = e.touches[0].clientY;
 
-        rotY += dx * 0.01;
-        rotX += dy * 0.01;
+        if (currentMode === '2d') {
+          const panSensitivity = cameraDist * 0.0022;
+          panX += dx * panSensitivity;
+          panY -= dy * panSensitivity;
+        } else {
+          rotY += dx * 0.01;
+          rotX += dy * 0.01;
+        }
         requestRender();
       }
     }, { passive: true });
@@ -747,3 +1085,4 @@
   window.openGraphModal = openGraphModal;
   window.closeGraphModal = closeGraphModal;
 })();
+

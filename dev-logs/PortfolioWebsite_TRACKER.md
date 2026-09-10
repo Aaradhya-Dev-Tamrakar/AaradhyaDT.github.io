@@ -1,4 +1,4 @@
-# Portfolio Website Tracker — v53.21
+# Portfolio Website Tracker — v53.22
 
 Last updated: _2026-09-10_
 
@@ -21,6 +21,11 @@ Last updated: _2026-09-10_
     - **Dynamic Viewport Synchronization**: Bound `ResizeObserver` to `#graphCanvasWrap` with staggered multi-tick initial triggers (0ms, 50ms, 200ms) ensuring guaranteed pixel dimensions post modal transition.
     - **Visual Geometry & Node Illumination**: Scaled sphere geometry mesh radius to 1.75 (3.2x enlargement), added directional key lighting with Fresnel rim glow shader to all nodes, and enhanced connector line alpha to 0.38 with warm gold illumination.
     - **Dynamic Hardware Instancing**: Implemented dynamic buffer upload (`gl.bufferSubData`) for `aInstanceScale` delivering real-time 2.4x hover node scaling, and expanded raycast hit radius to 0.065 NDC for effortless mouse/touch selection. Fully verified across all 24 diagnostic categories.
+  - **ExplainGit-Style 2D/3D Dual-Mode Knowledge Graph HUD (`assets/js/modules/graph-modal.js`, `graph-modal.css`)**:
+    - **Dual-Mode 2D Map & 3D Orbit Views**: Introduced segmented pill toggle `[ 2D Map | 3D Orbit ]` in the HUD header. In 2D mode, nodes are mapped to clean 2D community cluster spirals with drag-to-pan (`panX`, `panY`), zoom in/out/reset controls, and hairline edges (`rgba(82, 100, 140, 0.22)`). In 3D mode, nodes rotate in full spatial spherical orbit with directional and Fresnel rim lighting.
+    - **Smooth Interpolated Morphing**: Built a 600ms cubic-eased continuous vertex/line morphing pipeline interpolating 3D and 2D layouts dynamically via WebGL buffer subdata uploads without rebuilding geometry.
+    - **ExplainGit 12-Color Palette & Neighbor Spotlighting**: Applied ExplainGit's GitHub-refined 12-color community palette. Implemented graph adjacency lookups: hovering any node dynamically spotlights that node (2.6x scale, electric blue) and direct first-degree neighbors (1.65x scale, illuminated edges) while dimming unconnected background nodes to 22% opacity.
+    - **Smart Tooltip Auto-Flipping & Boundary Clamping**: Fixed detail box overflow/clipping on hover. The tooltip now measures relative to `#graphCanvasWrap`, automatically flipping left when approaching the right boundary and upward when approaching the bottom boundary, strictly clamped within canvas edges.
 
 - **v52 (Major Release) — Visual Regression Engine & Native Dynamic ESM Suite.** Shipped visual regression engine & native dynamic esm suite.
   - Core updates and architectural improvements for v52
@@ -275,7 +280,7 @@ Last updated: _2026-09-10_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v53.21`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v53.22`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
