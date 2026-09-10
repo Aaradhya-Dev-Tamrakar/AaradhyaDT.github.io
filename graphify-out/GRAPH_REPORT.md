@@ -5,18 +5,18 @@
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 776 nodes · 1020 edges · 176 communities (46 shown, 119 thin omitted)
+- 777 nodes · 1021 edges · 176 communities (46 shown, 119 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 65 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `3e2a6ae7`
+- Built from commit: `cae81d59`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - verify.py
-- PortfolioWebsite_TRACKER.md
+- Portfolio Website Tracker — v53.21
 - core.js
 - ui.js
 - site_automation.py
@@ -185,13 +185,13 @@
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `log_warning()` - 16 edges
-5. `get_html_files()` - 14 edges
-6. `cmd_sync()` - 13 edges
-7. `initTour()` - 12 edges
-8. `Aaradhya Dev Tamrakar` - 12 edges
-9. `Aaradhya Dev Tamrakar CV` - 12 edges
-10. `initGlobalSearch()` - 11 edges
+4. `Portfolio Website Tracker — v53.21` - 21 edges
+5. `log_warning()` - 16 edges
+6. `get_html_files()` - 14 edges
+7. `cmd_sync()` - 13 edges
+8. `initTour()` - 12 edges
+9. `Aaradhya Dev Tamrakar` - 12 edges
+10. `Aaradhya Dev Tamrakar CV` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Certificate: AI-Assisted Product Launch` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
@@ -223,9 +223,9 @@
 Cohesion: 0.10
 Nodes (60): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+52 more)
 
-### Community 1 - "PortfolioWebsite_TRACKER.md"
+### Community 1 - "Portfolio Website Tracker — v53.21"
 Cohesion: 0.05
-Nodes (37): Evidence & Verification Log — v20 additions, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18), v25 addition — bug-check sweep, pages 1/3/4 (2026-07-27) (+29 more)
+Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.21, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+30 more)
 
 ### Community 2 - "core.js"
 Cohesion: 0.08
@@ -419,8 +419,8 @@ _Questions this graph is uniquely positioned to answer:_
   _248 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
-- **Should `PortfolioWebsite_TRACKER.md` be split into smaller, more focused modules?**
-  _Cohesion score 0.05128205128205128 - nodes in this community are weakly interconnected._
+- **Should `Portfolio Website Tracker — v53.21` be split into smaller, more focused modules?**
+  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07823613086770982 - nodes in this community are weakly interconnected._
 - **Should `ui.js` be split into smaller, more focused modules?**
