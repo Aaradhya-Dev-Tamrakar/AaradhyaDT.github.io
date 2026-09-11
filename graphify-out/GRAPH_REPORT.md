@@ -1,22 +1,22 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-11)
 
 ## Corpus Check
-- 52 files · ~459,527 words
+- 52 files · ~459,523 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 791 nodes · 1048 edges · 177 communities (46 shown, 120 thin omitted)
+- 791 nodes · 1047 edges · 177 communities (46 shown, 120 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 68 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `30bf5dbc`
+- Built from commit: `22d29dea`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - verify.py
-- Portfolio Website Tracker — v53.24
+- Portfolio Website Tracker — v53.25
 - core.js
 - ui.js
 - site_automation.py
@@ -186,7 +186,7 @@
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v53.24` - 21 edges
+4. `Portfolio Website Tracker — v53.25` - 21 edges
 5. `log_warning()` - 16 edges
 6. `bindEvents()` - 14 edges
 7. `get_html_files()` - 14 edges
@@ -224,9 +224,9 @@
 Cohesion: 0.10
 Nodes (60): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+52 more)
 
-### Community 1 - "Portfolio Website Tracker — v53.24"
+### Community 1 - "Portfolio Website Tracker — v53.25"
 Cohesion: 0.05
-Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.24, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+30 more)
+Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.25, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+30 more)
 
 ### Community 2 - "core.js"
 Cohesion: 0.06
@@ -253,8 +253,8 @@ Cohesion: 0.27
 Nodes (19): closeTourOverlay(), ensureTourOverlay(), exitTour(), getTourCurrentPage(), getTourPageUrl(), initTour(), positionTourCard(), promptGuidedTour() (+11 more)
 
 ### Community 8 - "graph-modal.js"
-Cohesion: 0.25
-Nodes (21): bindEvents(), toggleFullscreen(), closeGraphModal(), escapeHtml(), findHit(), fitAll(), glideTo(), openGraphModal() (+13 more)
+Cohesion: 0.24
+Nodes (20): bindEvents(), toggleFullscreen(), closeGraphModal(), escapeHtml(), findHit(), fitAll(), glideTo(), openGraphModal() (+12 more)
 
 ### Community 9 - "aaradhyadt.github.io"
 Cohesion: 0.11
@@ -406,7 +406,7 @@ Nodes (3): BiasAperture — Vision Fairness & Bias Audit, NovaOptimizer — Wind
 
 ## Knowledge Gaps
 - **255 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+250 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 394 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 395 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **120 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -418,7 +418,7 @@ _Questions this graph is uniquely positioned to answer:_
   _255 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
-- **Should `Portfolio Website Tracker — v53.24` be split into smaller, more focused modules?**
+- **Should `Portfolio Website Tracker — v53.25` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06382978723404255 - nodes in this community are weakly interconnected._

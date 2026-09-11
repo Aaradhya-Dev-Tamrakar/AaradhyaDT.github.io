@@ -19,7 +19,7 @@
   visibility: hidden;
   transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1),
               visibility 0.28s cubic-bezier(0.16, 1, 0.3, 1);
-  padding: 1.25rem;
+  padding: 1.25rem 1.25rem 2.85rem 1.25rem !important;
   box-sizing: border-box;
 }
 
@@ -567,92 +567,7 @@
   cursor: pointer;
 }
 
-/* ── Bottom Controls Dock (Screenshots 1, 2, 4) ─────────────── */
-.graph-bottom-dock {
-  position: absolute;
-  bottom: 12px;
-  left: 14px;
-  right: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  pointer-events: none;
-  z-index: 15;
-}
-
-.graph-bottom-dock > * {
-  pointer-events: auto;
-}
-
-.graph-dock-left,
-.graph-dock-right {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(13, 17, 23, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 0.35rem 0.75rem;
-  border-radius: 999px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(14px);
-  font-family: var(--mono, monospace);
-  font-size: 0.68rem;
-}
-
-.graph-dock-btn {
-  background: transparent;
-  border: none;
-  color: #8b949e;
-  padding: 0.2rem 0.4rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: inherit;
-  font-size: 0.7rem;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  transition: all 0.15s ease;
-}
-
-.graph-dock-btn:hover {
-  color: #f0f6fc;
-  background: rgba(255, 255, 255, 0.08);
-}
-
-.graph-dock-btn.is-active {
-  color: #58a6ff;
-  background: rgba(88, 166, 255, 0.15);
-}
-
-.graph-horizontal-zoom-slider {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 90px;
-  height: 4px;
-  background: #21262d;
-  border-radius: 2px;
-  outline: none;
-  cursor: pointer;
-}
-
-.graph-horizontal-zoom-slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  background: #58a6ff;
-  box-shadow: 0 0 6px rgba(88, 166, 255, 0.7);
-  cursor: pointer;
-}
-
-.graph-dock-stat {
-  color: #7d8590;
-  border-left: 1px solid #21262d;
-  padding-left: 8px;
-  margin-left: 4px;
-}
+/* Bottom dock completely removed — unobstructed cosmic canvas */
 
 /* ── Node Inspector Tooltip ────────────────────────────────── */
 .graph-node-tooltip {

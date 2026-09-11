@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: graph-modal.js — aaradhyadt.github.io (v53.24)
+   MODULE: graph-modal.js — aaradhyadt.github.io (v53.25)
    High-Performance ExplainGit-Style Knowledge Graph HUD
    Dual-pane architecture:
    - Left Pane: IDE-style file explorer tree with macOS controls.
@@ -703,6 +703,14 @@
 
   /* ── Modal Creation & Lifecycle ───────────────────────────── */
   function openGraphModal() {
+    // Self-healing stylesheet injection if not already in document
+    if (!document.querySelector('link[href*="graph-modal.css"]') && !document.querySelector('link[href*="graph-modal.min.css"]')) {
+      const link = document.createElement('link');
+      link.rel = 'stylesheet';
+      link.href = 'assets/css/modules/graph-modal.css';
+      document.head.appendChild(link);
+    }
+
     if (typeof GRAPH_DATA === 'undefined') {
       const existing = document.querySelector('script[src*="graph-data.js"]');
       if (!existing) {
@@ -737,8 +745,8 @@
           <div class="graph-explorer-header">
             <div class="graph-mac-dots">
               <span class="graph-mac-dot graph-dot-red" id="graphDotClose" title="Close"></span>
-              <span class="graph-mac-dot graph-dot-yellow" id="graphDotMin" title="Reset View"></span>
-              <span class="graph-mac-dot graph-dot-green" id="graphDotMax" title="Fullscreen"></span>
+              <span class="graph-mac-dot graph-dot-yellow" id="graphDotMin" title="Fit All Nodes"></span>
+              <span class="graph-mac-dot graph-dot-green" id="graphDotMax" title="Toggle Fullscreen"></span>
             </div>
             <span class="graph-explorer-title">explorer</span>
           </div>
@@ -771,17 +779,25 @@
             </div>
 
             <div class="graph-top-actions">
-              <div class="graph-user-badge">
-                <span class="graph-user-dot"></span>
-                <span>aaradhyadevtmr@gmail.com</span>
-              </div>
+              <button type="button" class="graph-icon-btn" id="graphBtnPhysics" title="Pause / Resume Drift Physics" aria-label="Toggle Physics">
+                <span id="graphPhysicsIcon">⏸</span>
+              </button>
+              <button type="button" class="graph-icon-btn" id="graphBtnFitAll" title="Fit Entire Galaxy in View" aria-label="Fit View">
+                <span>☁</span>
+              </button>
+              <button type="button" class="graph-icon-btn" id="graphBtnRecenter" title="Recenter Camera" aria-label="Recenter">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
+                  <circle cx="12" cy="12" r="3"/>
+                  <path d="M12 2v4m0 12v4M2 12h4m12 0h4"/>
+                </svg>
+              </button>
               <button type="button" class="graph-icon-btn" id="graphBtnFullscreen" title="Toggle Fullscreen" aria-label="Toggle Fullscreen">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
                   <path d="M8 3H5a2 2 0 0 0-2 2v3m18 0V5a2 2 0 0 0-2-2h-3m0 18h3a2 2 0 0 0 2-2v-3M3 16v3a2 2 0 0 0 2 2h3"/>
                 </svg>
               </button>
               <button type="button" class="graph-icon-btn" id="graphBtnClose" title="Close" aria-label="Close">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="13" height="13">
                   <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
                 </svg>
               </button>
@@ -802,7 +818,7 @@
             </div>
           </div>
 
-          <!-- Canvas Container -->
+          <!-- Canvas Container (Completely unobstructed bottom) -->
           <div class="graph-canvas-container" id="graphCanvasWrap">
             <canvas id="graphCanvas2D"></canvas>
             
@@ -823,39 +839,6 @@
             <!-- Node Inspector Tooltip -->
             <div class="graph-node-tooltip" id="graphNodeTooltip"></div>
           </div>
-
-          <!-- Bottom Controls Dock (Screenshots 1, 2, 4) -->
-          <footer class="graph-bottom-dock">
-            <div class="graph-dock-left">
-              <button type="button" class="graph-dock-btn" id="graphBtnPhysics" title="Play/Pause drift physics">
-                <span id="graphPhysicsIcon">⏸</span>
-              </button>
-              <button type="button" class="graph-dock-btn" id="graphBtnFitAll" title="Fit whole galaxy in view">
-                <span>☁</span>
-              </button>
-            </div>
-
-            <div class="graph-dock-right">
-              <button type="button" class="graph-dock-btn" id="graphBtnRecenter" title="Center View">
-                <span>⛶</span>
-              </button>
-              <button type="button" class="graph-dock-btn" id="graphBtnReset" title="Reset Zoom & Pan">
-                Reset
-              </button>
-              <input
-                type="range"
-                class="graph-horizontal-zoom-slider"
-                id="graphHorizontalZoom"
-                min="0.25"
-                max="4.0"
-                step="0.05"
-                value="1.0"
-                title="Zoom"
-              />
-              <span id="graphZoomPct">100%</span>
-              <span class="graph-dock-stat" id="graphClock">11:17 AM</span>
-            </div>
-          </footer>
         </main>
       </div>
     `;
@@ -868,11 +851,6 @@
     setupGraphData();
     renderTreeDOM(document.getElementById('graphExplorerTree'), GRAPH_DATA.tree);
     bindEvents();
-
-    // Start Clock
-    updateClock();
-    if (clockInterval) clearInterval(clockInterval);
-    clockInterval = setInterval(updateClock, 10000);
 
     // Initial View Fit
     setTimeout(fitAll, 40);
