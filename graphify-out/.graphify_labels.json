@@ -1,6 +1,6 @@
 {
   "0": "verify.py",
-  "1": "Portfolio Website Tracker — v53.23",
+  "1": "Portfolio Website Tracker — v53.24",
   "2": "core.js",
   "3": "ui.js",
   "4": "site_automation.py",
@@ -20,7 +20,7 @@
   "18": "Agent Rules & Workflow Guidelines",
   "19": "Antigravity IDE & Gemini Agent Rules for Portfolio Repository",
   "20": "test_visual_regression.py",
-  "21": "script.js",
+  "21": "test_graph_modal.test.mjs",
   "22": "site_mcp.py",
   "23": "home-widgets.js",
   "24": "generate_cards",
@@ -174,5 +174,6 @@
   "172": "UI Screenshot: Projects Page (Desktop)",
   "173": "UI Screenshot: Projects Page (Mobile)",
   "174": "VERSION",
-  "175": "Stamp Last Commit Workflow"
+  "175": "Stamp Last Commit Workflow",
+  "176": "generate_graph_data.py"
 }

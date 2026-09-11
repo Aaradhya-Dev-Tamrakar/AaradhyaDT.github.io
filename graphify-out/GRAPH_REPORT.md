@@ -1,22 +1,22 @@
-# Graph Report - AaradhyaDT.github.io  (2026-09-10)
+# Graph Report - AaradhyaDT.github.io  (2026-09-11)
 
 ## Corpus Check
-- 50 files · ~460,999 words
+- 52 files · ~459,527 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 781 nodes · 1032 edges · 176 communities (46 shown, 119 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 65 edges (avg confidence: 0.86)
+- 791 nodes · 1048 edges · 177 communities (46 shown, 120 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 68 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `74256d13`
+- Built from commit: `30bf5dbc`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
 - verify.py
-- Portfolio Website Tracker — v53.23
+- Portfolio Website Tracker — v53.24
 - core.js
 - ui.js
 - site_automation.py
@@ -36,7 +36,7 @@
 - Agent Rules & Workflow Guidelines
 - Antigravity IDE & Gemini Agent Rules for Portfolio Repository
 - test_visual_regression.py
-- script.js
+- test_graph_modal.test.mjs
 - site_mcp.py
 - home-widgets.js
 - generate_cards
@@ -180,18 +180,19 @@
 - UI Screenshot: Projects Page (Desktop)
 - UI Screenshot: Projects Page (Mobile)
 - Stamp Last Commit Workflow
+- generate_graph_data.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
 2. `log_pass()` - 25 edges
 3. `log_error()` - 22 edges
-4. `Portfolio Website Tracker — v53.23` - 21 edges
+4. `Portfolio Website Tracker — v53.24` - 21 edges
 5. `log_warning()` - 16 edges
-6. `get_html_files()` - 14 edges
-7. `cmd_sync()` - 13 edges
-8. `initTour()` - 12 edges
-9. `Aaradhya Dev Tamrakar` - 12 edges
-10. `Aaradhya Dev Tamrakar CV` - 12 edges
+6. `bindEvents()` - 14 edges
+7. `get_html_files()` - 14 edges
+8. `cmd_sync()` - 13 edges
+9. `initTour()` - 12 edges
+10. `Aaradhya Dev Tamrakar` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Certificate: AI-Assisted Product Launch` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
@@ -217,19 +218,19 @@
 - **Site Security & Access Control** — journey_milestone_15, journey_milestone_36 [INFERRED 0.85]
 - **AI Agent Readiness & Tooling** — projects_super_nlm, evolution_roadmap, workflow_verify [INFERRED 0.90]
 
-## Communities (176 total, 119 thin omitted)
+## Communities (177 total, 120 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.10
 Nodes (60): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+52 more)
 
-### Community 1 - "Portfolio Website Tracker — v53.23"
+### Community 1 - "Portfolio Website Tracker — v53.24"
 Cohesion: 0.05
-Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.23, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+30 more)
+Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.24, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+30 more)
 
 ### Community 2 - "core.js"
-Cohesion: 0.08
-Nodes (32): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+24 more)
+Cohesion: 0.06
+Nodes (38): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+30 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
@@ -252,8 +253,8 @@ Cohesion: 0.27
 Nodes (19): closeTourOverlay(), ensureTourOverlay(), exitTour(), getTourCurrentPage(), getTourPageUrl(), initTour(), positionTourCard(), promptGuidedTour() (+11 more)
 
 ### Community 8 - "graph-modal.js"
-Cohesion: 0.20
-Nodes (22): bindInteractions(), buildEdgeBuffers(), closeGraphModal(), computeViewMatrix(), createProgram(), createShader(), createSphereMesh(), escapeHtml() (+14 more)
+Cohesion: 0.25
+Nodes (21): bindEvents(), toggleFullscreen(), closeGraphModal(), escapeHtml(), findHit(), fitAll(), glideTo(), openGraphModal() (+13 more)
 
 ### Community 9 - "aaradhyadt.github.io"
 Cohesion: 0.11
@@ -303,9 +304,9 @@ Nodes (11): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 1. P
 Cohesion: 0.24
 Nodes (8): calculate_image_diff(), capture_screenshot(), find_browser_executable(), main(), QuietServerHandler, Execute browser CLI in headless mode to capture a viewport snapshot., Compare baseline and current images using Pillow. Returns: (diff_ratio,…, Locate headless Chrome, Chromium, or Edge binary on the system.
 
-### Community 21 - "script.js"
-Cohesion: 0.36
-Nodes (6): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
+### Community 21 - "test_graph_modal.test.mjs"
+Cohesion: 0.25
+Nodes (7): __dirname, __filename, GRAPH_DATA, graphDataPath, match, rawCode, ROOT
 
 ### Community 22 - "site_mcp.py"
 Cohesion: 0.31
@@ -404,24 +405,24 @@ Cohesion: 0.67
 Nodes (3): BiasAperture — Vision Fairness & Bias Audit, NovaOptimizer — Windows Task Manager & System Optimizer, SPARK — Two-Layer Fall Detection Wearable
 
 ## Knowledge Gaps
-- **248 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+243 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 387 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **119 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **255 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+250 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 394 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **120 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `renderSiteFooter()` connect `ui.js` to `core.js`?**
-  _High betweenness centrality (0.006) - this node is a cross-community bridge._
-- **Why does `loadGA4()` connect `core.js` to `script.js`?**
-  _High betweenness centrality (0.002) - this node is a cross-community bridge._
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _248 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _255 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
-- **Should `Portfolio Website Tracker — v53.23` be split into smaller, more focused modules?**
+- **Should `Portfolio Website Tracker — v53.24` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07823613086770982 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06382978723404255 - nodes in this community are weakly interconnected._
 - **Should `ui.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07957957957957958 - nodes in this community are weakly interconnected._
+- **Should `site_automation.py` be split into smaller, more focused modules?**
+  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._
