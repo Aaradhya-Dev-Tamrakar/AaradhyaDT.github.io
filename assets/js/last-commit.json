@@ -1,6 +1,6 @@
 {
-  "sha": "57362fb103dd0d33039c016f334ca6bd2d5ab423",
-  "shortSha": "57362fb",
-  "date": "2026-09-11T11:32:27+05:45",
-  "message": "feat(graph): implement ExplainGit-style IDE architecture, cosmic starburst layout, and fluid navigation"
+  "sha": "131a177eecb90560711e393aeccd5a8fd453c8d9",
+  "shortSha": "131a177",
+  "date": "2026-09-11T11:49:37+05:45",
+  "message": "fix(graph): remove bottom dock for unobstructed view and add bottom clearance"
 }
