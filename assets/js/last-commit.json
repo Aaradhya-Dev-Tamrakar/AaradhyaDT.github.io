@@ -1,6 +1,6 @@
 {
-  "sha": "82208925c3a5cbc0a179a986d9d9761a99c0d5cb",
-  "shortSha": "8220892",
-  "date": "2026-09-10T23:20:30+05:45",
-  "message": "feat(terminal): add graph quick preset button and self-contained modal overlay"
+  "sha": "57362fb103dd0d33039c016f334ca6bd2d5ab423",
+  "shortSha": "57362fb",
+  "date": "2026-09-11T11:32:27+05:45",
+  "message": "feat(graph): implement ExplainGit-style IDE architecture, cosmic starburst layout, and fluid navigation"
 }
