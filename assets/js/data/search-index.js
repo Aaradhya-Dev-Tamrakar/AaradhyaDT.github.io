@@ -286,6 +286,13 @@ const SEARCH_STATIC_INDEX = {
   project: [
   {
     "type": "project",
+    "title": "STRANGLER-IPU — Ingress Processing Unit Architecture",
+    "meta": "Active Research · Computer Architecture, Systems Architecture, 6G Ingress",
+    "href": "projects.html#p-032",
+    "text": "strangler-ipu — ingress processing unit architecture ingress-aware boundary computing architecture: near-memory hardware accelerator subsystem targeting 6g sub-thz line-rate ingest (800 gbps – 1.6 tbps burst) and ai boundary inference, eliminating host dram memory-wall contention through decoupled front-end ingress offload discrete-event simulation & cxl modeling: validated via python simpy discrete-event modeling across asymmetric cxl 3.0/4.0 pooled memory fabrics ( sim/sweep_ipu_breakeven.py , exp-001), demonstrating 4.12× tail-latency reduction and 68% host memory bus contention relief aerospace & systems architecture governance: formulated with formal rfcs ( arch-rfc-001/002/003 ), invariant specifications ( inv-epi-001 , inv-mem-001 ), and a self-compiling in-repo latex technical report computer architecture systems architecture 6g ingress cxl 3.0/4.0 discrete-event sim simpy near-memory computing latex active research"
+  },
+  {
+    "type": "project",
     "title": "BiasAperture — Vision Fairness & Bias Audit",
     "meta": "In Progress · AIF360, Fairlearn, FairFace",
     "href": "projects.html#p-018",
@@ -301,9 +308,9 @@ const SEARCH_STATIC_INDEX = {
   {
     "type": "project",
     "title": "SPARK — Two-Layer Fall Detection Wearable",
-    "meta": "In Progress · MPU6050, TFLite Micro, 1D CNN",
+    "meta": "In Progress · ESP32-S3, MPU6050, TFLite Micro",
     "href": "projects.html#p-015",
-    "text": "spark — two-layer fall detection wearable on-device, two-layer fall-detection wearable for eldercare — threshold gate plus a tflite micro cnn gateway, zero imports, zero custom pcb bei major project, four-person team — proposal defended jul 9, 2026 mpu6050 tflite micro 1d cnn shap fastapi streamlit telegram esp32-s3 in progress"
+    "text": "spark — two-layer fall detection wearable on-device, two-layer fall-detection wearable for eldercare: layer 1 isr threshold pre-filter ($|a| > 2.5g$, $\\delta t < 300\\text{ ms}$) on esp32-s3 + mpu-6050 at 200 hz gating an on-device tflite micro 1d cnn 1d cnn trained under leakage-free subject-grouped split on sisfall (0.9185 auc-roc, 87.81% sensitivity), quantized to an 18.5 kb int8 flatbuffer (87.7% compression vs fp32) with 56 passing unit tests central gateway with shap clinical explainability, automated pdf diagnostic reports across 4 biomechanical fall profiles, and nepal cohort data collection pipeline bei major engineering project, four-person team — proposal defended jul 9, 2026 esp32-s3 mpu6050 tflite micro int8 quantization 1d cnn shap fastapi latex in progress"
   },
   {
     "type": "project",

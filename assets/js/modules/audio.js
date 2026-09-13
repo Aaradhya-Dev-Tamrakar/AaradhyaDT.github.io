@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: audio.js — aaradhyadt.github.io (v53.26)
+   MODULE: audio.js — aaradhyadt.github.io (v53.27)
    Web Audio synthesized micro-sounds with user toggle.
    ============================================================ */
 

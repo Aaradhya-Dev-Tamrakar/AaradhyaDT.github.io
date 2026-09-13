@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v53.26)
+   MODULE: terminal.js — aaradhyadt.github.io (v53.27)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -95,7 +95,7 @@
 `.trim(),
       whoami: () => `
 <span class="term-green">Aaradhya Dev Tamrakar (ADT)</span><br>
-  • <span class="term-gold">Role:</span> Electronics, Communication &amp; Information Engineer (BEI IV/I)<br>
+  • <span class="term-gold">Role:</span> Electronics, Communication &amp; Information Engineer (BEI IV/II)<br>
   • <span class="term-gold">Institution:</span> Kathmandu Engineering College, IOE, Tribhuvan University<br>
   • <span class="term-gold">Fellowships:</span> Fuse AI Fellow (Fusemachines 2026) · NSSR DataCamp Fellow (C2)<br>
   • <span class="term-gold">Leadership:</span> Vice Chair, IEEE KEC Student Branch · EPC Club Event Manager<br>
@@ -173,7 +173,7 @@
       stats: () => {
         const achvCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.achievement || []).length : 39;
         const projCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.project || []).length : 30;
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.26';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.27';
         return `
 <span class="term-green">[ADT PORTFOLIO TELEMETRY ${currentVer}]</span><br>
   • <span class="term-gold">Published Projects:</span> ${projCount} verified repositories &amp; systems<br>
@@ -204,7 +204,7 @@
       },
       run: (arg) => {
         const sub = (arg || '').toLowerCase().trim();
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.26';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.27';
         if (sub === 'spark') {
           return `
 <span class="term-green">[SPARK TELEMETRY SIMULATOR ${currentVer}]</span><br>
@@ -384,7 +384,7 @@
         } else {
           checks.push('<span class="term-red">\u2717</span> Search index: SEARCH_STATIC_INDEX not found');
         }
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.26';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v53.27';
         return `<span class="term-green">[SITE HEALTHCHECK ${currentVer}]</span><br>` + checks.map(c => '  ' + c).join('<br>');
       },
       sound: () => {

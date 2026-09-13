@@ -64,9 +64,8 @@
       "scripts_verify_yellow"
     ],
     "1": [
-      "dev_logs_portfoliowebsite_tracker",
       "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
-      "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_19",
+      "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_26",
       "dev_logs_portfoliowebsite_tracker_state_of_play",
       "dev_logs_portfoliowebsite_tracker_status",
       "dev_logs_portfoliowebsite_tracker_v21_addition_both_v20_flagged_unmatched_pdfs_closed_out",
@@ -103,6 +102,7 @@
       "dev_logs_rfc_portfolio_os_sdk_phase_2_template_extraction_hygiene",
       "dev_logs_rfc_portfolio_os_sdk_phase_3_community_release_package_distribution",
       "dev_logs_rfc_portfolio_os_sdk_rfc_portfolio_os_open_architecture_template_developer_sdk",
+      "dev_logs_tracker",
       "portfolio_os_concept"
     ],
     "2": [
@@ -281,6 +281,30 @@
       "spax_2026"
     ],
     "7": [
+      "assets_js_modules_graph_modal",
+      "assets_js_modules_graph_modal_bindevents",
+      "assets_js_modules_graph_modal_bindevents_togglefullscreen",
+      "assets_js_modules_graph_modal_closegraphmodal",
+      "assets_js_modules_graph_modal_escapehtml",
+      "assets_js_modules_graph_modal_findhit",
+      "assets_js_modules_graph_modal_fitall",
+      "assets_js_modules_graph_modal_glideto",
+      "assets_js_modules_graph_modal_opengraphmodal",
+      "assets_js_modules_graph_modal_relaxgraph",
+      "assets_js_modules_graph_modal_render",
+      "assets_js_modules_graph_modal_rendertreedom",
+      "assets_js_modules_graph_modal_rendertreedom_buildnode",
+      "assets_js_modules_graph_modal_requestrender",
+      "assets_js_modules_graph_modal_roundrect",
+      "assets_js_modules_graph_modal_selectfile",
+      "assets_js_modules_graph_modal_setupgraphdata",
+      "assets_js_modules_graph_modal_synctreeactive",
+      "assets_js_modules_graph_modal_synczoomcontrols",
+      "assets_js_modules_graph_modal_triggeraudio",
+      "assets_js_modules_graph_modal_updateclock",
+      "assets_js_modules_graph_modal_updatetooltip"
+    ],
+    "8": [
       "assets_js_modules_tour",
       "assets_js_modules_tour_closetouroverlay",
       "assets_js_modules_tour_ensuretouroverlay",
@@ -302,28 +326,8 @@
       "assets_js_modules_tour_tourreducedmotion",
       "assets_js_modules_tour_updatetourspotlight"
     ],
-    "8": [
-      "assets_js_modules_graph_modal",
-      "assets_js_modules_graph_modal_bindinteractions",
-      "assets_js_modules_graph_modal_buildedgebuffers",
-      "assets_js_modules_graph_modal_closegraphmodal",
-      "assets_js_modules_graph_modal_computeviewmatrix",
-      "assets_js_modules_graph_modal_createprogram",
-      "assets_js_modules_graph_modal_createshader",
-      "assets_js_modules_graph_modal_createspheremesh",
-      "assets_js_modules_graph_modal_escapehtml",
-      "assets_js_modules_graph_modal_findnodeunderpointer",
-      "assets_js_modules_graph_modal_generate3dpositions",
-      "assets_js_modules_graph_modal_getcommunitycolor",
-      "assets_js_modules_graph_modal_initwebgl",
-      "assets_js_modules_graph_modal_multiplymatrices",
-      "assets_js_modules_graph_modal_opengraphmodal",
-      "assets_js_modules_graph_modal_perspective",
-      "assets_js_modules_graph_modal_render",
-      "assets_js_modules_graph_modal_requestrender",
-      "assets_js_modules_graph_modal_updatetooltip"
-    ],
     "9": [
+      "concept_zero_leak_security",
       "readme",
       "readme_aaradhyadt_github_io",
       "readme_automated_git_workflow_pre_commit_gate_sync_ps1",
@@ -549,6 +553,16 @@
       "assets_js_modules_home_widgets_initstatusclock_tick"
     ],
     "24": [
+      "tests_unit_test_graph_modal_test",
+      "tests_unit_test_graph_modal_test_dirname",
+      "tests_unit_test_graph_modal_test_filename",
+      "tests_unit_test_graph_modal_test_graph_data",
+      "tests_unit_test_graph_modal_test_graphdatapath",
+      "tests_unit_test_graph_modal_test_match",
+      "tests_unit_test_graph_modal_test_rawcode",
+      "tests_unit_test_graph_modal_test_root"
+    ],
+    "25": [
       "any",
       "scripts_generate_og_cards",
       "scripts_generate_og_cards_generate_cards",
@@ -557,7 +571,7 @@
       "scripts_generate_og_cards_rationale_81",
       "scripts_generate_og_cards_render_svg_card"
     ],
-    "25": [
+    "26": [
       "assets_js_modules_haptics",
       "assets_js_modules_haptics_initscrollparallax",
       "assets_js_modules_haptics_initscrollparallax_onparallaxscroll",
@@ -566,7 +580,7 @@
       "assets_js_modules_haptics_inittouchgestures",
       "assets_js_modules_haptics_triggerhapticfeedback"
     ],
-    "26": [
+    "27": [
       "scripts_extract_index",
       "scripts_extract_index_extract_achievements",
       "scripts_extract_index_extract_projects",
@@ -575,7 +589,7 @@
       "scripts_extract_index_render_entry",
       "scripts_extract_index_text_of"
     ],
-    "27": [
+    "28": [
       "tests_unit_test_crypto_test",
       "tests_unit_test_crypto_test_buffertohex",
       "tests_unit_test_crypto_test_decrypthexpayload",
@@ -584,7 +598,7 @@
       "tests_unit_test_crypto_test_hextobuffer",
       "tests_unit_test_crypto_test_key_cache"
     ],
-    "28": [
+    "29": [
       "assets_js_modules_audio",
       "assets_js_modules_audio_getaudiocontext",
       "assets_js_modules_audio_initaudiocues",
@@ -592,7 +606,7 @@
       "assets_js_modules_audio_syncaudiotoggleui",
       "assets_js_modules_audio_toggleaudiocues"
     ],
-    "29": [
+    "30": [
       "assets_js_modules_constants",
       "assets_js_modules_constants_cmdk_icons",
       "assets_js_modules_constants_cmdk_type_label",
@@ -600,21 +614,13 @@
       "assets_js_modules_constants_site",
       "assets_js_modules_constants_social_icons"
     ],
-    "30": [
+    "31": [
       "claude",
       "claude_encrypted_sections_vip_payloads_access_js",
       "claude_file_delivery",
       "claude_local_git_workflow_auto_sync_sync_ps1",
       "claude_output_constraints_strict",
       "claude_working_conventions_for_this_repo"
-    ],
-    "31": [
-      "experience_fuse",
-      "experience_ieee_vicechair",
-      "experience_ieee_vicesecretary",
-      "experience_makerspace",
-      "experience_nssr",
-      "index_hero"
     ],
     "32": [
       "scripts_test_e2e",
@@ -671,50 +677,51 @@
       "assets_js_modules_shortcuts_toggleshortcutsmodal"
     ],
     "40": [
+      "concept_bias_aperture",
+      "concept_spark",
+      "concept_strangler_ipu",
+      "projects"
+    ],
+    "41": [
       "scripts_dev_serve",
       "scripts_dev_serve_handler",
       "scripts_dev_serve_handler_end_headers",
       "scripts_dev_serve_handler_send_error"
     ],
-    "41": [
+    "42": [
       "assets_certificates_ieee_kec_ieee_day_organizer_2025",
       "assets_certificates_ieee_kec_spax_organization_2026",
       "assets_certificates_ieee_kec_volunteering_vice_secretary_2025_2026"
     ],
-    "42": [
+    "43": [
       "assets_certificates_introduction_to_git_48697649_certificate",
       "assets_certificates_introduction_to_git_cpe0469867571113_certificate",
       "shared_git_concept"
     ],
-    "43": [
+    "44": [
       "assets_certificates_introduction_to_python_47717251_certificate",
       "assets_certificates_introduction_to_python_itp0014139470763_certificate",
       "concept_python_programming"
     ],
-    "44": [
+    "45": [
       "assets_certificates_kec_robotics_club_pcb_design_fabrication_workshop_2025_kec_robotics_club",
       "assets_certificates_kec_robotics_club_pcb_design_fabrication_workshop_2025_pcb_design_fabrication",
       "assets_certificates_laser_safety_awareness_training_laser_safety"
     ],
-    "45": [
+    "46": [
       "assets_certificates_simops_ai_for_graduates_98452248595354_certificate",
       "assets_certificates_simops_expert_12836702612982_certificate",
       "simops_platform"
     ],
-    "46": [
+    "47": [
       "assets_certificates_simops_fundamentals_25303246876434_certificate",
       "assets_certificates_simops_practitioner_52653675650240_certificate",
       "simops_concept"
     ],
-    "47": [
+    "48": [
       "journey_analytics",
       "privacy_policy",
       "terms_of_service"
-    ],
-    "48": [
-      "projects_biasaperture",
-      "projects_nova_optimizer",
-      "projects_spark"
     ],
     "49": [
       "sanitize_and_payload",
@@ -722,18 +729,19 @@
       "sanitize_and_payload_sanitize_content"
     ],
     "50": [
+      "scripts_generate_graph_data",
+      "scripts_generate_graph_data_build_graph_data",
+      "scripts_generate_graph_data_get_file_color"
+    ],
+    "51": [
       "tests_unit_test_core_helpers_test",
       "tests_unit_test_core_helpers_test_computelivedates",
       "tests_unit_test_core_helpers_test_getcurrentpagefile"
     ],
-    "51": [
+    "52": [
       "tests_unit_test_terminal_test",
       "tests_unit_test_terminal_test_parseterminalcommand",
       "tests_unit_test_terminal_test_resolvenavigationtarget"
-    ],
-    "52": [
-      "about_html",
-      "tests_visual_baselines_about_desktop"
     ],
     "53": [
       "assets_certificates_eu_ai_act_literacy_eu0028355472158_certificate",
@@ -808,35 +816,34 @@
       "assets_js_data_search_index_search_static_index"
     ],
     "71": [
-      "concept_zero_leak_security",
-      "readme_md"
-    ],
-    "72": [
       "d_aaradhyadt_aaradhyadt_github_io_dev_logs_og_image_readme_md",
       "og_image_readme_og_image_source"
     ],
-    "73": [
-      "index_html",
-      "tests_visual_baselines_index_desktop"
+    "72": [
+      "experience_ieee_vicechair",
+      "experience_ieee_vicesecretary"
     ],
-    "74": [
+    "73": [
       "journey_html",
       "tests_visual_baselines_journey_desktop"
     ],
-    "75": [
+    "74": [
       "journey_milestone_12",
       "journey_milestone_15"
     ],
-    "76": [
+    "75": [
       "llms_full_txt",
       "llms_txt"
     ],
-    "77": [
+    "76": [
       "sw",
       "sw_static_assets"
     ],
-    "78": [
+    "77": [
       "404_html"
+    ],
+    "78": [
+      "about"
     ],
     "79": [
       "achievements_html"
@@ -1007,126 +1014,138 @@
       "concept_novaoptimizer"
     ],
     "135": [
-      "concept_spark"
-    ],
-    "136": [
       "concept_zero_leak_access_control"
     ],
-    "137": [
+    "136": [
       "contact_html"
     ],
-    "138": [
+    "137": [
       "dev_logs_og_image_readme_md"
     ],
-    "139": [
+    "138": [
       "ev_ratings_pdf"
     ],
-    "140": [
+    "139": [
       "experience_epc_manager"
     ],
+    "140": [
+      "experience_fuse"
+    ],
     "141": [
-      "gcsbr_poster_jpg"
+      "experience_makerspace"
     ],
     "142": [
-      "gemini_md"
+      "experience_nssr"
     ],
     "143": [
-      "github_workflows_lighthouse_audit"
+      "gcsbr_poster_jpg"
     ],
     "144": [
-      "github_workflows_update_search_index_yml"
+      "gemini_md"
     ],
     "145": [
-      "github_workflows_visual_regression"
+      "github_workflows_lighthouse_audit"
     ],
     "146": [
-      "google_oauth"
+      "github_workflows_update_search_index_yml"
     ],
     "147": [
-      "google_verification"
+      "github_workflows_visual_regression"
     ],
     "148": [
-      "graphify"
+      "google_oauth"
     ],
     "149": [
-      "journey_accessibility"
+      "google_verification"
     ],
     "150": [
-      "journey_font_loading"
+      "graphify"
     ],
     "151": [
-      "journey_milestone_36"
+      "index"
     ],
     "152": [
-      "logo_epc"
+      "journey_accessibility"
     ],
     "153": [
-      "logo_fusemachines"
+      "journey_font_loading"
     ],
     "154": [
-      "mcp_server_site_mcp_py"
+      "journey_milestone_36"
     ],
     "155": [
-      "pkg_aaradhyadt_portfolio"
+      "logo_epc"
     ],
     "156": [
-      "projects_super_nlm"
+      "logo_fusemachines"
     ],
     "157": [
-      "robots_txt"
+      "mcp_server_site_mcp_py"
     ],
     "158": [
-      "scripts_extract_index_py"
+      "pkg_aaradhyadt_portfolio"
     ],
     "159": [
-      "scripts_verify_py"
+      "robots_txt"
     ],
     "160": [
-      "site_webmanifest"
+      "scripts_extract_index_py"
     ],
     "161": [
-      "sw_js"
+      "scripts_verify_py"
     ],
     "162": [
-      "sync_ps1"
+      "site_webmanifest"
     ],
     "163": [
-      "tests_visual_baselines_about_mobile"
+      "sw_js"
     ],
     "164": [
-      "tests_visual_baselines_achievements_desktop"
+      "sync_ps1"
     ],
     "165": [
-      "tests_visual_baselines_achievements_mobile"
+      "tests_visual_baselines_about_desktop"
     ],
     "166": [
-      "tests_visual_baselines_contact_desktop"
+      "tests_visual_baselines_about_mobile"
     ],
     "167": [
-      "tests_visual_baselines_contact_mobile"
+      "tests_visual_baselines_achievements_desktop"
     ],
     "168": [
-      "tests_visual_baselines_experience_desktop"
+      "tests_visual_baselines_achievements_mobile"
     ],
     "169": [
-      "tests_visual_baselines_experience_mobile"
+      "tests_visual_baselines_contact_desktop"
     ],
     "170": [
-      "tests_visual_baselines_index_mobile"
+      "tests_visual_baselines_contact_mobile"
     ],
     "171": [
-      "tests_visual_baselines_journey_mobile"
+      "tests_visual_baselines_experience_desktop"
     ],
     "172": [
-      "tests_visual_baselines_projects_desktop"
+      "tests_visual_baselines_experience_mobile"
     ],
     "173": [
-      "tests_visual_baselines_projects_mobile"
+      "tests_visual_baselines_index_desktop"
     ],
     "174": [
-      "version"
+      "tests_visual_baselines_index_mobile"
     ],
     "175": [
+      "tests_visual_baselines_journey_mobile"
+    ],
+    "176": [
+      "tests_visual_baselines_projects_desktop"
+    ],
+    "177": [
+      "tests_visual_baselines_projects_mobile"
+    ],
+    "178": [
+      "version"
+    ],
+    "179": [
       "workflow_stamp_last_commit"
     ]
   },
@@ -1138,9 +1157,9 @@
     "4": 0.11764705882352941,
     "5": 0.16091954022988506,
     "6": 0.10153846153846154,
-    "7": 0.2736842105263158,
-    "8": 0.22807017543859648,
-    "9": 0.1111111111111111,
+    "7": 0.24242424242424243,
+    "8": 0.2736842105263158,
+    "9": 0.10526315789473684,
     "10": 0.11764705882352941,
     "11": 0.36764705882352944,
     "12": 0.2761904761904762,
@@ -1155,12 +1174,12 @@
     "21": 0.3611111111111111,
     "22": 0.3055555555555556,
     "23": 0.39285714285714285,
-    "24": 0.38095238095238093,
+    "24": 0.25,
     "25": 0.38095238095238093,
-    "26": 0.5714285714285714,
-    "27": 0.3333333333333333,
-    "28": 0.8,
-    "29": 0.3333333333333333,
+    "26": 0.38095238095238093,
+    "27": 0.5714285714285714,
+    "28": 0.3333333333333333,
+    "29": 0.8,
     "30": 0.3333333333333333,
     "31": 0.3333333333333333,
     "32": 0.3333333333333333,
@@ -1171,19 +1190,19 @@
     "37": 0.5,
     "38": 0.5,
     "39": 1.0,
-    "40": 0.6666666666666666,
+    "40": 0.5,
     "41": 0.6666666666666666,
-    "42": 1.0,
+    "42": 0.6666666666666666,
     "43": 1.0,
-    "44": 0.6666666666666666,
-    "45": 1.0,
+    "44": 1.0,
+    "45": 0.6666666666666666,
     "46": 1.0,
-    "47": 0.6666666666666666,
+    "47": 1.0,
     "48": 0.6666666666666666,
     "49": 1.0,
-    "50": 0.6666666666666666,
+    "50": 1.0,
     "51": 0.6666666666666666,
-    "52": 1.0,
+    "52": 0.6666666666666666,
     "53": 1.0,
     "54": 1.0,
     "55": 1.0,
@@ -1306,7 +1325,11 @@
     "172": 1.0,
     "173": 1.0,
     "174": 1.0,
-    "175": 1.0
+    "175": 1.0,
+    "176": 1.0,
+    "177": 1.0,
+    "178": 1.0,
+    "179": 1.0
   },
   "gods": [
     {
@@ -1325,14 +1348,19 @@
       "degree": 22
     },
     {
-      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_19",
-      "label": "Portfolio Website Tracker \u2014 v53.19",
+      "id": "dev_logs_portfoliowebsite_tracker_portfolio_website_tracker_v53_26",
+      "label": "Portfolio Website Tracker \u2014 v53.26",
       "degree": 21
     },
     {
       "id": "scripts_verify_log_warning",
       "label": "log_warning()",
       "degree": 16
+    },
+    {
+      "id": "assets_js_modules_graph_modal_bindevents",
+      "label": "bindEvents()",
+      "degree": 14
     },
     {
       "id": "scripts_verify_get_html_files",
@@ -1343,11 +1371,6 @@
       "id": "scripts_site_automation_cmd_sync",
       "label": "cmd_sync()",
       "degree": 13
-    },
-    {
-      "id": "assets_js_modules_tour_inittour",
-      "label": "initTour()",
-      "degree": 12
     },
     {
       "id": "aaradhya_dev_tamrakar",
@@ -1418,7 +1441,7 @@
     }
   ],
   "tokens": {
-    "input": 0,
-    "output": 0
+    "input": 91868,
+    "output": 5010
   }
 }

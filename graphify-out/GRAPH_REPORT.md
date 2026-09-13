@@ -1,16 +1,16 @@
-# Graph Report - AaradhyaDT.github.io  (2026-09-11)
+# Graph Report - AaradhyaDT.github.io  (2026-09-13)
 
 ## Corpus Check
-- 52 files · ~459,528 words
+- 52 files · ~460,306 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 791 nodes · 1047 edges · 177 communities (46 shown, 120 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 68 edges (avg confidence: 0.86)
+- 788 nodes · 1042 edges · 180 communities (46 shown, 121 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5fc3e94b`
+- Built from commit: `ffae872f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,8 +22,8 @@
 - site_automation.py
 - access.js
 - Aaradhya Dev Tamrakar
-- tour.js
 - graph-modal.js
+- tour.js
 - aaradhyadt.github.io
 - Aaradhya Dev Tamrakar CV
 - manage_payloads.py
@@ -36,9 +36,10 @@
 - Agent Rules & Workflow Guidelines
 - Antigravity IDE & Gemini Agent Rules for Portfolio Repository
 - test_visual_regression.py
-- test_graph_modal.test.mjs
+- script.js
 - site_mcp.py
 - home-widgets.js
+- test_graph_modal.test.mjs
 - generate_cards
 - haptics.js
 - extract_index.py
@@ -46,7 +47,6 @@
 - audio.js
 - constants.js
 - Working conventions for this repo
-- Aaradhya Dev Tamrakar (ADT)
 - QuietTestHandler
 - setup
 - build_all
@@ -55,6 +55,7 @@
 - IEEE KEC Student Branch
 - IEEE
 - shortcuts.js
+- projects.html
 - Handler
 - Certificate: IEEE Volunteering Vice-Secretary
 - Introduction to Git Certificate (48697649)
@@ -63,9 +64,8 @@
 - SimOps AI for Graduates Certificate
 - SimOps Fundamentals Certificate
 - Privacy Policy
-- SPARK — Two-Layer Fall Detection Wearable
 - sanitize_and_payload.py
-- About Page
+- generate_graph_data.py
 - EU AI Act Literacy Certificate EU0028355472158
 - Poster: Workshop on Linux and Open Source Contribution
 - Certificate: IEEEXtreme 19.0 Programming Competition Participation
@@ -84,9 +84,8 @@
 - releases.js
 - resume-data.js
 - search-index.js
-- Zero-Leak Security Model
 - og-image/README.md
-- index.html
+- IEEE KEC KTM Vice Chair
 - journey.html
 - CI-automated Search Index Pipeline
 - sw.js
@@ -144,12 +143,14 @@
 - BiasAperture Project
 - Model Context Protocol Integration
 - NovaOptimizer Project
-- SPARK Project
 - Zero-Leak Access Control
 - Contact Page
 - OG image source README
 - Electric Vehicle Ratings, Drive Cycles, Battery Implications and Management.pdf
 - EPC Event Manager
+- Fuse AI Fellow
+- Makerspace Ambassador
+- NSSR DataCamp Fellow
 - GCSBR Working Demo Poster
 - Gemini Agent Rules
 - Visual Regression Workflow
@@ -163,11 +164,11 @@
 - Fusemachines Logo
 - MCP Server
 - aaradhyadt-portfolio
-- Super-NLM — Multi-Account NotebookLM Hub & MCP Server
 - Search Index Extractor
 - Verification Suite
 - Service Worker
 - Automation Script
+- About Page Desktop UI
 - UI Screenshot: About Page (Mobile)
 - UI Screenshot: Achievements Page (Desktop)
 - UI Screenshot: Achievements Page (Mobile)
@@ -175,12 +176,12 @@
 - UI Screenshot: Contact Page (Mobile)
 - UI Screenshot: Experience Page (Desktop)
 - UI Screenshot: Experience Page (Mobile)
+- Home Page Desktop UI
 - UI Screenshot: Index/Home Page (Mobile)
 - UI Screenshot: Journey Page (Mobile)
 - UI Screenshot: Projects Page (Desktop)
 - UI Screenshot: Projects Page (Mobile)
 - Stamp Last Commit Workflow
-- generate_graph_data.py
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
@@ -211,14 +212,14 @@
 
 ## Hyperedges (group relationships)
 - **Flagship Engineering Projects** — concept_spark, concept_biasaperture, concept_novaoptimizer [EXTRACTED 0.85]
-- **Embedded ML & Hardware Projects** — projects_spark, projects_nova_optimizer, projects_biasaperture [EXTRACTED 0.95]
 - **Core Legal Framework** — privacy_policy, terms_of_service [EXTRACTED 1.00]
 - **Fellowship & Grant Programs** — experience_fuse, experience_nssr [EXTRACTED 1.00]
 - **Student Leadership & Management** — experience_ieee_vicechair, experience_epc_manager, experience_ieee_vicesecretary [EXTRACTED 1.00]
+- **Major Engineering Projects** — concept_spark, concept_strangler_ipu, concept_bias_aperture [EXTRACTED 1.00]
 - **Site Security & Access Control** — journey_milestone_15, journey_milestone_36 [INFERRED 0.85]
-- **AI Agent Readiness & Tooling** — projects_super_nlm, evolution_roadmap, workflow_verify [INFERRED 0.90]
+- **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 
-## Communities (177 total, 120 thin omitted)
+## Communities (180 total, 121 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.10
@@ -229,8 +230,8 @@ Cohesion: 0.05
 Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.26, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+30 more)
 
 ### Community 2 - "core.js"
-Cohesion: 0.06
-Nodes (38): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+30 more)
+Cohesion: 0.08
+Nodes (32): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+24 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
@@ -246,19 +247,19 @@ Nodes (29): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), authen
 
 ### Community 6 - "Aaradhya Dev Tamrakar"
 Cohesion: 0.10
-Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developers, AI Fluency, Anthropic, Certificate: AI-Assisted Product Launch, AI Fluency: Foundations of Coworking with AI Certificate, Certificate: AI Fluency: Framework & Foundations, Certificate: Building a Go-To-Market Strategy (+18 more)
+Nodes (26): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developers, AI Fluency, Anthropic, Certificate: AI-Assisted Product Launch, Certificate: Introduction to Claude Cowork, Certificate: AI Fluency: Framework & Foundations, Certificate: Building a Go-To-Market Strategy (+18 more)
 
-### Community 7 - "tour.js"
-Cohesion: 0.27
-Nodes (19): closeTourOverlay(), ensureTourOverlay(), exitTour(), getTourCurrentPage(), getTourPageUrl(), initTour(), positionTourCard(), promptGuidedTour() (+11 more)
-
-### Community 8 - "graph-modal.js"
+### Community 7 - "graph-modal.js"
 Cohesion: 0.24
 Nodes (20): bindEvents(), toggleFullscreen(), closeGraphModal(), escapeHtml(), findHit(), fitAll(), glideTo(), openGraphModal() (+12 more)
 
+### Community 8 - "tour.js"
+Cohesion: 0.27
+Nodes (19): closeTourOverlay(), ensureTourOverlay(), exitTour(), getTourCurrentPage(), getTourPageUrl(), initTour(), positionTourCard(), promptGuidedTour() (+11 more)
+
 ### Community 9 - "aaradhyadt.github.io"
 Cohesion: 0.11
-Nodes (17): aaradhyadt.github.io, Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`), Key Features (+9 more)
+Nodes (18): Zero-Leak Security Model, aaradhyadt.github.io, Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`) (+10 more)
 
 ### Community 10 - "Aaradhya Dev Tamrakar CV"
 Cohesion: 0.12
@@ -304,9 +305,9 @@ Nodes (11): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 1. P
 Cohesion: 0.24
 Nodes (8): calculate_image_diff(), capture_screenshot(), find_browser_executable(), main(), QuietServerHandler, Execute browser CLI in headless mode to capture a viewport snapshot., Compare baseline and current images using Pillow. Returns: (diff_ratio,…, Locate headless Chrome, Chromium, or Edge binary on the system.
 
-### Community 21 - "test_graph_modal.test.mjs"
-Cohesion: 0.25
-Nodes (7): __dirname, __filename, GRAPH_DATA, graphDataPath, match, rawCode, ROOT
+### Community 21 - "script.js"
+Cohesion: 0.36
+Nodes (6): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
 
 ### Community 22 - "site_mcp.py"
 Cohesion: 0.31
@@ -316,37 +317,37 @@ Nodes (8): handle_resource_read(), handle_tool_call(), process_request(), Fetche
 Cohesion: 0.39
 Nodes (6): bootHomeWidgets(), initLastCommitBadge(), formatDateTime(), pad(), initLiveDates(), initStatusClock()
 
-### Community 24 - "generate_cards"
+### Community 24 - "test_graph_modal.test.mjs"
+Cohesion: 0.25
+Nodes (7): __dirname, __filename, GRAPH_DATA, graphDataPath, match, rawCode, ROOT
+
+### Community 25 - "generate_cards"
 Cohesion: 0.38
 Nodes (6): any, generate_cards(), main(), Generates OG SVG cards into the output directory., Renders a high-resolution 1200x630 SVG OpenGraph card with cyber/engineering…, render_svg_card()
 
-### Community 25 - "haptics.js"
+### Community 26 - "haptics.js"
 Cohesion: 0.38
 Nodes (4): initScrollParallax(), initSwipeNav(), initTouchGestures(), triggerHapticFeedback()
 
-### Community 26 - "extract_index.py"
+### Community 27 - "extract_index.py"
 Cohesion: 0.57
 Nodes (6): extract_achievements(), extract_projects(), main(), render_block(), render_entry(), text_of()
 
-### Community 27 - "test_crypto.test.mjs"
+### Community 28 - "test_crypto.test.mjs"
 Cohesion: 0.33
 Nodes (3): decryptHexPayload(), getDecryptionKey(), KEY_CACHE
 
-### Community 28 - "audio.js"
+### Community 29 - "audio.js"
 Cohesion: 0.80
 Nodes (5): getAudioContext(), initAudioCues(), playAudioCue(), syncAudioToggleUI(), toggleAudioCues()
 
-### Community 29 - "constants.js"
+### Community 30 - "constants.js"
 Cohesion: 0.33
 Nodes (5): CMDK_ICONS, CMDK_TYPE_LABEL, QUICK_NAV_PAGES, SITE, SOCIAL_ICONS
 
-### Community 30 - "Working conventions for this repo"
+### Community 31 - "Working conventions for this repo"
 Cohesion: 0.33
 Nodes (5): Encrypted Sections & VIP Payloads (`access.js`), File delivery, Local Git Workflow & Auto-Sync (`sync.ps1`), Output constraints (strict), Working conventions for this repo
-
-### Community 31 - "Aaradhya Dev Tamrakar (ADT)"
-Cohesion: 0.33
-Nodes (6): Fuse AI Fellow, IEEE KEC KTM Vice Chair, IEEE KEC KTM Vice Secretary, Makerspace Ambassador, NSSR DataCamp Fellow, Aaradhya Dev Tamrakar (ADT)
 
 ### Community 33 - "setup"
 Cohesion: 0.70
@@ -372,57 +373,57 @@ Nodes (4): IEEE Membership Certificate MEMIEEE500, IEEE Women in Engineering Mem
 Cohesion: 1.00
 Nodes (3): closeShortcutsModal(), openShortcutsModal(), toggleShortcutsModal()
 
-### Community 41 - "Certificate: IEEE Volunteering Vice-Secretary"
+### Community 40 - "projects.html"
+Cohesion: 0.50
+Nodes (3): BiasAperture, SPARK Project, STRANGLER-IPU
+
+### Community 42 - "Certificate: IEEE Volunteering Vice-Secretary"
 Cohesion: 0.67
 Nodes (3): Certificate: IEEE Day 2025 Organizer Appreciation, Certificate: IEEE SPAx Organization Team Member, Certificate: IEEE Volunteering Vice-Secretary
 
-### Community 42 - "Introduction to Git Certificate (48697649)"
+### Community 43 - "Introduction to Git Certificate (48697649)"
 Cohesion: 1.00
 Nodes (3): Introduction to Git Certificate (48697649), Introduction to Git Certificate (CPE0469867571113), Git
 
-### Community 43 - "Introduction to Python Certificate (47717251)"
+### Community 44 - "Introduction to Python Certificate (47717251)"
 Cohesion: 1.00
 Nodes (3): Introduction to Python Certificate (47717251), Introduction to Python Certificate (ITP0014139470763), Python Programming
 
-### Community 44 - "PCB Design & Fabrication Workshop 2025"
+### Community 45 - "PCB Design & Fabrication Workshop 2025"
 Cohesion: 0.67
 Nodes (3): KEC Robotics Club, PCB Design & Fabrication Workshop 2025, Laser Safety Awareness Training
 
-### Community 45 - "SimOps AI for Graduates Certificate"
+### Community 46 - "SimOps AI for Graduates Certificate"
 Cohesion: 1.00
 Nodes (3): SimOps AI for Graduates Certificate, SimOps Expert Certificate, SimOps Platform
 
-### Community 46 - "SimOps Fundamentals Certificate"
+### Community 47 - "SimOps Fundamentals Certificate"
 Cohesion: 1.00
 Nodes (3): SimOps Fundamentals Certificate, SimOps Practitioner Certificate, SimOps (Simulation Operations)
 
-### Community 47 - "Privacy Policy"
+### Community 48 - "Privacy Policy"
 Cohesion: 0.67
 Nodes (3): Analytics with actual event tracking, Privacy Policy, Terms of Service
 
-### Community 48 - "SPARK — Two-Layer Fall Detection Wearable"
-Cohesion: 0.67
-Nodes (3): BiasAperture — Vision Fairness & Bias Audit, NovaOptimizer — Windows Task Manager & System Optimizer, SPARK — Two-Layer Fall Detection Wearable
-
 ## Knowledge Gaps
-- **255 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+250 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 395 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **120 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **253 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+248 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 393 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **121 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `renderSiteFooter()` connect `ui.js` to `core.js`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `loadGA4()` connect `core.js` to `script.js`?**
+  _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _255 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _253 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.06382978723404255 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07823613086770982 - nodes in this community are weakly interconnected._
 - **Should `ui.js` be split into smaller, more focused modules?**
   _Cohesion score 0.07957957957957958 - nodes in this community are weakly interconnected._
-- **Should `site_automation.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.11764705882352941 - nodes in this community are weakly interconnected._

@@ -1,6 +1,6 @@
 # Aaradhya Dev Tamrakar (ADT) — Full Context
 
-> **Aaradhya Dev Tamrakar (ADT)** is an Electronics, Communication & Information Engineering student (BEI IV/I) at Kathmandu Engineering College (IOE, Tribhuvan University, Nepal), expected graduation January 2027. He is a **Fuse AI Fellow** (Fusemachines 2026), **NSSR DataCamp Fellow** (Cohort 2), and **Vice Chair of the IEEE KEC KTM Student Branch**, specializing in Edge AI, embedded systems, robotics, machine learning, and full-stack software development.
+> **Aaradhya Dev Tamrakar (ADT)** is an Electronics, Communication & Information Engineering student (BEI IV/II, Final Semester) at Kathmandu Engineering College (IOE, Tribhuvan University, Nepal), expected graduation January 2027. He is a **Fuse AI Fellow** (Fusemachines 2026), **NSSR DataCamp Fellow** (Cohort 2), and **Vice Chair of the IEEE KEC KTM Student Branch**, specializing in Computer Architecture, Edge AI, embedded systems, robotics, machine learning, and full-stack software development.
 
 ---
 
@@ -20,8 +20,9 @@
 ## 2. Academic Background & Coursework
 - **Degree:** Bachelor of Engineering in Electronics, Communication & Information Engineering (BEI)
 - **Institution:** Kathmandu Engineering College (KEC), Institute of Engineering (IOE), Tribhuvan University (TU)
-- **Current Semester:** Year IV, Part I (7th Semester)
+- **Current Semester:** Year IV, Part II (8th / Final Semester)
 - **Key Coursework:**
+  - Telecommunications, Professional Practice, Energy Environment & Society, Information Systems
   - Artificial Intelligence, Digital Signal Analysis & Processing, Wireless Communication
   - RF & Microwave Engineering, Aeronautical Telecommunications, Organization & Management
   - Embedded Systems, Microprocessors, Control Systems, Object-Oriented Programming (C++/Python)
@@ -30,12 +31,18 @@
 
 ## 3. Flagship Engineering Projects
 
+### STRANGLER-IPU — Ingress Processing Unit Architecture & CXL Modeling
+- **Category:** Computer Architecture / Near-Memory Systems / 6G Telecommunications
+- **Architecture:** Near-memory hardware accelerator subsystem targeting 6G Sub-THz line-rate ingest (800 Gbps – 1.6 Tbps burst) and AI boundary computing; eliminates host DRAM memory-wall contention through decoupled front-end ingress offload.
+- **Validation & Metrics:** Discrete-event simulation via SimPy (`sim/sweep_ipu_breakeven.py`, EXP-001) modeling asymmetric CXL 3.0/4.0 pooled memory fabrics; demonstrated 4.12× tail-latency reduction and 68% host memory bus contention relief.
+- **Governance:** Formulated with formal RFCs (`ARCH-RFC-001/002/003`), invariant specifications (`INV-EPI-001`, `INV-MEM-001`), and self-compiling in-repo LaTeX technical reports.
+
 ### SPARK — Intelligent Fall Detection & Bio-Telemetry Wearable
 - **Category:** Edge AI / Embedded Systems / Assistive Health Tech
-- **Architecture:** Two-layer, fully on-device fall detection wearable for eldercare.
-- **Hardware:** ESP32-S3 microcontroller, MPU6050 6-DOF IMU (accelerometer/gyroscope), optical PPG pulse sensor.
-- **AI/ML:** Quantized TFLite Micro 1D-CNN INT8 on-device model running at 50Hz with complementary filtering.
-- **Gateway & Explainability:** Raspberry Pi 4B edge gateway with local SHAP (SHapley Additive exPlanations) attribution, BLE 5.0 mesh, and local fallback alert buzzer.
+- **Architecture:** Two-layer, on-device fall detection wearable for eldercare (Layer 1 ISR threshold gate at 200 Hz + Layer 2 TFLite Micro 1D CNN).
+- **Hardware & Firmware:** ESP32-S3 microcontroller, MPU6050 6-DOF IMU, 18.5 KB INT8 quantized model (87.7% compression vs FP32) with 56 passing unit tests.
+- **AI/ML:** 1D CNN trained under leakage-free subject-grouped split on SisFall (0.9185 AUC-ROC, 87.81% sensitivity).
+- **Gateway & Explainability:** Edge gateway with local SHAP attribution across 4 distinct biomechanical fall profiles, automated clinical PDF generation, and Nepal cohort data collection campaign.
 
 ### Fuse AI Fellowship 14-Week Capstone & Pipelines
 - **Week 14 (Capstone):** BiasAperture — Vision-model fairness & demographic disparity diagnostic suite.

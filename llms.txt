@@ -1,11 +1,11 @@
 # Aaradhya Dev Tamrakar (ADT)
 
-> Aaradhya Dev Tamrakar (ADT) is an Electronics, Communication & Information Engineering student (BEI IV/I) at Kathmandu Engineering College (IOE, Tribhuvan University). He is a Fuse AI Fellow (Fusemachines 2026), NSSR DataCamp Fellow (Cohort 2), and Vice Chair of the IEEE KEC KTM Student Branch, specializing in embedded systems, robotics, Edge AI (ESP32-S3 / MPU6050), machine learning, and full-stack software development.
+> Aaradhya Dev Tamrakar (ADT) is an Electronics, Communication & Information Engineering student (BEI IV/II, Final Semester) at Kathmandu Engineering College (IOE, Tribhuvan University). He is a Fuse AI Fellow (Fusemachines 2026), NSSR DataCamp Fellow (Cohort 2), and Vice Chair of the IEEE KEC KTM Student Branch, specializing in computer architecture & systems modeling, embedded systems, robotics, Edge AI (ESP32-S3 / MPU6050), machine learning, and full-stack software development.
 
 ## Core Pages
 
 - [Home](https://aaradhyadt.github.io/): Overview of engineering background, interactive terminal, radar skills matrix, and featured work.
-- [Projects](https://aaradhyadt.github.io/projects.html): Complete catalog of engineering projects across embedded systems, hardware, and machine learning (including SPARK and 14 weeks of Fusemachines AI pipelines).
+- [Projects](https://aaradhyadt.github.io/projects.html): Complete catalog of engineering projects across embedded systems, hardware, and machine learning (including SPARK, STRANGLER-IPU, and 14 weeks of Fusemachines AI pipelines).
 - [Experience](https://aaradhyadt.github.io/experience.html): Professional fellowships (Fuse AI Fellow, NSSR DataCamp Fellow) and leadership history (IEEE KEC KTM Vice Chair, EPC Event Manager).
 - [Achievements](https://aaradhyadt.github.io/achievements.html): 39 verified certificates, awards, hackathons, and technical credentials.
 - [About](https://aaradhyadt.github.io/about.html): In-depth biography, technical skills stack, coursework, and frequently asked questions.
@@ -14,7 +14,8 @@
 
 ## Key Projects
 
-- **SPARK**: Two-layer, fully on-device fall-detection wearable for eldercare featuring an ESP32-S3 microcontroller, MPU6050 IMU, TFLite Micro CNN inference, and a Raspberry Pi 4B gateway with SHAP explainability.
+- **STRANGLER-IPU**: Ingress-Aware Boundary Computing Architecture & Interconnect Co-Design. Near-memory hardware accelerator subsystem targeting 6G Sub-THz line-rate ingest (800 Gbps – 1.6 Tbps burst) and AI boundary inference, validated via SimPy discrete-event simulation across CXL 3.0/4.0 fabrics (4.12× tail-latency reduction, 68% bus contention relief).
+- **SPARK**: Two-layer, on-device fall-detection wearable for eldercare featuring an ESP32-S3 microcontroller, MPU6050 IMU, 18.5 KB INT8 TFLite Micro CNN inference (0.9185 SisFall AUC-ROC), and central gateway with local SHAP explainability.
 - **BiasAperture**: Vision-model fairness and demographic disparity diagnostic suite (Fuse AI Fellowship capstone).
 - **Text-to-SQL Agentic Pipeline**: Five-stage agentic Text-to-SQL generation pipeline with 100% benchmark execution accuracy.
 - **NovaOptimizer**: Native Windows Task Manager & System Optimizer engineered in C# / .NET 10 and WPF manipulating undocumented NT kernel memory APIs with Turbo Boost profiles.

@@ -104,12 +104,24 @@
             {
               "@type": "ListItem",
               "position": 2,
+              "name": "STRANGLER-IPU — Ingress Processing Unit Architecture",
+              "url": "https://aaradhyadt.github.io/projects.html#p-032"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "BiasAperture — Vision Fairness & Bias Audit",
+              "url": "https://aaradhyadt.github.io/projects.html#p-018"
+            },
+            {
+              "@type": "ListItem",
+              "position": 4,
               "name": "PrakopNet — Multi-Hazard Early Warning System",
               "url": "https://aaradhyadt.github.io/projects.html#p-010"
             },
             {
               "@type": "ListItem",
-              "position": 3,
+              "position": 5,
               "name": "Pulse Live — Real-Time Interactive Polling Platform",
               "url": "https://aaradhyadt.github.io/projects.html#p-020"
             }
@@ -820,6 +832,26 @@
 <div class="projects-grid" id="projectsGrid">
 <h2 class="projects-section-title" id="section-projects">Projects<span class="projects-section-sub">Major,
             minor, and capstone builds + coursework and archived projects</span></h2>
+<details class="project-card reveal project-card--major" id="p-032" data-category="embedded hardware aiml">
+<summary class="project-summary">
+<div class="project-index">P — 032 <span class="project-status">Active Research</span></div>
+<h3 class="project-title">STRANGLER-IPU — Ingress Processing Unit Architecture</h3>
+</summary>
+<div class="project-card-body">
+<ul class="project-desc-list">
+<li>Ingress-Aware Boundary Computing Architecture: Near-memory hardware accelerator subsystem targeting 6G Sub-THz line-rate ingest (800 Gbps – 1.6 Tbps burst) and AI boundary inference, eliminating host DRAM memory-wall contention through decoupled front-end ingress offload</li>
+<li>Discrete-Event Simulation &amp; CXL Modeling: Validated via Python SimPy discrete-event modeling across asymmetric CXL 3.0/4.0 pooled memory fabrics (<code>sim/sweep_ipu_breakeven.py</code>, EXP-001), demonstrating 4.12× tail-latency reduction and 68% host memory bus contention relief</li>
+<li>Aerospace &amp; Systems Architecture Governance: Formulated with formal RFCs (<code>ARCH-RFC-001/002/003</code>), invariant specifications (<code>INV-EPI-001</code>, <code>INV-MEM-001</code>), and a self-compiling in-repo LaTeX technical report</li>
+</ul>
+<div class="project-tags">
+<span class="tag">Computer Architecture</span><span class="tag">Systems Architecture</span>
+<span class="tag">6G Ingress</span><span class="tag">CXL 3.0/4.0</span>
+<span class="tag">Discrete-Event Sim</span><span class="tag">SimPy</span>
+<span class="tag">Near-Memory Computing</span><span class="tag">LaTeX</span>
+</div>
+<a class="project-link" href="https://github.com/Aaradhya-Dev-Tamrakar/brainstorm" rel="noopener" target="_blank">View on GitHub ↗</a>
+</div>
+</details>
 <details class="project-card reveal project-card--major" id="p-018" data-category="aiml">
 <summary class="project-summary">
 <div class="project-index">P — 018 <span class="project-status">In Progress</span></div>
@@ -901,29 +933,30 @@
 </summary>
 <div class="project-card-body">
 <ul class="project-desc-list">
-<li>On-device, two-layer fall-detection wearable for eldercare — threshold gate plus a TFLite Micro CNN
-                gateway, zero imports, zero custom PCB</li>
-<li>BEI major project, four-person team — proposal defended Jul 9, 2026</li>
+<li>On-device, two-layer fall-detection wearable for eldercare: Layer 1 ISR threshold pre-filter ($|a| &gt; 2.5g$, $\Delta t &lt; 300\text{ ms}$) on ESP32-S3 + MPU-6050 at 200 Hz gating an on-device TFLite Micro 1D CNN</li>
+<li>1D CNN trained under leakage-free subject-grouped split on SisFall (0.9185 AUC-ROC, 87.81% sensitivity), quantized to an 18.5 KB INT8 FlatBuffer (87.7% compression vs FP32) with 56 passing unit tests</li>
+<li>Central gateway with SHAP clinical explainability, automated PDF diagnostic reports across 4 biomechanical fall profiles, and Nepal cohort data collection pipeline</li>
+<li>BEI major engineering project, four-person team — proposal defended Jul 9, 2026</li>
 </ul>
 <div class="project-progress">
 <div class="project-progress-track">
 <div class="project-progress-step done"></div>
 <div class="project-progress-step done"></div>
-<div class="project-progress-step"></div>
+<div class="project-progress-step done"></div>
 <div class="project-progress-step"></div>
 </div>
 <div class="project-progress-labels">
 <span class="project-progress-label done">Proposal (Jul 9)</span>
 <span class="project-progress-label done">Mid-term (Jul 13)</span>
-<span class="project-progress-label">WP1 (Aug 31)</span>
-<span class="project-progress-label">Demo (Mar 2027)</span>
+<span class="project-progress-label done">WP1: INT8 Firmware (Aug 22)</span>
+<span class="project-progress-label">Final Capstone (2027)</span>
 </div>
 </div>
 <div class="project-tags">
-<span class="tag">MPU6050</span><span class="tag">TFLite Micro</span>
+<span class="tag">ESP32-S3</span><span class="tag">MPU6050</span>
+<span class="tag">TFLite Micro</span><span class="tag">INT8 Quantization</span>
 <span class="tag">1D CNN</span><span class="tag">SHAP</span>
-<span class="tag">FastAPI</span><span class="tag">Streamlit</span>
-<span class="tag">Telegram</span><span class="tag">ESP32-S3</span>
+<span class="tag">FastAPI</span><span class="tag">LaTeX</span>
 </div>
 <a class="project-link" data-payload-link-id="proj-spark" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>

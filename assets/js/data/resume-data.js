@@ -12,7 +12,7 @@ const RESUME_DATA = {
 
   contact: "Kathmandu, Nepal · aaradhyadevtmr@gmail.com · +977 9844602050 · linkedin.com/in/aaradhya-dev-tamrakar · github.com/AaradhyaDT · aaradhyadt.github.io",
 
-  summary: "Electronics, Communication and Information student at IOE, Kathmandu Engineering College (Year IV/I). Builds ML pipelines spanning classification, regression, tree-based ensembles, and agentic Text-to-SQL systems; deploys via FastAPI and Docker; develops Android apps with Kotlin/Jetpack Compose. Advancing through the Fusemachines AI Fellowship and NSSR DataCamp Fellowship, while leading SPARK, an ESP32-S3 edge-AI wearable fall-detection system.",
+  summary: "Electronics, Communication and Information student at IOE, Kathmandu Engineering College (Year IV/II, Final Semester). Builds ML pipelines spanning classification, regression, tree-based ensembles, and agentic Text-to-SQL systems; deploys via FastAPI and Docker; develops Android apps with Kotlin/Jetpack Compose. Advancing through the Fusemachines AI Fellowship and NSSR DataCamp Fellowship, while leading SPARK, an ESP32-S3 edge-AI wearable fall-detection system.",
 
   roles: {
 
@@ -32,7 +32,7 @@ const RESUME_DATA = {
 
               header: "Bachelor of Engineering (B.E.) in Electronics, Communication & Information",
 
-              sub: "Institute of Engineering (IOE), Kathmandu Engineering College | Year IV / Part I (Expected: January 2027)",
+              sub: "Institute of Engineering (IOE), Kathmandu Engineering College | Year IV / Part II (Expected: January 2027)",
 
               bullets: [
 
@@ -186,17 +186,35 @@ const RESUME_DATA = {
 
             {
 
-              header: "SPARK — Wearable Fall Detection System (Major Project)",
+              header: "STRANGLER-IPU — Ingress Processing Unit Architecture & CXL Interconnect Modeling",
 
-              sub: "ESP32-S3 · TensorFlow Lite Micro · SHAP · MQTT · FastAPI · PostgreSQL (Target Demo: March 2027)",
+              sub: "Computer Architecture · Discrete-Event Simulation · SimPy · CXL 3.0/4.0 · Near-Memory Processing · LaTeX",
 
               bullets: [
 
-                "Designed a two-layer ESP32-S3 fall-detection system combining a <5ms threshold gate with an INT8 1D CNN confirmation layer under 100ms.",
+                "Architected a near-memory hardware accelerator subsystem targeting 6G Sub-THz line-rate ingest (800 Gbps – 1.6 Tbps burst) to relieve host memory-wall contention through decoupled front-end ingress offload.",
 
-                "Computed per-event SHAP explanations at a local, non-cloud gateway.",
+                "Validated via Python SimPy discrete-event simulation across asymmetric CXL 3.0/4.0 pooled memory fabrics, achieving 4.12× tail-latency reduction and 68% host memory bus contention relief.",
 
-                "Led the AI and backend work package (WP 1.0) — CNN training pipeline, FastAPI/PostgreSQL gateway — within a 4-person team supervised by Er. Dipen Manandhar."
+                "Formulated under formal architectural specifications (ARCH-SPEC-001/002), RFCs, invariant assertions, and self-compiling in-repo LaTeX technical reports."
+
+              ]
+
+            },
+
+            {
+
+              header: "SPARK — Wearable Fall Detection System (Major Project)",
+
+              sub: "ESP32-S3 · TensorFlow Lite Micro · 1D CNN INT8 · SHAP · MQTT · FastAPI · PostgreSQL (Target Demo: March 2027)",
+
+              bullets: [
+
+                "Designed a two-layer ESP32-S3 fall-detection system combining a <5ms physical threshold interrupt gate with an 18.5 KB INT8 1D CNN confirmation layer (0.9185 AUC-ROC, 87.81% sensitivity on SisFall).",
+
+                "Computed per-event local SHAP surrogate explanations at an edge gateway, generating automated clinical PDF reports across 4 biomechanical fall archetypes.",
+
+                "Led the AI, firmware, and backend work package within a 4-person team supervised by Er. Dipen Manandhar, backed by 56 automated unit tests."
 
               ]
 
@@ -545,7 +563,7 @@ const RESUME_DATA = {
 
               bullets: [
 
-                "Electronics, Communication & Information Engineering student at IOE, Kathmandu Engineering College (Year IV/I).",
+                "Electronics, Communication & Information Engineering student at IOE, Kathmandu Engineering College (Year IV/II, Final Semester).",
 
                 "Lead developer for SPARK (ESP32-S3 edge-AI fall detection) and GCSBR (examiner-rated 'major project level' self-balancing robot)."
 

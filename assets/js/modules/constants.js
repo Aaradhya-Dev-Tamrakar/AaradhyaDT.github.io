@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: constants.js — aaradhyadt.github.io (v53.26)
+   MODULE: constants.js — aaradhyadt.github.io (v53.27)
    Site constants, social links, icons, and configuration metadata.
    ============================================================ */
 
@@ -53,7 +53,7 @@ const SOCIAL_ICONS = {
 const QUICK_NAV_PAGES = [
   {
     file: 'index.html', title: 'Home',
-    desc: 'BEI IV/I at KEC, IOE. Building intelligent systems across firmware, robotics, and machine learning.',
+    desc: 'BEI IV/II at KEC, IOE. Building intelligent systems across firmware, robotics, and machine learning.',
     cta: 'Back to Home',
   },
   {
