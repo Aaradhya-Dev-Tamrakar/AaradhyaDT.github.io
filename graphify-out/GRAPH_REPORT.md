@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-13)
 
 ## Corpus Check
-- 52 files · ~460,306 words
+- 53 files · ~461,364 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 788 nodes · 1042 edges · 180 communities (46 shown, 121 thin omitted)
+- 802 nodes · 1055 edges · 181 communities (47 shown, 121 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ffae872f`
+- Built from commit: `82ab9ed1`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -182,6 +182,7 @@
 - UI Screenshot: Projects Page (Desktop)
 - UI Screenshot: Projects Page (Mobile)
 - Stamp Last Commit Workflow
+- Personal Profile and Technical Dossier: Aaradhya Dev Tamrakar (ADT)
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
@@ -219,7 +220,7 @@
 - **Site Security & Access Control** — journey_milestone_15, journey_milestone_36 [INFERRED 0.85]
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 
-## Communities (180 total, 121 thin omitted)
+## Communities (181 total, 121 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.10
@@ -405,9 +406,13 @@ Nodes (3): SimOps Fundamentals Certificate, SimOps Practitioner Certificate, Sim
 Cohesion: 0.67
 Nodes (3): Analytics with actual event tracking, Privacy Policy, Terms of Service
 
+### Community 180 - "Personal Profile and Technical Dossier: Aaradhya Dev Tamrakar (ADT)"
+Cohesion: 0.14
+Nodes (13): 1. Executive Summary, 2. Professional Identity and Engineering Philosophy, 3. Core Technical Pillars and Specializations, 4. Flagship Projects and Research Portfolio, 5. Institutional Leadership and Fellowships, 6. Academic Standing, 7. Profile Synthesis, I. Computer Architecture and Near-Memory Co-Design (+5 more)
+
 ## Knowledge Gaps
-- **253 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+248 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 393 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **263 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+258 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 404 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **121 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -418,7 +423,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `loadGA4()` connect `core.js` to `script.js`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _253 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _263 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
