@@ -1,6 +1,6 @@
 {
-  "sha": "14d3b917645e4e9c59bbf68f357366d4a51da111",
-  "shortSha": "14d3b91",
-  "date": "2026-09-11T12:02:34+05:45",
-  "message": "fix(ci): add paths-ignore to deploy-pages to eliminate stamp bot race condition"
+  "sha": "24aa99502dc8bf06d6a834e70388b742d16f7d13",
+  "shortSha": "24aa995",
+  "date": "2026-09-13T23:41:48+05:45",
+  "message": "feat(projects): add STRANGLER-IPU research architecture, sync 8th semester & SPARK INT8 metrics"
 }
