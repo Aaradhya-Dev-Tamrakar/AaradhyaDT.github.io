@@ -454,10 +454,10 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "WinPilot (windows-pilot) — Semantic UIA & MCP Desktop Automation Engine",
+    "title": "Windows Pilot — Semantic UIA & MCP Desktop Automation Engine",
     "meta": "Python 3.10+, Win32 API, UI Automation COM",
     "href": "projects.html#p-034",
-    "text": "winpilot (windows-pilot) — semantic uia & mcp desktop automation engine mission-critical windows desktop automation engine for autonomous ai coding agents (antigravity, claude desktop, cursor) and human operators via cli and python sdk resolution-independent microsoft ui automation (uia) com & win32 control: locates elements semantically via css-like query dsl without fragile pixel coordinates win32 foreground lock bypass ( attachthreadinput ), virtual desktop awareness with dwm uncloaking ( dwmwa_cloaked ), high-speed unicode clipboard injection, and native mcp server ( winpilot-mcp ) python 3.10+ win32 api ui automation com mcp server desktop automation virtual desktops windows 11 actionchain"
+    "text": "windows pilot — semantic uia & mcp desktop automation engine mission-critical windows desktop automation engine for autonomous ai coding agents (antigravity, claude desktop, cursor) and human operators via cli and python sdk resolution-independent microsoft ui automation (uia) com & win32 control: locates elements semantically via css-like query dsl without fragile pixel coordinates win32 foreground lock bypass ( attachthreadinput ), virtual desktop awareness with dwm uncloaking ( dwmwa_cloaked ), high-speed unicode clipboard injection, and native mcp server ( winpilot-mcp ) python 3.10+ win32 api ui automation com mcp server desktop automation virtual desktops windows 11 actionchain"
   },
   {
     "type": "project",

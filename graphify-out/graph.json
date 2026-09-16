@@ -5110,7 +5110,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "54.0.0"
+      "version": "54.1.0"
     },
     {
       "id": "scripts_benchmark_bundle",
@@ -22826,5 +22826,5 @@
       "source_file": "dev-logs/EVOLUTION_AREAS.md"
     }
   ],
-  "built_at_commit": "3ff58aaf733ed001d34564a455c77d86d3a94d68"
+  "built_at_commit": "17a9ade0f2d978ad6fb356003f75d9416135d135"
 }

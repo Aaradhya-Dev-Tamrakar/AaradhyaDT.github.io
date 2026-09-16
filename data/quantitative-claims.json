@@ -130,7 +130,7 @@
       "verification_method": "Repository-local evidence review; no claim is publishable until status is verified."
     },
     {
-      "claim": "WinPilot desktop automation engine",
+      "claim": "Windows Pilot desktop automation engine",
       "source_repo": "AaradhyaDT/windows-pilot",
       "source_path": "README.md",
       "source_commit": null,
