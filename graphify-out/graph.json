@@ -5218,7 +5218,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "54.6.0"
+      "version": "54.8.0"
     },
     {
       "id": "scripts_benchmark_bundle",
@@ -7307,22 +7307,10 @@
       "label": "README.md",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "readme.md",
-      "source_file": "README.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "readme_aaradhyadt_github_io",
-      "label": "aaradhyadt.github.io",
-      "_origin": "ast",
-      "community": 9,
-      "community_name": "aaradhyadt.github.io",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "aaradhyadt.github.io",
       "source_file": "README.md",
       "source_location": "L1"
     },
@@ -7331,7 +7319,7 @@
       "label": "Automated Git Workflow & Pre-Commit Gate (`sync.ps1`)",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "automated git workflow & pre-commit gate (`sync.ps1`)",
@@ -7343,7 +7331,7 @@
       "label": "\ud83d\udcc8 Codebase Knowledge Graph (`Graphify`)",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcc8 codebase knowledge graph (`graphify`)",
@@ -7355,7 +7343,7 @@
       "label": "\ud83d\udcec Contact & Connect",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcec contact & connect",
@@ -7367,7 +7355,7 @@
       "label": "\u2328\ufe0f Global Keyboard Navigation & Shortcuts HUD",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\u2328\ufe0f global keyboard navigation & shortcuts hud",
@@ -7379,7 +7367,7 @@
       "label": "\ud83d\udd11 Google OAuth 2.0 Integration",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udd11 google oauth 2.0 integration",
@@ -7391,7 +7379,7 @@
       "label": "\ud83d\udcbb Interactive Developer Terminal Widget (`#adtTerminal`)",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcbb interactive developer terminal widget (`#adtterminal`)",
@@ -7403,7 +7391,7 @@
       "label": "Key Features",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "key features",
@@ -7415,7 +7403,7 @@
       "label": "\ud83d\udcc4 License",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcc4 license",
@@ -7427,7 +7415,7 @@
       "label": "\u26a1 Local Development & Git Workflow",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\u26a1 local development & git workflow",
@@ -7439,7 +7427,7 @@
       "label": "\ud83d\udd12 Multi-Tier Access Control & Security Model",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udd12 multi-tier access control & security model",
@@ -7451,7 +7439,7 @@
       "label": "\ud83d\udcc1 Repository Structure & Directory Map",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcc1 repository structure & directory map",
@@ -7463,7 +7451,7 @@
       "label": "\ud83d\udd0d Site Search & Unified Command Palette",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udd0d site search & unified command palette",
@@ -7475,7 +7463,7 @@
       "label": "\ud83d\udd0d Technical Security Architecture",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udd0d technical security architecture",
@@ -7487,7 +7475,7 @@
       "label": "Terminal Commands",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "terminal commands",
@@ -7499,7 +7487,7 @@
       "label": "UX Features",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "ux features",
@@ -7511,7 +7499,7 @@
       "label": "Verification & Diagnostic Suite",
       "_origin": "ast",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "verification & diagnostic suite",
@@ -10397,7 +10385,7 @@
       "label": "Zero-Leak Security Model",
       "_origin": "semantic",
       "community": 9,
-      "community_name": "aaradhyadt.github.io",
+      "community_name": "README.md",
       "file_type": "concept",
       "norm_label": "zero-leak security model",
       "rationale": "Client-side AES-256-GCM encryption for gated content."
@@ -18903,17 +18891,6 @@
     },
     {
       "source": "readme",
-      "target": "readme_aaradhyadt_github_io",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "README.md",
-      "source_location": "L1",
-      "weight": 1.0
-    },
-    {
-      "source": "readme_aaradhyadt_github_io",
       "target": "readme_google_oauth_2_0_integration",
       "relation": "contains",
       "_origin": "ast",
@@ -18924,7 +18901,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_aaradhyadt_github_io",
+      "source": "readme",
       "target": "readme_site_search_unified_command_palette",
       "relation": "contains",
       "_origin": "ast",
@@ -18935,7 +18912,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_aaradhyadt_github_io",
+      "source": "readme",
       "target": "readme_interactive_developer_terminal_widget_adtterminal",
       "relation": "contains",
       "_origin": "ast",
@@ -18946,7 +18923,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_aaradhyadt_github_io",
+      "source": "readme",
       "target": "readme_repository_structure_directory_map",
       "relation": "contains",
       "_origin": "ast",
@@ -18957,7 +18934,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_aaradhyadt_github_io",
+      "source": "readme",
       "target": "readme_global_keyboard_navigation_shortcuts_hud",
       "relation": "contains",
       "_origin": "ast",
@@ -18968,7 +18945,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_aaradhyadt_github_io",
+      "source": "readme",
       "target": "readme_local_development_git_workflow",
       "relation": "contains",
       "_origin": "ast",
@@ -18979,7 +18956,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_aaradhyadt_github_io",
+      "source": "readme",
       "target": "readme_codebase_knowledge_graph_graphify",
       "relation": "contains",
       "_origin": "ast",
@@ -18990,7 +18967,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_aaradhyadt_github_io",
+      "source": "readme",
       "target": "readme_contact_connect",
       "relation": "contains",
       "_origin": "ast",
@@ -19001,7 +18978,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_aaradhyadt_github_io",
+      "source": "readme",
       "target": "readme_license",
       "relation": "contains",
       "_origin": "ast",
@@ -19012,7 +18989,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme_aaradhyadt_github_io",
+      "source": "readme",
       "target": "readme_multi_tier_access_control_security_model",
       "relation": "contains",
       "_origin": "ast",
@@ -23482,5 +23459,5 @@
       "source_file": "dev-logs/EVOLUTION_AREAS.md"
     }
   ],
-  "built_at_commit": "77db5ca3e03cbc6ef03dadb8440fc4af9c37fbf6"
+  "built_at_commit": "10fc3fbf37575a7e190f30f41dad4e7ba7ec79f0"
 }

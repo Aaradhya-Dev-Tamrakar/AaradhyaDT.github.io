@@ -461,10 +461,10 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "Claude Desktop Multi-Profile & Autonomous Fleet Utilities",
-    "meta": "PowerShell 7, FastAPI, SQLite WAL",
+    "title": "Claude Desktop Multi-Profile & Distributed Service Provisioning (DSP) Fabric",
+    "meta": "DSP Fabric, FastAPI, SQLite WAL",
     "href": "projects.html#p-023",
-    "text": "claude desktop multi-profile & autonomous fleet utilities powershell 7 & windows shell utility suite enabling multi-user profile isolation, concurrent multi-monitor window management via `--user-data-dir`, and single-instance browser oauth (`claude://`) deep-link routing cloud-native v2 distributed fleet: fastapi coordinator backend, sqlite wal persistence with atomic leasing, automated sku pipeline decomposition, and autonomous client worker daemons with claude desktop proxy and llm adapters automated git repository synchronization with staged diff conventional commit messaging, tray uia usage watchdog, and cooldown alerts powershell 7 fastapi sqlite wal autonomous workers electron oauth 2.0 git automation windows shell"
+    "text": "claude desktop multi-profile & distributed service provisioning (dsp) fabric heterogeneous distributed service provisioning (dsp) fabric: inverts the ddos metaphor to coordinate useful compute across autonomous worker daemons (claude cdp, gemini, groq, ollama) via a centralized fastapi coordinator distributed state machine on sqlite wal: atomic cas task leasing (`lease_token`), capability & headroom scoring scheduler, and a self-healing supervisor loop that isolates stale nodes and reclaims stranded leases 44+ fastmcp tools across local and remote instances, multi-stage dag task pipelines with checkpoint persistence, and a chrome devtools protocol (cdp) bridge treating desktop ai guis as application-as-a-service backends dsp fabric fastapi sqlite wal atomic leasing self-healing fastmcp (44 tools) cdp bridge powershell 7"
   },
   {
     "type": "project",
