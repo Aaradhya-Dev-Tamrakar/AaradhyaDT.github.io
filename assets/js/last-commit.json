@@ -1,6 +1,6 @@
 {
-  "sha": "fd0b80cd8e91b4d713d62a6509ae134a5d2eec10",
-  "shortSha": "fd0b80c",
-  "date": "2026-09-16T22:35:35+05:45",
-  "message": "feat(security): encrypt repo links for all new projects and sanitize card indices"
+  "sha": "47fec5ffe007a07c940c0bc8bdd579dab82e361f",
+  "shortSha": "47fec5f",
+  "date": "2026-09-16T22:41:24+05:45",
+  "message": "feat(about): add vertical systems stack and epistemic verification architecture"
 }
