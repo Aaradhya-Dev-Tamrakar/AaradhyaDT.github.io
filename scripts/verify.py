@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v53.29)
+aaradhyadt.github.io (v53.30)
 
-24 check categories covering HTML structure, cross-page links, asset
+25 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
 CSS URL integrity, deep a11y & SEO, version consistency across all modules,
 semantic data consistency, PWA compliance, file size budgets, markdown hygiene,
@@ -54,6 +54,7 @@ VERSION_FILE = ROOT / "VERSION"
 README_MD = ROOT / "README.md"
 PYPROJECT_TOML = ROOT / "pyproject.toml"
 WORKFLOW_VERIFY_YML = ROOT / ".github" / "workflows" / "verify.yml"
+QUANTITATIVE_CLAIMS = ROOT / "data" / "quantitative-claims.json"
 
 # ── State ───────────────────────────────────────────────────────────
 errors = []
@@ -92,6 +93,35 @@ def log_warning(category, msg):
 
 def log_pass(category, msg):
     passes.append((category, msg))
+
+def check_quantitative_claims():
+    """Validate the canonical machine-readable claim provenance record."""
+    required = {
+        "claim", "source_repo", "source_path", "source_commit", "metric",
+        "value", "evidence_tier", "verification_method", "scope",
+        "limitations", "last_verified",
+    }
+    if not QUANTITATIVE_CLAIMS.exists():
+        log_error("claim-provenance", "Missing data/quantitative-claims.json")
+        return
+    try:
+        payload = json.loads(QUANTITATIVE_CLAIMS.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as exc:
+        log_error("claim-provenance", f"Invalid quantitative claims JSON: {exc}")
+        return
+    claims = payload.get("claims")
+    if payload.get("schema_version") != "1.0" or not isinstance(claims, list) or not claims:
+        log_error("claim-provenance", "Claims record has an invalid schema or no claims")
+        return
+    for index, claim in enumerate(claims, start=1):
+        missing = sorted(required - set(claim))
+        if missing:
+            log_error("claim-provenance", f"Claim {index} missing fields: {', '.join(missing)}")
+            continue
+        if claim["evidence_tier"] not in {"E0", "E1", "E2", "E3", "E4", "E5"}:
+            log_error("claim-provenance", f"Claim {index} has invalid evidence tier")
+    if not any(error[0] == "claim-provenance" for error in errors):
+        log_pass("claim-provenance", f"{len(claims)} quantitative claims have complete provenance")
 
 # ── Page config for content checks ──────────────────────────────────
 PAGES = {
@@ -1253,11 +1283,11 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v53.29)"))
+    print(bold("  Portfolio Site Verification Suite (v53.30)"))
     print(bold("=" * 60))
     print()
 
-    # ── Run all 24 check categories ─────────────────────────────
+    # ── Run all 25 check categories ─────────────────────────────
     # 1. Content IDs
     id_results = {}
     for name, cfg in PAGES.items():
@@ -1335,6 +1365,9 @@ def main():
 
     # 24. Content Security Policy Meta Tag Integrity (NEW)
     check_csp_integrity()
+
+    # 25. Canonical quantitative claim provenance
+    check_quantitative_claims()
 
     # ── Output ──────────────────────────────────────────────────
     all_cats = set()

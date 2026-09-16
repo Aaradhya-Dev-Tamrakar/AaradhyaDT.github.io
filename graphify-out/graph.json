@@ -194,7 +194,7 @@
       "file_type": "code",
       "norm_label": "bold()",
       "source_file": "scripts/verify.py",
-      "source_location": "L73"
+      "source_location": "L74"
     },
     {
       "id": "scripts_verify_c",
@@ -206,7 +206,7 @@
       "file_type": "code",
       "norm_label": "_c()",
       "source_file": "scripts/verify.py",
-      "source_location": "L66"
+      "source_location": "L67"
     },
     {
       "id": "scripts_verify_check_asset_references",
@@ -218,7 +218,7 @@
       "file_type": "code",
       "norm_label": "check_asset_references()",
       "source_file": "scripts/verify.py",
-      "source_location": "L397"
+      "source_location": "L427"
     },
     {
       "id": "scripts_verify_check_cross_page_links",
@@ -230,7 +230,7 @@
       "file_type": "code",
       "norm_label": "check_cross_page_links()",
       "source_file": "scripts/verify.py",
-      "source_location": "L335"
+      "source_location": "L365"
     },
     {
       "id": "scripts_verify_check_csp_integrity",
@@ -242,7 +242,7 @@
       "file_type": "code",
       "norm_label": "check_csp_integrity()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1218"
+      "source_location": "L1248"
     },
     {
       "id": "scripts_verify_check_css_integrity",
@@ -254,7 +254,7 @@
       "file_type": "code",
       "norm_label": "check_css_integrity()",
       "source_file": "scripts/verify.py",
-      "source_location": "L982"
+      "source_location": "L1012"
     },
     {
       "id": "scripts_verify_check_data_consistency",
@@ -266,7 +266,7 @@
       "file_type": "code",
       "norm_label": "check_data_consistency()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1088"
+      "source_location": "L1118"
     },
     {
       "id": "scripts_verify_check_file_sizes",
@@ -278,7 +278,7 @@
       "file_type": "code",
       "norm_label": "check_file_sizes()",
       "source_file": "scripts/verify.py",
-      "source_location": "L761"
+      "source_location": "L791"
     },
     {
       "id": "scripts_verify_check_global_id_uniqueness",
@@ -290,7 +290,7 @@
       "file_type": "code",
       "norm_label": "check_global_id_uniqueness()",
       "source_file": "scripts/verify.py",
-      "source_location": "L885"
+      "source_location": "L915"
     },
     {
       "id": "scripts_verify_check_html_a11y_seo",
@@ -302,7 +302,7 @@
       "file_type": "code",
       "norm_label": "check_html_a11y_seo()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1017"
+      "source_location": "L1047"
     },
     {
       "id": "scripts_verify_check_ids",
@@ -314,7 +314,7 @@
       "file_type": "code",
       "norm_label": "check_ids()",
       "source_file": "scripts/verify.py",
-      "source_location": "L122"
+      "source_location": "L152"
     },
     {
       "id": "scripts_verify_check_internal_hrefs",
@@ -326,7 +326,7 @@
       "file_type": "code",
       "norm_label": "check_internal_hrefs()",
       "source_file": "scripts/verify.py",
-      "source_location": "L170"
+      "source_location": "L200"
     },
     {
       "id": "scripts_verify_check_js_safety",
@@ -338,7 +338,7 @@
       "file_type": "code",
       "norm_label": "check_js_safety()",
       "source_file": "scripts/verify.py",
-      "source_location": "L922"
+      "source_location": "L952"
     },
     {
       "id": "scripts_verify_check_js_syntax",
@@ -350,7 +350,7 @@
       "file_type": "code",
       "norm_label": "check_js_syntax()",
       "source_file": "scripts/verify.py",
-      "source_location": "L432"
+      "source_location": "L462"
     },
     {
       "id": "scripts_verify_check_jsonld_schemas",
@@ -362,7 +362,7 @@
       "file_type": "code",
       "norm_label": "check_jsonld_schemas()",
       "source_file": "scripts/verify.py",
-      "source_location": "L719"
+      "source_location": "L749"
     },
     {
       "id": "scripts_verify_check_manifest",
@@ -374,7 +374,7 @@
       "file_type": "code",
       "norm_label": "check_manifest()",
       "source_file": "scripts/verify.py",
-      "source_location": "L689"
+      "source_location": "L719"
     },
     {
       "id": "scripts_verify_check_module_files",
@@ -386,7 +386,7 @@
       "file_type": "code",
       "norm_label": "check_module_files()",
       "source_file": "scripts/verify.py",
-      "source_location": "L622"
+      "source_location": "L652"
     },
     {
       "id": "scripts_verify_check_pwa_and_a11y_metadata",
@@ -398,7 +398,19 @@
       "file_type": "code",
       "norm_label": "check_pwa_and_a11y_metadata()",
       "source_file": "scripts/verify.py",
-      "source_location": "L296"
+      "source_location": "L326"
+    },
+    {
+      "id": "scripts_verify_check_quantitative_claims",
+      "label": "check_quantitative_claims()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "code",
+      "norm_label": "check_quantitative_claims()",
+      "source_file": "scripts/verify.py",
+      "source_location": "L97"
     },
     {
       "id": "scripts_verify_check_robots_txt",
@@ -410,7 +422,7 @@
       "file_type": "code",
       "norm_label": "check_robots_txt()",
       "source_file": "scripts/verify.py",
-      "source_location": "L855"
+      "source_location": "L885"
     },
     {
       "id": "scripts_verify_check_search_index_sync",
@@ -422,7 +434,7 @@
       "file_type": "code",
       "norm_label": "check_search_index_sync()",
       "source_file": "scripts/verify.py",
-      "source_location": "L260"
+      "source_location": "L290"
     },
     {
       "id": "scripts_verify_check_sitemap_sync",
@@ -434,7 +446,7 @@
       "file_type": "code",
       "norm_label": "check_sitemap_sync()",
       "source_file": "scripts/verify.py",
-      "source_location": "L652"
+      "source_location": "L682"
     },
     {
       "id": "scripts_verify_check_sw_cache_completeness",
@@ -446,7 +458,7 @@
       "file_type": "code",
       "norm_label": "check_sw_cache_completeness()",
       "source_file": "scripts/verify.py",
-      "source_location": "L794"
+      "source_location": "L824"
     },
     {
       "id": "scripts_verify_check_tag_balance",
@@ -458,7 +470,7 @@
       "file_type": "code",
       "norm_label": "check_tag_balance()",
       "source_file": "scripts/verify.py",
-      "source_location": "L194"
+      "source_location": "L224"
     },
     {
       "id": "scripts_verify_check_tracker_hygiene",
@@ -470,7 +482,7 @@
       "file_type": "code",
       "norm_label": "check_tracker_hygiene()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1152"
+      "source_location": "L1182"
     },
     {
       "id": "scripts_verify_check_unit_tests",
@@ -482,7 +494,7 @@
       "file_type": "code",
       "norm_label": "check_unit_tests()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1178"
+      "source_location": "L1208"
     },
     {
       "id": "scripts_verify_check_version_consistency",
@@ -494,7 +506,7 @@
       "file_type": "code",
       "norm_label": "check_version_consistency()",
       "source_file": "scripts/verify.py",
-      "source_location": "L477"
+      "source_location": "L507"
     },
     {
       "id": "scripts_verify_cyan",
@@ -506,7 +518,7 @@
       "file_type": "code",
       "norm_label": "cyan()",
       "source_file": "scripts/verify.py",
-      "source_location": "L72"
+      "source_location": "L73"
     },
     {
       "id": "scripts_verify_dim",
@@ -518,7 +530,7 @@
       "file_type": "code",
       "norm_label": "dim()",
       "source_file": "scripts/verify.py",
-      "source_location": "L74"
+      "source_location": "L75"
     },
     {
       "id": "scripts_verify_get_html_files",
@@ -530,7 +542,7 @@
       "file_type": "code",
       "norm_label": "get_html_files()",
       "source_file": "scripts/verify.py",
-      "source_location": "L77"
+      "source_location": "L78"
     },
     {
       "id": "scripts_verify_green",
@@ -542,7 +554,7 @@
       "file_type": "code",
       "norm_label": "green()",
       "source_file": "scripts/verify.py",
-      "source_location": "L71"
+      "source_location": "L72"
     },
     {
       "id": "scripts_verify_log_error",
@@ -554,7 +566,7 @@
       "file_type": "code",
       "norm_label": "log_error()",
       "source_file": "scripts/verify.py",
-      "source_location": "L87"
+      "source_location": "L88"
     },
     {
       "id": "scripts_verify_log_pass",
@@ -566,7 +578,7 @@
       "file_type": "code",
       "norm_label": "log_pass()",
       "source_file": "scripts/verify.py",
-      "source_location": "L93"
+      "source_location": "L94"
     },
     {
       "id": "scripts_verify_log_warning",
@@ -578,7 +590,7 @@
       "file_type": "code",
       "norm_label": "log_warning()",
       "source_file": "scripts/verify.py",
-      "source_location": "L90"
+      "source_location": "L91"
     },
     {
       "id": "scripts_verify_main",
@@ -590,7 +602,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1245"
+      "source_location": "L1275"
     },
     {
       "id": "scripts_verify_parse_html",
@@ -602,7 +614,7 @@
       "file_type": "code",
       "norm_label": "parse_html()",
       "source_file": "scripts/verify.py",
-      "source_location": "L84"
+      "source_location": "L85"
     },
     {
       "id": "scripts_verify_read_html",
@@ -614,7 +626,7 @@
       "file_type": "code",
       "norm_label": "read_html()",
       "source_file": "scripts/verify.py",
-      "source_location": "L81"
+      "source_location": "L82"
     },
     {
       "id": "scripts_verify_red",
@@ -626,7 +638,7 @@
       "file_type": "code",
       "norm_label": "red()",
       "source_file": "scripts/verify.py",
-      "source_location": "L69"
+      "source_location": "L70"
     },
     {
       "id": "scripts_verify_yellow",
@@ -638,7 +650,7 @@
       "file_type": "code",
       "norm_label": "yellow()",
       "source_file": "scripts/verify.py",
-      "source_location": "L70"
+      "source_location": "L71"
     },
     {
       "id": "scripts_manage_payloads_cmd_export",
@@ -4036,238 +4048,7 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_verify_rationale_1018",
-      "label": "Verify image alt attributes, link noopener on _blank, single h1 per page,\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "verify image alt attributes, link noopener on _blank, single h1 per page,...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1018"
-    },
-    {
-      "id": "scripts_verify_rationale_1089",
-      "label": "Verify resume data in ui.js matches HTML & JSON-LD role titles and contact info.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "verify resume data in ui.js matches html & json-ld role titles and contact info.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1089"
-    },
-    {
-      "id": "scripts_verify_rationale_1153",
-      "label": "Validate Portfolio Tracker and key Markdown documents for MD009/MD026\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "validate portfolio tracker and key markdown documents for md009/md026...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1153"
-    },
-    {
-      "id": "scripts_verify_rationale_1179",
-      "label": "Execute node --test across tests/unit/ and assert all tests pass.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "execute node --test across tests/unit/ and assert all tests pass.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1179"
-    },
-    {
-      "id": "scripts_verify_rationale_1219",
-      "label": "Verify that every HTML page includes a valid Content-Security-Policy meta tag.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "verify that every html page includes a valid content-security-policy meta tag.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1219"
-    },
-    {
-      "id": "scripts_verify_rationale_123",
-      "label": "Every item must have an id; ids must be unique within the file.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "every item must have an id; ids must be unique within the file.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L123"
-    },
-    {
-      "id": "scripts_verify_rationale_171",
-      "label": "href=\"<file>.html#<id>\" anchors must resolve.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "href=\"<file>.html#<id>\" anchors must resolve.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L171"
-    },
-    {
-      "id": "scripts_verify_rationale_336",
-      "label": "Scan every href=\"*.html\" and href=\"*.html#fragment\" across all pages. Verify\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "scan every href=\"*.html\" and href=\"*.html#fragment\" across all pages. verify...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L336"
-    },
-    {
-      "id": "scripts_verify_rationale_398",
-      "label": "Scan src=, href=, data-cert=, data-download= for local asset paths. Verify each\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "scan src=, href=, data-cert=, data-download= for local asset paths. verify each...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L398"
-    },
-    {
-      "id": "scripts_verify_rationale_433",
-      "label": "Run node --check on script.js, bg-animations.js, and all modules.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "run node --check on script.js, bg-animations.js, and all modules.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L433"
-    },
-    {
-      "id": "scripts_verify_rationale_478",
-      "label": "Assert sw.js, script.js, releases.js data file, all 8 JS modules, tracker,\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "assert sw.js, script.js, releases.js data file, all 8 js modules, tracker,...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L478"
-    },
-    {
-      "id": "scripts_verify_rationale_623",
-      "label": "Parse the MODULES array from script.js and verify every listed module path\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "parse the modules array from script.js and verify every listed module path...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L623"
-    },
-    {
-      "id": "scripts_verify_rationale_653",
-      "label": "Compare sitemap.xml URLs against actual *.html files.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "compare sitemap.xml urls against actual *.html files.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L653"
-    },
-    {
-      "id": "scripts_verify_rationale_690",
-      "label": "Parse site.webmanifest as JSON. Verify required fields.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "parse site.webmanifest as json. verify required fields.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L690"
-    },
-    {
-      "id": "scripts_verify_rationale_720",
-      "label": "Extract <script type=\"application/ld+json\"> blocks, parse as JSON, verify\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "extract <script type=\"application/ld+json\"> blocks, parse as json, verify...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L720"
-    },
-    {
-      "id": "scripts_verify_rationale_762",
-      "label": "Warn when files exceed size thresholds.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "warn when files exceed size thresholds.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L762"
-    },
-    {
-      "id": "scripts_verify_rationale_78",
-      "label": "Return sorted list of site HTML files (excluding google verification).",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "return sorted list of site html files (excluding google verification).",
-      "source_file": "scripts/verify.py",
-      "source_location": "L78"
-    },
-    {
-      "id": "scripts_verify_rationale_795",
-      "label": "Parse sw.js STATIC_ASSETS array. Verify every listed file exists. Flag any\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "parse sw.js static_assets array. verify every listed file exists. flag any...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L795"
-    },
-    {
-      "id": "scripts_verify_rationale_856",
-      "label": "Verify Sitemap: directive URL and basic syntax.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "verify sitemap: directive url and basic syntax.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L856"
-    },
-    {
-      "id": "scripts_verify_rationale_886",
-      "label": "Scan all pages for id=\"\" attributes. Flag collisions that could confuse cross-\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "scan all pages for id=\"\" attributes. flag collisions that could confuse cross-...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L886"
-    },
-    {
-      "id": "scripts_verify_rationale_923",
-      "label": "Check for unguarded optional function calls, duplicate listeners, and legacy\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "check for unguarded optional function calls, duplicate listeners, and legacy...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L923"
-    },
-    {
-      "id": "scripts_verify_rationale_983",
+      "id": "scripts_verify_rationale_1013",
       "label": "Scan all CSS files for url(...) references and verify assets exist.",
       "_origin": "ast",
       "community": 0,
@@ -4275,7 +4056,249 @@
       "file_type": "rationale",
       "norm_label": "scan all css files for url(...) references and verify assets exist.",
       "source_file": "scripts/verify.py",
-      "source_location": "L983"
+      "source_location": "L1013"
+    },
+    {
+      "id": "scripts_verify_rationale_1048",
+      "label": "Verify image alt attributes, link noopener on _blank, single h1 per page,\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "verify image alt attributes, link noopener on _blank, single h1 per page,...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1048"
+    },
+    {
+      "id": "scripts_verify_rationale_1119",
+      "label": "Verify resume data in ui.js matches HTML & JSON-LD role titles and contact info.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "verify resume data in ui.js matches html & json-ld role titles and contact info.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1119"
+    },
+    {
+      "id": "scripts_verify_rationale_1183",
+      "label": "Validate Portfolio Tracker and key Markdown documents for MD009/MD026\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "validate portfolio tracker and key markdown documents for md009/md026...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1183"
+    },
+    {
+      "id": "scripts_verify_rationale_1209",
+      "label": "Execute node --test across tests/unit/ and assert all tests pass.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "execute node --test across tests/unit/ and assert all tests pass.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1209"
+    },
+    {
+      "id": "scripts_verify_rationale_1249",
+      "label": "Verify that every HTML page includes a valid Content-Security-Policy meta tag.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "verify that every html page includes a valid content-security-policy meta tag.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1249"
+    },
+    {
+      "id": "scripts_verify_rationale_153",
+      "label": "Every item must have an id; ids must be unique within the file.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "every item must have an id; ids must be unique within the file.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L153"
+    },
+    {
+      "id": "scripts_verify_rationale_201",
+      "label": "href=\"<file>.html#<id>\" anchors must resolve.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "href=\"<file>.html#<id>\" anchors must resolve.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L201"
+    },
+    {
+      "id": "scripts_verify_rationale_366",
+      "label": "Scan every href=\"*.html\" and href=\"*.html#fragment\" across all pages. Verify\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "scan every href=\"*.html\" and href=\"*.html#fragment\" across all pages. verify...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L366"
+    },
+    {
+      "id": "scripts_verify_rationale_428",
+      "label": "Scan src=, href=, data-cert=, data-download= for local asset paths. Verify each\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "scan src=, href=, data-cert=, data-download= for local asset paths. verify each...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L428"
+    },
+    {
+      "id": "scripts_verify_rationale_463",
+      "label": "Run node --check on script.js, bg-animations.js, and all modules.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "run node --check on script.js, bg-animations.js, and all modules.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L463"
+    },
+    {
+      "id": "scripts_verify_rationale_508",
+      "label": "Assert sw.js, script.js, releases.js data file, all 8 JS modules, tracker,\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "assert sw.js, script.js, releases.js data file, all 8 js modules, tracker,...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L508"
+    },
+    {
+      "id": "scripts_verify_rationale_653",
+      "label": "Parse the MODULES array from script.js and verify every listed module path\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "parse the modules array from script.js and verify every listed module path...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L653"
+    },
+    {
+      "id": "scripts_verify_rationale_683",
+      "label": "Compare sitemap.xml URLs against actual *.html files.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "compare sitemap.xml urls against actual *.html files.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L683"
+    },
+    {
+      "id": "scripts_verify_rationale_720",
+      "label": "Parse site.webmanifest as JSON. Verify required fields.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "parse site.webmanifest as json. verify required fields.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L720"
+    },
+    {
+      "id": "scripts_verify_rationale_750",
+      "label": "Extract <script type=\"application/ld+json\"> blocks, parse as JSON, verify\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "extract <script type=\"application/ld+json\"> blocks, parse as json, verify...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L750"
+    },
+    {
+      "id": "scripts_verify_rationale_79",
+      "label": "Return sorted list of site HTML files (excluding google verification).",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "return sorted list of site html files (excluding google verification).",
+      "source_file": "scripts/verify.py",
+      "source_location": "L79"
+    },
+    {
+      "id": "scripts_verify_rationale_792",
+      "label": "Warn when files exceed size thresholds.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "warn when files exceed size thresholds.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L792"
+    },
+    {
+      "id": "scripts_verify_rationale_825",
+      "label": "Parse sw.js STATIC_ASSETS array. Verify every listed file exists. Flag any\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "parse sw.js static_assets array. verify every listed file exists. flag any...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L825"
+    },
+    {
+      "id": "scripts_verify_rationale_886",
+      "label": "Verify Sitemap: directive URL and basic syntax.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "verify sitemap: directive url and basic syntax.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L886"
+    },
+    {
+      "id": "scripts_verify_rationale_916",
+      "label": "Scan all pages for id=\"\" attributes. Flag collisions that could confuse cross-\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "scan all pages for id=\"\" attributes. flag collisions that could confuse cross-...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L916"
+    },
+    {
+      "id": "scripts_verify_rationale_953",
+      "label": "Check for unguarded optional function calls, duplicate listeners, and legacy\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "check for unguarded optional function calls, duplicate listeners, and legacy...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L953"
+    },
+    {
+      "id": "scripts_verify_rationale_98",
+      "label": "Validate the canonical machine-readable claim provenance record.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "validate the canonical machine-readable claim provenance record.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L98"
     },
     {
       "id": "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
@@ -4931,7 +4954,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "53.29.0"
+      "version": "53.30.0"
     },
     {
       "id": "scripts_benchmark_bundle",
@@ -6397,12 +6420,12 @@
     },
     {
       "id": "scripts_site_automation_rationale_69",
-      "label": "Runs the 24-category verification suite from scripts/verify.py.",
+      "label": "Runs the 25-category verification suite from scripts/verify.py.",
       "_origin": "ast",
       "community": 4,
       "community_name": "site_automation.py",
       "file_type": "rationale",
-      "norm_label": "runs the 24-category verification suite from scripts/verify.py.",
+      "norm_label": "runs the 25-category verification suite from scripts/verify.py.",
       "source_file": "scripts/site_automation.py",
       "source_location": "L69"
     },
@@ -13005,7 +13028,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L73",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -13017,7 +13040,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L401",
+      "source_location": "L431",
       "weight": 1.0
     },
     {
@@ -13029,7 +13052,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L413",
+      "source_location": "L443",
       "weight": 1.0
     },
     {
@@ -13041,7 +13064,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L422",
+      "source_location": "L452",
       "weight": 1.0
     },
     {
@@ -13053,7 +13076,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L426",
+      "source_location": "L456",
       "weight": 1.0
     },
     {
@@ -13065,7 +13088,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L339",
+      "source_location": "L369",
       "weight": 1.0
     },
     {
@@ -13077,7 +13100,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L344",
+      "source_location": "L374",
       "weight": 1.0
     },
     {
@@ -13089,7 +13112,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L378",
+      "source_location": "L408",
       "weight": 1.0
     },
     {
@@ -13101,7 +13124,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L391",
+      "source_location": "L421",
       "weight": 1.0
     },
     {
@@ -13113,7 +13136,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1224",
+      "source_location": "L1254",
       "weight": 1.0
     },
     {
@@ -13125,7 +13148,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1225",
+      "source_location": "L1255",
       "weight": 1.0
     },
     {
@@ -13137,7 +13160,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1228",
+      "source_location": "L1258",
       "weight": 1.0
     },
     {
@@ -13149,7 +13172,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1239",
+      "source_location": "L1269",
       "weight": 1.0
     },
     {
@@ -13161,7 +13184,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1009",
+      "source_location": "L1039",
       "weight": 1.0
     },
     {
@@ -13173,7 +13196,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1011",
+      "source_location": "L1041",
       "weight": 1.0
     },
     {
@@ -13185,7 +13208,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1097",
+      "source_location": "L1127",
       "weight": 1.0
     },
     {
@@ -13197,7 +13220,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1107",
+      "source_location": "L1137",
       "weight": 1.0
     },
     {
@@ -13209,7 +13232,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1124",
+      "source_location": "L1154",
       "weight": 1.0
     },
     {
@@ -13221,7 +13244,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1146",
+      "source_location": "L1176",
       "weight": 1.0
     },
     {
@@ -13233,7 +13256,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L775",
+      "source_location": "L805",
       "weight": 1.0
     },
     {
@@ -13245,7 +13268,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L784",
+      "source_location": "L814",
       "weight": 1.0
     },
     {
@@ -13257,7 +13280,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L788",
+      "source_location": "L818",
       "weight": 1.0
     },
     {
@@ -13269,7 +13292,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L901",
+      "source_location": "L931",
       "weight": 1.0
     },
     {
@@ -13281,7 +13304,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L902",
+      "source_location": "L932",
       "weight": 1.0
     },
     {
@@ -13293,7 +13316,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L912",
+      "source_location": "L942",
       "weight": 1.0
     },
     {
@@ -13305,7 +13328,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L916",
+      "source_location": "L946",
       "weight": 1.0
     },
     {
@@ -13317,7 +13340,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1021",
+      "source_location": "L1051",
       "weight": 1.0
     },
     {
@@ -13329,7 +13352,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1027",
+      "source_location": "L1057",
       "weight": 1.0
     },
     {
@@ -13341,7 +13364,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1032",
+      "source_location": "L1062",
       "weight": 1.0
     },
     {
@@ -13353,7 +13376,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1081",
+      "source_location": "L1111",
       "weight": 1.0
     },
     {
@@ -13365,7 +13388,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L126",
+      "source_location": "L156",
       "weight": 1.0
     },
     {
@@ -13377,7 +13400,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L128",
+      "source_location": "L158",
       "weight": 1.0
     },
     {
@@ -13389,7 +13412,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L149",
+      "source_location": "L179",
       "weight": 1.0
     },
     {
@@ -13401,7 +13424,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L162",
+      "source_location": "L192",
       "weight": 1.0
     },
     {
@@ -13413,7 +13436,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L173",
+      "source_location": "L203",
       "weight": 1.0
     },
     {
@@ -13425,7 +13448,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L178",
+      "source_location": "L208",
       "weight": 1.0
     },
     {
@@ -13437,7 +13460,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L184",
+      "source_location": "L214",
       "weight": 1.0
     },
     {
@@ -13449,19 +13472,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L188",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_js_safety",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L950",
+      "source_location": "L218",
       "weight": 1.0
     },
     {
@@ -13473,7 +13484,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L972",
+      "source_location": "L1002",
       "weight": 1.0
     },
     {
@@ -13485,7 +13496,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L976",
+      "source_location": "L1006",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_js_safety",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L980",
       "weight": 1.0
     },
     {
@@ -13497,7 +13520,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L437",
+      "source_location": "L467",
       "weight": 1.0
     },
     {
@@ -13509,7 +13532,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L451",
+      "source_location": "L481",
       "weight": 1.0
     },
     {
@@ -13521,60 +13544,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L471",
+      "source_location": "L501",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_check_jsonld_schemas",
       "target": "scripts_verify_get_html_files",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L723",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_jsonld_schemas",
-      "target": "scripts_verify_parse_html",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L728",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_jsonld_schemas",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L734",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_jsonld_schemas",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L748",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_jsonld_schemas",
-      "target": "scripts_verify_log_pass",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -13585,6 +13560,54 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_parse_html",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L758",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L764",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L778",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L783",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_verify_check_manifest",
       "target": "scripts_verify_log_error",
       "relation": "calls",
@@ -13593,7 +13616,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L693",
+      "source_location": "L723",
       "weight": 1.0
     },
     {
@@ -13605,7 +13628,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L707",
+      "source_location": "L737",
       "weight": 1.0
     },
     {
@@ -13617,7 +13640,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L711",
+      "source_location": "L741",
       "weight": 1.0
     },
     {
@@ -13629,11 +13652,371 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L630",
+      "source_location": "L660",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_check_module_files",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L676",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_get_html_files",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L328",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_read_html",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L331",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L333",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L342",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L359",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_quantitative_claims",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_quantitative_claims",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_robots_txt",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L889",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_robots_txt",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L895",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_robots_txt",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L904",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_search_index_sync",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L301",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_search_index_sync",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L317",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_search_index_sync",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L320",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_sitemap_sync",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L686",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_sitemap_sync",
+      "target": "scripts_verify_get_html_files",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L700",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_sitemap_sync",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L708",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_sitemap_sync",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L713",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_sw_cache_completeness",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L829",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_sw_cache_completeness",
+      "target": "scripts_verify_get_html_files",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L848",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_sw_cache_completeness",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L852",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_sw_cache_completeness",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L878",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_tag_balance",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L280",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_tag_balance",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L284",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_tracker_hygiene",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1194",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_tracker_hygiene",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1202",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_unit_tests",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1213",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_unit_tests",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1234",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_unit_tests",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1238",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_version_consistency",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L521",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_version_consistency",
       "target": "scripts_verify_log_pass",
       "relation": "calls",
       "_origin": "ast",
@@ -13645,342 +14028,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_get_html_files",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L298",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_read_html",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L301",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L303",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L312",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L329",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_robots_txt",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L859",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_robots_txt",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L865",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_robots_txt",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L874",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_search_index_sync",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L271",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_search_index_sync",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L287",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_search_index_sync",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L290",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sitemap_sync",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L656",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sitemap_sync",
-      "target": "scripts_verify_get_html_files",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L670",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sitemap_sync",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L678",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sitemap_sync",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L683",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sw_cache_completeness",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L799",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sw_cache_completeness",
-      "target": "scripts_verify_get_html_files",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L818",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sw_cache_completeness",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L822",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sw_cache_completeness",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L848",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_tag_balance",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L250",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_tag_balance",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L254",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_tracker_hygiene",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1164",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_tracker_hygiene",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1172",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_unit_tests",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1183",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_unit_tests",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1204",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_unit_tests",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1208",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_version_consistency",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L491",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_version_consistency",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L616",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_verify_cyan",
       "target": "scripts_verify_c",
       "relation": "calls",
@@ -13989,7 +14036,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L72",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -14001,7 +14048,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L74",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -14013,7 +14060,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L71",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -14025,7 +14072,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1255",
+      "source_location": "L1285",
       "weight": 1.0
     },
     {
@@ -14037,7 +14084,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1264",
+      "source_location": "L1294",
       "weight": 1.0
     },
     {
@@ -14049,7 +14096,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1270",
+      "source_location": "L1300",
       "weight": 1.0
     },
     {
@@ -14061,7 +14108,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1273",
+      "source_location": "L1303",
       "weight": 1.0
     },
     {
@@ -14073,7 +14120,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1274",
+      "source_location": "L1304",
       "weight": 1.0
     },
     {
@@ -14085,7 +14132,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1277",
+      "source_location": "L1307",
       "weight": 1.0
     },
     {
@@ -14097,7 +14144,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1280",
+      "source_location": "L1310",
       "weight": 1.0
     },
     {
@@ -14109,7 +14156,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1283",
+      "source_location": "L1313",
       "weight": 1.0
     },
     {
@@ -14121,7 +14168,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1286",
+      "source_location": "L1316",
       "weight": 1.0
     },
     {
@@ -14133,7 +14180,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1289",
+      "source_location": "L1319",
       "weight": 1.0
     },
     {
@@ -14145,7 +14192,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1292",
+      "source_location": "L1322",
       "weight": 1.0
     },
     {
@@ -14157,7 +14204,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1295",
+      "source_location": "L1325",
       "weight": 1.0
     },
     {
@@ -14169,7 +14216,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1298",
+      "source_location": "L1328",
       "weight": 1.0
     },
     {
@@ -14181,7 +14228,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1301",
+      "source_location": "L1331",
       "weight": 1.0
     },
     {
@@ -14193,7 +14240,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1304",
+      "source_location": "L1334",
       "weight": 1.0
     },
     {
@@ -14205,7 +14252,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1307",
+      "source_location": "L1337",
       "weight": 1.0
     },
     {
@@ -14217,7 +14264,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1310",
+      "source_location": "L1340",
       "weight": 1.0
     },
     {
@@ -14229,7 +14276,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1313",
+      "source_location": "L1343",
       "weight": 1.0
     },
     {
@@ -14241,7 +14288,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1316",
+      "source_location": "L1346",
       "weight": 1.0
     },
     {
@@ -14253,7 +14300,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1319",
+      "source_location": "L1349",
       "weight": 1.0
     },
     {
@@ -14265,7 +14312,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1322",
+      "source_location": "L1352",
       "weight": 1.0
     },
     {
@@ -14277,7 +14324,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1325",
+      "source_location": "L1355",
       "weight": 1.0
     },
     {
@@ -14289,7 +14336,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1328",
+      "source_location": "L1358",
       "weight": 1.0
     },
     {
@@ -14301,7 +14348,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1331",
+      "source_location": "L1361",
       "weight": 1.0
     },
     {
@@ -14313,7 +14360,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1334",
+      "source_location": "L1364",
       "weight": 1.0
     },
     {
@@ -14325,7 +14372,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1337",
+      "source_location": "L1367",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_quantitative_claims",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1370",
       "weight": 1.0
     },
     {
@@ -14337,7 +14396,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1354",
+      "source_location": "L1387",
       "weight": 1.0
     },
     {
@@ -14349,7 +14408,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1356",
+      "source_location": "L1389",
       "weight": 1.0
     },
     {
@@ -14361,7 +14420,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1360",
+      "source_location": "L1393",
       "weight": 1.0
     },
     {
@@ -14373,7 +14432,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1366",
+      "source_location": "L1399",
       "weight": 1.0
     },
     {
@@ -14385,7 +14444,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L85",
+      "source_location": "L86",
       "weight": 1.0
     },
     {
@@ -14397,7 +14456,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L69",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -14409,7 +14468,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L70",
+      "source_location": "L71",
       "weight": 1.0
     },
     {
@@ -18650,13 +18709,24 @@
     },
     {
       "source": "scripts_verify",
+      "target": "scripts_verify_check_css_integrity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L1012",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
       "target": "scripts_verify_check_html_a11y_seo",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1017",
+      "source_location": "L1047",
       "weight": 1.0
     },
     {
@@ -18667,7 +18737,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1088",
+      "source_location": "L1118",
       "weight": 1.0
     },
     {
@@ -18678,7 +18748,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1152",
+      "source_location": "L1182",
       "weight": 1.0
     },
     {
@@ -18689,7 +18759,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1178",
+      "source_location": "L1208",
       "weight": 1.0
     },
     {
@@ -18700,18 +18770,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1218",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify",
-      "target": "scripts_verify_check_ids",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L122",
+      "source_location": "L1248",
       "weight": 1.0
     },
     {
@@ -18722,7 +18781,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1245",
+      "source_location": "L1275",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
+      "target": "scripts_verify_check_ids",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L152",
       "weight": 1.0
     },
     {
@@ -18733,7 +18803,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L170",
+      "source_location": "L200",
       "weight": 1.0
     },
     {
@@ -18744,7 +18814,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L194",
+      "source_location": "L224",
       "weight": 1.0
     },
     {
@@ -18755,7 +18825,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L260",
+      "source_location": "L290",
       "weight": 1.0
     },
     {
@@ -18766,7 +18836,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L296",
+      "source_location": "L326",
       "weight": 1.0
     },
     {
@@ -18777,7 +18847,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L335",
+      "source_location": "L365",
       "weight": 1.0
     },
     {
@@ -18788,7 +18858,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L397",
+      "source_location": "L427",
       "weight": 1.0
     },
     {
@@ -18799,7 +18869,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L432",
+      "source_location": "L462",
       "weight": 1.0
     },
     {
@@ -18810,23 +18880,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L477",
+      "source_location": "L507",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
       "target": "scripts_verify_check_module_files",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L622",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify",
-      "target": "scripts_verify_check_sitemap_sync",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18843,18 +18902,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L66",
+      "source_location": "L67",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_manifest",
+      "target": "scripts_verify_check_sitemap_sync",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L689",
+      "source_location": "L682",
       "weight": 1.0
     },
     {
@@ -18865,7 +18924,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L69",
+      "source_location": "L70",
       "weight": 1.0
     },
     {
@@ -18876,23 +18935,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L70",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify",
-      "target": "scripts_verify_green",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
       "source_location": "L71",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_check_manifest",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18903,7 +18951,7 @@
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_cyan",
+      "target": "scripts_verify_green",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18914,7 +18962,7 @@
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_bold",
+      "target": "scripts_verify_cyan",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18925,7 +18973,7 @@
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_dim",
+      "target": "scripts_verify_bold",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -18936,13 +18984,24 @@
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_file_sizes",
+      "target": "scripts_verify_check_jsonld_schemas",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L761",
+      "source_location": "L749",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
+      "target": "scripts_verify_dim",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -18953,18 +19012,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L77",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_sw_cache_completeness",
+      "target": "scripts_verify_check_file_sizes",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L794",
+      "source_location": "L791",
       "weight": 1.0
     },
     {
@@ -18975,7 +19034,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L81",
+      "source_location": "L82",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
+      "target": "scripts_verify_check_sw_cache_completeness",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L824",
       "weight": 1.0
     },
     {
@@ -18986,18 +19056,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L84",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify",
-      "target": "scripts_verify_check_robots_txt",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L855",
+      "source_location": "L85",
       "weight": 1.0
     },
     {
@@ -19008,12 +19067,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L87",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_global_id_uniqueness",
+      "target": "scripts_verify_check_robots_txt",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -19030,18 +19089,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L90",
+      "source_location": "L91",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_js_safety",
+      "target": "scripts_verify_check_global_id_uniqueness",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L922",
+      "source_location": "L915",
       "weight": 1.0
     },
     {
@@ -19052,18 +19111,29 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L93",
+      "source_location": "L94",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_css_integrity",
+      "target": "scripts_verify_check_js_safety",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L982",
+      "source_location": "L952",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
+      "target": "scripts_verify_check_quantitative_claims",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L97",
       "weight": 1.0
     },
     {
@@ -20145,140 +20215,140 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1018",
+      "source": "scripts_verify_rationale_1013",
+      "target": "scripts_verify_check_css_integrity",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L1013",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_rationale_1048",
       "target": "scripts_verify_check_html_a11y_seo",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1018",
+      "source_location": "L1048",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1089",
+      "source": "scripts_verify_rationale_1119",
       "target": "scripts_verify_check_data_consistency",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1089",
+      "source_location": "L1119",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1153",
+      "source": "scripts_verify_rationale_1183",
       "target": "scripts_verify_check_tracker_hygiene",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1153",
+      "source_location": "L1183",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1179",
+      "source": "scripts_verify_rationale_1209",
       "target": "scripts_verify_check_unit_tests",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1179",
+      "source_location": "L1209",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1219",
+      "source": "scripts_verify_rationale_1249",
       "target": "scripts_verify_check_csp_integrity",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1219",
+      "source_location": "L1249",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_123",
+      "source": "scripts_verify_rationale_153",
       "target": "scripts_verify_check_ids",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L123",
+      "source_location": "L153",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_171",
+      "source": "scripts_verify_rationale_201",
       "target": "scripts_verify_check_internal_hrefs",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L171",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_336",
+      "source": "scripts_verify_rationale_366",
       "target": "scripts_verify_check_cross_page_links",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L336",
+      "source_location": "L366",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_398",
+      "source": "scripts_verify_rationale_428",
       "target": "scripts_verify_check_asset_references",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L398",
+      "source_location": "L428",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_433",
+      "source": "scripts_verify_rationale_463",
       "target": "scripts_verify_check_js_syntax",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L433",
+      "source_location": "L463",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_478",
+      "source": "scripts_verify_rationale_508",
       "target": "scripts_verify_check_version_consistency",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L478",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_rationale_623",
-      "target": "scripts_verify_check_module_files",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L623",
+      "source_location": "L508",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_rationale_653",
-      "target": "scripts_verify_check_sitemap_sync",
+      "target": "scripts_verify_check_module_files",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -20288,19 +20358,19 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_690",
-      "target": "scripts_verify_check_manifest",
+      "source": "scripts_verify_rationale_683",
+      "target": "scripts_verify_check_sitemap_sync",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L690",
+      "source_location": "L683",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_rationale_720",
-      "target": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_check_manifest",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -20310,52 +20380,52 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_762",
-      "target": "scripts_verify_check_file_sizes",
+      "source": "scripts_verify_rationale_750",
+      "target": "scripts_verify_check_jsonld_schemas",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L762",
+      "source_location": "L750",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_78",
+      "source": "scripts_verify_rationale_79",
       "target": "scripts_verify_get_html_files",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L78",
+      "source_location": "L79",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_795",
+      "source": "scripts_verify_rationale_792",
+      "target": "scripts_verify_check_file_sizes",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L792",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_rationale_825",
       "target": "scripts_verify_check_sw_cache_completeness",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L795",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_rationale_856",
-      "target": "scripts_verify_check_robots_txt",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L856",
+      "source_location": "L825",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_rationale_886",
-      "target": "scripts_verify_check_global_id_uniqueness",
+      "target": "scripts_verify_check_robots_txt",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -20365,25 +20435,36 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_923",
+      "source": "scripts_verify_rationale_916",
+      "target": "scripts_verify_check_global_id_uniqueness",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L916",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_rationale_953",
       "target": "scripts_verify_check_js_safety",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L923",
+      "source_location": "L953",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_983",
-      "target": "scripts_verify_check_css_integrity",
+      "source": "scripts_verify_rationale_98",
+      "target": "scripts_verify_check_quantitative_claims",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L983",
+      "source_location": "L98",
       "weight": 1.0
     },
     {
@@ -21883,5 +21964,5 @@
       "source_file": "dev-logs/EVOLUTION_AREAS.md"
     }
   ],
-  "built_at_commit": "8392f7a7d6de8d082a57c64f54b64b4e06868cf8"
+  "built_at_commit": "adca9ed7ed86e6251d44f8ac0be2c6b55dbefd06"
 }

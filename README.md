@@ -3,7 +3,7 @@
 [![Deploy Pages](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml)
 [![Verification Suite](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml)
 [![Lighthouse Audit](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml)
-[![Version](https://img.shields.io/badge/version-v53.29-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
+[![Version](https://img.shields.io/badge/version-v53.30-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
 [![Zero-Framework](https://img.shields.io/badge/framework-vanilla%20HTML%2FCSS%2FJS-orange.svg)](https://aaradhyadt.github.io)
 
@@ -29,7 +29,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v53.29 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v53.30 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
@@ -57,7 +57,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   └── mcp_config.json         # MCP server registration config for AI IDEs & desktop clients
 ├── 🛠️ Automation Scripts (`scripts/`)
 │   ├── site_automation.py      # Hyper-automation engine: site telemetry, version syncing & tracker logging
-│   ├── verify.py               # 24-category diagnostic suite: cross-page links, asset references, JS syntax, versions, JSON-LD, size budgets
+│   ├── verify.py               # 25-category diagnostic suite: cross-page links, asset references, JS syntax, versions, JSON-LD, claim provenance, size budgets
 │   ├── extract_index.py        # Python script to extract searchable items into the static command palette index
 │   └── dev-serve.py            # Local HTTP dev testing server with project root resolution, CORS headers & MIME type handling
 │
@@ -197,7 +197,7 @@ Press **`?`** (or **`Shift+/`**) anywhere on the site to trigger the **Keyboard 
 
 ### Verification & Diagnostic Suite
 
-To run the complete 24-category diagnostic verification engine locally:
+To run the complete 25-category diagnostic verification engine locally:
 
 ```bash
 python scripts/verify.py            # Standard verification check

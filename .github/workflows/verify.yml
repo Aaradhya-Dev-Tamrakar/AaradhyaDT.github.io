@@ -1,8 +1,8 @@
 name: Verify
 
-# Last updated: 2026-09-16 (v53.29)
+# Last updated: 2026-09-16 (v53.30)
 
-# Runs scripts/verify.py (24 check categories: ids, tags, links, assets,
+# Runs scripts/verify.py (25 check categories: ids, tags, links, assets,
 # JS syntax, version consistency, modules, sitemap, manifest, JSON-LD,
 # file sizes, SW cache, robots.txt, global ID uniqueness, JS runtime safety,
 # CSS integrity, deep a11y & SEO, data consistency, tracker hygiene, etc.) and

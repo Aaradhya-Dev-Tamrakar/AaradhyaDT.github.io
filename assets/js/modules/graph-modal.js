@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: graph-modal.js — aaradhyadt.github.io (v53.29)
+   MODULE: graph-modal.js — aaradhyadt.github.io (v53.30)
    High-Performance ExplainGit-Style Knowledge Graph HUD
    Dual-pane architecture:
    - Left Pane: IDE-style file explorer tree with macOS controls.

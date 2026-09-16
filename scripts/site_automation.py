@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v53.29)
+site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v53.30)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -66,7 +66,7 @@ def run_command(cmd, cwd=ROOT):
 
 
 def audit(verbose=False):
-    """Runs the 24-category verification suite from scripts/verify.py."""
+    """Runs the 25-category verification suite from scripts/verify.py."""
     cmd = [sys.executable, str(VERIFY_PY)]
     if verbose:
         cmd.append("--verbose")
@@ -685,13 +685,13 @@ def cmd_sync(args):
 
     # Step 5: Verification & E2E smoke tests
     if not getattr(args, "skip_verify", False):
-        print("[6/8] [Verify] Running 24-category verification suite (verify.py)...")
+        print("[6/8] [Verify] Running 25-category verification suite (verify.py)...")
         v_res = audit(verbose=False)
         if v_res["returncode"] != 0:
             print(f"\n[ERROR] VERIFICATION FAILED (exit code {v_res['returncode']}) -- Commit aborted.")
             print(v_res["output"].strip())
             return 1
-        print("      All 24 verification checks passed cleanly.")
+        print("      All 25 verification checks passed cleanly.")
 
         print("      Running E2E integration & smoke testing suite (test_e2e.py)...")
         e2e_res = run_e2e_tests()

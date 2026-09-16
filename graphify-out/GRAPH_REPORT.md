@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-16)
 
 ## Corpus Check
-- 53 files · ~1,673,773 words
+- 54 files · ~1,674,249 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 801 nodes · 1054 edges · 181 communities (47 shown, 121 thin omitted)
+- 803 nodes · 1059 edges · 181 communities (47 shown, 121 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `8392f7a7`
+- Built from commit: `adca9ed7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -185,9 +185,9 @@
 - Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)
 
 ## God Nodes (most connected - your core abstractions)
-1. `main()` - 31 edges
-2. `log_pass()` - 25 edges
-3. `log_error()` - 22 edges
+1. `main()` - 32 edges
+2. `log_pass()` - 26 edges
+3. `log_error()` - 23 edges
 4. `Portfolio Website Tracker — v53.26` - 21 edges
 5. `log_warning()` - 16 edges
 6. `bindEvents()` - 14 edges
@@ -223,8 +223,8 @@
 ## Communities (181 total, 121 thin omitted)
 
 ### Community 0 - "verify.py"
-Cohesion: 0.10
-Nodes (60): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+52 more)
+Cohesion: 0.09
+Nodes (62): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+54 more)
 
 ### Community 1 - "Portfolio Website Tracker — v53.26"
 Cohesion: 0.05
@@ -412,7 +412,7 @@ Nodes (12): 1. Engineering Identity, 2. Current Academic & Professional Snapshot
 
 ## Knowledge Gaps
 - **263 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+258 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 404 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 405 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **121 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -425,7 +425,7 @@ _Questions this graph is uniquely positioned to answer:_
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
   _263 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.09726775956284153 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09370199692780339 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
