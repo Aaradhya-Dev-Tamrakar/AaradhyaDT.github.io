@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-16)
 
 ## Corpus Check
-- 56 files · ~1,675,527 words
+- 56 files · ~1,675,594 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 812 nodes · 1074 edges · 183 communities (48 shown, 122 thin omitted)
+- 811 nodes · 1073 edges · 183 communities (48 shown, 122 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b844d349`
+- Built from commit: `818c1b92`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -24,7 +24,7 @@
 - Aaradhya Dev Tamrakar
 - graph-modal.js
 - tour.js
-- aaradhyadt.github.io
+- README.md
 - Aaradhya Dev Tamrakar CV
 - manage_payloads.py
 - PCBTraces
@@ -260,9 +260,9 @@ Nodes (20): bindEvents(), toggleFullscreen(), closeGraphModal(), escapeHtml(), f
 Cohesion: 0.27
 Nodes (19): closeTourOverlay(), ensureTourOverlay(), exitTour(), getTourCurrentPage(), getTourPageUrl(), initTour(), positionTourCard(), promptGuidedTour() (+11 more)
 
-### Community 9 - "aaradhyadt.github.io"
+### Community 9 - "README.md"
 Cohesion: 0.11
-Nodes (18): Zero-Leak Security Model, aaradhyadt.github.io, Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`) (+10 more)
+Nodes (17): Zero-Leak Security Model, Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`), Key Features (+9 more)
 
 ### Community 10 - "Aaradhya Dev Tamrakar CV"
 Cohesion: 0.12

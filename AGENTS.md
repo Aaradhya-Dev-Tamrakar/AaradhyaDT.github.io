@@ -55,6 +55,13 @@ To avoid merge conflicts on `assets/js/last-commit.json` (bot-managed) and preve
 - **Verification Gate**: Ensure changes adhere to standards checked by `python scripts/verify.py`.
 - **Web Standards**: Maintain Vanilla HTML/CSS/JS architecture, high-end aesthetics, semantic markup, and cross-site link/asset integrity across all pages.
 
+### Git credentials in Copilot-hosted terminals
+
+- Keep the global Git identity and Git Credential Manager account as **AaradhyaDT**.
+- GitHub Copilot and VS Code may use a different GitHub account; do not change their authentication to alter Git pushes.
+- `sync.ps1` must route network operations through the installed Git Credential Manager helper (`manager`) and clear any injected `credential.https://github.com.helper` override.
+- Use `.\sync.ps1` for repository synchronization; do not work around this rule by manually embedding tokens or credentials in remotes, scripts, or configuration files.
+
 ---
 
 ## 4. Encrypted Payloads & VIP Sections (`access.js`)
