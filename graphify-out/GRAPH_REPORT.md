@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-16)
 
 ## Corpus Check
-- 54 files · ~1,674,249 words
+- 56 files · ~1,675,527 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 803 nodes · 1059 edges · 181 communities (47 shown, 121 thin omitted)
+- 812 nodes · 1074 edges · 183 communities (48 shown, 122 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `adca9ed7`
+- Built from commit: `b844d349`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -183,13 +183,15 @@
 - UI Screenshot: Projects Page (Mobile)
 - Stamp Last Commit Workflow
 - Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)
+- evidence.js
+- Evidence data
 
 ## God Nodes (most connected - your core abstractions)
-1. `main()` - 32 edges
+1. `main()` - 33 edges
 2. `log_pass()` - 26 edges
 3. `log_error()` - 23 edges
 4. `Portfolio Website Tracker — v53.26` - 21 edges
-5. `log_warning()` - 16 edges
+5. `log_warning()` - 17 edges
 6. `bindEvents()` - 14 edges
 7. `get_html_files()` - 14 edges
 8. `cmd_sync()` - 13 edges
@@ -220,7 +222,7 @@
 - **Site Security & Access Control** — journey_milestone_15, journey_milestone_36 [INFERRED 0.85]
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 
-## Communities (181 total, 121 thin omitted)
+## Communities (183 total, 122 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -291,8 +293,8 @@ Cohesion: 0.22
 Nodes (12): analyze_assets(), generate_benchmark_summary(), get_file_metrics(), main(), print_cli_report(), Path, Computes critical path totals and network latency models., Renders human-readable report with formatted terminal tables. (+4 more)
 
 ### Community 17 - "sync.ps1"
-Cohesion: 0.23
-Nodes (8): Get-LfsInstalled(), Get-PythonPath(), Get-PythonRunner(), Initialize-DevDriveOptimizations(), Show-Diagnostics(), Sync-BotStamp(), Update-TrackerLog(), Write-Badge()
+Cohesion: 0.22
+Nodes (9): Get-LfsInstalled(), Get-PythonPath(), Get-PythonRunner(), Initialize-DevDriveOptimizations(), Invoke-GitNetwork(), Show-Diagnostics(), Sync-BotStamp(), Update-TrackerLog() (+1 more)
 
 ### Community 18 - "Agent Rules & Workflow Guidelines"
 Cohesion: 0.17
@@ -410,10 +412,14 @@ Nodes (3): Analytics with actual event tracking, Privacy Policy, Terms of Servic
 Cohesion: 0.15
 Nodes (12): 1. Engineering Identity, 2. Current Academic & Professional Snapshot, 3. Four-Tier Status Classification & Technical Proficiencies, 4. Systems Philosophy, 5. Selected Projects, 6. Technical Toolchain, 7. Verification Philosophy, Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT) (+4 more)
 
+### Community 181 - "evidence.js"
+Cohesion: 0.90
+Nodes (4): addRow(), initProjectEvidence(), renderEvidence(), text()
+
 ## Knowledge Gaps
-- **263 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+258 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 405 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **121 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **264 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+259 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 407 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **122 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
@@ -423,9 +429,9 @@ _Questions this graph is uniquely positioned to answer:_
 - **Why does `loadGA4()` connect `core.js` to `script.js`?**
   _High betweenness centrality (0.002) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _263 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _264 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.09370199692780339 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09472606246799795 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**

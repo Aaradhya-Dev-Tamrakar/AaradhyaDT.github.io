@@ -1,6 +1,6 @@
 name: Verify
 
-# Last updated: 2026-09-16 (v53.30)
+# Last updated: 2026-09-16 (v53.31)
 
 # Runs scripts/verify.py (25 check categories: ids, tags, links, assets,
 # JS syntax, version consistency, modules, sitemap, manifest, JSON-LD,
@@ -8,20 +8,19 @@ name: Verify
 # CSS integrity, deep a11y & SEO, data consistency, tracker hygiene, etc.) and
 # fails the run if any check errors.
 #
-# Trigger: workflow_run on completion of "Update search index", NOT
-# push. Two reasons push doesn't work here:
+# Trigger: push and pull_request run the repository checks immediately. A
+# workflow_run check also runs after "Update search index" so the generated
+# search index is checked only after its commit-back has finished. Direct
+# push/PR checks intentionally skip that generated-index assertion.
+#
+# The workflow_run trigger remains necessary because push-triggered workflows
+# are suppressed for the indexer's "[skip ci]" commit and because a direct
+# push check can race the index regeneration.
+#
+# Historical rationale for retaining workflow_run:
 #
 #   1. update-search-index.yml's commit-back uses "[skip ci]" in its
-#      message — GitHub suppresses push/pull_request-triggered workflows
-#      for that specific commit. A push-triggered verify.yml would only
-#      ever see the ORIGINAL push (pre-regen), never get a second run
-#      against the state after script.js is amended.
-#   2. Running push-triggered in parallel with update-search-index.yml
-#      means the search-index-sync check races the regeneration job and
-#      can false-positive-fail on a transient "stale" state that's about
-#      to be fixed a few seconds later — not a real problem, just bad
-#      sequencing.
-#
+#      message — GitHub suppresses push/pull_request-triggered workflows.
 # workflow_run fires only after the named workflow's job (including its
 # commit-and-push step) has fully finished, so by the time this runs,
 # assets/js/script.js already reflects any regeneration — no race, no
@@ -34,6 +33,12 @@ name: Verify
 # happen AFTER this file exists on the default branch — the push that
 # adds this file won't itself trigger a verify run; the next push will.
 on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
   workflow_run:
     workflows: ["Update search index"]
     types:
@@ -46,11 +51,12 @@ permissions:
 jobs:
   verify:
     runs-on: ubuntu-latest
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.conclusion == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          ref: main
+          ref: ${{ github.event_name == 'workflow_run' && 'main' || github.event.pull_request.head.sha || github.sha }}
           fetch-depth: 1
 
       - name: Set up Python
@@ -79,6 +85,11 @@ jobs:
         run: python3 scripts/test_e2e.py
 
       - name: Run verify.py (full suite)
-        run: python3 scripts/verify.py --verbose
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "workflow_run" ]; then
+            python3 scripts/verify.py --verbose
+          else
+            python3 scripts/verify.py --verbose --skip-search-index
+          fi
         env:
           FORCE_COLOR: "1"

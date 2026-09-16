@@ -373,6 +373,75 @@
       overflow: visible;
     }
 
+    /* Evidence is rendered from data/quantitative-claims.json; keep the
+       provenance compact so it supports, rather than competes with, the card. */
+    .project-evidence-summary {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.35rem 0.55rem;
+      color: var(--muted);
+      font-family: var(--mono);
+      font-size: 0.62rem;
+      letter-spacing: 0.03em;
+      line-height: 1.45;
+    }
+
+    .project-evidence-tier {
+      color: var(--accent);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+    }
+
+    .project-evidence-summary-value {
+      color: var(--text);
+    }
+
+    .project-evidence {
+      padding: 0.85rem 0.95rem;
+      border: 1px solid var(--line);
+      border-left: 2px solid var(--accent);
+      border-radius: 7px;
+      background: var(--bg3, rgba(255, 255, 255, 0.025));
+      font-family: var(--mono);
+      font-size: 0.66rem;
+      line-height: 1.55;
+    }
+
+    .project-evidence-heading {
+      margin: 0 0 0.55rem;
+      color: var(--heading);
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .project-evidence-list {
+      display: grid;
+      grid-template-columns: minmax(7rem, auto) 1fr;
+      gap: 0.3rem 0.8rem;
+      margin: 0;
+    }
+
+    .project-evidence-list dt {
+      color: var(--muted);
+    }
+
+    .project-evidence-list dd {
+      min-width: 0;
+      margin: 0;
+      color: var(--text);
+      overflow-wrap: anywhere;
+    }
+
+    .project-evidence-list a {
+      color: var(--accent2);
+    }
+
+    .project-evidence--review {
+      border-left-color: var(--glow-gold);
+    }
+
     .projects-header-bar {
       display: flex;
       justify-content: space-between;
@@ -832,7 +901,7 @@
 <div class="projects-grid" id="projectsGrid">
 <h2 class="projects-section-title" id="section-projects">Projects<span class="projects-section-sub">Major,
             minor, and capstone builds + coursework and archived projects</span></h2>
-<details class="project-card reveal project-card--major" id="p-032" data-category="embedded hardware aiml">
+<details class="project-card reveal project-card--major" id="p-032" data-category="embedded hardware aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/brainstorm">
 <summary class="project-summary">
 <div class="project-index">P — 032 <span class="project-status">Active Research</span></div>
 <h3 class="project-title">STRANGLER-IPU — Ingress Processing Unit Architecture</h3>
@@ -852,7 +921,7 @@
 <a class="project-link" href="https://github.com/Aaradhya-Dev-Tamrakar/brainstorm" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal project-card--major" id="p-018" data-category="aiml">
+<details class="project-card reveal project-card--major" id="p-018" data-category="aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/BiasAperture">
 <summary class="project-summary">
 <div class="project-index">P — 018 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">BiasAperture — Vision Fairness &amp; Bias Audit</h3>
@@ -890,7 +959,7 @@
 <a class="project-link" data-payload-link-id="proj-biasaperture" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal project-card--gold" id="p-001" data-category="embedded hardware">
+<details class="project-card reveal project-card--gold" id="p-001" data-category="embedded hardware" data-evidence-repo="Aaradhya-Dev-Tamrakar/GCSBR">
 <summary class="project-summary">
 <div class="project-index">P — 001 <span class="project-date">2024</span></div>
 <h3 class="project-title">Gesture-Controlled Self-Balancing Robot</h3>
@@ -926,7 +995,7 @@
 </div>
 </div>
 </details>
-<details class="project-card reveal project-card--major" id="p-015" data-category="embedded hardware aiml">
+<details class="project-card reveal project-card--major" id="p-015" data-category="embedded hardware aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/SPARK">
 <summary class="project-summary">
 <div class="project-index">P — 015 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">SPARK — Two-Layer Fall Detection Wearable</h3>
@@ -1333,7 +1402,7 @@
 </div>
 </details>
 <h2 class="projects-section-title" id="section-personal">Personal Tools &amp; Apps<span class="projects-section-sub">Side projects, utilities, and shipped tools</span></h2>
-<details class="project-card reveal project-card--in-progress" id="p-031" data-category="apps aiml">
+<details class="project-card reveal project-card--in-progress" id="p-031" data-category="apps aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/super-nlm">
 <summary class="project-summary">
 <div class="project-index">P — 031 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">Super-NLM — Multi-Account NotebookLM Hub &amp; MCP Server</h3>
@@ -1482,7 +1551,7 @@
 <a class="project-link" data-payload-link-id="proj-md2pdf" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" id="p-007" data-category="apps">
+<details class="project-card reveal" id="p-007" data-category="apps" data-evidence-repo="Aaradhya-Dev-Tamrakar/system-optimizer">
 <summary class="project-summary">
 <div class="project-index">P — 007 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">NovaOptimizer — Windows Task Manager &amp; System Optimizer</h3>

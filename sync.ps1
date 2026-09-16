@@ -660,6 +660,17 @@ function Format-MarkdownHygiene {
     }
 }
 
+# Run network operations through Git Credential Manager even when this script is
+# launched from a host that injects a higher-precedence credential helper.
+function Invoke-GitNetwork {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string[]]$Arguments
+    )
+
+    git -c "credential.https://github.com.helper=" -c "credential.helper=manager-core" @Arguments
+}
+
 # -----------------------------------------------------------------------------
 # Bot Stamp Synchronization Polling Loop
 # -----------------------------------------------------------------------------
@@ -682,7 +693,7 @@ function Sync-BotStamp {
         }
 
         # Pull silently with autostash
-        $null = git pull --autostash origin main 2>&1
+        $null = Invoke-GitNetwork @("pull", "--autostash", "origin", "main") 2>&1
         
         $latestAuthor = git log -1 '--pretty=format:%an' 2>$null
         $latestMsg = git log -1 '--pretty=format:%s' 2>$null
@@ -704,7 +715,7 @@ function Sync-BotStamp {
     if ($pushUrls -and $pushUrls.Count -gt 1) {
         foreach ($url in $pushUrls) {
             Write-Badge "Mirror" "Synchronizing $url to HEAD..." "DarkGray" "Gray"
-            $null = git push $url main --force 2>&1
+            $null = Invoke-GitNetwork @("push", $url, "main", "--force") 2>&1
         }
         Write-Badge "Mirror" "All configured remotes synchronized to $(git rev-parse --short HEAD)." "Green" "Green"
     }
@@ -746,7 +757,7 @@ if ($lastCommitDirty) {
 
 # Step 2: Safe Pull Remote Changes
 Write-Badge "Git" "Pulling latest changes from origin main (--autostash)..." "Cyan" "White"
-$pullOut = git pull --autostash origin main 2>&1 | Out-String
+$pullOut = Invoke-GitNetwork @("pull", "--autostash", "origin", "main") 2>&1 | Out-String
 if ($LASTEXITCODE -ne 0) {
     if ($pullOut -match 'CONFLICT|Merge conflict|Automatic merge failed') {
         Write-Badge "Git" "MERGE CONFLICT DETECTED during pull. Please resolve conflicts before running sync." "Red" "Red"
@@ -1026,12 +1037,12 @@ if ($VisualRegression -and -not $PushOnly) {
 # Step 7: Push-Only Mode Check
 if ($PushOnly) {
     Write-Badge "Git" "PushOnly flag active -- checking for unpushed commits..." "Cyan" "White"
-    git push origin main
+    Invoke-GitNetwork @("push", "origin", "main")
     if ($LASTEXITCODE -ne 0) {
         Write-Badge "Git" "Push was rejected. Re-pulling with rebase and retrying..." "Yellow" "Yellow"
-        git pull --rebase --autostash origin main
+        Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", "main")
         if ($LASTEXITCODE -eq 0) {
-            git push origin main
+            Invoke-GitNetwork @("push", "origin", "main")
         }
         else {
             Write-Badge "Git" "Rebase failed. Please resolve conflicts manually." "Red" "Red"
@@ -1104,13 +1115,13 @@ if ($staged) {
 
     if (-not $NoPush) {
         Write-Badge "Git" "Pushing commits to origin main..." "Cyan" "White"
-        git push origin main
+        Invoke-GitNetwork @("push", "origin", "main")
         
         if ($LASTEXITCODE -ne 0) {
             Write-Badge "Git" "Push rejected (non-fast-forward). Auto-rebasing with autostash..." "Yellow" "Yellow"
-            git pull --rebase --autostash origin main
+            Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", "main")
             if ($LASTEXITCODE -eq 0) {
-                git push origin main
+                Invoke-GitNetwork @("push", "origin", "main")
             }
             else {
                 Write-Badge "Git" "Rebase encountered merge conflicts. Please resolve manually." "Red" "Red"
@@ -1132,13 +1143,13 @@ else {
         Write-Badge "Git" "Working tree is clean, but found unpushed local commits:" "Cyan" "Yellow"
         $unpushed | ForEach-Object { Write-Host "    $_" -ForegroundColor Gray }
         Write-Badge "Git" "Pushing unpushed commits to origin main..." "Cyan" "White"
-        git push origin main
+        Invoke-GitNetwork @("push", "origin", "main")
         
         if ($LASTEXITCODE -ne 0) {
             Write-Badge "Git" "Push rejected (non-fast-forward). Auto-rebasing with autostash..." "Yellow" "Yellow"
-            git pull --rebase --autostash origin main
+            Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", "main")
             if ($LASTEXITCODE -eq 0) {
-                git push origin main
+                Invoke-GitNetwork @("push", "origin", "main")
             }
             else {
                 Write-Badge "Git" "Rebase encountered merge conflicts. Please resolve manually." "Red" "Red"

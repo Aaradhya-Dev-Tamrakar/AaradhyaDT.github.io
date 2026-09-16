@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v53.30)
+aaradhyadt.github.io (v53.31)
 
 25 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -55,6 +55,7 @@ README_MD = ROOT / "README.md"
 PYPROJECT_TOML = ROOT / "pyproject.toml"
 WORKFLOW_VERIFY_YML = ROOT / ".github" / "workflows" / "verify.yml"
 QUANTITATIVE_CLAIMS = ROOT / "data" / "quantitative-claims.json"
+BRAINSTORM_CLAIMS = ROOT / "data" / "brainstorm-claims.json"
 
 # ── State ───────────────────────────────────────────────────────────
 errors = []
@@ -95,10 +96,11 @@ def log_pass(category, msg):
     passes.append((category, msg))
 
 def check_quantitative_claims():
-    """Validate the canonical machine-readable claim provenance record."""
+    """Validate claim provenance without accepting mutable or placeholder refs."""
     required = {
         "claim", "source_repo", "source_path", "source_commit", "metric",
-        "value", "evidence_tier", "verification_method", "scope",
+        "value", "evidence_tier", "verification_method", "verification_test",
+        "scope", "status",
         "limitations", "last_verified",
     }
     if not QUANTITATIVE_CLAIMS.exists():
@@ -110,9 +112,12 @@ def check_quantitative_claims():
         log_error("claim-provenance", f"Invalid quantitative claims JSON: {exc}")
         return
     claims = payload.get("claims")
-    if payload.get("schema_version") != "1.0" or not isinstance(claims, list) or not claims:
+    if payload.get("schema_version") != "1.1" or not isinstance(claims, list) or not claims:
         log_error("claim-provenance", "Claims record has an invalid schema or no claims")
         return
+    sha_re = re.compile(r"^[0-9a-f]{40}$")
+    repo_re = re.compile(r"^[A-Za-z0-9_.-]+/[A-Za-z0-9_.-]+$")
+    valid_statuses = {"verified", "needs_review"}
     for index, claim in enumerate(claims, start=1):
         missing = sorted(required - set(claim))
         if missing:
@@ -120,8 +125,50 @@ def check_quantitative_claims():
             continue
         if claim["evidence_tier"] not in {"E0", "E1", "E2", "E3", "E4", "E5"}:
             log_error("claim-provenance", f"Claim {index} has invalid evidence tier")
+        if claim["status"] not in valid_statuses:
+            log_error("claim-provenance", f"Claim {index} has invalid status")
+        if not repo_re.fullmatch(str(claim["source_repo"])):
+            log_error("claim-provenance", f"Claim {index} has an invalid repository reference")
+        source_path = str(claim["source_path"])
+        if not source_path or source_path.startswith(("/", "\\")) or ".." in Path(source_path).parts:
+            log_error("claim-provenance", f"Claim {index} has an invalid repository path")
+        for field in ("verification_test", "metric", "scope"):
+            if not isinstance(claim[field], str) or not claim[field].strip():
+                log_error("claim-provenance", f"Claim {index} has an empty {field} reference")
+        commit = claim["source_commit"]
+        if claim["status"] == "verified":
+            if not isinstance(commit, str) or not sha_re.fullmatch(commit):
+                log_error("claim-provenance", f"Claim {index} requires a full immutable source_commit SHA")
+        elif commit not in (None, ""):
+            log_error("claim-provenance", f"Claim {index} needs review but has a non-immutable source_commit")
+        if claim["status"] == "needs_review" and not str(claim.get("review_reason", "")).strip():
+            log_error("claim-provenance", f"Claim {index} needs_review records require review_reason")
+    if BRAINSTORM_CLAIMS.exists():
+        try:
+            imported = json.loads(BRAINSTORM_CLAIMS.read_text(encoding="utf-8"))
+            if not isinstance(imported.get("claims"), list):
+                log_error("claim-provenance", "Local brainstorm manifest must contain a claims list")
+            else:
+                log_pass("claim-provenance", f"Local brainstorm manifest loaded ({len(imported['claims'])} claims)")
+        except (OSError, json.JSONDecodeError) as exc:
+            log_error("claim-provenance", f"Invalid local brainstorm manifest: {exc}")
     if not any(error[0] == "claim-provenance" for error in errors):
-        log_pass("claim-provenance", f"{len(claims)} quantitative claims have complete provenance")
+        review_count = sum(claim.get("status") == "needs_review" for claim in claims)
+        suffix = f"; {review_count} explicitly need immutable-source review" if review_count else ""
+        log_pass("claim-provenance", f"{len(claims)} quantitative claims have structurally complete provenance{suffix}")
+    projects_path = ROOT / "projects.html"
+    if projects_path.exists():
+        soup = parse_html(projects_path)
+        claim_repos = {str(claim.get("source_repo", "")).strip() for claim in claims}
+        bound_repos = {
+            str(card.get("data-evidence-repo", "")).strip()
+            for card in soup.select("details.project-card[data-evidence-repo]")
+        }
+        unknown = sorted(repo for repo in bound_repos if repo and repo not in claim_repos)
+        if unknown:
+            log_error("claim-provenance", "Project evidence binding has no canonical claim: " + ", ".join(unknown))
+        elif bound_repos:
+            log_pass("claim-provenance", f"{len(bound_repos)} project cards are bound to canonical evidence claims")
 
 # ── Page config for content checks ──────────────────────────────────
 PAGES = {
@@ -1280,10 +1327,12 @@ def main():
                         help="Show passing checks too")
     parser.add_argument("--fix", action="store_true",
                         help="Auto-fix trivial issues (sitemap dates, etc.)")
+    parser.add_argument("--skip-search-index", action="store_true",
+                        help="Skip the generated-index check when a sequencing workflow owns it")
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v53.30)"))
+    print(bold("  Portfolio Site Verification Suite (v53.31)"))
     print(bold("=" * 60))
     print()
 
@@ -1303,8 +1352,11 @@ def main():
     for f in get_html_files():
         check_tag_balance(f.name, f)
 
-    # 4. Search index sync
-    check_search_index_sync()
+    # 4. Search index sync (the workflow_run job runs this after regeneration)
+    if args.skip_search_index:
+        log_warning("search-index", "Skipped; awaiting the post-update workflow_run verification")
+    else:
+        check_search_index_sync()
 
     # 5. PWA & a11y metadata
     check_pwa_and_a11y_metadata()
