@@ -1,6 +1,6 @@
 {
-  "sha": "926b17653c96ee6e8d1ff4c0968acbc7fb6c414a",
-  "shortSha": "926b176",
-  "date": "2026-09-16T13:29:49+05:45",
-  "message": "fix(sync): use installed Git Credential Manager helper"
+  "sha": "e36dd5dcfee22f8b30fb849fdb711c1aab36c127",
+  "shortSha": "e36dd5d",
+  "date": "2026-09-16T21:39:18+05:45",
+  "message": "update(projects): standardize title as Windows Pilot"
 }

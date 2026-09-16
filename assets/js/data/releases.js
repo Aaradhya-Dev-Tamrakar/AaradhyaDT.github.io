@@ -7,7 +7,17 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: 'v53.31',
+    version: 'v54.1',
+    date: '2026-09-16',
+    sha: 'rel54',
+    title: "Ecosystem Multi-Repo Fleet Harmonization & Baseline v1.0 Freeze",
+    highlights: [
+      "Core updates and architectural improvements for v54",
+      "PWA & Cache: Bumped Service Worker cache to aaradhya-portfolio-v54"
+    ]
+  },
+  {
+    version: 'v53.33',
     date: '2026-09-08',
     sha: 'rel53',
     title: "Visual Regression Engine & Native Dynamic ESM Suite",

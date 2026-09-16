@@ -112,6 +112,38 @@
       "review_reason": "Immutable source commit was not present in this workspace; verify against the source repository before publishing.",
       "verification_test": "Academic evaluation record",
       "verification_method": "Repository-local evidence review; no claim is publishable until status is verified."
+    },
+    {
+      "claim": "GitHub Pilot context efficiency",
+      "source_repo": "Aaradhya-Dev-Tamrakar/github-pilot",
+      "source_path": "README.md",
+      "source_commit": null,
+      "metric": "Agent context footprint",
+      "value": "< 1 KB summary payload; 0 LLM tokens for local scraping & audits",
+      "evidence_tier": "E3",
+      "scope": "Local multi-account auditing & commit digest generation",
+      "limitations": "Deterministic local script execution; agent savings dependent on fleet size",
+      "last_verified": "2026-09-16",
+      "status": "needs_review",
+      "review_reason": "Immutable source commit was not present in this workspace; verify against the source repository before publishing.",
+      "verification_test": "Local CLI execution benchmark",
+      "verification_method": "Repository-local evidence review; no claim is publishable until status is verified."
+    },
+    {
+      "claim": "Windows Pilot desktop automation engine",
+      "source_repo": "AaradhyaDT/windows-pilot",
+      "source_path": "README.md",
+      "source_commit": null,
+      "metric": "UI automation modality",
+      "value": "100% resolution-independent UIA COM & Win32 subsystem control",
+      "evidence_tier": "E3",
+      "scope": "Windows 10/11 desktop automation & MCP tool execution",
+      "limitations": "Requires Windows OS with UIA COM interface; not cross-platform",
+      "last_verified": "2026-09-16",
+      "status": "needs_review",
+      "review_reason": "Immutable source commit was not present in this workspace; verify against the source repository before publishing.",
+      "verification_test": "Local pytest and CLI suite execution",
+      "verification_method": "Repository-local evidence review; no claim is publishable until status is verified."
     }
   ]
 }

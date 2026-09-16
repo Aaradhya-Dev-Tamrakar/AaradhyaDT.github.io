@@ -1373,6 +1373,114 @@
       "source_location": "L9"
     },
     {
+      "id": "scripts_sync_drive_create_drive_file",
+      "label": "create_drive_file()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "create_drive_file()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L161"
+    },
+    {
+      "id": "scripts_sync_drive_find_drive_file_by_name",
+      "label": "find_drive_file_by_name()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "find_drive_file_by_name()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L126"
+    },
+    {
+      "id": "scripts_sync_drive_get_oauth_credentials",
+      "label": "get_oauth_credentials()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "get_oauth_credentials()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L64"
+    },
+    {
+      "id": "scripts_sync_drive_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L386"
+    },
+    {
+      "id": "scripts_sync_drive_obtain_access_token",
+      "label": "obtain_access_token()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "obtain_access_token()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L105"
+    },
+    {
+      "id": "scripts_sync_drive_request_with_retry",
+      "label": "request_with_retry()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "request_with_retry()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "scripts_sync_drive_sync_manifest",
+      "label": "sync_manifest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "sync_manifest()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L234"
+    },
+    {
+      "id": "scripts_sync_drive_sync_notebooklm_sources",
+      "label": "sync_notebooklm_sources()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "sync_notebooklm_sources()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L205"
+    },
+    {
+      "id": "scripts_sync_drive_update_drive_file",
+      "label": "update_drive_file()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "update_drive_file()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L143"
+    },
+    {
       "id": "assets_js_modules_core_adtobs",
       "label": "adToBs()",
       "_callable": true,
@@ -5002,7 +5110,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "53.31.0"
+      "version": "54.1.0"
     },
     {
       "id": "scripts_benchmark_bundle",
@@ -5581,6 +5689,127 @@
       "norm_label": "evidence data",
       "source_file": "data/README.md",
       "source_location": "L1"
+    },
+    {
+      "id": "request",
+      "label": "Request",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "request",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "scripts_sync_drive",
+      "label": "sync_drive.py",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "sync_drive.py",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_sync_drive_py_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "scripts_sync_drive_rationale_106",
+      "label": "Exchanges refresh token for a fresh Google OAuth2 access token with retry.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "exchanges refresh token for a fresh google oauth2 access token with retry.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L106"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_127",
+      "label": "Checks if a file with the given name already exists in the target folder.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "checks if a file with the given name already exists in the target folder.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L127"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_144",
+      "label": "Updates an existing Google Drive file in-place preserving its permanent fileId.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "updates an existing google drive file in-place preserving its permanent fileid.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L144"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_169",
+      "label": "Creates a new file inside the specified Drive folder and returns its permanent\u2026",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "creates a new file inside the specified drive folder and returns its permanent...",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L169"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_206",
+      "label": "Triggers Super-NLM / nlm CLI sync on stale Drive sources if available.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "triggers super-nlm / nlm cli sync on stale drive sources if available.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L206"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_241",
+      "label": "Processes the manifest, updating or creating Drive documents.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "processes the manifest, updating or creating drive documents.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L241"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_34",
+      "label": "Executes urllib request with exponential backoff and jitter for transient HTTP\u2026",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "executes urllib request with exponential backoff and jitter for transient http...",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_65",
+      "label": "Resolves OAuth credentials from environment variables or local credential files.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "resolves oauth credentials from environment variables or local credential files.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L65"
     },
     {
       "id": "gemini",
@@ -13150,6 +13379,162 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_sync_drive_create_drive_file",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_find_drive_file_by_name",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_main",
+      "target": "scripts_sync_drive_py_path",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L395",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_main",
+      "target": "scripts_sync_drive_sync_manifest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L396",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_obtain_access_token",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_py_path",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L255",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_get_oauth_credentials",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L283",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_obtain_access_token",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L297",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_find_drive_file_by_name",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L328",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_update_drive_file",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L342",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_create_drive_file",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L354",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_sync_notebooklm_sources",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L377",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_update_drive_file",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L151",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_test_visual_regression_main",
       "target": "scripts_test_visual_regression_find_browser_executable",
       "relation": "calls",
@@ -14303,7 +14688,7 @@
     },
     {
       "source": "scripts_verify_main",
-      "target": "scripts_verify_log_warning",
+      "target": "scripts_verify_log_pass",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -15067,6 +15452,18 @@
       "context": "parameter_type",
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L225",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_request_with_retry",
+      "target": "request",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -18898,6 +19295,105 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_obtain_access_token",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_find_drive_file_by_name",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_update_drive_file",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_create_drive_file",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_sync_notebooklm_sources",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_sync_manifest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L234",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L386",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_get_oauth_credentials",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L64",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_test_e2e",
       "target": "scripts_test_e2e_quiettesthandler",
       "relation": "contains",
@@ -20457,6 +20953,94 @@
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
       "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_106",
+      "target": "scripts_sync_drive_obtain_access_token",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_127",
+      "target": "scripts_sync_drive_find_drive_file_by_name",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_144",
+      "target": "scripts_sync_drive_update_drive_file",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_169",
+      "target": "scripts_sync_drive_create_drive_file",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_206",
+      "target": "scripts_sync_drive_sync_notebooklm_sources",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_241",
+      "target": "scripts_sync_drive_sync_manifest",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_34",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_65",
+      "target": "scripts_sync_drive_get_oauth_credentials",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -22242,5 +22826,5 @@
       "source_file": "dev-logs/EVOLUTION_AREAS.md"
     }
   ],
-  "built_at_commit": "b844d34978e34ec34d0b67d262afc640aa1282eb"
+  "built_at_commit": "17a9ade0f2d978ad6fb356003f75d9416135d135"
 }

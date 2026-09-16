@@ -1,0 +1,31 @@
+{
+  "folder_id": "18cAp_Sa92mgngFMYtphGLOj4atWWwpMj",
+  "folder_url": "https://drive.google.com/drive/folders/18cAp_Sa92mgngFMYtphGLOj4atWWwpMj",
+  "notebook_id": "95a79d26-2f87-42cd-8cb9-8361a1e56059",
+  "files": {
+    "README.md": {
+      "drive_file_id": "1Hs7XSTrdBM2SWoskv0_WelH-f8LAFVmEMm4kOQtZ_ZM",
+      "drive_file_name": "portfolio_README.md",
+      "description": "Portfolio Website Overview & Architecture",
+      "sha256": "6df8b457960a8502"
+    },
+    "PROFILE.md": {
+      "drive_file_id": "14zBPhcqO2Xk4vM8-15kctGwfeW9MCRp76ZxLoPJulqM",
+      "drive_file_name": "portfolio_PROFILE.md",
+      "description": "Engineering Profile & Technical Identity",
+      "sha256": "ea48dd7d010049d7"
+    },
+    "dev-logs/PortfolioWebsite_TRACKER.md": {
+      "drive_file_id": "1eDmP5I72WbxLkehcJLR0GiOZ1nRDs6KWydpdrj9C7sI",
+      "drive_file_name": "PortfolioWebsite_TRACKER.md",
+      "description": "Portfolio Sprint Tracker & Development Milestones",
+      "sha256": "6503bc0378bbdebb"
+    },
+    "dev-logs/RFC_PORTFOLIO_OS_SDK.md": {
+      "drive_file_id": "1wzDDeJkDP6nzwzaHCXm8hGkNjJ8cjeuPCvjIT3q5vg0",
+      "drive_file_name": "RFC_PORTFOLIO_OS_SDK.md",
+      "description": "RFC Portfolio OS SDK Architecture",
+      "sha256": "39df44a2d2f445b9"
+    }
+  }
+}

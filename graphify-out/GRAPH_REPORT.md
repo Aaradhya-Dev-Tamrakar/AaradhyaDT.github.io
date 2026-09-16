@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-16)
 
 ## Corpus Check
-- 56 files · ~1,675,527 words
+- 58 files · ~1,678,260 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 812 nodes · 1074 edges · 183 communities (48 shown, 122 thin omitted)
+- 832 nodes · 1105 edges · 184 communities (49 shown, 122 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `b844d349`
+- Built from commit: `17a9ade0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -185,13 +185,14 @@
 - Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)
 - evidence.js
 - Evidence data
+- sync_manifest
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 33 edges
-2. `log_pass()` - 26 edges
+2. `log_pass()` - 27 edges
 3. `log_error()` - 23 edges
 4. `Portfolio Website Tracker — v53.26` - 21 edges
-5. `log_warning()` - 17 edges
+5. `log_warning()` - 16 edges
 6. `bindEvents()` - 14 edges
 7. `get_html_files()` - 14 edges
 8. `cmd_sync()` - 13 edges
@@ -222,7 +223,7 @@
 - **Site Security & Access Control** — journey_milestone_15, journey_milestone_36 [INFERRED 0.85]
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 
-## Communities (183 total, 122 thin omitted)
+## Communities (184 total, 122 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -416,9 +417,13 @@ Nodes (12): 1. Engineering Identity, 2. Current Academic & Professional Snapshot
 Cohesion: 0.90
 Nodes (4): addRow(), initProjectEvidence(), renderEvidence(), text()
 
+### Community 183 - "sync_manifest"
+Cohesion: 0.16
+Nodes (19): Request, create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), Path, Exchanges refresh token for a fresh Google OAuth2 access token with retry. (+11 more)
+
 ## Knowledge Gaps
 - **264 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+259 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 407 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 416 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **122 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
