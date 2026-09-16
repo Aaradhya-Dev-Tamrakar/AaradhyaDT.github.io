@@ -1373,6 +1373,114 @@
       "source_location": "L9"
     },
     {
+      "id": "scripts_sync_drive_create_drive_file",
+      "label": "create_drive_file()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "create_drive_file()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L161"
+    },
+    {
+      "id": "scripts_sync_drive_find_drive_file_by_name",
+      "label": "find_drive_file_by_name()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "find_drive_file_by_name()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L126"
+    },
+    {
+      "id": "scripts_sync_drive_get_oauth_credentials",
+      "label": "get_oauth_credentials()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "get_oauth_credentials()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L64"
+    },
+    {
+      "id": "scripts_sync_drive_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L386"
+    },
+    {
+      "id": "scripts_sync_drive_obtain_access_token",
+      "label": "obtain_access_token()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "obtain_access_token()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L105"
+    },
+    {
+      "id": "scripts_sync_drive_request_with_retry",
+      "label": "request_with_retry()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "request_with_retry()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L28"
+    },
+    {
+      "id": "scripts_sync_drive_sync_manifest",
+      "label": "sync_manifest()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "sync_manifest()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L234"
+    },
+    {
+      "id": "scripts_sync_drive_sync_notebooklm_sources",
+      "label": "sync_notebooklm_sources()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "sync_notebooklm_sources()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L205"
+    },
+    {
+      "id": "scripts_sync_drive_update_drive_file",
+      "label": "update_drive_file()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "update_drive_file()",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L143"
+    },
+    {
       "id": "assets_js_modules_core_adtobs",
       "label": "adToBs()",
       "_callable": true,
@@ -5002,7 +5110,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "53.32.0"
+      "version": "53.33.0"
     },
     {
       "id": "scripts_benchmark_bundle",
@@ -5581,6 +5689,127 @@
       "norm_label": "evidence data",
       "source_file": "data/README.md",
       "source_location": "L1"
+    },
+    {
+      "id": "request",
+      "label": "Request",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "request",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "scripts_sync_drive",
+      "label": "sync_drive.py",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "sync_drive.py",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L1"
+    },
+    {
+      "id": "scripts_sync_drive_py_path",
+      "label": "Path",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "code",
+      "norm_label": "path",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "scripts_sync_drive_rationale_106",
+      "label": "Exchanges refresh token for a fresh Google OAuth2 access token with retry.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "exchanges refresh token for a fresh google oauth2 access token with retry.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L106"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_127",
+      "label": "Checks if a file with the given name already exists in the target folder.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "checks if a file with the given name already exists in the target folder.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L127"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_144",
+      "label": "Updates an existing Google Drive file in-place preserving its permanent fileId.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "updates an existing google drive file in-place preserving its permanent fileid.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L144"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_169",
+      "label": "Creates a new file inside the specified Drive folder and returns its permanent\u2026",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "creates a new file inside the specified drive folder and returns its permanent...",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L169"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_206",
+      "label": "Triggers Super-NLM / nlm CLI sync on stale Drive sources if available.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "triggers super-nlm / nlm cli sync on stale drive sources if available.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L206"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_241",
+      "label": "Processes the manifest, updating or creating Drive documents.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "processes the manifest, updating or creating drive documents.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L241"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_34",
+      "label": "Executes urllib request with exponential backoff and jitter for transient HTTP\u2026",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "executes urllib request with exponential backoff and jitter for transient http...",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L34"
+    },
+    {
+      "id": "scripts_sync_drive_rationale_65",
+      "label": "Resolves OAuth credentials from environment variables or local credential files.",
+      "_origin": "ast",
+      "community": 183,
+      "community_name": "sync_manifest",
+      "file_type": "rationale",
+      "norm_label": "resolves oauth credentials from environment variables or local credential files.",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L65"
     },
     {
       "id": "gemini",
@@ -6848,10 +7077,22 @@
       "label": "README.md",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "page",
       "norm_label": "readme.md",
+      "source_file": "README.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "readme_aaradhyadt_github_io",
+      "label": "aaradhyadt.github.io",
+      "_origin": "ast",
+      "community": 9,
+      "community_name": "aaradhyadt.github.io",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "aaradhyadt.github.io",
       "source_file": "README.md",
       "source_location": "L1"
     },
@@ -6860,7 +7101,7 @@
       "label": "Automated Git Workflow & Pre-Commit Gate (`sync.ps1`)",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "automated git workflow & pre-commit gate (`sync.ps1`)",
@@ -6872,7 +7113,7 @@
       "label": "\ud83d\udcc8 Codebase Knowledge Graph (`Graphify`)",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcc8 codebase knowledge graph (`graphify`)",
@@ -6884,7 +7125,7 @@
       "label": "\ud83d\udcec Contact & Connect",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcec contact & connect",
@@ -6896,7 +7137,7 @@
       "label": "\u2328\ufe0f Global Keyboard Navigation & Shortcuts HUD",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\u2328\ufe0f global keyboard navigation & shortcuts hud",
@@ -6908,7 +7149,7 @@
       "label": "\ud83d\udd11 Google OAuth 2.0 Integration",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udd11 google oauth 2.0 integration",
@@ -6920,7 +7161,7 @@
       "label": "\ud83d\udcbb Interactive Developer Terminal Widget (`#adtTerminal`)",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcbb interactive developer terminal widget (`#adtterminal`)",
@@ -6932,7 +7173,7 @@
       "label": "Key Features",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "key features",
@@ -6944,7 +7185,7 @@
       "label": "\ud83d\udcc4 License",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcc4 license",
@@ -6956,7 +7197,7 @@
       "label": "\u26a1 Local Development & Git Workflow",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\u26a1 local development & git workflow",
@@ -6968,7 +7209,7 @@
       "label": "\ud83d\udd12 Multi-Tier Access Control & Security Model",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udd12 multi-tier access control & security model",
@@ -6980,7 +7221,7 @@
       "label": "\ud83d\udcc1 Repository Structure & Directory Map",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udcc1 repository structure & directory map",
@@ -6992,7 +7233,7 @@
       "label": "\ud83d\udd0d Site Search & Unified Command Palette",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udd0d site search & unified command palette",
@@ -7004,7 +7245,7 @@
       "label": "\ud83d\udd0d Technical Security Architecture",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "\ud83d\udd0d technical security architecture",
@@ -7016,7 +7257,7 @@
       "label": "Terminal Commands",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "terminal commands",
@@ -7028,7 +7269,7 @@
       "label": "UX Features",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "ux features",
@@ -7040,7 +7281,7 @@
       "label": "Verification & Diagnostic Suite",
       "_origin": "ast",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "verification & diagnostic suite",
@@ -9926,7 +10167,7 @@
       "label": "Zero-Leak Security Model",
       "_origin": "semantic",
       "community": 9,
-      "community_name": "README.md",
+      "community_name": "aaradhyadt.github.io",
       "file_type": "concept",
       "norm_label": "zero-leak security model",
       "rationale": "Client-side AES-256-GCM encryption for gated content."
@@ -13138,6 +13379,162 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_sync_drive_create_drive_file",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L194",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_find_drive_file_by_name",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L133",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_main",
+      "target": "scripts_sync_drive_py_path",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L395",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_main",
+      "target": "scripts_sync_drive_sync_manifest",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L396",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_obtain_access_token",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L118",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_py_path",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L255",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_get_oauth_credentials",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L283",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_obtain_access_token",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L297",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_find_drive_file_by_name",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L328",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_update_drive_file",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L342",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_create_drive_file",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L354",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_sync_manifest",
+      "target": "scripts_sync_drive_sync_notebooklm_sources",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L377",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_update_drive_file",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L151",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_test_visual_regression_main",
       "target": "scripts_test_visual_regression_find_browser_executable",
       "relation": "calls",
@@ -15055,6 +15452,18 @@
       "context": "parameter_type",
       "source_file": "scripts/manage_payloads.py",
       "source_location": "L225",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_request_with_retry",
+      "target": "request",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L28",
       "weight": 1.0
     },
     {
@@ -18073,6 +18482,17 @@
     },
     {
       "source": "readme",
+      "target": "readme_aaradhyadt_github_io",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_google_oauth_2_0_integration",
       "relation": "contains",
       "_origin": "ast",
@@ -18083,7 +18503,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme",
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_site_search_unified_command_palette",
       "relation": "contains",
       "_origin": "ast",
@@ -18094,7 +18514,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme",
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_interactive_developer_terminal_widget_adtterminal",
       "relation": "contains",
       "_origin": "ast",
@@ -18105,7 +18525,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme",
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_repository_structure_directory_map",
       "relation": "contains",
       "_origin": "ast",
@@ -18116,7 +18536,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme",
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_global_keyboard_navigation_shortcuts_hud",
       "relation": "contains",
       "_origin": "ast",
@@ -18127,7 +18547,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme",
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_local_development_git_workflow",
       "relation": "contains",
       "_origin": "ast",
@@ -18138,7 +18558,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme",
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_codebase_knowledge_graph_graphify",
       "relation": "contains",
       "_origin": "ast",
@@ -18149,7 +18569,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme",
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_contact_connect",
       "relation": "contains",
       "_origin": "ast",
@@ -18160,7 +18580,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme",
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_license",
       "relation": "contains",
       "_origin": "ast",
@@ -18171,7 +18591,7 @@
       "weight": 1.0
     },
     {
-      "source": "readme",
+      "source": "readme_aaradhyadt_github_io",
       "target": "readme_multi_tier_access_control_security_model",
       "relation": "contains",
       "_origin": "ast",
@@ -18872,6 +19292,105 @@
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
       "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_obtain_access_token",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_find_drive_file_by_name",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L126",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_update_drive_file",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L143",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_create_drive_file",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L161",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_sync_notebooklm_sources",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_sync_manifest",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L234",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L386",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive",
+      "target": "scripts_sync_drive_get_oauth_credentials",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L64",
       "weight": 1.0
     },
     {
@@ -20434,6 +20953,94 @@
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
       "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_106",
+      "target": "scripts_sync_drive_obtain_access_token",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L106",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_127",
+      "target": "scripts_sync_drive_find_drive_file_by_name",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_144",
+      "target": "scripts_sync_drive_update_drive_file",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L144",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_169",
+      "target": "scripts_sync_drive_create_drive_file",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_206",
+      "target": "scripts_sync_drive_sync_notebooklm_sources",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L206",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_241",
+      "target": "scripts_sync_drive_sync_manifest",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_34",
+      "target": "scripts_sync_drive_request_with_retry",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L34",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_sync_drive_rationale_65",
+      "target": "scripts_sync_drive_get_oauth_credentials",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/sync_drive.py",
+      "source_location": "L65",
       "weight": 1.0
     },
     {
@@ -22219,5 +22826,5 @@
       "source_file": "dev-logs/EVOLUTION_AREAS.md"
     }
   ],
-  "built_at_commit": "818c1b92394738ae60d54ffa2f91d84faa8e7511"
+  "built_at_commit": "df9805d036f22bd12afe67e52f53901f9a9a2ad8"
 }

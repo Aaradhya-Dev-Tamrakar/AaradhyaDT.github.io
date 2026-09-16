@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-16)
 
 ## Corpus Check
-- 56 files · ~1,675,594 words
+- 58 files · ~1,677,228 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 811 nodes · 1073 edges · 183 communities (48 shown, 122 thin omitted)
+- 832 nodes · 1105 edges · 184 communities (49 shown, 122 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `818c1b92`
+- Built from commit: `df9805d0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -24,7 +24,7 @@
 - Aaradhya Dev Tamrakar
 - graph-modal.js
 - tour.js
-- README.md
+- aaradhyadt.github.io
 - Aaradhya Dev Tamrakar CV
 - manage_payloads.py
 - PCBTraces
@@ -185,6 +185,7 @@
 - Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)
 - evidence.js
 - Evidence data
+- sync_manifest
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 33 edges
@@ -222,7 +223,7 @@
 - **Site Security & Access Control** — journey_milestone_15, journey_milestone_36 [INFERRED 0.85]
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 
-## Communities (183 total, 122 thin omitted)
+## Communities (184 total, 122 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -260,9 +261,9 @@ Nodes (20): bindEvents(), toggleFullscreen(), closeGraphModal(), escapeHtml(), f
 Cohesion: 0.27
 Nodes (19): closeTourOverlay(), ensureTourOverlay(), exitTour(), getTourCurrentPage(), getTourPageUrl(), initTour(), positionTourCard(), promptGuidedTour() (+11 more)
 
-### Community 9 - "README.md"
+### Community 9 - "aaradhyadt.github.io"
 Cohesion: 0.11
-Nodes (17): Zero-Leak Security Model, Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`), Key Features (+9 more)
+Nodes (18): Zero-Leak Security Model, aaradhyadt.github.io, Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`) (+10 more)
 
 ### Community 10 - "Aaradhya Dev Tamrakar CV"
 Cohesion: 0.12
@@ -416,9 +417,13 @@ Nodes (12): 1. Engineering Identity, 2. Current Academic & Professional Snapshot
 Cohesion: 0.90
 Nodes (4): addRow(), initProjectEvidence(), renderEvidence(), text()
 
+### Community 183 - "sync_manifest"
+Cohesion: 0.16
+Nodes (19): Request, create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), Path, Exchanges refresh token for a fresh Google OAuth2 access token with retry. (+11 more)
+
 ## Knowledge Gaps
 - **264 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+259 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 407 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 416 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **122 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
