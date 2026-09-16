@@ -295,7 +295,7 @@ const SEARCH_STATIC_INDEX = {
     "type": "project",
     "title": "BiasAperture — Vision Fairness & Bias Audit",
     "meta": "In Progress · AIF360, Fairlearn, FairFace",
-    "href": "projects.html#p-018",
+    "href": "projects.html#p-025",
     "text": "biasaperture — vision fairness & bias audit diagnostic & evaluative framework for auditing demographic bias in deployed facial-analysis classifiers — computes subgroup and intersectional fairness metrics in regulator-legible formats (eu ai act article 10 / nist rmf) analytical core computes dpd, eod, eop, and dir across 126 race × age × gender demographic bins using aif360 and fairlearn with $\\chi^2$ significance tests, bca bootstrap confidence intervals, and shap surrogate explainability fusemachines ai fellowship capstone, two-person engineering team with tisha manandhar aif360 fairlearn fairface utkface computer vision bias auditing statistical testing shap eu ai act nist rmf html/jinja2 in progress"
   },
   {
@@ -309,7 +309,7 @@ const SEARCH_STATIC_INDEX = {
     "type": "project",
     "title": "SPARK — Two-Layer Fall Detection Wearable",
     "meta": "In Progress · ESP32-S3, MPU6050, TFLite Micro",
-    "href": "projects.html#p-015",
+    "href": "projects.html#p-018",
     "text": "spark — two-layer fall detection wearable on-device, two-layer fall-detection wearable for eldercare: layer 1 isr threshold pre-filter ($|a| > 2.5g$, $\\delta t < 300\\text{ ms}$) on esp32-s3 + mpu-6050 at 200 hz gating an on-device tflite micro 1d cnn 1d cnn trained under leakage-free subject-grouped split on sisfall (0.9185 auc-roc, 87.81% sensitivity), quantized to an 18.5 kb int8 flatbuffer (87.7% compression vs fp32) with 56 passing unit tests central gateway with shap clinical explainability, automated pdf diagnostic reports across 4 biomechanical fall profiles, and nepal cohort data collection pipeline bei major engineering project, four-person team — proposal defended jul 9, 2026 esp32-s3 mpu6050 tflite micro int8 quantization 1d cnn shap fastapi latex in progress"
   },
   {
@@ -323,119 +323,119 @@ const SEARCH_STATIC_INDEX = {
     "type": "project",
     "title": "Custom Processor FSM Design",
     "meta": "VHDL, Vivado, FSM",
-    "href": "projects.html#p-012",
+    "href": "projects.html#p-014",
     "text": "custom processor fsm design vhdl implementation of a custom processor datapath and fsm supporting gcd and exponentiation operations simulated and verified in vivado 2023.2 as embedded systems coursework vhdl vivado fsm datapath fpga"
   },
   {
     "type": "project",
     "title": "PrakopNet — Multi-Hazard Early Warning System",
     "meta": "Archived · ESP32, Wireless Mesh, Raspberry Pi 4B",
-    "href": "projects.html#p-010",
+    "href": "projects.html#p-012",
     "text": "prakopnet — multi-hazard early warning system solar-powered wireless mesh multi-hazard monitoring platform for remote regions of nepal — esp32 nodes to a raspberry pi 4b gateway archived june 29, 2026; superseded by spark esp32 wireless mesh raspberry pi 4b tflite micro lstm gps fastapi edge ai archived"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 14 — Agentic Intent Routing",
     "meta": "Python, BERT, Fine-Tuning",
-    "href": "projects.html#p-030",
+    "href": "projects.html#p-028",
     "text": "fusemachines wk 14 — agentic intent routing two candidate routing strategies for a shopassist ai support platform — fine-tuned bert-family encoder vs. fine-tuned llm/slm — classifying customer messages into 11 specialized agent categories benchmarked on 26,872 bitext customer-support examples with a group-aware stratified split to prevent instruction-text leakage across train/val/test python bert fine-tuning slm intent classification stratified split"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 13 — LSTM Text Classification",
     "meta": "Python, PyTorch, LSTM",
-    "href": "projects.html#p-029",
+    "href": "projects.html#p-027",
     "text": "fusemachines wk 13 — lstm text classification lstm headline classifier on ag_news (world / sports / business / sci-tech) — embedding → lstm → fc, trained top-to-bottom from a skeleton notebook pytorch training loop with vocabulary building from scratch and a short conceptual-reflection section python pytorch lstm ag_news nlp"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 12 — NER for Customer Support",
     "meta": "Python, NER, CoNLL-2003",
-    "href": "projects.html#p-028",
+    "href": "projects.html#p-024",
     "text": "fusemachines wk 12 — ner for customer support end-to-end named entity recognition pipeline on conll-2003 for automated customer-support ticket triage and crm routing text preprocessing, eda (sentence-length / word-frequency / entity distributions), and `word2features` feature engineering ahead of model training python ner conll-2003 feature engineering nlp"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 11 — Vision Transformers",
     "meta": "Python, PyTorch, torchvision",
-    "href": "projects.html#p-019",
+    "href": "projects.html#p-022",
     "text": "fusemachines wk 11 — vision transformers five-module deep computer vision stack — resnet-50 transfer learning + gradcam, faster r-cnn object detection, deeplabv3+ segmentation, a from-scratch vae, and vit patch embedding clip zero-shot classification hit 92.0% on a 200-image slice, outscoring the fine-tuned resnet-50 (74.1%) — deployment memo compares both for a 500-camera warehouse rollout, exported to onnx python pytorch torchvision timm clip onnx gradcam vision transformers"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 10 — Image Processing",
     "meta": "Python, OpenCV, NumPy",
-    "href": "projects.html#p-017",
+    "href": "projects.html#p-019",
     "text": "fusemachines wk 10 — image processing hsv-based multi-class fruit segmentation across the fruits-360 dataset, morphological cleanup, and filter-based denoising benchmarks (gaussian, median, bilateral) from-scratch canny edge detector (96.9% pixel agreement vs. cv2.canny()), plus a full fruit-detection pipeline — harris corners, tuned hough circles, connected-component separation of touching fruit, contour-based bounding boxes python opencv numpy matplotlib hsv segmentation canny edge detection hough transform"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 9 — NEU Steel Defect CNN",
     "meta": "Python, PyTorch, torchvision",
-    "href": "projects.html#p-016",
+    "href": "projects.html#p-017",
     "text": "fusemachines wk 9 — neu steel defect cnn pytorch cnn classifier for neu-det steel surface-defect detection — six classes, 1,800 grayscale images from-scratch nn foundation → tuned cnn, 98.8%/78.9% train/val accuracy; augmentation, batchnorm, and dropout ablations plus grid-search and optuna hyperparameter tuning python pytorch torchvision cnn optuna scikit-learn"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 8 — Forecasting",
     "meta": "Python, statsmodels, SARIMA",
-    "href": "projects.html#p-014",
+    "href": "projects.html#p-016",
     "text": "fusemachines wk 8 — forecasting time-series pipeline benchmarking nine forecasters on monthly s&p 500 data (1990–2024) via mase/rmse 4-model ensemble outperformed every single model — mase 2.44, confirmed via diebold-mariano test (p = 0.0092) python statsmodels sarima holt-winters prophet lightgbm lstm xgboost"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 7 — Customer Segmentation",
     "meta": "Python, scikit-learn, K-Means",
-    "href": "projects.html#p-009",
+    "href": "projects.html#p-011",
     "text": "fusemachines wk 7 — customer segmentation market segmentation on uci online retail ii (~500,000 transactions) with rfm + category-ratio feature engineering full clustering comparison — k-means, hierarchical, dbscan — validated via silhouette and davies-bouldin indices python scikit-learn k-means hierarchical clustering dbscan rfm pandas scipy"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 6 — Probabilistic Models",
     "meta": "Python, PyMC, ArviZ",
-    "href": "projects.html#p-008",
+    "href": "projects.html#p-009",
     "text": "fusemachines wk 6 — probabilistic models bayesian inference pipeline for telco churn using pymc, arviz, and pgmpy mle/map estimation, dirichlet-multinomial updating, and a fitted pymc bayesian logistic regression artifact python pymc arviz pgmpy bayesian inference scikit-learn pandas"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 4 — Telco Churn & CLV ML Pipeline",
     "meta": "Python, scikit-learn, Logistic Regression",
-    "href": "projects.html#p-004",
+    "href": "projects.html#p-006",
     "text": "fusemachines wk 4 — telco churn & clv ml pipeline classification and regression pipeline for churn prediction and customer lifetime value modeling — roc-auc 0.841 ± 0.005 ridge regression best for clv (mean $1,304.70); full html report export via papermill python scikit-learn logistic regression ridge lasso pandas papermill"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 5 — Telco Churn Tree-Based Ensemble Pipeline",
     "meta": "Python, XGBoost, Random Forest",
-    "href": "projects.html#p-003",
+    "href": "projects.html#p-008",
     "text": "fusemachines wk 5 — telco churn tree-based ensemble pipeline end-to-end classification pipeline on telco customer churn (7,043 rows) with smote restricted to training folds only random forest + xgboost with shap explainability; secondary tenure-prediction task with a model card python xgboost random forest shap imbpipeline smote joblib scikit-learn"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 3 — Text-to-SQL Agentic Pipeline",
     "meta": "Python, FastAPI, Streamlit",
-    "href": "projects.html#p-002",
+    "href": "projects.html#p-005",
     "text": "fusemachines wk 3 — text-to-sql agentic pipeline five-stage agentic text-to-sql system over a postgresql database — planner → generator → validator → executor → summarizer 100% execution success and 100% result accuracy across a 50-question benchmark, zero retries required python fastapi streamlit gpt-4o-mini postgresql docker prompt chaining"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 2 — Customer API App",
     "meta": "FastAPI, PostgreSQL, SQLAlchemy",
-    "href": "projects.html#p-027",
+    "href": "projects.html#p-004",
     "text": "fusemachines wk 2 — customer api app 12-factor app compliant restful api for customer, order, and payment management, refactored to full 12-factor compliance with a statistics module fastapi + sqlalchemy over postgresql, dockerized with environment-based config and centralized logging fastapi postgresql sqlalchemy pydantic docker 12-factor app"
   },
   {
     "type": "project",
     "title": "Fusemachines Wk 1 — Cardiac Event Data Wrangling",
     "meta": "Python, Pandas, EDA",
-    "href": "projects.html#p-026",
+    "href": "projects.html#p-003",
     "text": "fusemachines wk 1 — cardiac event data wrangling data wrangling and preparation pipeline for cardiac event analysis on a synthetic heart-attack-risk dataset eda, correlation heatmap, and class-imbalance analysis ahead of downstream modeling python pandas eda data wrangling"
   },
   {
     "type": "project",
     "title": "ONM Case Study — Fusemachines Inc.",
     "meta": "LaTeX, Organizational Analysis, Case Study",
-    "href": "projects.html#p-025",
+    "href": "projects.html#p-026",
     "text": "onm case study — fusemachines inc. organization & management coursework case study on fusemachines inc.'s org structure, hr practices, and cross-functional operations based on a direct interview with the company's talent acquisition and pr managers; latex source plus compiled report latex organizational analysis case study coursework"
   },
   {
@@ -449,77 +449,77 @@ const SEARCH_STATIC_INDEX = {
     "type": "project",
     "title": "GitHub Pilot — Autonomous Multi-Account Fleet Auditor & Navigator",
     "meta": "Python 3.10+, Typer CLI, HTTP/2 Async",
-    "href": "projects.html#p-033",
+    "href": "projects.html#p-034",
     "text": "github pilot — autonomous multi-account fleet auditor & navigator macro-plane developer fleet orchestrator and multi-account github profile navigator operating across profiles, repositories, ci workflows, and commit signals token-zero local architecture: delegates repo auditing, rate-limit tracking, svg stats synthesis, and async http/2 scraping to deterministic local python scripts, handing ai agents ultra-compact summaries (< 1 kb) to conserve reasoning context multi-account credential resolver, automated conventional commit changelog digests, and pre-commit secret hygiene scanning python 3.10+ typer cli http/2 async token-zero developer tooling multi-account fleet auditing rich ui"
   },
   {
     "type": "project",
     "title": "Windows Pilot — Semantic UIA & MCP Desktop Automation Engine",
     "meta": "Python 3.10+, Win32 API, UI Automation COM",
-    "href": "projects.html#p-034",
+    "href": "projects.html#p-033",
     "text": "windows pilot — semantic uia & mcp desktop automation engine mission-critical windows desktop automation engine for autonomous ai coding agents (antigravity, claude desktop, cursor) and human operators via cli and python sdk resolution-independent microsoft ui automation (uia) com & win32 control: locates elements semantically via css-like query dsl without fragile pixel coordinates win32 foreground lock bypass ( attachthreadinput ), virtual desktop awareness with dwm uncloaking ( dwmwa_cloaked ), high-speed unicode clipboard injection, and native mcp server ( winpilot-mcp ) python 3.10+ win32 api ui automation com mcp server desktop automation virtual desktops windows 11 actionchain"
   },
   {
     "type": "project",
     "title": "Claude Desktop Multi-Profile & Autonomous Fleet Utilities",
     "meta": "PowerShell 7, FastAPI, SQLite WAL",
-    "href": "projects.html#p-021",
+    "href": "projects.html#p-023",
     "text": "claude desktop multi-profile & autonomous fleet utilities powershell 7 & windows shell utility suite enabling multi-user profile isolation, concurrent multi-monitor window management via `--user-data-dir`, and single-instance browser oauth (`claude://`) deep-link routing cloud-native v2 distributed fleet: fastapi coordinator backend, sqlite wal persistence with atomic leasing, automated sku pipeline decomposition, and autonomous client worker daemons with claude desktop proxy and llm adapters automated git repository synchronization with staged diff conventional commit messaging, tray uia usage watchdog, and cooldown alerts powershell 7 fastapi sqlite wal autonomous workers electron oauth 2.0 git automation windows shell"
   },
   {
     "type": "project",
     "title": "IEEE KEC React Workshop",
     "meta": "React, Vite, JavaScript",
-    "href": "projects.html#p-023",
+    "href": "projects.html#p-015",
     "text": "ieee kec react workshop progressive react teaching material built for an ieee kec student-branch workshop — numbered lesson components from a basic greeting through props, a counter, and a live clock vite-scaffolded, structured as a self-contained follow-along app for first-time react learners react vite javascript teaching material"
   },
   {
     "type": "project",
     "title": "Cryptarithmetic Solver & API",
     "meta": "Python, FastAPI, Backtracking",
-    "href": "projects.html#p-022",
+    "href": "projects.html#p-020",
     "text": "cryptarithmetic solver & api column-by-column backtracking solver for alphametic puzzles (send + more = money style) — prunes invalid branches immediately on column-arithmetic failure instead of naive generate-and-test fastapi wrapper with a `metrics` mode for solve-time/branch stats, plus a powershell helper and a no-pytest unit test runner python fastapi backtracking docker algorithm design"
   },
   {
     "type": "project",
     "title": "Pulse Live — Real-Time Interactive Polling Platform",
     "meta": "React 19, TypeScript, Vite",
-    "href": "projects.html#p-020",
+    "href": "projects.html#p-021",
     "text": "pulse live — real-time interactive polling platform real-time audience engagement platform featuring instant multi-mode polling (choice, q&a, word cloud), presenter mode, and interactive voting synchronization built with react 19, typescript, and supabase websockets / database for instant live response updates, presenter display controls, and qr code joining react 19 typescript vite supabase websockets react router v7 lucide icons qr code"
   },
   {
     "type": "project",
     "title": "Nexus — Personal AI Operating System",
     "meta": "In Progress · React, Vite, FastAPI",
-    "href": "projects.html#p-011",
+    "href": "projects.html#p-010",
     "text": "nexus — personal ai operating system project-centric ai operating system replacing the multi-browser/multi-account/multi-tool workflow react (vite) + fastapi + sqlite/fts5, parallel groq + gemini fan-out — v2 redesign complete june 12, 2026 react vite fastapi sqlite fts5 groq gemini python in progress"
   },
   {
     "type": "project",
     "title": "md2pdf — Desktop Markdown to PDF Converter",
     "meta": "Python, Tkinter, Pandoc",
-    "href": "projects.html#p-024",
+    "href": "projects.html#p-029",
     "text": "md2pdf — desktop markdown to pdf converter native desktop markdown editor and pdf conversion workstation built with python & tkinter high-fidelity conversion pipeline utilizing pandoc (commonmark/gfm ast → html) and wkhtmltopdf (webkit html → pdf engine with explicit utf-8 encoding) features adjustable margins (default 20mm), live system dependency validation across windows, macos, and linux, and clean save-destination dialogs python tkinter pandoc wkhtmltopdf markdown desktop app"
   },
   {
     "type": "project",
     "title": "NovaOptimizer — Windows Task Manager & System Optimizer",
     "meta": "C# / .NET 10, WPF, Win32 NT Kernel",
-    "href": "projects.html#p-007",
+    "href": "projects.html#p-030",
     "text": "novaoptimizer — windows task manager & system optimizer high-efficiency, native windows task manager and system optimizer engineered in c# / .net 10 and wpf with a minimal ~25 mb ram footprint direct nt kernel memory management: deep physical ram purging via undocumented `ntsetsysteminformation` (standby list, system working set, and process trimming) with an intelligent background watchdog turbo boost profiles (game, work, and study mode with integrated pomodoro focus timer), startup bloat auditor, hung-process watchdog, and system latency tweaks c# / .net 10 wpf win32 nt kernel memory management task manager turbo boost windows 11"
   },
   {
     "type": "project",
     "title": "Edge AI Stability Detection System",
     "meta": "Python, scikit-learn, RandomForest",
-    "href": "projects.html#p-006",
+    "href": "projects.html#p-007",
     "text": "edge ai stability detection system ml system predicting platform stability from simulated imu sensor data — random forest, 99.8% test accuracy rest api via fastapi, joblib export for robotics integration with gcsbr (gesture-controlled self-balancing robot) python scikit-learn randomforest fastapi joblib imu edge ai"
   },
   {
     "type": "project",
     "title": "Alpha Android Super-App",
     "meta": "In Progress · Kotlin, Jetpack Compose, Material3",
-    "href": "projects.html#p-005",
+    "href": "projects.html#p-002",
     "text": "alpha android super-app modular personal super-app (kotlin/jetpack compose, material3) — gesture remote, budget tracker, multi-mode calculator calculator is the primary shipping target, play store release in progress kotlin jetpack compose material3 camerax mediapipe bluetooth spp datastore apache poi in progress"
   }
 
