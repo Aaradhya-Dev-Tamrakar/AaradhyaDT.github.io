@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: tour.js — aaradhyadt.github.io (v54.1)
+   MODULE: tour.js — aaradhyadt.github.io (v54.2)
    Cross-page spotlight tour with keyboard navigation.
    ============================================================ */
 
@@ -15,7 +15,7 @@ const TOUR_STEPS = {
   ],
   'projects.html': [
     { sel: '#page-header', title: 'Projects Portfolio', body: 'Explore 30 engineering projects across firmware, robotics, and ML with real-time tag search and count indicators.' },
-    { sel: '#p-015', title: 'Featured Build (SPARK)', body: 'Deep-dive into SPARK — Intelligent Elderly Fall Detection Wearable with ESP32-S3, PyTorch, and TFLite Micro on-device inference.' },
+    { sel: '#p-018', title: 'Featured Build (SPARK)', body: 'Deep-dive into SPARK — Intelligent Elderly Fall Detection Wearable with ESP32-S3, PyTorch, and TFLite Micro on-device inference.' },
   ],
   'experience.html': [
     { sel: '#page-header', title: 'Leadership & Experience', body: 'Chronological roles across Fusemachines, DataCamp, IEEE Student Branch, and EPC Club.' },
