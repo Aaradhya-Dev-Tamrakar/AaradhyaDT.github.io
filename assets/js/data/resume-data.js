@@ -8,11 +8,11 @@ const RESUME_DATA = {
 
   name: "Aaradhya Dev Tamrakar",
 
-  subtitle: "Electronics, Communication & Information Engineer | AI/ML & Embedded Edge Systems",
+  subtitle: "Intelligent Systems & AI Infrastructure Researcher-in-Training | Embedded Edge AI · Near-Memory Architecture · Deterministic Verification",
 
   contact: "Kathmandu, Nepal · aaradhyadevtmr@gmail.com · +977 9844602050 · linkedin.com/in/aaradhya-dev-tamrakar · github.com/AaradhyaDT · aaradhyadt.github.io",
 
-  summary: "Electronics, Communication and Information student at IOE, Kathmandu Engineering College (Year IV/II, Final Semester). Builds ML pipelines spanning classification, regression, tree-based ensembles, and agentic Text-to-SQL systems; deploys via FastAPI and Docker; develops Android apps with Kotlin/Jetpack Compose. Advancing through the Fusemachines AI Fellowship and NSSR DataCamp Fellowship, while leading SPARK, an ESP32-S3 edge-AI wearable fall-detection system.",
+  summary: "Electronics, Communication and Information Engineering student at IOE, Kathmandu Engineering College (Year IV/II, Final Semester). Builds evidence-driven systems at the boundary of embedded Edge AI (ESP32-S3, INT8 quantized CNNs), near-memory computer architecture (CXL discrete-event simulation), and algorithmic fairness auditing (126-bin intersectional disparity evaluation). Fuse AI Fellow, NSSR DataCamp Fellow, IEEE KEC KTM Vice Chair. Leading SPARK — a two-layer wearable fall detection system achieving 0.9185 AUC-ROC with an 18.5 KB INT8 CNN.",
 
   roles: {
 

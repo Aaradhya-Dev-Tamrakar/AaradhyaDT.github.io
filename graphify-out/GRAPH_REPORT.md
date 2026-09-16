@@ -1,16 +1,16 @@
-# Graph Report - AaradhyaDT.github.io  (2026-09-13)
+# Graph Report - AaradhyaDT.github.io  (2026-09-16)
 
 ## Corpus Check
-- 53 files · ~461,364 words
+- 53 files · ~1,673,773 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 802 nodes · 1055 edges · 181 communities (47 shown, 121 thin omitted)
+- 801 nodes · 1054 edges · 181 communities (47 shown, 121 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 66 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `82ab9ed1`
+- Built from commit: `8392f7a7`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -182,7 +182,7 @@
 - UI Screenshot: Projects Page (Desktop)
 - UI Screenshot: Projects Page (Mobile)
 - Stamp Last Commit Workflow
-- Personal Profile and Technical Dossier: Aaradhya Dev Tamrakar (ADT)
+- Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 31 edges
@@ -406,9 +406,9 @@ Nodes (3): SimOps Fundamentals Certificate, SimOps Practitioner Certificate, Sim
 Cohesion: 0.67
 Nodes (3): Analytics with actual event tracking, Privacy Policy, Terms of Service
 
-### Community 180 - "Personal Profile and Technical Dossier: Aaradhya Dev Tamrakar (ADT)"
-Cohesion: 0.14
-Nodes (13): 1. Executive Summary, 2. Professional Identity and Engineering Philosophy, 3. Core Technical Pillars and Specializations, 4. Flagship Projects and Research Portfolio, 5. Institutional Leadership and Fellowships, 6. Academic Standing, 7. Profile Synthesis, I. Computer Architecture and Near-Memory Co-Design (+5 more)
+### Community 180 - "Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)"
+Cohesion: 0.15
+Nodes (12): 1. Engineering Identity, 2. Current Academic & Professional Snapshot, 3. Four-Tier Status Classification & Technical Proficiencies, 4. Systems Philosophy, 5. Selected Projects, 6. Technical Toolchain, 7. Verification Philosophy, Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT) (+4 more)
 
 ## Knowledge Gaps
 - **263 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+258 more)
