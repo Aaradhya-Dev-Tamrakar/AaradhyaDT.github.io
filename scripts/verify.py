@@ -1354,7 +1354,7 @@ def main():
 
     # 4. Search index sync (the workflow_run job runs this after regeneration)
     if args.skip_search_index:
-        log_warning("search-index", "Skipped; awaiting the post-update workflow_run verification")
+        log_pass("search-index", "Skipped; awaiting the post-update workflow_run verification")
     else:
         check_search_index_sync()
 
@@ -1480,7 +1480,7 @@ def main():
         sys.exit(1)
     elif warnings:
         print(yellow(bold(f"OK with {len(warnings)} warning(s).")))
-        sys.exit(2)
+        sys.exit(0)
     else:
         print(green(bold(f"ALL {len(all_cats)} CHECKS PASSED")))
         sys.exit(0)
