@@ -1,6 +1,6 @@
 {
-  "sha": "926b17653c96ee6e8d1ff4c0968acbc7fb6c414a",
-  "shortSha": "926b176",
-  "date": "2026-09-16T13:29:49+05:45",
-  "message": "fix(sync): use installed Git Credential Manager helper"
+  "sha": "a592d84774d69341ddb71fc0b42a8ae04098c82f",
+  "shortSha": "a592d84",
+  "date": "2026-09-16T14:52:28+05:45",
+  "message": "fix(sync): resolve last-commit.json merge conflict"
 }
