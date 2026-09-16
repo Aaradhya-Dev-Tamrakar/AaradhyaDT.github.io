@@ -668,7 +668,7 @@ function Invoke-GitNetwork {
         [string[]]$Arguments
     )
 
-    git -c "credential.https://github.com.helper=" -c "credential.helper=manager-core" @Arguments
+    git -c "credential.https://github.com.helper=" -c "credential.helper=manager" @Arguments
 }
 
 # -----------------------------------------------------------------------------
