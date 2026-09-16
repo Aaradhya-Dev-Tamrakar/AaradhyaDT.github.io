@@ -1,7 +1,7 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-16)
 
 ## Corpus Check
-- 58 files · ~1,677,228 words
+- 58 files · ~1,678,256 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
@@ -10,7 +10,7 @@
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `df9805d0`
+- Built from commit: `3ff58aaf`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -189,10 +189,10 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 33 edges
-2. `log_pass()` - 26 edges
+2. `log_pass()` - 27 edges
 3. `log_error()` - 23 edges
 4. `Portfolio Website Tracker — v53.26` - 21 edges
-5. `log_warning()` - 17 edges
+5. `log_warning()` - 16 edges
 6. `bindEvents()` - 14 edges
 7. `get_html_files()` - 14 edges
 8. `cmd_sync()` - 13 edges

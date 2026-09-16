@@ -447,6 +447,20 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
+    "title": "GitHub Pilot — Autonomous Multi-Account Fleet Auditor & Navigator",
+    "meta": "Python 3.10+, Typer CLI, HTTP/2 Async",
+    "href": "projects.html#p-033",
+    "text": "github pilot — autonomous multi-account fleet auditor & navigator macro-plane developer fleet orchestrator and multi-account github profile navigator operating across profiles, repositories, ci workflows, and commit signals token-zero local architecture: delegates repo auditing, rate-limit tracking, svg stats synthesis, and async http/2 scraping to deterministic local python scripts, handing ai agents ultra-compact summaries (< 1 kb) to conserve reasoning context multi-account credential resolver, automated conventional commit changelog digests, and pre-commit secret hygiene scanning python 3.10+ typer cli http/2 async token-zero developer tooling multi-account fleet auditing rich ui"
+  },
+  {
+    "type": "project",
+    "title": "WinPilot (windows-pilot) — Semantic UIA & MCP Desktop Automation Engine",
+    "meta": "Python 3.10+, Win32 API, UI Automation COM",
+    "href": "projects.html#p-034",
+    "text": "winpilot (windows-pilot) — semantic uia & mcp desktop automation engine mission-critical windows desktop automation engine for autonomous ai coding agents (antigravity, claude desktop, cursor) and human operators via cli and python sdk resolution-independent microsoft ui automation (uia) com & win32 control: locates elements semantically via css-like query dsl without fragile pixel coordinates win32 foreground lock bypass ( attachthreadinput ), virtual desktop awareness with dwm uncloaking ( dwmwa_cloaked ), high-speed unicode clipboard injection, and native mcp server ( winpilot-mcp ) python 3.10+ win32 api ui automation com mcp server desktop automation virtual desktops windows 11 actionchain"
+  },
+  {
+    "type": "project",
     "title": "Claude Desktop Multi-Profile & Autonomous Fleet Utilities",
     "meta": "PowerShell 7, FastAPI, SQLite WAL",
     "href": "projects.html#p-021",
