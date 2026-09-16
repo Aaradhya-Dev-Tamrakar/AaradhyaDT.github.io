@@ -1,6 +1,6 @@
 {
-  "sha": "4f0cc88680c0498ace959eeba99a620b0d235a64",
-  "shortSha": "4f0cc88",
-  "date": "2026-09-16T13:29:10+05:45",
-  "message": "fix(sync): use global Git credentials for network operations"
+  "sha": "926b17653c96ee6e8d1ff4c0968acbc7fb6c414a",
+  "shortSha": "926b176",
+  "date": "2026-09-16T13:29:49+05:45",
+  "message": "fix(sync): use installed Git Credential Manager helper"
 }
