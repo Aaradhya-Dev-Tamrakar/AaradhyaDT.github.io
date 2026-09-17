@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.15)
+   MODULE: core.js — aaradhyadt.github.io (v54.16)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -635,9 +635,19 @@ function initCursor() {
   const dot = document.getElementById('cursorDot');
   const ring = document.getElementById('cursorRing');
   if (!dot || !ring) return;
-  let mx = 0, my = 0, rx = 0, ry = 0;
+  let mx = -100, my = -100, rx = -100, ry = -100;
   let running = true;
-  document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
+  let firstMove = true;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX;
+    my = e.clientY;
+    if (firstMove) {
+      rx = mx;
+      ry = my;
+      firstMove = false;
+    }
+  }, { passive: true });
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
@@ -654,10 +664,10 @@ function initCursor() {
     if (!running) return;
     dot.style.left = mx + 'px';
     dot.style.top = my + 'px';
-    rx += (mx - rx) * 0.12;
-    ry += (my - ry) * 0.12;
-    ring.style.left = rx + 'px';
-    ring.style.top = ry + 'px';
+    rx += (mx - rx) * 0.16;
+    ry += (my - ry) * 0.16;
+    ring.style.left = rx.toFixed(2) + 'px';
+    ring.style.top = ry.toFixed(2) + 'px';
     requestAnimationFrame(tick);
   }
   requestAnimationFrame(tick);

@@ -1,6 +1,12 @@
-# Portfolio Website Tracker — v54.15
+# Portfolio Website Tracker — v54.16
 
 Last updated: _2026-09-17_
+
+- **Site-Wide Motion Upgrade — Phase 1: Micro-Interactions & Interactive Polish (`components.css`, `base.css`, `core.js`)**:
+  - **Specular Brand Crest Glints (`components.css`)**: Engineered high-editorial periodic specular light sweeps (`crestSpecularGlint`) across all brand crest stages and hallmarked elements (`.hero-crest-stage`, `.about-creed-img-wrap`, `.access-vault-seal-wrap`, `.footer-crest-wrap`, `.hero-creed-banner`) with 115° angled skew gradient beams, staggered timing, interactive hover trigger (`crestHoverGlint`), and full `prefers-reduced-motion` suppression.
+  - **Tactile Button & CTA Spring Physics (`components.css`)**: Calibrated snappy cubic spring curves (`cubic-bezier(0.34, 1.56, 0.64, 1)`) on `.btn-primary` and `.btn-ghost` with physical active press feedback (`transform: scale(0.958) translateY(1px)`), hover elevations, and matching ambient glows.
+  - **Kinetic Filter Pill & Tab Dynamics (`components.css`)**: Implemented elastic hover lifts (`translateY(-2px)`), active press states (`scale(0.95)`), and dynamic badge-pop scaling (`scale(1.08)`) on category filter pills (`.proj-filter-btn`, `.proj-filter-count`), role selectors (`.resume-role-btn`), and tab switches (`.project-tab-btn`).
+  - **Cursor Fluid Lerp & Magnetic Scaling (`base.css`, `core.js`)**: Enhanced `initCursor()` with first-move screen-entry guards, `{ passive: true }` listener, 0.16 damping factor for crisp trailing, reactive click compression (`body:active .cursor-ring { transform: scale(0.82) }`), and extended hover recognition across pills, buttons, and theme toggles.
 
 - **Journey Timeline Waterfall Flowing Animation Upgrade (`journey.html`)**:
   - **Continuous Spine Waterfall Current**: Engineered `.journey-track-stream` positioned along the timeline vertical spine with an infinite, rhythmic photon gradient stream (`repeating-linear-gradient` with `mask-image` falloff), delivering an ambient cascading stream at any scroll depth.
@@ -325,7 +331,7 @@ Last updated: _2026-09-17_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.15`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.16`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

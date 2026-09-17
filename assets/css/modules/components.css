@@ -133,10 +133,10 @@
   position: relative;
   overflow: hidden;
   transition:
-    color 0.25s,
-    box-shadow 0.3s,
-    background 0.25s,
-    transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    color 0.25s ease,
+    box-shadow 0.3s ease,
+    background 0.25s ease,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-primary::before {
@@ -145,7 +145,7 @@
   inset: 0;
   background: linear-gradient(105deg,
       transparent 35%,
-      rgba(255, 255, 255, 0.13) 50%,
+      rgba(255, 255, 255, 0.16) 50%,
       transparent 65%);
   transform: translateX(-100%);
   transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
@@ -154,19 +154,20 @@
 .btn-primary::after {
   content: "↗";
   font-size: 0.8em;
-  transition: transform 0.25s;
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-primary:hover {
   background: var(--accent);
   color: var(--bg);
-  box-shadow: 0 0 18px var(--accent-a35);
-  transform: translateY(-1px);
+  box-shadow: 0 4px 20px -2px var(--accent-a45), 0 0 24px var(--accent-a25);
+  transform: translateY(-2px);
 }
 
 .btn-primary:active,
 .btn-ghost:active {
-  transform: scale(0.97);
+  transform: scale(0.958) translateY(1px);
+  transition: transform 0.08s ease;
 }
 
 .btn-primary:hover::before {
@@ -202,9 +203,11 @@
   position: relative;
   overflow: hidden;
   transition:
-    color 0.25s,
-    border-color 0.25s,
-    transform 0.2s ease;
+    color 0.25s ease,
+    border-color 0.25s ease,
+    box-shadow 0.28s ease,
+    background-color 0.25s ease,
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
 .btn-ghost::before {
@@ -220,7 +223,9 @@
 
 .btn-ghost:hover {
   color: var(--heading);
-  border-color: var(--text);
+  border-color: var(--accent-a45);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 0 12px var(--accent-a12);
 }
 
 .btn-ghost:hover::before {
@@ -783,7 +788,11 @@ html[data-theme="light"] .card-gradient-border::before {
   background: transparent;
   color: var(--muted);
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition:
+    transform 0.22s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .project-tab-btn.active,
@@ -791,6 +800,12 @@ html[data-theme="light"] .card-gradient-border::before {
   color: var(--heading);
   background: var(--accent-a07);
   border-color: var(--accent-a20);
+  transform: translateY(-1px);
+}
+
+.project-tab-btn:active {
+  transform: translateY(0) scale(0.96);
+  transition: transform 0.08s ease;
 }
 
 .project-tab-pane {
@@ -934,14 +949,25 @@ html[data-theme="light"] .card-gradient-border::before {
   color: var(--muted);
   cursor: pointer;
   white-space: nowrap;
-  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    color 0.2s ease,
+    box-shadow 0.25s ease;
 }
 
 .resume-role-btn:hover {
   color: var(--text);
   border-color: var(--accent-a40);
   background: var(--accent-a07);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.resume-role-btn:active {
+  transform: translateY(0) scale(0.95);
+  transition: transform 0.08s ease;
 }
 
 .resume-role-btn.active {
@@ -949,8 +975,8 @@ html[data-theme="light"] .card-gradient-border::before {
   font-weight: 600;
   border-color: var(--accent);
   background: var(--accent-a12);
-  box-shadow: 0 2px 12px var(--accent-a15);
-  transform: translateY(0);
+  box-shadow: 0 2px 14px var(--accent-a25);
+  transform: translateY(-1px);
 }
 
 .resume-role-btn:focus-visible {
@@ -1501,7 +1527,12 @@ html[data-theme="light"] .card-gradient-border::before {
   letter-spacing: 0.06em;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    border-color 0.22s ease,
+    background-color 0.22s ease,
+    color 0.22s ease,
+    box-shadow 0.25s ease;
   -webkit-user-select: none;
   user-select: none;
 }
@@ -1510,14 +1541,21 @@ html[data-theme="light"] .card-gradient-border::before {
   border-color: var(--accent);
   color: var(--text);
   background: var(--accent-a07);
-  transform: translateY(-1px);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.proj-filter-btn:active {
+  transform: translateY(0) scale(0.95);
+  transition: transform 0.08s ease;
 }
 
 .proj-filter-btn.active {
   border-color: var(--accent);
   background: var(--accent-a12);
   color: var(--accent);
-  box-shadow: 0 0 14px var(--accent-a35);
+  box-shadow: 0 0 16px var(--accent-a35), 0 2px 8px rgba(0, 0, 0, 0.25);
+  transform: translateY(-1px);
 }
 
 .proj-filter-count {
@@ -1526,13 +1564,17 @@ html[data-theme="light"] .card-gradient-border::before {
   border-radius: 9999px;
   background: var(--line);
   color: var(--muted);
-  transition: all 0.2s ease;
+  transition:
+    transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .proj-filter-btn.active .proj-filter-count {
   background: var(--accent);
   color: var(--bg);
   font-weight: 600;
+  transform: scale(1.08);
 }
 
 /* ── Mobile Responsive Components Overhaul ─────────────────── */
@@ -1812,6 +1854,9 @@ html[data-theme="light"] .card-gradient-border::before {
 .footer-crest-wrap {
   margin-bottom: 0.85rem;
   display: inline-flex;
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
 }
 
 .footer-crest-img {
@@ -1987,4 +2032,96 @@ html[data-theme="light"] .card-gradient-border::before {
     padding-right: 1.5rem;
   }
 }
+
+/* ── Specular Brand Crest Glint (Phase 1 Motion Upgrade) ───── */
+@keyframes crestSpecularGlint {
+  0%, 75% {
+    transform: translateX(-160%) skewX(-20deg);
+    opacity: 0;
+  }
+  80% {
+    opacity: 0.85;
+  }
+  90% {
+    transform: translateX(160%) skewX(-20deg);
+    opacity: 0.85;
+  }
+  91%, 100% {
+    transform: translateX(160%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+@keyframes crestHoverGlint {
+  0% {
+    transform: translateX(-160%) skewX(-20deg);
+    opacity: 0.9;
+  }
+  100% {
+    transform: translateX(160%) skewX(-20deg);
+    opacity: 0;
+  }
+}
+
+.hero-crest-stage,
+.about-creed-img-wrap,
+.access-vault-seal-wrap,
+.footer-crest-wrap,
+.hero-creed-banner {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-crest-stage::after,
+.about-creed-img-wrap::after,
+.access-vault-seal-wrap::after,
+.footer-crest-wrap::after,
+.hero-creed-banner::after {
+  content: "";
+  position: absolute;
+  top: -25%;
+  left: -25%;
+  width: 150%;
+  height: 150%;
+  background: linear-gradient(
+    115deg,
+    transparent 42%,
+    rgba(255, 255, 255, 0.08) 46%,
+    rgba(255, 255, 255, 0.28) 50%,
+    rgba(255, 255, 255, 0.08) 54%,
+    transparent 58%
+  );
+  transform: translateX(-160%) skewX(-20deg);
+  pointer-events: none;
+  z-index: 2;
+  animation: crestSpecularGlint 8.5s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+/* Stagger glints across different visual surfaces */
+.hero-crest-stage::after { animation-delay: 1.2s; }
+.about-creed-img-wrap::after { animation-delay: 2.8s; }
+.access-vault-seal-wrap::after { animation-delay: 0.9s; }
+.footer-crest-wrap::after { animation-delay: 4.2s; }
+.hero-creed-banner::after { animation-delay: 1.8s; }
+
+/* Interactive quick specular sweep on hover */
+.hero-crest-stage:hover::after,
+.about-creed-img-wrap:hover::after,
+.access-vault-seal-wrap:hover::after,
+.footer-crest-wrap:hover::after,
+.hero-creed-banner:hover::after {
+  animation: crestHoverGlint 1.1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-crest-stage::after,
+  .about-creed-img-wrap::after,
+  .access-vault-seal-wrap::after,
+  .footer-crest-wrap::after,
+  .hero-creed-banner::after {
+    animation: none !important;
+    display: none !important;
+  }
+}
+
 
