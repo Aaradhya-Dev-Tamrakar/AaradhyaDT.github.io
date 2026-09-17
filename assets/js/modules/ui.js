@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v54.23)
+   MODULE: ui.js — aaradhyadt.github.io (v54.24)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -434,8 +434,17 @@ function initKeyNav() {
       return;
     }
 
-    if (e.key === '0' || (e.shiftKey && (e.key === ')' || e.key === '0' || e.code === 'Digit0' || e.code === 'Numpad0'))) {
-      toggleTheme();
+    const isZeroCode = e.code === 'Digit0' || e.code === 'Numpad0';
+    const isZeroKey = e.key === '0' || e.key === ')' || (e.shiftKey && (isZeroCode || e.key === '=' || e.key === 'Insert'));
+
+    if (isZeroCode || isZeroKey) {
+      const now = Date.now();
+      if (now - (window.__lastThemeToggle || 0) < 300) return;
+      window.__lastThemeToggle = now;
+
+      e.preventDefault();
+      if (typeof triggerHapticFeedback === 'function') triggerHapticFeedback(12);
+      if (typeof toggleTheme === 'function') toggleTheme(e);
       return;
     }
 

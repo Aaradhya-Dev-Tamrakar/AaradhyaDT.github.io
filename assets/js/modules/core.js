@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.23)
+   MODULE: core.js — aaradhyadt.github.io (v54.24)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -441,10 +441,31 @@ function initTheme() {
 
 function initThemeToggle() {
   const btn = document.getElementById('themeToggle');
-  if (!btn) return;
-  btn.addEventListener('click', (e) => {
-    triggerHapticFeedback(12);
-    toggleTheme(e);
+  if (btn) {
+    btn.addEventListener('click', (e) => {
+      triggerHapticFeedback(12);
+      toggleTheme(e);
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    const tag = (document.activeElement || {}).tagName || '';
+    if (/^(INPUT|TEXTAREA|SELECT)$/i.test(tag) || document.activeElement?.isContentEditable) return;
+    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (typeof isAnyModalOpen === 'function' && isAnyModalOpen()) return;
+
+    const isZeroCode = e.code === 'Digit0' || e.code === 'Numpad0';
+    const isZeroKey = e.key === '0' || e.key === ')' || (e.shiftKey && (isZeroCode || e.key === '=' || e.key === 'Insert'));
+
+    if (isZeroCode || isZeroKey) {
+      const now = Date.now();
+      if (now - (window.__lastThemeToggle || 0) < 300) return;
+      window.__lastThemeToggle = now;
+
+      e.preventDefault();
+      if (typeof triggerHapticFeedback === 'function') triggerHapticFeedback(12);
+      toggleTheme(e);
+    }
   });
 }
 
@@ -921,3 +942,6 @@ async function subscribePushNotifications() {
 
 window.requestNotificationPermission = requestNotificationPermission;
 window.subscribePushNotifications = subscribePushNotifications;
+window.toggleTheme = toggleTheme;
+window.applyTheme = applyTheme;
+window.applyAccent = applyAccent;

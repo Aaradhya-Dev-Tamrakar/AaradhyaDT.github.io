@@ -111,7 +111,8 @@ test('Shortcuts: modal creation and open/close state transitions', () => {
 
 test('Shortcuts: Shift+0 and 0 correctly trigger theme toggle condition', () => {
   function isThemeToggleKey(e) {
-    return e.key === '0' || (e.shiftKey && (e.key === ')' || e.key === '0' || e.code === 'Digit0' || e.code === 'Numpad0'));
+    const isZeroCode = e.code === 'Digit0' || e.code === 'Numpad0';
+    return isZeroCode || e.key === '0' || e.key === ')' || (e.shiftKey && (isZeroCode || e.key === '=' || e.key === 'Insert'));
   }
 
   // 1. Standard '0' key
@@ -123,10 +124,13 @@ test('Shortcuts: Shift+0 and 0 correctly trigger theme toggle condition', () => 
   // 3. Shift+0 with international layout (e.g. AZERTY where key is '0' with shift)
   assert.strictEqual(isThemeToggleKey({ key: '0', shiftKey: true, code: 'Digit0' }), true);
 
-  // 4. Shift+Numpad0
+  // 4. Shift+0 with German layout (produces key '=')
+  assert.strictEqual(isThemeToggleKey({ key: '=', shiftKey: true, code: 'Digit0' }), true);
+
+  // 5. Shift+Numpad0
   assert.strictEqual(isThemeToggleKey({ key: 'Insert', shiftKey: true, code: 'Numpad0' }), true);
 
-  // 5. Unrelated keys
+  // 6. Unrelated keys
   assert.strictEqual(isThemeToggleKey({ key: '1', shiftKey: false, code: 'Digit1' }), false);
   assert.strictEqual(isThemeToggleKey({ key: '!', shiftKey: true, code: 'Digit1' }), false);
 });
