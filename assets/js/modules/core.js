@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.10)
+   MODULE: core.js — aaradhyadt.github.io (v54.11)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -18,7 +18,7 @@ function renderSiteNav() {
     .join('') + `<a href="/contact.html" class="nav-cta">Connect</a>`;
   el.innerHTML = `
     <nav id="nav" aria-label="Primary navigation">
-      <a href="/index.html" class="nav-logo" id="nav-logo">ADT<span>.</span></a>
+      <a href="/index.html" class="nav-logo" id="nav-logo"><img src="assets/images/branding/adt-gold-icon-192.webp" alt="ADT Monogram" class="nav-crest-thumb" data-dynamic-logo-icon width="20" height="20" />ADT<span>.</span></a>
       <ul class="nav-links" id="nav-links">
         ${navLinks}
       </ul>
@@ -53,6 +53,37 @@ function renderSiteNav() {
             <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
           </svg>
         </button>
+        <div class="color-picker-wrap" id="colorPickerWrap">
+          <button class="color-picker-toggle" id="colorPickerToggle" aria-label="Theme accents and crests" title="Theme Accents (Gold, Emerald, Violet...)" aria-haspopup="true" aria-expanded="false">
+            <div class="picker-dot"></div>
+          </button>
+          <div class="color-picker-popover" id="colorPickerPopover" role="menu" aria-label="Color accent presets">
+            <button class="color-swatch-btn active" data-accent-swatch="gold" role="menuitem" aria-label="Amber Gold">
+              <div class="color-swatch-circle gold"></div>
+              <span>Gold</span>
+            </button>
+            <button class="color-swatch-btn" data-accent-swatch="emerald" role="menuitem" aria-label="Cyber Emerald">
+              <div class="color-swatch-circle emerald"></div>
+              <span>Emerald</span>
+            </button>
+            <button class="color-swatch-btn" data-accent-swatch="violet" role="menuitem" aria-label="Electric Violet">
+              <div class="color-swatch-circle violet"></div>
+              <span>Violet</span>
+            </button>
+            <button class="color-swatch-btn" data-accent-swatch="cyan" role="menuitem" aria-label="Ocean Cyan">
+              <div class="color-swatch-circle cyan"></div>
+              <span>Cyan</span>
+            </button>
+            <button class="color-swatch-btn" data-accent-swatch="ruby" role="menuitem" aria-label="Ruby Flame">
+              <div class="color-swatch-circle ruby"></div>
+              <span>Ruby</span>
+            </button>
+            <button class="color-swatch-btn" data-accent-swatch="prism" role="menuitem" aria-label="Midnight Prism">
+              <div class="color-swatch-circle prism"></div>
+              <span>Prism</span>
+            </button>
+          </div>
+        </div>
         <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navDrawer">
           <span></span><span></span><span></span>
         </button>
@@ -168,11 +199,15 @@ function renderSiteFooter() {
     || (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0] && SITE_RELEASES[0].version)
     || '';
   const wnLabel = currentRelVersion ? `What's New (${currentRelVersion})` : "What's New";
+  const brandAssets = typeof getBrandAssets === 'function' ? getBrandAssets() : { crest: 'assets/images/branding/adt-gold.webp' };
   el.innerHTML = `
     <div class="footer-inner">
       <div class="footer-brand">
+        <div class="footer-crest-wrap">
+          <img src="${brandAssets.crest}" alt="ADT Engineering Crest" class="footer-crest-img" data-dynamic-logo width="88" height="55" loading="lazy" decoding="async" />
+        </div>
         <span class="footer-logo">ADT<span>.</span></span>
-        <span class="footer-tagline">Electronics &amp; AI/ML Engineer</span>
+        <span class="footer-tagline">Engineering Intelligent Systems · Electronics &amp; AI/ML</span>
       </div>
       <div class="footer-socials">${socialsHtml}</div>
     </div>
@@ -252,9 +287,98 @@ function setActiveNav() {
 
 
 
+/* ── Dynamic Branding & Crest Binding ─────────────────────── */
+function getBrandAssets(theme, accent) {
+  const currentTheme = theme || document.documentElement.getAttribute('data-theme') || 'dark';
+  const currentAccent = accent || localStorage.getItem('adt-accent') || 'gold';
+
+  if (currentTheme === 'light') {
+    return {
+      crest: 'assets/images/branding/adt-parchment.webp',
+      crestJpg: 'assets/images/branding/adt-parchment.jpg',
+      icon: 'assets/images/branding/adt-parchment-icon-192.webp',
+      favicon: 'assets/images/branding/adt-parchment-favicon.png',
+      alt: 'ADT Monogram — Calligraphic Ink on Parchment'
+    };
+  }
+
+  switch (currentAccent) {
+    case 'emerald':
+      return {
+        crest: 'assets/images/branding/adt-emerald.webp',
+        crestJpg: 'assets/images/branding/adt-emerald.jpg',
+        icon: 'assets/images/branding/adt-emerald-icon-192.webp',
+        favicon: 'assets/images/branding/adt-emerald-favicon.png',
+        alt: 'ADT Monogram — Cyber Emerald & Gold'
+      };
+    case 'violet':
+      return {
+        crest: 'assets/images/branding/adt-violet.webp',
+        crestJpg: 'assets/images/branding/adt-violet.jpg',
+        icon: 'assets/images/branding/adt-violet-icon-192.webp',
+        favicon: 'assets/images/branding/adt-violet-favicon.png',
+        alt: 'ADT Monogram — Electric Violet & Copper'
+      };
+    case 'cyan':
+    case 'prism':
+      return {
+        crest: 'assets/images/branding/adt-titanium.webp',
+        crestJpg: 'assets/images/branding/adt-titanium.jpg',
+        icon: 'assets/images/branding/adt-titanium-icon-192.webp',
+        favicon: 'assets/images/branding/adt-titanium-favicon.png',
+        alt: 'ADT Monogram — Brushed Titanium'
+      };
+    case 'ruby':
+    case 'gold':
+    default:
+      return {
+        crest: 'assets/images/branding/adt-gold.webp',
+        crestJpg: 'assets/images/branding/adt-gold.jpg',
+        icon: 'assets/images/branding/adt-gold-icon-192.webp',
+        favicon: 'assets/images/branding/adt-gold-favicon.png',
+        alt: 'ADT Monogram — Burnished Gold Leaf'
+      };
+  }
+}
+
+function syncBrandLogos(theme, accent) {
+  const assets = getBrandAssets(theme, accent);
+
+  // 1. Update all dynamic crest elements
+  document.querySelectorAll('[data-dynamic-logo]').forEach(el => {
+    if (el.tagName && el.tagName.toLowerCase() === 'img') {
+      const src = el.getAttribute('src');
+      if (src && !src.endsWith(assets.crest)) {
+        el.style.opacity = '0.35';
+        el.src = assets.crest;
+        el.alt = assets.alt;
+        setTimeout(() => { el.style.opacity = '1'; }, 160);
+      }
+    }
+  });
+
+  // 2. Update all dynamic icon elements (e.g. navbar thumbnail)
+  document.querySelectorAll('[data-dynamic-logo-icon]').forEach(el => {
+    if (el.tagName && el.tagName.toLowerCase() === 'img') {
+      const src = el.getAttribute('src');
+      if (src && !src.endsWith(assets.icon)) {
+        el.src = assets.icon;
+        el.alt = assets.alt;
+      }
+    }
+  });
+
+  // 3. Update dynamic browser favicon in head
+  const favIcon = document.querySelector("link[rel='icon']");
+  if (favIcon) {
+    favIcon.href = assets.favicon;
+  }
+}
+
 /* ── Theme toggle ─────────────────────────────────────────── */
 function applyTheme(theme) {
   document.documentElement.setAttribute('data-theme', theme);
+  syncBrandLogos(theme, localStorage.getItem('adt-accent') || 'gold');
 }
 
 function toggleTheme(event) {
@@ -310,8 +434,6 @@ function initThemeToggle() {
   });
 }
 
-
-
 /* ── Accent Color Theme Management ───────────────────────── */
 function applyAccent(accent) {
   const validAccents = ['gold', 'emerald', 'violet', 'cyan', 'ruby', 'prism'];
@@ -330,6 +452,8 @@ function applyAccent(accent) {
       btn.classList.remove('active');
     }
   });
+
+  syncBrandLogos(document.documentElement.getAttribute('data-theme') || 'dark', target);
 }
 
 function initAccent() {

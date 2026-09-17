@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v54.10)
+   MODULE: terminal.js — aaradhyadt.github.io (v54.11)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -60,6 +60,7 @@
   <span class="term-gold">healthcheck</span> - Run client-side site diagnostics<br>
   <span class="term-gold">theme</span>        - Toggle site color scheme (Dark / Light)<br>
   <span class="term-gold">accent [name]</span> - Easter egg color themes (gold, emerald, violet, cyan, ruby, prism)<br>
+  <span class="term-gold">brand / logo</span>  - Inspect ADT monogram suite and dynamic logo bindings<br>
   <span class="term-gold">notify</span>        - Enable browser &amp; push notifications for site updates<br>
   <span class="term-gold">sound / audio</span> - Toggle UI micro-sound cues<br>
   <span class="term-gold">tour</span>         - Launch interactive guided site tour<br>
@@ -173,7 +174,7 @@
       stats: () => {
         const achvCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.achievement || []).length : 39;
         const projCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.project || []).length : 30;
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.10';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.11';
         return `
 <span class="term-green">[ADT PORTFOLIO TELEMETRY ${currentVer}]</span><br>
   • <span class="term-gold">Published Projects:</span> ${projCount} verified repositories &amp; systems<br>
@@ -204,7 +205,7 @@
       },
       run: (arg) => {
         const sub = (arg || '').toLowerCase().trim();
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.10';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.11';
         if (sub === 'spark') {
           return `
 <span class="term-green">[SPARK TELEMETRY SIMULATOR ${currentVer}]</span><br>
@@ -384,7 +385,7 @@
         } else {
           checks.push('<span class="term-red">\u2717</span> Search index: SEARCH_STATIC_INDEX not found');
         }
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.10';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.11';
         return `<span class="term-green">[SITE HEALTHCHECK ${currentVer}]</span><br>` + checks.map(c => '  ' + c).join('<br>');
       },
       sound: () => {
@@ -433,6 +434,32 @@
         return `<span class="term-gold">Unknown accent: '${escapeHtml(val)}'. Available options: ${themes.join(', ')}</span>`;
       },
       color: (arg) => COMMANDS.accent(arg),
+      brand: () => {
+        const theme = document.documentElement.getAttribute('data-theme') || 'dark';
+        const accent = localStorage.getItem('adt-accent') || 'gold';
+        return `
+<span class="term-gold">╔═══════════════════════════════════════════════════════════════╗</span><br>
+<span class="term-gold">║               ADT BRAND CRESTS &amp; MONOGRAM SUITE              ║</span><br>
+<span class="term-gold">╚═══════════════════════════════════════════════════════════════╝</span><br><br>
+<span class="term-cyan">▶ Master Creed:</span> "ENGINEERING INTELLIGENT SYSTEMS"<br>
+<span class="term-green">▶ Active Theme:</span> ${escapeHtml(theme)} / <span class="term-gold">Accent:</span> ${escapeHtml(accent)}<br><br>
+<span class="term-gold">● 1. Burnished Gold Leaf:</span> 24K gold foil on obsidian (Primary: <code>accent gold</code>)<br>
+<span class="term-green">● 2. Cyber Emerald:</span> Crystalline jade &amp; gold filigree (Hardware/Robotics: <code>accent emerald</code>)<br>
+<span class="term-violet">● 3. Electric Violet:</span> Amethyst crystal &amp; copper bevel (AI/ML &amp; Vault: <code>accent violet</code>)<br>
+<span class="term-cyan">● 4. Brushed Titanium:</span> High-relief steel systems crest (Systems Engineering: <code>accent cyan</code>)<br>
+<span class="term-gold">● 5. Calligraphic Ink:</span> Sumi ink on handmade parchment (Light Mode: <code>theme</code>)<br><br>
+<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap;">
+  <img src="assets/images/branding/adt-gold.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(212,168,90,0.5);" alt="Gold Crest" />
+  <img src="assets/images/branding/adt-emerald.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(16,185,129,0.5);" alt="Emerald Crest" />
+  <img src="assets/images/branding/adt-violet.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(168,85,247,0.5);" alt="Violet Crest" />
+  <img src="assets/images/branding/adt-titanium.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.3);" alt="Titanium Crest" />
+  <img src="assets/images/branding/adt-parchment.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(0,0,0,0.2);" alt="Parchment Crest" />
+</div>
+<span class="term-muted">Type 'accent [theme]' to switch accents and bind logos live across the entire interface!</span>
+`;
+      },
+      logo: () => COMMANDS.brand(),
+      crests: () => COMMANDS.brand(),
       clear: () => {
         body.innerHTML = '';
         return '';

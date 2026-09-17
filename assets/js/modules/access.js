@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v54.10)
+   MODULE: access.js — aaradhyadt.github.io (v54.11)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -724,6 +724,11 @@ function renderAccessModal() {
             <line x1="6" y1="6" x2="18" y2="18"/>
           </svg>
         </button>
+      </div>
+
+      <div class="access-vault-seal-wrap">
+        <img src="assets/images/branding/adt-violet.webp" alt="ADT Cryptographic Security Crest" class="access-vault-crest" data-dynamic-logo width="480" height="300" loading="lazy" decoding="async" />
+        <div class="access-vault-badge">AES-256-GCM ENCRYPTED VAULT</div>
       </div>
 
       <div class="access-field-group">

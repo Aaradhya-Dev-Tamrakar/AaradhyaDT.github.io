@@ -1789,3 +1789,202 @@ html[data-theme="light"] .card-gradient-border::before {
     background: var(--glass-bg, rgba(255, 255, 255, 0.04));
   }
 }
+
+/* ── Dynamic Brand Crests & Monogram Components ──────────── */
+.nav-crest-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  object-fit: cover;
+  margin-right: 7px;
+  display: inline-block;
+  vertical-align: -2px;
+  border: 1px solid var(--accent-a35);
+  box-shadow: 0 0 8px var(--accent-a35);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nav-logo:hover .nav-crest-thumb {
+  transform: scale(1.18) rotate(-4deg);
+  border-color: var(--accent);
+}
+
+.footer-crest-wrap {
+  margin-bottom: 0.85rem;
+  display: inline-flex;
+}
+
+.footer-crest-img {
+  width: 88px;
+  height: 55px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 14px var(--accent-a12);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.2s ease;
+}
+
+.footer-crest-img:hover {
+  transform: translateY(-2px) scale(1.04);
+  border-color: var(--accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 22px var(--accent-a35);
+}
+
+.hero-creed-banner {
+  margin-bottom: 1.5rem;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--line);
+  background: var(--bg2);
+  box-shadow: 0 16px 40px -16px rgba(0, 0, 0, 0.5);
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-creed-banner:hover {
+  border-color: var(--accent);
+  box-shadow: 0 16px 40px -16px rgba(0, 0, 0, 0.5), 0 0 28px var(--accent-a35);
+  transform: translateY(-3px);
+}
+
+.hero-creed-banner img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: opacity 0.2s ease, transform 0.4s ease;
+}
+
+.hero-creed-banner:hover img {
+  transform: scale(1.02);
+}
+
+.about-creed-strip {
+  padding: 0 3rem 4.5rem;
+}
+
+.about-creed-inner {
+  position: relative;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--bg2);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 20px 48px -16px rgba(0, 0, 0, 0.45);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-creed-inner:hover {
+  border-color: var(--accent);
+  box-shadow: 0 20px 48px -16px rgba(0, 0, 0, 0.45), 0 0 24px var(--accent-a12);
+}
+
+.about-creed-img-wrap {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+}
+
+.about-creed-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: opacity 0.2s ease, transform 0.35s ease;
+}
+
+.about-creed-inner:hover .about-creed-img {
+  transform: scale(1.03);
+}
+
+.about-creed-tag {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.about-creed-tag::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--accent);
+}
+
+.about-creed-title {
+  font-family: var(--serif);
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  color: var(--heading);
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 0.75rem;
+}
+
+.about-creed-desc {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: var(--text);
+  max-width: 580px;
+}
+
+.access-vault-seal-wrap {
+  position: relative;
+  margin: 0.5rem 0 1.25rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.access-vault-crest {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  transition: opacity 0.2s ease;
+}
+
+.access-vault-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(15, 14, 12, 0.85);
+  border: 1px solid var(--accent-a35);
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 0.58rem;
+  letter-spacing: 0.14em;
+  padding: 3px 8px;
+  border-radius: 3px;
+  white-space: nowrap;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+@media (max-width: 900px) {
+  .about-creed-inner {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .about-creed-strip {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+}
+

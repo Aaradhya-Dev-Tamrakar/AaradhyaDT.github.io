@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Service Worker — Aaradhya Dev Tamrakar Portfolio (v54.10)
+   Service Worker — Aaradhya Dev Tamrakar Portfolio (v54.11)
    Provides offline capability & asset caching for fast return visits.
    ========================================================================== */
 
-const CACHE_NAME = 'aaradhya-portfolio-v54.10';
+const CACHE_NAME = 'aaradhya-portfolio-v54.11';
 
 const STATIC_ASSETS = [
   './',
@@ -58,7 +58,12 @@ const STATIC_ASSETS = [
   './assets/images/logos/nssr.webp',
   './assets/images/logos/epc-club.webp',
   './assets/images/logos/fusemachines.webp',
-  './assets/images/logos/makerspace.webp'
+  './assets/images/logos/makerspace.webp',
+  './assets/images/branding/adt-titanium.webp',
+  './assets/images/branding/adt-gold.webp',
+  './assets/images/branding/adt-emerald.webp',
+  './assets/images/branding/adt-violet.webp',
+  './assets/images/branding/adt-parchment.webp'
 ];
 
 // Install: precache static assets

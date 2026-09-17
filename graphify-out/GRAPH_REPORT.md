@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-17)
 
 ## Corpus Check
-- 59 files · ~1,725,544 words
+- 59 files · ~1,844,505 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 916 nodes · 1197 edges · 198 communities (53 shown, 134 thin omitted)
+- 918 nodes · 1203 edges · 199 communities (54 shown, 134 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `98831cb8`
+- Built from commit: `a9e93478`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,6 +41,7 @@
 - Antigravity IDE & Gemini Agent Rules for Portfolio Repository
 - test_visual_regression.py
 - Report Renderer
+- script.js
 - site_mcp.py
 - home-widgets.js
 - test_graph_modal.test.mjs
@@ -245,7 +246,7 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (198 total, 134 thin omitted)
+## Communities (199 total, 134 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -256,12 +257,12 @@ Cohesion: 0.05
 Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.26, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+30 more)
 
 ### Community 2 - "core.js"
-Cohesion: 0.06
-Nodes (38): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+30 more)
+Cohesion: 0.08
+Nodes (35): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+27 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
-Nodes (28): renderSiteFooter(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson() (+20 more)
+Nodes (27): closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson(), generateResumeMarkdown() (+19 more)
 
 ### Community 4 - "site_automation.py"
 Cohesion: 0.12
@@ -350,6 +351,10 @@ Nodes (8): calculate_image_diff(), capture_screenshot(), find_browser_executable
 ### Community 25 - "Report Renderer"
 Cohesion: 0.22
 Nodes (10): Report Utils Class, Report Renderer, __initLighthouseReport__, Report Context Class, I18n Formatter, PWA Category Renderer, Performance Category Renderer, Report UI Features (+2 more)
+
+### Community 26 - "script.js"
+Cohesion: 0.36
+Nodes (6): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
 
 ### Community 27 - "site_mcp.py"
 Cohesion: 0.31
@@ -471,7 +476,7 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **Why does `get_site_stats()` connect `site_automation.py` to `add_project`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `renderSiteFooter()` connect `ui.js` to `core.js`?**
+- **Why does `renderSiteFooter()` connect `core.js` to `ui.js`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
   _303 weakly-connected nodes found - possible documentation gaps or missing edges._
@@ -480,4 +485,4 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.06382978723404255 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07560975609756097 - nodes in this community are weakly interconnected._
