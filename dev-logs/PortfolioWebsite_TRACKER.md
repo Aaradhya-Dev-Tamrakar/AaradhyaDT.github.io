@@ -1,6 +1,12 @@
-# Portfolio Website Tracker — v54.16
+# Portfolio Website Tracker — v54.17
 
 Last updated: _2026-09-17_
+
+- **Site-Wide Motion Upgrade — Phase 2: Card Dynamics & Vector Flow (`components.css`, `projects.html`)**:
+  - **Modal Conic Perimeter Halos (`components.css`)**: Engineered precision ambient conic halos (`.resume-modal-card::before`, `.shortcuts-modal-card::before`) powered by `@property --border-angle` with 9s continuous perimeter sweep, masked inner core, light-theme suppression, and reduced-motion safety.
+  - **Project Card Conic Border-Beams (`projects.html`)**: Transformed static card borders on gold and major project cards into rotating cyber-editorial perimeter beams (`details.project-card.project-card--gold::before`, `details.project-card.project-card--major::before`) that accelerate to 3.5s on hover, revealing interactive energy without layout reflows.
+  - **3D Depth & Micro-Elevation Hierarchy (`projects.html`)**: Layered card titles (`.project-card .project-title`) and tag collections (`.project-tags`) with smooth cubic-bezier lift transitions (`translateY(-1px)` and `translateY(-0.5px)`) on card hover, creating organic tactile depth.
+  - **Self-Drawing SVG Path Accents (`components.css`)**: Introduced CSS utility classes (`.svg-draw-path`, `.svg-flow-loop`) supporting scroll-revealed and hover-activated vector path tracing and dashed flow loops across interactive components.
 
 - **Site-Wide Motion Upgrade — Phase 1: Micro-Interactions & Interactive Polish (`components.css`, `base.css`, `core.js`)**:
   - **Specular Brand Crest Glints (`components.css`)**: Engineered high-editorial periodic specular light sweeps (`crestSpecularGlint`) across all brand crest stages and hallmarked elements (`.hero-crest-stage`, `.about-creed-img-wrap`, `.access-vault-seal-wrap`, `.footer-crest-wrap`, `.hero-creed-banner`) with 115° angled skew gradient beams, staggered timing, interactive hover trigger (`crestHoverGlint`), and full `prefers-reduced-motion` suppression.
@@ -331,7 +337,7 @@ Last updated: _2026-09-17_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.16`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.17`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

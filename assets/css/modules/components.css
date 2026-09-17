@@ -572,8 +572,69 @@ html[data-theme="light"] .tag {
 .card-gradient-border:hover::before {
   opacity: 1;
 }
-html[data-theme="light"] .card-gradient-border::before {
-  display: none;
+
+/* ── Modal Conic Perimeter Halos (Phase 2) ─────────────────── */
+.resume-modal-card::before,
+.shortcuts-modal-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--border-angle),
+    transparent 65%,
+    var(--accent-a20) 80%,
+    var(--accent) 92%,
+    #ffffff 96%,
+    var(--accent) 100%
+  );
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+  z-index: 20;
+  opacity: 0.65;
+  animation: rotateBorderAngle 9s linear infinite;
+}
+
+html[data-theme="light"] .card-gradient-border::before,
+html[data-theme="light"] .resume-modal-card::before,
+html[data-theme="light"] .shortcuts-modal-card::before {
+  display: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card-gradient-border::before,
+  .resume-modal-card::before,
+  .shortcuts-modal-card::before {
+    animation: none !important;
+  }
+}
+
+/* ── Self-Drawing SVG Path Accents (Phase 2) ────────────────── */
+.svg-draw-path {
+  stroke-dasharray: 200;
+  stroke-dashoffset: 200;
+  transition: stroke-dashoffset 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible .svg-draw-path,
+:hover > * > .svg-draw-path,
+:hover > .svg-draw-path {
+  stroke-dashoffset: 0;
+}
+
+.svg-flow-loop {
+  stroke-dasharray: 20, 10;
+  animation: svgFlowLoop 3s linear infinite;
+}
+
+@keyframes svgFlowLoop {
+  to {
+    stroke-dashoffset: -30;
+  }
 }
 
 
