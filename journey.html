@@ -148,11 +148,56 @@
       bottom: 10px;
       width: 1px;
       background: linear-gradient(to bottom, transparent, var(--accent) 4%, var(--accent) 96%, transparent);
-      opacity: 0.45;
+      opacity: 0.35;
       z-index: 1;
     }
 
-    /* Dynamic scroll-driven progress line fill */
+    /* Continuous flowing liquid waterfall stream along the timeline spine */
+    .journey-track-stream {
+      position: absolute;
+      left: 10px;
+      top: 10px;
+      bottom: 10px;
+      width: 3px;
+      pointer-events: none;
+      z-index: 1;
+      overflow: hidden;
+      mask-image: linear-gradient(to bottom, transparent, black 4%, black 96%, transparent);
+      -webkit-mask-image: linear-gradient(to bottom, transparent, black 4%, black 96%, transparent);
+    }
+
+    .journey-track-stream::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        180deg,
+        transparent 0,
+        transparent 140px,
+        var(--accent-a12) 170px,
+        var(--accent-a35) 210px,
+        var(--accent) 230px,
+        rgba(255, 255, 255, 0.95) 236px,
+        var(--accent2) 240px,
+        transparent 250px,
+        transparent 320px
+      );
+      background-size: 100% 320px;
+      opacity: 0.85;
+      animation: journeySpineStream 3.6s linear infinite;
+      filter: drop-shadow(0 0 6px var(--accent-a40));
+    }
+
+    @keyframes journeySpineStream {
+      from {
+        background-position-y: 0;
+      }
+      to {
+        background-position-y: 320px;
+      }
+    }
+
+    /* Dynamic scroll-driven progress line fill with luminous leading photon head */
     .journey-track::after {
       content: '';
       position: absolute;
@@ -161,8 +206,8 @@
       height: var(--track-progress, 0%);
       max-height: calc(100% - 20px);
       width: 2px;
-      background: linear-gradient(to bottom, var(--accent), var(--accent2));
-      box-shadow: 0 0 8px var(--accent), 0 0 14px var(--accent-a40);
+      background: linear-gradient(to bottom, var(--accent), var(--accent2) 80%, #ffffff 96%, var(--accent2) 100%);
+      box-shadow: 0 0 8px var(--accent), 0 0 16px var(--accent-a40), 0 0 24px var(--accent2);
       transition: height 0.12s cubic-bezier(0.16, 1, 0.3, 1);
       pointer-events: none;
       border-radius: 2px;
@@ -253,7 +298,7 @@
     }
 
     .journey-node--pulse {
-      animation: journeyNodePulse 0.85s cubic-bezier(0.25, 1, 0.5, 1);
+      animation: journeyNodePulse 0.9s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     @keyframes journeyNodePulse {
@@ -261,14 +306,25 @@
         transform: scale(1);
         box-shadow: 0 0 0 0 var(--node-accent-a35, transparent);
       }
-      45% {
-        transform: scale(1.25);
-        box-shadow: 0 0 14px var(--node-accent-a35, transparent), 0 0 4px var(--node-accent);
+      35% {
+        transform: scale(1.22);
+        box-shadow: 0 0 0 4px var(--node-accent-a35, transparent), 0 0 18px var(--node-accent, var(--accent));
       }
       100% {
         transform: scale(1);
         box-shadow: 0 0 0 0 transparent;
       }
+    }
+
+    .journey-node--pulse svg {
+      color: #ffffff !important;
+      filter: drop-shadow(0 0 6px var(--node-accent, var(--accent)));
+      transition: color 0.3s ease, filter 0.3s ease;
+    }
+
+    .journey-node--pulse .journey-node-num {
+      transform: translateY(-2px) scale(1.18);
+      box-shadow: 0 0 10px var(--node-accent, var(--accent)), 0 0 0 2px var(--bg2);
     }
 
     .journey-card {
@@ -557,6 +613,10 @@
         left: 10px;
       }
 
+      .journey-track-stream {
+        left: 9px;
+      }
+
       .journey-track::after {
         left: 9.5px;
       }
@@ -620,38 +680,51 @@
       }
     }
 
-    /* ── Chronological liquid light sweep glow loop ─────────────────── */
+    /* ── Viewport-synchronized waterfall liquid refraction glow ─────── */
     .journey-card--glow {
-      box-shadow: 0 0 16px var(--node-accent-a35, transparent) !important;
-      border-color: var(--node-accent, var(--glow-green)) !important;
+      border-color: var(--node-accent, var(--accent)) !important;
+      border-left-color: var(--node-accent, var(--accent)) !important;
+      box-shadow: inset 2px 0 18px var(--node-accent-a35, rgba(212, 168, 90, 0.2)),
+                  0 8px 28px -6px rgba(0, 0, 0, 0.45),
+                  0 0 22px var(--node-accent-a35, rgba(212, 168, 90, 0.25)) !important;
+      transition: border-color 0.35s ease, box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
     .journey-card--glow::before {
       content: '';
       position: absolute;
       inset: 0 auto 0 0;
-      width: 12px;
-      background: linear-gradient(180deg, transparent 0%, var(--node-accent, var(--accent)) 40%, rgba(255, 255, 255, 0.95) 50%, var(--node-accent, var(--accent)) 60%, transparent 100%);
-      box-shadow: 0 0 14px var(--node-accent-a35, transparent), 2px 0 8px var(--node-accent-a35, transparent);
+      width: 20px;
+      background: linear-gradient(
+        180deg,
+        transparent 0%,
+        var(--node-accent-a35, rgba(212, 168, 90, 0.2)) 20%,
+        var(--node-accent, var(--accent)) 55%,
+        rgba(255, 255, 255, 0.98) 75%,
+        var(--node-accent, var(--accent)) 85%,
+        transparent 100%
+      );
+      box-shadow: 0 0 18px var(--node-accent, var(--accent)), 3px 0 10px var(--node-accent-a35, transparent);
       pointer-events: none;
       opacity: 0;
-      animation: journeyCardGlowGlide 0.85s cubic-bezier(0.25, 1, 0.5, 1);
+      filter: blur(0.5px);
+      animation: journeyCardLiquidGlide 0.95s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    @keyframes journeyCardGlowGlide {
+    @keyframes journeyCardLiquidGlide {
       0% {
         opacity: 0;
-        transform: translateY(-90%);
+        transform: translateY(-100%);
       }
-      20% {
-        opacity: 1;
+      18% {
+        opacity: 0.95;
       }
-      80% {
-        opacity: 1;
+      82% {
+        opacity: 0.95;
       }
       100% {
         opacity: 0;
-        transform: translateY(90%);
+        transform: translateY(100%);
       }
     }
 
@@ -688,7 +761,9 @@
     }
 
     html[data-theme="light"] .journey-card--glow {
-      box-shadow: 0 4px 20px var(--node-accent-a35, transparent), 0 0 12px var(--node-accent-a35, transparent) !important;
+      box-shadow: inset 2px 0 14px var(--node-accent-a35, transparent),
+                  0 6px 20px rgba(0, 0, 0, 0.08),
+                  0 0 14px var(--node-accent-a35, transparent) !important;
     }
 
     html[data-theme="light"] .journey-desc {
@@ -701,7 +776,24 @@
 
     html[data-theme="light"] .journey-track::before {
       background: linear-gradient(to bottom, transparent, var(--accent) 4%, var(--accent) 96%, transparent);
-      opacity: 0.3;
+      opacity: 0.25;
+    }
+
+    html[data-theme="light"] .journey-track-stream::before {
+      background: repeating-linear-gradient(
+        180deg,
+        transparent 0,
+        transparent 140px,
+        rgba(180, 83, 9, 0.15) 170px,
+        rgba(180, 83, 9, 0.35) 210px,
+        #b45309 230px,
+        rgba(255, 255, 255, 0.98) 236px,
+        #0f766e 240px,
+        transparent 250px,
+        transparent 320px
+      );
+      background-size: 100% 320px;
+      filter: drop-shadow(0 0 4px rgba(180, 83, 9, 0.35));
     }
 
     html[data-theme="light"] .journey-track::after {
@@ -717,13 +809,20 @@
       .journey-card-body,
       .journey-card-body-content,
       .journey-item.reveal,
-      .journey-track::after {
+      .journey-track::after,
+      .journey-track-stream,
+      .journey-track-stream::before,
+      .journey-node--pulse,
+      .journey-card--glow::before {
         transition: none !important;
         animation: none !important;
         transform: none !important;
       }
       .journey-item.reveal {
         opacity: 1 !important;
+      }
+      .journey-track-stream {
+        display: none !important;
       }
     }
   </style>
@@ -785,6 +884,7 @@
 </button>
 </div>
 <div class="journey-track" id="journeyTrack">
+<div class="journey-track-stream" aria-hidden="true"></div>
 <div class="journey-item reveal" data-card-type="architecture">
 <div aria-hidden="true" class="journey-node" id="j-037">
 <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
@@ -2450,28 +2550,57 @@
       items.forEach(item => observer.observe(item));
     }
 
-    // Chronological card-border liquid glow sweeper — straight loop, document order
-    // 18 -> 1 (newest to oldest), then wraps instantly back to 18,
-    // forever, no pause, no reverse. 0.75s liquid glide per card.
-    document.addEventListener('DOMContentLoaded', () => {
-      initJourneyToggleAll();
-      initJourneyScrollProgress();
-      initJourneyScrollReveals();
+    // Viewport-synchronized waterfall cascade engine:
+    // Tracks visible milestones via IntersectionObserver and cascades liquid light waves
+    // across the cards currently in view with natural rhythmic breathing intervals.
+    function initJourneyWaterfallCascade() {
+      if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return;
+      }
 
-      const items = Array.from(document.querySelectorAll('#journeyTrack .journey-item'));
-      if (!items.length) return;
+      const allItems = Array.from(document.querySelectorAll('#journeyTrack .journey-item'));
+      if (!allItems.length) return;
 
-      // 0.75s CSS animation duration; next card sweep starts at 380ms for crossfade.
-      const OVERLAP_MS = 380;
-      let index = 0;
+      const visibleItems = new Set();
+      let isWaveRunning = false;
+      let cascadeTimer = null;
 
-      function glowNext() {
-        const item = items[index];
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleItems.add(entry.target);
+          } else {
+            visibleItems.delete(entry.target);
+          }
+        });
+
+        if (visibleItems.size > 0 && !isWaveRunning && !document.hidden) {
+          scheduleWave(250);
+        }
+      }, {
+        rootMargin: '120px 0px 120px 0px',
+        threshold: 0.12
+      });
+
+      allItems.forEach((item) => observer.observe(item));
+
+      const STAGGER_MS = 420;
+      const WAVE_RESET_MS = 1600;
+
+      function triggerMilestoneGlow(item) {
         const card = item.querySelector('.journey-card');
         const node = item.querySelector('.journey-node');
 
-        if (card) card.classList.add('journey-card--glow');
-        if (node) node.classList.add('journey-node--pulse');
+        if (card) {
+          card.classList.remove('journey-card--glow');
+          void card.offsetWidth;
+          card.classList.add('journey-card--glow');
+        }
+        if (node) {
+          node.classList.remove('journey-node--pulse');
+          void node.offsetWidth;
+          node.classList.add('journey-node--pulse');
+        }
 
         if (card) {
           card.addEventListener('animationend', () => {
@@ -2479,12 +2608,56 @@
             if (node) node.classList.remove('journey-node--pulse');
           }, { once: true });
         }
-
-        index = (index + 1) % items.length;
-        setTimeout(glowNext, OVERLAP_MS);
       }
 
-      glowNext();
+      function runWave() {
+        if (document.hidden) {
+          isWaveRunning = false;
+          return;
+        }
+
+        const targets = allItems.filter((item) => visibleItems.has(item));
+        if (!targets.length) {
+          isWaveRunning = false;
+          return;
+        }
+
+        isWaveRunning = true;
+
+        targets.forEach((item, idx) => {
+          setTimeout(() => {
+            if (visibleItems.has(item)) {
+              triggerMilestoneGlow(item);
+            }
+          }, idx * STAGGER_MS);
+        });
+
+        const totalWaveDuration = (targets.length * STAGGER_MS) + WAVE_RESET_MS;
+        scheduleWave(totalWaveDuration);
+      }
+
+      function scheduleWave(delay) {
+        clearTimeout(cascadeTimer);
+        cascadeTimer = setTimeout(() => {
+          runWave();
+        }, delay);
+      }
+
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) {
+          clearTimeout(cascadeTimer);
+          isWaveRunning = false;
+        } else if (visibleItems.size > 0) {
+          scheduleWave(300);
+        }
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      initJourneyToggleAll();
+      initJourneyScrollProgress();
+      initJourneyScrollReveals();
+      initJourneyWaterfallCascade();
     });
   </script>
 </body>
