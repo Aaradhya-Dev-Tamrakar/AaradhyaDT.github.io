@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: shortcuts.js — aaradhyadt.github.io (v54.8)
+   MODULE: shortcuts.js — aaradhyadt.github.io (v54.10)
    Keyboard shortcuts cheat sheet HUD modal & navigation bindings.
    ============================================================ */
 
@@ -138,7 +138,10 @@ function openShortcutsModal() {
   document.getElementById('shortcutsModalClose').addEventListener('click', closeShortcutsModal);
   const dismissBtn = document.getElementById('shortcutsDismissBtn');
   if (dismissBtn) dismissBtn.addEventListener('click', closeShortcutsModal);
-  modal.addEventListener('click', e => { if (e.target === modal) closeShortcutsModal(); });
+  if (!modal.dataset.bound) {
+    modal.dataset.bound = '1';
+    modal.addEventListener('click', e => { if (e.target === modal) closeShortcutsModal(); });
+  }
 
   requestAnimationFrame(() => modal.classList.add('open'));
   document.body.style.overflow = 'hidden';

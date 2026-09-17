@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: haptics.js — aaradhyadt.github.io (v54.8)
+   MODULE: haptics.js — aaradhyadt.github.io (v54.10)
    Touch gesture recognition and haptic feedback.
    ============================================================ */
 
@@ -7,7 +7,9 @@
 function triggerHapticFeedback(pattern = 10) {
   if (typeof navigator !== 'undefined' && 'vibrate' in navigator) {
     try {
-      navigator.vibrate(pattern);
+      const HAPTIC_MAP = { light: 10, medium: 20, heavy: 40 };
+      const val = typeof pattern === 'string' ? (HAPTIC_MAP[pattern] || 10) : pattern;
+      navigator.vibrate(val);
     } catch (e) {}
   }
 }
@@ -15,7 +17,10 @@ function triggerHapticFeedback(pattern = 10) {
 function initTouchGestures() {
   if (typeof window === 'undefined') return;
 
-  const modals = ['cert-lightbox', 'cmdk', 'whatsNewModal', 'accessModalOverlay', 'tourOverlay'];
+  const modals = [
+    'cert-lightbox', 'cmdk', 'whatsNewModal', 'shortcutsModal',
+    'accessModalOverlay', 'tourOverlay', 'resumeModalOverlay', 'skillRadarModalOverlay'
+  ];
   modals.forEach(id => {
     const modal = document.getElementById(id);
     if (!modal) return;
@@ -181,7 +186,7 @@ function initSwipeNav() {
     if (e.touches.length !== 1) return;
     // Don't swipe when interacting with terminal, modals, or drawer
     const el = e.target;
-    if (el.closest('.terminal-card, .nav-drawer, #cmdk, #cert-lightbox, #whatsNewModal, .form-input, .form-textarea, input, textarea')) return;
+    if (el.closest('.terminal-card, .nav-drawer, #cmdk, #cert-lightbox, #whatsNewModal, #shortcutsModal, #accessModalOverlay, #resumeModalOverlay, #tourOverlay, #skillRadarModalOverlay, .access-modal-overlay, .resume-modal-overlay, .tour-overlay, [role="dialog"], [aria-modal="true"], .form-input, .form-textarea, input, textarea')) return;
 
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
