@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v54.8)
+   MODULE: access.js — aaradhyadt.github.io (v54.11)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -185,6 +185,7 @@ const ACCESS_CONTROL = {
   logout() {
     localStorage.removeItem(this.sessionKey);
     this.simulatedTier = null;
+    KEY_CACHE.clear();
     this.updateUI();
   },
 
@@ -587,6 +588,7 @@ async function updateGatedContentVisibility() {
     const linkTierLabel = (linkTier === ACCESS_CONTROL.TIER_MASTER) ? 'Master' : 'VIP';
 
     if (effTier < linkTier) {
+      delete link.dataset.resolvedHref;
       if (linkTier === ACCESS_CONTROL.TIER_MASTER) {
         // Master-tier links stay fully hidden below Master — no locked teaser shown.
         link.style.display = 'none';
@@ -724,6 +726,11 @@ function renderAccessModal() {
         </button>
       </div>
 
+      <div class="access-vault-seal-wrap">
+        <img src="assets/images/branding/adt-violet.webp" alt="ADT Cryptographic Security Crest" class="access-vault-crest" data-dynamic-logo width="480" height="300" loading="lazy" decoding="async" />
+        <div class="access-vault-badge">AES-256-GCM ENCRYPTED VAULT</div>
+      </div>
+
       <div class="access-field-group">
         <label class="access-label" for="accessPassInput">Enter Passcode</label>
         <div class="access-input-wrap">
@@ -767,6 +774,71 @@ function renderAccessModal() {
   `;
 
   document.body.appendChild(overlay);
+
+  // Bind modal event listeners once on DOM creation
+  const closeBtn = document.getElementById('accessModalClose');
+  const submitBtn = document.getElementById('accessSubmitBtn');
+  const passToggle = document.getElementById('accessPassToggle');
+  const eyeIcon = document.getElementById('accessEyeIcon');
+  const logoutBtn = document.getElementById('accessLogoutBtn');
+  const passInput = document.getElementById('accessPassInput');
+  const card = document.getElementById('accessModalCard');
+
+  if (closeBtn) closeBtn.addEventListener('click', closeAccessModal);
+  overlay.addEventListener('click', e => { if (e.target === overlay) closeAccessModal(); });
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && overlay.classList.contains('open')) {
+      closeAccessModal();
+    }
+  });
+
+  if (passToggle && passInput && eyeIcon) {
+    passToggle.addEventListener('click', () => {
+      const isMasked = passInput.classList.contains('access-input-masked');
+      passInput.classList.toggle('access-input-masked', !isMasked);
+      eyeIcon.style.opacity = isMasked ? '1' : '0.6';
+    });
+  }
+
+  function handleAuthenticate() {
+    const val = passInput ? passInput.value : '';
+    const activeTab = document.querySelector('.access-tab-btn.active');
+    const activeTabTier = activeTab ? parseInt(activeTab.dataset.tier, 10) : 1;
+    if (!val) {
+      showError('Please enter a passcode.');
+      return;
+    }
+
+    const res = ACCESS_CONTROL.authenticate(val, activeTabTier);
+    if (res.success) {
+      closeAccessModal();
+      if (passInput) passInput.value = '';
+      showToast(`Unlocked ${res.label} successfully!`);
+    } else {
+      showError(res.error);
+      if (card) {
+        card.classList.add('shake');
+        setTimeout(() => card.classList.remove('shake'), 400);
+      }
+    }
+  }
+
+  if (submitBtn) submitBtn.addEventListener('click', handleAuthenticate);
+  if (passInput) passInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleAuthenticate(); });
+
+  const passkeyBtn = document.getElementById('accessPasskeyBtn');
+  if (passkeyBtn) {
+    passkeyBtn.addEventListener('click', authenticateWithPasskey);
+  }
+
+  if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+      ACCESS_CONTROL.logout();
+      closeAccessModal();
+      showToast('Session locked. Reverted to public guest access.');
+    });
+  }
+
   renderGoogleSignInButton();
 }
 
@@ -777,12 +849,6 @@ function openAccessModal(defaultTier = 1) {
   const errorMsg = document.getElementById('accessErrorMsg');
   const logoutBtn = document.getElementById('accessLogoutBtn');
   const hintBox = document.getElementById('accessHintBox');
-  const card = document.getElementById('accessModalCard');
-  const passkeyBtn = document.getElementById('accessPasskeyBtn');
-
-  if (passkeyBtn) {
-    passkeyBtn.addEventListener('click', authenticateWithPasskey);
-  }
 
   if (errorMsg) errorMsg.classList.remove('visible');
   if (passInput) passInput.value = '';
@@ -802,58 +868,9 @@ function openAccessModal(defaultTier = 1) {
     `;
   }
 
-  // Secret 5-click trigger on modal title
-  const closeBtn = document.getElementById('accessModalClose');
-  const submitBtn = document.getElementById('accessSubmitBtn');
-  const passToggle = document.getElementById('accessPassToggle');
-  const eyeIcon = document.getElementById('accessEyeIcon');
-
-  closeBtn.addEventListener('click', closeAccessModal);
-  overlay.addEventListener('click', e => { if (e.target === overlay) closeAccessModal(); });
-  document.addEventListener('keydown', e => {
-    if (e.key === 'Escape' && overlay.classList.contains('open')) {
-      closeAccessModal();
-    }
-  });
-
-  passToggle.addEventListener('click', () => {
-    const isMasked = passInput.classList.contains('access-input-masked');
-    passInput.classList.toggle('access-input-masked', !isMasked);
-    eyeIcon.style.opacity = isMasked ? '1' : '0.6';
-  });
-
-  function handleAuthenticate() {
-    const val = passInput.value;
-    const activeTab = document.querySelector('.access-tab-btn.active');
-    const activeTabTier = activeTab ? parseInt(activeTab.dataset.tier, 10) : 1;
-    if (!val) {
-      showError('Please enter a passcode.');
-      return;
-    }
-
-    const res = ACCESS_CONTROL.authenticate(val, activeTabTier);
-    if (res.success) {
-      closeAccessModal();
-      passInput.value = '';
-      showToast(`Unlocked ${res.label} successfully!`);
-    } else {
-      showError(res.error);
-      card.classList.add('shake');
-      setTimeout(() => card.classList.remove('shake'), 400);
-    }
-  }
-
-  submitBtn.addEventListener('click', handleAuthenticate);
-  passInput.addEventListener('keydown', e => { if (e.key === 'Enter') handleAuthenticate(); });
-
   if (logoutBtn) logoutBtn.hidden = (actTier === ACCESS_CONTROL.TIER_PUBLIC);
-  logoutBtn.addEventListener('click', () => {
-    ACCESS_CONTROL.logout();
-    closeAccessModal();
-    showToast('Session locked. Reverted to public guest access.');
-  });
 
-  overlay.classList.add('open');
+  if (overlay) overlay.classList.add('open');
   document.body.style.overflow = 'hidden';
   if (passInput) passInput.focus();
   renderGoogleSignInButton();

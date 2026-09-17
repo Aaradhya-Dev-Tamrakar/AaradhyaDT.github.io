@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v54.8)
+   MODULE: ui.js — aaradhyadt.github.io (v54.11)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -57,7 +57,10 @@ function openWhatsNewModal() {
   `;
 
   document.getElementById('wnModalClose').addEventListener('click', closeWhatsNewModal);
-  modal.addEventListener('click', e => { if (e.target === modal) closeWhatsNewModal(); });
+  if (!modal.dataset.bound) {
+    modal.dataset.bound = '1';
+    modal.addEventListener('click', e => { if (e.target === modal) closeWhatsNewModal(); });
+  }
 
   localStorage.setItem('adt_last_seen_release', SITE_RELEASES[0].version);
   requestAnimationFrame(() => modal.classList.add('open'));
@@ -70,7 +73,6 @@ function closeWhatsNewModal() {
   if (!modal) return;
   modal.classList.remove('open');
   document.body.style.overflow = '';
-  if (typeof playAudioCue === 'function') playAudioCue('close');
 }
 
 
@@ -284,10 +286,15 @@ function initLightbox() {
     lbOpen.href = src;
     lbBody.innerHTML = '';
 
-    if (verifyUrl) {
-      const lbVerify = document.getElementById('lb-verify');
-      lbVerify.href = verifyUrl;
-      lbVerify.hidden = false;
+    const lbVerify = document.getElementById('lb-verify');
+    if (lbVerify) {
+      if (verifyUrl) {
+        lbVerify.href = verifyUrl;
+        lbVerify.hidden = false;
+      } else {
+        lbVerify.href = '#';
+        lbVerify.hidden = true;
+      }
     }
 
     if (type === 'pdf') {
@@ -373,6 +380,13 @@ function initLightbox() {
 // Alt+4 → expand/collapse all years (achievements.html only; no-op elsewhere)
 // Alt+6 → expand/collapse all checkpoints (journey.html only; no-op elsewhere)
 // Skipped when focus is inside an input, textarea, or select.
+function isAnyModalOpen() {
+  return !!document.querySelector(
+    '.access-modal-overlay.open, .shortcuts-modal-overlay.open, .resume-modal-overlay.open, ' +
+    '.tour-overlay.open, #cert-lightbox.open, #cmdk.open, #tourCard'
+  );
+}
+
 function initKeyNav() {
   const PAGE_MAP = {
     '1': 'index.html',
@@ -393,6 +407,8 @@ function initKeyNav() {
       toggleShortcutsModal();
       return;
     }
+
+    if (isAnyModalOpen()) return;
 
     if (e.altKey && e.key === '2') {
       const projectToggleAllBtn = document.getElementById('projectToggleAllBtn');
@@ -457,6 +473,7 @@ function initKeyNav() {
       return;
     }
 
+    if (e.altKey || e.shiftKey) return;
     if (!PAGE_MAP[e.key]) return;
     window.location.href = PAGE_MAP[e.key];
   });
@@ -876,7 +893,10 @@ function openSkillRadarModal() {
   `;
 
   document.getElementById('skillRadarModalClose').addEventListener('click', closeSkillRadarModal);
-  modal.addEventListener('click', e => { if (e.target === modal) closeSkillRadarModal(); });
+  if (!modal.dataset.bound) {
+    modal.addEventListener('click', e => { if (e.target === modal) closeSkillRadarModal(); });
+    modal.dataset.bound = 'true';
+  }
 
   requestAnimationFrame(() => modal.classList.add('open'));
   document.body.style.overflow = 'hidden';
@@ -1176,7 +1196,13 @@ function openResumeGenerator() {
   `;
 
   document.getElementById('resumeModalClose').addEventListener('click', closeResumeGenerator);
-  modal.addEventListener('click', e => { if (e.target === modal) closeResumeGenerator(); });
+  if (!modal.dataset.bound) {
+    modal.addEventListener('click', e => { if (e.target === modal) closeResumeGenerator(); });
+    window.addEventListener('afterprint', () => {
+      document.body.classList.remove('printing-resume');
+    });
+    modal.dataset.bound = 'true';
+  }
   document.getElementById('resumePrintBtn').addEventListener('click', () => {
     document.body.classList.add('printing-resume');
     window.print();
@@ -1203,10 +1229,6 @@ function openResumeGenerator() {
       });
     });
   }
-
-  window.addEventListener('afterprint', () => {
-    document.body.classList.remove('printing-resume');
-  });
 
   const roleBtns = modal.querySelectorAll('.resume-role-btn');
   roleBtns.forEach(btn => {

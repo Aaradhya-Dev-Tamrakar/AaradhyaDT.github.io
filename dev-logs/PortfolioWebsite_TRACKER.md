@@ -1,6 +1,38 @@
-﻿# Portfolio Website Tracker — v54.8
+# Portfolio Website Tracker — v54.11
 
-Last updated: _2026-09-16_
+Last updated: _2026-09-17_
+
+- **Dynamic Multi-Accent Branding Suite & Logo Binding Architecture**:
+  - **5-Variant Design System Integration (`assets/images/branding/`)**: Integrated and optimized 5 bespoke ADT monogram & emblem designs in modern WebP, fallback JPG, and 1:1 square icons:
+    - `adt-titanium.webp`: Master Systems Engineering banner (*"Engineering Intelligent Systems"*).
+    - `adt-gold.webp`: Burnished 24K gold leaf on obsidian (Primary brand & `--accent: #d4a85a`).
+    - `adt-emerald.webp`: Cyber emerald & gold filigree (Hardware, Embedded & Robotics; `data-accent="emerald"`).
+    - `adt-violet.webp`: Electric violet & copper crystal (AI/ML, Neural Networks & VIP Vault; `data-accent="violet"`).
+    - `adt-parchment.webp`: Calligraphic sumi ink wash on laid paper (`html[data-theme="light"]` & print).
+  - **Real-Time Dynamic Binding Engine (`assets/js/modules/core.js`)**: Engineered `getBrandAssets()` and `syncBrandLogos()` hooks connected directly to `applyAccent()` and `applyTheme()`, dynamically swapping all `[data-dynamic-logo]` and `[data-dynamic-logo-icon]` elements with smooth opacity crossfades and live `<head>` favicon updates.
+  - **Navbar Color Accent Swatch Popover (`renderSiteNav()`, `components.css`)**: Embedded an interactive accent swatch popover in the top navbar and mobile drawer, allowing instant switching between Gold, Emerald, Violet, Cyan, Ruby, and Prism.
+  - **Surface Placements Across All Pages**:
+    - **Hero Section (`index.html`)**: Interactive 3D Creed Card featuring the master *"Engineering Intelligent Systems"* banner.
+    - **About Page (`about.html`)**: High-impact Creed Banner dividing the biography from the vertical engineering stack.
+    - **Global Footer (`core.js`)**: Dynamic metallic crest hallmark stamping `.footer-brand` across all pages.
+    - **VIP Access Vault (`access.js`)**: High-security cryptographic vault seal crowning the `#accessModalOverlay`.
+    - **Dev Terminal (`terminal.js`)**: Dedicated `brand` / `logo` commands rendering interactive ASCII + graphic cards and instant switching shortcuts.
+    - **Open Graph Preview (`assets/images/og-image.jpg`)**: Updated social share card with the master 1200×630 Titanium crest.
+  - **PWA & Cache Synchronization (`sw.js`)**: Added all 5 branding WebP assets to `STATIC_ASSETS` for instantaneous offline caching. Passed all 25 categories in `python scripts/verify.py` cleanly.
+
+- **v54.9 (Bug Fixes & Hardening) — Comprehensive 10-Bug Resolution Across Terminal, Modals, KeyNav, Haptics, and Service Worker.** Resolved 10 high-impact bugs identified during repository audit:
+  - **Dev Terminal Async Commands (`assets/js/modules/terminal.js`)**: Resolved async Promise returns for `notify` / `notifications` terminal commands so output properly waits for resolution instead of printing `[object Promise]`.
+  - **Lightbox Modal Reset Guard (`assets/js/modules/ui.js`)**: Null-checked `#lb-verify` and ensured verify button visibility and `href` are cleanly reset when opening certificates without verification links.
+  - **Modal Event Listener De-Duplication (`assets/js/modules/access.js`, `assets/js/modules/shortcuts.js`, `assets/js/modules/ui.js`)**: Bound Access Modal event handlers once during DOM creation in `renderAccessModal()` rather than re-attaching on every open; guarded overlay backdrop click and window print listeners in ATS Resume Generator, Skill Radar, What's New, and Shortcuts HUD modals with `dataset.bound`.
+  - **Formspree Endpoint Synchronization (`assets/js/modules/constants.js`, `assets/js/script.js`)**: Synchronized Formspree endpoint identifier `mrejgjyd` in `SITE.formspreeId` to match `contact.html`, eliminating mismatched submission endpoints.
+  - **Keyboard Navigation Modal Guard (`assets/js/modules/ui.js`)**: Added `isAnyModalOpen()` guard to prevent global shortcut navigation (`1-7`, `0`, `` ` ``) when any modal dialog or tour is active, and guarded against modifier collisions (`Alt`/`Shift`).
+  - **Touch Gestures & Modal Conflict Prevention (`assets/js/modules/haptics.js`)**: Added missing modal selectors (`.resume-modal-overlay`, `.access-modal-overlay`, `.shortcuts-modal-overlay`, `.whats-new-modal-overlay`) to `initTouchGestures` and `initSwipeNav` so horizontal swiping does not navigate away during active dialogs.
+  - **Haptic Preset Support (`assets/js/modules/haptics.js`)**: Extended `triggerHapticFeedback` to parse and map string presets (`'light'`, `'medium'`, `'heavy'`) to vibration patterns `[10]`, `[25]`, and `[45]`.
+  - **Access Key Cache Eviction & Link Lock Cleardown (`assets/js/modules/access.js`)**: Cleared crypto `KEY_CACHE` on logout and purged cached decrypted URLs (`link.dataset.resolvedHref`) when locking links.
+  - **Service Worker Late-Registration Guard (`assets/js/script.js`)**: Handled cases where `document.readyState === 'complete'` so service worker registration fires immediately if window load event already dispatched.
+  - **Service Worker Offline Catch Fallback (`sw.js`)**: Added catch fallback returning HTTP 503 response for static asset network fetch failures, preventing unhandled promise rejections.
+  - **Verification Gate**: Passed `python scripts/verify.py` across all 25 categories cleanly; all 14 Node unit tests and 42 E2E smoke tests green.
+
 
 - **Distributed Service Provisioning (DSP) Architecture & 7-Layer Systems Stack Integration**:
   - **7-Layer Intelligent Systems Stack (`about.html`)**: Formally integrated the execution and orchestration runtime into the vertical stack: (1) Physical Sensing & Control (`SPARK`, `GCSBR`) $\rightarrow$ (2) Perception & Fairness (`BiasAperture`) $\rightarrow$ (3) Knowledge Systems & Sync (`Super-NLM`) $\rightarrow$ (4) Distributed Execution & DSP Fabric (`Claude-Desktop`) $\rightarrow$ (5) Engineering Workflow Automation (`GitHub-Pilot`) $\rightarrow$ (6) OS Agentic Control (`Windows-Pilot`) $\rightarrow$ (7) Kernel & Computing Environment (`NovaOptimizer`), unified under `Brainstorm`.
@@ -287,7 +319,7 @@ Last updated: _2026-09-16_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.8`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.11`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

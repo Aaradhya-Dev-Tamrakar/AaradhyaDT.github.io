@@ -1,10 +1,10 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v54.8)
+   SHARED SCRIPT — aaradhyadt.github.io (v54.11)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v54.8) — Tiered Parallel ─────────── */
+/* ── Dynamic Module Loader (v54.11) — Tiered Parallel ─────────── */
 window.__modulesLoadedPromise = (async function () {
   // Modules grouped by dependency tier — each group loads concurrently via
   // Promise.all, but tiers execute sequentially (tier N+1 waits for tier N).
@@ -198,11 +198,16 @@ if (window.__modulesLoadedPromise) {
 
 function initServiceWorker() {
   if ('serviceWorker' in navigator) {
-    window.addEventListener('load', () => {
+    const register = () => {
       navigator.serviceWorker.register('./sw.js').catch(err => {
         console.debug('ServiceWorker registration skipped or failed:', err);
       });
-    });
+    };
+    if (document.readyState === 'complete') {
+      register();
+    } else {
+      window.addEventListener('load', register, { once: true });
+    }
   }
 }
 
@@ -243,7 +248,7 @@ function syncQueuedContactMessages() {
 
     pending.forEach(async (formData) => {
       try {
-        const FORMSPREE_ID = (typeof SITE !== 'undefined' && SITE.formspreeId) ? SITE.formspreeId : "xnnjkrrn";
+        const FORMSPREE_ID = (typeof SITE !== 'undefined' && SITE.formspreeId) ? SITE.formspreeId : "mrejgjyd";
         const res = await fetch("https://formspree.io/f/" + FORMSPREE_ID, {
           method: "POST",
           headers: { "Content-Type": "application/json", Accept: "application/json" },

@@ -1,12 +1,12 @@
 /* ============================================================
-   MODULE: constants.js — aaradhyadt.github.io (v54.8)
+   MODULE: constants.js — aaradhyadt.github.io (v54.11)
    Site constants, social links, icons, and configuration metadata.
    ============================================================ */
 
 /* ── Site constants ─────────────────────────────────────────── */
 const SITE = {
   GA4_ID: 'G-P38642CDGB',
-  formspreeId: 'xnnjkrrn',
+  formspreeId: 'mrejgjyd',
   googleClientId: '21529775347-1g1tg96qa47njo5g6fdhsuh81auqm11v.apps.googleusercontent.com',
   masterEmails: [
     'aaradhyadevtmr@gmail.com', 
