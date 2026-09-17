@@ -996,16 +996,43 @@
       flex-direction: column;
       gap: 0.85rem;
       margin-top: 1.2rem;
+      position: relative;
     }
 
     .v-tier-item {
       display: flex;
       flex-direction: column;
       gap: 0.25rem;
-      padding: 0.75rem 1rem;
+      padding: 0.75rem 1rem 0.75rem 1.45rem;
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid var(--line);
       border-radius: 4px;
+      position: relative;
+      transition: border-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+    }
+
+    .v-tier-item::before {
+      content: "";
+      position: absolute;
+      left: 0.55rem;
+      top: 1.05rem;
+      width: 5px;
+      height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 6px var(--accent-a45);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .v-tier-item:hover {
+      border-color: var(--accent-a45);
+      transform: translateX(4px);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25), 0 0 12px var(--accent-a12);
+    }
+
+    .v-tier-item:hover::before {
+      transform: scale(1.4);
+      box-shadow: 0 0 10px var(--accent);
     }
 
     .v-tier-tag {
@@ -1027,6 +1054,13 @@
 
     html[data-theme="light"] .v-tier-item {
       background: rgba(0, 0, 0, 0.02);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .v-tier-item {
+        transition: none !important;
+        transform: none !important;
+      }
     }
   </style>
 </head>

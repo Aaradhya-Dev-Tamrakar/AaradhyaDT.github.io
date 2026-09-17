@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.17)
+   MODULE: core.js — aaradhyadt.github.io (v54.18)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -611,8 +611,10 @@ function initScroll() {
 
 /* ── Reveal on scroll & Stagger (v35) ─────────────────────── */
 function initReveal() {
-  // Auto-assign staggered delays to card grid children
-  document.querySelectorAll('.quick-nav-grid, .projects-grid, .achievements-grid, #quickNavGrid').forEach(grid => {
+  // Auto-assign staggered delays to card grid and list children
+  document.querySelectorAll(
+    '.quick-nav-grid, .projects-grid, .achievements-list, .achievements-grid, #quickNavGrid, .keymap-grid, .faq-grid, .exp-list, .v-stack-grid'
+  ).forEach(grid => {
     const children = grid.querySelectorAll('.reveal');
     children.forEach((child, i) => {
       child.classList.add(`reveal-stagger-${(i % 8) + 1}`);
@@ -620,8 +622,13 @@ function initReveal() {
   });
 
   const obs = new IntersectionObserver(
-    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
-    { threshold: 0.05 }
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        obs.unobserve(e.target);
+      }
+    }),
+    { threshold: 0.05, rootMargin: '0px 0px -20px 0px' }
   );
   document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 }

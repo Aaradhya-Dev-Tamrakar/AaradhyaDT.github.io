@@ -146,13 +146,13 @@
       border-radius: 10px;
       padding: 1.75rem;
       scroll-margin-top: calc(var(--nav-h) + 1rem);
-      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      transition: border-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
     }
 
     .achievement-item:hover {
       border-color: var(--glow-green);
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 0 0 16px var(--glow-green-a35);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 16px var(--glow-green-a35);
     }
 
     .achievement-org {
@@ -253,7 +253,7 @@
       border-radius: 8px;
       overflow: hidden;
       background: #fff;
-      transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
+      transition: border-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
     }
 
     .cert-thumb:hover,

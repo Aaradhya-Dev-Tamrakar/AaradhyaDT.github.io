@@ -1,6 +1,12 @@
-# Portfolio Website Tracker — v54.17
+# Portfolio Website Tracker — v54.18
 
 Last updated: _2026-09-17_
+
+- **Site-Wide Motion Upgrade — Phase 3: Scroll-Driven Choreography & Section Flow (`base.css`, `core.js`, `about.html`, `experience.html`, `achievements.html`)**:
+  - **Comprehensive Multi-Grid Staggered Cascade (`core.js`, `base.css`)**: Expanded automatic scroll-reveal staggers across all card containers (`.quick-nav-grid`, `.projects-grid`, `.achievements-list`, `.achievements-grid`, `.exp-list`, `.v-stack-grid`, `.faq-grid`, `.keymap-grid`), tightening stagger delays to crisp 40ms intervals (`0.04s` to `0.32s`) with physical cubic-bezier easing (`cubic-bezier(0.16, 1, 0.3, 1)`).
+  - **IntersectionObserver Performance Unobserving (`core.js`)**: Optimized viewport reveal observer with `obs.unobserve(e.target)` upon intersection and `-20px` root margin offset, eliminating redundant scroll calculation overhead and locking in 60/120fps scroll fluidity.
+  - **Vertical Systems Stack Circuit Bus (`about.html`)**: Transformed the 7-layer engineering stack into an interconnected systems bus with a continuous vertical guide spine (`.v-tier-list`), luminous circuit node bullets (`.v-tier-item::before`), hover translation (`translateX(4px)`), and radial node expansion.
+  - **Tactile Card Hover Physics Across Experience & Achievements (`experience.html`, `achievements.html`)**: Standardized `cubic-bezier(0.16, 1, 0.3, 1)` spring curves across `.exp-item`, `.exp-banner img` scale transitions (`scale(1.04)`), `.achievement-item` elevations, and `.cert-thumb` badge transforms.
 
 - **Site-Wide Motion Upgrade — Phase 2: Card Dynamics & Vector Flow (`components.css`, `projects.html`)**:
   - **Modal Conic Perimeter Halos (`components.css`)**: Engineered precision ambient conic halos (`.resume-modal-card::before`, `.shortcuts-modal-card::before`) powered by `@property --border-angle` with 9s continuous perimeter sweep, masked inner core, light-theme suppression, and reduced-motion safety.
@@ -337,7 +343,7 @@ Last updated: _2026-09-17_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.17`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.18`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

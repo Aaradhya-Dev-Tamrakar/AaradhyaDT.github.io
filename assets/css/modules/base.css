@@ -582,28 +582,30 @@ html[data-theme="light"] .divider-node {
 
 
 
-/* ── Reveal on scroll ─────────────────────────────────────── */
+/* ── Reveal on scroll (Phase 3 Choreography) ─────────────── */
 .reveal {
   opacity: 0;
-  transform: translateY(18px) scale(0.975);
+  transform: translateY(20px) scale(0.98);
   transition:
-    opacity 0.48s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.48s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity 0.52s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.52s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0) scale(1);
+  will-change: auto;
 }
 
-.reveal-stagger-1 { transition-delay: 0.05s; }
-.reveal-stagger-2 { transition-delay: 0.10s; }
-.reveal-stagger-3 { transition-delay: 0.15s; }
-.reveal-stagger-4 { transition-delay: 0.20s; }
-.reveal-stagger-5 { transition-delay: 0.25s; }
-.reveal-stagger-6 { transition-delay: 0.30s; }
-.reveal-stagger-7 { transition-delay: 0.35s; }
-.reveal-stagger-8 { transition-delay: 0.40s; }
+.reveal-stagger-1 { transition-delay: 0.04s; }
+.reveal-stagger-2 { transition-delay: 0.08s; }
+.reveal-stagger-3 { transition-delay: 0.12s; }
+.reveal-stagger-4 { transition-delay: 0.16s; }
+.reveal-stagger-5 { transition-delay: 0.20s; }
+.reveal-stagger-6 { transition-delay: 0.24s; }
+.reveal-stagger-7 { transition-delay: 0.28s; }
+.reveal-stagger-8 { transition-delay: 0.32s; }
 
 
 
@@ -648,9 +650,10 @@ html[data-theme="light"] .divider-node {
   }
 
   .reveal {
-    opacity: 1;
-    transform: none;
-    transition: none;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    will-change: auto !important;
   }
 
   html {
