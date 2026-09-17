@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.20)
+   MODULE: core.js — aaradhyadt.github.io (v54.21)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -320,6 +320,21 @@ function getBrandAssets(theme, accent) {
         alt: 'ADT Monogram — Electric Violet & Copper'
       };
     case 'cyan':
+      return {
+        crest: 'assets/images/branding/adt-cyan.webp',
+        crestJpg: 'assets/images/branding/adt-cyan.jpg',
+        icon: 'assets/images/branding/adt-cyan-icon-192.webp',
+        favicon: 'assets/images/branding/adt-cyan-favicon.png',
+        alt: 'ADT Monogram — Electric Cyan & Neon Energy'
+      };
+    case 'ruby':
+      return {
+        crest: 'assets/images/branding/adt-ruby.webp',
+        crestJpg: 'assets/images/branding/adt-ruby.jpg',
+        icon: 'assets/images/branding/adt-ruby-icon-192.webp',
+        favicon: 'assets/images/branding/adt-ruby-favicon.png',
+        alt: 'ADT Monogram — Crimson Ruby & Polished Bronze'
+      };
     case 'prism':
       return {
         crest: 'assets/images/branding/adt-titanium.webp',
@@ -328,7 +343,6 @@ function getBrandAssets(theme, accent) {
         favicon: 'assets/images/branding/adt-titanium-favicon.png',
         alt: 'ADT Monogram — Brushed Titanium'
       };
-    case 'ruby':
     case 'gold':
     default:
       return {

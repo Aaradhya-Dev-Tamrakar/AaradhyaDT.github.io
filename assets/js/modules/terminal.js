@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v54.20)
+   MODULE: terminal.js — aaradhyadt.github.io (v54.21)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -174,7 +174,7 @@
       stats: () => {
         const achvCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.achievement || []).length : 39;
         const projCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.project || []).length : 30;
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.20';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.21';
         return `
 <span class="term-green">[ADT PORTFOLIO TELEMETRY ${currentVer}]</span><br>
   • <span class="term-gold">Published Projects:</span> ${projCount} verified repositories &amp; systems<br>
@@ -205,7 +205,7 @@
       },
       run: (arg) => {
         const sub = (arg || '').toLowerCase().trim();
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.20';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.21';
         if (sub === 'spark') {
           return `
 <span class="term-green">[SPARK TELEMETRY SIMULATOR ${currentVer}]</span><br>
@@ -385,7 +385,7 @@
         } else {
           checks.push('<span class="term-red">\u2717</span> Search index: SEARCH_STATIC_INDEX not found');
         }
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.20';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v54.21';
         return `<span class="term-green">[SITE HEALTHCHECK ${currentVer}]</span><br>` + checks.map(c => '  ' + c).join('<br>');
       },
       sound: () => {
@@ -446,12 +446,16 @@
 <span class="term-gold">● 1. Burnished Gold Leaf:</span> 24K gold foil on obsidian (Primary: <code>accent gold</code>)<br>
 <span class="term-green">● 2. Cyber Emerald:</span> Crystalline jade &amp; gold filigree (Hardware/Robotics: <code>accent emerald</code>)<br>
 <span class="term-violet">● 3. Electric Violet:</span> Amethyst crystal &amp; copper bevel (AI/ML &amp; Vault: <code>accent violet</code>)<br>
-<span class="term-cyan">● 4. Brushed Titanium:</span> High-relief steel systems crest (Systems Engineering: <code>accent cyan</code>)<br>
-<span class="term-gold">● 5. Calligraphic Ink:</span> Sumi ink on handmade parchment (Light Mode: <code>theme</code>)<br><br>
+<span class="term-cyan">● 4. Electric Cyan:</span> High-voltage cyan &amp; neon flux (Systems Engineering: <code>accent cyan</code>)<br>
+<span class="term-red">● 5. Crimson Ruby:</span> Faceted ruby crystal &amp; rose gold (Autonomous Robotics: <code>accent ruby</code>)<br>
+<span class="term-cyan">● 6. Brushed Titanium:</span> High-relief steel systems crest (Foundational: <code>accent prism</code>)<br>
+<span class="term-gold">● 7. Calligraphic Ink:</span> Sumi ink on handmade parchment (Light Mode: <code>theme</code>)<br><br>
 <div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap;">
   <img src="assets/images/branding/adt-gold.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(212,168,90,0.5);" alt="Gold Crest" />
   <img src="assets/images/branding/adt-emerald.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(16,185,129,0.5);" alt="Emerald Crest" />
   <img src="assets/images/branding/adt-violet.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(168,85,247,0.5);" alt="Violet Crest" />
+  <img src="assets/images/branding/adt-cyan.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(6,182,212,0.5);" alt="Cyan Crest" />
+  <img src="assets/images/branding/adt-ruby.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(239,68,68,0.5);" alt="Ruby Crest" />
   <img src="assets/images/branding/adt-titanium.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.3);" alt="Titanium Crest" />
   <img src="assets/images/branding/adt-parchment.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(0,0,0,0.2);" alt="Parchment Crest" />
 </div>
