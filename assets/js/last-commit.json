@@ -1,6 +1,6 @@
 {
-  "sha": "f5e7dd48f65baa586e6d46965a87ca406a4bf71e",
-  "shortSha": "f5e7dd4",
-  "date": "2026-09-17T00:08:14+05:45",
-  "message": "chore(sync): sync drive manifest from dev-fork"
+  "sha": "566a4bd5b18c0a493cb7bc70a245377f6828b001",
+  "shortSha": "566a4bd",
+  "date": "2026-09-17T13:31:05+05:45",
+  "message": "fix(site): resolve 10 bugs across terminal, modals, keynav, haptics, and sw"
 }
