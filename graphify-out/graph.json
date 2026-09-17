@@ -1040,6 +1040,54 @@
       "source_location": "L143"
     },
     {
+      "id": "mcp_server_site_mcp_handle_resource_read",
+      "label": "handle_resource_read()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "manage_payloads.py",
+      "file_type": "code",
+      "norm_label": "handle_resource_read()",
+      "source_file": "mcp-server/site_mcp.py",
+      "source_location": "L289"
+    },
+    {
+      "id": "mcp_server_site_mcp_handle_tool_call",
+      "label": "handle_tool_call()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "manage_payloads.py",
+      "file_type": "code",
+      "norm_label": "handle_tool_call()",
+      "source_file": "mcp-server/site_mcp.py",
+      "source_location": "L347"
+    },
+    {
+      "id": "mcp_server_site_mcp_process_request",
+      "label": "process_request()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "manage_payloads.py",
+      "file_type": "code",
+      "norm_label": "process_request()",
+      "source_file": "mcp-server/site_mcp.py",
+      "source_location": "L444"
+    },
+    {
+      "id": "mcp_server_site_mcp_run_stdio_server",
+      "label": "run_stdio_server()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "manage_payloads.py",
+      "file_type": "code",
+      "norm_label": "run_stdio_server()",
+      "source_file": "mcp-server/site_mcp.py",
+      "source_location": "L603"
+    },
+    {
       "id": "scripts_manage_payloads_cmd_export",
       "label": "cmd_export()",
       "_callable": true,
@@ -1952,18 +2000,6 @@
       "source_location": "L236"
     },
     {
-      "id": "assets_js_modules_core_rendersitefooter",
-      "label": "renderSiteFooter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "rendersitefooter()",
-      "source_file": "assets/js/modules/core.js",
-      "source_location": "L192"
-    },
-    {
       "id": "assets_js_modules_core_rendersitenav",
       "label": "renderSiteNav()",
       "_callable": true,
@@ -2312,54 +2348,6 @@
       "source_location": "L239"
     },
     {
-      "id": "mcp_server_site_mcp_handle_resource_read",
-      "label": "handle_resource_read()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "site_mcp.py",
-      "file_type": "code",
-      "norm_label": "handle_resource_read()",
-      "source_file": "mcp-server/site_mcp.py",
-      "source_location": "L289"
-    },
-    {
-      "id": "mcp_server_site_mcp_handle_tool_call",
-      "label": "handle_tool_call()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "site_mcp.py",
-      "file_type": "code",
-      "norm_label": "handle_tool_call()",
-      "source_file": "mcp-server/site_mcp.py",
-      "source_location": "L347"
-    },
-    {
-      "id": "mcp_server_site_mcp_process_request",
-      "label": "process_request()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "site_mcp.py",
-      "file_type": "code",
-      "norm_label": "process_request()",
-      "source_file": "mcp-server/site_mcp.py",
-      "source_location": "L444"
-    },
-    {
-      "id": "mcp_server_site_mcp_run_stdio_server",
-      "label": "run_stdio_server()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "site_mcp.py",
-      "file_type": "code",
-      "norm_label": "run_stdio_server()",
-      "source_file": "mcp-server/site_mcp.py",
-      "source_location": "L603"
-    },
-    {
       "id": "assets_js_modules_home_widgets_boothomewidgets",
       "label": "bootHomeWidgets()",
       "_callable": true,
@@ -2466,6 +2454,18 @@
       "norm_label": "tick()",
       "source_file": "assets/js/modules/home-widgets.js",
       "source_location": "L20"
+    },
+    {
+      "id": "assets_js_modules_core_rendersitefooter",
+      "label": "renderSiteFooter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ui.js",
+      "file_type": "code",
+      "norm_label": "rendersitefooter()",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L192"
     },
     {
       "id": "assets_js_modules_ui_closeresumegenerator",
@@ -3701,7 +3701,7 @@
       "file_type": "code",
       "norm_label": "closeaccessmodal()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L880"
+      "source_location": "L882"
     },
     {
       "id": "assets_js_modules_access_decrypthexpayload",
@@ -3785,7 +3785,7 @@
       "file_type": "code",
       "norm_label": "initaccesscontrol()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1059"
+      "source_location": "L1061"
     },
     {
       "id": "assets_js_modules_access_iswebauthnsupported",
@@ -3809,7 +3809,7 @@
       "file_type": "code",
       "norm_label": "openaccessmodal()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L845"
+      "source_location": "L846"
     },
     {
       "id": "assets_js_modules_access_parsejwt",
@@ -3893,7 +3893,7 @@
       "file_type": "code",
       "norm_label": "handleauthenticate()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L803"
+      "source_location": "L804"
     },
     {
       "id": "assets_js_modules_access_renderaccessnavbutton",
@@ -3929,7 +3929,7 @@
       "file_type": "code",
       "norm_label": "rendermastercontrolpanel()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L915"
+      "source_location": "L917"
     },
     {
       "id": "assets_js_modules_access_showerror",
@@ -3941,7 +3941,7 @@
       "file_type": "code",
       "norm_label": "showerror()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L889"
+      "source_location": "L891"
     },
     {
       "id": "assets_js_modules_access_showtoast",
@@ -3953,7 +3953,7 @@
       "file_type": "code",
       "norm_label": "showtoast()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L898"
+      "source_location": "L900"
     },
     {
       "id": "assets_js_modules_access_updategatedcontentvisibility",
@@ -5537,6 +5537,17 @@
       "source_location": "L198"
     },
     {
+      "id": "mcp_server_site_mcp",
+      "label": "site_mcp.py",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "manage_payloads.py",
+      "file_type": "code",
+      "norm_label": "site_mcp.py",
+      "source_file": "mcp-server/site_mcp.py",
+      "source_location": "L1"
+    },
+    {
       "id": "scripts_manage_payloads",
       "label": "manage_payloads.py",
       "_origin": "ast",
@@ -5557,6 +5568,50 @@
       "norm_label": "path",
       "source_file": "",
       "source_location": ""
+    },
+    {
+      "id": "mcp_server_site_mcp_rationale_290",
+      "label": "Fetches resource content based on URI.",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "manage_payloads.py",
+      "file_type": "rationale",
+      "norm_label": "fetches resource content based on uri.",
+      "source_file": "mcp-server/site_mcp.py",
+      "source_location": "L290"
+    },
+    {
+      "id": "mcp_server_site_mcp_rationale_348",
+      "label": "Executes requested tool and returns output.",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "manage_payloads.py",
+      "file_type": "rationale",
+      "norm_label": "executes requested tool and returns output.",
+      "source_file": "mcp-server/site_mcp.py",
+      "source_location": "L348"
+    },
+    {
+      "id": "mcp_server_site_mcp_rationale_445",
+      "label": "Routes JSON-RPC request to appropriate handler.",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "manage_payloads.py",
+      "file_type": "rationale",
+      "norm_label": "routes json-rpc request to appropriate handler.",
+      "source_file": "mcp-server/site_mcp.py",
+      "source_location": "L445"
+    },
+    {
+      "id": "mcp_server_site_mcp_rationale_604",
+      "label": "Reads JSON-RPC messages from stdin and writes responses to stdout.",
+      "_origin": "ast",
+      "community": 14,
+      "community_name": "manage_payloads.py",
+      "file_type": "rationale",
+      "norm_label": "reads json-rpc messages from stdin and writes responses to stdout.",
+      "source_file": "mcp-server/site_mcp.py",
+      "source_location": "L604"
     },
     {
       "id": "assets_js_bg_animations",
@@ -5760,7 +5815,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "54.19.0"
+      "version": "54.20.0"
     },
     {
       "id": "sync",
@@ -5937,6 +5992,330 @@
       "norm_label": "cmdk_entries",
       "source_file": "assets/js/modules/cmdk.js",
       "source_location": "L7"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_101",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L101"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_107",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L107"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_113",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L113"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_119",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L119"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_125",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L125"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_131",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L131"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_137",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L137"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_29",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_35",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_41",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_47",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L47"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_53",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L53"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_59",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L59"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_65",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L65"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_71",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_77",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_83",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L83"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_95",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L95"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_evaluate_repo",
+      "label": "Evaluate Repo",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "evaluate repo",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_evaluation_of_aaradhyadt_github_io",
+      "label": "Evaluation of `AaradhyaDT.github.io`",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "evaluation of `aaradhyadt.github.io`",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L139"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_1",
+      "label": "Turn 1",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 1",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "label": "Turn 2",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 2",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "label": "Turn 3",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 3",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L89"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user",
+      "label": "User",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L11"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_19",
+      "label": "User",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_91",
+      "label": "User",
+      "_origin": "ast",
+      "community": 199,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L91"
     },
     {
       "id": "assets_js_modules_core",
@@ -6546,59 +6925,508 @@
       "source_location": "L1"
     },
     {
-      "id": "mcp_server_site_mcp",
-      "label": "site_mcp.py",
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "label": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
       "_origin": "ast",
       "community": 27,
-      "community_name": "site_mcp.py",
-      "file_type": "code",
-      "norm_label": "site_mcp.py",
-      "source_file": "mcp-server/site_mcp.py",
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-09-17_evaluate-repo_conversation.md",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
       "source_location": "L1"
     },
     {
-      "id": "mcp_server_site_mcp_rationale_290",
-      "label": "Fetches resource content based on URI.",
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_10_what_a_professor_researcher_is_likely_to_notice",
+      "label": "10. What a professor/researcher is likely to notice",
       "_origin": "ast",
       "community": 27,
-      "community_name": "site_mcp.py",
-      "file_type": "rationale",
-      "norm_label": "fetches resource content based on uri.",
-      "source_file": "mcp-server/site_mcp.py",
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10. what a professor/researcher is likely to notice",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L579"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_11_what_i_would_change_first",
+      "label": "11. What I would change first",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "11. what i would change first",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L627"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_12_the_most_important_strategic_observation",
+      "label": "12. The most important strategic observation",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "12. the most important strategic observation",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L643"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_1_what_the_repository_communicates_about_you",
+      "label": "1. What the repository communicates about you",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. what the repository communicates about you",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L169"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_2_technical_architecture_excellent",
+      "label": "2. Technical architecture \u2014 excellent",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. technical architecture \u2014 excellent",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L205"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_3_the_biggest_conceptual_problem_the_security_layer",
+      "label": "3. The biggest conceptual problem: the security layer",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. the biggest conceptual problem: the security layer",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
       "source_location": "L290"
     },
     {
-      "id": "mcp_server_site_mcp_rationale_348",
-      "label": "Executes requested tool and returns output.",
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_4_the_evidence_provenance_system_is_one_of_the_best_parts",
+      "label": "4. The evidence/provenance system is one of the best parts",
       "_origin": "ast",
       "community": 27,
-      "community_name": "site_mcp.py",
-      "file_type": "rationale",
-      "norm_label": "executes requested tool and returns output.",
-      "source_file": "mcp-server/site_mcp.py",
-      "source_location": "L348"
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. the evidence/provenance system is one of the best parts",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L350"
     },
     {
-      "id": "mcp_server_site_mcp_rationale_445",
-      "label": "Routes JSON-RPC request to appropriate handler.",
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_5_content_strategy_impressive_but_increasingly_dense",
+      "label": "5. Content strategy: impressive, but increasingly dense",
       "_origin": "ast",
       "community": 27,
-      "community_name": "site_mcp.py",
-      "file_type": "rationale",
-      "norm_label": "routes json-rpc request to appropriate handler.",
-      "source_file": "mcp-server/site_mcp.py",
-      "source_location": "L445"
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. content strategy: impressive, but increasingly dense",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L387"
     },
     {
-      "id": "mcp_server_site_mcp_rationale_604",
-      "label": "Reads JSON-RPC messages from stdin and writes responses to stdout.",
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_6_your_positioning_is_getting_stronger_but_also_more_ambitious",
+      "label": "6. Your positioning is getting stronger \u2014 but also more ambitious",
       "_origin": "ast",
       "community": 27,
-      "community_name": "site_mcp.py",
-      "file_type": "rationale",
-      "norm_label": "reads json-rpc messages from stdin and writes responses to stdout.",
-      "source_file": "mcp-server/site_mcp.py",
-      "source_location": "L604"
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. your positioning is getting stronger \u2014 but also more ambitious",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L433"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_7_seo_schema_technically_sophisticated_but_slightly_overengineered",
+      "label": "7. SEO/schema: technically sophisticated, but slightly overengineered",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. seo/schema: technically sophisticated, but slightly overengineered",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L474"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_8_performance_architecture_good_instincts_questionable_complexity",
+      "label": "8. Performance architecture: good instincts, questionable complexity",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "8. performance architecture: good instincts, questionable complexity",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L508"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_9_the_portfolio_site_s_most_unusual_feature_it_is_becoming_self_aware",
+      "label": "9. The portfolio site's most unusual feature: it is becoming self-aware",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9. the portfolio site's most unusual feature: it is becoming self-aware",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L547"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_735",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L735"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_885",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L885"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_bottom_line",
+      "label": "Bottom line",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "bottom line",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L713"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_ci_cd",
+      "label": "CI/CD",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ci/cd",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L257"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_credibility_risk",
+      "label": "Credibility risk",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "credibility risk",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L707"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "label": "Final assessment",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "final assessment",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L687"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_google_authentication_has_the_same_architectural_limitation",
+      "label": "Google authentication has the same architectural limitation",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "google authentication has the same architectural limitation",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L326"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_i_would_therefore_revise_my_previous_evaluation",
+      "label": "I would therefore revise my previous evaluation",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "i would therefore revise my previous evaluation",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L835"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_more_interestingly_i_think_the_project_has_a_stronger_interpretation_now",
+      "label": "More interestingly, I think the project has a stronger interpretation now",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "more interestingly, i think the project has a stronger interpretation now",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L853"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_on_webscraping_protection",
+      "label": "On \u201cwebscraping protection\u201d",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "on \u201cwebscraping protection\u201d",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L807"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_overall_assessment",
+      "label": "Overall assessment",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "overall assessment",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L145"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_portfolio_communication",
+      "label": "Portfolio communication",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "portfolio communication",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L695"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_remaining_questions_a_researcher_could_still_ask",
+      "label": "Remaining questions a researcher could still ask",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "remaining questions a researcher could still ask",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L605"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_repository_engineering",
+      "label": "Repository engineering",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "repository engineering",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L689"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_research_scholarship_value",
+      "label": "Research/scholarship value",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "research/scholarship value",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L701"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_revised_assessment_of_the_access_control_subsystem",
+      "label": "Revised assessment of the access-control subsystem",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "revised assessment of the access-control subsystem",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L745"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_revised_score",
+      "label": "Revised score",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "revised score",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L839"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_strong_points",
+      "label": "Strong points",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "strong points",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L207"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_strong_signals",
+      "label": "Strong signals",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "strong signals",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L583"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_testing",
+      "label": "Testing",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "testing",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L271"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_the_vip2026_issue_is_then_a_different_question",
+      "label": "The `vip2026` issue is then a different question",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the `vip2026` issue is then a different question",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L782"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_4",
+      "label": "Turn 4",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 4",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L729"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_5",
+      "label": "Turn 5",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 5",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L871"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_6",
+      "label": "Turn 6",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 6",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L879"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_731",
+      "label": "User",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L731"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_873",
+      "label": "User",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L873"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_881",
+      "label": "User",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L881"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_what_i_would_change",
+      "label": "What I would change",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what i would change",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L334"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_what_the_system_actually_demonstrates_well",
+      "label": "What the system actually demonstrates well",
+      "_origin": "ast",
+      "community": 27,
+      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what the system actually demonstrates well",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L756"
     },
     {
       "id": "assets_js_modules_home_widgets",
@@ -11590,7 +12418,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1060",
+      "source_location": "L1062",
       "weight": 1.0
     },
     {
@@ -11602,7 +12430,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1061",
+      "source_location": "L1063",
       "weight": 1.0
     },
     {
@@ -11614,7 +12442,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1062",
+      "source_location": "L1064",
       "weight": 1.0
     },
     {
@@ -11626,7 +12454,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L846",
+      "source_location": "L847",
       "weight": 1.0
     },
     {
@@ -11638,7 +12466,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L876",
+      "source_location": "L878",
       "weight": 1.0
     },
     {
@@ -11758,7 +12586,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L838",
+      "source_location": "L839",
       "weight": 1.0
     },
     {
@@ -11770,7 +12598,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L842",
+      "source_location": "L843",
       "weight": 1.0
     },
     {
@@ -11782,7 +12610,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L808",
+      "source_location": "L809",
       "weight": 1.0
     },
     {
@@ -11794,7 +12622,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L814",
+      "source_location": "L815",
       "weight": 1.0
     },
     {
@@ -11806,7 +12634,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L816",
+      "source_location": "L817",
       "weight": 1.0
     },
     {
@@ -11830,7 +12658,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1003",
+      "source_location": "L1005",
       "weight": 1.0
     },
     {
@@ -11842,7 +12670,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1037",
+      "source_location": "L1039",
       "weight": 1.0
     },
     {
@@ -11854,7 +12682,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1051",
+      "source_location": "L1053",
       "weight": 1.0
     },
     {
@@ -17083,7 +17911,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1059",
+      "source_location": "L1061",
       "weight": 1.0
     },
     {
@@ -17325,7 +18153,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L845",
+      "source_location": "L846",
       "weight": 1.0
     },
     {
@@ -17336,7 +18164,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L880",
+      "source_location": "L882",
       "weight": 1.0
     },
     {
@@ -17347,7 +18175,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L889",
+      "source_location": "L891",
       "weight": 1.0
     },
     {
@@ -17358,7 +18186,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L898",
+      "source_location": "L900",
       "weight": 1.0
     },
     {
@@ -17369,7 +18197,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L915",
+      "source_location": "L917",
       "weight": 1.0
     },
     {
@@ -18954,6 +19782,754 @@
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
       "source_location": "L45",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_evaluate_repo",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_overall_assessment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L145",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_1_what_the_repository_communicates_about_you",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_2_technical_architecture_excellent",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L205",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_3_the_biggest_conceptual_problem_the_security_layer",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L290",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_4_the_evidence_provenance_system_is_one_of_the_best_parts",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L350",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_5_content_strategy_impressive_but_increasingly_dense",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L387",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_6_your_positioning_is_getting_stronger_but_also_more_ambitious",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L433",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_7_seo_schema_technically_sophisticated_but_slightly_overengineered",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L474",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_8_performance_architecture_good_instincts_questionable_complexity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L508",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_9_the_portfolio_site_s_most_unusual_feature_it_is_becoming_self_aware",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L547",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_10_what_a_professor_researcher_is_likely_to_notice",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L579",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_11_what_i_would_change_first",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L627",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_12_the_most_important_strategic_observation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L643",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L687",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_i_would_therefore_revise_my_previous_evaluation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L835",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_10_what_a_professor_researcher_is_likely_to_notice",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_strong_signals",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L583",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_10_what_a_professor_researcher_is_likely_to_notice",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_remaining_questions_a_researcher_could_still_ask",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L605",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_2_technical_architecture_excellent",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_strong_points",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L207",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_2_technical_architecture_excellent",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_ci_cd",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L257",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_2_technical_architecture_excellent",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_testing",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L271",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_3_the_biggest_conceptual_problem_the_security_layer",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_google_authentication_has_the_same_architectural_limitation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L326",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_3_the_biggest_conceptual_problem_the_security_layer",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_what_i_would_change",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L334",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_evaluate_repo",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_evaluation_of_aaradhyadt_github_io",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_evaluate_repo",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_evaluate_repo",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_evaluate_repo",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_turn_1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_repository_engineering",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L689",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_portfolio_communication",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L695",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_research_scholarship_value",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L701",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_credibility_risk",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L707",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_bottom_line",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L713",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_turn_4",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L729",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_revised_assessment_of_the_access_control_subsystem",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L745",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_the_vip2026_issue_is_then_a_different_question",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L782",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_on_webscraping_protection",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L807",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_i_would_therefore_revise_my_previous_evaluation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_revised_score",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L839",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_i_would_therefore_revise_my_previous_evaluation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_more_interestingly_i_think_the_project_has_a_stronger_interpretation_now",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L853",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_i_would_therefore_revise_my_previous_evaluation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_turn_5",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L871",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_i_would_therefore_revise_my_previous_evaluation",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_turn_6",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L879",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_revised_assessment_of_the_access_control_subsystem",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_what_the_system_actually_demonstrates_well",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L756",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_1",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_user",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_user_19",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L23",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_29",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L29",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_35",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_41",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L41",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_47",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L47",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_53",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L53",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_59",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_65",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_71",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L71",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_77",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_83",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L83",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_101",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L101",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_107",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L107",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_113",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L113",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_119",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L119",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_125",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L125",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_131",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L131",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_137",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L137",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_user_91",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L91",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_95",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L95",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_4",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_user_731",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L731",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_4",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_735",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L735",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_5",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_user_873",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L873",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_6",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_user_881",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L881",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_09_17_evaluate_repo_conversation_turn_6",
+      "target": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_885",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L885",
       "weight": 1.0
     },
     {
@@ -22914,7 +24490,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L787",
+      "source_location": "L788",
       "weight": 1.0
     },
     {
@@ -22926,7 +24502,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L826",
+      "source_location": "L827",
       "weight": 1.0
     },
     {
@@ -22938,7 +24514,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L831",
+      "source_location": "L832",
       "weight": 1.0
     },
     {
@@ -25012,5 +26588,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "84b44e6218b74a59d1af27d2227e8b4394b2c9c6"
+  "built_at_commit": "10390e973fe05450216dd57665e9ad38e1178e8e"
 }

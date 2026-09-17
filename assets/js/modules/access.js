@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v54.19)
+   MODULE: access.js — aaradhyadt.github.io (v54.20)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -745,7 +745,8 @@ function renderAccessModal() {
       </div>
 
       <div class="access-hint-box" id="accessHintBox">
-        <strong>Access Passcode:</strong> <code>vip2026</code>
+        <strong>Demo Sandbox Passcode:</strong> <code>vip2026</code>
+        <div style="font-size: 0.72rem; opacity: 0.78; margin-top: 0.25rem;">Interactive Client-Side AES-GCM Decryption Test</div>
       </div>
 
       <div class="access-error-msg" id="accessErrorMsg"></div>
@@ -864,7 +865,8 @@ function openAccessModal(defaultTier = 1) {
   // Stealth Mode: Hide Master demo passcode in Guest mode!
   if (hintBox) {
     hintBox.innerHTML = `
-      <strong>Access Passcode:</strong> <code>vip2026</code>
+      <strong>Demo Sandbox Passcode:</strong> <code>vip2026</code>
+      <div style="font-size: 0.72rem; opacity: 0.78; margin-top: 0.25rem;">Interactive Client-Side AES-GCM Decryption Test</div>
     `;
   }
 

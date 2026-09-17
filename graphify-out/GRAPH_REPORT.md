@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-17)
 
 ## Corpus Check
-- 59 files · ~1,846,260 words
+- 60 files · ~1,849,653 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 920 nodes · 1206 edges · 199 communities (54 shown, 134 thin omitted)
+- 989 nodes · 1274 edges · 200 communities (55 shown, 134 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 83 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `84b44e62`
+- Built from commit: `10390e97`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -42,7 +42,7 @@
 - test_visual_regression.py
 - Report Renderer
 - script.js
-- site_mcp.py
+- 2026-09-17_EVALUATE-REPO_CONVERSATION.md
 - home-widgets.js
 - test_graph_modal.test.mjs
 - generate_cards
@@ -203,6 +203,7 @@
 - UI Screenshot: Projects Page (Desktop)
 - UI Screenshot: Projects Page (Mobile)
 - Stamp Last Commit Workflow
+- Turn 2
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 33 edges
@@ -213,8 +214,8 @@
 6. `bindEvents()` - 14 edges
 7. `get_html_files()` - 14 edges
 8. `cmd_sync()` - 13 edges
-9. `initTour()` - 12 edges
-10. `Aaradhya Dev Tamrakar CV` - 12 edges
+9. `Turn 2` - 13 edges
+10. `initTour()` - 12 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Certificate: Introduction to Claude Cowork` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
@@ -246,7 +247,7 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (199 total, 134 thin omitted)
+## Communities (200 total, 134 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -258,11 +259,11 @@ Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tra
 
 ### Community 2 - "core.js"
 Cohesion: 0.08
-Nodes (35): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+27 more)
+Nodes (34): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+26 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
-Nodes (27): closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson(), generateResumeMarkdown() (+19 more)
+Nodes (28): renderSiteFooter(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson() (+20 more)
 
 ### Community 4 - "site_automation.py"
 Cohesion: 0.12
@@ -305,8 +306,8 @@ Cohesion: 0.12
 Nodes (16): Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`), Key Features, 📄 License (+8 more)
 
 ### Community 14 - "manage_payloads.py"
-Cohesion: 0.37
-Nodes (16): cmd_export(), cmd_get(), cmd_import(), cmd_list(), cmd_set(), cmd_verify(), decrypt_payload(), derive_key() (+8 more)
+Cohesion: 0.19
+Nodes (24): handle_resource_read(), handle_tool_call(), process_request(), Fetches resource content based on URI., Executes requested tool and returns output., Routes JSON-RPC request to appropriate handler., Reads JSON-RPC messages from stdin and writes responses to stdout., run_stdio_server() (+16 more)
 
 ### Community 15 - "PCBTraces"
 Cohesion: 0.28
@@ -356,9 +357,9 @@ Nodes (10): Report Utils Class, Report Renderer, __initLighthouseReport__, Repor
 Cohesion: 0.36
 Nodes (6): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
 
-### Community 27 - "site_mcp.py"
-Cohesion: 0.31
-Nodes (8): handle_resource_read(), handle_tool_call(), process_request(), Fetches resource content based on URI., Executes requested tool and returns output., Routes JSON-RPC request to appropriate handler., Reads JSON-RPC messages from stdin and writes responses to stdout., run_stdio_server()
+### Community 27 - "2026-09-17_EVALUATE-REPO_CONVERSATION.md"
+Cohesion: 0.05
+Nodes (41): 10. What a professor/researcher is likely to notice, 11. What I would change first, 12. The most important strategic observation, 1. What the repository communicates about you, 2. Technical architecture — excellent, 3. The biggest conceptual problem: the security layer, 4. The evidence/provenance system is one of the best parts, 5. Content strategy: impressive, but increasingly dense (+33 more)
 
 ### Community 28 - "home-widgets.js"
 Cohesion: 0.31
@@ -464,25 +465,29 @@ Nodes (3): Best Practices Audit, Lighthouse Configuration, Performance Metrics
 Cohesion: 0.67
 Nodes (3): Privacy Policy, Multi-Tier Access Control, Terms of Service
 
+### Community 199 - "Turn 2"
+Cohesion: 0.07
+Nodes (27): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+19 more)
+
 ## Knowledge Gaps
-- **303 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+298 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 463 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **358 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+353 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 518 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **134 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `parse_html()` connect `verify.py` to `add_project`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Why does `get_site_stats()` connect `site_automation.py` to `add_project`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `renderSiteFooter()` connect `core.js` to `ui.js`?**
+  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+- **Why does `renderSiteFooter()` connect `ui.js` to `core.js`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _303 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _358 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09472606246799795 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07560975609756097 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07692307692307693 - nodes in this community are weakly interconnected._

@@ -3,7 +3,7 @@
 [![Deploy Pages](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml)
 [![Verification Suite](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml)
 [![Lighthouse Audit](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml)
-[![Version](https://img.shields.io/badge/version-v54.19-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
+[![Version](https://img.shields.io/badge/version-v54.20-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
 [![Zero-Framework](https://img.shields.io/badge/framework-vanilla%20HTML%2FCSS%2FJS-orange.svg)](https://aaradhyadt.github.io)
 
@@ -29,7 +29,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v54.19 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v54.20 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
@@ -91,14 +91,18 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 
 ## 🔒 Multi-Tier Access Control & Security Model
 
-> **Security Demonstration Notice:** This access-control system is an educational demonstration of client-side cryptography, authentication flows, and encrypted content gating on a static GitHub Pages application. It is intentionally client-side by design and is not intended to provide server-enforced authorization for genuinely confidential resources. It showcases Web Crypto API usage (AES-256-GCM, PBKDF2), Google Identity Services integration, and encrypted DOM lifecycle management as engineering concepts.
+> **Security & Threat Model Architecture Notice:** This access-control system is an educational demonstration of in-browser cryptography, authentication flows, and encrypted content gating built natively for a static GitHub Pages architecture. It operates with two explicit engineering goals:
+> 1. **Anti-Scraping / Crawler Friction Barrier**: Gated repository links and deep project specifications are pre-encrypted into hex ciphertexts (`ACCESS_CONTROL_PAYLOADS`), ensuring unscripted web crawlers, search indexers, and automated scrapers (`curl`, raw `requests`) cannot harvest raw URLs from static HTML without a full JS runtime.
+> 2. **Interactive Web Crypto Sandbox**: The Tier 1 passcode (`vip2026`) is surfaced as a sandbox credential, enabling visitors and technical reviewers to test client-side PBKDF2 (100k rounds) and AES-256-GCM authenticated decryption in real time directly in the browser.
+>
+> *True cryptographic authentication and administrative authorization are partitioned strictly to **Tier 2 (Master Admin)**, which enforces cryptographically signed Google OAuth 2.0 JWT verification against `aaradhyadevtmr@gmail.com` with manual passcode bypass disabled.* See [`dev-logs/SECURITY_AUDIT_VIP_TIER.md`](dev-logs/SECURITY_AUDIT_VIP_TIER.md) for the complete threat model assessment.
 
 The site features an advanced **Zero-Leak Client-Side Access Control System** supporting 3 security tiers:
 
 | Tier       | Role                | Access Level & Capabilities                                                                                                                                                                                                                                           |
 | :--------- | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | **Tier 0** | **Public Guest**    | Standard visitor view. Full portfolio, project descriptions, skills & certificates. GitHub source code links display as `🔒 GitHub Repo (VIP Access Required)`.                                                                                                       |
-| **Tier 1** | **Higher Tier VIP** | Unlocked via passcode (`vip2026`) or Google Sign-In with an authorized email/domain. Grants direct access to all GitHub repository links, private project specs & extended metrics.                                                                                   |
+| **Tier 1** | **Higher Tier VIP** | Unlocked via sandbox passcode (`vip2026`) or Google Sign-In with an authorized email/domain. Grants direct access to all GitHub repository links, private project specs & extended metrics.                                                                           |
 | **Tier 2** | **Master Admin**    | Unlocked exclusively via Google Sign-In with Master email (`aaradhyadevtmr@gmail.com`). (Manual passcode authentication is disabled for Master Level). Grants Master Control Panel modal, live VIP allowlist manager, simulated tier switching & diagnostic controls. |
 
 ### 🔍 Technical Security Architecture

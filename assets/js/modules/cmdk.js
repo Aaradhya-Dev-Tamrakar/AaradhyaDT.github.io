@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: cmdk.js — aaradhyadt.github.io (v54.19)
+   MODULE: cmdk.js — aaradhyadt.github.io (v54.20)
    Command palette (Cmd+K) search and quick navigation.
    ============================================================ */
 
@@ -23,7 +23,7 @@ const CMDK_ENTRIES = [
   { title: 'Keymap & Display Guide', type: 'section', meta: 'Home · Section', href: '/index.html#keymap', text: 'keymap key map keyboard shortcuts hotkeys reference display guide oled 400 nits navigation controls shortcuts key bindings' },
   { title: 'At a Glance: Stats & Metrics', type: 'section', meta: 'Home · Section', href: '/index.html#stats', text: 'stats statistics at a glance metrics impact 39 achievements 30 projects key numbers highlights' },
   { title: 'About Sign In with Google', type: 'section', meta: 'Home · Section', href: '/index.html#about-sign-in', text: 'access control sign in with google login level 1 authentication privacy client storage' },
-  { title: 'VIP Exclusive: Research & Specs', type: 'section', meta: 'Home · Section', href: '/index.html#vip-exclusive', text: 'vip tier exclusive research specs notes gated content passcode vip2026' },
+  { title: 'VIP Exclusive: Research & Specs', type: 'section', meta: 'Home · Section', href: '/index.html#vip-exclusive', text: 'vip tier exclusive research specs notes gated content passcode encryption crypto' },
   { title: 'Master Level: System Diagnostics & Console', type: 'section', meta: 'Home · Section', href: '/index.html#master-exclusive', text: 'master tier system diagnostics master console admin controls diagnostics health' },
 
   // About Page Locations
@@ -48,7 +48,7 @@ const CMDK_ENTRIES = [
   { title: 'Generate Tailored Resume (ATS & PDF)', type: 'action', meta: 'Action', href: 'javascript:openResumeGenerator()', text: 'generate resume tailored ats cv export pdf print resume builder' },
   { title: 'Interactive Skill Radar Visualizer', type: 'action', meta: 'Action', href: 'javascript:initSkillRadar()', text: 'interactive skill radar visualizer radar chart skills competency' },
   { title: '3D AST Knowledge Graph HUD (WebGL 2)', type: 'action', meta: 'Action', href: 'javascript:openGraphModal()', text: '3d ast knowledge graph hud webgl 2 topology code wiki graph explorer codewiki' },
-  { title: 'Access Control & VIP Login', type: 'action', meta: 'Passcode: vip2026', href: 'javascript:openAccessModal(1)', text: 'access control login vip higher tier passcode password security' },
+  { title: 'Access Control & VIP Login', type: 'action', meta: 'Action · VIP Access', href: 'javascript:openAccessModal(1)', text: 'access control login vip higher tier passcode password security unlock' },
   { title: 'Guided Site Tour (Shift+T)', type: 'action', meta: 'Shortcut: Shift+T', href: 'javascript:startTour()', text: 'guided site tour walkthrough interactive tour help tutorial' },
   { title: 'Toggle Audio Micro-Sounds (Shift+A)', type: 'action', meta: 'Shortcut: Shift+A', href: 'javascript:toggleAudioCues()', text: 'toggle audio sound effects micro-sounds cues sfx mute unmute' },
   { title: "What's New (Release History)", type: 'action', meta: 'Action', href: 'javascript:openWhatsNewModal()', text: 'whats new changelog release history updates version notes' },
