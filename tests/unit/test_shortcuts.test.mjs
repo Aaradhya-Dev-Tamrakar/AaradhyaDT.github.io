@@ -109,27 +109,29 @@ test('Shortcuts: modal creation and open/close state transitions', () => {
   assert.strictEqual(m.classList.contains('open'), false);
 });
 
-test('Shortcuts: Alt+0 and 0 correctly trigger theme toggle condition', () => {
-  function isThemeToggleKey(e) {
+test('Shortcuts: 0 toggles dark/light mode and Alt+0 cycles color theme accents', () => {
+  function checkThemeKey(e) {
     const isZeroCode = e.code === 'Digit0' || e.code === 'Numpad0' || e.keyCode === 48 || e.keyCode === 96;
     const isAltZero = e.altKey && (isZeroCode || e.key === '0');
     const isPlainZero = !e.altKey && !e.shiftKey && (isZeroCode || e.key === '0');
-    return isAltZero || isPlainZero;
+    if (isAltZero) return 'cycleAccent';
+    if (isPlainZero) return 'toggleTheme';
+    return null;
   }
 
-  // 1. Standard '0' key (plain)
-  assert.strictEqual(isThemeToggleKey({ key: '0', shiftKey: false, altKey: false, code: 'Digit0' }), true);
+  // 1. Plain '0' -> toggles dark/light mode
+  assert.strictEqual(checkThemeKey({ key: '0', shiftKey: false, altKey: false, code: 'Digit0' }), 'toggleTheme');
 
-  // 2. Alt+0 with Digit0
-  assert.strictEqual(isThemeToggleKey({ key: '0', shiftKey: false, altKey: true, code: 'Digit0' }), true);
+  // 2. Alt+0 with Digit0 -> cycles accent colors
+  assert.strictEqual(checkThemeKey({ key: '0', shiftKey: false, altKey: true, code: 'Digit0' }), 'cycleAccent');
 
-  // 3. Alt+Numpad0
-  assert.strictEqual(isThemeToggleKey({ key: '0', shiftKey: false, altKey: true, code: 'Numpad0' }), true);
+  // 3. Alt+Numpad0 -> cycles accent colors
+  assert.strictEqual(checkThemeKey({ key: '0', shiftKey: false, altKey: true, code: 'Numpad0' }), 'cycleAccent');
 
   // 4. Alt+keyCode 48 (international layouts where key property may vary with AltGr / Alt)
-  assert.strictEqual(isThemeToggleKey({ key: 'Unidentified', shiftKey: false, altKey: true, code: 'Digit0', keyCode: 48 }), true);
+  assert.strictEqual(checkThemeKey({ key: 'Unidentified', shiftKey: false, altKey: true, code: 'Digit0', keyCode: 48 }), 'cycleAccent');
 
-  // 5. Unrelated keys with Alt (Alt+1, Alt+2)
-  assert.strictEqual(isThemeToggleKey({ key: '1', shiftKey: false, altKey: true, code: 'Digit1' }), false);
-  assert.strictEqual(isThemeToggleKey({ key: '2', shiftKey: false, altKey: true, code: 'Digit2' }), false);
+  // 5. Unrelated keys (Alt+1, Alt+2, plain 1)
+  assert.strictEqual(checkThemeKey({ key: '1', shiftKey: false, altKey: true, code: 'Digit1' }), null);
+  assert.strictEqual(checkThemeKey({ key: '1', shiftKey: false, altKey: false, code: 'Digit1' }), null);
 });

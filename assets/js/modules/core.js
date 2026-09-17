@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.26)
+   MODULE: core.js — aaradhyadt.github.io (v54.27)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -458,14 +458,25 @@ function initThemeToggle() {
     const isAltZero = e.altKey && (isZeroCode || e.key === '0');
     const isPlainZero = !e.altKey && !e.shiftKey && (isZeroCode || e.key === '0');
 
-    if (isAltZero || isPlainZero) {
+    if (isAltZero) {
       const now = Date.now();
-      if (now - (window.__lastThemeToggle || 0) < 300) return;
+      if (now - (window.__lastAccentToggle || 0) < 250) return;
+      window.__lastAccentToggle = now;
+
+      e.preventDefault();
+      cycleAccent();
+      return;
+    }
+
+    if (isPlainZero) {
+      const now = Date.now();
+      if (now - (window.__lastThemeToggle || 0) < 250) return;
       window.__lastThemeToggle = now;
 
       e.preventDefault();
       if (typeof triggerHapticFeedback === 'function') triggerHapticFeedback(12);
       toggleTheme(e);
+      return;
     }
   });
 }
@@ -490,6 +501,17 @@ function applyAccent(accent) {
   });
 
   syncBrandLogos(document.documentElement.getAttribute('data-theme') || 'dark', target);
+}
+
+function cycleAccent() {
+  const validAccents = ['gold', 'emerald', 'violet', 'cyan', 'ruby', 'prism'];
+  const current = localStorage.getItem('adt-accent') || 'gold';
+  const idx = validAccents.indexOf(current);
+  const next = validAccents[(idx + 1) % validAccents.length];
+  applyAccent(next);
+  if (typeof triggerHapticFeedback === 'function') triggerHapticFeedback(14);
+  if (typeof playAudioCue === 'function') playAudioCue('click');
+  return next;
 }
 
 function initAccent() {
@@ -946,3 +968,4 @@ window.subscribePushNotifications = subscribePushNotifications;
 window.toggleTheme = toggleTheme;
 window.applyTheme = applyTheme;
 window.applyAccent = applyAccent;
+window.cycleAccent = cycleAccent;
