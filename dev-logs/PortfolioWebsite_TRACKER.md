@@ -1,11 +1,11 @@
-# Portfolio Website Tracker — v54.14
+# Portfolio Website Tracker — v54.15
 
 Last updated: _2026-09-17_
 
 - **Journey Timeline Waterfall Flowing Animation Upgrade (`journey.html`)**:
   - **Continuous Spine Waterfall Current**: Engineered `.journey-track-stream` positioned along the timeline vertical spine with an infinite, rhythmic photon gradient stream (`repeating-linear-gradient` with `mask-image` falloff), delivering an ambient cascading stream at any scroll depth.
   - **Viewport-Aware Cascade Engine (`initJourneyWaterfallCascade`)**: Replaced the global offscreen 37-milestone loop with an `IntersectionObserver`-driven cascade scheduler that detects visible milestones in real time, sequencing light waves across visible cards with a 420ms stagger and 1.6s breathing reset interval.
-  - **Liquid Refraction & Radial Node Resonators**: Elevated milestone cards with a tapered 20px liquid refraction beam (`journeyCardLiquidGlide`), inner glass bloom, radial aura rings on nodes (`journeyNodePulse`), and luminous leading photon head on the scroll-driven progress line.
+  - **Concentrated Liquid Bead Droplet & Radial Node Resonators**: Replaced the sliding 100%-height rectangle with a compact 38px organic liquid bead droplet (`journeyLiquidBeadDrop`) with feathered comet tail and core bloom, trickling smoothly down the rounded left border, accompanied by radial aura rings on nodes (`journeyNodePulse`) and a luminous leading photon head on the scroll-driven progress line.
   - **Accessibility & Theme Compliance**: Calibrated light mode variables (`html[data-theme="light"]`) and strict `@media (prefers-reduced-motion: reduce)` fallbacks; passed all 25 validation categories in `python scripts/verify.py`.
 
 - **Dynamic Multi-Accent Branding Suite & Logo Binding Architecture**:
@@ -325,7 +325,7 @@ Last updated: _2026-09-17_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.14`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.15`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
