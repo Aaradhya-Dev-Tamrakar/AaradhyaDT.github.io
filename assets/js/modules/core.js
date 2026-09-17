@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.25)
+   MODULE: core.js — aaradhyadt.github.io (v54.26)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -451,13 +451,14 @@ function initThemeToggle() {
   document.addEventListener('keydown', (e) => {
     const tag = (document.activeElement || {}).tagName || '';
     if (/^(INPUT|TEXTAREA|SELECT)$/i.test(tag) || document.activeElement?.isContentEditable) return;
-    if (e.metaKey || e.ctrlKey || e.altKey) return;
+    if (e.metaKey || e.ctrlKey) return;
     if (typeof isAnyModalOpen === 'function' && isAnyModalOpen()) return;
 
-    const isZeroCode = e.code === 'Digit0' || e.code === 'Numpad0';
-    const isZeroKey = e.key === '0' || e.key === ')' || (e.shiftKey && (isZeroCode || e.key === '=' || e.key === 'Insert'));
+    const isZeroCode = e.code === 'Digit0' || e.code === 'Numpad0' || e.keyCode === 48 || e.keyCode === 96;
+    const isAltZero = e.altKey && (isZeroCode || e.key === '0');
+    const isPlainZero = !e.altKey && !e.shiftKey && (isZeroCode || e.key === '0');
 
-    if (isZeroCode || isZeroKey) {
+    if (isAltZero || isPlainZero) {
       const now = Date.now();
       if (now - (window.__lastThemeToggle || 0) < 300) return;
       window.__lastThemeToggle = now;

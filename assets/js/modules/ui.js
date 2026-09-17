@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v54.25)
+   MODULE: ui.js — aaradhyadt.github.io (v54.26)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -373,7 +373,7 @@ function initLightbox() {
 // 1 → index.html  2 → projects.html  3 → experience.html
 // 4 → achievements.html  5 → about.html  6 → journey.html
 // 7 → contact.html
-// 0 → toggle theme
+// 0 or Alt+0 → toggle theme
 // ` → toggle hero date B.S. / A.D. (index.html only; no-op elsewhere)
 // Shift+4 → toggle Academic / Extracurricular track (achievements.html only; no-op elsewhere)
 // Alt+2 → expand/collapse all project cards (projects.html only; no-op elsewhere)
@@ -434,10 +434,11 @@ function initKeyNav() {
       return;
     }
 
-    const isZeroCode = e.code === 'Digit0' || e.code === 'Numpad0';
-    const isZeroKey = e.key === '0' || e.key === ')' || (e.shiftKey && (isZeroCode || e.key === '=' || e.key === 'Insert'));
+    const isZeroCode = e.code === 'Digit0' || e.code === 'Numpad0' || e.keyCode === 48 || e.keyCode === 96;
+    const isAltZero = e.altKey && (isZeroCode || e.key === '0');
+    const isPlainZero = !e.altKey && !e.shiftKey && (isZeroCode || e.key === '0');
 
-    if (isZeroCode || isZeroKey) {
+    if (isAltZero || isPlainZero) {
       const now = Date.now();
       if (now - (window.__lastThemeToggle || 0) < 300) return;
       window.__lastThemeToggle = now;
