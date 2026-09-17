@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v54.18)
+   MODULE: ui.js — aaradhyadt.github.io (v54.19)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 

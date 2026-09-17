@@ -1916,24 +1916,39 @@ html[data-theme="light"] .shortcuts-modal-card::before {
   margin-bottom: 0.85rem;
   display: inline-flex;
   position: relative;
+  width: 88px;
+  height: 55px;
+  max-width: 88px;
+  max-height: 55px;
+  align-self: flex-start;
   border-radius: 6px;
   overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 14px var(--accent-a12);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease;
+  isolation: isolate;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
+}
+
+.footer-crest-wrap:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 22px var(--accent-a35);
 }
 
 .footer-crest-img {
-  width: 88px;
-  height: 55px;
+  width: 100%;
+  height: 100%;
+  display: block;
   object-fit: cover;
-  border-radius: 6px;
-  border: 1px solid var(--line);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 14px var(--accent-a12);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease, box-shadow 0.3s ease, opacity 0.2s ease;
+  border-radius: 5px;
+  border: none;
+  box-shadow: none;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.2s ease;
 }
 
-.footer-crest-img:hover {
-  transform: translateY(-2px) scale(1.04);
-  border-color: var(--accent);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45), 0 0 22px var(--accent-a35);
+.footer-crest-wrap:hover .footer-crest-img {
+  transform: scale(1.04);
 }
 
 .hero-creed-banner {
@@ -2131,6 +2146,8 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 .hero-creed-banner {
   position: relative;
   overflow: hidden;
+  isolation: isolate;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .hero-crest-stage::after,
