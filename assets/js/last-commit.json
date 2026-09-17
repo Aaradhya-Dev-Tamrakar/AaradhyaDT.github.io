@@ -1,6 +1,6 @@
 {
-  "sha": "36ed0154b925a6e5fe1f1e0ab3a654e1a315773f",
-  "shortSha": "36ed015",
-  "date": "2026-09-17T20:44:09+05:45",
-  "message": "fix(ui): confine footer crest hover shimmer within badge boundaries"
+  "sha": "940052b3d06e081659262c68427c0e2d5a8066d9",
+  "shortSha": "940052b",
+  "date": "2026-09-17T21:00:48+05:45",
+  "message": "docs(security): archive VIP security audit and update threat model documentation"
 }
