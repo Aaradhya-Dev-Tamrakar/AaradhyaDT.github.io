@@ -290,6 +290,9 @@ def sync_manifest(
         missing_creds.append("GDRIVE_REFRESH_TOKEN")
 
     if missing_creds:
+        if os.environ.get("CI") and not os.environ.get("GDRIVE_STRICT_AUTH"):
+            print(f"[SKIP] Missing OAuth credentials ({', '.join(missing_creds)}) in CI environment. Skipping Google Drive sync gracefully.")
+            return 0
         print(f"[ERROR] Missing OAuth credentials: {', '.join(missing_creds)}")
         print("Please configure environment variables or local credential files.")
         return 1

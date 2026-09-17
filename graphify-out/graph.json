@@ -977,7 +977,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/sync_drive.py",
-      "source_location": "L386"
+      "source_location": "L389"
     },
     {
       "id": "scripts_sync_drive_obtain_access_token",
@@ -5760,7 +5760,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "54.12.0"
+      "version": "54.13.0"
     },
     {
       "id": "sync",
@@ -14686,7 +14686,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/sync_drive.py",
-      "source_location": "L395",
+      "source_location": "L398",
       "weight": 1.0
     },
     {
@@ -14698,7 +14698,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/sync_drive.py",
-      "source_location": "L396",
+      "source_location": "L399",
       "weight": 1.0
     },
     {
@@ -14746,7 +14746,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/sync_drive.py",
-      "source_location": "L297",
+      "source_location": "L300",
       "weight": 1.0
     },
     {
@@ -14758,7 +14758,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/sync_drive.py",
-      "source_location": "L328",
+      "source_location": "L331",
       "weight": 1.0
     },
     {
@@ -14770,7 +14770,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/sync_drive.py",
-      "source_location": "L342",
+      "source_location": "L345",
       "weight": 1.0
     },
     {
@@ -14782,7 +14782,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/sync_drive.py",
-      "source_location": "L354",
+      "source_location": "L357",
       "weight": 1.0
     },
     {
@@ -14794,7 +14794,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/sync_drive.py",
-      "source_location": "L377",
+      "source_location": "L380",
       "weight": 1.0
     },
     {
@@ -20856,7 +20856,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/sync_drive.py",
-      "source_location": "L386",
+      "source_location": "L389",
       "weight": 1.0
     },
     {
@@ -25012,5 +25012,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "acf0e7918156190decb290be95259a2e73a36aa7"
+  "built_at_commit": "25256856a837eb078504e2153252520183050c9c"
 }
