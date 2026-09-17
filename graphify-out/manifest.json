@@ -12,9 +12,9 @@
     "semantic_hash": "a073d0d3d56e36478bd1c275d6c1a384"
   },
   "assets/js/data/releases.js": {
-    "mtime": 1789658424.130045,
-    "seen": 1789658430.7001882,
-    "ast_hash": "25195665b77aaa2c3a85653540652704",
+    "mtime": 1789658706.9407554,
+    "seen": 1789658712.888836,
+    "ast_hash": "fe35d249a5992fa9c74c28dace3dcef4",
     "semantic_hash": ""
   },
   "assets/js/data/resume-data.js": {
@@ -30,75 +30,75 @@
     "semantic_hash": "026323274d150a0047753d92c2b099e0"
   },
   "assets/js/last-commit.json": {
-    "mtime": 1789658198.352847,
-    "seen": 1789658430.7001932,
-    "ast_hash": "7d7879854000efd1695f072037a8e4fd",
+    "mtime": 1789658475.106144,
+    "seen": 1789658712.8888397,
+    "ast_hash": "3868381c797352d6b2528e929bbbde90",
     "semantic_hash": ""
   },
   "assets/js/modules/access.js": {
-    "mtime": 1789658424.1370618,
-    "seen": 1789658430.7001946,
-    "ast_hash": "f7e1d460b93a749e7cff7814b26fa360",
+    "mtime": 1789658706.9492831,
+    "seen": 1789658712.8888407,
+    "ast_hash": "abe037ef22f9a73b4e74a92c60530259",
     "semantic_hash": ""
   },
   "assets/js/modules/audio.js": {
-    "mtime": 1789658424.1375606,
-    "seen": 1789658430.7001953,
-    "ast_hash": "235ff1306e4f21f67a35f47a77dc8834",
+    "mtime": 1789658706.9497836,
+    "seen": 1789658712.8888416,
+    "ast_hash": "982a3c8b606ad3a61755a3907a36dae6",
     "semantic_hash": ""
   },
   "assets/js/modules/cmdk.js": {
-    "mtime": 1789658424.1380608,
-    "seen": 1789658430.7001965,
-    "ast_hash": "ecfeac0daa643e8480ba4e4075cd0ea0",
+    "mtime": 1789658706.9502864,
+    "seen": 1789658712.8888428,
+    "ast_hash": "59f725ba32703669b756d6f50404cc1c",
     "semantic_hash": ""
   },
   "assets/js/modules/constants.js": {
-    "mtime": 1789658424.1385608,
-    "seen": 1789658430.7001982,
-    "ast_hash": "d7df14f542a9cd5fe92f76f21d5c6e70",
+    "mtime": 1789658706.9502864,
+    "seen": 1789658712.8888438,
+    "ast_hash": "23a25edfc08a0a05576134bca93de5b8",
     "semantic_hash": ""
   },
   "assets/js/modules/core.js": {
-    "mtime": 1789658424.1390643,
-    "seen": 1789658430.700199,
-    "ast_hash": "0177d3e72003fa599302567be6c49274",
+    "mtime": 1789658706.9507847,
+    "seen": 1789658712.8888445,
+    "ast_hash": "d7f0e8fd3d6abfffeca70f619c4893c7",
     "semantic_hash": ""
   },
   "assets/js/modules/haptics.js": {
-    "mtime": 1789658424.140059,
-    "seen": 1789658430.7002037,
-    "ast_hash": "e35b9125b93ac002b3713ca16e8a8783",
+    "mtime": 1789658706.9527833,
+    "seen": 1789658712.8888483,
+    "ast_hash": "358b10409c29db288f2e0e89839bf038",
     "semantic_hash": ""
   },
   "assets/js/modules/home-widgets.js": {
-    "mtime": 1789658424.140059,
-    "seen": 1789658430.7002048,
-    "ast_hash": "faefc8c8138dcad711a865587e1ee106",
+    "mtime": 1789658706.9527833,
+    "seen": 1789658712.8888495,
+    "ast_hash": "cbe8f97c344f5ae9becf252c36f49d80",
     "semantic_hash": ""
   },
   "assets/js/modules/terminal.js": {
-    "mtime": 1789658424.1415586,
-    "seen": 1789658430.7002077,
-    "ast_hash": "3ea6c3f1d79b59770fe7c3de3fcac737",
+    "mtime": 1789658706.9542847,
+    "seen": 1789658712.8888514,
+    "ast_hash": "e57a9c203e63074b568c6d1906615374",
     "semantic_hash": ""
   },
   "assets/js/modules/tour.js": {
-    "mtime": 1789658424.1420598,
-    "seen": 1789658430.7002087,
-    "ast_hash": "797b8c1d37cce45f14890ee9732870df",
+    "mtime": 1789658706.9542847,
+    "seen": 1789658712.8888526,
+    "ast_hash": "6ed232462f9032d5b1408371b3968e81",
     "semantic_hash": ""
   },
   "assets/js/modules/ui.js": {
-    "mtime": 1789658424.14256,
-    "seen": 1789658430.7002096,
-    "ast_hash": "334233beb29cce4c5ed24a1597335bb7",
+    "mtime": 1789658706.9547849,
+    "seen": 1789658712.8888535,
+    "ast_hash": "56ea4aec1102267fd00c06d91a2676cf",
     "semantic_hash": ""
   },
   "assets/js/script.js": {
-    "mtime": 1789658424.1310532,
-    "seen": 1789658430.7002106,
-    "ast_hash": "5d812fc9e6b04eadcee94f4025e008d5",
+    "mtime": 1789658706.9427557,
+    "seen": 1789658712.8888545,
+    "ast_hash": "32b16050eed56e1cfaa649d95d22e80f",
     "semantic_hash": ""
   },
   "mcp-server/mcp_config.json": {
@@ -156,9 +156,9 @@
     "semantic_hash": "81411c8c40f59919a5a8d3092a2e156a"
   },
   "scripts/site_automation.py": {
-    "mtime": 1789658424.14306,
-    "seen": 1789658430.7002327,
-    "ast_hash": "ec6f57de542d7e9dcfe03c2808837cd7",
+    "mtime": 1789658706.955284,
+    "seen": 1789658712.88887,
+    "ast_hash": "20db25937387abe9eac9d67fed4271ca",
     "semantic_hash": ""
   },
   "scripts/test_e2e.py": {
@@ -168,15 +168,15 @@
     "semantic_hash": "daea9e039d7fa8aa962a6fe1c2bb635f"
   },
   "scripts/verify.py": {
-    "mtime": 1789658424.1320596,
-    "seen": 1789658430.7002375,
-    "ast_hash": "06c02f4037f175e28610a75993142649",
+    "mtime": 1789658706.944254,
+    "seen": 1789658712.8888736,
+    "ast_hash": "07c6bb13a2fd39e90fde962bbb441803",
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1789658424.130045,
-    "seen": 1789658430.700239,
-    "ast_hash": "8778f186974a7e4bc2cb1f7297ee02d2",
+    "mtime": 1789658706.9417553,
+    "seen": 1789658712.8888745,
+    "ast_hash": "c9d8acb5cbd81f55bb226e646eae87a1",
     "semantic_hash": ""
   },
   "sync.ps1": {
@@ -234,9 +234,9 @@
     "semantic_hash": "69e42401b228ea852a6a56ec535d3c1e"
   },
   ".github/workflows/verify.yml": {
-    "mtime": 1789658424.1445608,
-    "seen": 1789658430.7002532,
-    "ast_hash": "30268bcd7f2c1d9a9f97304a82ea0293",
+    "mtime": 1789658706.956785,
+    "seen": 1789658712.888885,
+    "ast_hash": "b280e99fd2f097b543222c7221e38ae2",
     "semantic_hash": ""
   },
   "404.html": {
@@ -264,9 +264,9 @@
     "semantic_hash": "cdbb114e674244e3b5d310ef492642e8"
   },
   "README.md": {
-    "mtime": 1789658424.1440604,
-    "seen": 1789658430.7002606,
-    "ast_hash": "0228c8680af2d18b991bdffa9961e5ea",
+    "mtime": 1789658706.9562852,
+    "seen": 1789658712.888891,
+    "ast_hash": "861cb5dec91ed836536ea6ed2a9d7a95",
     "semantic_hash": ""
   },
   "about.html": {
@@ -288,9 +288,9 @@
     "semantic_hash": "d284ad8b94cb329254e6963741995e10"
   },
   "dev-logs/PortfolioWebsite_TRACKER.md": {
-    "mtime": 1789658424.1355624,
-    "seen": 1789658430.7002702,
-    "ast_hash": "567c4e81445461a3314ae262cbd07338",
+    "mtime": 1789658706.947784,
+    "seen": 1789658712.8888986,
+    "ast_hash": "8f8e622201c0e8f6cb26e8862f3e04e7",
     "semantic_hash": ""
   },
   "dev-logs/og-image/README.md": {
@@ -1110,9 +1110,9 @@
     "semantic_hash": "7f5e4548b72668b18611792e1553673f"
   },
   "pyproject.toml": {
-    "mtime": 1789658424.1450605,
-    "seen": 1789658430.7002187,
-    "ast_hash": "2b127fbc4116d3de25a90db5e8b42ffe",
+    "mtime": 1789658706.9572852,
+    "seen": 1789658712.8888595,
+    "ast_hash": "0c7a34210aa297b5dadf0d10dd5c8c0c",
     "semantic_hash": ""
   },
   "scripts/test_visual_regression.py": {
@@ -1230,9 +1230,9 @@
     "semantic_hash": "0cca253a1191d9eaab62e09c96892f91"
   },
   "assets/js/modules/shortcuts.js": {
-    "mtime": 1789658424.1405609,
-    "seen": 1789658430.7002063,
-    "ast_hash": "bf06fca9d5433e2c53755e4d3a2bf177",
+    "mtime": 1789658706.9532843,
+    "seen": 1789658712.8888505,
+    "ast_hash": "cad65a802b634a6bee5e23c21eb2fdb1",
     "semantic_hash": ""
   },
   "tests/unit/test_shortcuts.test.mjs": {
@@ -1248,9 +1248,9 @@
     "semantic_hash": "ebe61c00d98c1605124a224031b9c778"
   },
   "assets/js/modules/graph-modal.js": {
-    "mtime": 1789658424.1395607,
-    "seen": 1789658430.7002025,
-    "ast_hash": "659388efbc44dbeb69fefd75325de369",
+    "mtime": 1789658706.9522834,
+    "seen": 1789658712.8888476,
+    "ast_hash": "ff0bd5eda6770497cce0605bf293b1cd",
     "semantic_hash": ""
   },
   "scripts/generate_graph_data.py": {
@@ -1284,9 +1284,9 @@
     "semantic_hash": "f2ad760c831ea637bcf3fdd07eb54fb4"
   },
   "assets/js/modules/evidence.js": {
-    "mtime": 1789658424.1390643,
-    "seen": 1789658430.700201,
-    "ast_hash": "44deaf70dffea9a64c9ead0f94d8e627",
+    "mtime": 1789658706.9512854,
+    "seen": 1789658712.8888462,
+    "ast_hash": "6e6bb0156ea7fab9efa4b5667ed29405",
     "semantic_hash": ""
   },
   "data/README.md": {
@@ -1296,9 +1296,9 @@
     "semantic_hash": ""
   },
   "drive-manifest.json": {
-    "mtime": 1789658198.3533468,
-    "seen": 1789658430.7002146,
-    "ast_hash": "d838e26bae0f2a00d79db5449c49e532",
+    "mtime": 1789658705.9592676,
+    "seen": 1789658712.8888566,
+    "ast_hash": "7a9896b1a40064c87dfccf9c043e89a1",
     "semantic_hash": ""
   },
   "scripts/sync_drive.py": {
@@ -1332,45 +1332,45 @@
     "semantic_hash": ""
   },
   "assets/images/branding/adt-emerald-favicon.png": {
-    "mtime": 1789650733.0262244,
-    "seen": 1789651083.8669724,
-    "ast_hash": "69698a9ce9d8945541ee98cd786a99ee",
+    "mtime": 1789658706.0124953,
+    "seen": 1789658712.888999,
+    "ast_hash": "ab7cf82e5ca763eabcd7265cad977f63",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-emerald-icon-192.png": {
-    "mtime": 1789650733.021227,
-    "seen": 1789651083.8669736,
-    "ast_hash": "c3045c35c0b9ecfe9cf54b949384857a",
+    "mtime": 1789658706.0129972,
+    "seen": 1789658712.8889997,
+    "ast_hash": "8f734d25497def79e75edd37abbc1eda",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-emerald-icon-192.webp": {
-    "mtime": 1789650732.9987245,
-    "seen": 1789651083.8669744,
-    "ast_hash": "bb2a445498e5ca717e77be4932855192",
+    "mtime": 1789658706.0134966,
+    "seen": 1789658712.8890007,
+    "ast_hash": "77c0fd73dfcc0113da1f47e76653cc14",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-emerald-icon-512.png": {
-    "mtime": 1789650732.9827247,
-    "seen": 1789651083.866975,
-    "ast_hash": "37164e72a59539c3ad69f8e8aa9a974e",
+    "mtime": 1789658706.0149965,
+    "seen": 1789658712.8890014,
+    "ast_hash": "53a3545f3d2c579ff20ed88502476faa",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-emerald-icon-512.webp": {
-    "mtime": 1789650732.8492248,
-    "seen": 1789651083.8669758,
-    "ast_hash": "3be2e358793b8fbd8be52d29fbf576e6",
+    "mtime": 1789658706.0159984,
+    "seen": 1789658712.889002,
+    "ast_hash": "e4162e31da1bccf36df202e07dfc79bc",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-emerald.jpg": {
-    "mtime": 1789650732.727217,
-    "seen": 1789651083.8669767,
-    "ast_hash": "1277260dc7404e24ba3587dee1667086",
+    "mtime": 1789658706.0169964,
+    "seen": 1789658712.889003,
+    "ast_hash": "c50edbd3c5d533996f9e3d6b36bbf99c",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-emerald.webp": {
-    "mtime": 1789650732.7222166,
-    "seen": 1789651083.8669775,
-    "ast_hash": "bfd77a09fab77f66732d7fe29c409d9a",
+    "mtime": 1789658706.0174963,
+    "seen": 1789658712.8890035,
+    "ast_hash": "0bd27867ee18dd5d164d6e14c5bf0e92",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-gold-favicon.png": {
@@ -1458,45 +1458,45 @@
     "semantic_hash": ""
   },
   "assets/images/branding/adt-titanium-favicon.png": {
-    "mtime": 1789650732.0571632,
-    "seen": 1789651083.866989,
-    "ast_hash": "be39f767f19f7dbbddaa266b68cdf250",
+    "mtime": 1789658706.0179956,
+    "seen": 1789658712.8890212,
+    "ast_hash": "0045bc91103a5b110190124411ade060",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-titanium-icon-192.png": {
-    "mtime": 1789650732.0531616,
-    "seen": 1789651083.8669896,
-    "ast_hash": "d2c4b95e937b6e6cf6547e37242bd4f7",
+    "mtime": 1789658706.0184958,
+    "seen": 1789658712.8890216,
+    "ast_hash": "879f1c6a880073b8761cc82f8716d9fa",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-titanium-icon-192.webp": {
-    "mtime": 1789650732.0326614,
-    "seen": 1789651083.8669903,
-    "ast_hash": "c781bb48abd7423e5411edb24495dba0",
+    "mtime": 1789658706.0189953,
+    "seen": 1789658712.8890228,
+    "ast_hash": "ef0231baefabab88d2465d84265a51a3",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-titanium-icon-512.png": {
-    "mtime": 1789650732.0201602,
-    "seen": 1789651083.8669913,
-    "ast_hash": "4472c980f340829beacc5bbc314ef5c9",
+    "mtime": 1789658706.0209985,
+    "seen": 1789658712.8890233,
+    "ast_hash": "b9d42e9706e3e48c8e398261ce4c163d",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-titanium-icon-512.webp": {
-    "mtime": 1789650731.9161637,
-    "seen": 1789651083.8669922,
-    "ast_hash": "943bb331c2d71a542a8eaa2ef5c37887",
+    "mtime": 1789658706.0219994,
+    "seen": 1789658712.889024,
+    "ast_hash": "3dbd34fa874a152239c7ad99db5e66c4",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-titanium.jpg": {
-    "mtime": 1789650731.8621614,
-    "seen": 1789651083.866993,
-    "ast_hash": "d1b8361ddf0f271651d29a1d7444ddec",
+    "mtime": 1789658706.0224993,
+    "seen": 1789658712.8890245,
+    "ast_hash": "77483a405819043b5a3c4e6cf14b85c4",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-titanium.webp": {
-    "mtime": 1789650731.8566635,
-    "seen": 1789651083.8669934,
-    "ast_hash": "312950ae392262fb0835fd5358c73def",
+    "mtime": 1789658706.023495,
+    "seen": 1789658712.8890252,
+    "ast_hash": "f444b7cda01df8ba5dcdd3834b5611e4",
     "semantic_hash": ""
   },
   "assets/images/branding/adt-violet-favicon.png": {
