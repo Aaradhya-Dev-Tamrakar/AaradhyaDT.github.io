@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: shortcuts.js — aaradhyadt.github.io (v54.22)
+   MODULE: shortcuts.js — aaradhyadt.github.io (v54.23)
    Keyboard shortcuts cheat sheet HUD modal & navigation bindings.
    ============================================================ */
 
@@ -52,7 +52,7 @@ function openShortcutsModal() {
               </div>
               <div class="shortcut-row">
                 <span class="shortcut-label">Toggle Dark / Light Theme</span>
-                <div class="shortcut-keys"><kbd>0</kbd></div>
+                <div class="shortcut-keys"><kbd>Shift</kbd><span class="shortcut-plus">+</span><kbd>0</kbd> <span class="shortcut-sep">or</span> <kbd>0</kbd></div>
               </div>
               <div class="shortcut-row">
                 <span class="shortcut-label">Toggle Date (B.S. / A.D.)</span>

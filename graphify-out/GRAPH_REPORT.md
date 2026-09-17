@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-17)
 
 ## Corpus Check
-- 60 files · ~1,927,706 words
+- 60 files · ~1,927,854 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 989 nodes · 1274 edges · 200 communities (55 shown, 134 thin omitted)
+- 990 nodes · 1275 edges · 200 communities (55 shown, 134 thin omitted)
 - Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 83 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2234943a`
+- Built from commit: `2713debd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -314,7 +314,7 @@ Cohesion: 0.28
 Nodes (3): initBackgroundAnimations(), PCBTraces, SignalWaveBackground
 
 ### Community 16 - "MockElement"
-Cohesion: 0.23
+Cohesion: 0.21
 Nodes (5): closeModal(), MockDocument, MockElement, openModal(), toggleModal()
 
 ### Community 17 - "Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)"
@@ -471,7 +471,7 @@ Nodes (27): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, As
 
 ## Knowledge Gaps
 - **358 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+353 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 518 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 519 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **134 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
