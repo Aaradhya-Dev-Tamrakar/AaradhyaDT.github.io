@@ -1,6 +1,6 @@
 {
-  "sha": "e3ec6a556f125c1c403b30fccb51fa1c0151cac1",
-  "shortSha": "e3ec6a5",
-  "date": "2026-09-17T19:40:18+05:45",
-  "message": "feat(journey): upgrade waterfall flowing animation with continuous spine stream & viewport-aware cascade engine"
+  "sha": "cfc79a14ef040eb90a6b3d036cd36b6a0dab96a6",
+  "shortSha": "cfc79a1",
+  "date": "2026-09-17T19:54:23+05:45",
+  "message": "style(journey): replace sliding rectangle with concentrated liquid bead droplet animation"
 }
