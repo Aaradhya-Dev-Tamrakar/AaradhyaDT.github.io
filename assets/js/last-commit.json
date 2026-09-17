@@ -1,6 +1,6 @@
 {
-  "sha": "f5c55d85eb9522f4eaae93586110b446275516c4",
-  "shortSha": "f5c55d8",
-  "date": "2026-09-17T21:24:46+05:45",
-  "message": "feat(tooling): add graphify implementation search engine script"
+  "sha": "2b1c7dd28e7e9cdb9e9800ffeddb909ef862648f",
+  "shortSha": "2b1c7dd",
+  "date": "2026-09-17T21:45:12+05:45",
+  "message": "feat(shortcuts): switch theme toggle keyboard shortcut to Alt+0 (or 0)"
 }
