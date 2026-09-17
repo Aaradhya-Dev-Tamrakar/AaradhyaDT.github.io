@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-17)
 
 ## Corpus Check
-- 59 files · ~1,844,505 words
+- 59 files · ~1,844,853 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 918 nodes · 1203 edges · 199 communities (54 shown, 134 thin omitted)
-- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
+- 920 nodes · 1206 edges · 199 communities (54 shown, 134 thin omitted)
+- Extraction: 93% EXTRACTED · 7% INFERRED · 0% AMBIGUOUS · INFERRED: 83 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a9e93478`
+- Built from commit: `acf0e791`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -361,8 +361,8 @@ Cohesion: 0.31
 Nodes (8): handle_resource_read(), handle_tool_call(), process_request(), Fetches resource content based on URI., Executes requested tool and returns output., Routes JSON-RPC request to appropriate handler., Reads JSON-RPC messages from stdin and writes responses to stdout., run_stdio_server()
 
 ### Community 28 - "home-widgets.js"
-Cohesion: 0.39
-Nodes (6): bootHomeWidgets(), initLastCommitBadge(), formatDateTime(), pad(), initLiveDates(), initStatusClock()
+Cohesion: 0.31
+Nodes (7): bootHomeWidgets(), initHeroCrestScrollFade(), initLastCommitBadge(), formatDateTime(), pad(), initLiveDates(), initStatusClock()
 
 ### Community 29 - "test_graph_modal.test.mjs"
 Cohesion: 0.25
@@ -466,7 +466,7 @@ Nodes (3): Privacy Policy, Multi-Tier Access Control, Terms of Service
 
 ## Knowledge Gaps
 - **303 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+298 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 462 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 463 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **134 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions

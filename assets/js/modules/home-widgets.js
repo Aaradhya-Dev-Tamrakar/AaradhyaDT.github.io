@@ -1,5 +1,5 @@
 /* ============================================================
-   HOME WIDGETS — index.html-only status widgets (v54.11)
+   HOME WIDGETS — index.html-only status widgets (v54.12)
    Kathmandu clock · live date labels · last-commit badge.
    Loaded globally via script.js MODULES; every widget is
    element-guarded so it no-ops on all other pages.
@@ -83,9 +83,41 @@
       });
   }
 
+  /* ── Hero Center Crest Scroll Fade ───────────────────────── */
+  function initHeroCrestScrollFade() {
+    var crest = document.getElementById('heroCrestCenter');
+    if (!crest || crest.dataset.fadeBound) return;
+    crest.dataset.fadeBound = '1';
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+
+    var ticking = false;
+    function onScroll() {
+      if (!ticking) {
+        window.requestAnimationFrame(function () {
+          var y = window.pageYOffset || document.documentElement.scrollTop || 0;
+          var fadeDistance = 420;
+          var p = Math.min(y / fadeDistance, 1);
+          var opacity = Math.max(0, 1 - Math.pow(p, 1.2));
+          var scale = 1 - p * 0.08;
+          var translateY = y * 0.32;
+          crest.style.opacity = opacity.toFixed(3);
+          crest.style.transform = 'translate3d(0, ' + translateY.toFixed(1) + 'px, 0) scale(' + scale.toFixed(3) + ')';
+          crest.style.pointerEvents = p >= 0.95 ? 'none' : 'auto';
+          ticking = false;
+        });
+        ticking = true;
+      }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+  }
+
   function bootHomeWidgets() {
     initStatusClock();
     initLastCommitBadge();
+    initHeroCrestScrollFade();
     initLiveDates(); // last — depends on core.js applyLiveDates labels
   }
 

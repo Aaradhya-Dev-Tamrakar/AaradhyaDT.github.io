@@ -249,13 +249,83 @@
     /* ── Hero ─────────────────────────────────────────────── */
     #hero {
       min-height: 100vh;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      flex-direction: column;
       align-items: center;
-      padding: calc(var(--nav-h, 76px) + 2rem) 3rem 3rem;
-      gap: 4rem;
+      padding: calc(var(--nav-h, 76px) + 2rem) 3rem 4rem;
+      gap: 3rem;
       position: relative;
       overflow: clip;
+    }
+
+    /* ── Hero Center Crest Stage & Scroll Fade ────────────── */
+    .hero-crest-center {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      max-width: 660px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: center;
+      will-change: opacity, transform;
+      transition: opacity 0.12s ease-out, transform 0.12s ease-out;
+    }
+
+    .hero-crest-stage {
+      position: relative;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--bg2);
+      box-shadow: 0 20px 48px -16px rgba(0, 0, 0, 0.6), 0 0 32px -8px var(--accent-a12);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .hero-crest-stage:hover {
+      border-color: var(--accent);
+      box-shadow: 0 24px 56px -16px rgba(0, 0, 0, 0.65), 0 0 36px var(--accent-a35);
+    }
+
+    .hero-center-crest-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      transition: opacity 0.2s ease, transform 0.4s ease;
+    }
+
+    .hero-crest-stage:hover .hero-center-crest-img {
+      transform: scale(1.02);
+    }
+
+    .hero-crest-ambient-glow {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 50% 50%, var(--accent-a07) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-content-row {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: start;
+      gap: 3.5rem;
+      width: 100%;
+      max-width: 1240px;
+      position: relative;
+      z-index: 1;
+    }
+
+    @media (max-width: 960px) {
+      .hero-content-row {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .hero-crest-center {
+        max-width: 92vw;
+      }
     }
 
     .hero-bg-lines {
@@ -1089,45 +1159,51 @@
     <section id="hero" aria-label="Introduction">
       <div class="hero-bg-lines"></div>
       <div class="hero-glow"></div>
-      <div class="hero-left">
-        <div class="hero-tag" id="live-hero-tag">BEI IV/II · KEC, IOE · Tribhuvan University</div>
-        <h1 class="hero-name">Aaradhya Dev<br /><em>Tamrakar</em></h1>
-        <p class="hero-desc">
-          Intelligent Systems &amp; AI Infrastructure Researcher-in-Training — known as <strong>ADT</strong> — engineering
-          at the boundary of embedded Edge AI, near-memory architecture,
-          and deterministic verification. Fuse AI Fellow · NSSR DataCamp Fellow ·
-          IEEE KEC KTM Vice Chair.
-        </p>
-        <div class="hero-pills" aria-label="Core focus areas">
-          <span class="hero-pill">Edge AI</span>
-          <span class="hero-pill">Near-Memory Arch</span>
-          <span class="hero-pill">Algorithmic Fairness</span>
-          <span class="hero-pill">Firmware</span>
-          <span class="hero-pill">Deterministic Verification</span>
-        </div>
-        <p class="hero-caption" id="hero-caption" aria-live="off"></p>
-        <div class="hero-actions">
-          <div class="magnetic-wrap">
-            <a href="projects.html" class="btn-primary" aria-label="View Aaradhya's work">View Work</a>
-          </div>
-          <div class="magnetic-wrap">
-            <a href="contact.html" class="btn-ghost" aria-label="Get in touch with Aaradhya">Get in touch →</a>
-          </div>
-          <div class="magnetic-wrap">
-            <a href="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" class="cert-btn btn-ghost" download
-              data-cert="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" data-label="Aaradhya Dev Tamrakar CV" data-type="pdf"
-              aria-label="View Aaradhya's CV"
-              onclick="window.gtag && gtag('event','cv_download',{event_category:'engagement',event_label:'Hero CV button'})">
-              Download CV ↓
-            </a>
-          </div>
+
+      <div class="hero-crest-center" id="heroCrestCenter">
+        <div class="hero-crest-stage">
+          <img src="assets/images/branding/adt-titanium.webp" alt="ADT — Engineering Intelligent Systems" class="hero-center-crest-img" id="heroCenterCrestImg" data-dynamic-logo width="720" height="450" fetchpriority="high" loading="eager" />
+          <div class="hero-crest-ambient-glow"></div>
         </div>
       </div>
-      <div class="hero-right">
-        <div class="hero-creed-banner card-gradient-border" id="heroCreedBanner">
-          <img src="assets/images/branding/adt-titanium.webp" alt="ADT — Engineering Intelligent Systems" class="hero-creed-img" id="heroCreedImg" data-dynamic-logo width="512" height="320" loading="eager" fetchpriority="high" />
+
+      <div class="hero-content-row">
+        <div class="hero-left">
+          <div class="hero-tag" id="live-hero-tag">BEI IV/II · KEC, IOE · Tribhuvan University</div>
+          <h1 class="hero-name">Aaradhya Dev<br /><em>Tamrakar</em></h1>
+          <p class="hero-desc">
+            Intelligent Systems &amp; AI Infrastructure Researcher-in-Training — known as <strong>ADT</strong> — engineering
+            at the boundary of embedded Edge AI, near-memory architecture,
+            and deterministic verification. Fuse AI Fellow · NSSR DataCamp Fellow ·
+            IEEE KEC KTM Vice Chair.
+          </p>
+          <div class="hero-pills" aria-label="Core focus areas">
+            <span class="hero-pill">Edge AI</span>
+            <span class="hero-pill">Near-Memory Arch</span>
+            <span class="hero-pill">Algorithmic Fairness</span>
+            <span class="hero-pill">Firmware</span>
+            <span class="hero-pill">Deterministic Verification</span>
+          </div>
+          <p class="hero-caption" id="hero-caption" aria-live="off"></p>
+          <div class="hero-actions">
+            <div class="magnetic-wrap">
+              <a href="projects.html" class="btn-primary" aria-label="View Aaradhya's work">View Work</a>
+            </div>
+            <div class="magnetic-wrap">
+              <a href="contact.html" class="btn-ghost" aria-label="Get in touch with Aaradhya">Get in touch →</a>
+            </div>
+            <div class="magnetic-wrap">
+              <a href="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" class="cert-btn btn-ghost" download
+                data-cert="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" data-label="Aaradhya Dev Tamrakar CV" data-type="pdf"
+                aria-label="View Aaradhya's CV"
+                onclick="window.gtag && gtag('event','cv_download',{event_category:'engagement',event_label:'Hero CV button'})">
+                Download CV ↓
+              </a>
+            </div>
+          </div>
         </div>
-        <div class="status-card card-gradient-border">
+        <div class="hero-right">
+          <div class="status-card card-gradient-border">
           <div class="status-label">
             Currently Active
             <span class="status-clock" id="statusClock" aria-label="Current date and time in Kathmandu, Nepal">
@@ -1195,7 +1271,8 @@
           </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
     <div class="divider-wrap" aria-hidden="true">
       <div class="divider-edge divider-edge--left"></div>

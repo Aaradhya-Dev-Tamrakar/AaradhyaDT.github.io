@@ -1,4 +1,4 @@
-# Portfolio Website Tracker — v54.11
+# Portfolio Website Tracker — v54.12
 
 Last updated: _2026-09-17_
 
@@ -12,7 +12,7 @@ Last updated: _2026-09-17_
   - **Real-Time Dynamic Binding Engine (`assets/js/modules/core.js`)**: Engineered `getBrandAssets()` and `syncBrandLogos()` hooks connected directly to `applyAccent()` and `applyTheme()`, dynamically swapping all `[data-dynamic-logo]` and `[data-dynamic-logo-icon]` elements with smooth opacity crossfades and live `<head>` favicon updates.
   - **Navbar Color Accent Swatch Popover (`renderSiteNav()`, `components.css`)**: Embedded an interactive accent swatch popover in the top navbar and mobile drawer, allowing instant switching between Gold, Emerald, Violet, Cyan, Ruby, and Prism.
   - **Surface Placements Across All Pages**:
-    - **Hero Section (`index.html`)**: Interactive 3D Creed Card featuring the master *"Engineering Intelligent Systems"* banner.
+    - **Hero Section (`index.html`, `home-widgets.js`)**: Centered the ADT emblem stage at the top of the hero section with an ambient radial glow, positioning the bio and status card below it in a balanced 2-column layout. Engineered `initHeroCrestScrollFade()` with `requestAnimationFrame` passive scroll listening, producing a cinematic parallax sink and smooth opacity fadeout as the user scrolls into the content.
     - **About Page (`about.html`)**: High-impact Creed Banner dividing the biography from the vertical engineering stack.
     - **Global Footer (`core.js`)**: Dynamic metallic crest hallmark stamping `.footer-brand` across all pages.
     - **VIP Access Vault (`access.js`)**: High-security cryptographic vault seal crowning the `#accessModalOverlay`.
@@ -319,7 +319,7 @@ Last updated: _2026-09-17_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.11`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.12`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
