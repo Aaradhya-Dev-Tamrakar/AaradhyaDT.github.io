@@ -1,6 +1,6 @@
 {
-  "sha": "35ed60b995d2b99a5f6c7b36e6c2741d251891c3",
-  "shortSha": "35ed60b",
-  "date": "2026-09-17T20:19:26+05:45",
-  "message": "feat(motion): implement Phase 3 scroll-driven choreography and section flow"
+  "sha": "36ed0154b925a6e5fe1f1e0ab3a654e1a315773f",
+  "shortSha": "36ed015",
+  "date": "2026-09-17T20:44:09+05:45",
+  "message": "fix(ui): confine footer crest hover shimmer within badge boundaries"
 }
