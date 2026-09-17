@@ -1,6 +1,6 @@
 {
-  "sha": "566a4bd5b18c0a493cb7bc70a245377f6828b001",
-  "shortSha": "566a4bd",
-  "date": "2026-09-17T13:31:05+05:45",
-  "message": "fix(site): resolve 10 bugs across terminal, modals, keynav, haptics, and sw"
+  "sha": "12e8f4c39583ac5c37511f65f6c268a8a98a5d8b",
+  "shortSha": "12e8f4c",
+  "date": "2026-09-17T19:03:07+05:45",
+  "message": "feat(branding): integrate 5-variant ADT monogram suite with dynamic accent and theme binding"
 }
