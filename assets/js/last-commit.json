@@ -1,6 +1,6 @@
 {
-  "sha": "ba32cfb3f786429b6cf766cec868c635ee91c814",
-  "shortSha": "ba32cfb",
-  "date": "2026-09-18T10:36:10+05:45",
-  "message": "fix(about): resolve skill cards top border clipping on hover"
+  "sha": "02e04f8f3432328d09152916b173e4e72c633db1",
+  "shortSha": "02e04f8",
+  "date": "2026-09-18T11:35:49+05:45",
+  "message": "fix(about): ensure skill cards border top visibility with border ring and headroom"
 }
