@@ -2050,6 +2050,18 @@
       "source_location": "L236"
     },
     {
+      "id": "assets_js_modules_core_rendersitefooter",
+      "label": "renderSiteFooter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "core.js",
+      "file_type": "code",
+      "norm_label": "rendersitefooter()",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L192"
+    },
+    {
       "id": "assets_js_modules_core_rendersitenav",
       "label": "renderSiteNav()",
       "_callable": true,
@@ -2708,18 +2720,6 @@
       "norm_label": "tick()",
       "source_file": "assets/js/modules/home-widgets.js",
       "source_location": "L20"
-    },
-    {
-      "id": "assets_js_modules_core_rendersitefooter",
-      "label": "renderSiteFooter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 3,
-      "community_name": "ui.js",
-      "file_type": "code",
-      "norm_label": "rendersitefooter()",
-      "source_file": "assets/js/modules/core.js",
-      "source_location": "L192"
     },
     {
       "id": "assets_js_modules_ui_closeresumegenerator",
@@ -6069,7 +6069,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "54.30.0"
+      "version": "54.31.0"
     },
     {
       "id": "sync",
@@ -10929,16 +10929,6 @@
       "file_type": "image",
       "norm_label": "certificate: prompt engineering fundamentals workshop",
       "source_file": "assets/certificates/TechAxis_Prompt_Engineering_2026.webp"
-    },
-    {
-      "id": "assets_docs_adt_logo",
-      "label": "Logo: ADT (Aaradhya Dev Tamrakar)",
-      "_origin": "semantic",
-      "community": 12,
-      "community_name": "Aaradhya Dev Tamrakar CV",
-      "file_type": "image",
-      "norm_label": "logo: adt (aaradhya dev tamrakar)",
-      "source_file": "assets/docs/ADT_LOGO.png"
     },
     {
       "id": "simops_ai_for_graduates",
@@ -27113,15 +27103,6 @@
       "source_file": "clean_codebase_payload.txt"
     },
     {
-      "source": "assets_docs_aaradhya_dev_tamrakar_cv",
-      "target": "assets_docs_adt_logo",
-      "relation": "references",
-      "_origin": "semantic",
-      "confidence": "INFERRED",
-      "confidence_score": 0.8,
-      "source_file": "assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf"
-    },
-    {
       "source": "b_gzfgcp9mbk6lo6wbdtlsxl_b_gzfgcp9mbk6lo6wbdtlsxl",
       "target": "w7ad9f3w79kjexjmffwl2jxg_w7ad9f3w79kjexjmffwl2jxg",
       "relation": "references",
@@ -27662,5 +27643,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "98bcee7e18cf299a30183cd54adda7d6df23300d"
+  "built_at_commit": "c35d1435bf6e6898e8a8f2a97d3883dfccb32108"
 }

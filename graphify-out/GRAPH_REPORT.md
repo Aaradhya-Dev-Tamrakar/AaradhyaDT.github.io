@@ -1,16 +1,16 @@
-# Graph Report - AaradhyaDT.github.io  (2026-09-18)
+# Graph Report - AaradhyaDT.github.io  (2026-09-20)
 
 ## Corpus Check
-- 61 files · ~1,930,193 words
+- 61 files · ~1,907,293 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1017 nodes · 1338 edges · 201 communities (56 shown, 134 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 83 edges (avg confidence: 0.86)
+- 1016 nodes · 1337 edges · 201 communities (56 shown, 134 thin omitted)
+- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `98bcee7e`
+- Built from commit: `c35d1435`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -260,11 +260,11 @@ Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tra
 
 ### Community 2 - "core.js"
 Cohesion: 0.08
-Nodes (35): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+27 more)
+Nodes (36): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+28 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
-Nodes (28): renderSiteFooter(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson() (+20 more)
+Nodes (27): closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson(), generateResumeMarkdown() (+19 more)
 
 ### Community 4 - "site_automation.py"
 Cohesion: 0.12
@@ -300,7 +300,7 @@ Nodes (19): Request, create_drive_file(), find_drive_file_by_name(), get_oauth_c
 
 ### Community 12 - "Aaradhya Dev Tamrakar CV"
 Cohesion: 0.12
-Nodes (17): Certificate: 9-DAYS JavaScript Bootcamp, Certificate: HTML & CSS Workshop - Design, Code, & Launch your own website using GitHub Pages, Certificate: 3-Day Drone Training Program, Certificate: How Hackers Bypass Security: A Beginners Guide Webinar, Certificate: Printer Maintenance Certification, Statement of Accomplishment: Recommending Skincare Products, Certificate: Prompt Engineering Fundamentals Workshop, Aaradhya Dev Tamrakar CV (+9 more)
+Nodes (16): Certificate: 9-DAYS JavaScript Bootcamp, Certificate: HTML & CSS Workshop - Design, Code, & Launch your own website using GitHub Pages, Certificate: 3-Day Drone Training Program, Certificate: How Hackers Bypass Security: A Beginners Guide Webinar, Certificate: Printer Maintenance Certification, Statement of Accomplishment: Recommending Skincare Products, Certificate: Prompt Engineering Fundamentals Workshop, Aaradhya Dev Tamrakar CV (+8 more)
 
 ### Community 13 - "README.md"
 Cohesion: 0.12
@@ -475,8 +475,8 @@ Cohesion: 0.18
 Nodes (18): extract_code_snippet(), find_graph_path(), format_node_badge(), GraphIndex, main(), parse_line_number(), print_search_results(), Any (+10 more)
 
 ## Knowledge Gaps
-- **358 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+353 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 523 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **357 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+352 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 522 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **134 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -486,13 +486,13 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **Why does `get_site_stats()` connect `site_automation.py` to `add_project`?**
   _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `renderSiteFooter()` connect `ui.js` to `core.js`?**
+- **Why does `renderSiteFooter()` connect `core.js` to `ui.js`?**
   _High betweenness centrality (0.007) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _358 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _357 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09472606246799795 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07682926829268293 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07549361207897794 - nodes in this community are weakly interconnected._
