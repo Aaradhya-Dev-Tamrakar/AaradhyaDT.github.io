@@ -1,6 +1,9 @@
-# Portfolio Website Tracker — v54.31
+# Portfolio Website Tracker — v54.32
 
-Last updated: _2026-09-20_
+Last updated: _2026-09-22_
+
+- **Epistemic Calibration & Security Notice Alignment (`README.md`)**:
+  - **Calibrated Client-Side Cryptographic Boundary (`README.md`)**: Updated the security architecture notice under `ARCH-RFC-001` guidelines to clarify that client-side AES-256-GCM and PBKDF2 constitute educational anti-scraping and static content gating rather than server-side access control, formally noting that *client-side encryption $\neq$ server-side authorization*. Resolved stale reference to non-existent audit document and verified entire test suite across all 25 categories cleanly.
 
 - **Site-Wide Motion Upgrade — Phase 3: Scroll-Driven Choreography & Section Flow (`base.css`, `core.js`, `about.html`, `experience.html`, `achievements.html`)**:
   - **Comprehensive Multi-Grid Staggered Cascade (`core.js`, `base.css`)**: Expanded automatic scroll-reveal staggers across all card containers (`.quick-nav-grid`, `.projects-grid`, `.achievements-list`, `.achievements-grid`, `.exp-list`, `.v-stack-grid`, `.faq-grid`, `.keymap-grid`), tightening stagger delays to crisp 40ms intervals (`0.04s` to `0.32s`) with physical cubic-bezier easing (`cubic-bezier(0.16, 1, 0.3, 1)`).
@@ -343,7 +346,7 @@ Last updated: _2026-09-20_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.31`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.32`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
