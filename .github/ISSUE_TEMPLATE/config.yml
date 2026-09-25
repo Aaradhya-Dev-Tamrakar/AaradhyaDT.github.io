@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub Discussions
+    url: https://github.com/AaradhyaDT/AaradhyaDT.github.io/discussions
+    about: Ask questions, share ideas, and connect with the community.
+  - name: 🛡️ Security Vulnerability Reporting
+    url: https://github.com/AaradhyaDT/AaradhyaDT.github.io/security/advisories
+    about: Report security vulnerabilities confidentially.
+  - name: 🌐 Live Website & Direct Contact
+    url: https://aaradhyadt.github.io/contact.html
+    about: Contact Aaradhya Dev Tamrakar directly via the portfolio contact channels.

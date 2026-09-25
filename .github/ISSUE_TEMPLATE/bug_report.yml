@@ -1,0 +1,73 @@
+name: 🐛 Bug Report
+description: Report a broken feature, visual glitch, or unexpected behavior.
+title: "bug: "
+labels: ["bug", "triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting an issue! Please check if a similar issue already exists before opening a new one.
+
+  - type: input
+    id: page-url
+    attributes:
+      label: Affected Page or URL
+      description: Which page or section is experiencing this issue?
+      placeholder: "e.g. https://aaradhyadt.github.io/projects.html or Dev Terminal"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: "Describe what went wrong..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior.
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What did you expect to happen?
+      placeholder: "Describe the expected behavior..."
+    validations:
+      required: true
+
+  - type: dropdown
+    id: browser
+    attributes:
+      label: Browser / Environment
+      description: Which browser were you using?
+      options:
+        - Chrome / Chromium
+        - Firefox
+        - Safari
+        - Microsoft Edge
+        - Mobile Browser (iOS Safari / Android Chrome)
+        - Other (specify below)
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context / Screenshots
+      description: Add any other context, console log errors, or drag-and-drop screenshots here.
+      placeholder: "Console errors, device details, OS version, etc."
+    validations:
+      required: false

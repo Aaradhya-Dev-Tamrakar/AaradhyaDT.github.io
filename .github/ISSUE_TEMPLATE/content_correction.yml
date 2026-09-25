@@ -1,0 +1,36 @@
+name: 📝 Content / Typo Correction
+description: Report a broken external link, typographical error, or outdated reference.
+title: "docs: "
+labels: ["documentation", "content"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Found a typo, outdated external link, or grammatical error on the website? Please let us know!
+
+  - type: input
+    id: location
+    attributes:
+      label: Page and Section Location
+      description: Where is the typo or broken link located?
+      placeholder: "e.g. experience.html -> IEEE KEC section"
+    validations:
+      required: true
+
+  - type: textarea
+    id: current-content
+    attributes:
+      label: Current Content / Broken Link
+      description: What does the text or link currently say?
+      placeholder: "Current text or URL..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggested-fix
+    attributes:
+      label: Suggested Correction
+      description: What should it be updated to?
+      placeholder: "Corrected text or URL..."
+    validations:
+      required: true

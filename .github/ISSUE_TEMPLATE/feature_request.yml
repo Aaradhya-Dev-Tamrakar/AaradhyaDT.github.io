@@ -1,0 +1,44 @@
+name: 💡 Feature or UX Request
+description: Suggest an enhancement, visual polish, or new interactive component.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Have an idea or UX suggestion to improve the portfolio website? Let us know!
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or Motivation
+      description: Is your feature request related to a problem or area of improvement?
+      placeholder: "I'm always frustrated when [...] / It would be great if [...]"
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution / Feature
+      description: Describe the solution or interactive behavior you'd like to see.
+      placeholder: "A clear and concise description of what you want to happen..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: Any alternative solutions or features you've considered?
+      placeholder: "Describe any alternatives..."
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Context / Design References
+      description: Add any design references, mockups, or extra context here.
+    validations:
+      required: false

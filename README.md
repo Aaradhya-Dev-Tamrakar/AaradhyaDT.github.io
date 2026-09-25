@@ -1,9 +1,9 @@
-# aaradhyadt.github.io
+﻿# aaradhyadt.github.io
 
 [![Deploy Pages](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml)
 [![Verification Suite](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml)
 [![Lighthouse Audit](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml)
-[![Version](https://img.shields.io/badge/version-v54.36-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
+[![Version](https://img.shields.io/badge/version-v54.37-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
 [![Zero-Framework](https://img.shields.io/badge/framework-vanilla%20HTML%2FCSS%2FJS-orange.svg)](https://aaradhyadt.github.io)
 
@@ -29,7 +29,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v54.36 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v54.37 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
@@ -81,6 +81,9 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
     ├── robots.txt              # Search engine crawler directives (including modern AI crawlers)
     ├── AGENTS.md               # Codebase rules, Graphify instructions & Git workflow directives
     ├── CLAUDE.md               # Context summary for AI pair programming
+    ├── CODE_OF_CONDUCT.md      # Contributor Covenant Code of Conduct
+    ├── CONTRIBUTING.md         # Contribution guidelines, dev workflow & test standards
+    ├── SECURITY.md             # Security policy, threat model & vulnerability disclosure
     ├── LICENSE                 # Repository license
     ├── .gitignore              # Excluded files (local secrets, bytecode, graph cache)
     ├── .gitattributes          # Git repository attribute definitions

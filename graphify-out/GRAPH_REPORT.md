@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-25)
 
 ## Corpus Check
-- 61 files · ~1,908,520 words
+- 65 files · ~1,910,920 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1016 nodes · 1337 edges · 201 communities (56 shown, 134 thin omitted)
+- 1056 nodes · 1375 edges · 208 communities (63 shown, 134 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `0fb0a42d`
+- Built from commit: `e4179540`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -203,8 +203,15 @@
 - UI Screenshot: Projects Page (Desktop)
 - UI Screenshot: Projects Page (Mobile)
 - Stamp Last Commit Workflow
-- Turn 2
+- Turn 3
 - GraphIndex
+- Contributing to Aaradhya's Portfolio Website
+- Turn 2
+- Final assessment
+- I would therefore revise my previous evaluation
+- 🚨 Reporting a Vulnerability
+- 2. Technical architecture — excellent
+- 3. The biggest conceptual problem: the security layer
 
 ## God Nodes (most connected - your core abstractions)
 1. `main()` - 33 edges
@@ -248,7 +255,7 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (201 total, 134 thin omitted)
+## Communities (208 total, 134 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -359,8 +366,8 @@ Cohesion: 0.36
 Nodes (6): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
 
 ### Community 27 - "2026-09-17_EVALUATE-REPO_CONVERSATION.md"
-Cohesion: 0.05
-Nodes (41): 10. What a professor/researcher is likely to notice, 11. What I would change first, 12. The most important strategic observation, 1. What the repository communicates about you, 2. Technical architecture — excellent, 3. The biggest conceptual problem: the security layer, 4. The evidence/provenance system is one of the best parts, 5. Content strategy: impressive, but increasingly dense (+33 more)
+Cohesion: 0.14
+Nodes (13): 10. What a professor/researcher is likely to notice, 11. What I would change first, 12. The most important strategic observation, 1. What the repository communicates about you, 4. The evidence/provenance system is one of the best parts, 5. Content strategy: impressive, but increasingly dense, 6. Your positioning is getting stronger — but also more ambitious, 7. SEO/schema: technically sophisticated, but slightly overengineered (+5 more)
 
 ### Community 28 - "home-widgets.js"
 Cohesion: 0.31
@@ -466,30 +473,58 @@ Nodes (3): Best Practices Audit, Lighthouse Configuration, Performance Metrics
 Cohesion: 0.67
 Nodes (3): Privacy Policy, Multi-Tier Access Control, Terms of Service
 
-### Community 199 - "Turn 2"
-Cohesion: 0.07
-Nodes (27): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+19 more)
+### Community 199 - "Turn 3"
+Cohesion: 0.14
+Nodes (14): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+6 more)
 
 ### Community 200 - "GraphIndex"
 Cohesion: 0.18
 Nodes (18): extract_code_snippet(), find_graph_path(), format_node_badge(), GraphIndex, main(), parse_line_number(), print_search_results(), Any (+10 more)
 
+### Community 201 - "Contributing to Aaradhya's Portfolio Website"
+Cohesion: 0.06
+Nodes (29): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Guidelines (+21 more)
+
+### Community 202 - "Turn 2"
+Cohesion: 0.15
+Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
+
+### Community 203 - "Final assessment"
+Cohesion: 0.15
+Nodes (13): Assistant, Bottom line, Credibility risk, Final assessment, On “webscraping protection”, Portfolio communication, Repository engineering, Research/scholarship value (+5 more)
+
+### Community 204 - "I would therefore revise my previous evaluation"
+Cohesion: 0.25
+Nodes (8): Assistant, I would therefore revise my previous evaluation, More interestingly, I think the project has a stronger interpretation now, Revised score, Turn 5, Turn 6, User, User
+
+### Community 205 - "🚨 Reporting a Vulnerability"
+Cohesion: 0.25
+Nodes (7): Disclosure Methods, 🚨 Reporting a Vulnerability, Response Timeline, Security Policy, 🛡️ Supported Versions, 🔒 Threat Model & Architecture Note, What to Include in Your Report
+
+### Community 206 - "2. Technical architecture — excellent"
+Cohesion: 0.50
+Nodes (4): 2. Technical architecture — excellent, CI/CD, Strong points, Testing
+
+### Community 207 - "3. The biggest conceptual problem: the security layer"
+Cohesion: 0.67
+Nodes (3): 3. The biggest conceptual problem: the security layer, Google authentication has the same architectural limitation, What I would change
+
 ## Knowledge Gaps
-- **357 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+352 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 522 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **387 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+382 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 553 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **134 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `parse_html()` connect `verify.py` to `add_project`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+  _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `get_site_stats()` connect `site_automation.py` to `add_project`?**
-  _High betweenness centrality (0.008) - this node is a cross-community bridge._
-- **Why does `renderSiteFooter()` connect `core.js` to `ui.js`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
+  _High betweenness centrality (0.005) - this node is a cross-community bridge._
+- **Why does `openWhatsNewModal()` connect `ui.js` to `core.js`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _357 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _387 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09472606246799795 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
