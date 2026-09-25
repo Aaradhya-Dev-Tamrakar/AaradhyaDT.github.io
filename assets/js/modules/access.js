@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v54.32)
+   MODULE: access.js — aaradhyadt.github.io (v54.34)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -37,7 +37,9 @@ const ACCESS_CONTROL_PAYLOADS = {
   "proj-brainstorm": "6812752c1acca40a87941b756b9e2da6aff20fa0b75fea8ad2102d9934ff64504ba069401428436f3d0c4b52bf6e650f39c74bfa28ee5e47912875a44d0592eb233b7d5eb3a7a30b7e84a408f0633b",
   "proj-super-nlm": "2963c6c84a7fd7cd7dd6cb4099db4da7f4eb02c814933afd72f92dfde4fd8a6df3fc40806e3de7d5874f3b05a59167b882103a646a34cb04f9528a64fb3c1893416bd5d8c49552e542642c02eda7",
   "proj-github-pilot": "8910c900f526370d1f178458a577c8b6416543b355fa305c6bdfe603b0ad9a5e37478e9348da73d2c2322374bd08c928948fd7ecf4c833df635d8ff4aa6056b1a5ec5ee14bbd9c53a476503413f469be35",
-  "proj-windows-pilot": "04cf775837bcb6d8d3d240110864b1e721e9d1345bfe1497acff69c1624bff34237075c075546085b4cad9915b12788f9b7ee926dc45128c4201b8ea1d25aece5b33acea0b7380"
+  "proj-windows-pilot": "04cf775837bcb6d8d3d240110864b1e721e9d1345bfe1497acff69c1624bff34237075c075546085b4cad9915b12788f9b7ee926dc45128c4201b8ea1d25aece5b33acea0b7380",
+  "proj-utility-mcps": "650bc14fb55a1e1140797540b882518942e9452b4b516dc3e47c05c2bbef22d024fae60668903aa0a023478392d4f3c1aaa3e076925d916047e1d544e666abc6c724aadc3ae7142ecbe28f156e960acb42",
+  "proj-nepali-ocr-ai": "2c5c3c25bf25b2f2a42cba07ce68cfaf3d7a2442d5ebbf4ce5b529e5498b960f6578d4a7eda4ebc2bd5c19a3d29aca246a3fd6518af23d1f85e37dc58e81355069d474f3ff238d264b470c57b245cc68b8ca"
 };
 
 const KEY_CACHE = new Map();

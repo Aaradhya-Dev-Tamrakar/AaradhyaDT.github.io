@@ -440,6 +440,20 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
+    "title": "Utility MCP Suite — Personal AI Desktop Infrastructure & Local Device Bridges",
+    "meta": "Node.js ESM, FastMCP, LocalSend v2.1",
+    "href": "projects.html#p-035",
+    "text": "utility mcp suite — personal ai desktop infrastructure & local device bridges heterogeneous model context protocol (mcp) server suite engineered for local desktop automation and personal device mesh across windows, lan, and cloud. localsend protocol v2.1: zero-cloud peer-to-peer file, text, and clipboard transfers over wi-fi/lan with mutual tls and persistent device discovery. google classroom & typora engines: automated academic coursework scraping, assignment submission verification, live editor process telemetry, and markdown compilation. node.js esm fastmcp localsend v2.1 google classroom api typora engine desktop automation"
+  },
+  {
+    "type": "project",
+    "title": "Nepali OCR AI — Vision OCR, Varnavinyas Grammar & Bi-Directional Transcoder",
+    "meta": "Python 3.11, FastMCP, Devanagari OCR",
+    "href": "projects.html#p-036",
+    "text": "nepali ocr ai — vision ocr, varnavinyas grammar & bi-directional transcoder end-to-end devanagari ocr pipeline featuring adaptive text pre-processing, layout analysis, and bilingual character recognition. varnavinyas grammar engine with statistical rule correction and bidirectional preeti ↔ unicode font transcoder. automated word (.docx) document repair and standalone fastmcp microservice for ai agent document parsing. python 3.11 fastmcp devanagari ocr varnavinyas engine preeti unicode python-docx"
+  },
+  {
+    "type": "project",
     "title": "Super-NLM — Multi-Account NotebookLM Hub & MCP Server",
     "meta": "In Progress · Python, MCP, NotebookLM",
     "href": "projects.html#p-031",

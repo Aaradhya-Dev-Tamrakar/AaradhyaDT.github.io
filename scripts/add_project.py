@@ -49,7 +49,7 @@ try:
 except ImportError:
     manage_payloads = None
 
-VALID_CATEGORIES = ["aiml", "embedded", "hardware", "apps"]
+VALID_CATEGORIES = ["aiml", "embedded", "hardware", "apps", "mcp"]
 KNOWN_STATUSES = ["In Progress", "Active Research", "Archived", "Completed"]
 
 
@@ -168,7 +168,12 @@ def recalculate_filter_counts(soup: BeautifulSoup) -> dict[str, int]:
 
 def inject_card(soup: BeautifulSoup, card_soup: BeautifulSoup, section: str = "personal", position: str = "top"):
     """Injects the new card into the specified section in projects.html."""
-    target_h2_id = "section-personal" if section == "personal" else "section-projects"
+    if section == "mcp":
+        target_h2_id = "section-mcp"
+    elif section == "personal":
+        target_h2_id = "section-personal"
+    else:
+        target_h2_id = "section-projects"
     h2 = soup.find("h2", id=target_h2_id)
     if not h2:
         raise ValueError(f"Could not find section header #{target_h2_id} in projects.html")
@@ -336,8 +341,8 @@ def interactive_mode():
     tags_input = input("\nTags (comma separated, e.g. 'Python, FastAPI, Win32'): ").strip()
     tags = [t.strip() for t in tags_input.split(",") if t.strip()]
 
-    section = input("\nTarget section ('personal' or 'projects') [personal]: ").strip().lower()
-    if section not in ["personal", "projects"]:
+    section = input("\nTarget section ('personal', 'projects', or 'mcp') [personal]: ").strip().lower()
+    if section not in ["personal", "projects", "mcp"]:
         section = "personal"
 
     tier = input("Access Tier ('vip' or 'master') [vip]: ").strip().lower()
@@ -367,12 +372,12 @@ def main():
     parser.add_argument("--from-json", "-f", type=Path, help="Path to JSON project manifest")
     parser.add_argument("--title", "-t", type=str, help="Project title")
     parser.add_argument("--repo", "-r", "--repo-url", type=str, help="GitHub repository URL")
-    parser.add_argument("--category", "-c", nargs="+", help="Category (aiml, embedded, hardware, apps)")
+    parser.add_argument("--category", "-c", nargs="+", help="Category (aiml, embedded, hardware, apps, mcp)")
     parser.add_argument("--bullets", "-b", nargs="+", help="Technical description bullet points")
     parser.add_argument("--tags", nargs="+", help="Project tags")
     parser.add_argument("--status", "--date", "-s", type=str, default="In Progress", help="Date or status string")
     parser.add_argument("--evidence-repo", type=str, help="Evidence repository slug (Owner/Repo)")
-    parser.add_argument("--section", choices=["personal", "projects"], default="personal", help="Section header")
+    parser.add_argument("--section", choices=["personal", "projects", "mcp"], default="personal", help="Section header")
     parser.add_argument("--tier", choices=["vip", "master"], default="vip", help="Security access tier")
     parser.add_argument("--position", choices=["top", "bottom"], default="top", help="Insertion position in section")
     parser.add_argument("--dry-run", "-d", action="store_true", help="Preview without modifying disk")

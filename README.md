@@ -3,7 +3,7 @@
 [![Deploy Pages](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml)
 [![Verification Suite](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml)
 [![Lighthouse Audit](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml)
-[![Version](https://img.shields.io/badge/version-v54.32-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
+[![Version](https://img.shields.io/badge/version-v54.34-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
 [![Zero-Framework](https://img.shields.io/badge/framework-vanilla%20HTML%2FCSS%2FJS-orange.svg)](https://aaradhyadt.github.io)
 
@@ -21,7 +21,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── index.html              # Homepage, hero section, interactive dev terminal, stats & Master Control Panel
 │   ├── about.html              # Personal background, engineering philosophy, timeline & biography
 │   ├── projects.html           # Technical showcase with VIP-gated GitHub source code links
-│   ├── experience.html         # Professional positions, leadership roles (IEEE KEC, EPC, Maker's Space) & education
+│   ├── experience.html         # Professional positions, leadership roles (IEEE KEC, EPC, Makerspace) & education
 │   ├── achievements.html       # Certifications, credentials, filterable badges & PDF verification links
 │   ├── journey.html            # Development timeline & commit-linked evolution log of the website itself
 │   ├── contact.html            # Interactive contact form, channels & direct connection links
@@ -29,7 +29,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v54.32 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v54.34 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
@@ -43,7 +43,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── images/
 │   │   ├── photo.webp / .png   # Profile headshots
 │   │   ├── og-image.jpg        # Open Graph social sharing preview card
-│   │   └── logos/              # Institutional logos (IEEE KEC, Fusemachines, EPC Club, Maker's Space, NSSR)
+│   │   └── logos/              # Institutional logos (IEEE KEC, Fusemachines, EPC Club, Makerspace, NSSR)
 │   ├── js/
 │   │   ├── script.js           # Boot orchestrator: dynamic MODULES loader, bootSite() wiring, SW registration & offline contact queue
 │   │   ├── bg-animations.js    # Standalone SignalWave and PCBTraces background canvas animations

@@ -31,7 +31,7 @@ His core differentiator is **vertical systems leverage**: bridging the complete 
 * **Institutional Leadership:**
   - **Vice Chair — IEEE KEC KTM Student Branch (2026 – Present)**
   - **Event Manager — Electronics Project Club (EPC), KEC**
-  - **Makerspace Ambassador — KEC Maker's Space**
+  - **Makerspace Ambassador — KEC Makerspace**
 
 ---
 

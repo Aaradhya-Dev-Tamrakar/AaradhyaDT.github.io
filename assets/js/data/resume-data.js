@@ -84,13 +84,13 @@ const RESUME_DATA = {
 
             {
 
-              header: "Makerspace Ambassador — KEC Maker's Space",
+              header: "Makerspace Ambassador — KEC Makerspace",
 
               sub: "June 2026 – Present",
 
               bullets: [
 
-                "Shipped site-wide fixes to the Maker's Space website — image repair, content consistency, UI cleanup."
+                "Shipped site-wide fixes to the Makerspace website — image repair, content consistency, UI cleanup."
 
               ]
 
@@ -377,7 +377,7 @@ const RESUME_DATA = {
 
               header: "Selected Credentials & Memberships",
 
-              sub: "IEEE WIE Nepal LaTeX Workshop (May 2026) · IEEE SPAx organizing team · Prompt Engineering Fundamentals (TechAxis) · IEEEXtreme 19.0 (Team ShadowXTREME) · PCB Design & Fabrication Workshop (KEC Robotics Club) · AWS Cloud Computing Workshop · Microsoft Learn Student Ambassador · Member of IEEE KEC KTM Student Branch, Electronics Project Club, KEC Maker's Space, KEC Music Club"
+              sub: "IEEE WIE Nepal LaTeX Workshop (May 2026) · IEEE SPAx organizing team · Prompt Engineering Fundamentals (TechAxis) · IEEEXtreme 19.0 (Team ShadowXTREME) · PCB Design & Fabrication Workshop (KEC Robotics Club) · AWS Cloud Computing Workshop · Microsoft Learn Student Ambassador · Member of IEEE KEC KTM Student Branch, Electronics Project Club, KEC Makerspace, KEC Music Club"
 
             }
 

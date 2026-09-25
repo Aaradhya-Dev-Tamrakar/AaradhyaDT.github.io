@@ -936,10 +936,10 @@
 <div class="projects-header-bar">
 <div aria-label="Filter projects by domain" class="projects-filter-bar" id="projectsFilterBar" role="toolbar">
 <button aria-pressed="true" class="proj-filter-btn active" data-filter="all" type="button">
-<span>All</span><span class="proj-filter-count">34</span>
+<span>All</span><span class="proj-filter-count">36</span>
 </button>
 <button aria-pressed="false" class="proj-filter-btn" data-filter="aiml" type="button">
-<span>AI / ML &amp; Agentic</span><span class="proj-filter-count">24</span>
+<span>AI / ML &amp; Agentic</span><span class="proj-filter-count">27</span>
 </button>
 <button aria-pressed="false" class="proj-filter-btn" data-filter="embedded" type="button">
 <span>Robotics &amp; Embedded</span><span class="proj-filter-count">6</span>
@@ -948,7 +948,10 @@
 <span>Hardware &amp; Systems</span><span class="proj-filter-count">7</span>
 </button>
 <button aria-pressed="false" class="proj-filter-btn" data-filter="apps" type="button">
-<span>Web &amp; Apps</span><span class="proj-filter-count">12</span>
+<span>Web &amp; Apps</span><span class="proj-filter-count">14</span>
+</button>
+<button aria-pressed="false" class="proj-filter-btn" data-filter="mcp" type="button">
+<span>MCP &amp; Agent Tooling</span><span class="proj-filter-count">6</span>
 </button>
 </div>
 <button class="project-toggle-all" id="projectToggleAllBtn" type="button">
@@ -1461,8 +1464,41 @@
 <a class="project-link" data-payload-link-id="proj-onm" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<h2 class="projects-section-title" id="section-personal">Personal Tools &amp; Apps<span class="projects-section-sub">Side projects, utilities, and shipped tools</span></h2>
-<details class="project-card reveal project-card--in-progress" data-category="apps aiml" data-evidence-repo="Aaradhya-Dev-Tamrakar/super-nlm" id="p-031">
+<h2 class="projects-section-title" id="section-mcp">Model Context Protocol (MCP) &amp; Agent Infrastructure<span class="projects-section-sub">Autonomous tool bridges, local device protocols, and model context endpoints</span></h2><details class="project-card reveal" data-category="mcp apps aiml" id="p-035">
+<summary class="project-summary">
+<div class="project-index">P — 035 <span class="project-date">Sep 2026</span></div>
+<h3 class="project-title">Utility MCP Suite — Personal AI Desktop Infrastructure &amp; Local Device Bridges</h3>
+</summary>
+<div class="project-card-body">
+<ul class="project-desc-list">
+<li>Heterogeneous Model Context Protocol (MCP) server suite engineered for local desktop automation and personal device mesh across Windows, LAN, and cloud.</li>
+<li>LocalSend Protocol v2.1: Zero-cloud peer-to-peer file, text, and clipboard transfers over Wi-Fi/LAN with mutual TLS and persistent device discovery.</li>
+<li>Google Classroom &amp; Typora Engines: Automated academic coursework scraping, assignment submission verification, live editor process telemetry, and Markdown compilation.</li>
+</ul>
+<div class="project-tags">
+<span class="tag">Node.js ESM</span><span class="tag">FastMCP</span><span class="tag">LocalSend v2.1</span><span class="tag">Google Classroom API</span><span class="tag">Typora Engine</span><span class="tag">Desktop Automation</span>
+</div>
+<a class="project-link" data-payload-link-id="proj-utility-mcps" rel="noopener" target="_blank">View on GitHub ↗</a>
+</div>
+</details>
+<h2 class="projects-section-title" id="section-personal">Personal Tools &amp; Apps<span class="projects-section-sub">Side projects, utilities, and shipped tools</span></h2><details class="project-card reveal" data-category="aiml apps mcp" id="p-036">
+<summary class="project-summary">
+<div class="project-index">P — 036 <span class="project-date">Sep 2026</span></div>
+<h3 class="project-title">Nepali OCR AI — Vision OCR, Varnavinyas Grammar &amp; Bi-Directional Transcoder</h3>
+</summary>
+<div class="project-card-body">
+<ul class="project-desc-list">
+<li>End-to-end Devanagari OCR pipeline featuring adaptive text pre-processing, layout analysis, and bilingual character recognition.</li>
+<li>Varnavinyas grammar engine with statistical rule correction and bidirectional Preeti ↔ Unicode font transcoder.</li>
+<li>Automated Word (.docx) document repair and standalone FastMCP microservice for AI agent document parsing.</li>
+</ul>
+<div class="project-tags">
+<span class="tag">Python 3.11</span><span class="tag">FastMCP</span><span class="tag">Devanagari OCR</span><span class="tag">Varnavinyas Engine</span><span class="tag">Preeti Unicode</span><span class="tag">python-docx</span>
+</div>
+<a class="project-link" data-payload-link-id="proj-nepali-ocr-ai" rel="noopener" target="_blank">View on GitHub ↗</a>
+</div>
+</details>
+<details class="project-card reveal project-card--in-progress" data-category="apps aiml mcp" data-evidence-repo="Aaradhya-Dev-Tamrakar/super-nlm" id="p-031">
 <summary class="project-summary">
 <div class="project-index">P — 031 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">Super-NLM — Multi-Account NotebookLM Hub &amp; MCP Server</h3>
@@ -1502,7 +1538,7 @@
 <a class="project-link" data-payload-link-id="proj-github-pilot" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" data-category="apps hardware" data-evidence-repo="AaradhyaDT/windows-pilot" id="p-033">
+<details class="project-card reveal" data-category="apps hardware mcp" data-evidence-repo="AaradhyaDT/windows-pilot" id="p-033">
 <summary class="project-summary">
 <div class="project-index">P — 033 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">Windows Pilot — Semantic UIA &amp; MCP Desktop Automation Engine</h3>
@@ -1522,7 +1558,7 @@
 <a class="project-link" data-payload-link-id="proj-windows-pilot" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" data-category="apps" id="p-023">
+<details class="project-card reveal" data-category="apps aiml mcp" id="p-023">
 <summary class="project-summary">
 <div class="project-index">P — 023 <span class="project-date">Jul–Sep 2026</span></div>
 <h3 class="project-title">Claude Desktop Multi-Profile &amp; Distributed Service Provisioning (DSP) Fabric</h3>
@@ -1632,7 +1668,7 @@
               GitHub ↗</a>
 </div>
 </details>
-<details class="project-card reveal" data-category="apps" id="p-029">
+<details class="project-card reveal" data-category="apps mcp" id="p-029">
 <summary class="project-summary">
 <div class="project-index">P — 029 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">md2pdf — Desktop Markdown to PDF Converter</h3>
