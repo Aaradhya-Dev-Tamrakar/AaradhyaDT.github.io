@@ -1,6 +1,6 @@
 {
-  "sha": "9f4a15cc9ae0d3ce554f6eb2641f96df781e17ed",
-  "shortSha": "9f4a15c",
-  "date": "2026-09-25T13:54:23+05:45",
-  "message": "fix(journey): update legacy commit links to valid repository history URLs"
+  "sha": "4b8ae65dbc6b99cbc80302ff8e524d464716f322",
+  "shortSha": "4b8ae65",
+  "date": "2026-09-25T13:58:14+05:45",
+  "message": "feat(mcp): split utility MCPs into 3 standalone project cards and encrypted payloads (v54.36)"
 }
