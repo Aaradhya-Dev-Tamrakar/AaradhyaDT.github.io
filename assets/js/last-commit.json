@@ -1,6 +1,6 @@
 {
-  "sha": "cb3bca4ee11a91b1e9576d778a9d1cabc59d4435",
-  "shortSha": "cb3bca4",
-  "date": "2026-09-25T14:31:08+05:45",
-  "message": "docs(security): track SECURITY_AUDIT_VIP_TIER.md and update gitignore for dev-logs"
+  "sha": "ceede266f4f79f6986a47487c3aacce8ae3f2125",
+  "shortSha": "ceede26",
+  "date": "2026-09-25T14:33:23+05:45",
+  "message": "docs(contributing): fix Table of Contents GFM anchor slugs and add missing sections"
 }
