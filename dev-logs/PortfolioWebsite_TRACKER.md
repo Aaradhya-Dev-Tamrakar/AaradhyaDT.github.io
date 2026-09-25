@@ -1,13 +1,14 @@
-# Portfolio Website Tracker — v54.35
+# Portfolio Website Tracker — v54.36
 
 Last updated: _2026-09-25_
 
 - **Model Context Protocol (MCP) Infrastructure & Ecosystem Expansion (`projects.html`, `access.js`, `add_project.py`)**:
   - **Dedicated MCP & Agent Infrastructure Section (`#section-mcp`, `projects.html`)**: Introduced Section 4 in `projects.html` dedicating curated visual space to autonomous agent bridges, local device protocols, and model context endpoints.
   - **Toolbar Filter Pill & Category Sync (`projects.html`)**: Added dynamic `[ MCP & Agent Tooling ]` filter button (`data-filter="mcp"`) to the projects header toolbar and updated `data-category` attributes across all MCP-enabled systems (`Super-NLM`, `Windows Pilot`, `Claude Desktop DSP`, `md2pdf`, `Utility MCP Suite`, `Nepali OCR AI`).
-  - **Deterministic Onboarding Engine Expansion (`scripts/add_project.py`)**: Extended CLI and manifest ingestion to support `--section mcp` and dynamic `mcp` category recalculation.
-  - **Utility MCP Suite Onboarding (`p-035`, `proj-utility-mcps`)**: Integrated personal desktop daily-driver integration bridges combining LocalSend Protocol v2.1 (zero-cloud LAN P2P transfer with mutual TLS), Google Classroom MCP (coursework scraping & deadline tracking), and Typora MCP (live editor process telemetry & markdown build pipeline). Encrypted repository URL via AES-256-GCM into `access.js`.
-  - **Nepali OCR AI Onboarding (`p-036`, `proj-nepali-ocr-ai`)**: Integrated bilingual Devanagari OCR pipeline featuring adaptive image pre-processing, layout segmentation, Varnavinyas grammar engine, bidirectional Preeti ↔ Unicode transcoding, Word `.docx` repair engine, and FastMCP microservice endpoint. Encrypted repository URL via AES-256-GCM into `access.js`.
+  - **LocalSend MCP Onboarding (`p-035`, `proj-localsend-mcp`)**: Integrated zero-cloud LAN P2P file, text, and clipboard transfer server (LocalSend Protocol v2.1/v2.2 with mTLS and UDP multicast device discovery). Encrypted repository URL via AES-256-GCM into `access.js`.
+  - **Google Classroom MCP Onboarding (`p-036`, `proj-google-classroom-mcp`)**: Integrated academic coursework and due date automation bridge (Google Classroom API OAuth 2.0 with token caching). Encrypted repository URL via AES-256-GCM into `access.js`.
+  - **Typora MCP Server Onboarding (`p-037`, `proj-typora-mcp`)**: Integrated native Markdown desktop editor telemetry and workspace build automation engine (Win32 CIM/WMI process tracking). Encrypted repository URL via AES-256-GCM into `access.js`.
+  - **Nepali OCR AI Onboarding (`p-038`, `proj-nepali-ocr-ai`)**: Integrated bilingual Devanagari OCR pipeline featuring adaptive image pre-processing, layout segmentation, Varnavinyas grammar engine, bidirectional Preeti ↔ Unicode transcoding, Word `.docx` repair engine, and FastMCP microservice endpoint. Encrypted repository URL via AES-256-GCM into `access.js`.
   - **Epistemic & Institutional Alignment (`experience.html`, `resume-data.js`, `PROFILE.md`, `README.md`)**: Standardized all references to `KEC Makerspace` across experience cards, resume data, and project manifests. Formally excluded equipment authenticity certificates (Casio fx-991EX) from achievements to maintain strict academic ground truth.
 
 - **Epistemic Calibration & Security Notice Alignment (`README.md`)**:
@@ -354,7 +355,7 @@ Last updated: _2026-09-25_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.35`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.36`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v54.35)
+   MODULE: access.js — aaradhyadt.github.io (v54.36)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -38,8 +38,10 @@ const ACCESS_CONTROL_PAYLOADS = {
   "proj-super-nlm": "2963c6c84a7fd7cd7dd6cb4099db4da7f4eb02c814933afd72f92dfde4fd8a6df3fc40806e3de7d5874f3b05a59167b882103a646a34cb04f9528a64fb3c1893416bd5d8c49552e542642c02eda7",
   "proj-github-pilot": "8910c900f526370d1f178458a577c8b6416543b355fa305c6bdfe603b0ad9a5e37478e9348da73d2c2322374bd08c928948fd7ecf4c833df635d8ff4aa6056b1a5ec5ee14bbd9c53a476503413f469be35",
   "proj-windows-pilot": "04cf775837bcb6d8d3d240110864b1e721e9d1345bfe1497acff69c1624bff34237075c075546085b4cad9915b12788f9b7ee926dc45128c4201b8ea1d25aece5b33acea0b7380",
-  "proj-utility-mcps": "650bc14fb55a1e1140797540b882518942e9452b4b516dc3e47c05c2bbef22d024fae60668903aa0a023478392d4f3c1aaa3e076925d916047e1d544e666abc6c724aadc3ae7142ecbe28f156e960acb42",
-  "proj-nepali-ocr-ai": "2c5c3c25bf25b2f2a42cba07ce68cfaf3d7a2442d5ebbf4ce5b529e5498b960f6578d4a7eda4ebc2bd5c19a3d29aca246a3fd6518af23d1f85e37dc58e81355069d474f3ff238d264b470c57b245cc68b8ca"
+  "proj-nepali-ocr-ai": "17a4ce559ff0feb7bb5c956deeaba11aaf42f047e78d48bea12bb6d484d804a558d0facc7c34605baff44269acd9c25d8a46381590eb49e7446f33d4fe0d56eba36946e4237532",
+  "proj-localsend-mcp": "9197307aa44b8b207be4ff917425d3bd62ba66737a18134235732c7cb495baba5216392c4f1b7b238a391bbefd8a7985fefc83328be0b81ebc65f004204a5494eeee5a80b6dd24",
+  "proj-google-classroom-mcp": "e1e0999f244bebef86eaa370758f07e92221d780a210efe25a84abd283b9e15ba2f07dcf3a28e051162e5b1614602db3e9e773f9467401210fd9cbc7ab082c4abcf3132fd6428d972034e936cc02",
+  "proj-typora-mcp": "68a846910944a01ea46b482c4880b15ee82ef28c6d0c3f75d6c81fd61d168482f94726abd4d70c226118f9fa236c60b46b9195defdc11f2f0fb65919ccbfa5c3591ece82"
 };
 
 const KEY_CACHE = new Map();

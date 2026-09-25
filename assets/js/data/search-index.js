@@ -440,16 +440,30 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "Utility MCP Suite — Personal AI Desktop Infrastructure & Local Device Bridges",
-    "meta": "Node.js ESM, FastMCP, LocalSend v2.1",
+    "title": "LocalSend MCP — Zero-Cloud LAN P2P File & Clipboard Transfer Bridge",
+    "meta": "Node.js ESM, @modelcontextprotocol/sdk, LocalSend v2.1",
     "href": "projects.html#p-035",
-    "text": "utility mcp suite — personal ai desktop infrastructure & local device bridges heterogeneous model context protocol (mcp) server suite engineered for local desktop automation and personal device mesh across windows, lan, and cloud. localsend protocol v2.1: zero-cloud peer-to-peer file, text, and clipboard transfers over wi-fi/lan with mutual tls and persistent device discovery. google classroom & typora engines: automated academic coursework scraping, assignment submission verification, live editor process telemetry, and markdown compilation. node.js esm fastmcp localsend v2.1 google classroom api typora engine desktop automation"
+    "text": "localsend mcp — zero-cloud lan p2p file & clipboard transfer bridge high-performance model context protocol (mcp) server enabling ai coding agents to discover and exchange files directly with local lan/wi-fi devices. implemented over localsend protocol v2.1/v2.2 with mutual tls, udp multicast beaconing (224.0.0.167:53317), and persistent device discovery. zero-cloud local architecture: transfers files, directories, text snippets, and system clipboard state across phones and pcs with zero telemetry. node.js esm @modelcontextprotocol/sdk localsend v2.1 mtls udp multicast p2p transfer"
+  },
+  {
+    "type": "project",
+    "title": "Google Classroom MCP — Academic Coursework & Due Date Automation Bridge",
+    "meta": "Node.js ESM, MCP SDK, Google Classroom API",
+    "href": "projects.html#p-036",
+    "text": "google classroom mcp — academic coursework & due date automation bridge automated google classroom mcp server integrating college courses, coursework, assignments, and announcements directly into autonomous ai agent workflows. programmatic oauth 2.0 authentication with automatic token refresh, token caching, and quota-safe rest api batching. syncs problem sets, attached google drive files, grading rubrics, and submission status to provide real-time academic context. node.js esm mcp sdk google classroom api oauth 2.0 coursework automation drive integration"
+  },
+  {
+    "type": "project",
+    "title": "Typora MCP Server — Native Markdown Desktop Orchestration & Ingestion Engine",
+    "meta": "Node.js ESM, TypeScript, MCP SDK",
+    "href": "projects.html#p-037",
+    "text": "typora mcp server — native markdown desktop orchestration & ingestion engine native model context protocol (mcp) server providing ai agents with live process telemetry and automation for typora markdown editor on windows. win32 cim / wmi process inspection tracking running instances, open documents, process counts, and hex-encoded session crash recovery files. automated document creation, workspace folder launch, custom css theme management, and export pipeline to html. node.js esm typescript mcp sdk win32 cim typora engine markdown tooling"
   },
   {
     "type": "project",
     "title": "Nepali OCR AI — Vision OCR, Varnavinyas Grammar & Bi-Directional Transcoder",
     "meta": "Python 3.11, FastMCP, Devanagari OCR",
-    "href": "projects.html#p-036",
+    "href": "projects.html#p-038",
     "text": "nepali ocr ai — vision ocr, varnavinyas grammar & bi-directional transcoder end-to-end devanagari ocr pipeline featuring adaptive text pre-processing, layout analysis, and bilingual character recognition. varnavinyas grammar engine with statistical rule correction and bidirectional preeti ↔ unicode font transcoder. automated word (.docx) document repair and standalone fastmcp microservice for ai agent document parsing. python 3.11 fastmcp devanagari ocr varnavinyas engine preeti unicode python-docx"
   },
   {

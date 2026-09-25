@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.35)
+   MODULE: core.js — aaradhyadt.github.io (v54.36)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
