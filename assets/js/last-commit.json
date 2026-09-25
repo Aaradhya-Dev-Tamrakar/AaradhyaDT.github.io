@@ -1,6 +1,6 @@
 {
-  "sha": "4b8ae65dbc6b99cbc80302ff8e524d464716f322",
-  "shortSha": "4b8ae65",
-  "date": "2026-09-25T13:58:14+05:45",
-  "message": "feat(mcp): split utility MCPs into 3 standalone project cards and encrypted payloads (v54.36)"
+  "sha": "38ea6f87637666b89b978af6e528ab9089966a4d",
+  "shortSha": "38ea6f8",
+  "date": "2026-09-25T14:10:49+05:45",
+  "message": "docs(community): add community standards health files and templates"
 }
