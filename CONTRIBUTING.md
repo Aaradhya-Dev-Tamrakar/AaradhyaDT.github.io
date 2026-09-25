@@ -1,4 +1,4 @@
-﻿# Contributing to Aaradhya's Portfolio Website
+# Contributing to Aaradhya's Portfolio Website
 
 Thank you for your interest in contributing to **aaradhyadt.github.io**!
 
@@ -8,13 +8,14 @@ This repository houses the personal portfolio, engineering projects, and interac
 
 ## 📋 Table of Contents
 
-1. [Code of Conduct](#-code-of-conduct)
-2. [What Can I Contribute?](#-what-can-i-contribute)
-3. [Development Setup](#-development-setup)
-4. [Architecture & Guidelines](#-architecture--guidelines)
-5. [Automated Verification Suite](#-automated-verification-suite)
-6. [Submitting a Pull Request](#-submitting-a-pull-request)
-7. [Commit Message Conventions](#-commit-message-conventions)
+1. [Code of Conduct](#code-of-conduct)
+2. [What Can I Contribute?](#what-can-i-contribute)
+3. [Development Setup](#development-setup)
+4. [Architecture & Guidelines](#architecture--guidelines)
+5. [Automated Verification Suite](#automated-verification-suite)
+6. [Submitting a Pull Request](#submitting-a-pull-request)
+7. [Commit Message Conventions](#commit-message-conventions)
+8. [Questions or Feedback?](#questions-or-feedback)
 
 ---
 
@@ -100,9 +101,9 @@ ALL 25 CHECKS PASSED
    ```bash
    python scripts/verify.py
    ```
-5. **Commit your changes** following [Conventional Commits](#-commit-message-conventions).
+5. **Commit your changes** following [Conventional Commits](#commit-message-conventions).
 6. **Push to your fork** and open a Pull Request against the `main` branch.
-7. Fill out the [Pull Request Template](.github/PULL_REQUEST_TEMPLATE.md) completely.
+7. Fill out the [Pull Request Template](.github/pull_request_template.md) completely.
 
 ---
 

@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-25)
 
 ## Corpus Check
-- 66 files · ~1,912,151 words
+- 66 files · ~1,912,156 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1063 nodes · 1383 edges · 203 communities (58 shown, 134 thin omitted)
+- 1064 nodes · 1384 edges · 203 communities (58 shown, 134 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c0716825`
+- Built from commit: `c35a9bae`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -205,7 +205,7 @@
 - Stamp Last Commit Workflow
 - Turn 2
 - GraphIndex
-- CONTRIBUTING.md
+- Contributing to Aaradhya's Portfolio Website
 - SECURITY_AUDIT_VIP_TIER.md
 
 ## God Nodes (most connected - your core abstractions)
@@ -476,9 +476,9 @@ Nodes (27): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, As
 Cohesion: 0.18
 Nodes (18): extract_code_snippet(), find_graph_path(), format_node_badge(), GraphIndex, main(), parse_line_number(), print_search_results(), Any (+10 more)
 
-### Community 201 - "CONTRIBUTING.md"
+### Community 201 - "Contributing to Aaradhya's Portfolio Website"
 Cohesion: 0.06
-Nodes (28): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Guidelines (+20 more)
+Nodes (29): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Guidelines (+21 more)
 
 ### Community 205 - "SECURITY_AUDIT_VIP_TIER.md"
 Cohesion: 0.13
