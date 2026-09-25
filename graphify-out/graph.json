@@ -2050,18 +2050,6 @@
       "source_location": "L236"
     },
     {
-      "id": "assets_js_modules_core_rendersitefooter",
-      "label": "renderSiteFooter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "rendersitefooter()",
-      "source_file": "assets/js/modules/core.js",
-      "source_location": "L192"
-    },
-    {
       "id": "assets_js_modules_core_rendersitenav",
       "label": "renderSiteNav()",
       "_callable": true,
@@ -2720,6 +2708,18 @@
       "norm_label": "tick()",
       "source_file": "assets/js/modules/home-widgets.js",
       "source_location": "L20"
+    },
+    {
+      "id": "assets_js_modules_core_rendersitefooter",
+      "label": "renderSiteFooter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ui.js",
+      "file_type": "code",
+      "norm_label": "rendersitefooter()",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L192"
     },
     {
       "id": "assets_js_modules_ui_closeresumegenerator",
@@ -6069,7 +6069,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "54.38.0"
+      "version": "54.40.0"
     },
     {
       "id": "sync",
@@ -6091,7 +6091,7 @@
       "file_type": "code",
       "norm_label": "format-markdownhygiene()",
       "source_file": "sync.ps1",
-      "source_location": "L649"
+      "source_location": "L726"
     },
     {
       "id": "sync_get_autocommitmessage",
@@ -6102,7 +6102,7 @@
       "file_type": "code",
       "norm_label": "get-autocommitmessage()",
       "source_file": "sync.ps1",
-      "source_location": "L414"
+      "source_location": "L437"
     },
     {
       "id": "sync_get_lfsinstalled",
@@ -6113,7 +6113,7 @@
       "file_type": "code",
       "norm_label": "get-lfsinstalled()",
       "source_file": "sync.ps1",
-      "source_location": "L345"
+      "source_location": "L362"
     },
     {
       "id": "sync_get_pythonpath",
@@ -6124,7 +6124,7 @@
       "file_type": "code",
       "norm_label": "get-pythonpath()",
       "source_file": "sync.ps1",
-      "source_location": "L258"
+      "source_location": "L275"
     },
     {
       "id": "sync_get_pythonrunner",
@@ -6135,7 +6135,7 @@
       "file_type": "code",
       "norm_label": "get-pythonrunner()",
       "source_file": "sync.ps1",
-      "source_location": "L215"
+      "source_location": "L232"
     },
     {
       "id": "sync_initialize_devdriveoptimizations",
@@ -6146,7 +6146,7 @@
       "file_type": "code",
       "norm_label": "initialize-devdriveoptimizations()",
       "source_file": "sync.ps1",
-      "source_location": "L296"
+      "source_location": "L313"
     },
     {
       "id": "sync_invoke_gitnetwork",
@@ -6157,7 +6157,7 @@
       "file_type": "code",
       "norm_label": "invoke-gitnetwork()",
       "source_file": "sync.ps1",
-      "source_location": "L665"
+      "source_location": "L748"
     },
     {
       "id": "sync_invoke_pythonscript",
@@ -6168,7 +6168,18 @@
       "file_type": "code",
       "norm_label": "invoke-pythonscript()",
       "source_file": "sync.ps1",
-      "source_location": "L267"
+      "source_location": "L284"
+    },
+    {
+      "id": "sync_push_gitcommits",
+      "label": "Push-GitCommits()",
+      "_origin": "ast",
+      "community": 18,
+      "community_name": "sync.ps1",
+      "file_type": "code",
+      "norm_label": "push-gitcommits()",
+      "source_file": "sync.ps1",
+      "source_location": "L758"
     },
     {
       "id": "sync_show_diagnostics",
@@ -6179,7 +6190,7 @@
       "file_type": "code",
       "norm_label": "show-diagnostics()",
       "source_file": "sync.ps1",
-      "source_location": "L355"
+      "source_location": "L372"
     },
     {
       "id": "sync_show_helpguide",
@@ -6190,7 +6201,7 @@
       "file_type": "code",
       "norm_label": "show-helpguide()",
       "source_file": "sync.ps1",
-      "source_location": "L164"
+      "source_location": "L175"
     },
     {
       "id": "sync_sync_botstamp",
@@ -6201,7 +6212,7 @@
       "file_type": "code",
       "norm_label": "sync-botstamp()",
       "source_file": "sync.ps1",
-      "source_location": "L677"
+      "source_location": "L788"
     },
     {
       "id": "sync_update_trackerlog",
@@ -6212,7 +6223,7 @@
       "file_type": "code",
       "norm_label": "update-trackerlog()",
       "source_file": "sync.ps1",
-      "source_location": "L621"
+      "source_location": "L698"
     },
     {
       "id": "sync_write_badge",
@@ -6223,7 +6234,7 @@
       "file_type": "code",
       "norm_label": "write-badge()",
       "source_file": "sync.ps1",
-      "source_location": "L151"
+      "source_location": "L162"
     },
     {
       "id": "assets_js_modules_cmdk",
@@ -18894,7 +18905,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L262",
+      "source_location": "L279",
+      "weight": 1.0
+    },
+    {
+      "source": "sync_push_gitcommits",
+      "target": "sync_invoke_gitnetwork",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sync.ps1",
+      "source_location": "L765",
       "weight": 1.0
     },
     {
@@ -18905,7 +18927,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L356",
+      "source_location": "L373",
       "weight": 1.0
     },
     {
@@ -18916,7 +18938,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L357",
+      "source_location": "L374",
       "weight": 1.0
     },
     {
@@ -18927,7 +18949,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L360",
+      "source_location": "L377",
       "weight": 1.0
     },
     {
@@ -18938,7 +18960,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L679",
+      "source_location": "L790",
       "weight": 1.0
     },
     {
@@ -18949,7 +18971,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L696",
+      "source_location": "L807",
       "weight": 1.0
     },
     {
@@ -18960,7 +18982,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L646",
+      "source_location": "L723",
       "weight": 1.0
     },
     {
@@ -24779,7 +24801,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L151",
+      "source_location": "L162",
       "weight": 1.0
     },
     {
@@ -24790,7 +24812,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L164",
+      "source_location": "L175",
       "weight": 1.0
     },
     {
@@ -24801,7 +24823,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L215",
+      "source_location": "L232",
       "weight": 1.0
     },
     {
@@ -24812,7 +24834,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L258",
+      "source_location": "L275",
       "weight": 1.0
     },
     {
@@ -24823,7 +24845,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L267",
+      "source_location": "L284",
       "weight": 1.0
     },
     {
@@ -24834,7 +24856,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L296",
+      "source_location": "L313",
       "weight": 1.0
     },
     {
@@ -24845,7 +24867,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L345",
+      "source_location": "L362",
       "weight": 1.0
     },
     {
@@ -24856,7 +24878,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L355",
+      "source_location": "L372",
       "weight": 1.0
     },
     {
@@ -24867,7 +24889,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L414",
+      "source_location": "L437",
       "weight": 1.0
     },
     {
@@ -24878,7 +24900,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L621",
+      "source_location": "L698",
       "weight": 1.0
     },
     {
@@ -24889,7 +24911,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L649",
+      "source_location": "L726",
       "weight": 1.0
     },
     {
@@ -24900,7 +24922,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L665",
+      "source_location": "L748",
+      "weight": 1.0
+    },
+    {
+      "source": "sync",
+      "target": "sync_push_gitcommits",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "sync.ps1",
+      "source_location": "L758",
       "weight": 1.0
     },
     {
@@ -24911,7 +24944,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "sync.ps1",
-      "source_location": "L677",
+      "source_location": "L788",
       "weight": 1.0
     },
     {
@@ -28541,5 +28574,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "d967caa0e097e960a795bf6da8b75b290909a7e3"
+  "built_at_commit": "d3b152d06cacad0b8e40e25105333be9e9d09de7"
 }

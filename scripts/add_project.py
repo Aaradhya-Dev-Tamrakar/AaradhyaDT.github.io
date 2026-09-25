@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 add_project.py — Deterministic, Token-Zero Project Onboarding Engine
-for Aaradhya-Dev-Tamrakar.github.io (v54.5+)
+for AaradhyaDT.github.io (v54.5+)
 
 Automates the repetitive, error-prone tasks when adding a project to the portfolio:
 1. Detects existing project cards and computes next contiguous ID (e.g. p-035 / P — 035).

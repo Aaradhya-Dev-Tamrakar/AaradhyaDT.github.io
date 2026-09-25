@@ -4,34 +4,40 @@
     pre-commit verification, smart conventional commits, and bot stamp synchronization.
 
 .DESCRIPTION
-    sync.ps1 — The unified developer & agent workflow synchronization engine for
-    Aaradhya-Dev-Tamrakar.github.io.
+    sync.ps1 — Unified developer & agent workflow synchronization engine for
+    AaradhyaDT.github.io.
 
     Core Workflow:
-    1. Resets uncommitted local noise on assets/js/last-commit.json (bot-managed).
+    1. Resets uncommitted local modifications to assets/js/last-commit.json (bot-managed).
     2. Pulls remote updates with --autostash and synchronizes Git LFS pointers.
-    3. (Optional) Syncs site version metadata across sw.js, sitemap.xml, and tracker.
+    3. (Optional) Syncs site version metadata across sw.js, sitemap.xml, pyproject.toml, and tracker.
     4. Regenerates static search index via scripts/extract_index.py.
-    5. Updates codebase knowledge graph via graphify update . (AST sync).
-    6. Runs pre-commit diagnostic verification suite via scripts/verify.py.
+    5. Updates codebase knowledge graph via graphify update . (fast AST sync).
+    6. Runs pre-commit diagnostic verification suite via scripts/verify.py & scripts/test_e2e.py.
     7. Formulates intelligent conventional commit message with file-scope & churn metrics.
-    8. Updates dev-logs/PortfolioWebsite_TRACKER.md timestamp.
+    8. Updates dev-logs/PortfolioWebsite_TRACKER.md timestamp and formats markdown hygiene.
     9. Stages all changes (excluding last-commit.json), commits, and pushes to origin main.
-    10. Smart-polls and synchronizes the GitHub Actions stamp bot commit.
+    10. Smart-polls and synchronizes the GitHub Actions stamp bot commit and all configured remotes.
 
 .PARAMETER Message
     Custom commit message (e.g. -m "feat(projects): add robotics simulation").
     If omitted, an intelligent conventional commit message is auto-generated.
 
 .PARAMETER Version
-    Optional explicit version tag (e.g. -v v50). Sets exact version and propagates across all files.
+    Optional explicit version tag (e.g. -v v55). Sets exact version and propagates across all files.
 
 .PARAMETER Major
-    Bumps major release integer (e.g. 49 -> 50), prepends release block to SITE_RELEASES,
+    Bumps major release integer (e.g. 54 -> 55), prepends release block to SITE_RELEASES,
     and updates tracker and cache.
 
 .PARAMETER NoBump
     Suppresses automatic point release increment on routine sync.
+
+.PARAMETER Title
+    Optional title for major release bump.
+
+.PARAMETER Highlights
+    Optional highlight strings array for major release bump.
 
 .PARAMETER PullOnly
     Safely pull remote changes with --autostash and LFS sync without committing or pushing.
@@ -53,7 +59,8 @@
     Aliases: -SkipGraphify, -NoGraph, -NoGraphify, -Skip_Graphify
 
 .PARAMETER SkipVerify
-    Bypasses pre-commit verification gate (scripts/verify.py).
+    Bypasses pre-commit verification gate (scripts/verify.py & scripts/test_e2e.py).
+    Aliases: -Force, -BypassVerify
 
 .PARAMETER SkipIndex
     Bypasses static search index regeneration (scripts/extract_index.py).
@@ -62,32 +69,37 @@
     Bypasses polling for the GitHub Actions stamp bot commit after push.
     Aliases: -NoBot, -FastPush
 
+.PARAMETER VisualRegression
+    Runs automated visual regression testing suite (scripts/test_visual_regression.py).
+    Aliases: -VR
+
 .PARAMETER NoUv
     Forces standard Python runtime instead of uv / .venv acceleration.
 
 .PARAMETER WhatIf
     Dry-run mode: Previews changes, verification status, and auto-generated commit
     message without staging, committing, or pushing.
-
-.PARAMETER Force
-    Alias for bypassing verification gate failure on urgent commits.
+    Aliases: -DryRun
 
 .PARAMETER Status
     Displays comprehensive repository health, git status, LFS state, and tooling diagnostics.
+    Aliases: -Info
 
 .PARAMETER VerboseLog
     Outputs detailed debug logs, diff hunks, and sub-process execution telemetry.
+    Aliases: -v_log
 
 .PARAMETER Help
     Displays this formatted interactive help manual.
+    Aliases: -h, -?
 
 .EXAMPLE
-    .\sync.ps1                               # Routine sync: fast incremental AST sync, uv verification & push
-    .\sync.ps1 -Major                        # Major release bump: 50 -> 51, updates releases & tracker
-    .\sync.ps1 -Major -Title "New Design"    # Major bump with custom title
-    .\sync.ps1 -v v51                        # Explicit version sync
-    .\sync.ps1 -NoBump                       # Sync without incrementing version
-    .\sync.ps1 -FullGraph                    # Complete knowledge graph rebuild and clustering with LLM
+    .\sync.ps1                               # Routine sync: fast AST sync, parallel verification & push
+    .\sync.ps1 -Major                        # Major release bump: v54 -> v55, updates releases & tracker
+    .\sync.ps1 -Major -Title "New Layout"    # Major bump with custom title
+    .\sync.ps1 -v v55                        # Explicit version sync across all files
+    .\sync.ps1 -NoBump                       # Sync without incrementing point version
+    .\sync.ps1 -FullGraph                    # Complete knowledge graph rebuild and clustering
     .\sync.ps1 -SkipBotSync                  # Push immediately without waiting for GitHub Actions bot
     .\sync.ps1 -m "feat(ui): refine radar"   # Custom commit message
     .\sync.ps1 -PullOnly                     # Safe pull only
@@ -118,6 +130,7 @@ param (
     [switch]$FullGraph,
     [Alias("SkipGraphify", "NoGraph", "NoGraphify", "Skip_Graphify")]
     [switch]$SkipGraph,
+    [Alias("Force", "BypassVerify")]
     [switch]$SkipVerify,
     [switch]$SkipIndex,
     [Alias("NoBot", "FastPush")]
@@ -127,8 +140,6 @@ param (
     [switch]$NoUv,
     [Alias("DryRun")]
     [switch]$WhatIf,
-    [Alias("Force")]
-    [switch]$BypassVerify,
     [Alias("Info")]
     [switch]$Status,
     [Alias("v_log")]
@@ -164,45 +175,51 @@ function Write-Badge {
 function Show-HelpGuide {
     Write-Host ''
     Write-Host '==========================================================================' -ForegroundColor Cyan
-    Write-Host '  sync.ps1 -- Portfolio Repository Hyper-Automation & Git Sync Engine     ' -ForegroundColor White
+    Write-Host '  sync.ps1 -- AaradhyaDT.github.io Hyper-Automation & Git Sync Engine     ' -ForegroundColor White
     Write-Host '==========================================================================' -ForegroundColor Cyan
     Write-Host ''
     Write-Host 'SYNTAX:' -ForegroundColor Yellow
-    Write-Host '  .\sync.ps1 [-m <Message>] [-v <Version>] [-PullOnly] [-PushOnly] [-NoPush]'
-    Write-Host '             [-FullGraph] [-SkipGraph] [-SkipVerify] [-SkipIndex] [-SkipBotSync] [-NoUv] [-WhatIf] [-Force] [-Status]'
+    Write-Host '  .\sync.ps1 [-m <Message>] [-v <Version>] [-Major] [-NoBump] [-PullOnly] [-PushOnly]'
+    Write-Host '             [-NoPush] [-FullGraph] [-SkipGraph] [-SkipVerify] [-SkipIndex] [-SkipBotSync]'
+    Write-Host '             [-VisualRegression] [-NoUv] [-WhatIf] [-Status] [-VerboseLog]'
     Write-Host ''
     Write-Host 'COMMON WORKFLOWS:' -ForegroundColor Yellow
     Write-Host '  .\sync.ps1                        ' -NoNewline -ForegroundColor Green
     Write-Host 'Full auto: Index -> Graph -> Verify (Parallel) -> Auto-Commit -> Push -> Stamp Sync'
     Write-Host '  .\sync.ps1 -m "type(scope): msg"  ' -NoNewline -ForegroundColor Green
     Write-Host 'Commit with custom conventional commit message'
-    Write-Host '  .\sync.ps1 -v v51                 ' -NoNewline -ForegroundColor Green
-    Write-Host 'Bump version metadata (sw.js, sitemap.xml, tracker) and sync'
+    Write-Host '  .\sync.ps1 -Major                 ' -NoNewline -ForegroundColor Green
+    Write-Host 'Bump major release (e.g. v54 -> v55), update releases.js, sw.js & tracker'
+    Write-Host '  .\sync.ps1 -v v55                 ' -NoNewline -ForegroundColor Green
+    Write-Host 'Sync explicit version tag across all 12 metadata targets'
     Write-Host '  .\sync.ps1 -FullGraph             ' -NoNewline -ForegroundColor Green
-    Write-Host 'Complete knowledge graph rebuild & clustering with LLM'
+    Write-Host 'Complete knowledge graph rebuild & clustering (graphify . + cluster-only)'
     Write-Host '  .\sync.ps1 -SkipBotSync           ' -NoNewline -ForegroundColor Green
-    Write-Host 'Fast push without waiting for GitHub Actions bot stamp'
+    Write-Host 'Fast push without polling for GitHub Actions stamp bot commit'
     Write-Host '  .\sync.ps1 -PullOnly              ' -NoNewline -ForegroundColor Green
     Write-Host 'Pull remote changes safely with --autostash and conditional LFS sync'
     Write-Host '  .\sync.ps1 -WhatIf                ' -NoNewline -ForegroundColor Green
-    Write-Host 'Dry run: preview auto-commit message and verification'
+    Write-Host 'Dry run: preview changes, auto-commit message and verification'
     Write-Host '  .\sync.ps1 -Status                ' -NoNewline -ForegroundColor Green
-    Write-Host 'Display repository health, git status, and tooling diagnostics'
+    Write-Host 'Display repository health, git status, LFS state, and tooling diagnostics'
     Write-Host ''
     Write-Host 'FLAGS & SWITCHES:' -ForegroundColor Yellow
     Write-Host '  -m, -Message <String>    Custom conventional commit message'
-    Write-Host '  -v, -Version <String>    Version tag (e.g. v51) to sync across sw.js and sitemap'
+    Write-Host '  -v, -Version <String>    Version tag (e.g. v55) to propagate across site files'
+    Write-Host '  -Major, -BumpMajor       Bump major release integer and format tracker release log'
+    Write-Host '  -NoBump                  Suppress automatic point release increment on routine sync'
     Write-Host '  -PullOnly                Safe pull with autostash and conditional LFS pull only'
     Write-Host '  -PushOnly                Push staged/committed work and sync stamp bot'
     Write-Host '  -NoPush                  Commit locally without pushing to remote origin'
     Write-Host '  -FullGraph               Full knowledge graph rebuild (graphify . + cluster-only)'
     Write-Host '  -SkipGraph, -NoGraph     Skip Graphify AST knowledge graph update'
-    Write-Host '  -SkipVerify / -Force     Bypass pre-commit verification suite (scripts/verify.py)'
+    Write-Host '  -SkipVerify, -Force      Bypass pre-commit verification suite (scripts/verify.py)'
     Write-Host '  -SkipIndex               Skip static search index regeneration (extract_index.py)'
-    Write-Host '  -SkipBotSync / -NoBot    Skip GitHub Actions stamp bot synchronization'
+    Write-Host '  -SkipBotSync, -NoBot     Skip GitHub Actions stamp bot synchronization'
+    Write-Host '  -VR, -VisualRegression   Run automated visual regression testing suite'
     Write-Host '  -NoUv                    Force standard Python runtime instead of uv/.venv'
-    Write-Host '  -WhatIf / -DryRun        Preview changes and commit message without modifying git'
-    Write-Host '  -Status / -Info          Show repository and environment diagnostics'
+    Write-Host '  -WhatIf, -DryRun         Preview changes and commit message without modifying git'
+    Write-Host '  -Status, -Info           Show repository and environment diagnostics'
     Write-Host '  -VerboseLog              Show detailed sub-process output and diff snippets'
     Write-Host '  -Help, -h, -?            Show this help guide'
     Write-Host '==========================================================================' -ForegroundColor Cyan
@@ -361,16 +378,22 @@ function Show-Diagnostics {
     $branch = git rev-parse --abbrev-ref HEAD 2>$null
     $lastCommit = git log -1 '--pretty=format:%h - %s (%cr) <%an>' 2>$null
     $statusShort = git status --short 2>$null
+    $pushUrls = git remote get-url --all --push origin 2>$null
 
     Write-Host ''
     Write-Host '==========================================================================' -ForegroundColor Cyan
-    Write-Host '  Repository Status & Tooling Diagnostics                                 ' -ForegroundColor White
+    Write-Host '  Repository Status & Tooling Diagnostics (AaradhyaDT.github.io)          ' -ForegroundColor White
     Write-Host '==========================================================================' -ForegroundColor Cyan
     Write-Host '  Current Branch   : ' -NoNewline -ForegroundColor Yellow
     Write-Host "$branch"
     Write-Host '  Last Commit      : ' -NoNewline -ForegroundColor Yellow
     Write-Host "$lastCommit"
     
+    if ($pushUrls) {
+        Write-Host '  Push Remotes     : ' -ForegroundColor Yellow
+        $pushUrls | ForEach-Object { Write-Host "    - $_" -ForegroundColor DarkCyan }
+    }
+
     $pyText = if ($runner) { "$($runner.Display)" } else { "NOT FOUND (Python required for verification & indexing)" }
     $pyColor = if ($runner) { [ConsoleColor]::Green } else { [ConsoleColor]::Red }
     Write-Host '  Python Runtime   : ' -NoNewline -ForegroundColor Yellow
@@ -488,6 +511,18 @@ function Get-AutoCommitMessage {
         $type = if ($addedFiles -contains 'index.html') { "feat" } else { "refactor" }
         $scope = "home"
     }
+    elseif ($allPaths | Where-Object { $_ -match '(CODE_OF_CONDUCT|CONTRIBUTING|SECURITY)\.md' }) {
+        $type = "docs"
+        $scope = "community"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '(README|PROFILE)\.md' }) {
+        $type = "docs"
+        $scope = "readme"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^(404|terms|privacy)\.html' }) {
+        $type = "docs"
+        $scope = "pages"
+    }
     elseif ($allPaths | Where-Object { $_ -match '^assets/css/' }) {
         $type = "style"
         $scope = "css"
@@ -496,15 +531,23 @@ function Get-AutoCommitMessage {
         $type = "perf"
         $scope = "canvas"
     }
-    elseif ($allPaths | Where-Object { $_ -match '^assets/js/modules/(core|ui|terminal|access|audio|tour|haptics)\.js' }) {
+    elseif ($allPaths | Where-Object { $_ -match '^assets/js/modules/(core|ui|terminal|access|audio|tour|haptics|shortcuts|evidence|constants|home-widgets)\.js' }) {
         $type = "refactor"
         $scope = "js"
     }
-    elseif ($allPaths | Where-Object { $_ -match '^assets/js/modules/cmdk\.js' }) {
+    elseif ($allPaths | Where-Object { $_ -match '^assets/js/data/releases\.js' }) {
+        $type = "release"
+        $scope = "site"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^assets/js/data/resume-data\.js' }) {
+        $type = "data"
+        $scope = "resume"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^assets/js/modules/cmdk\.js' -or $_ -match 'search-index\.js' }) {
         $type = "search"
         $scope = "index"
     }
-    elseif ($allPaths | Where-Object { $_ -match '^assets/(images|videos|docs|media)/' }) {
+    elseif ($allPaths | Where-Object { $_ -match '^assets/(images|videos|docs|media|certificates|events)/' }) {
         $type = "assets"
         $scope = "media"
     }
@@ -516,13 +559,41 @@ function Get-AutoCommitMessage {
         $type = "seo"
         $scope = "sitemap"
     }
-    elseif ($allPaths | Where-Object { $_ -match '^dev-logs/' -or $_ -match '\.md$' }) {
+    elseif ($allPaths | Where-Object { $_ -match '^data/' }) {
+        $type = "data"
+        $scope = "claims"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^mcp-server/' }) {
+        $type = "feat"
+        $scope = "mcp"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^dev-logs/PortfolioWebsite_TRACKER\.md' }) {
         $type = "docs"
         $scope = "tracker"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^dev-logs/' }) {
+        $type = "docs"
+        $scope = "devlogs"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^\.github/ISSUE_TEMPLATE/' -or $_ -match 'pull_request_template\.md' }) {
+        $type = "ci"
+        $scope = "templates"
     }
     elseif ($allPaths | Where-Object { $_ -match '^\.github/' }) {
         $type = "ci"
         $scope = "workflows"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^scripts/add_project\.py' }) {
+        $type = "tools"
+        $scope = "projects"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^scripts/manage_payloads\.py' }) {
+        $type = "tools"
+        $scope = "access"
+    }
+    elseif ($allPaths | Where-Object { $_ -match '^scripts/verify\.py' }) {
+        $type = "test"
+        $scope = "verify"
     }
     elseif ($allPaths | Where-Object { $_ -match '^scripts/' }) {
         $type = "tools"
@@ -593,7 +664,13 @@ function Get-AutoCommitMessage {
             $addedLine = $rawDiff |
                 Select-String '^\+[^+]' |
                 ForEach-Object { $_.Line.Substring(1).Trim() } |
-                Where-Object { $_.Length -gt 0 -and $_ -notmatch '^[\{\}\[\]",\s]+$' -and $_ -notmatch '^[0-9]+$' } |
+                Where-Object {
+                    $_.Length -gt 0 -and
+                    $_ -notmatch '^[0-9]+$' -and
+                    $_ -notmatch '^[{\[\]",:\s]+$' -and
+                    $_ -notmatch '^[{\"'']' -and
+                    $_ -notmatch '(\.sig|\.json|\.lock)'
+                } |
                 Select-Object -First 1
             if ($addedLine) {
                 $snippet = $addedLine -replace '[\r\n\t]+', ' ' -replace '["`]', "'"
@@ -647,21 +724,27 @@ function Update-TrackerLog {
 }
 
 function Format-MarkdownHygiene {
-    $mdFiles = @("README.md", "CLAUDE.md", "GEMINI.md", "AGENTS.md", "dev-logs/PortfolioWebsite_TRACKER.md")
+    # Scan all markdown files in root, .github, and dev-logs
+    $mdFiles = @()
+    $mdFiles += Get-ChildItem -Path . -Filter *.md -File -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName }
+    $mdFiles += Get-ChildItem -Path ".github", "dev-logs" -Filter *.md -Recurse -File -ErrorAction SilentlyContinue | ForEach-Object { $_.FullName }
+
     foreach ($file in $mdFiles) {
         if (Test-Path $file) {
             $raw = Get-Content $file -Raw -Encoding UTF8
-            $cleanLines = ($raw -split "\r?\n") | ForEach-Object { $_.TrimEnd() }
-            $cleanContent = ($cleanLines -join "`n").TrimEnd() + "`n"
-            if ($cleanContent -ne $raw) {
-                Set-Content -Path $file -Value $cleanContent -NoNewline -Encoding UTF8
+            if ($raw) {
+                $cleanLines = ($raw -split "\r?\n") | ForEach-Object { $_.TrimEnd() }
+                $cleanContent = ($cleanLines -join "`n").TrimEnd() + "`n"
+                if ($cleanContent -ne $raw) {
+                    Set-Content -Path $file -Value $cleanContent -NoNewline -Encoding UTF8
+                }
             }
         }
     }
 }
 
-# Run network operations through Git Credential Manager even when this script is
-# launched from a host that injects a higher-precedence credential helper.
+# Run network operations through Git Credential Manager even when launched from a host
+# that injects a higher-precedence credential helper.
 function Invoke-GitNetwork {
     param(
         [Parameter(Mandatory = $true)]
@@ -669,6 +752,34 @@ function Invoke-GitNetwork {
     )
 
     git -c "credential.https://github.com.helper=" -c "credential.helper=manager" @Arguments
+}
+
+# Push changes reliably across configured push URLs
+function Push-GitCommits {
+    param(
+        [string]$Branch = "main"
+    )
+
+    $pushUrls = git remote get-url --all --push origin 2>$null
+    if (-not $pushUrls -or $pushUrls.Count -le 1) {
+        Invoke-GitNetwork @("push", "origin", $Branch)
+        return ($LASTEXITCODE -eq 0)
+    }
+
+    # Push to primary remote first
+    $primaryUrl = $pushUrls[0]
+    Invoke-GitNetwork @("push", $primaryUrl, $Branch)
+    if ($LASTEXITCODE -ne 0) {
+        return $false
+    }
+
+    # Push to secondary mirror remotes
+    for ($i = 1; $i -lt $pushUrls.Count; $i++) {
+        $mirrorUrl = $pushUrls[$i]
+        $null = Invoke-GitNetwork @("push", $mirrorUrl, $Branch, "--force") 2>&1
+    }
+
+    return $true
 }
 
 # -----------------------------------------------------------------------------
@@ -713,8 +824,8 @@ function Sync-BotStamp {
     # Mirror-sync all configured push remotes to ensure secondary remotes receive the final bot stamp commit
     $pushUrls = git remote get-url --all --push origin 2>$null
     if ($pushUrls -and $pushUrls.Count -gt 1) {
-        foreach ($url in $pushUrls) {
-            Write-Badge "Mirror" "Synchronizing $url to HEAD..." "DarkGray" "Gray"
+        for ($i = 1; $i -lt $pushUrls.Count; $i++) {
+            $url = $pushUrls[$i]
             $null = Invoke-GitNetwork @("push", $url, "main", "--force") 2>&1
         }
         Write-Badge "Mirror" "All configured remotes synchronized to $(git rev-parse --short HEAD)." "Green" "Green"
@@ -739,7 +850,7 @@ if ($Status) {
 
 Write-Host ''
 Write-Host '==========================================================================' -ForegroundColor Cyan
-Write-Host '  Aaradhya-Dev-Tamrakar.github.io -- Git & Workflow Synchronization Suite ' -ForegroundColor White
+Write-Host '  AaradhyaDT.github.io -- Git & Workflow Synchronization Suite            ' -ForegroundColor White
 Write-Host '==========================================================================' -ForegroundColor Cyan
 
 # Step 0: Initialize Dev Drive & Tooling Runtime
@@ -805,7 +916,7 @@ if (-not $PushOnly) {
             $null = Invoke-PythonScript -ScriptPath "scripts/site_automation.py" -ScriptArgs @("sync-metadata", "--version", $Version)
         }
         elseif (-not $NoBump -and -not $WhatIf) {
-            # Auto point bump (e.g. 51.1, 51.2) if local modifications exist
+            # Auto point bump (e.g. 54.38, 54.39) if local modifications exist
             $statusCheck = git status --porcelain 2>$null | Where-Object { $_ -notmatch 'last-commit\.json' }
             if ($statusCheck) {
                 # Evaluate if major release conditions are met
@@ -894,7 +1005,7 @@ else {
 }
 
 # Step 6: Pre-Commit Diagnostic Verification Gate (Parallelized via ThreadJob)
-if (-not $SkipVerify -and -not $BypassVerify -and -not $PushOnly) {
+if (-not $SkipVerify -and -not $PushOnly) {
     if ($script:PythonRunner) {
         $hasE2E = Test-Path "scripts/test_e2e.py"
         $hasVerify = Test-Path "scripts/verify.py"
@@ -1013,7 +1124,7 @@ if (-not $SkipVerify -and -not $BypassVerify -and -not $PushOnly) {
     }
 }
 else {
-    if ($SkipVerify -or $BypassVerify) {
+    if ($SkipVerify) {
         Write-Badge "Verify" "Bypassed verification gate (-SkipVerify / -Force flag set)." "Yellow" "Yellow"
     }
 }
@@ -1036,16 +1147,16 @@ if ($VisualRegression -and -not $PushOnly) {
 
 # Step 7: Push-Only Mode Check
 if ($PushOnly) {
-    Write-Badge "Git" "PushOnly flag active -- checking for unpushed commits..." "Cyan" "White"
-    Invoke-GitNetwork @("push", "origin", "main")
-    if ($LASTEXITCODE -ne 0) {
+    Write-Badge "Git" "PushOnly flag active -- pushing unpushed commits..." "Cyan" "White"
+    $pushOk = Push-GitCommits -Branch "main"
+    if (-not $pushOk) {
         Write-Badge "Git" "Push was rejected. Re-pulling with rebase and retrying..." "Yellow" "Yellow"
         Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", "main")
         if ($LASTEXITCODE -eq 0) {
-            Invoke-GitNetwork @("push", "origin", "main")
+            $pushOk = Push-GitCommits -Branch "main"
         }
-        else {
-            Write-Badge "Git" "Rebase failed. Please resolve conflicts manually." "Red" "Red"
+        if (-not $pushOk) {
+            Write-Badge "Git" "Rebase failed or push rejected. Please resolve manually." "Red" "Red"
             exit 1
         }
     }
@@ -1115,15 +1226,15 @@ if ($staged) {
 
     if (-not $NoPush) {
         Write-Badge "Git" "Pushing commits to origin main..." "Cyan" "White"
-        Invoke-GitNetwork @("push", "origin", "main")
+        $pushOk = Push-GitCommits -Branch "main"
         
-        if ($LASTEXITCODE -ne 0) {
+        if (-not $pushOk) {
             Write-Badge "Git" "Push rejected (non-fast-forward). Auto-rebasing with autostash..." "Yellow" "Yellow"
             Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", "main")
             if ($LASTEXITCODE -eq 0) {
-                Invoke-GitNetwork @("push", "origin", "main")
+                $pushOk = Push-GitCommits -Branch "main"
             }
-            else {
+            if (-not $pushOk) {
                 Write-Badge "Git" "Rebase encountered merge conflicts. Please resolve manually." "Red" "Red"
                 exit 1
             }
@@ -1143,15 +1254,15 @@ else {
         Write-Badge "Git" "Working tree is clean, but found unpushed local commits:" "Cyan" "Yellow"
         $unpushed | ForEach-Object { Write-Host "    $_" -ForegroundColor Gray }
         Write-Badge "Git" "Pushing unpushed commits to origin main..." "Cyan" "White"
-        Invoke-GitNetwork @("push", "origin", "main")
+        $pushOk = Push-GitCommits -Branch "main"
         
-        if ($LASTEXITCODE -ne 0) {
+        if (-not $pushOk) {
             Write-Badge "Git" "Push rejected (non-fast-forward). Auto-rebasing with autostash..." "Yellow" "Yellow"
             Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", "main")
             if ($LASTEXITCODE -eq 0) {
-                Invoke-GitNetwork @("push", "origin", "main")
+                $pushOk = Push-GitCommits -Branch "main"
             }
-            else {
+            if (-not $pushOk) {
                 Write-Badge "Git" "Rebase encountered merge conflicts. Please resolve manually." "Red" "Red"
                 exit 1
             }

@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-25)
 
 ## Corpus Check
-- 65 files · ~1,910,910 words
+- 65 files · ~1,911,405 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1056 nodes · 1375 edges · 208 communities (63 shown, 134 thin omitted)
+- 1057 nodes · 1377 edges · 208 communities (63 shown, 134 thin omitted)
 - Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d967caa0`
+- Built from commit: `d3b152d0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -267,11 +267,11 @@ Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tra
 
 ### Community 2 - "core.js"
 Cohesion: 0.08
-Nodes (36): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+28 more)
+Nodes (35): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+27 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
-Nodes (27): closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson(), generateResumeMarkdown() (+19 more)
+Nodes (28): renderSiteFooter(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson() (+20 more)
 
 ### Community 4 - "site_automation.py"
 Cohesion: 0.12
@@ -330,8 +330,8 @@ Cohesion: 0.14
 Nodes (13): 1. Engineering Identity, 2. Current Academic & Professional Snapshot, 3. Four-Tier Status Classification & Technical Proficiencies, 4. Systems Philosophy & Methodology, 5. The 6-Repository Vertical Systems Stack, 6. Selected Projects, 7. Technical Toolchain, 8. Verification Philosophy (+5 more)
 
 ### Community 18 - "sync.ps1"
-Cohesion: 0.22
-Nodes (9): Get-LfsInstalled(), Get-PythonPath(), Get-PythonRunner(), Initialize-DevDriveOptimizations(), Invoke-GitNetwork(), Show-Diagnostics(), Sync-BotStamp(), Update-TrackerLog() (+1 more)
+Cohesion: 0.21
+Nodes (10): Get-LfsInstalled(), Get-PythonPath(), Get-PythonRunner(), Initialize-DevDriveOptimizations(), Invoke-GitNetwork(), Push-GitCommits(), Show-Diagnostics(), Sync-BotStamp() (+2 more)
 
 ### Community 19 - "initGlobalSearch"
 Cohesion: 0.26
@@ -521,8 +521,6 @@ _Questions this graph is uniquely positioned to answer:_
   _High betweenness centrality (0.010) - this node is a cross-community bridge._
 - **Why does `get_site_stats()` connect `site_automation.py` to `add_project`?**
   _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `openWhatsNewModal()` connect `ui.js` to `core.js`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
   _387 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
@@ -530,4 +528,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07549361207897794 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07682926829268293 - nodes in this community are weakly interconnected._
+- **Should `ui.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.07823613086770982 - nodes in this community are weakly interconnected._

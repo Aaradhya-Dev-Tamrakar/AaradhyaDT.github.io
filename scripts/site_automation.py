@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for Aaradhya-Dev-Tamrakar.github.io (v54.38)
+site_automation.py — Hyper-Automation Engine for AaradhyaDT.github.io (v54.40)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -392,7 +392,7 @@ def sync_metadata(version_tag=None):
     self_path = Path(__file__).resolve()
     if self_path.exists():
         self_text = self_path.read_text(encoding="utf-8")
-        new_self = re.sub(r"Aaradhya-Dev-Tamrakar\.github\.io\s*\(v[\d.]+\)", f"Aaradhya-Dev-Tamrakar.github.io ({clean_v})", self_text, count=1)
+        new_self = re.sub(r"(?:Aaradhya-Dev-Tamrakar|AaradhyaDT)\.github\.io\s*\(v[\d.]+\)", f"AaradhyaDT.github.io ({clean_v})", self_text, count=1, flags=re.IGNORECASE)
         if new_self != self_text:
             self_path.write_text(new_self, encoding="utf-8")
             results.append(f"Updated site_automation.py header to '{clean_v}'")

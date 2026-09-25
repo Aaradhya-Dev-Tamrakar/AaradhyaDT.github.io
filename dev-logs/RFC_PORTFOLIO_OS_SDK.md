@@ -1,9 +1,9 @@
-# RFC: Portfolio-OS — Open Architecture, Template & Developer SDK
+﻿# RFC: Portfolio-OS — Open Architecture, Template & Developer SDK
 
-**Status:** Proposed / Backlog  
-**Target Milestone:** Future Initiative (v54+)  
-**Author:** Aaradhya Dev Tamrakar  
-**Date:** 2026-09-08  
+**Status:** Proposed / Backlog
+**Target Milestone:** Future Initiative (v54+)
+**Author:** Aaradhya Dev Tamrakar
+**Date:** 2026-09-08
 
 ---
 

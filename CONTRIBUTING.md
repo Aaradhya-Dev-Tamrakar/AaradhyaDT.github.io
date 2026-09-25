@@ -1,6 +1,6 @@
-# Contributing to Aaradhya's Portfolio Website
+﻿# Contributing to Aaradhya's Portfolio Website
 
-Thank you for your interest in contributing to **aaradhyadt.github.io**! 
+Thank you for your interest in contributing to **aaradhyadt.github.io**!
 
 This repository houses the personal portfolio, engineering projects, and interactive developer showcase of **Aaradhya Dev Tamrakar**. We welcome feedback, bug reports, typo fixes, accessibility improvements, and performance enhancements.
 

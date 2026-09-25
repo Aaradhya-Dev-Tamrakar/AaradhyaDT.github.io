@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_mcp.py — Model Context Protocol (MCP) Server for Aaradhya-Dev-Tamrakar.github.io
+site_mcp.py — Model Context Protocol (MCP) Server for AaradhyaDT.github.io
 
 Exposes site resources, developer tools, knowledge graph insights, and automation tools
 to AI assistants (Antigravity IDE, Claude Desktop, Cursor, Gemini) via MCP stdio JSON-RPC 2.0 protocol.
