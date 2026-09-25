@@ -1,6 +1,6 @@
 {
-  "sha": "a795d28f9b634c2957dd1c489401342069fffa36",
-  "shortSha": "a795d28",
-  "date": "2026-09-22T07:11:34+05:45",
-  "message": "docs(security): calibrate client-side encryption disclaimer per ARCH-RFC-001"
+  "sha": "c462059fbcc26b0e24f6fb12b557295016ae2d75",
+  "shortSha": "c462059",
+  "date": "2026-09-25T13:42:23+05:45",
+  "message": "feat(projects): introduce dedicated MCP section, onboard utility MCP suite & nepali-ocr-ai (v54.33)"
 }
