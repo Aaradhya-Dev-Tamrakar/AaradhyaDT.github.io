@@ -6,26 +6,29 @@ This repository houses the personal portfolio, engineering projects, and interac
 
 ---
 
-## 📋 Table of Contents
+## Table of Contents
 
 1. [Code of Conduct](#code-of-conduct)
-2. [What Can I Contribute?](#what-can-i-contribute)
+2. [What You Can Contribute](#what-you-can-contribute)
 3. [Development Setup](#development-setup)
 4. [Architecture & Guidelines](#architecture--guidelines)
 5. [Automated Verification Suite](#automated-verification-suite)
 6. [Submitting a Pull Request](#submitting-a-pull-request)
 7. [Commit Message Conventions](#commit-message-conventions)
-8. [Questions or Feedback?](#questions-or-feedback)
+8. [Questions and Feedback](#questions-and-feedback)
 
 ---
 
-## 🤝 Code of Conduct
+<a id="code-of-conduct"></a>
+## Code of Conduct
 
 All contributors and participants are expected to adhere to our [Code of Conduct](CODE_OF_CONDUCT.md). Please report any violations or concerns to [aaradhyadevtmr@gmail.com](mailto:aaradhyadevtmr@gmail.com).
 
 ---
 
-## 💡 What Can I Contribute?
+<a id="what-you-can-contribute"></a>
+<a id="what-can-i-contribute"></a>
+## What You Can Contribute
 
 - 🐛 **Bug Reports & Fixes**: Broken links, visual glitches, script runtime errors, mobile responsive layout bugs.
 - ♿ **Accessibility (a11y)**: Screen-reader optimizations, ARIA label accuracy, keyboard navigation, color contrast.
@@ -36,7 +39,8 @@ All contributors and participants are expected to adhere to our [Code of Conduct
 
 ---
 
-## 🛠️ Development Setup
+<a id="development-setup"></a>
+## Development Setup
 
 The website is intentionally built with **Vanilla HTML5, CSS3, and ES6+ JavaScript** (zero external frameworks or node build steps required to serve).
 
@@ -64,7 +68,9 @@ The website is intentionally built with **Vanilla HTML5, CSS3, and ES6+ JavaScri
 
 ---
 
-## 🏛️ Architecture & Guidelines
+<a id="architecture-guidelines"></a>
+<a id="architecture--guidelines"></a>
+## Architecture & Guidelines
 
 - **Vanilla Stack**: Maintain zero-dependency client architecture. Do not introduce heavy JavaScript frameworks (e.g. React, Vue, Angular) or runtime bundlers.
 - **CSS Architecture**: Global design tokens and modules reside in `assets/css/modules/`. Maintain dark-mode first, glassmorphism aesthetics, and semantic variables.
@@ -74,7 +80,8 @@ The website is intentionally built with **Vanilla HTML5, CSS3, and ES6+ JavaScri
 
 ---
 
-## 🧪 Automated Verification Suite
+<a id="automated-verification-suite"></a>
+## Automated Verification Suite
 
 Before submitting any contribution, run the full verification test suite to ensure all cross-page links, asset references, JS syntax, and accessibility requirements pass:
 
@@ -89,7 +96,8 @@ ALL 25 CHECKS PASSED
 
 ---
 
-## 🚀 Submitting a Pull Request
+<a id="submitting-a-pull-request"></a>
+## Submitting a Pull Request
 
 1. **Fork the repository** on GitHub.
 2. **Create a topic branch** from `main`:
@@ -107,7 +115,8 @@ ALL 25 CHECKS PASSED
 
 ---
 
-## 🏷️ Commit Message Conventions
+<a id="commit-message-conventions"></a>
+## Commit Message Conventions
 
 We adhere to the [Conventional Commits](https://www.conventionalcommits.org/) specification:
 
@@ -127,6 +136,8 @@ fix(terminal): resolve command history navigation edge case on Firefox
 
 ---
 
-## 📬 Questions or Feedback?
+<a id="questions-and-feedback"></a>
+<a id="questions-or-feedback"></a>
+## Questions and Feedback
 
 Feel free to open an issue using the [Issue Templates](.github/ISSUE_TEMPLATE/) or reach out directly at [aaradhyadevtmr@gmail.com](mailto:aaradhyadevtmr@gmail.com).

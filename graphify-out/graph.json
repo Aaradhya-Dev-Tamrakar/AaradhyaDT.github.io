@@ -6069,7 +6069,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "54.42.0"
+      "version": "54.43.0"
     },
     {
       "id": "sync",
@@ -7004,51 +7004,51 @@
     },
     {
       "id": "contributing_architecture_guidelines",
-      "label": "\ud83c\udfdb\ufe0f Architecture & Guidelines",
+      "label": "Architecture & Guidelines",
       "_origin": "ast",
       "community": 201,
       "community_name": "Contributing to Aaradhya's Portfolio Website",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83c\udfdb\ufe0f architecture & guidelines",
+      "norm_label": "architecture & guidelines",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L67"
+      "source_location": "L73"
     },
     {
       "id": "contributing_automated_verification_suite",
-      "label": "\ud83e\uddea Automated Verification Suite",
+      "label": "Automated Verification Suite",
       "_origin": "ast",
       "community": 201,
       "community_name": "Contributing to Aaradhya's Portfolio Website",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83e\uddea automated verification suite",
+      "norm_label": "automated verification suite",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L77"
+      "source_location": "L84"
     },
     {
       "id": "contributing_code_of_conduct",
-      "label": "\ud83e\udd1d Code of Conduct",
+      "label": "Code of Conduct",
       "_origin": "ast",
       "community": 201,
       "community_name": "Contributing to Aaradhya's Portfolio Website",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83e\udd1d code of conduct",
+      "norm_label": "code of conduct",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L22"
+      "source_location": "L23"
     },
     {
       "id": "contributing_commit_message_conventions",
-      "label": "\ud83c\udff7\ufe0f Commit Message Conventions",
+      "label": "Commit Message Conventions",
       "_origin": "ast",
       "community": 201,
       "community_name": "Contributing to Aaradhya's Portfolio Website",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83c\udff7\ufe0f commit message conventions",
+      "norm_label": "commit message conventions",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L110"
+      "source_location": "L119"
     },
     {
       "id": "contributing_contributing_to_aaradhya_s_portfolio_website",
@@ -7064,15 +7064,15 @@
     },
     {
       "id": "contributing_development_setup",
-      "label": "\ud83d\udee0\ufe0f Development Setup",
+      "label": "Development Setup",
       "_origin": "ast",
       "community": 201,
       "community_name": "Contributing to Aaradhya's Portfolio Website",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udee0\ufe0f development setup",
+      "norm_label": "development setup",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L39"
+      "source_location": "L43"
     },
     {
       "id": "contributing_local_dev_server",
@@ -7084,7 +7084,7 @@
       "node_kind": "heading",
       "norm_label": "local dev server",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L48"
+      "source_location": "L52"
     },
     {
       "id": "contributing_prerequisites",
@@ -7096,55 +7096,55 @@
       "node_kind": "heading",
       "norm_label": "prerequisites",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L43"
+      "source_location": "L47"
     },
     {
-      "id": "contributing_questions_or_feedback",
-      "label": "\ud83d\udcec Questions or Feedback?",
+      "id": "contributing_questions_and_feedback",
+      "label": "Questions and Feedback",
       "_origin": "ast",
       "community": 201,
       "community_name": "Contributing to Aaradhya's Portfolio Website",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udcec questions or feedback?",
+      "norm_label": "questions and feedback",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L130"
+      "source_location": "L141"
     },
     {
       "id": "contributing_submitting_a_pull_request",
-      "label": "\ud83d\ude80 Submitting a Pull Request",
+      "label": "Submitting a Pull Request",
       "_origin": "ast",
       "community": 201,
       "community_name": "Contributing to Aaradhya's Portfolio Website",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\ude80 submitting a pull request",
+      "norm_label": "submitting a pull request",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L92"
+      "source_location": "L100"
     },
     {
       "id": "contributing_table_of_contents",
-      "label": "\ud83d\udccb Table of Contents",
+      "label": "Table of Contents",
       "_origin": "ast",
       "community": 201,
       "community_name": "Contributing to Aaradhya's Portfolio Website",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udccb table of contents",
+      "norm_label": "table of contents",
       "source_file": "CONTRIBUTING.md",
       "source_location": "L9"
     },
     {
-      "id": "contributing_what_can_i_contribute",
-      "label": "\ud83d\udca1 What Can I Contribute?",
+      "id": "contributing_what_you_can_contribute",
+      "label": "What You Can Contribute",
       "_origin": "ast",
       "community": 201,
       "community_name": "Contributing to Aaradhya's Portfolio Website",
       "file_type": "document",
       "node_kind": "heading",
-      "norm_label": "\ud83d\udca1 what can i contribute?",
+      "norm_label": "what you can contribute",
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L28"
+      "source_location": "L31"
     },
     {
       "id": "github_pull_request_template",
@@ -22118,24 +22118,35 @@
     },
     {
       "source": "contributing_contributing_to_aaradhya_s_portfolio_website",
+      "target": "contributing_submitting_a_pull_request",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "CONTRIBUTING.md",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "contributing_contributing_to_aaradhya_s_portfolio_website",
       "target": "contributing_commit_message_conventions",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L110",
+      "source_location": "L119",
       "weight": 1.0
     },
     {
       "source": "contributing_contributing_to_aaradhya_s_portfolio_website",
-      "target": "contributing_questions_or_feedback",
+      "target": "contributing_questions_and_feedback",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L130",
+      "source_location": "L141",
       "weight": 1.0
     },
     {
@@ -22146,18 +22157,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L22",
+      "source_location": "L23",
       "weight": 1.0
     },
     {
       "source": "contributing_contributing_to_aaradhya_s_portfolio_website",
-      "target": "contributing_what_can_i_contribute",
+      "target": "contributing_what_you_can_contribute",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L28",
+      "source_location": "L31",
       "weight": 1.0
     },
     {
@@ -22168,7 +22179,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L39",
+      "source_location": "L43",
       "weight": 1.0
     },
     {
@@ -22179,7 +22190,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L67",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -22190,7 +22201,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L77",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -22205,17 +22216,6 @@
       "weight": 1.0
     },
     {
-      "source": "contributing_contributing_to_aaradhya_s_portfolio_website",
-      "target": "contributing_submitting_a_pull_request",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "CONTRIBUTING.md",
-      "source_location": "L92",
-      "weight": 1.0
-    },
-    {
       "source": "contributing_development_setup",
       "target": "contributing_prerequisites",
       "relation": "contains",
@@ -22223,7 +22223,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L43",
+      "source_location": "L47",
       "weight": 1.0
     },
     {
@@ -22234,7 +22234,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L48",
+      "source_location": "L52",
       "weight": 1.0
     },
     {
@@ -26601,7 +26601,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L106",
+      "source_location": "L114",
       "weight": 1.0
     },
     {
@@ -26612,7 +26612,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "CONTRIBUTING.md",
-      "source_location": "L24",
+      "source_location": "L25",
       "weight": 1.0
     },
     {
@@ -28735,5 +28735,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "c35a9bae602e980647fe44e0f93dc3ad13d8ac46"
+  "built_at_commit": "fa25b5bd8280cf23fa1850c88923e9938c708c94"
 }
