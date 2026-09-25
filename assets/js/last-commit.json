@@ -1,6 +1,6 @@
 {
-  "sha": "96e3d0d4616b36446e5cb2a3670b0c530b4acf43",
-  "shortSha": "96e3d0d",
-  "date": "2026-09-25T13:46:10+05:45",
-  "message": "chore: merge upstream bot stamps"
+  "sha": "9f4a15cc9ae0d3ce554f6eb2641f96df781e17ed",
+  "shortSha": "9f4a15c",
+  "date": "2026-09-25T13:54:23+05:45",
+  "message": "fix(journey): update legacy commit links to valid repository history URLs"
 }
