@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.57)
+   MODULE: core.js — aaradhyadt.github.io (v54.58)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -285,14 +285,24 @@ function renderQuickNav() {
 
 
 /* ── Active nav link (page-level, not anchor) ─────────────── */
+function getLinkTargetPage(href) {
+  if (!href) return '';
+  const trimmed = href.trim();
+  if (trimmed.startsWith('#')) return ''; // In-page anchor fragment, not a separate page
+  const pathPart = trimmed.split('#')[0];
+  if (!pathPart || pathPart === '/') return 'index.html';
+  const file = pathPart.split('/').pop();
+  if (!file) return 'index.html';
+  return file.endsWith('.html') ? file : (file + '.html');
+}
+
 function setActiveNav() {
   // Match current page filename against each nav link's href
   const page = getCurrentPageFile();
   document.querySelectorAll('.nav-links a, .nav-drawer a, .nav-cta').forEach(a => {
-    let linkPage = (a.getAttribute('href') || '').split('/').pop().split('#')[0] || 'index.html';
-    if (!linkPage || linkPage === '/' || linkPage === '') linkPage = 'index.html';
-    if (!linkPage.endsWith('.html')) linkPage += '.html';
-    const isCurrent = linkPage === page || (page === 'achievements.html' && linkPage === 'experience.html');
+    const rawHref = a.getAttribute('href') || '';
+    const linkPage = getLinkTargetPage(rawHref);
+    const isCurrent = Boolean(linkPage) && (linkPage === page || (page === 'achievements.html' && linkPage === 'experience.html'));
     a.classList.toggle('active', isCurrent);
     if (isCurrent) {
       a.setAttribute('aria-current', 'page');

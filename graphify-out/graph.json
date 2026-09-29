@@ -1735,7 +1735,7 @@
       "file_type": "code",
       "norm_label": "adtobs()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L896"
+      "source_location": "L906"
     },
     {
       "id": "assets_js_modules_core_applyaccent",
@@ -1747,7 +1747,7 @@
       "file_type": "code",
       "norm_label": "applyaccent()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L502"
+      "source_location": "L512"
     },
     {
       "id": "assets_js_modules_core_applylivedates",
@@ -1759,7 +1759,7 @@
       "file_type": "code",
       "norm_label": "applylivedates()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L865"
+      "source_location": "L875"
     },
     {
       "id": "assets_js_modules_core_applytheme",
@@ -1771,7 +1771,7 @@
       "file_type": "code",
       "norm_label": "applytheme()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L410"
+      "source_location": "L420"
     },
     {
       "id": "assets_js_modules_core_closelogoutmodal",
@@ -1795,7 +1795,7 @@
       "file_type": "code",
       "norm_label": "computelivedates()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L790"
+      "source_location": "L800"
     },
     {
       "id": "assets_js_modules_core_cycleaccent",
@@ -1807,7 +1807,7 @@
       "file_type": "code",
       "norm_label": "cycleaccent()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L523"
+      "source_location": "L533"
     },
     {
       "id": "assets_js_modules_core_getbrandassets",
@@ -1819,7 +1819,7 @@
       "file_type": "code",
       "norm_label": "getbrandassets()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L308"
+      "source_location": "L318"
     },
     {
       "id": "assets_js_modules_core_getcurrentpagefile",
@@ -1832,6 +1832,18 @@
       "norm_label": "getcurrentpagefile()",
       "source_file": "assets/js/modules/core.js",
       "source_location": "L240"
+    },
+    {
+      "id": "assets_js_modules_core_getlinktargetpage",
+      "label": "getLinkTargetPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "community_name": "core.js",
+      "file_type": "code",
+      "norm_label": "getlinktargetpage()",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L288"
     },
     {
       "id": "assets_js_modules_core_handleaccessbtnclick",
@@ -1855,7 +1867,7 @@
       "file_type": "code",
       "norm_label": "initaccent()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L534"
+      "source_location": "L544"
     },
     {
       "id": "assets_js_modules_core_initaccentpicker",
@@ -1867,7 +1879,7 @@
       "file_type": "code",
       "norm_label": "initaccentpicker()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L539"
+      "source_location": "L549"
     },
     {
       "id": "assets_js_modules_core_initcursor",
@@ -1879,7 +1891,7 @@
       "file_type": "code",
       "norm_label": "initcursor()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L714"
+      "source_location": "L724"
     },
     {
       "id": "assets_js_modules_core_initcursor_tick",
@@ -1891,7 +1903,7 @@
       "file_type": "code",
       "norm_label": "tick()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L745"
+      "source_location": "L755"
     },
     {
       "id": "assets_js_modules_core_inithamburger",
@@ -1903,7 +1915,7 @@
       "file_type": "code",
       "norm_label": "inithamburger()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L578"
+      "source_location": "L588"
     },
     {
       "id": "assets_js_modules_core_inithamburger_setopen",
@@ -1915,7 +1927,7 @@
       "file_type": "code",
       "norm_label": "setopen()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L603"
+      "source_location": "L613"
     },
     {
       "id": "assets_js_modules_core_initreveal",
@@ -1927,7 +1939,7 @@
       "file_type": "code",
       "norm_label": "initreveal()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L688"
+      "source_location": "L698"
     },
     {
       "id": "assets_js_modules_core_initscroll",
@@ -1939,7 +1951,7 @@
       "file_type": "code",
       "norm_label": "initscroll()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L637"
+      "source_location": "L647"
     },
     {
       "id": "assets_js_modules_core_initscroll_onscroll",
@@ -1951,7 +1963,7 @@
       "file_type": "code",
       "norm_label": "onscroll()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L645"
+      "source_location": "L655"
     },
     {
       "id": "assets_js_modules_core_initstatusdate",
@@ -1963,7 +1975,7 @@
       "file_type": "code",
       "norm_label": "initstatusdate()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L926"
+      "source_location": "L936"
     },
     {
       "id": "assets_js_modules_core_inittheme",
@@ -1975,7 +1987,7 @@
       "file_type": "code",
       "norm_label": "inittheme()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L454"
+      "source_location": "L464"
     },
     {
       "id": "assets_js_modules_core_initthemetoggle",
@@ -1987,7 +1999,7 @@
       "file_type": "code",
       "norm_label": "initthemetoggle()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L459"
+      "source_location": "L469"
     },
     {
       "id": "assets_js_modules_core_kathmanduymd",
@@ -1999,7 +2011,7 @@
       "file_type": "code",
       "norm_label": "kathmanduymd()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L888"
+      "source_location": "L898"
     },
     {
       "id": "assets_js_modules_core_loadga4",
@@ -2011,7 +2023,7 @@
       "file_type": "code",
       "norm_label": "loadga4()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L761"
+      "source_location": "L771"
     },
     {
       "id": "assets_js_modules_core_loadga4_gtag",
@@ -2023,7 +2035,7 @@
       "file_type": "code",
       "norm_label": "gtag()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L765"
+      "source_location": "L775"
     },
     {
       "id": "assets_js_modules_core_openlogoutmodal",
@@ -2050,18 +2062,6 @@
       "source_location": "L253"
     },
     {
-      "id": "assets_js_modules_core_rendersitefooter",
-      "label": "renderSiteFooter()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "rendersitefooter()",
-      "source_file": "assets/js/modules/core.js",
-      "source_location": "L209"
-    },
-    {
       "id": "assets_js_modules_core_rendersitenav",
       "label": "renderSiteNav()",
       "_callable": true,
@@ -2083,7 +2083,7 @@
       "file_type": "code",
       "norm_label": "renderstatusdate()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L912"
+      "source_location": "L922"
     },
     {
       "id": "assets_js_modules_core_requestnotificationpermission",
@@ -2095,7 +2095,7 @@
       "file_type": "code",
       "norm_label": "requestnotificationpermission()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L942"
+      "source_location": "L952"
     },
     {
       "id": "assets_js_modules_core_schedulega4",
@@ -2107,7 +2107,7 @@
       "file_type": "code",
       "norm_label": "schedulega4()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L774"
+      "source_location": "L784"
     },
     {
       "id": "assets_js_modules_core_setactivenav",
@@ -2119,7 +2119,7 @@
       "file_type": "code",
       "norm_label": "setactivenav()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L288"
+      "source_location": "L299"
     },
     {
       "id": "assets_js_modules_core_subscribepushnotifications",
@@ -2131,7 +2131,7 @@
       "file_type": "code",
       "norm_label": "subscribepushnotifications()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L962"
+      "source_location": "L972"
     },
     {
       "id": "assets_js_modules_core_syncbrandlogos",
@@ -2143,7 +2143,7 @@
       "file_type": "code",
       "norm_label": "syncbrandlogos()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L375"
+      "source_location": "L385"
     },
     {
       "id": "assets_js_modules_core_togglestatusdate",
@@ -2155,7 +2155,7 @@
       "file_type": "code",
       "norm_label": "togglestatusdate()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L919"
+      "source_location": "L929"
     },
     {
       "id": "assets_js_modules_core_toggletheme",
@@ -2167,103 +2167,7 @@
       "file_type": "code",
       "norm_label": "toggletheme()",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L415"
-    },
-    {
-      "id": "assets_js_script_bootsite",
-      "label": "bootSite()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "bootsite()",
-      "source_file": "assets/js/script.js",
-      "source_location": "L145"
-    },
-    {
-      "id": "assets_js_script_initnetworkstatuslisteners",
-      "label": "initNetworkStatusListeners()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "initnetworkstatuslisteners()",
-      "source_file": "assets/js/script.js",
-      "source_location": "L229"
-    },
-    {
-      "id": "assets_js_script_initreadingprogressbar",
-      "label": "initReadingProgressBar()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "initreadingprogressbar()",
-      "source_file": "assets/js/script.js",
-      "source_location": "L214"
-    },
-    {
-      "id": "assets_js_script_initreadingprogressbar_updateprogress",
-      "label": "updateProgress()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "updateprogress()",
-      "source_file": "assets/js/script.js",
-      "source_location": "L217"
-    },
-    {
-      "id": "assets_js_script_initserviceworker",
-      "label": "initServiceWorker()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "initserviceworker()",
-      "source_file": "assets/js/script.js",
-      "source_location": "L199"
-    },
-    {
-      "id": "assets_js_script_loadone",
-      "label": "loadOne()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "loadone()",
-      "source_file": "assets/js/script.js",
-      "source_location": "L45"
-    },
-    {
-      "id": "assets_js_script_queueofflinecontactmessage",
-      "label": "queueOfflineContactMessage()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "queueofflinecontactmessage()",
-      "source_file": "assets/js/script.js",
-      "source_location": "L272"
-    },
-    {
-      "id": "assets_js_script_syncqueuedcontactmessages",
-      "label": "syncQueuedContactMessages()",
-      "_callable": true,
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "syncqueuedcontactmessages()",
-      "source_file": "assets/js/script.js",
-      "source_location": "L239"
+      "source_location": "L425"
     },
     {
       "id": "scripts_find_implementation_extract_code_snippet",
@@ -2468,6 +2372,102 @@
       "norm_label": ".disable()",
       "source_file": "scripts/find_implementation.py",
       "source_location": "L43"
+    },
+    {
+      "id": "assets_js_script_bootsite",
+      "label": "bootSite()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "bootsite()",
+      "source_file": "assets/js/script.js",
+      "source_location": "L145"
+    },
+    {
+      "id": "assets_js_script_initnetworkstatuslisteners",
+      "label": "initNetworkStatusListeners()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "initnetworkstatuslisteners()",
+      "source_file": "assets/js/script.js",
+      "source_location": "L229"
+    },
+    {
+      "id": "assets_js_script_initreadingprogressbar",
+      "label": "initReadingProgressBar()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "initreadingprogressbar()",
+      "source_file": "assets/js/script.js",
+      "source_location": "L214"
+    },
+    {
+      "id": "assets_js_script_initreadingprogressbar_updateprogress",
+      "label": "updateProgress()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "updateprogress()",
+      "source_file": "assets/js/script.js",
+      "source_location": "L217"
+    },
+    {
+      "id": "assets_js_script_initserviceworker",
+      "label": "initServiceWorker()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "initserviceworker()",
+      "source_file": "assets/js/script.js",
+      "source_location": "L199"
+    },
+    {
+      "id": "assets_js_script_loadone",
+      "label": "loadOne()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "loadone()",
+      "source_file": "assets/js/script.js",
+      "source_location": "L45"
+    },
+    {
+      "id": "assets_js_script_queueofflinecontactmessage",
+      "label": "queueOfflineContactMessage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "queueofflinecontactmessage()",
+      "source_file": "assets/js/script.js",
+      "source_location": "L272"
+    },
+    {
+      "id": "assets_js_script_syncqueuedcontactmessages",
+      "label": "syncQueuedContactMessages()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "syncqueuedcontactmessages()",
+      "source_file": "assets/js/script.js",
+      "source_location": "L239"
     },
     {
       "id": "scripts_benchmark_bundle_analyze_assets",
@@ -2720,6 +2720,18 @@
       "norm_label": "tick()",
       "source_file": "assets/js/modules/home-widgets.js",
       "source_location": "L20"
+    },
+    {
+      "id": "assets_js_modules_core_rendersitefooter",
+      "label": "renderSiteFooter()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ui.js",
+      "file_type": "code",
+      "norm_label": "rendersitefooter()",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L209"
     },
     {
       "id": "assets_js_modules_ui_closeresumegenerator",
@@ -4231,7 +4243,7 @@
       "file_type": "code",
       "norm_label": "computelivedates()",
       "source_file": "tests/unit/test_core_helpers.test.mjs",
-      "source_location": "L10"
+      "source_location": "L21"
     },
     {
       "id": "tests_unit_test_core_helpers_test_getcurrentpagefile",
@@ -4244,6 +4256,18 @@
       "norm_label": "getcurrentpagefile()",
       "source_file": "tests/unit/test_core_helpers.test.mjs",
       "source_location": "L4"
+    },
+    {
+      "id": "tests_unit_test_core_helpers_test_getlinktargetpage",
+      "label": "getLinkTargetPage()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 60,
+      "community_name": "test_core_helpers.test.mjs",
+      "file_type": "code",
+      "norm_label": "getlinktargetpage()",
+      "source_file": "tests/unit/test_core_helpers.test.mjs",
+      "source_location": "L10"
     },
     {
       "id": "tests_unit_test_terminal_test_parseterminalcommand",
@@ -6069,7 +6093,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "54.55.0"
+      "version": "54.58.0"
     },
     {
       "id": "sync",
@@ -6259,23 +6283,11 @@
       "source_location": "L7"
     },
     {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L23"
-    },
-    {
       "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_101",
       "label": "Assistant",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
@@ -6287,7 +6299,7 @@
       "label": "Assistant",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
@@ -6299,7 +6311,7 @@
       "label": "Assistant",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
@@ -6311,7 +6323,7 @@
       "label": "Assistant",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
@@ -6323,7 +6335,7 @@
       "label": "Assistant",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
@@ -6335,7 +6347,7 @@
       "label": "Assistant",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
@@ -6347,7 +6359,7 @@
       "label": "Assistant",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
@@ -6355,131 +6367,11 @@
       "source_location": "L137"
     },
     {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_29",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L29"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_35",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L35"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_41",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_47",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L47"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_53",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L53"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_59",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L59"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_65",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L65"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_71",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L71"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_77",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L77"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_83",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L83"
-    },
-    {
       "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_95",
       "label": "Assistant",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
@@ -6491,7 +6383,7 @@
       "label": "Evaluate Repo",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "evaluate repo",
@@ -6503,7 +6395,7 @@
       "label": "Evaluation of `AaradhyaDT.github.io`",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "evaluation of `aaradhyadt.github.io`",
@@ -6515,7 +6407,7 @@
       "label": "Turn 1",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "turn 1",
@@ -6523,23 +6415,11 @@
       "source_location": "L9"
     },
     {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
-      "label": "Turn 2",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "turn 2",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L17"
-    },
-    {
       "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_3",
       "label": "Turn 3",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "turn 3",
@@ -6551,7 +6431,7 @@
       "label": "User",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "user",
@@ -6559,23 +6439,11 @@
       "source_location": "L11"
     },
     {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_19",
-      "label": "User",
-      "_origin": "ast",
-      "community": 199,
-      "community_name": "Turn 2",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "user",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L19"
-    },
-    {
       "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_91",
       "label": "User",
       "_origin": "ast",
       "community": 199,
-      "community_name": "Turn 2",
+      "community_name": "Turn 3",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "user",
@@ -6602,7 +6470,7 @@
       "file_type": "code",
       "norm_label": "ad_months",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L885"
+      "source_location": "L895"
     },
     {
       "id": "assets_js_modules_core_bs_epoch_utc",
@@ -6613,7 +6481,7 @@
       "file_type": "code",
       "norm_label": "bs_epoch_utc",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L883"
+      "source_location": "L893"
     },
     {
       "id": "assets_js_modules_core_bs_months",
@@ -6624,7 +6492,7 @@
       "file_type": "code",
       "norm_label": "bs_months",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L884"
+      "source_location": "L894"
     },
     {
       "id": "assets_js_modules_core_bs_years",
@@ -6635,18 +6503,7 @@
       "file_type": "code",
       "norm_label": "bs_years",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L882"
-    },
-    {
-      "id": "assets_js_script",
-      "label": "script.js",
-      "_origin": "ast",
-      "community": 2,
-      "community_name": "core.js",
-      "file_type": "code",
-      "norm_label": "script.js",
-      "source_file": "assets/js/script.js",
-      "source_location": "L1"
+      "source_location": "L892"
     },
     {
       "id": "dev_logs_evolution_areas",
@@ -8706,6 +8563,425 @@
       "source_location": "L37"
     },
     {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L23"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_29",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L29"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_35",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L35"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_41",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L41"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_47",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L47"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_53",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L53"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_59",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L59"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_65",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L65"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_71",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L71"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_77",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L77"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_83",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L83"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_2",
+      "label": "Turn 2",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 2",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L17"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_19",
+      "label": "User",
+      "_origin": "ast",
+      "community": 206,
+      "community_name": "Turn 2",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L19"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_735",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L735"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_bottom_line",
+      "label": "Bottom line",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "bottom line",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L713"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_credibility_risk",
+      "label": "Credibility risk",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "credibility risk",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L707"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
+      "label": "Final assessment",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "final assessment",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L687"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_on_webscraping_protection",
+      "label": "On \u201cwebscraping protection\u201d",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "on \u201cwebscraping protection\u201d",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L807"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_portfolio_communication",
+      "label": "Portfolio communication",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "portfolio communication",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L695"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_repository_engineering",
+      "label": "Repository engineering",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "repository engineering",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L689"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_research_scholarship_value",
+      "label": "Research/scholarship value",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "research/scholarship value",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L701"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_revised_assessment_of_the_access_control_subsystem",
+      "label": "Revised assessment of the access-control subsystem",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "revised assessment of the access-control subsystem",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L745"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_the_vip2026_issue_is_then_a_different_question",
+      "label": "The `vip2026` issue is then a different question",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the `vip2026` issue is then a different question",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L782"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_4",
+      "label": "Turn 4",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 4",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L729"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_731",
+      "label": "User",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L731"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_what_the_system_actually_demonstrates_well",
+      "label": "What the system actually demonstrates well",
+      "_origin": "ast",
+      "community": 207,
+      "community_name": "Final assessment",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what the system actually demonstrates well",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L756"
+    },
+    {
+      "id": "assets_js_script",
+      "label": "script.js",
+      "_origin": "ast",
+      "community": 208,
+      "community_name": "script.js",
+      "file_type": "code",
+      "norm_label": "script.js",
+      "source_file": "assets/js/script.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_885",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "I would therefore revise my previous evaluation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L885"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_i_would_therefore_revise_my_previous_evaluation",
+      "label": "I would therefore revise my previous evaluation",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "I would therefore revise my previous evaluation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "i would therefore revise my previous evaluation",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L835"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_more_interestingly_i_think_the_project_has_a_stronger_interpretation_now",
+      "label": "More interestingly, I think the project has a stronger interpretation now",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "I would therefore revise my previous evaluation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "more interestingly, i think the project has a stronger interpretation now",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L853"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_revised_score",
+      "label": "Revised score",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "I would therefore revise my previous evaluation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "revised score",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L839"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_5",
+      "label": "Turn 5",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "I would therefore revise my previous evaluation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 5",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L871"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_6",
+      "label": "Turn 6",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "I would therefore revise my previous evaluation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 6",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L879"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_873",
+      "label": "User",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "I would therefore revise my previous evaluation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L873"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_881",
+      "label": "User",
+      "_origin": "ast",
+      "community": 209,
+      "community_name": "I would therefore revise my previous evaluation",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L881"
+    },
+    {
       "id": "scripts_benchmark_bundle",
       "label": "benchmark_bundle.py",
       "_origin": "ast",
@@ -8781,6 +9057,90 @@
       "norm_label": "simulates total download time in milliseconds: - tcp handshake + tls...",
       "source_file": "scripts/benchmark_bundle.py",
       "source_location": "L98"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_2_technical_architecture_excellent",
+      "label": "2. Technical architecture \u2014 excellent",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "2. Technical architecture \u2014 excellent",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. technical architecture \u2014 excellent",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L205"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_ci_cd",
+      "label": "CI/CD",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "2. Technical architecture \u2014 excellent",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "ci/cd",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L257"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_strong_points",
+      "label": "Strong points",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "2. Technical architecture \u2014 excellent",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "strong points",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L207"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_testing",
+      "label": "Testing",
+      "_origin": "ast",
+      "community": 210,
+      "community_name": "2. Technical architecture \u2014 excellent",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "testing",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L271"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_3_the_biggest_conceptual_problem_the_security_layer",
+      "label": "3. The biggest conceptual problem: the security layer",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "3. The biggest conceptual problem: the security layer",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. the biggest conceptual problem: the security layer",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L290"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_google_authentication_has_the_same_architectural_limitation",
+      "label": "Google authentication has the same architectural limitation",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "3. The biggest conceptual problem: the security layer",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "google authentication has the same architectural limitation",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L326"
+    },
+    {
+      "id": "chat_history_2026_09_17_evaluate_repo_conversation_what_i_would_change",
+      "label": "What I would change",
+      "_origin": "ast",
+      "community": 211,
+      "community_name": "3. The biggest conceptual problem: the security layer",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what i would change",
+      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
+      "source_location": "L334"
     },
     {
       "id": "agents",
@@ -9739,30 +10099,6 @@
       "source_location": "L169"
     },
     {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_2_technical_architecture_excellent",
-      "label": "2. Technical architecture \u2014 excellent",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. technical architecture \u2014 excellent",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L205"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_3_the_biggest_conceptual_problem_the_security_layer",
-      "label": "3. The biggest conceptual problem: the security layer",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "3. the biggest conceptual problem: the security layer",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L290"
-    },
-    {
       "id": "chat_history_2026_09_17_evaluate_repo_conversation_4_the_evidence_provenance_system_is_one_of_the_best_parts",
       "label": "4. The evidence/provenance system is one of the best parts",
       "_origin": "ast",
@@ -9835,126 +10171,6 @@
       "source_location": "L547"
     },
     {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_735",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L735"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_assistant_885",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L885"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_bottom_line",
-      "label": "Bottom line",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "bottom line",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L713"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_ci_cd",
-      "label": "CI/CD",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "ci/cd",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L257"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_credibility_risk",
-      "label": "Credibility risk",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "credibility risk",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L707"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_final_assessment",
-      "label": "Final assessment",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "final assessment",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L687"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_google_authentication_has_the_same_architectural_limitation",
-      "label": "Google authentication has the same architectural limitation",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "google authentication has the same architectural limitation",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L326"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_i_would_therefore_revise_my_previous_evaluation",
-      "label": "I would therefore revise my previous evaluation",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "i would therefore revise my previous evaluation",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L835"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_more_interestingly_i_think_the_project_has_a_stronger_interpretation_now",
-      "label": "More interestingly, I think the project has a stronger interpretation now",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "more interestingly, i think the project has a stronger interpretation now",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L853"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_on_webscraping_protection",
-      "label": "On \u201cwebscraping protection\u201d",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "on \u201cwebscraping protection\u201d",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L807"
-    },
-    {
       "id": "chat_history_2026_09_17_evaluate_repo_conversation_overall_assessment",
       "label": "Overall assessment",
       "_origin": "ast",
@@ -9965,18 +10181,6 @@
       "norm_label": "overall assessment",
       "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
       "source_location": "L145"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_portfolio_communication",
-      "label": "Portfolio communication",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "portfolio communication",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L695"
     },
     {
       "id": "chat_history_2026_09_17_evaluate_repo_conversation_remaining_questions_a_researcher_could_still_ask",
@@ -9991,66 +10195,6 @@
       "source_location": "L605"
     },
     {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_repository_engineering",
-      "label": "Repository engineering",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "repository engineering",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L689"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_research_scholarship_value",
-      "label": "Research/scholarship value",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "research/scholarship value",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L701"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_revised_assessment_of_the_access_control_subsystem",
-      "label": "Revised assessment of the access-control subsystem",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "revised assessment of the access-control subsystem",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L745"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_revised_score",
-      "label": "Revised score",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "revised score",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L839"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_strong_points",
-      "label": "Strong points",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "strong points",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L207"
-    },
-    {
       "id": "chat_history_2026_09_17_evaluate_repo_conversation_strong_signals",
       "label": "Strong signals",
       "_origin": "ast",
@@ -10061,126 +10205,6 @@
       "norm_label": "strong signals",
       "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
       "source_location": "L583"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_testing",
-      "label": "Testing",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "testing",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L271"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_the_vip2026_issue_is_then_a_different_question",
-      "label": "The `vip2026` issue is then a different question",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "the `vip2026` issue is then a different question",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L782"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_4",
-      "label": "Turn 4",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "turn 4",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L729"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_5",
-      "label": "Turn 5",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "turn 5",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L871"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_turn_6",
-      "label": "Turn 6",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "turn 6",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L879"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_731",
-      "label": "User",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "user",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L731"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_873",
-      "label": "User",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "user",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L873"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_user_881",
-      "label": "User",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "user",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L881"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_what_i_would_change",
-      "label": "What I would change",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "what i would change",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L334"
-    },
-    {
-      "id": "chat_history_2026_09_17_evaluate_repo_conversation_what_the_system_actually_demonstrates_well",
-      "label": "What the system actually demonstrates well",
-      "_origin": "ast",
-      "community": 27,
-      "community_name": "2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "what the system actually demonstrates well",
-      "source_file": "chat_history/2026-09-17_EVALUATE-REPO_CONVERSATION.md",
-      "source_location": "L756"
     },
     {
       "id": "assets_js_modules_home_widgets",
@@ -15642,7 +15666,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L520",
+      "source_location": "L530",
       "weight": 1.0
     },
     {
@@ -15654,7 +15678,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L866",
+      "source_location": "L876",
       "weight": 1.0
     },
     {
@@ -15666,7 +15690,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L412",
+      "source_location": "L422",
       "weight": 1.0
     },
     {
@@ -15678,7 +15702,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L528",
+      "source_location": "L538",
       "weight": 1.0
     },
     {
@@ -15702,7 +15726,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L536",
+      "source_location": "L546",
       "weight": 1.0
     },
     {
@@ -15714,7 +15738,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L563",
+      "source_location": "L573",
       "weight": 1.0
     },
     {
@@ -15726,7 +15750,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L930",
+      "source_location": "L940",
       "weight": 1.0
     },
     {
@@ -15738,7 +15762,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L931",
+      "source_location": "L941",
       "weight": 1.0
     },
     {
@@ -15750,7 +15774,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L938",
+      "source_location": "L948",
       "weight": 1.0
     },
     {
@@ -15762,7 +15786,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L456",
+      "source_location": "L466",
       "weight": 1.0
     },
     {
@@ -15774,7 +15798,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L464",
+      "source_location": "L474",
       "weight": 1.0
     },
     {
@@ -15786,7 +15810,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L484",
+      "source_location": "L494",
       "weight": 1.0
     },
     {
@@ -15822,7 +15846,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L290",
+      "source_location": "L301",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_core_setactivenav",
+      "target": "assets_js_modules_core_getlinktargetpage",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L304",
       "weight": 1.0
     },
     {
@@ -15834,7 +15870,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L967",
+      "source_location": "L977",
       "weight": 1.0
     },
     {
@@ -15846,7 +15882,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L376",
+      "source_location": "L386",
       "weight": 1.0
     },
     {
@@ -15858,7 +15894,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L923",
+      "source_location": "L933",
       "weight": 1.0
     },
     {
@@ -15870,7 +15906,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L420",
+      "source_location": "L430",
       "weight": 1.0
     },
     {
@@ -20370,7 +20406,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L603",
+      "source_location": "L613",
       "weight": 1.0
     },
     {
@@ -20382,7 +20418,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L765",
+      "source_location": "L775",
       "weight": 1.0
     },
     {
@@ -21700,7 +21736,7 @@
     },
     {
       "source": "assets_js_modules_core",
-      "target": "assets_js_modules_core_setactivenav",
+      "target": "assets_js_modules_core_getlinktargetpage",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -21711,13 +21747,24 @@
     },
     {
       "source": "assets_js_modules_core",
+      "target": "assets_js_modules_core_setactivenav",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/core.js",
+      "source_location": "L299",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_core",
       "target": "assets_js_modules_core_getbrandassets",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L308",
+      "source_location": "L318",
       "weight": 1.0
     },
     {
@@ -21728,7 +21775,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L375",
+      "source_location": "L385",
       "weight": 1.0
     },
     {
@@ -21739,7 +21786,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L410",
+      "source_location": "L420",
       "weight": 1.0
     },
     {
@@ -21750,7 +21797,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L415",
+      "source_location": "L425",
       "weight": 1.0
     },
     {
@@ -21761,7 +21808,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L454",
+      "source_location": "L464",
       "weight": 1.0
     },
     {
@@ -21772,7 +21819,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L459",
+      "source_location": "L469",
       "weight": 1.0
     },
     {
@@ -21783,7 +21830,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L502",
+      "source_location": "L512",
       "weight": 1.0
     },
     {
@@ -21794,7 +21841,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L523",
+      "source_location": "L533",
       "weight": 1.0
     },
     {
@@ -21805,7 +21852,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L534",
+      "source_location": "L544",
       "weight": 1.0
     },
     {
@@ -21816,7 +21863,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L539",
+      "source_location": "L549",
       "weight": 1.0
     },
     {
@@ -21827,7 +21874,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L578",
+      "source_location": "L588",
       "weight": 1.0
     },
     {
@@ -21838,7 +21885,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L637",
+      "source_location": "L647",
       "weight": 1.0
     },
     {
@@ -21849,7 +21896,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L688",
+      "source_location": "L698",
       "weight": 1.0
     },
     {
@@ -21860,7 +21907,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L714",
+      "source_location": "L724",
       "weight": 1.0
     },
     {
@@ -21871,7 +21918,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L761",
+      "source_location": "L771",
       "weight": 1.0
     },
     {
@@ -21882,7 +21929,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L774",
+      "source_location": "L784",
       "weight": 1.0
     },
     {
@@ -21893,7 +21940,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L790",
+      "source_location": "L800",
       "weight": 1.0
     },
     {
@@ -21904,7 +21951,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L865",
+      "source_location": "L875",
       "weight": 1.0
     },
     {
@@ -21915,7 +21962,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L882",
+      "source_location": "L892",
       "weight": 1.0
     },
     {
@@ -21926,7 +21973,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L883",
+      "source_location": "L893",
       "weight": 1.0
     },
     {
@@ -21937,7 +21984,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L884",
+      "source_location": "L894",
       "weight": 1.0
     },
     {
@@ -21948,7 +21995,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L885",
+      "source_location": "L895",
       "weight": 1.0
     },
     {
@@ -21959,7 +22006,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L888",
+      "source_location": "L898",
       "weight": 1.0
     },
     {
@@ -21970,7 +22017,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L896",
+      "source_location": "L906",
       "weight": 1.0
     },
     {
@@ -21981,7 +22028,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L912",
+      "source_location": "L922",
       "weight": 1.0
     },
     {
@@ -21992,7 +22039,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L919",
+      "source_location": "L929",
       "weight": 1.0
     },
     {
@@ -22003,7 +22050,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L926",
+      "source_location": "L936",
       "weight": 1.0
     },
     {
@@ -22014,7 +22061,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L942",
+      "source_location": "L952",
       "weight": 1.0
     },
     {
@@ -22025,7 +22072,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L962",
+      "source_location": "L972",
       "weight": 1.0
     },
     {
@@ -28663,13 +28710,24 @@
     },
     {
       "source": "tests_unit_test_core_helpers_test",
-      "target": "tests_unit_test_core_helpers_test_computelivedates",
+      "target": "tests_unit_test_core_helpers_test_getlinktargetpage",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "tests/unit/test_core_helpers.test.mjs",
       "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "tests_unit_test_core_helpers_test",
+      "target": "tests_unit_test_core_helpers_test_computelivedates",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "tests/unit/test_core_helpers.test.mjs",
+      "source_location": "L21",
       "weight": 1.0
     },
     {
@@ -30226,7 +30284,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L740",
+      "source_location": "L750",
       "weight": 1.0
     },
     {
@@ -30238,7 +30296,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L661",
+      "source_location": "L671",
       "weight": 1.0
     },
     {
@@ -30250,7 +30308,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L937",
+      "source_location": "L947",
       "weight": 1.0
     },
     {
@@ -30298,7 +30356,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/core.js",
-      "source_location": "L776",
+      "source_location": "L786",
       "weight": 1.0
     },
     {
@@ -32255,5 +32313,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "3d366fde6b76803ae1ebd5b8103afb2d43db9b17"
+  "built_at_commit": "00fbb41822406474dba654139c4f99e518045456"
 }

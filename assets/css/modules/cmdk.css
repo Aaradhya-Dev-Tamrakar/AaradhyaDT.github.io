@@ -234,19 +234,35 @@
 
 
 
-/* ── Keymap & display guide ──────────────────────────────── */
+/* ── Keymap & display guide (Compact & Decluttered) ──────── */
 .keymap-grid {
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 1.25rem;
-  align-items: start;
+  display: block;
+  max-width: 960px;
+  margin: 0 auto;
 }
 
 .keymap-card {
   background: var(--bg2);
   border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 2.25rem 2rem;
+  border-radius: 12px;
+  padding: 1.75rem 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.keymap-card:hover {
+  border-color: var(--accent-a25, rgba(212, 175, 55, 0.25));
+}
+
+.keymap-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line);
 }
 
 .keymap-card-title {
@@ -254,24 +270,158 @@
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--heading);
-  margin-bottom: 1.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
 }
 
-.keymap-group {
-  margin-bottom: 1.5rem;
+.keymap-card-title svg {
+  color: var(--accent);
+  flex-shrink: 0;
 }
 
-.keymap-group-title {
+.keymap-spec-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
   font-family: var(--mono);
   font-size: 0.72rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: 0.75rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px dashed var(--line);
+  color: var(--muted);
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  letter-spacing: 0.02em;
 }
 
+.keymap-spec-badge svg {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.keymap-items {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.keymap-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.9rem;
+  border-radius: 8px;
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, background 0.2s ease;
+}
+
+.keymap-item:hover {
+  transform: translateY(-1px);
+  border-color: var(--accent-a30, rgba(212, 175, 55, 0.3));
+  background: var(--accent-a06, rgba(212, 175, 55, 0.06));
+}
+
+.keymap-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.keymap-item-title {
+  font-family: var(--sans);
+  font-size: 0.85rem;
+  font-weight: 550;
+  color: var(--heading);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.keymap-item-desc {
+  font-family: var(--sans);
+  font-size: 0.74rem;
+  color: var(--muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.keymap-keys {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  flex-shrink: 0;
+}
+
+.keymap-keys kbd,
+.keymap-modal-btn kbd,
+.keymap-list kbd {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--heading);
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 0.18rem 0.45rem;
+  min-width: 1.4rem;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.keymap-sep {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+  padding: 0 0.15rem;
+}
+
+.keymap-plus {
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  color: var(--muted);
+}
+
+.keymap-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.keymap-note {
+  font-family: var(--sans);
+  font-size: 0.76rem;
+  color: var(--muted);
+  margin: 0;
+  max-width: 580px;
+  line-height: 1.45;
+}
+
+.keymap-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.95rem;
+  font-size: 0.82rem;
+  font-family: var(--sans);
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.keymap-modal-btn svg {
+  color: var(--accent);
+}
+
+/* Fallback legacy compatibility */
 .keymap-list {
   list-style: none;
   display: flex;
@@ -288,23 +438,6 @@
   color: var(--muted);
 }
 
-.keymap-list li span:last-child {
-  flex: 1;
-}
-
-.keymap-list kbd {
-  font-family: var(--mono);
-  font-size: 0.72rem;
-  color: var(--heading);
-  background: var(--bg3);
-  border: 1px solid var(--line);
-  border-radius: 5px;
-  padding: 0.2rem 0.5rem;
-  min-width: 1.6rem;
-  text-align: center;
-  flex-shrink: 0;
-}
-
 .keymap-mode {
   font-family: var(--mono);
   font-size: 0.72rem;
@@ -312,36 +445,26 @@
   text-transform: uppercase;
   color: var(--accent);
   min-width: 6.5rem;
-  flex-shrink: 0;
-}
-
-.keymap-note {
-  font-family: var(--sans);
-  font-size: 0.78rem;
-  color: var(--text-a40);
-  margin-top: 1.4rem;
-  padding-top: 1.2rem;
-  border-top: 1px solid var(--line);
 }
 
 @media (max-width: 1100px) {
   #keymap {
-    padding: 4rem 2rem;
+    padding: 3.5rem 1.5rem;
   }
 }
 
-@media (max-width: 900px) {
-  #keymap {
-    padding: 3rem 1.25rem;
-  }
-
-  .keymap-grid {
+@media (max-width: 820px) {
+  .keymap-items {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
   }
 
-  .keymap-card {
-    padding: 1.5rem 1.2rem;
+  .keymap-footer {
+    flex-direction: column-reverse;
+    align-items: stretch;
+  }
+
+  .keymap-modal-btn {
+    justify-content: center;
   }
 }
 
@@ -351,24 +474,28 @@
   }
 
   .keymap-card {
-    padding: 1.25rem 0.9rem;
+    padding: 1.25rem 0.95rem;
   }
 
-  .keymap-list li {
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    font-size: 0.82rem;
+  .keymap-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
 
-  .keymap-mode {
-    min-width: auto;
-    width: 100%;
-    margin-bottom: 0.15rem;
+  .keymap-spec-badge {
+    font-size: 0.68rem;
+    padding: 0.2rem 0.55rem;
   }
 
-  .keymap-card-title {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
+  .keymap-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .keymap-keys {
+    align-self: flex-end;
   }
 }
 
@@ -381,6 +508,8 @@
     padding: 1rem 0.75rem;
   }
 
+  .keymap-keys kbd,
+  .keymap-modal-btn kbd,
   .keymap-list kbd {
     font-size: 0.65rem;
     padding: 0.15rem 0.4rem;

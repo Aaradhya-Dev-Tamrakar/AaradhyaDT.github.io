@@ -7,6 +7,17 @@ function getCurrentPageFile(pathname) {
   return raw.endsWith('.html') ? raw : (raw + '.html');
 }
 
+function getLinkTargetPage(href) {
+  if (!href) return '';
+  const trimmed = href.trim();
+  if (trimmed.startsWith('#')) return ''; // In-page anchor fragment, not a separate page
+  const pathPart = trimmed.split('#')[0];
+  if (!pathPart || pathPart === '/') return 'index.html';
+  const file = pathPart.split('/').pop();
+  if (!file) return 'index.html';
+  return file.endsWith('.html') ? file : (file + '.html');
+}
+
 function computeLiveDates(testDate) {
   const now = testDate ? new Date(testDate) : new Date();
 
@@ -35,6 +46,19 @@ test('Core: getCurrentPageFile resolves pathnames accurately', () => {
   assert.strictEqual(getCurrentPageFile('/about.html'), 'about.html');
   assert.strictEqual(getCurrentPageFile('/projects'), 'projects.html');
   assert.strictEqual(getCurrentPageFile('https://aaradhyadt.github.io/journey.html'), 'journey.html');
+});
+
+test('Core: getLinkTargetPage resolves page destinations and ignores in-page anchors', () => {
+  assert.strictEqual(getLinkTargetPage('#work'), '', '#work in-page anchor should not resolve to a page file');
+  assert.strictEqual(getLinkTargetPage('#hero'), '', '#hero in-page anchor should not resolve to a page file');
+  assert.strictEqual(getLinkTargetPage('/'), 'index.html');
+  assert.strictEqual(getLinkTargetPage('/index.html'), 'index.html');
+  assert.strictEqual(getLinkTargetPage('/projects.html'), 'projects.html');
+  assert.strictEqual(getLinkTargetPage('/projects.html#p-018'), 'projects.html');
+  assert.strictEqual(getLinkTargetPage('/experience.html'), 'experience.html');
+  assert.strictEqual(getLinkTargetPage('/about.html'), 'about.html');
+  assert.strictEqual(getLinkTargetPage('/journey.html'), 'journey.html');
+  assert.strictEqual(getLinkTargetPage('/contact.html'), 'contact.html');
 });
 
 test('Core: computeLiveDates calculates correct semester before and after cutoff', () => {
