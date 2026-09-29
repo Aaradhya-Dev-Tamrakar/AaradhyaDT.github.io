@@ -408,17 +408,57 @@
 .keymap-modal-btn {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  padding: 0.45rem 0.95rem;
+  gap: 0.55rem;
+  padding: 0.5rem 1rem;
   font-size: 0.82rem;
   font-family: var(--sans);
+  font-weight: 550;
+  text-transform: none;
+  letter-spacing: normal;
+  color: var(--heading);
+  background: var(--bg3);
+  border: 1px solid var(--line);
   border-radius: 8px;
   cursor: pointer;
   white-space: nowrap;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12);
+  transition:
+    color 0.2s ease,
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.keymap-modal-btn:hover {
+  color: var(--heading);
+  border-color: var(--accent);
+  background: var(--accent-a12, rgba(212, 175, 55, 0.12));
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2), 0 0 12px var(--accent-a18, rgba(212, 175, 55, 0.18));
+}
+
+.keymap-modal-btn:active {
+  transform: translateY(0) scale(0.98);
 }
 
 .keymap-modal-btn svg {
   color: var(--accent);
+  flex-shrink: 0;
+}
+
+.keymap-modal-btn kbd {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--heading);
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  padding: 0.15rem 0.45rem;
+  min-width: 1.3rem;
+  text-align: center;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
 }
 
 /* Fallback legacy compatibility */
