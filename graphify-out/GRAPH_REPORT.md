@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-09-29)
 
 ## Corpus Check
-- 66 files · ~1,913,116 words
+- 68 files · ~1,924,130 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1064 nodes · 1384 edges · 203 communities (58 shown, 134 thin omitted)
-- Extraction: 94% EXTRACTED · 6% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
+- 1218 nodes · 1536 edges · 206 communities (61 shown, 134 thin omitted)
+- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `563b7f80`
+- Built from commit: `a12774ae`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -41,7 +41,7 @@
 - Antigravity IDE & Gemini Agent Rules for Portfolio Repository
 - test_visual_regression.py
 - Report Renderer
-- script.js
+- Verbatim Dialogue & Engineering Transcript
 - 2026-09-17_EVALUATE-REPO_CONVERSATION.md
 - home-widgets.js
 - test_graph_modal.test.mjs
@@ -206,19 +206,22 @@
 - Turn 2
 - GraphIndex
 - Contributing to Aaradhya's Portfolio Website
+- Verbatim Dialogue & Engineering Transcript
+- Phase 2 — Featured Work Showcase ✓
+- Phase 2 — Featured Work Showcase ✓
 - SECURITY_AUDIT_VIP_TIER.md
 
 ## God Nodes (most connected - your core abstractions)
-1. `main()` - 33 edges
-2. `log_pass()` - 27 edges
-3. `log_error()` - 23 edges
-4. `Portfolio Website Tracker — v53.26` - 21 edges
-5. `log_warning()` - 16 edges
-6. `bindEvents()` - 14 edges
-7. `get_html_files()` - 14 edges
-8. `GraphIndex` - 13 edges
-9. `cmd_sync()` - 13 edges
-10. `Turn 2` - 13 edges
+1. `Verbatim Dialogue & Engineering Transcript` - 42 edges
+2. `Verbatim Dialogue & Engineering Transcript` - 42 edges
+3. `main()` - 33 edges
+4. `log_pass()` - 27 edges
+5. `Phase 2 — Featured Work Showcase ✓` - 27 edges
+6. `Phase 2 — Featured Work Showcase ✓` - 27 edges
+7. `log_error()` - 23 edges
+8. `Portfolio Website Tracker — v53.26` - 21 edges
+9. `log_warning()` - 16 edges
+10. `bindEvents()` - 14 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Certificate: Introduction to Claude Cowork` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
@@ -250,7 +253,7 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (203 total, 134 thin omitted)
+## Communities (206 total, 134 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -261,8 +264,8 @@ Cohesion: 0.05
 Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.26, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+30 more)
 
 ### Community 2 - "core.js"
-Cohesion: 0.08
-Nodes (36): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+28 more)
+Cohesion: 0.06
+Nodes (42): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+34 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
@@ -356,9 +359,9 @@ Nodes (8): calculate_image_diff(), capture_screenshot(), find_browser_executable
 Cohesion: 0.22
 Nodes (10): Report Utils Class, Report Renderer, __initLighthouseReport__, Report Context Class, I18n Formatter, PWA Category Renderer, Performance Category Renderer, Report UI Features (+2 more)
 
-### Community 26 - "script.js"
-Cohesion: 0.36
-Nodes (6): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
+### Community 26 - "Verbatim Dialogue & Engineering Transcript"
+Cohesion: 0.04
+Nodes (46): 1. The Core Problems with Current IA (Information Architecture), 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant (+38 more)
 
 ### Community 27 - "2026-09-17_EVALUATE-REPO_CONVERSATION.md"
 Cohesion: 0.05
@@ -480,29 +483,41 @@ Nodes (18): extract_code_snippet(), find_graph_path(), format_node_badge(), Grap
 Cohesion: 0.06
 Nodes (29): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Guidelines (+21 more)
 
+### Community 202 - "Verbatim Dialogue & Engineering Transcript"
+Cohesion: 0.04
+Nodes (46): 1. The Core Problems with Current IA (Information Architecture), 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant (+38 more)
+
+### Community 203 - "Phase 2 — Featured Work Showcase ✓"
+Cohesion: 0.06
+Nodes (30): 1. Navigation & Information Architecture Audit, 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant (+22 more)
+
+### Community 204 - "Phase 2 — Featured Work Showcase ✓"
+Cohesion: 0.06
+Nodes (30): 1. Navigation & Information Architecture Audit, 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant (+22 more)
+
 ### Community 205 - "SECURITY_AUDIT_VIP_TIER.md"
 Cohesion: 0.13
 Nodes (13): 1. Executive Summary, 2. Cryptographic Implementation & Key Lifecycle, 3. Threat Model & Security Boundaries, 4. Prioritized Engineering Actions, Key Findings:, Technical Specs, Disclosure Methods, 🚨 Reporting a Vulnerability (+5 more)
 
 ## Knowledge Gaps
-- **391 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+386 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 556 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **531 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+526 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 698 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **134 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `parse_html()` connect `verify.py` to `add_project`?**
-  _High betweenness centrality (0.010) - this node is a cross-community bridge._
+  _High betweenness centrality (0.009) - this node is a cross-community bridge._
 - **Why does `get_site_stats()` connect `site_automation.py` to `add_project`?**
-  _High betweenness centrality (0.005) - this node is a cross-community bridge._
-- **Why does `openWhatsNewModal()` connect `ui.js` to `core.js`?**
+  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `Verbatim Dialogue & Engineering Transcript` connect `Verbatim Dialogue & Engineering Transcript` to `Phase 2 — Featured Work Showcase ✓`?**
   _High betweenness centrality (0.004) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _391 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _531 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09472606246799795 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.05 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07549361207897794 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06196078431372549 - nodes in this community are weakly interconnected._
