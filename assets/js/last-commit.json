@@ -1,6 +1,6 @@
 {
-  "sha": "6b7686475f402dc6031eaaf86b8dafa0cebbc8e7",
-  "shortSha": "6b76864",
-  "date": "2026-09-29T21:30:42+05:45",
-  "message": "fix(nav): isolate bg-hub-nav from global nav selector and sequence navbar shortcuts Work (2) -> Background (3) -> About (5)"
+  "sha": "bdf8f53d95eaa159367eed64bef717a61478310d",
+  "shortSha": "bdf8f53",
+  "date": "2026-09-29T21:34:04+05:45",
+  "message": "docs(dev-logs): archive navigation, showcase & IA refactoring chat transcript"
 }
