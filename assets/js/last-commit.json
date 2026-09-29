@@ -1,6 +1,6 @@
 {
-  "sha": "a2014a73483ff87775ac35fcb69f3616a3ba285c",
-  "shortSha": "a2014a7",
-  "date": "2026-09-29T22:22:26+05:45",
-  "message": "fix(theme): preserve theme-invariant gold borders for completed and minor projects"
+  "sha": "f8aa6e158ebb7fef7babbf9683ab55b6b09c5532",
+  "shortSha": "f8aa6e1",
+  "date": "2026-09-29T22:25:11+05:45",
+  "message": "feat(projects): distinct green accent for Major Fusemachines and gold accent for Minor projects"
 }
