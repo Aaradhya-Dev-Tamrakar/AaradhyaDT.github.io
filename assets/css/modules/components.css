@@ -2330,6 +2330,7 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 
 /* ── Background Hub Sub-Nav (Experience <-> Achievements Twin) ── */
 .bg-hub-nav {
+  position: relative;
   display: inline-flex;
   align-items: center;
   background: var(--surface);
@@ -2339,6 +2340,7 @@ html[data-theme="light"] .shortcuts-modal-card::before {
   gap: 4px;
   margin: 1.25rem 0 0.5rem;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  z-index: 10;
 }
 
 .bg-hub-tab {

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: constants.js — aaradhyadt.github.io (v54.48)
+   MODULE: constants.js — aaradhyadt.github.io (v54.49)
    Site constants, social links, icons, and configuration metadata.
    ============================================================ */
 
@@ -27,8 +27,8 @@ const SITE = {
   ],
   navLinks: [
     { label: 'Work', labelShort: 'Work', href: '/projects.html', key: '2', homeAnchor: '#work' },
-    { label: 'About', labelShort: 'About', href: '/about.html', key: '5' },
     { label: 'Background', labelShort: 'Background', href: '/experience.html', key: '3' },
+    { label: 'About', labelShort: 'About', href: '/about.html', key: '5' },
     { label: 'Build Log', labelShort: 'Log', href: '/journey.html', key: '6' },
   ],
 };

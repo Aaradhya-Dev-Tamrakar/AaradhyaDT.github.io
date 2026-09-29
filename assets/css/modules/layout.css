@@ -1,7 +1,8 @@
 /* ── Layout: Navigation, Header, Footer & Quick Nav ─────── */
 
 /* ── Navigation ───────────────────────────────────────────── */
-nav {
+#nav,
+noscript > nav {
   position: fixed;
   top: 0;
   left: 0;
@@ -22,7 +23,8 @@ nav {
     backdrop-filter 0.35s ease;
 }
 
-nav.scrolled {
+#nav.scrolled,
+noscript > nav.scrolled {
   padding-top: max(0.85rem, env(safe-area-inset-top, 0.85rem));
   padding-bottom: 0.85rem;
   border-color: var(--line);
@@ -641,7 +643,8 @@ html[data-theme="light"] #quick-nav::before {
 }
 
 @media (max-width: 900px) {
-  nav {
+  #nav,
+  noscript > nav {
     padding: max(1.25rem, env(safe-area-inset-top, 1.25rem)) max(1.25rem, env(safe-area-inset-right, 1.25rem)) 1.25rem max(1.25rem, env(safe-area-inset-left, 1.25rem));
     display: flex;
     justify-content: space-between;
@@ -656,7 +659,8 @@ html[data-theme="light"] #quick-nav::before {
       backdrop-filter 0.35s ease;
   }
 
-  nav.scrolled {
+  #nav.scrolled,
+  noscript > nav.scrolled {
     padding-top: max(0.7rem, env(safe-area-inset-top, 0.7rem));
     padding-bottom: 0.7rem;
   }
@@ -717,11 +721,13 @@ html[data-theme="light"] #quick-nav::before {
 }
 
 @media (max-width: 480px) {
-  nav {
+  #nav,
+  noscript > nav {
     padding: max(1.05rem, env(safe-area-inset-top, 1.05rem)) max(0.85rem, env(safe-area-inset-right, 0.85rem)) 1.05rem max(0.85rem, env(safe-area-inset-left, 0.85rem));
   }
 
-  nav.scrolled {
+  #nav.scrolled,
+  noscript > nav.scrolled {
     padding-top: max(0.6rem, env(safe-area-inset-top, 0.6rem));
     padding-bottom: 0.6rem;
   }
@@ -785,11 +791,13 @@ html[data-theme="light"] #quick-nav::before {
 }
 
 @media (max-width: 340px) {
-  nav {
+  #nav,
+  noscript > nav {
     padding: max(0.85rem, env(safe-area-inset-top, 0.85rem)) max(0.5rem, env(safe-area-inset-right, 0.5rem)) 0.85rem max(0.5rem, env(safe-area-inset-left, 0.5rem));
   }
 
-  nav.scrolled {
+  #nav.scrolled,
+  noscript > nav.scrolled {
     padding-top: max(0.5rem, env(safe-area-inset-top, 0.5rem));
     padding-bottom: 0.5rem;
   }
