@@ -1,6 +1,6 @@
 {
-  "sha": "1ce3b6ea1eb4f1b3b08e64fb960cfcba318a7d6b",
-  "shortSha": "1ce3b6e",
-  "date": "2026-09-29T21:16:45+05:45",
-  "message": "feat(navigation): anchor achievements as twin sub-tab under background with active nav highlight"
+  "sha": "130b968972bb9986a0cfaf1c6b766cd939ff457f",
+  "shortSha": "130b968",
+  "date": "2026-09-29T21:21:16+05:45",
+  "message": "refactor(nav): include mobile drawer in smooth scroll and synchronize keymap labels"
 }
