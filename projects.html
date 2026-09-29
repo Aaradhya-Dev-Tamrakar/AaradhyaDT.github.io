@@ -273,14 +273,14 @@
     details.project-card.project-card--major,
     .project-card--major {
       position: relative;
-      border: 1.5px solid var(--accent-a45, rgba(110, 231, 183, 0.45));
-      box-shadow: 0 0 0 1px var(--accent-a35), 0 0 18px var(--accent-a35);
+      border: 1.5px solid rgba(110, 231, 183, 0.45);
+      box-shadow: 0 0 0 1px var(--glow-green-a35), 0 0 18px var(--glow-green-a35);
     }
 
     details.project-card.project-card--major:hover,
     .project-card--major:hover {
-      border-color: var(--accent);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .35), 0 0 0 1px var(--accent-a35), 0 0 28px var(--accent-a80);
+      border-color: var(--glow-green);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .35), 0 0 0 1px var(--glow-green-a35), 0 0 28px var(--glow-green-a50);
     }
 
     details.project-card.project-card--gold::before,
@@ -316,10 +316,10 @@
       background: conic-gradient(
         from var(--border-angle),
         transparent 65%,
-        var(--accent-a35) 80%,
-        var(--accent) 92%,
+        var(--glow-green-a35) 80%,
+        var(--glow-green) 92%,
         #ffffff 96%,
-        var(--accent) 100%
+        var(--glow-green) 100%
       );
     }
 
@@ -564,7 +564,7 @@
     }
 
     .color-legend-swatch--major {
-      border: 3px solid var(--accent);
+      border: 3px solid var(--glow-green);
     }
 
     .color-legend-swatch--gold {
