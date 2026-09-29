@@ -1,6 +1,6 @@
 {
-  "sha": "0fafa1a8b44885c3d45667afdf923c0b66005f5c",
-  "shortSha": "0fafa1a",
-  "date": "2026-09-29T22:39:07+05:45",
-  "message": "fix(nav): prevent in-page section anchors from activating on index"
+  "sha": "b5b7cafb17f948cd4c4469e4c5d31002b89e82f5",
+  "shortSha": "b5b7caf",
+  "date": "2026-09-29T22:40:10+05:45",
+  "message": "refactor(home): refine shortcuts card layout and sync cmdk minified styles"
 }
