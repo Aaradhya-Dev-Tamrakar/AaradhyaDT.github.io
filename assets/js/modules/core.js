@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.47)
+   MODULE: core.js — aaradhyadt.github.io (v54.48)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -99,7 +99,7 @@ function renderSiteNav() {
 
   /* ── Homepage in-page smooth scroll for nav anchors ────── */
   if (location.pathname === '/' || location.pathname.endsWith('/index.html') || location.pathname.endsWith('index.html')) {
-    el.querySelectorAll('.nav-links a').forEach(a => {
+    el.querySelectorAll('.nav-links a, .nav-drawer a').forEach(a => {
       const link = SITE.navLinks.find(l => a.textContent.trim() === l.label);
       if (link && link.homeAnchor) {
         a.href = link.homeAnchor;

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: shortcuts.js — aaradhyadt.github.io (v54.47)
+   MODULE: shortcuts.js — aaradhyadt.github.io (v54.48)
    Keyboard shortcuts cheat sheet HUD modal & navigation bindings.
    ============================================================ */
 
@@ -97,15 +97,15 @@ function openShortcutsModal() {
                 <div class="shortcut-keys"><kbd>1</kbd></div>
               </a>
               <a href="projects.html" class="shortcut-row shortcut-link">
-                <span class="shortcut-label">Projects</span>
+                <span class="shortcut-label">Work</span>
                 <div class="shortcut-keys"><kbd>2</kbd></div>
               </a>
               <a href="experience.html" class="shortcut-row shortcut-link">
-                <span class="shortcut-label">Experience</span>
+                <span class="shortcut-label">Background</span>
                 <div class="shortcut-keys"><kbd>3</kbd></div>
               </a>
               <a href="achievements.html" class="shortcut-row shortcut-link">
-                <span class="shortcut-label">Achievements</span>
+                <span class="shortcut-label">Credentials</span>
                 <div class="shortcut-keys"><kbd>4</kbd></div>
               </a>
               <a href="about.html" class="shortcut-row shortcut-link">
@@ -113,11 +113,11 @@ function openShortcutsModal() {
                 <div class="shortcut-keys"><kbd>5</kbd></div>
               </a>
               <a href="journey.html" class="shortcut-row shortcut-link">
-                <span class="shortcut-label">Journey</span>
+                <span class="shortcut-label">Build Log</span>
                 <div class="shortcut-keys"><kbd>6</kbd></div>
               </a>
               <a href="contact.html" class="shortcut-row shortcut-link">
-                <span class="shortcut-label">Contact</span>
+                <span class="shortcut-label">Connect</span>
                 <div class="shortcut-keys"><kbd>7</kbd></div>
               </a>
               <div class="shortcut-row">
