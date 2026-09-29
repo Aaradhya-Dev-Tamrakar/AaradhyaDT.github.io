@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for AaradhyaDT.github.io (v54.46)
+site_automation.py — Hyper-Automation Engine for AaradhyaDT.github.io (v54.47)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)

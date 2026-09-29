@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.46)
+   MODULE: core.js — aaradhyadt.github.io (v54.47)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -292,7 +292,7 @@ function setActiveNav() {
     let linkPage = (a.getAttribute('href') || '').split('/').pop().split('#')[0] || 'index.html';
     if (!linkPage || linkPage === '/' || linkPage === '') linkPage = 'index.html';
     if (!linkPage.endsWith('.html')) linkPage += '.html';
-    const isCurrent = linkPage === page;
+    const isCurrent = linkPage === page || (page === 'achievements.html' && linkPage === 'experience.html');
     a.classList.toggle('active', isCurrent);
     if (isCurrent) {
       a.setAttribute('aria-current', 'page');
