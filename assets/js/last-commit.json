@@ -1,6 +1,6 @@
 {
-  "sha": "badf3fdccab19ee932569d95f8c7655c6e4ad6bb",
-  "shortSha": "badf3fd",
-  "date": "2026-09-29T22:19:57+05:45",
-  "message": "fix(theme): dynamic theme accent tokens for card hover and glow borders"
+  "sha": "a2014a73483ff87775ac35fcb69f3616a3ba285c",
+  "shortSha": "a2014a7",
+  "date": "2026-09-29T22:22:26+05:45",
+  "message": "fix(theme): preserve theme-invariant gold borders for completed and minor projects"
 }
