@@ -1,6 +1,13 @@
-# Portfolio Website Tracker — v54.45
+# Portfolio Website Tracker — v54.46
 
 Last updated: _2026-09-29_
+
+- **Phase 2: Curated Flagship Showcase & In-Page Smooth Scroll (`index.html`, `components.css`, `constants.js`, `core.js`)**:
+  - **Homepage "Selected Systems" Showcase (`index.html`)**: Introduced a dedicated `#work` section immediately following the hero metrics strip, curating the Flagship 6 engineering systems (`SPARK`, `STRANGLER-IPU`, `BiasAperture`, `GCSBR`, `Claude Desktop DSP`, `Fusion 360 MCP`) in a high-density 3-column grid (`.featured-grid`).
+  - **Minimalist Tag & Status Hierarchy (`index.html`, `components.css`)**: Stripped visual clutter down to 2 focused domain tags per card with clear, semantic status badges (`In Progress`, `Active Research`, `Completed`, `Shipped`), and direct anchor links (`projects.html#p-xxx`) to full technical cards.
+  - **Tactile Card Hover Elevation & Gold Ambient Glow (`components.css`, `components.min.css`)**: Implemented smooth hover physics featuring a `translateY(-4px)` micro-lift and subtle gold ambient shadow (`0 12px 40px -8px rgba(0,0,0,0.45), 0 0 20px -4px var(--glow-gold-a18)`) with `cubic-bezier(0.16, 1, 0.3, 1)` easing.
+  - **Homepage In-Page Smooth Navigation (`constants.js`, `core.js`)**: Configured `homeAnchor: '#work'` on the primary `Work` navigation link, seamlessly intercepting clicks on the homepage to smooth-scroll directly to `#work` with `history.replaceState` deep-linking while maintaining external navigation on non-home pages.
+  - **Full Archive Direct CTA (`index.html`)**: Added a clean, non-intrusive ghost CTA button linking directly to the comprehensive 38-system catalog (`projects.html`).
 
 - **Navigation Topology Streamlining & Dynamic Navbar Collapse (`layout.css`, `constants.js`, `journey.html`, `sync.bat`)**:
   - **Dynamic Navbar Scroll-Collapse Physics (`layout.css`, `layout.min.css`)**: Expanded initial un-scrolled navbar padding (`max(1.75rem, ...)`) to deliver an open, refined editorial presence, paired with dynamic scroll-driven compaction (`nav.scrolled` padding `0.85rem`) using smooth `cubic-bezier(0.16, 1, 0.3, 1)` easing. Calibrated proportional scale transitions across `.nav-logo` (`1.15rem` down to `1.05rem`), `.nav-links a`, and `.nav-cta` across desktop and responsive viewports (900px, 480px, 340px).
@@ -361,7 +368,7 @@ Last updated: _2026-09-29_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.45`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.46`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

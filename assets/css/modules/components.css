@@ -2203,3 +2203,127 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 }
 
 
+
+/* ── Featured Work Grid (Phase 2 — Homepage Showcase) ──── */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.featured-card {
+  position: relative;
+  text-decoration: none;
+  color: var(--text);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px;
+  background: var(--glass-bg);
+  overflow: hidden;
+  transition:
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 0.35s ease,
+    box-shadow 0.4s ease;
+}
+
+.featured-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--accent-a40);
+  box-shadow:
+    0 12px 40px -8px rgba(0, 0, 0, 0.45),
+    0 0 20px -4px var(--glow-gold-a18);
+}
+
+.featured-card:active {
+  transform: scale(0.98) translateY(0);
+  transition: transform 0.08s ease;
+}
+
+.featured-card-inner {
+  padding: 1.5rem 1.25rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-height: 200px;
+}
+
+.featured-index {
+  font-family: var(--mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  opacity: 0.6;
+}
+
+.featured-name {
+  font-family: var(--sans);
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--heading);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.featured-desc {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  color: var(--muted);
+  margin: 0;
+  flex: 1;
+}
+
+.featured-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  margin-top: 0.25rem;
+}
+
+.featured-tag {
+  font-family: var(--mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent-a35);
+  padding: 0.2rem 0.5rem;
+  border-radius: 2px;
+  line-height: 1;
+}
+
+.featured-status {
+  font-family: var(--mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: auto;
+  padding-top: 0.5rem;
+}
+
+.featured-status--active { color: var(--accent2); }
+.featured-status--research { color: #a78bfa; }
+.featured-status--done { color: var(--muted); }
+
+.featured-archive-link {
+  text-align: center;
+  margin-top: 2.5rem;
+}
+
+/* ── Featured Grid responsive ──────────────────────────── */
+@media (max-width: 900px) {
+  .featured-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 540px) {
+  .featured-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .featured-card-inner {
+    min-height: auto;
+    padding: 1.25rem 1rem 1rem;
+  }
+}
