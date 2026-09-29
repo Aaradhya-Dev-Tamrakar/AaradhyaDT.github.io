@@ -1,6 +1,14 @@
-# Portfolio Website Tracker — v54.51
+# Portfolio Website Tracker — v54.52
 
 Last updated: _2026-09-29_
+
+- **Landing Page Hero Topology Refactor & Status Hub Crown (`index.html`, `layout.css`)**:
+  - **Asymmetric 2-Column Hero Architecture (`index.html`)**: Transformed landing hero into an asymmetric 2-column layout (`1.15fr 0.85fr`), placing identity, research focus, domain pills, and primary CTAs directly above the fold on the left, while dedicating the right column to a crowned live status hub.
+  - **Crest-Crowned Live Status Hub (`index.html`)**: Relocated the dynamic ADT titanium brand crest (`.hero-crest-stage`) directly into the `.status-card` header, establishing a unified hardware telemetry dashboard with the live Kathmandu clock, active fellowships, research focus, and offline-safe commit telemetry.
+  - **Cleaned Skill Percentage Matrix (`index.html`)**: Removed arbitrary progress percentage bars (`.skill-matrix`) in favor of clean, senior engineering taxonomy and semantic stack listings.
+  - **SEO & Schema Alias Hygiene (`index.html`)**: Pruned low-signal JSON-LD alternate names (`ADT Games`, `Aaradhya Nepal`, `Aaradhya Engineer`) from structured metadata.
+  - **Isolated Navbar Scroll Selector Fix (`layout.css`, `layout.min.css`)**: Scoped `.nav.scrolled` rule strictly to `#nav.scrolled` to prevent global `.nav` class collisions with timeline sub-navigation bars on `experience.html`.
+
 
 - **Phase 2: Curated Flagship Showcase & In-Page Smooth Scroll (`index.html`, `components.css`, `constants.js`, `core.js`)**:
   - **Homepage "Selected Systems" Showcase (`index.html`)**: Introduced a dedicated `#work` section immediately following the hero metrics strip, curating the Flagship 6 engineering systems (`SPARK`, `STRANGLER-IPU`, `BiasAperture`, `GCSBR`, `Claude Desktop DSP`, `Fusion 360 MCP`) in a high-density 3-column grid (`.featured-grid`).
@@ -368,7 +376,7 @@ Last updated: _2026-09-29_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.51`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.52`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

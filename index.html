@@ -95,9 +95,7 @@
           "A. D. Tamrakar",
           "A. Dev Tamrakar",
           "AaradhyaDT",
-          "aaradhyadevtamrakar",
-          "Aaradhya Nepal",
-          "Aaradhya Engineer"
+          "aaradhyadevtamrakar"
         ],
         "url": "https://aaradhyadt.github.io/",
         "image": "https://aaradhyadt.github.io/assets/images/photo.png",
@@ -182,8 +180,7 @@
           "Aaradhya Dev Tamrakar Website",
           "Aaradhya Website",
           "ADT Portfolio",
-          "ADT Website",
-          "ADT Games"
+          "ADT Website"
         ],
         "url": "https://aaradhyadt.github.io/",
         "author": {
@@ -248,43 +245,42 @@
 
     /* ── Hero ─────────────────────────────────────────────── */
     #hero {
-      min-height: 100vh;
+      min-height: 100dvh;
       display: flex;
-      flex-direction: column;
       align-items: center;
+      justify-content: center;
       padding: calc(var(--nav-h, 76px) + 2rem) 3rem 4rem;
-      gap: 3rem;
       position: relative;
       overflow: clip;
+      box-sizing: border-box;
     }
 
-    /* ── Hero Center Crest Stage & Scroll Fade ────────────── */
-    .hero-crest-center {
-      position: relative;
-      z-index: 2;
+    .hero-content-row {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      align-items: center;
+      gap: 3.5rem;
       width: 100%;
-      max-width: 660px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: center;
-      will-change: opacity, transform;
-      transition: opacity 0.12s ease-out, transform 0.12s ease-out;
+      max-width: 1280px;
+      position: relative;
+      z-index: 1;
     }
 
     .hero-crest-stage {
       position: relative;
       width: 100%;
-      border-radius: 12px;
+      border-radius: 8px;
       overflow: hidden;
       border: 1px solid var(--line);
       background: var(--bg2);
-      box-shadow: 0 20px 48px -16px rgba(0, 0, 0, 0.6), 0 0 32px -8px var(--accent-a12);
+      margin-bottom: 1.25rem;
+      box-shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.5), 0 0 20px -6px var(--accent-a12);
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
 
     .hero-crest-stage:hover {
       border-color: var(--accent);
-      box-shadow: 0 24px 56px -16px rgba(0, 0, 0, 0.65), 0 0 36px var(--accent-a35);
+      box-shadow: 0 12px 32px -8px rgba(0, 0, 0, 0.6), 0 0 24px var(--accent-a35);
     }
 
     .hero-center-crest-img {
@@ -307,24 +303,10 @@
       pointer-events: none;
     }
 
-    .hero-content-row {
-      display: grid;
-      grid-template-columns: 1.15fr 0.85fr;
-      align-items: start;
-      gap: 3.5rem;
-      width: 100%;
-      max-width: 1240px;
-      position: relative;
-      z-index: 1;
-    }
-
     @media (max-width: 960px) {
       .hero-content-row {
         grid-template-columns: 1fr;
         gap: 2.5rem;
-      }
-      .hero-crest-center {
-        max-width: 92vw;
       }
     }
 
@@ -677,33 +659,6 @@
 
     html[data-theme="light"] .hero-desc {
       color: var(--text);
-    }
-
-    html[data-theme="light"] .skill-name {
-      color: #1f1b16;
-      font-weight: 600;
-    }
-
-    html[data-theme="light"] .skill-pct {
-      color: var(--accent);
-      font-weight: 700;
-      font-size: 0.72rem;
-    }
-
-    html[data-theme="light"] .skill-track {
-      background: rgba(0, 0, 0, 0.06);
-    }
-
-    html[data-theme="light"] .skill-fill {
-      background: linear-gradient(90deg, var(--accent), var(--accent2));
-    }
-
-    html[data-theme="light"] .skill-fill--teal {
-      background: linear-gradient(90deg, var(--accent2), var(--glow-teal));
-    }
-
-    html[data-theme="light"] .skill-fill--violet {
-      background: linear-gradient(90deg, var(--glow-violet), var(--accent));
     }
 
     html[data-theme="light"] .status-clock-tz {
@@ -1160,13 +1115,6 @@
       <div class="hero-bg-lines"></div>
       <div class="hero-glow"></div>
 
-      <div class="hero-crest-center" id="heroCrestCenter">
-        <div class="hero-crest-stage">
-          <img src="assets/images/branding/adt-titanium.webp" alt="ADT — Engineering Intelligent Systems" class="hero-center-crest-img" id="heroCenterCrestImg" data-dynamic-logo width="720" height="450" fetchpriority="high" loading="eager" />
-          <div class="hero-crest-ambient-glow"></div>
-        </div>
-      </div>
-
       <div class="hero-content-row">
         <div class="hero-left">
           <div class="hero-tag" id="live-hero-tag">BEI IV/II · KEC, IOE · Tribhuvan University</div>
@@ -1187,7 +1135,7 @@
           <p class="hero-caption" id="hero-caption" aria-live="off"></p>
           <div class="hero-actions">
             <div class="magnetic-wrap">
-              <a href="projects.html" class="btn-primary" aria-label="View Aaradhya's work">View Work</a>
+              <a href="#work" class="btn-primary" aria-label="View Aaradhya's work">View Work ↓</a>
             </div>
             <div class="magnetic-wrap">
               <a href="contact.html" class="btn-ghost" aria-label="Get in touch with Aaradhya">Get in touch →</a>
@@ -1204,74 +1152,48 @@
         </div>
         <div class="hero-right">
           <div class="status-card card-gradient-border">
-          <div class="status-label">
-            Currently Active
-            <span class="status-clock" id="statusClock" aria-label="Current date and time in Kathmandu, Nepal">
-              <span id="statusClockDate">-- --- ----</span><span id="statusClockTime">--:--:--</span><span
-                class="status-clock-tz">NPT</span>
-            </span>
-          </div>
-          <div class="status-items">
-            <div class="status-item">
-              <span class="status-item-label">Focus</span>
-              <span class="status-item-value" id="live-focus">SPARK Capstone (E4) · STRANGLER-IPU (E3 Sim) · BiasAperture (E4) · Fuse AI Fellowship</span>
+            <div class="hero-crest-stage">
+              <img src="assets/images/branding/adt-titanium.webp" alt="ADT — Engineering Intelligent Systems" class="hero-center-crest-img" id="heroCenterCrestImg" data-dynamic-logo width="720" height="450" fetchpriority="high" loading="eager" />
+              <div class="hero-crest-ambient-glow"></div>
             </div>
-            <div class="status-item">
-              <span class="status-item-label">Role</span>
-              <span class="status-item-value">IEEE KEC KTM Vice Chair · EPC Event Mgr · Makerspace Ambassador</span>
+            <div class="status-label">
+              Currently Active
+              <span class="status-clock" id="statusClock" aria-label="Current date and time in Kathmandu, Nepal">
+                <span id="statusClockDate">-- --- ----</span><span id="statusClockTime">--:--:--</span><span
+                  class="status-clock-tz">NPT</span>
+              </span>
             </div>
-            <div class="status-item">
-              <span class="status-item-label">Fellowship</span>
-              <span class="status-item-value" id="live-fellowship">Fuse AI Fellow · NSSR DataCamp (C2) — SQL Associate
-                next</span>
-            </div>
-            <div class="status-item">
-              <span class="status-item-label">Stack</span>
-              <span class="status-item-value">Python · Kotlin · JavaScript/React · FastAPI · Docker · XGBoost ·
-                scikit-learn</span>
-            </div>
-            <div class="status-item">
-              <span class="status-item-label">Interests</span>
-              <span class="status-item-value">Embedded Edge AI · Near-Memory Architecture · Algorithmic Fairness · Deterministic Verification</span>
-            </div>
-            <div class="status-item">
-              <span class="status-item-label">Last Updated</span>
-              <span class="status-item-value" id="live-last-updated">—</span>
-            </div>
-          </div>
-          <div class="skill-matrix" aria-label="Core Engineering Proficiencies">
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Python / AI &amp; Machine Learning</span><span
-                  class="skill-pct">92%</span></div>
-              <div class="skill-track">
-                <div class="skill-fill" data-pct="92%"></div>
+            <div class="status-items">
+              <div class="status-item">
+                <span class="status-item-label">Focus</span>
+                <span class="status-item-value" id="live-focus">SPARK Capstone (E4) · STRANGLER-IPU (E3 Sim) · BiasAperture (E4) · Fuse AI Fellowship</span>
               </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Embedded Firmware &amp; C/C++</span><span
-                  class="skill-pct">85%</span></div>
-              <div class="skill-track">
-                <div class="skill-fill skill-fill--teal" data-pct="85%"></div>
+              <div class="status-item">
+                <span class="status-item-label">Role</span>
+                <span class="status-item-value">IEEE KEC KTM Vice Chair · EPC Event Mgr · Makerspace Ambassador</span>
               </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">MPU6050 / ESP32-S3 &amp; Edge AI</span><span
-                  class="skill-pct">80%</span></div>
-              <div class="skill-track">
-                <div class="skill-fill skill-fill--violet" data-pct="80%"></div>
+              <div class="status-item">
+                <span class="status-item-label">Fellowship</span>
+                <span class="status-item-value" id="live-fellowship">Fuse AI Fellow · NSSR DataCamp (C2) — SQL Associate
+                  next</span>
               </div>
-            </div>
-            <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Web &amp; Full-Stack (FastAPI / JS)</span><span
-                  class="skill-pct">78%</span></div>
-              <div class="skill-track">
-                <div class="skill-fill" data-pct="78%"></div>
+              <div class="status-item">
+                <span class="status-item-label">Stack</span>
+                <span class="status-item-value">Python · Kotlin · JavaScript/React · FastAPI · Docker · XGBoost ·
+                  scikit-learn</span>
+              </div>
+              <div class="status-item">
+                <span class="status-item-label">Interests</span>
+                <span class="status-item-value">Embedded Edge AI · Near-Memory Architecture · Algorithmic Fairness · Deterministic Verification</span>
+              </div>
+              <div class="status-item">
+                <span class="status-item-label">Last Updated</span>
+                <span class="status-item-value" id="live-last-updated">—</span>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
   </section>
 
     <div class="divider-wrap" aria-hidden="true">
