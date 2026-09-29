@@ -1,6 +1,6 @@
 {
-  "sha": "06f48eaafe67f0035599efc70dff005df74e9ee1",
-  "shortSha": "06f48ea",
-  "date": "2026-09-25T14:57:08+05:45",
-  "message": "ci(deploy): add active Pages deployment status polling to eliminate HTTP 400 race conditions"
+  "sha": "52946d7a72a41395efa31884d2031c44bccad98b",
+  "shortSha": "52946d7",
+  "date": "2026-09-29T21:04:50+05:45",
+  "message": "feat(nav): streamline core navigation, add dynamic navbar collapse, align build log taxonomy, and introduce sync.bat wrapper"
 }
