@@ -1503,54 +1503,103 @@
       </div>
       <div class="keymap-grid reveal">
         <div class="keymap-card">
-          <h3 class="keymap-card-title">Keyboard shortcuts</h3>
-          
-          <div class="keymap-group">
-            <h4 class="keymap-group-title">Page &amp; Scroll Navigation</h4>
-            <ul class="keymap-list">
-              <li><kbd>1</kbd>–<kbd>7</kbd><span>Jump across site pages (Home / Work / Background / Credentials / About / Build Log / Connect)</span></li>
-              <li><kbd>=</kbd><span>Scroll to top</span></li>
-              <li><kbd>Shift</kbd> + <kbd>=</kbd><span>Scroll to 25% page depth</span></li>
-              <li><kbd>Shift</kbd> + <kbd>-</kbd><span>Scroll to 75% page depth</span></li>
-              <li><kbd>-</kbd><span>Scroll to bottom</span></li>
-            </ul>
+          <div class="keymap-header">
+            <h3 class="keymap-card-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="16" height="16" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" ry="2"/>
+                <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M8 12h.001M12 12h.001M16 12h.001M18 12h.001M7 16h10"/>
+              </svg>
+              <span>Essential Controls &amp; Shortcuts</span>
+            </h3>
+            <div class="keymap-spec-badge" title="Tuned for 400 nits OLED displays">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="13" height="13" aria-hidden="true">
+                <circle cx="12" cy="12" r="5"/>
+                <line x1="12" y1="1" x2="12" y2="3"/>
+                <line x1="12" y1="21" x2="12" y2="23"/>
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                <line x1="1" y1="12" x2="3" y2="12"/>
+                <line x1="21" y1="12" x2="23" y2="12"/>
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+              </svg>
+              <span>400 nits OLED &middot; Light &ge;20% &middot; Dark &ge;50%</span>
+            </div>
           </div>
 
-          <div class="keymap-group">
-            <h4 class="keymap-group-title">Global Controls &amp; Search</h4>
-            <ul class="keymap-list">
-              <li><kbd>?</kbd> or <kbd>Shift</kbd> + <kbd>/</kbd><span>Open visual Keyboard Shortcuts Cheat Sheet HUD modal</span></li>
-              <li><kbd>/</kbd> or <kbd>Ctrl</kbd> + <kbd>K</kbd> / <kbd>⌘K</kbd><span>Open global Command Palette (search)</span></li>
-              <li><kbd>↑</kbd> <kbd>↓</kbd><span>Move through search palette results</span></li>
-              <li><kbd>Enter</kbd><span>Open highlighted result</span></li>
-              <li><kbd>0</kbd><span>Toggle dark / light theme</span></li>
-              <li><kbd>`</kbd><span>Toggle hero date format (B.S. / A.D.)</span></li>
-              <li><kbd>Shift</kbd> + <kbd>N</kbd><span>Open What's New major releases modal</span></li>
-              <li><kbd>Shift</kbd> + <kbd>T</kbd><span>Start guided site tour</span></li>
-              <li><kbd>Esc</kbd><span>Universal Master Close — dismisses any open palette, modal, drawer, lightbox, or tour step</span></li>
-            </ul>
+          <div class="keymap-items">
+            <div class="keymap-item">
+              <div class="keymap-item-info">
+                <span class="keymap-item-title">Command Palette</span>
+                <span class="keymap-item-desc">Global search &amp; actions</span>
+              </div>
+              <div class="keymap-keys">
+                <kbd>/</kbd><span class="keymap-sep">or</span><kbd>Ctrl</kbd><span class="keymap-plus">+</span><kbd>K</kbd>
+              </div>
+            </div>
+
+            <div class="keymap-item">
+              <div class="keymap-item-info">
+                <span class="keymap-item-title">Shortcuts Cheat Sheet</span>
+                <span class="keymap-item-desc">Interactive visual HUD</span>
+              </div>
+              <div class="keymap-keys">
+                <kbd>?</kbd><span class="keymap-sep">or</span><kbd>Shift</kbd><span class="keymap-plus">+</span><kbd>/</kbd>
+              </div>
+            </div>
+
+            <div class="keymap-item">
+              <div class="keymap-item-info">
+                <span class="keymap-item-title">Toggle Color Mode</span>
+                <span class="keymap-item-desc">Dark and light contrast palettes</span>
+              </div>
+              <div class="keymap-keys">
+                <kbd>0</kbd>
+              </div>
+            </div>
+
+            <div class="keymap-item">
+              <div class="keymap-item-info">
+                <span class="keymap-item-title">Page Navigation</span>
+                <span class="keymap-item-desc">Jump to pages 1 (Home) &ndash; 7 (Connect)</span>
+              </div>
+              <div class="keymap-keys">
+                <kbd>1</kbd><span class="keymap-sep">&ndash;</span><kbd>7</kbd>
+              </div>
+            </div>
+
+            <div class="keymap-item">
+              <div class="keymap-item-info">
+                <span class="keymap-item-title">Guided Site Tour</span>
+                <span class="keymap-item-desc">Interactive spotlight walkthrough</span>
+              </div>
+              <div class="keymap-keys">
+                <kbd>Shift</kbd><span class="keymap-plus">+</span><kbd>T</kbd>
+              </div>
+            </div>
+
+            <div class="keymap-item">
+              <div class="keymap-item-info">
+                <span class="keymap-item-title">Universal Close</span>
+                <span class="keymap-item-desc">Dismiss any modal, palette, or drawer</span>
+              </div>
+              <div class="keymap-keys">
+                <kbd>Esc</kbd>
+              </div>
+            </div>
           </div>
 
-          <div class="keymap-group">
-            <h4 class="keymap-group-title">Page &amp; Card Controls</h4>
-            <ul class="keymap-list">
-              <li><kbd>Alt</kbd> + <kbd>2</kbd><span>Expand / collapse all project cards (Projects page)</span></li>
-              <li><kbd>Alt</kbd> + <kbd>4</kbd><span>Expand / collapse all timeline years (Achievements page)</span></li>
-              <li><kbd>Shift</kbd> + <kbd>4</kbd><span>Toggle Academic / Extracurricular filters (Achievements page)</span></li>
-              <li><kbd>Alt</kbd> + <kbd>6</kbd><span>Expand / collapse all 34 milestone nodes (Journey page)</span></li>
-            </ul>
+          <div class="keymap-footer">
+            <p class="keymap-note">Shortcuts automatically pause inside text fields. Both palettes tuned for low ambient contrast.</p>
+            <button type="button" class="btn-ghost keymap-modal-btn" onclick="if(typeof openShortcutsModal==='function')openShortcutsModal();" aria-label="Open complete keyboard shortcuts HUD">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="15" height="15" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" ry="2"/>
+                <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M8 12h.001M12 12h.001M16 12h.001M18 12h.001M7 16h10"/>
+              </svg>
+              <span>View All Shortcuts HUD</span>
+              <kbd>?</kbd>
+            </button>
           </div>
-
-          <p class="keymap-note">Shortcuts are automatically paused while typing in text fields or with ⌘ / Ctrl held (except Ctrl+Shift shortcuts).</p>
-        </div>
-
-        <div class="keymap-card">
-          <h3 class="keymap-card-title">Best viewing (400 nits OLED tested)</h3>
-          <ul class="keymap-list keymap-list--plain">
-            <li><span class="keymap-mode">Light mode</span><span>Display brightness 20% or higher</span></li>
-            <li><span class="keymap-mode">Dark mode</span><span>Display brightness 50% or higher</span></li>
-          </ul>
-          <p class="keymap-note">Both palettes are tuned for low ambient contrast — press <kbd>0</kbd> to switch and compare.</p>
         </div>
       </div>
     </section>
