@@ -1,6 +1,6 @@
 {
-  "sha": "496c47382c3635d54c9ba7c0292f6992fa8cfde2",
-  "shortSha": "496c473",
-  "date": "2026-09-29T22:15:20+05:45",
-  "message": "style(home): calibrate vertical centering and compact hero proportions"
+  "sha": "badf3fdccab19ee932569d95f8c7655c6e4ad6bb",
+  "shortSha": "badf3fd",
+  "date": "2026-09-29T22:19:57+05:45",
+  "message": "fix(theme): dynamic theme accent tokens for card hover and glow borders"
 }
