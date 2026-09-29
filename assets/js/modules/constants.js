@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: constants.js — aaradhyadt.github.io (v54.44)
+   MODULE: constants.js — aaradhyadt.github.io (v54.45)
    Site constants, social links, icons, and configuration metadata.
    ============================================================ */
 
@@ -26,12 +26,10 @@ const SITE = {
     { label: 'Instagram', href: 'https://www.instagram.com/aaradhya_dev_tamrakar/' },
   ],
   navLinks: [
-    { label: 'Home', labelShort: 'Home', href: '/index.html', key: '1' },
-    { label: 'Projects', labelShort: 'Projects', href: '/projects.html', key: '2' },
-    { label: 'Experience', labelShort: 'Experience', href: '/experience.html', key: '3' },
-    { label: 'Achievements', labelShort: 'Achievements', href: '/achievements.html', key: '4' },
+    { label: 'Work', labelShort: 'Work', href: '/projects.html', key: '2', homeAnchor: '#work' },
     { label: 'About', labelShort: 'About', href: '/about.html', key: '5' },
-    { label: 'Journey', labelShort: 'Journey', href: '/journey.html', key: '6' },
+    { label: 'Background', labelShort: 'Background', href: '/experience.html', key: '3' },
+    { label: 'Build Log', labelShort: 'Log', href: '/journey.html', key: '6' },
   ],
 };
 
@@ -77,8 +75,8 @@ const QUICK_NAV_PAGES = [
     cta: 'Read Bio',
   },
   {
-    file: 'journey.html', title: 'Journey',
-    desc: 'How this site was built — applied skillset behind each milestone, linked to the real commit.',
+    file: 'journey.html', title: 'Build Log',
+    desc: 'How this site was built — applied engineering skillset and architectural milestones behind each release.',
     cta: 'View Build Log',
   },
   {

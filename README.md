@@ -1,9 +1,9 @@
-﻿# aaradhyadt.github.io
+# aaradhyadt.github.io
 
 [![Deploy Pages](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml)
 [![Verification Suite](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml)
 [![Lighthouse Audit](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml)
-[![Version](https://img.shields.io/badge/version-v54.44-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
+[![Version](https://img.shields.io/badge/version-v54.45-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
 [![Zero-Framework](https://img.shields.io/badge/framework-vanilla%20HTML%2FCSS%2FJS-orange.svg)](https://aaradhyadt.github.io)
 
@@ -29,7 +29,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v54.44 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v54.45 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
@@ -77,6 +77,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │
 └── ⚙️ Configuration & Maintenance
     ├── sync.ps1                # PowerShell script for zero-conflict pulls, conventional commit generation & pushing
+    ├── sync.bat                # Zero-friction batch wrapper bypassing execution policies on Windows
     ├── sitemap.xml             # XML sitemap for search engine crawlers (Google, Bing)
     ├── robots.txt              # Search engine crawler directives (including modern AI crawlers)
     ├── AGENTS.md               # Codebase rules, Graphify instructions & Git workflow directives
@@ -223,14 +224,14 @@ generated-index check after the search-index workflow completes.
 
 Alternatively, open `index.html` directly in any web browser.
 
-### Automated Git Workflow & Pre-Commit Gate (`sync.ps1`)
+### Automated Git Workflow & Pre-Commit Gate (`sync.ps1` / `sync.bat`)
 
 To prevent merge conflicts with GitHub Actions commit-back bots and ensure code quality:
 
 - **Routine & Minor Updates** (Auto-runs index extraction, graphify knowledge update, `verify.py` pre-commit gate, conventional commit generation & push):
 
   ```powershell
-  .\sync.ps1
+  .\sync.bat    # Or: .\sync.ps1
   ```
 
 - **Major Architectural & Feature Updates** (Passes descriptive commit summary):
@@ -238,7 +239,7 @@ To prevent merge conflicts with GitHub Actions commit-back bots and ensure code 
   ```powershell
   # 1. Update dev-logs/PortfolioWebsite_TRACKER.md with release notes first
   # 2. Run sync script with detailed message:
-  .\sync.ps1 -m "feat(scope): detailed architectural summary"
+  .\sync.bat -m "feat(scope): detailed architectural summary"
   ```
 
 - **Version Bump & Metadata Sync** (Syncs `sw.js` cache name, `sitemap.xml`, and tracker):

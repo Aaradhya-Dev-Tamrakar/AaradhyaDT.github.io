@@ -1,6 +1,12 @@
-﻿# Portfolio Website Tracker — v54.44
+# Portfolio Website Tracker — v54.45
 
-Last updated: _2026-09-25_
+Last updated: _2026-09-29_
+
+- **Navigation Topology Streamlining & Dynamic Navbar Collapse (`layout.css`, `constants.js`, `journey.html`, `sync.bat`)**:
+  - **Dynamic Navbar Scroll-Collapse Physics (`layout.css`, `layout.min.css`)**: Expanded initial un-scrolled navbar padding (`max(1.75rem, ...)`) to deliver an open, refined editorial presence, paired with dynamic scroll-driven compaction (`nav.scrolled` padding `0.85rem`) using smooth `cubic-bezier(0.16, 1, 0.3, 1)` easing. Calibrated proportional scale transitions across `.nav-logo` (`1.15rem` down to `1.05rem`), `.nav-links a`, and `.nav-cta` across desktop and responsive viewports (900px, 480px, 340px).
+  - **Core Navigation Topology Refinement (`constants.js`)**: Streamlined primary site navigation (`SITE.navLinks`) to an intentional 4-item core: `Work` (`/projects.html`), `About` (`/about.html`), `Background` (`/experience.html`), and `Build Log` (`/journey.html`). Updated quick navigation descriptors and button labels accordingly.
+  - **Site Build Log Taxonomy Alignment (`journey.html`)**: Re-anchored `journey.html` branding to "Site Build Log" under "Engineering History", emphasizing its purpose as a technical ledger of site milestones and code commits, while adding an explicit contextual pointer to `experience.html` for professional leadership and fellowships. Synchronized SEO meta tags, OpenGraph, and Twitter cards.
+  - **Zero-Friction Windows Companion Script (`sync.bat`, `README.md`)**: Introduced root `sync.bat` execution wrapper with automatic PowerShell `ExecutionPolicy Bypass` handling across `pwsh` and Windows PowerShell. Documented companion entrypoint in `README.md`.
 
 - **Model Context Protocol (MCP) Infrastructure & Ecosystem Expansion (`projects.html`, `access.js`, `add_project.py`)**:
   - **Dedicated MCP & Agent Infrastructure Section (`#section-mcp`, `projects.html`)**: Introduced Section 4 in `projects.html` dedicating curated visual space to autonomous agent bridges, local device protocols, and model context endpoints.
@@ -355,7 +361,7 @@ Last updated: _2026-09-25_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.44`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.45`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
