@@ -47,7 +47,8 @@ noscript > nav.scrolled {
   transition: font-size 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-nav.scrolled .nav-logo {
+#nav.scrolled .nav-logo,
+noscript > nav.scrolled .nav-logo {
   font-size: 1.05rem;
 }
 
@@ -78,7 +79,8 @@ nav.scrolled .nav-logo {
   min-height: 44px;
 }
 
-nav.scrolled .nav-links a {
+#nav.scrolled .nav-links a,
+noscript > nav.scrolled .nav-links a {
   padding-top: 0.35rem;
   padding-bottom: 0.35rem;
 }
@@ -116,7 +118,8 @@ nav.scrolled .nav-links a {
     box-shadow 0.3s;
 }
 
-nav.scrolled .nav-cta {
+#nav.scrolled .nav-cta,
+noscript > nav.scrolled .nav-cta {
   padding: 0.4rem 1.05rem;
 }
 
