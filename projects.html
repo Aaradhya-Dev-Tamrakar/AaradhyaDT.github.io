@@ -247,9 +247,9 @@
 
     details.project-card:hover,
     .project-card:hover {
-      border-color: var(--glow-green);
+      border-color: var(--accent);
       transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, .3), 0 0 16px var(--glow-green-a35);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .3), 0 0 16px var(--accent-a35);
     }
 
     details.project-card:focus-within {
@@ -260,7 +260,7 @@
     details.project-card.project-card--gold,
     .project-card--gold {
       position: relative;
-      border: 1.5px solid rgba(226, 179, 90, 0.45);
+      border: 1.5px solid var(--glow-gold-a35, rgba(226, 179, 90, 0.45));
       box-shadow: 0 0 0 1px var(--glow-gold-a35), 0 0 18px var(--glow-gold-a35);
     }
 
@@ -273,14 +273,14 @@
     details.project-card.project-card--major,
     .project-card--major {
       position: relative;
-      border: 1.5px solid rgba(110, 231, 183, 0.45);
-      box-shadow: 0 0 0 1px var(--glow-green-a35), 0 0 18px var(--glow-green-a35);
+      border: 1.5px solid var(--accent-a45, rgba(110, 231, 183, 0.45));
+      box-shadow: 0 0 0 1px var(--accent-a35), 0 0 18px var(--accent-a35);
     }
 
     details.project-card.project-card--major:hover,
     .project-card--major:hover {
-      border-color: var(--glow-green);
-      box-shadow: 0 8px 24px rgba(0, 0, 0, .35), 0 0 0 1px var(--glow-green-a35), 0 0 28px var(--glow-green-a50);
+      border-color: var(--accent);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, .35), 0 0 0 1px var(--accent-a35), 0 0 28px var(--accent-a80);
     }
 
     details.project-card.project-card--gold::before,
@@ -316,10 +316,10 @@
       background: conic-gradient(
         from var(--border-angle),
         transparent 65%,
-        var(--glow-green-a35) 80%,
-        var(--glow-green) 92%,
+        var(--accent-a35) 80%,
+        var(--accent) 92%,
         #ffffff 96%,
-        var(--glow-green) 100%
+        var(--accent) 100%
       );
     }
 
@@ -343,13 +343,13 @@
 
     details.project-card.project-card--in-progress,
     .project-card--in-progress {
-      border: 1px solid var(--glow-green);
+      border: 1px solid var(--accent2);
     }
 
     details.project-card.project-card--in-progress:hover,
     .project-card--in-progress:hover {
-      border-color: var(--glow-green);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, .3), 0 0 16px var(--glow-green-a35);
+      border-color: var(--accent2);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, .3), 0 0 16px var(--glow-teal-a35);
     }
 
     details.project-card.project-card--archived,
@@ -564,7 +564,7 @@
     }
 
     .color-legend-swatch--major {
-      border: 3px solid var(--glow-green);
+      border: 3px solid var(--accent);
     }
 
     .color-legend-swatch--gold {
@@ -572,7 +572,7 @@
     }
 
     .color-legend-swatch--in-progress {
-      border: 1px solid var(--glow-green);
+      border: 1px solid var(--accent2);
     }
 
     .color-legend-swatch--archived {

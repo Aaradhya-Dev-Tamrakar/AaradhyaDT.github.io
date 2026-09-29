@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: constants.js — aaradhyadt.github.io (v54.53)
+   MODULE: constants.js — aaradhyadt.github.io (v54.55)
    Site constants, social links, icons, and configuration metadata.
    ============================================================ */
 
@@ -45,9 +45,7 @@ const SOCIAL_ICONS = {
 /* ── Quick-nav ("Explore") card data ──────────────────────────
    Single source of truth for the Explore grid on every page.
    `file` matches location.pathname's basename so the renderer can
-   find "this page" and mark it --current. Contact is `showOn:
-   ['index.html']` — it only appears in Home's grid; every other
-   page relies on the always-visible Connect button instead. */
+   find "this page" and mark it --current. */
 const QUICK_NAV_PAGES = [
   {
     file: 'index.html', title: 'Home',
@@ -78,12 +76,6 @@ const QUICK_NAV_PAGES = [
     file: 'journey.html', title: 'Build Log',
     desc: 'How this site was built — applied engineering skillset and architectural milestones behind each release.',
     cta: 'View Build Log',
-  },
-  {
-    file: 'contact.html', title: 'Contact',
-    desc: 'Open to collaborations, research, and internship conversations.',
-    cta: 'Get in Touch',
-    showOn: ['index.html'],
   },
 ];
 

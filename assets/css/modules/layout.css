@@ -166,12 +166,12 @@ noscript > nav.scrolled .nav-cta {
 
   84% {
     border-color: #f0fff4;
-    box-shadow: 0 0 18px 2px var(--glow-green-a50), 0 0 4px 1px rgba(255, 255, 255, .7);
+    box-shadow: 0 0 18px 2px var(--accent-a45), 0 0 4px 1px rgba(255, 255, 255, .7);
   }
 
   92% {
-    border-color: var(--glow-green);
-    box-shadow: 0 0 10px 1px var(--glow-green-a35);
+    border-color: var(--accent);
+    box-shadow: 0 0 10px 1px var(--accent-a35);
   }
 }
 
@@ -531,9 +531,9 @@ html[data-theme="light"] #quick-nav::before {
 }
 
 .quick-nav-card:hover {
-  border-color: var(--glow-green-a50);
+  border-color: var(--accent-a45);
   transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, .3), 0 0 16px var(--glow-green-a35);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, .3), 0 0 16px var(--accent-a35);
 }
 
 .quick-nav-card:focus-visible {
@@ -542,7 +542,7 @@ html[data-theme="light"] #quick-nav::before {
 }
 
 .quick-nav-card--current {
-  border-color: var(--glow-green-a50);
+  border-color: var(--accent-a45);
   cursor: default;
 }
 
@@ -603,8 +603,8 @@ html[data-theme="light"] #quick-nav::before {
 .card-arrow {
   display: inline-block;
   margin-left: 0.45em;
-  color: var(--glow-green);
-  text-shadow: 0 0 8px var(--glow-green-a50);
+  color: var(--accent);
+  text-shadow: 0 0 8px var(--accent-a35);
   transition: opacity .25s, text-shadow .25s, transform .25s;
 }
 
@@ -636,7 +636,7 @@ html[data-theme="light"] #quick-nav::before {
 .quick-nav-card:hover .card-arrow {
   opacity: 1;
   transform: scale(1);
-  text-shadow: 0 0 16px var(--glow-green-a50), 0 0 4px var(--glow-green);
+  text-shadow: 0 0 16px var(--accent-a35), 0 0 4px var(--accent);
 }
 
 @media (max-width: 1100px) {
