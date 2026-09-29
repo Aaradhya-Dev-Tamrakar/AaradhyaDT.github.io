@@ -1,6 +1,6 @@
 {
-  "sha": "bdf8f53d95eaa159367eed64bef717a61478310d",
-  "shortSha": "bdf8f53",
-  "date": "2026-09-29T21:34:04+05:45",
-  "message": "docs(dev-logs): archive navigation, showcase & IA refactoring chat transcript"
+  "sha": "53ab8e5013530264cea0b77517a30f3c8073a909",
+  "shortSha": "53ab8e5",
+  "date": "2026-09-29T21:53:45+05:45",
+  "message": "fix(css): isolate remaining nav.scrolled selectors and compile layout.min.css"
 }
