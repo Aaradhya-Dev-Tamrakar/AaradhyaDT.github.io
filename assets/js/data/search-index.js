@@ -461,6 +461,13 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
+    "title": "IEEE-Xtreme Algorithmic Intelligence Archive — 662-Task Corpus & Reasoning Engine",
+    "meta": "Python 3.14, Competitive Programming, SQLite FTS5",
+    "href": "projects.html#p-039",
+    "text": "ieee-xtreme algorithmic intelligence archive — 662-task corpus & reasoning engine autonomous cdp stealth-crawler extracting 662 olympiad problem statements with verbatim katex latex, execution matrices, and 532 verified optimal solutions. deterministic single-warehouse rag pattern compressing 226k words into notebooklm with sub-millisecond line-exact citations. local terminal judge cli (g++20 / python3) benchmarking against grandmaster runtimes, backed by sqlite fts5 full-text search engine. python 3.14 competitive programming sqlite fts5 notebooklm rag alpaca sft"
+  },
+  {
+    "type": "project",
     "title": "Nepali OCR AI — Vision OCR, Varnavinyas Grammar & Bi-Directional Transcoder",
     "meta": "Python 3.11, FastMCP, Devanagari OCR",
     "href": "projects.html#p-038",
