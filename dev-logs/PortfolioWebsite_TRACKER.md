@@ -1,6 +1,11 @@
-# Portfolio Website Tracker — v54.61
+# Portfolio Website Tracker — v54.62
 
 Last updated: _2026-09-30_
+
+- **IEEE-Xtreme Algorithmic Intelligence Archive & Xtreme-Bench Onboarding (`p-039`, `projects.html`, `access.js`, `search-index.js`)**:
+  - **Project Card Registration (`p-039`, `projects.html`)**: Integrated 662-task Olympiad reasoning corpus, Single-Warehouse NotebookLM RAG engine, SQLite FTS5 index, open-source **Xtreme-Bench** Hugging Face benchmark, and `uv`-first evaluation harness with Pass@k live leaderboard.
+  - **AES-256-GCM URL Encryption (`access.js`)**: Encrypted repository endpoint (`proj-ieee-xtreme-archive`) into the client-side access control registry.
+  - **Static Search Index & Category Sync (`search-index.js`, `projects.html`)**: Registered under `aiml` and `apps` filter domains with full-text search indexing across Python 3.14, Hugging Face, LLM Benchmark, and Competitive Programming tags.
 
 - **Landing Page Hero Topology Refactor & Status Hub Crown (`index.html`, `layout.css`)**:
   - **Asymmetric 2-Column Hero Architecture (`index.html`)**: Transformed landing hero into an asymmetric 2-column layout (`1.15fr 0.85fr`), placing identity, research focus, domain pills, and primary CTAs directly above the fold on the left, while dedicating the right column to a crowned live status hub.
@@ -376,7 +381,7 @@ Last updated: _2026-09-30_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.61`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v54.62`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

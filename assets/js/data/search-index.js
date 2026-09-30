@@ -461,10 +461,10 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "IEEE-Xtreme Algorithmic Intelligence Archive — 662-Task Corpus & Reasoning Engine",
-    "meta": "Python 3.14, Competitive Programming, SQLite FTS5",
+    "title": "IEEE-Xtreme Algorithmic Intelligence Archive — 662-Task Corpus & Xtreme-Bench",
+    "meta": "Python 3.14, Hugging Face, LLM Benchmark",
     "href": "projects.html#p-039",
-    "text": "ieee-xtreme algorithmic intelligence archive — 662-task corpus & reasoning engine autonomous cdp stealth-crawler extracting 662 olympiad problem statements with verbatim katex latex, execution matrices, and 532 verified optimal solutions. deterministic single-warehouse rag pattern compressing 226k words into notebooklm with sub-millisecond line-exact citations. local terminal judge cli (g++20 / python3) benchmarking against grandmaster runtimes, backed by sqlite fts5 full-text search engine. python 3.14 competitive programming sqlite fts5 notebooklm rag alpaca sft"
+    "text": "ieee-xtreme algorithmic intelligence archive — 662-task corpus & xtreme-bench autonomous cdp stealth-crawler extracting 662 olympiad problem statements with verbatim katex latex, execution matrices, and 532 verified optimal solutions. open-source xtreme-bench reasoning benchmark on hugging face hub paired with a uv -first automated evaluation harness and live pass@k leaderboard. deterministic single-warehouse rag pattern compressing 226k words into notebooklm with sub-millisecond sqlite fts5 search. python 3.14 hugging face llm benchmark competitive programming sqlite fts5 notebooklm rag"
   },
   {
     "type": "project",
