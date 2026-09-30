@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: constants.js — aaradhyadt.github.io (v54.60)
+   MODULE: constants.js — aaradhyadt.github.io (v54.62)
    Site constants, social links, icons, and configuration metadata.
    ============================================================ */
 

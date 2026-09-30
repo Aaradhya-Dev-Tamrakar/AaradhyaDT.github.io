@@ -1,16 +1,16 @@
-# Graph Report - AaradhyaDT.github.io  (2026-09-29)
+# Graph Report - AaradhyaDT.github.io  (2026-09-30)
 
 ## Corpus Check
-- 68 files · ~1,924,482 words
+- 71 files · ~2,018,149 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 1220 nodes · 1539 edges · 212 communities (67 shown, 134 thin omitted)
-- Extraction: 95% EXTRACTED · 5% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
+- 2441 nodes · 2760 edges · 361 communities (165 shown, 185 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f8dc3b73`
+- Built from commit: `803f875b`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -212,22 +212,171 @@
 - SECURITY_AUDIT_VIP_TIER.md
 - Turn 2
 - Final assessment
-- script.js
+- 2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md
 - I would therefore revise my previous evaluation
 - 2. Technical architecture — excellent
 - 3. The biggest conceptual problem: the security layer
+- Turn 4
+- Turn 13
+- Turn 13
+- Turn 3
+- Turn 13
+- 2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md
+- Turn 2
+- Turn 2
+- Turn 2
+- Turn 2
+- Suggestions
+- Suggestions
+- Suggestions
+- Suggestions
+- Turn 9
+- Turn 9
+- Turn 9
+- Turn 9
+- My view of your present vs. future
+- My view of your present vs. future
+- My view of your present vs. future
+- My view of your present vs. future
+- Turn 3
+- Turn 12
+- 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)
+- My recommendations now
+- My recommendations now
+- My recommendations now
+- My recommendations now
+- 10. The portfolio → master profile → Super-NLM sequence is now much clearer
+- 10. The portfolio → master profile → Super-NLM sequence is now much clearer
+- 10. The portfolio → master profile → Super-NLM sequence is now much clearer
+- 10. The portfolio → master profile → Super-NLM sequence is now much clearer
+- Turn 4
+- Turn 4
+- Turn 4
+- Turn 4
+- Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study)
+- Turn 10
+- Turn 10
+- Turn 10
+- Turn 10
+- This gives me an even stronger interpretation of your 2026
+- This gives me an even stronger interpretation of your 2026
+- This gives me an even stronger interpretation of your 2026
+- This gives me an even stronger interpretation of your 2026
+- 26. Final verdict on Claude-Desktop specifically
+- RFC: Portfolio-OS — Open Architecture, Template & Developer SDK
+- 2. Core Architectural Pillars
+- 16. The three repositories are converging on one architecture
+- 16. The three repositories are converging on one architecture
+- 16. The three repositories are converging on one architecture
+- 16. The three repositories are converging on one architecture
+- Analyze Recent Repository Works
+- 📎 Appendix: Analyze Recent Repository Works (ChatGPT Session Continuation)
+- 📎 Appendix: Analyze Recent Repository Works (ChatGPT Session Continuation)
+- 📎 Appendix: Analyze Recent Repository Works (ChatGPT Session Continuation)
+- 12. Your recent work has produced three distinct layers
+- 12. Your recent work has produced three distinct layers
+- 12. Your recent work has produced three distinct layers
+- 12. Your recent work has produced three distinct layers
+- 3. I found a few real Super-NLM edge cases worth hardening
+- 3. I found a few real Super-NLM edge cases worth hardening
+- 3. I found a few real Super-NLM edge cases worth hardening
+- 3. I found a few real Super-NLM edge cases worth hardening
+- 3. The capability mesh is your most interesting architectural asset
+- 3. The capability mesh is your most interesting architectural asset
+- 3. The capability mesh is your most interesting architectural asset
+- 3. The capability mesh is your most interesting architectural asset
+- 6. Your WSR idea is arguably the second strongest technical direction
+- 6. Your WSR idea is arguably the second strongest technical direction
+- 6. Your WSR idea is arguably the second strongest technical direction
+- 6. Your WSR idea is arguably the second strongest technical direction
+- 7. The account cycling story is actually evidence of resource-constrained engineering
+- 7. The account cycling story is actually evidence of resource-constrained engineering
+- 7. The account cycling story is actually evidence of resource-constrained engineering
+- 7. The account cycling story is actually evidence of resource-constrained engineering
+- At present, I would position your profile like this
+- At present, I would position your profile like this
+- At present, I would position your profile like this
+- At present, I would position your profile like this
+- 4. Technical Specifications
+- 5. Implementation Roadmap
+- 5. Your Patch System is a surprisingly sophisticated response to this
+- 5. Your Patch System is a surprisingly sophisticated response to this
+- 5. Your Patch System is a surprisingly sophisticated response to this
+- 5. Your Patch System is a surprisingly sophisticated response to this
+- Your detailed README strategy also follows naturally
+- Your detailed README strategy also follows naturally
+- Your detailed README strategy also follows naturally
+- Your detailed README strategy also follows naturally
+- The master profile therefore should not be "killed"
+- The master profile therefore should not be "killed"
+- The master profile therefore should not be "killed"
+- The master profile therefore should not be "killed"
+- 20. But test quality still needs to be distinguished from runtime validation
+- The more important discovery
+- The more important discovery
+- 10. But there is a serious problem
+- 10. But there is a serious problem
+- 10. But there is a serious problem
+- 10. But there is a serious problem
+- 12. Your current strategy is therefore correct — with one addition
+- 12. Your current strategy is therefore correct — with one addition
+- 12. Your current strategy is therefore correct — with one addition
+- 12. Your current strategy is therefore correct — with one addition
+- 16. What I would do next
+- 16. What I would do next
+- 16. What I would do next
+- 16. What I would do next
+- 18. This suggests a concept missing from all three repositories
+- 18. This suggests a concept missing from all three repositories
+- 18. This suggests a concept missing from all three repositories
+- 18. This suggests a concept missing from all three repositories
+- 1. The biggest recent change: you have created an epistemic layer
+- 1. The biggest recent change: you have created an epistemic layer
+- 1. The biggest recent change: you have created an epistemic layer
+- 1. The biggest recent change: you have created an epistemic layer
+- 5. The strongest research direction is now clear
+- 5. The strongest research direction is now clear
+- 5. The strongest research direction is now clear
+- 5. The strongest research direction is now clear
+- There is also a niche I think you could eventually own
+- There is also a niche I think you could eventually own
+- There is also a niche I think you could eventually own
+- There is also a niche I think you could eventually own
+- I would put you in the emerging category of "AI systems builder"
+- I would put you in the emerging category of "AI systems builder"
+- I would put you in the emerging category of "AI systems builder"
+- I would put you in the emerging category of "AI systems builder"
+- This also changes how I would describe your real skill
+- This also changes how I would describe your real skill
+- This also changes how I would describe your real skill
+- This also changes how I would describe your real skill
+- Going forward, I would not make "AI" your whole identity
+- Going forward, I would not make "AI" your whole identity
+- Going forward, I would not make "AI" your whole identity
+- Going forward, I would not make "AI" your whole identity
+- Your most distinctive advantage
+- Your most distinctive advantage
+- Your most distinctive advantage
+- Your most distinctive advantage
+- 1. What the repository actually contains
+- 3. The scheduler is more sophisticated than I initially gave it credit for
+- 9. The pipeline engine is good architecture, but there is a major semantic weakness
+- And this changes the seven-repository picture
+- And this changes the seven-repository picture
+- So I would change your scholarship framing slightly
+- v23 addition — latest site refinements (2026-07-18)
 
 ## God Nodes (most connected - your core abstractions)
 1. `Verbatim Dialogue & Engineering Transcript` - 42 edges
 2. `Verbatim Dialogue & Engineering Transcript` - 42 edges
-3. `main()` - 33 edges
-4. `log_pass()` - 27 edges
-5. `Phase 2 — Featured Work Showcase ✓` - 27 edges
+3. `Turn 4` - 41 edges
+4. `main()` - 33 edges
+5. `log_pass()` - 27 edges
 6. `Phase 2 — Featured Work Showcase ✓` - 27 edges
-7. `log_error()` - 23 edges
-8. `Portfolio Website Tracker — v53.26` - 21 edges
-9. `log_warning()` - 16 edges
-10. `bindEvents()` - 14 edges
+7. `Phase 2 — Featured Work Showcase ✓` - 27 edges
+8. `log_error()` - 23 edges
+9. `Portfolio Website Tracker — v53.26` - 21 edges
+10. `log_warning()` - 16 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Certificate: Introduction to Claude Cowork` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
@@ -259,23 +408,23 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (212 total, 134 thin omitted)
+## Communities (361 total, 185 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
 Nodes (62): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+54 more)
 
 ### Community 1 - "Portfolio Website Tracker — v53.26"
-Cohesion: 0.05
-Nodes (38): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.26, State of Play, Status, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v23 addition — latest site refinements (2026-07-18), v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18) (+30 more)
+Cohesion: 0.10
+Nodes (20): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.26, State of Play, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18), v25 addition — bug-check sweep, pages 1/3/4 (2026-07-27), v26 addition — bug-check sweep, page 2 + about (2026-07-27) (+12 more)
 
 ### Community 2 - "core.js"
-Cohesion: 0.08
-Nodes (36): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+28 more)
+Cohesion: 0.06
+Nodes (43): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+35 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
-Nodes (28): renderSiteFooter(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson() (+20 more)
+Nodes (27): closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson(), generateResumeMarkdown() (+19 more)
 
 ### Community 4 - "site_automation.py"
 Cohesion: 0.12
@@ -513,9 +662,9 @@ Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, As
 Cohesion: 0.15
 Nodes (13): Assistant, Bottom line, Credibility risk, Final assessment, On “webscraping protection”, Portfolio communication, Repository engineering, Research/scholarship value (+5 more)
 
-### Community 208 - "script.js"
-Cohesion: 0.36
-Nodes (6): bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
+### Community 208 - "2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md"
+Cohesion: 0.01
+Nodes (324): 10. There is also a very interesting feedback loop emerging, 10. There is also a very interesting feedback loop emerging, 10. There is also a very interesting feedback loop emerging, 10. There is also a very interesting feedback loop emerging, 10. Your lease mechanism is one of the strongest parts, 10. Your lease mechanism is one of the strongest parts, 10. Your lease mechanism is one of the strongest parts, 10. Your lease mechanism is one of the strongest parts (+316 more)
 
 ### Community 209 - "I would therefore revise my previous evaluation"
 Cohesion: 0.25
@@ -529,25 +678,417 @@ Nodes (4): 2. Technical architecture — excellent, CI/CD, Strong points, Testin
 Cohesion: 0.67
 Nodes (3): 3. The biggest conceptual problem: the security layer, Google authentication has the same architectural limitation, What I would change
 
+### Community 212 - "Turn 4"
+Cohesion: 0.05
+Nodes (43): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+35 more)
+
+### Community 213 - "Turn 13"
+Cohesion: 0.06
+Nodes (31): And this is where your electronics background becomes valuable, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, **BEI student → emerging Intelligent Systems / AI Systems researcher-engineer** (+23 more)
+
+### Community 214 - "Turn 13"
+Cohesion: 0.06
+Nodes (31): And this is where your electronics background becomes valuable, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, **BEI student → emerging Intelligent Systems / AI Systems researcher-engineer** (+23 more)
+
+### Community 215 - "Turn 3"
+Cohesion: 0.08
+Nodes (25): And your repo actually fits the analogy unusually well, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+17 more)
+
+### Community 216 - "Turn 13"
+Cohesion: 0.09
+Nodes (23): And this is where your electronics background becomes valuable, Assistant, Assistant, Assistant, Assistant, **BEI student → emerging Intelligent Systems / AI Systems researcher-engineer**, But I would separate two things, But there is an important weakness (+15 more)
+
+### Community 217 - "2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md"
+Cohesion: 0.09
+Nodes (22): 10. The QA subsystem is more of a verification record than an enforcement mechanism, 11. The memory/context subsystem is conceptually interesting, 12. MCP is an important architectural multiplier, 13. SQLite WAL is a rational choice — with a ceiling, 14. There is an important security gap, 15. Deployment currently exposes a development credential fallback, 16. Another architectural invariant is weak around task blocking, 17. The worker model currently has limited resource semantics (+14 more)
+
+### Community 218 - "Turn 2"
+Cohesion: 0.13
+Nodes (15): 17. The most important transformation in your work, 1. Batch/queued Super-NLM queries = execution reliability, 1. Super-NLM is much more than a NotebookLM wrapper, 2. GitHub–Drive–NLM sync = state consistency, 3. This makes your development strategy much more coherent, 4. There is an important distinction I would make about your current phase, And this changes my earlier criticism, And your recent batch work is especially significant (+7 more)
+
+### Community 219 - "Turn 2"
+Cohesion: 0.13
+Nodes (15): 17. The most important transformation in your work, 1. Batch/queued Super-NLM queries = execution reliability, 1. Super-NLM is much more than a NotebookLM wrapper, 2. GitHub–Drive–NLM sync = state consistency, 3. This makes your development strategy much more coherent, 4. There is an important distinction I would make about your current phase, And this changes my earlier criticism, And your recent batch work is especially significant (+7 more)
+
+### Community 220 - "Turn 2"
+Cohesion: 0.13
+Nodes (15): 17. The most important transformation in your work, 1. Batch/queued Super-NLM queries = execution reliability, 1. Super-NLM is much more than a NotebookLM wrapper, 2. GitHub–Drive–NLM sync = state consistency, 3. This makes your development strategy much more coherent, 4. There is an important distinction I would make about your current phase, And this changes my earlier criticism, And your recent batch work is especially significant (+7 more)
+
+### Community 221 - "Turn 2"
+Cohesion: 0.13
+Nodes (15): 17. The most important transformation in your work, 1. Batch/queued Super-NLM queries = execution reliability, 1. Super-NLM is much more than a NotebookLM wrapper, 2. GitHub–Drive–NLM sync = state consistency, 3. This makes your development strategy much more coherent, 4. There is an important distinction I would make about your current phase, And this changes my earlier criticism, And your recent batch work is especially significant (+7 more)
+
+### Community 222 - "Suggestions"
+Cohesion: 0.14
+Nodes (14): 1. Archive yourself, 1. Introduce a universal identity model, 2. Harden the lease protocol, 3. Separate "result checkpoint" from "execution checkpoint", 4. Make Super-NLM job states more truthful, 5. Make synchronization content-addressed, 6. Fail closed for verification mode, 7. Don't build another major subsystem yet (+6 more)
+
+### Community 223 - "Suggestions"
+Cohesion: 0.14
+Nodes (14): 1. Archive yourself, 1. Introduce a universal identity model, 2. Harden the lease protocol, 3. Separate "result checkpoint" from "execution checkpoint", 4. Make Super-NLM job states more truthful, 5. Make synchronization content-addressed, 6. Fail closed for verification mode, 7. Don't build another major subsystem yet (+6 more)
+
+### Community 224 - "Suggestions"
+Cohesion: 0.14
+Nodes (14): 1. Archive yourself, 1. Introduce a universal identity model, 2. Harden the lease protocol, 3. Separate "result checkpoint" from "execution checkpoint", 4. Make Super-NLM job states more truthful, 5. Make synchronization content-addressed, 6. Fail closed for verification mode, 7. Don't build another major subsystem yet (+6 more)
+
+### Community 225 - "Suggestions"
+Cohesion: 0.14
+Nodes (14): 1. Archive yourself, 1. Introduce a universal identity model, 2. Harden the lease protocol, 3. Separate "result checkpoint" from "execution checkpoint", 4. Make Super-NLM job states more truthful, 5. Make synchronization content-addressed, 6. Fail closed for verification mode, 7. Don't build another major subsystem yet (+6 more)
+
+### Community 226 - "Turn 9"
+Cohesion: 0.15
+Nodes (13): 1. The master profile is not a résumé anymore, And this is the part I would preserve most carefully, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
+
+### Community 227 - "Turn 9"
+Cohesion: 0.15
+Nodes (13): 1. The master profile is not a résumé anymore, And this is the part I would preserve most carefully, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
+
+### Community 228 - "Turn 9"
+Cohesion: 0.15
+Nodes (13): 1. The master profile is not a résumé anymore, And this is the part I would preserve most carefully, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
+
+### Community 229 - "Turn 9"
+Cohesion: 0.15
+Nodes (13): 1. The master profile is not a résumé anymore, And this is the part I would preserve most carefully, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
+
+### Community 230 - "My view of your present vs. future"
+Cohesion: 0.15
+Nodes (13): And one more thing, And the Google Classroom MCP idea is actually worth revisiting, Assistant, Assistant, My view of your present vs. future, **Near future:**, **Present:**, **Strong long-term trajectory:** (+5 more)
+
+### Community 231 - "My view of your present vs. future"
+Cohesion: 0.15
+Nodes (13): And one more thing, And the Google Classroom MCP idea is actually worth revisiting, Assistant, Assistant, My view of your present vs. future, **Near future:**, **Present:**, **Strong long-term trajectory:** (+5 more)
+
+### Community 232 - "My view of your present vs. future"
+Cohesion: 0.15
+Nodes (13): And one more thing, And the Google Classroom MCP idea is actually worth revisiting, Assistant, Assistant, My view of your present vs. future, **Near future:**, **Present:**, **Strong long-term trajectory:** (+5 more)
+
+### Community 233 - "My view of your present vs. future"
+Cohesion: 0.15
+Nodes (13): And one more thing, And the Google Classroom MCP idea is actually worth revisiting, Assistant, Assistant, My view of your present vs. future, **Near future:**, **Present:**, **Strong long-term trajectory:** (+5 more)
+
+### Community 234 - "Turn 3"
+Cohesion: 0.15
+Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
+
+### Community 235 - "Turn 12"
+Cohesion: 0.17
+Nodes (12): Assistant, Assistant, But there is an important weakness, So I would describe the evolution this way, This also explains why your work became faster, Turn 11, Turn 12, User (+4 more)
+
+### Community 236 - "📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)"
+Cohesion: 0.17
+Nodes (12): And your repo actually fits the analogy unusually well, 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation), Assistant, Assistant, Assistant, I would actually call the broader concept, The DDOS ↔ PoS analogy, Turn 1 (+4 more)
+
+### Community 237 - "My recommendations now"
+Cohesion: 0.18
+Nodes (11): 1. Preserve the portfolio as an archaeological record, 2. Create a "2026 Engineering Chronicle", 3. Track human effort separately from AI output, 4. Add a provenance layer across all your repositories, 5. Use 2027 differently from 2026, And I think there's a deeper story here, Assistant, My recommendations now (+3 more)
+
+### Community 238 - "My recommendations now"
+Cohesion: 0.18
+Nodes (11): 1. Preserve the portfolio as an archaeological record, 2. Create a "2026 Engineering Chronicle", 3. Track human effort separately from AI output, 4. Add a provenance layer across all your repositories, 5. Use 2027 differently from 2026, And I think there's a deeper story here, Assistant, My recommendations now (+3 more)
+
+### Community 239 - "My recommendations now"
+Cohesion: 0.18
+Nodes (11): 1. Preserve the portfolio as an archaeological record, 2. Create a "2026 Engineering Chronicle", 3. Track human effort separately from AI output, 4. Add a provenance layer across all your repositories, 5. Use 2027 differently from 2026, And I think there's a deeper story here, Assistant, My recommendations now (+3 more)
+
+### Community 240 - "My recommendations now"
+Cohesion: 0.18
+Nodes (11): 1. Preserve the portfolio as an archaeological record, 2. Create a "2026 Engineering Chronicle", 3. Track human effort separately from AI output, 4. Add a provenance layer across all your repositories, 5. Use 2027 differently from 2026, And I think there's a deeper story here, Assistant, My recommendations now (+3 more)
+
+### Community 241 - "10. The portfolio → master profile → Super-NLM sequence is now much clearer"
+Cohesion: 0.25
+Nodes (8): 10. The portfolio → master profile → Super-NLM sequence is now much clearer, Stage 1 — Externalize self, Stage 2 — Organize self, Stage 3 — Reconcile self, Stage 4 — Make self machine-readable, Stage 5 — Give the system knowledge access, Stage 6 — Give the system workers, Stage 7 — Give the ecosystem an architectural model
+
+### Community 242 - "10. The portfolio → master profile → Super-NLM sequence is now much clearer"
+Cohesion: 0.25
+Nodes (8): 10. The portfolio → master profile → Super-NLM sequence is now much clearer, Stage 1 — Externalize self, Stage 2 — Organize self, Stage 3 — Reconcile self, Stage 4 — Make self machine-readable, Stage 5 — Give the system knowledge access, Stage 6 — Give the system workers, Stage 7 — Give the ecosystem an architectural model
+
+### Community 243 - "10. The portfolio → master profile → Super-NLM sequence is now much clearer"
+Cohesion: 0.25
+Nodes (8): 10. The portfolio → master profile → Super-NLM sequence is now much clearer, Stage 1 — Externalize self, Stage 2 — Organize self, Stage 3 — Reconcile self, Stage 4 — Make self machine-readable, Stage 5 — Give the system knowledge access, Stage 6 — Give the system workers, Stage 7 — Give the ecosystem an architectural model
+
+### Community 244 - "10. The portfolio → master profile → Super-NLM sequence is now much clearer"
+Cohesion: 0.25
+Nodes (8): 10. The portfolio → master profile → Super-NLM sequence is now much clearer, Stage 1 — Externalize self, Stage 2 — Organize self, Stage 3 — Reconcile self, Stage 4 — Make self machine-readable, Stage 5 — Give the system knowledge access, Stage 6 — Give the system workers, Stage 7 — Give the ecosystem an architectural model
+
+### Community 245 - "Turn 4"
+Cohesion: 0.25
+Nodes (8): 13. The really good news, Assistant, Assistant, Assistant, Assistant, The central conclusion, Turn 4, User
+
+### Community 246 - "Turn 4"
+Cohesion: 0.25
+Nodes (8): 13. The really good news, Assistant, Assistant, Assistant, Assistant, The central conclusion, Turn 4, User
+
+### Community 247 - "Turn 4"
+Cohesion: 0.25
+Nodes (8): 13. The really good news, Assistant, Assistant, Assistant, Assistant, The central conclusion, Turn 4, User
+
+### Community 248 - "Turn 4"
+Cohesion: 0.25
+Nodes (8): 13. The really good news, Assistant, Assistant, Assistant, Assistant, The central conclusion, Turn 4, User
+
+### Community 249 - "Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study)"
+Cohesion: 0.25
+Nodes (5): 1. Overview & Problem Space, 3. Reference Implementation Recipe, 4. Potential Portfolio Application Scenarios, Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study), Portfolio-OS
+
+### Community 250 - "Turn 10"
+Cohesion: 0.29
+Nodes (7): Assistant, **Master Profile v2 architecture — hot state + immutable history**, Stage 1 — externalize everything, Stage 2 — the repository becomes the natural memory unit, Turn 10, User, Where I would take this next
+
+### Community 251 - "Turn 10"
+Cohesion: 0.29
+Nodes (7): Assistant, **Master Profile v2 architecture — hot state + immutable history**, Stage 1 — externalize everything, Stage 2 — the repository becomes the natural memory unit, Turn 10, User, Where I would take this next
+
+### Community 252 - "Turn 10"
+Cohesion: 0.29
+Nodes (7): Assistant, **Master Profile v2 architecture — hot state + immutable history**, Stage 1 — externalize everything, Stage 2 — the repository becomes the natural memory unit, Turn 10, User, Where I would take this next
+
+### Community 253 - "Turn 10"
+Cohesion: 0.29
+Nodes (7): Assistant, **Master Profile v2 architecture — hot state + immutable history**, Stage 1 — externalize everything, Stage 2 — the repository becomes the natural memory unit, Turn 10, User, Where I would take this next
+
+### Community 254 - "This gives me an even stronger interpretation of your 2026"
+Cohesion: 0.29
+Nodes (7): Bottleneck 1, Bottleneck 2, Bottleneck 3, Bottleneck 4, Bottleneck 5, Bottleneck 6, This gives me an even stronger interpretation of your 2026
+
+### Community 255 - "This gives me an even stronger interpretation of your 2026"
+Cohesion: 0.29
+Nodes (7): Bottleneck 1, Bottleneck 2, Bottleneck 3, Bottleneck 4, Bottleneck 5, Bottleneck 6, This gives me an even stronger interpretation of your 2026
+
+### Community 256 - "This gives me an even stronger interpretation of your 2026"
+Cohesion: 0.29
+Nodes (7): Bottleneck 1, Bottleneck 2, Bottleneck 3, Bottleneck 4, Bottleneck 5, Bottleneck 6, This gives me an even stronger interpretation of your 2026
+
+### Community 257 - "This gives me an even stronger interpretation of your 2026"
+Cohesion: 0.29
+Nodes (7): Bottleneck 1, Bottleneck 2, Bottleneck 3, Bottleneck 4, Bottleneck 5, Bottleneck 6, This gives me an even stronger interpretation of your 2026
+
+### Community 258 - "26. Final verdict on Claude-Desktop specifically"
+Cohesion: 0.29
+Nodes (7): 26. Final verdict on Claude-Desktop specifically, What is conceptually strongest, What is technically strongest, What is weakest, What it is, What it proves about you, What makes it interesting
+
+### Community 259 - "RFC: Portfolio-OS — Open Architecture, Template & Developer SDK"
+Cohesion: 0.29
+Nodes (7): 1. Executive Summary, 2. Productization Archetypes, 3. Architecture Decoupling Boundary, Layer 1: The Zero-Dependency Starter Template (Target: Phase 1), Layer 2: Embedded HUD & Runtime Library (Target: Phase 2), Layer 3: Unified Developer CLI (Target: Phase 3), RFC: Portfolio-OS — Open Architecture, Template & Developer SDK
+
+### Community 260 - "2. Core Architectural Pillars"
+Cohesion: 0.33
+Nodes (6): 2. Core Architectural Pillars, Pillar 1: Hardware GPU Instancing (`InstancedMesh`), Pillar 2: Demand-Driven / Dirty Render Loop (Loop Throttling), Pillar 3: Offloading Physics / Graph Layout to Web Workers, Pillar 4: Decoupled Hybrid UI Layers (Canvas Backplate + DOM Foreplate), Pillar 5: Lightweight Shaders & Minimal Material Pipeline
+
+### Community 261 - "16. The three repositories are converging on one architecture"
+Cohesion: 0.40
+Nodes (5): 16. The three repositories are converging on one architecture, Control plane, Evidence plane, Execution plane, Knowledge plane
+
+### Community 262 - "16. The three repositories are converging on one architecture"
+Cohesion: 0.40
+Nodes (5): 16. The three repositories are converging on one architecture, Control plane, Evidence plane, Execution plane, Knowledge plane
+
+### Community 263 - "16. The three repositories are converging on one architecture"
+Cohesion: 0.40
+Nodes (5): 16. The three repositories are converging on one architecture, Control plane, Evidence plane, Execution plane, Knowledge plane
+
+### Community 264 - "16. The three repositories are converging on one architecture"
+Cohesion: 0.40
+Nodes (5): 16. The three repositories are converging on one architecture, Control plane, Evidence plane, Execution plane, Knowledge plane
+
+### Community 265 - "Analyze Recent Repository Works"
+Cohesion: 0.40
+Nodes (5): Analyze Recent Repository Works, Assistant, Executive assessment, Turn 1, User
+
+### Community 266 - "📎 Appendix: Analyze Recent Repository Works (ChatGPT Session Continuation)"
+Cohesion: 0.40
+Nodes (5): 📎 Appendix: Analyze Recent Repository Works (ChatGPT Session Continuation), Assistant, Executive assessment, Turn 1, User
+
+### Community 267 - "📎 Appendix: Analyze Recent Repository Works (ChatGPT Session Continuation)"
+Cohesion: 0.40
+Nodes (5): 📎 Appendix: Analyze Recent Repository Works (ChatGPT Session Continuation), Assistant, Executive assessment, Turn 1, User
+
+### Community 268 - "📎 Appendix: Analyze Recent Repository Works (ChatGPT Session Continuation)"
+Cohesion: 0.40
+Nodes (5): 📎 Appendix: Analyze Recent Repository Works (ChatGPT Session Continuation), Assistant, Executive assessment, Turn 1, User
+
+### Community 269 - "12. Your recent work has produced three distinct layers"
+Cohesion: 0.50
+Nodes (4): 12. Your recent work has produced three distinct layers, Layer A — Portfolio, Layer B — Capability infrastructure, Layer C — Research infrastructure
+
+### Community 270 - "12. Your recent work has produced three distinct layers"
+Cohesion: 0.50
+Nodes (4): 12. Your recent work has produced three distinct layers, Layer A — Portfolio, Layer B — Capability infrastructure, Layer C — Research infrastructure
+
+### Community 271 - "12. Your recent work has produced three distinct layers"
+Cohesion: 0.50
+Nodes (4): 12. Your recent work has produced three distinct layers, Layer A — Portfolio, Layer B — Capability infrastructure, Layer C — Research infrastructure
+
+### Community 272 - "12. Your recent work has produced three distinct layers"
+Cohesion: 0.50
+Nodes (4): 12. Your recent work has produced three distinct layers, Layer A — Portfolio, Layer B — Capability infrastructure, Layer C — Research infrastructure
+
+### Community 273 - "3. I found a few real Super-NLM edge cases worth hardening"
+Cohesion: 0.50
+Nodes (4): 3. I found a few real Super-NLM edge cases worth hardening, A. Scheduler persistence is not transactional, B. Job completion is currently stronger than artifact validation, C. Artifact identification is heuristic
+
+### Community 274 - "3. I found a few real Super-NLM edge cases worth hardening"
+Cohesion: 0.50
+Nodes (4): 3. I found a few real Super-NLM edge cases worth hardening, A. Scheduler persistence is not transactional, B. Job completion is currently stronger than artifact validation, C. Artifact identification is heuristic
+
+### Community 275 - "3. I found a few real Super-NLM edge cases worth hardening"
+Cohesion: 0.50
+Nodes (4): 3. I found a few real Super-NLM edge cases worth hardening, A. Scheduler persistence is not transactional, B. Job completion is currently stronger than artifact validation, C. Artifact identification is heuristic
+
+### Community 276 - "3. I found a few real Super-NLM edge cases worth hardening"
+Cohesion: 0.50
+Nodes (4): 3. I found a few real Super-NLM edge cases worth hardening, A. Scheduler persistence is not transactional, B. Job completion is currently stronger than artifact validation, C. Artifact identification is heuristic
+
+### Community 277 - "3. The capability mesh is your most interesting architectural asset"
+Cohesion: 0.50
+Nodes (4): 3. The capability mesh is your most interesting architectural asset, BiasAperture, Fusion 360 MCP, SPARK
+
+### Community 278 - "3. The capability mesh is your most interesting architectural asset"
+Cohesion: 0.50
+Nodes (4): 3. The capability mesh is your most interesting architectural asset, BiasAperture, Fusion 360 MCP, SPARK
+
+### Community 279 - "3. The capability mesh is your most interesting architectural asset"
+Cohesion: 0.50
+Nodes (4): 3. The capability mesh is your most interesting architectural asset, BiasAperture, Fusion 360 MCP, SPARK
+
+### Community 280 - "3. The capability mesh is your most interesting architectural asset"
+Cohesion: 0.50
+Nodes (4): 3. The capability mesh is your most interesting architectural asset, BiasAperture, Fusion 360 MCP, SPARK
+
+### Community 281 - "6. Your WSR idea is arguably the second strongest technical direction"
+Cohesion: 0.50
+Nodes (4): 6. Your WSR idea is arguably the second strongest technical direction, Milestone 1, Milestone 2, Milestone 3
+
+### Community 282 - "6. Your WSR idea is arguably the second strongest technical direction"
+Cohesion: 0.50
+Nodes (4): 6. Your WSR idea is arguably the second strongest technical direction, Milestone 1, Milestone 2, Milestone 3
+
+### Community 283 - "6. Your WSR idea is arguably the second strongest technical direction"
+Cohesion: 0.50
+Nodes (4): 6. Your WSR idea is arguably the second strongest technical direction, Milestone 1, Milestone 2, Milestone 3
+
+### Community 284 - "6. Your WSR idea is arguably the second strongest technical direction"
+Cohesion: 0.50
+Nodes (4): 6. Your WSR idea is arguably the second strongest technical direction, Milestone 1, Milestone 2, Milestone 3
+
+### Community 285 - "7. The account cycling story is actually evidence of resource-constrained engineering"
+Cohesion: 0.50
+Nodes (4): 7. The account cycling story is actually evidence of resource-constrained engineering, Brainstorm, Claude-Desktop, Super-NLM
+
+### Community 286 - "7. The account cycling story is actually evidence of resource-constrained engineering"
+Cohesion: 0.50
+Nodes (4): 7. The account cycling story is actually evidence of resource-constrained engineering, Brainstorm, Claude-Desktop, Super-NLM
+
+### Community 287 - "7. The account cycling story is actually evidence of resource-constrained engineering"
+Cohesion: 0.50
+Nodes (4): 7. The account cycling story is actually evidence of resource-constrained engineering, Brainstorm, Claude-Desktop, Super-NLM
+
+### Community 288 - "7. The account cycling story is actually evidence of resource-constrained engineering"
+Cohesion: 0.50
+Nodes (4): 7. The account cycling story is actually evidence of resource-constrained engineering, Brainstorm, Claude-Desktop, Super-NLM
+
+### Community 289 - "At present, I would position your profile like this"
+Cohesion: 0.50
+Nodes (4): At present, I would position your profile like this, Current level, Technical identity, What differentiates you
+
+### Community 290 - "At present, I would position your profile like this"
+Cohesion: 0.50
+Nodes (4): At present, I would position your profile like this, Current level, Technical identity, What differentiates you
+
+### Community 291 - "At present, I would position your profile like this"
+Cohesion: 0.50
+Nodes (4): At present, I would position your profile like this, Current level, Technical identity, What differentiates you
+
+### Community 292 - "At present, I would position your profile like this"
+Cohesion: 0.50
+Nodes (4): At present, I would position your profile like this, Current level, Technical identity, What differentiates you
+
+### Community 293 - "4. Technical Specifications"
+Cohesion: 0.50
+Nodes (4): 4.1. Configuration Schema (`portfolio.config.yaml`), 4.2. Zero-Leak Cryptographic Protocol, 4.3. Universal Verification Engine, 4. Technical Specifications
+
+### Community 294 - "5. Implementation Roadmap"
+Cohesion: 0.50
+Nodes (4): 5. Implementation Roadmap, Phase 1: Engine & Content Separation, Phase 2: Template Extraction & Hygiene, Phase 3: Community Release & Package Distribution
+
+### Community 295 - "5. Your Patch System is a surprisingly sophisticated response to this"
+Cohesion: 0.67
+Nodes (3): 5. Your Patch System is a surprisingly sophisticated response to this, documentary state, source artifacts
+
+### Community 296 - "5. Your Patch System is a surprisingly sophisticated response to this"
+Cohesion: 0.67
+Nodes (3): 5. Your Patch System is a surprisingly sophisticated response to this, documentary state, source artifacts
+
+### Community 297 - "5. Your Patch System is a surprisingly sophisticated response to this"
+Cohesion: 0.67
+Nodes (3): 5. Your Patch System is a surprisingly sophisticated response to this, documentary state, source artifacts
+
+### Community 298 - "5. Your Patch System is a surprisingly sophisticated response to this"
+Cohesion: 0.67
+Nodes (3): 5. Your Patch System is a surprisingly sophisticated response to this, documentary state, source artifacts
+
+### Community 299 - "Your detailed README strategy also follows naturally"
+Cohesion: 0.67
+Nodes (3): centralized personal memory, **federated project memory**, Your detailed README strategy also follows naturally
+
+### Community 300 - "Your detailed README strategy also follows naturally"
+Cohesion: 0.67
+Nodes (3): centralized personal memory, **federated project memory**, Your detailed README strategy also follows naturally
+
+### Community 301 - "Your detailed README strategy also follows naturally"
+Cohesion: 0.67
+Nodes (3): centralized personal memory, **federated project memory**, Your detailed README strategy also follows naturally
+
+### Community 302 - "Your detailed README strategy also follows naturally"
+Cohesion: 0.67
+Nodes (3): centralized personal memory, **federated project memory**, Your detailed README strategy also follows naturally
+
+### Community 303 - "The master profile therefore should not be "killed""
+Cohesion: 0.67
+Nodes (3): Its current role, Its old role, The master profile therefore should not be "killed"
+
+### Community 304 - "The master profile therefore should not be "killed""
+Cohesion: 0.67
+Nodes (3): Its current role, Its old role, The master profile therefore should not be "killed"
+
+### Community 305 - "The master profile therefore should not be "killed""
+Cohesion: 0.67
+Nodes (3): Its current role, Its old role, The master profile therefore should not be "killed"
+
+### Community 306 - "The master profile therefore should not be "killed""
+Cohesion: 0.67
+Nodes (3): Its current role, Its old role, The master profile therefore should not be "killed"
+
+### Community 307 - "20. But test quality still needs to be distinguished from runtime validation"
+Cohesion: 0.67
+Nodes (3): 20. But test quality still needs to be distinguished from runtime validation, Not yet strongly demonstrated, Strongly demonstrated
+
+### Community 308 - "The more important discovery"
+Cohesion: 0.67
+Nodes (3): Current, Earlier, The more important discovery
+
+### Community 309 - "The more important discovery"
+Cohesion: 0.67
+Nodes (3): Current, Earlier, The more important discovery
+
 ## Knowledge Gaps
-- **531 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+526 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 699 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **134 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **1530 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1525 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1698 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **185 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `parse_html()` connect `verify.py` to `add_project`?**
-  _High betweenness centrality (0.007) - this node is a cross-community bridge._
-- **Why does `Verbatim Dialogue & Engineering Transcript` connect `Verbatim Dialogue & Engineering Transcript` to `Phase 2 — Featured Work Showcase ✓`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
-- **Why does `get_site_stats()` connect `site_automation.py` to `add_project`?**
-  _High betweenness centrality (0.004) - this node is a cross-community bridge._
+- **Why does `📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)` connect `📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`, `Turn 3`?**
+  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+- **Why does `So I would change your scholarship framing slightly` connect `Turn 4` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`?**
+  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _531 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1530 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09472606246799795 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
-  _Cohesion score 0.05 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07549361207897794 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06108597285067873 - nodes in this community are weakly interconnected._
+- **Should `ui.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.08108108108108109 - nodes in this community are weakly interconnected._

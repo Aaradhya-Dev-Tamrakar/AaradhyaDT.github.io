@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v54.60)
+   MODULE: access.js — aaradhyadt.github.io (v54.62)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -41,7 +41,8 @@ const ACCESS_CONTROL_PAYLOADS = {
   "proj-nepali-ocr-ai": "17a4ce559ff0feb7bb5c956deeaba11aaf42f047e78d48bea12bb6d484d804a558d0facc7c34605baff44269acd9c25d8a46381590eb49e7446f33d4fe0d56eba36946e4237532",
   "proj-localsend-mcp": "9197307aa44b8b207be4ff917425d3bd62ba66737a18134235732c7cb495baba5216392c4f1b7b238a391bbefd8a7985fefc83328be0b81ebc65f004204a5494eeee5a80b6dd24",
   "proj-google-classroom-mcp": "e1e0999f244bebef86eaa370758f07e92221d780a210efe25a84abd283b9e15ba2f07dcf3a28e051162e5b1614602db3e9e773f9467401210fd9cbc7ab082c4abcf3132fd6428d972034e936cc02",
-  "proj-typora-mcp": "68a846910944a01ea46b482c4880b15ee82ef28c6d0c3f75d6c81fd61d168482f94726abd4d70c226118f9fa236c60b46b9195defdc11f2f0fb65919ccbfa5c3591ece82"
+  "proj-typora-mcp": "68a846910944a01ea46b482c4880b15ee82ef28c6d0c3f75d6c81fd61d168482f94726abd4d70c226118f9fa236c60b46b9195defdc11f2f0fb65919ccbfa5c3591ece82",
+  "proj-ieee-xtreme-archive": "bc91b7bcb49ab65cc675f6e7def14dff49bc9fd3984e322afa29490e505c59f36bf4995092513fa50b434931f0b82dd9890ad855737f582f4774ff49fe81a0db8ac4aefe90f3c3af1f8e1ca82c301965f3a5c5765643c2c1"
 };
 
 const KEY_CACHE = new Map();
