@@ -7,6 +7,15 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
+    version: 'v55',
+    date: '2026-10-01',
+    sha: 'rel55',
+    title: "Project Glasswing & Claude Platform UI Architecture",
+    highlights: [
+      "Project Glasswing collapsible wordmark on navbar scroll,"
+    ]
+  },
+  {
     version: 'v54.64',
     date: '2026-09-16',
     sha: 'rel54',
