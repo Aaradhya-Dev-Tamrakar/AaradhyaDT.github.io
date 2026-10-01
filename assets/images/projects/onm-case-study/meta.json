@@ -1,8 +1,15 @@
 {
+  "project_id": "p-026",
   "slug": "onm-case-study",
   "title": "ONM Case Study \u2014 Fusemachines Inc.",
-  "captured_at": "2026-10-01T11:56:33.369470",
-  "dimensions": "1200x308",
-  "webp_size_kb": 33.52,
-  "generator": "generate_all_portfolio_hero_images.py (PLAN-MEDIA-001)"
+  "captured_at": "2026-10-01T12:13:12.306916",
+  "dimensions": "1920x1343",
+  "webp_size_kb": 129.12,
+  "source_pdf": "C:\\Users\\Aaradhya\\Downloads\\ONM_Casestudy_Fusemachines.pdf",
+  "pages_rendered": [
+    1,
+    9
+  ],
+  "modality": "pdf_report_dual_pane",
+  "generator": "pdftoppm 220 DPI (PLAN-MEDIA-001)"
 }
