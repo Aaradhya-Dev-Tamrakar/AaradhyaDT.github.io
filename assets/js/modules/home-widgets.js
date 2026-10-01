@@ -1,5 +1,5 @@
 /* ============================================================
-   HOME WIDGETS — index.html-only status widgets (v55.6)
+   HOME WIDGETS — index.html-only status widgets (v55.7)
    Kathmandu clock · live date labels · last-commit badge.
    Loaded globally via script.js MODULES; every widget is
    element-guarded so it no-ops on all other pages.

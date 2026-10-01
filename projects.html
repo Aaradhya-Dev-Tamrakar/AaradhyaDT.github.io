@@ -497,6 +497,58 @@
       border-left-color: var(--glow-gold);
     }
 
+    /* Evidence & Proof Dual-Pane Layout (When Evidence Exists) */
+    .project-evidence-row {
+      display: grid;
+      grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+      gap: 1.25rem;
+      align-items: stretch;
+      margin-bottom: 1.25rem;
+    }
+
+    .project-evidence-row .project-evidence {
+      margin: 0;
+      height: 100%;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .project-evidence-row .project-media-preview {
+      margin-bottom: 0;
+      height: 100%;
+      max-height: none;
+      box-sizing: border-box;
+      align-self: stretch;
+    }
+
+    .project-evidence-row .project-media-preview .project-media-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      min-height: 200px;
+    }
+
+    .project-evidence-row .project-preview-img,
+    .project-evidence-row .project-preview-video {
+      max-height: 280px;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+
+    @media (max-width: 900px) {
+      .project-evidence-row {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+      .project-evidence-row .project-media-preview {
+        max-height: 240px;
+      }
+    }
+
     .projects-header-bar {
       display: flex;
       justify-content: space-between;

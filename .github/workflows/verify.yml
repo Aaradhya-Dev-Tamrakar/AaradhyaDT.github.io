@@ -1,6 +1,6 @@
 name: Verify
 
-# Last updated: 2026-10-01 (v55.6)
+# Last updated: 2026-10-01 (v55.7)
 
 # Runs scripts/verify.py (25 check categories: ids, tags, links, assets,
 # JS syntax, version consistency, modules, sitemap, manifest, JSON-LD,

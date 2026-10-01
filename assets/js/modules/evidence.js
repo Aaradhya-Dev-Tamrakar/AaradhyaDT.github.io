@@ -1,5 +1,5 @@
 /* ============================================================
-   PROJECT EVIDENCE — quantitative claim provenance display (v55.6)
+   PROJECT EVIDENCE — quantitative claim provenance display (v55.7)
    Reads the canonical machine-readable claims manifest and
    renders only fields present for the matching repository.
    ============================================================ */
@@ -75,7 +75,18 @@
     if (text(claim.source_path)) addRow(list, 'Source', claim.source_path);
     if (claim.status === 'needs_review') addRow(list, 'Status', 'Needs review');
     panel.appendChild(list);
-    body.insertBefore(panel, body.firstChild);
+
+    card.classList.add('has-evidence');
+    var mediaPreview = body.querySelector('.project-media-preview');
+    if (mediaPreview) {
+      var row = document.createElement('div');
+      row.className = 'project-evidence-row';
+      body.insertBefore(row, mediaPreview);
+      row.appendChild(panel);
+      row.appendChild(mediaPreview);
+    } else {
+      body.insertBefore(panel, body.firstChild);
+    }
   }
 
   function initProjectEvidence() {

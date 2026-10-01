@@ -1,9 +1,10 @@
-# Portfolio Website Tracker — v55.6
+# Portfolio Website Tracker — v55.7
 
 Last updated: _2026-10-01_
 
 
-- **Verified Working Project Media Architecture & Multi-Format Previews (`projects.html`, `scripts/wire_project_media.py`, `assets/images/projects/`)**:
+- **Verified Working Project Media Architecture & Multi-Format Previews (`projects.html`, `evidence.js`, `scripts/wire_project_media.py`, `assets/images/projects/`)**:
+  - **Dual-Pane Evidence & Proof Layout (`evidence.js`, `projects.html`)**: For cards with quantitative claims and provenance (`p-032`, `p-025`, `p-001`, `p-018`, `p-031`, `p-034`, `p-033`, `p-030`), automatically grouped into a 2-column `.project-evidence-row` layout with Evidence & Provenance on the left and verified working proof media on the right, switching to single-column on mobile viewports (<900px).
   - **Deterministic Media Injection (`projects.html`, `p-001` to `p-039`)**: Wired verified, non-synthetic working execution proofs into all 39 project cards (`p-001` through `p-039`) using `<picture>` with sub-250KB WebP images (`hero.webp`), fallback PNGs (`hero.png`), and descriptive, accessible `alt` text. Preserved interactive HTML5 demo video for GCSBR (`p-001`).
   - **Unified Media Preview Container & Micro-Badge UI (`projects.html`)**: Implemented responsive `.project-media-preview` container with theme-calibrated dark canvas, aspect-ratio preservation (`object-fit: contain`), micro-scale hover physics (`scale(1.015)`), and frosted "Verified Proof ↗" badge linking directly to uncompressed evidence assets.
   - **Zero-Drift Deterministic Verification (`scripts/verify.py`)**: Passed all 25 validation categories (including `assets`, `html-a11y-seo`, `tags`, and `search-index`) with zero drift across DOM IDs, category filters, and search indexing.
@@ -390,7 +391,7 @@ Last updated: _2026-10-01_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v55.6`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v55.7`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
