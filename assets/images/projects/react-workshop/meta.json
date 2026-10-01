@@ -1,8 +1,11 @@
 {
+  "project_id": "p-015",
   "slug": "react-workshop",
   "title": "IEEE KEC React Workshop",
-  "captured_at": "2026-10-01T11:56:31.636717",
-  "dimensions": "1200x308",
-  "webp_size_kb": 30.0,
-  "generator": "generate_all_portfolio_hero_images.py (PLAN-MEDIA-001)"
+  "captured_at": "2026-10-01T12:19:15.180958",
+  "dimensions": "860x820",
+  "webp_size_kb": 34.17,
+  "source_url": "http://localhost:5173/",
+  "modality": "chrome_headless_live_ui",
+  "generator": "Google Chrome Headless Dark Mode (PLAN-MEDIA-001)"
 }
