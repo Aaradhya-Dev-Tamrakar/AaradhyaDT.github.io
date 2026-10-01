@@ -2743,7 +2743,7 @@
       "file_type": "code",
       "norm_label": "closeresumegenerator()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1301"
+      "source_location": "L1311"
     },
     {
       "id": "assets_js_modules_ui_closeskillradarmodal",
@@ -2755,7 +2755,7 @@
       "file_type": "code",
       "norm_label": "closeskillradarmodal()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L928"
+      "source_location": "L938"
     },
     {
       "id": "assets_js_modules_ui_closewhatsnewmodal",
@@ -2779,7 +2779,7 @@
       "file_type": "code",
       "norm_label": "copyresumeplaintext()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1107"
+      "source_location": "L1117"
     },
     {
       "id": "assets_js_modules_ui_downloadresumejson",
@@ -2791,7 +2791,7 @@
       "file_type": "code",
       "norm_label": "downloadresumejson()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1075"
+      "source_location": "L1085"
     },
     {
       "id": "assets_js_modules_ui_downloadresumemarkdown",
@@ -2803,7 +2803,7 @@
       "file_type": "code",
       "norm_label": "downloadresumemarkdown()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1091"
+      "source_location": "L1101"
     },
     {
       "id": "assets_js_modules_ui_generateresumejson",
@@ -2815,7 +2815,7 @@
       "file_type": "code",
       "norm_label": "generateresumejson()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1027"
+      "source_location": "L1037"
     },
     {
       "id": "assets_js_modules_ui_generateresumemarkdown",
@@ -2827,7 +2827,7 @@
       "file_type": "code",
       "norm_label": "generateresumemarkdown()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1000"
+      "source_location": "L1010"
     },
     {
       "id": "assets_js_modules_ui_generateresumeplaintext",
@@ -2839,7 +2839,7 @@
       "file_type": "code",
       "norm_label": "generateresumeplaintext()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L972"
+      "source_location": "L982"
     },
     {
       "id": "assets_js_modules_ui_getresumecontacthtml",
@@ -2851,7 +2851,7 @@
       "file_type": "code",
       "norm_label": "getresumecontacthtml()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L950"
+      "source_location": "L960"
     },
     {
       "id": "assets_js_modules_ui_getresumecontactmarkdown",
@@ -2863,7 +2863,7 @@
       "file_type": "code",
       "norm_label": "getresumecontactmarkdown()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L962"
+      "source_location": "L972"
     },
     {
       "id": "assets_js_modules_ui_initcountup",
@@ -2914,6 +2914,18 @@
       "source_location": "L211"
     },
     {
+      "id": "assets_js_modules_ui_initfiltercountindicators_countitemunits",
+      "label": "countItemUnits()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "community_name": "ui.js",
+      "file_type": "code",
+      "norm_label": "countitemunits()",
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L249"
+    },
+    {
       "id": "assets_js_modules_ui_initfiltercountindicators_updateachvcount",
       "label": "updateAchvCount()",
       "_callable": true,
@@ -2923,7 +2935,7 @@
       "file_type": "code",
       "norm_label": "updateachvcount()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L249"
+      "source_location": "L257"
     },
     {
       "id": "assets_js_modules_ui_initfiltercountindicators_updateprojectcount",
@@ -2947,7 +2959,7 @@
       "file_type": "code",
       "norm_label": "initkeynav()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L390"
+      "source_location": "L400"
     },
     {
       "id": "assets_js_modules_ui_initlightbox",
@@ -2959,7 +2971,7 @@
       "file_type": "code",
       "norm_label": "initlightbox()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L271"
+      "source_location": "L281"
     },
     {
       "id": "assets_js_modules_ui_initlightbox_closelightbox",
@@ -2971,7 +2983,7 @@
       "file_type": "code",
       "norm_label": "closelightbox()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L318"
+      "source_location": "L328"
     },
     {
       "id": "assets_js_modules_ui_initlightbox_openlightbox",
@@ -2983,7 +2995,7 @@
       "file_type": "code",
       "norm_label": "openlightbox()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L282"
+      "source_location": "L292"
     },
     {
       "id": "assets_js_modules_ui_initradarcanvas",
@@ -2995,7 +3007,7 @@
       "file_type": "code",
       "norm_label": "initradarcanvas()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L659"
+      "source_location": "L669"
     },
     {
       "id": "assets_js_modules_ui_initradarcanvas_renderradar",
@@ -3007,7 +3019,7 @@
       "file_type": "code",
       "norm_label": "renderradar()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L669"
+      "source_location": "L679"
     },
     {
       "id": "assets_js_modules_ui_initradarcanvas_renderradar_getpointcoordinates",
@@ -3019,7 +3031,7 @@
       "file_type": "code",
       "norm_label": "getpointcoordinates()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L703"
+      "source_location": "L713"
     },
     {
       "id": "assets_js_modules_ui_initreadingmetrics",
@@ -3043,7 +3055,7 @@
       "file_type": "code",
       "norm_label": "initskillradar()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L936"
+      "source_location": "L946"
     },
     {
       "id": "assets_js_modules_ui_inittypedcaption",
@@ -3079,7 +3091,7 @@
       "file_type": "code",
       "norm_label": "isanymodalopen()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L383"
+      "source_location": "L393"
     },
     {
       "id": "assets_js_modules_ui_openresumegenerator",
@@ -3091,7 +3103,7 @@
       "file_type": "code",
       "norm_label": "openresumegenerator()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1132"
+      "source_location": "L1142"
     },
     {
       "id": "assets_js_modules_ui_openskillradarmodal",
@@ -3103,7 +3115,7 @@
       "file_type": "code",
       "norm_label": "openskillradarmodal()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L867"
+      "source_location": "L877"
     },
     {
       "id": "assets_js_modules_ui_openwhatsnewmodal",
@@ -3127,7 +3139,7 @@
       "file_type": "code",
       "norm_label": "rendertailoredresumepreview()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1310"
+      "source_location": "L1320"
     },
     {
       "id": "assets_js_modules_ui_sharecontent",
@@ -3139,7 +3151,7 @@
       "file_type": "code",
       "norm_label": "sharecontent()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1270"
+      "source_location": "L1280"
     },
     {
       "id": "assets_js_modules_ui_spawnparticle",
@@ -3151,7 +3163,7 @@
       "file_type": "code",
       "norm_label": "spawnparticle()",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L527"
+      "source_location": "L537"
     },
     {
       "id": "scripts_generate_og_cards_generate_cards",
@@ -5877,7 +5889,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "55.0.0"
+      "version": "55.1.0"
     },
     {
       "id": "sync",
@@ -23393,7 +23405,7 @@
       "file_type": "code",
       "norm_label": "skill_radar_domains",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L650"
+      "source_location": "L660"
     },
     {
       "id": "scripts_generate_og_cards",
@@ -31518,7 +31530,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1108",
+      "source_location": "L1118",
       "weight": 1.0
     },
     {
@@ -31530,7 +31542,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1076",
+      "source_location": "L1086",
       "weight": 1.0
     },
     {
@@ -31542,7 +31554,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1092",
+      "source_location": "L1102",
       "weight": 1.0
     },
     {
@@ -31554,7 +31566,19 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1005",
+      "source_location": "L1015",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui_initfiltercountindicators_updateachvcount",
+      "target": "assets_js_modules_ui_initfiltercountindicators_countitemunits",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L260",
       "weight": 1.0
     },
     {
@@ -31566,7 +31590,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L411",
+      "source_location": "L421",
       "weight": 1.0
     },
     {
@@ -31578,7 +31602,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L468",
+      "source_location": "L478",
       "weight": 1.0
     },
     {
@@ -31590,7 +31614,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L939",
+      "source_location": "L949",
       "weight": 1.0
     },
     {
@@ -31602,7 +31626,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L945",
+      "source_location": "L955",
       "weight": 1.0
     },
     {
@@ -31614,7 +31638,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1233",
+      "source_location": "L1243",
       "weight": 1.0
     },
     {
@@ -31626,7 +31650,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1237",
+      "source_location": "L1247",
       "weight": 1.0
     },
     {
@@ -31638,7 +31662,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1240",
+      "source_location": "L1250",
       "weight": 1.0
     },
     {
@@ -31650,7 +31674,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1245",
+      "source_location": "L1255",
       "weight": 1.0
     },
     {
@@ -31662,7 +31686,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1259",
+      "source_location": "L1269",
       "weight": 1.0
     },
     {
@@ -31674,7 +31698,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L925",
+      "source_location": "L935",
       "weight": 1.0
     },
     {
@@ -31686,7 +31710,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1336",
+      "source_location": "L1346",
       "weight": 1.0
     },
     {
@@ -35166,7 +35190,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L282",
+      "source_location": "L292",
       "weight": 1.0
     },
     {
@@ -35178,7 +35202,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L318",
+      "source_location": "L328",
       "weight": 1.0
     },
     {
@@ -35190,7 +35214,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L669",
+      "source_location": "L679",
       "weight": 1.0
     },
     {
@@ -35202,7 +35226,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L703",
+      "source_location": "L713",
       "weight": 1.0
     },
     {
@@ -37362,7 +37386,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1000",
+      "source_location": "L1010",
       "weight": 1.0
     },
     {
@@ -37373,7 +37397,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1027",
+      "source_location": "L1037",
       "weight": 1.0
     },
     {
@@ -37384,7 +37408,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1075",
+      "source_location": "L1085",
       "weight": 1.0
     },
     {
@@ -37395,7 +37419,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1091",
+      "source_location": "L1101",
       "weight": 1.0
     },
     {
@@ -37406,7 +37430,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1107",
+      "source_location": "L1117",
       "weight": 1.0
     },
     {
@@ -37417,7 +37441,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1132",
+      "source_location": "L1142",
       "weight": 1.0
     },
     {
@@ -37428,7 +37452,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1270",
+      "source_location": "L1280",
       "weight": 1.0
     },
     {
@@ -37439,7 +37463,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1301",
+      "source_location": "L1311",
       "weight": 1.0
     },
     {
@@ -37450,7 +37474,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1310",
+      "source_location": "L1320",
       "weight": 1.0
     },
     {
@@ -37494,7 +37518,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L271",
+      "source_location": "L281",
       "weight": 1.0
     },
     {
@@ -37505,7 +37529,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L383",
+      "source_location": "L393",
       "weight": 1.0
     },
     {
@@ -37516,7 +37540,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L390",
+      "source_location": "L400",
       "weight": 1.0
     },
     {
@@ -37527,7 +37551,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L527",
+      "source_location": "L537",
       "weight": 1.0
     },
     {
@@ -37538,7 +37562,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L650",
+      "source_location": "L660",
       "weight": 1.0
     },
     {
@@ -37549,7 +37573,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L659",
+      "source_location": "L669",
       "weight": 1.0
     },
     {
@@ -37593,7 +37617,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L867",
+      "source_location": "L877",
       "weight": 1.0
     },
     {
@@ -37604,7 +37628,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L928",
+      "source_location": "L938",
       "weight": 1.0
     },
     {
@@ -37615,7 +37639,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L936",
+      "source_location": "L946",
       "weight": 1.0
     },
     {
@@ -37626,7 +37650,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L950",
+      "source_location": "L960",
       "weight": 1.0
     },
     {
@@ -37637,7 +37661,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L962",
+      "source_location": "L972",
       "weight": 1.0
     },
     {
@@ -37648,7 +37672,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L972",
+      "source_location": "L982",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_ui_initfiltercountindicators",
+      "target": "assets_js_modules_ui_initfiltercountindicators_countitemunits",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/ui.js",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
@@ -58595,7 +58630,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L255",
+      "source_location": "L265",
       "weight": 1.0
     },
     {
@@ -58619,7 +58654,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L1218",
+      "source_location": "L1228",
       "weight": 1.0
     },
     {
@@ -58631,7 +58666,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/ui.js",
-      "source_location": "L915",
+      "source_location": "L925",
       "weight": 1.0
     },
     {
@@ -60396,5 +60431,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "df99670a9e141a0dcd959e3a66b915510fd58a7f"
+  "built_at_commit": "2093edc653181d8f8fd765b942209ceacb803a4b"
 }

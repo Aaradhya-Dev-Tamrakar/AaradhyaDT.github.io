@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-10-01)
 
 ## Corpus Check
-- 71 files · ~2,018,218 words
+- 71 files · ~2,018,262 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2441 nodes · 2760 edges · 361 communities (165 shown, 185 thin omitted)
+- 2442 nodes · 2762 edges · 361 communities (165 shown, 185 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `df99670a`
+- Built from commit: `2093edc6`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -424,7 +424,7 @@ Nodes (43): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), 
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
-Nodes (27): closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson(), generateResumeMarkdown() (+19 more)
+Nodes (29): closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson(), generateResumeMarkdown() (+21 more)
 
 ### Community 4 - "site_automation.py"
 Cohesion: 0.12
@@ -1072,12 +1072,14 @@ Nodes (3): Current, Earlier, The more important discovery
 
 ## Knowledge Gaps
 - **1530 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1525 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1698 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1697 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **185 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
+- **Why does `This also explains why your work became faster` connect `Turn 13` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
 - **Why does `📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)` connect `📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`, `Turn 3`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **Why does `So I would change your scholarship framing slightly` connect `Turn 4` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`?**
@@ -1090,5 +1092,3 @@ _Questions this graph is uniquely positioned to answer:_
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06108597285067873 - nodes in this community are weakly interconnected._
-- **Should `ui.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.08108108108108109 - nodes in this community are weakly interconnected._

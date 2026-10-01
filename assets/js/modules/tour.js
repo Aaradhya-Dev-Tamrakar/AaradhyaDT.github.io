@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: tour.js — aaradhyadt.github.io (v55)
+   MODULE: tour.js — aaradhyadt.github.io (v55.1)
    Cross-page spotlight tour with keyboard navigation.
    ============================================================ */
 
@@ -22,7 +22,7 @@ const TOUR_STEPS = {
     { sel: '#experience', title: 'Role Details & Certs', body: 'Scope descriptions and verified credentials — click any cert badge to view or download the original PDF.' },
   ],
   'achievements.html': [
-    { sel: '#page-header', title: 'Achievements & Credentials', body: '39 competition milestones and industry certifications. Filter by Academic or Extracurricular categories.' },
+    { sel: '#page-header', title: 'Achievements & Credentials', body: '46 competition milestones and industry certifications. Filter by Academic or Extracurricular categories.' },
     { sel: '#achievementsList', title: 'Certificate Viewer', body: 'Interactive credentials grid with integrated lightbox viewer and direct PDF downloads.' },
   ],
   'about.html': [

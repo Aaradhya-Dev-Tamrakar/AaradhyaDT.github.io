@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v55)
+   MODULE: ui.js — aaradhyadt.github.io (v55.1)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -246,10 +246,20 @@ function initFilterCountIndicators() {
       legend.appendChild(badge);
     }
 
+    function countItemUnits(item) {
+      if (item.dataset.track === 'academic') {
+        const certs = item.querySelectorAll('.cert-btn, .verify-btn');
+        return Array.from(certs).filter(btn => !btn.classList.contains('photo-thumb')).length || 1;
+      }
+      return 1;
+    }
+
     function updateAchvCount() {
-      const items = list.querySelectorAll('.achievement-item');
-      const visible = Array.from(items).filter(item => getComputedStyle(item).display !== 'none');
-      badge.textContent = `${visible.length} of ${items.length} achievements`;
+      const items = Array.from(list.querySelectorAll('.achievement-item'));
+      const visible = items.filter(item => getComputedStyle(item).display !== 'none');
+      const visibleCount = visible.reduce((sum, item) => sum + countItemUnits(item), 0);
+      const totalCount = items.reduce((sum, item) => sum + countItemUnits(item), 0);
+      badge.textContent = `${visibleCount} of ${totalCount} achievements`;
     }
 
     const observer = new MutationObserver(updateAchvCount);
