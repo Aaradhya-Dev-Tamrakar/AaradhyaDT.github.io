@@ -1,6 +1,6 @@
 {
-  "sha": "f05b0ab9c552a593149b0e11294f9d7761a21d9e",
-  "shortSha": "f05b0ab",
-  "date": "2026-10-01T09:39:45+05:45",
-  "message": "fix(achievements): reconcile 38 academic + 8 extracurricular = 46 total count"
+  "sha": "d659e40094580b6d31cebe99779c603eb1dcdef4",
+  "shortSha": "d659e40",
+  "date": "2026-10-01T09:47:15+05:45",
+  "message": "chore(assets): archive previous portraits and update profile photo"
 }
