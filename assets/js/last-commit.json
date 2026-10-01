@@ -1,6 +1,6 @@
 {
-  "sha": "9a88d0dac1fb4563850d7951fe1a3ba3b69749d5",
-  "shortSha": "9a88d0d",
-  "date": "2026-10-01T12:14:00+05:45",
-  "message": "feat(media): ingest authentic dual-page PDF report for ONM Case Study (p-026)"
+  "sha": "f7aa2682f39e3b16dd28184c687fc7b450cb41c2",
+  "shortSha": "f7aa268",
+  "date": "2026-10-01T12:20:28+05:45",
+  "message": "feat(media): ingest authentic live React workshop UI capture from localhost:5173 (p-015)"
 }
