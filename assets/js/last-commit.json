@@ -1,6 +1,6 @@
 {
-  "sha": "f2b59e4a768283953b40e8468b93a7c4bd53e3e6",
-  "shortSha": "f2b59e4",
-  "date": "2026-10-01T12:40:36+05:45",
-  "message": "feat(projects): wire verified working screenshot media into all 39 project cards"
+  "sha": "7e95e9b1f25de61d6c1121e0403dbcabc4c0ab65",
+  "shortSha": "7e95e9b",
+  "date": "2026-10-01T12:59:30+05:45",
+  "message": "feat(projects): dual-pane layout with evidence on left and proof image on right"
 }
