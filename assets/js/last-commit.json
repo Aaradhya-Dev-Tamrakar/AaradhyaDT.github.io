@@ -1,6 +1,6 @@
 {
-  "sha": "d659e40094580b6d31cebe99779c603eb1dcdef4",
-  "shortSha": "d659e40",
-  "date": "2026-10-01T09:47:15+05:45",
-  "message": "chore(assets): archive previous portraits and update profile photo"
+  "sha": "facabc14ff194e784237f4bbadd29c4529235520",
+  "shortSha": "facabc1",
+  "date": "2026-10-01T12:05:04+05:45",
+  "message": "feat(media): stage verified working hero images (<250KB WebP) across all 39 portfolio projects"
 }
