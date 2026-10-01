@@ -1,6 +1,6 @@
 {
-  "sha": "0b6d021f3e4d57859b712021c443a03114f7533f",
-  "shortSha": "0b6d021",
-  "date": "2026-10-01T09:13:47+05:45",
-  "message": "feat(nav): integrate Project Glasswing collapsible wordmark and Claude Docs/Academy UX patterns"
+  "sha": "b6b7452d42c03a4d19b099e6c7e9798d76675856",
+  "shortSha": "b6b7452",
+  "date": "2026-10-01T09:17:12+05:45",
+  "message": "Claude Docs pill-style navigation with ghost hover and tactile squish,"
 }
