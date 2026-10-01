@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: 'v55.5',
+    version: 'v55.6',
     date: '2026-10-01',
     sha: 'rel55',
     title: "Project Glasswing & Claude Platform UI Architecture",

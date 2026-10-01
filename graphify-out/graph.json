@@ -3442,6 +3442,18 @@
       "source_location": "L53"
     },
     {
+      "id": "scripts_wire_project_media_main",
+      "label": "main()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 361,
+      "community_name": "wire_project_media.py",
+      "file_type": "code",
+      "norm_label": "main()",
+      "source_file": "scripts/wire_project_media.py",
+      "source_location": "L17"
+    },
+    {
       "id": "assets_js_modules_evidence_addrow",
       "label": "addRow()",
       "_callable": true,
@@ -5889,7 +5901,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "55.5.0"
+      "version": "55.6.0"
     },
     {
       "id": "sync",
@@ -25227,6 +25239,17 @@
       "norm_label": "v23 addition \u2014 latest site refinements (2026-07-18)",
       "source_file": "dev-logs/PortfolioWebsite_TRACKER.md",
       "source_location": "L331"
+    },
+    {
+      "id": "scripts_wire_project_media",
+      "label": "wire_project_media.py",
+      "_origin": "ast",
+      "community": 361,
+      "community_name": "wire_project_media.py",
+      "file_type": "code",
+      "norm_label": "wire_project_media.py",
+      "source_file": "scripts/wire_project_media.py",
+      "source_location": "L1"
     },
     {
       "id": "assets_js_modules_evidence",
@@ -56508,6 +56531,17 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_wire_project_media",
+      "target": "scripts_wire_project_media_main",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/wire_project_media.py",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
       "source": "security",
       "target": "security_security_policy",
       "relation": "contains",
@@ -60431,5 +60465,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "042f4c3d3e4e157a181b7993a95fbc03363d71c1"
+  "built_at_commit": "4054a90989cdf46e3504a555ec97497db067a6fd"
 }

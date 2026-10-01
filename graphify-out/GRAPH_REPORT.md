@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-10-01)
 
 ## Corpus Check
-- 123 files · ~2,423,399 words
+- 124 files · ~2,427,306 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2442 nodes · 2762 edges · 361 communities (165 shown, 185 thin omitted)
+- 2444 nodes · 2763 edges · 362 communities (165 shown, 185 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `042f4c3d`
+- Built from commit: `4054a909`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -408,7 +408,7 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (361 total, 185 thin omitted)
+## Communities (362 total, 185 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -1072,18 +1072,18 @@ Nodes (3): Current, Earlier, The more important discovery
 
 ## Knowledge Gaps
 - **1530 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1525 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1697 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1699 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **185 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `This also explains why your work became faster` connect `Turn 13` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+  _High betweenness centrality (0.022) - this node is a cross-community bridge._
+- **Why does `My recommendations now` connect `My recommendations now` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
+  _High betweenness centrality (0.018) - this node is a cross-community bridge._
 - **Why does `📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)` connect `📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`, `Turn 3`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
-- **Why does `So I would change your scholarship framing slightly` connect `Turn 4` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`?**
-  _High betweenness centrality (0.014) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
   _1530 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
