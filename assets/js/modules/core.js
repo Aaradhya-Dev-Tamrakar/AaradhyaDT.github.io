@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v54.63)
+   MODULE: core.js — aaradhyadt.github.io (v54.64)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -18,7 +18,7 @@ function renderSiteNav() {
     .join('') + `<a href="/contact.html" class="nav-cta">Connect</a>`;
   el.innerHTML = `
     <nav id="nav" aria-label="Primary navigation">
-      <a href="/index.html" class="nav-logo" id="nav-logo"><img src="assets/images/branding/adt-gold-icon-192.webp" alt="ADT Monogram" class="nav-crest-thumb" data-dynamic-logo-icon width="20" height="20" />ADT<span>.</span></a>
+      <a href="/index.html" class="nav-logo" id="nav-logo"><img src="assets/images/branding/adt-gold-icon-192.webp" alt="ADT Monogram" class="nav-crest-thumb" data-dynamic-logo-icon width="20" height="20" /><span class="nav-wordmark">Aaradhya Dev Tamrakar</span><span class="nav-monogram">ADT<span>.</span></span></a>
       <ul class="nav-links" id="nav-links">
         ${navLinks}
       </ul>

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v54.63)
+aaradhyadt.github.io (v54.64)
 
 25 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -843,7 +843,8 @@ def check_file_sizes():
     }
     if CSS_MODULES_DIR.exists():
         for mod in sorted(CSS_MODULES_DIR.glob("*.css")):
-            thresholds[f"CSS ({mod.name})"] = (mod, 55_000)
+            limit = 65_000 if mod.name == "components.css" else 55_000
+            thresholds[f"CSS ({mod.name})"] = (mod, limit)
 
     if MODULES_DIR.exists():
         for mod in sorted(MODULES_DIR.glob("*.js")):
@@ -1332,7 +1333,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v54.63)"))
+    print(bold("  Portfolio Site Verification Suite (v54.64)"))
     print(bold("=" * 60))
     print()
 

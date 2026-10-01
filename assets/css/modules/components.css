@@ -2415,3 +2415,142 @@ html[data-theme="light"] .shortcuts-modal-card::before {
   }
 }
 
+/* ── Glasswing Benchmark / Skill Bar Charts (v54) ────────── */
+.gw-bar-group {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.gw-bar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 0.5rem;
+}
+
+.gw-bar-title {
+  font-family: var(--sans);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--heading);
+  letter-spacing: -0.01em;
+}
+
+.gw-bar-subtitle {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+}
+
+.gw-bar-row {
+  display: grid;
+  grid-template-columns: 140px 1fr 50px;
+  align-items: center;
+  gap: 0.85rem;
+  margin-bottom: 0.45rem;
+}
+
+.gw-bar-label {
+  font-family: var(--mono);
+  font-size: 0.76rem;
+  color: var(--text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gw-bar-track {
+  height: 24px;
+  background: var(--bg3);
+  border: 1px solid var(--line);
+  border-radius: 4px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.gw-bar-fill {
+  height: 100%;
+  border-radius: 3px 0 0 3px;
+  transition: width 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 0.6rem;
+  position: relative;
+}
+
+.gw-bar-fill.highlighted {
+  background: var(--accent);
+  color: var(--bg);
+  box-shadow: 0 0 12px var(--accent-a35);
+}
+
+.gw-bar-fill.sage {
+  background: var(--accent2);
+  color: var(--bg);
+  box-shadow: 0 0 12px rgba(109, 191, 170, 0.3);
+}
+
+.gw-bar-fill.crosshatch {
+  background: repeating-linear-gradient(
+    -45deg,
+    var(--line),
+    var(--line) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+  border-right: 2px solid var(--muted);
+}
+
+.gw-bar-val {
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--heading);
+  text-align: right;
+}
+
+@media (max-width: 600px) {
+  .gw-bar-row {
+    grid-template-columns: 100px 1fr 40px;
+    gap: 0.5rem;
+  }
+}
+
+/* ── Claude Academy SVG Mask Patterns & Textures ──────────── */
+.card-texture-wrap {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.card-mask-loops::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-color: var(--accent);
+  -webkit-mask-image: radial-gradient(circle at 80% 20%, black 15%, transparent 60%),
+    repeating-linear-gradient(45deg, black 0, black 2px, transparent 2px, transparent 10px);
+  mask-image: radial-gradient(circle at 80% 20%, black 15%, transparent 60%),
+    repeating-linear-gradient(45deg, black 0, black 2px, transparent 2px, transparent 10px);
+  transition: opacity 0.35s ease, transform 0.4s ease;
+}
+
+.card-texture-wrap:hover .card-mask-loops::after {
+  opacity: 0.16;
+  transform: scale(1.05);
+}
+
+/* ── Claude Docs Tactile Squish & Ghost Fill ─────────────── */
+.cds-squish {
+  transition: transform 0.12s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.15s ease;
+}
+.cds-squish:active {
+  transform: scale(0.96) !important;
+}
+
