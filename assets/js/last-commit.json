@@ -1,6 +1,6 @@
 {
-  "sha": "495d7c20b20f4c288c0761b026c168d051372cbe",
-  "shortSha": "495d7c2",
-  "date": "2026-10-02T12:16:55+05:45",
-  "message": "fix(releases): hook all What's New releases to valid commit history SHAs"
+  "sha": "f0403a0cd0a234600776063f819ae9dcc6bcec35",
+  "shortSha": "f0403a0",
+  "date": "2026-10-02T12:21:18+05:45",
+  "message": "ci(verify): add Category 26 release SHA integrity check to CI suite (#11)"
 }
