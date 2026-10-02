@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-10-02)
 
 ## Corpus Check
-- 125 files · ~2,432,135 words
+- 125 files · ~2,431,212 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2494 nodes · 2816 edges · 369 communities (172 shown, 185 thin omitted)
+- 2494 nodes · 2817 edges · 368 communities (171 shown, 185 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `9784ca99`
+- Built from commit: `7a66ed09`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,7 +38,7 @@
 - Repository Architectural Evaluation & Evolution Roadmap
 - benchmark_bundle.py
 - Agent Rules & Workflow Guidelines
-- Antigravity IDE & Gemini Agent Rules for Portfolio Repository
+- 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)
 - test_visual_regression.py
 - Report Renderer
 - Verbatim Dialogue & Engineering Transcript
@@ -240,7 +240,6 @@
 - My view of your present vs. future
 - Turn 3
 - Turn 12
-- Distributed Provision Service
 - My recommendations now
 - My recommendations now
 - My recommendations now
@@ -415,7 +414,7 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (369 total, 185 thin omitted)
+## Communities (368 total, 185 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -506,12 +505,12 @@ Cohesion: 0.22
 Nodes (12): analyze_assets(), generate_benchmark_summary(), get_file_metrics(), main(), print_cli_report(), Path, Computes critical path totals and network latency models., Renders human-readable report with formatted terminal tables. (+4 more)
 
 ### Community 22 - "Agent Rules & Workflow Guidelines"
-Cohesion: 0.15
-Nodes (12): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 1. Patch / Point Releases (`v51.1`, `v51.2`, ...), 2. Knowledge Graph & Codebase Navigation (Graphify), 2. Major Releases (`v51`, `v52`, ...), 3. Explainable Conditions: When to Bump Minor vs Major, 3. Operational Rules & Efficiency, 4. Encrypted Payloads & VIP Sections (`access.js`), 5. Versioning & Major Release Automation Architecture (+4 more)
+Cohesion: 0.08
+Nodes (23): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 1. Patch / Point Releases (`v51.1`, `v51.2`, ...), 2. Knowledge Graph & Codebase Navigation (Graphify), 2. Major Releases (`v51`, `v52`, ...), 3. Explainable Conditions: When to Bump Minor vs Major, 3. Operational Rules & Efficiency, 4. Encrypted Payloads & VIP Sections (`access.js`), 5. Versioning & Major Release Automation Architecture (+15 more)
 
-### Community 23 - "Antigravity IDE & Gemini Agent Rules for Portfolio Repository"
+### Community 23 - "📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)"
 Cohesion: 0.17
-Nodes (11): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 1. Patch / Point Releases (`v51.1`, `v51.2`, ...), 2. Knowledge Graph & Codebase Navigation (Graphify), 2. Major Releases (`v51`, `v52`, ...), 3. Explainable Conditions: When to Bump Minor vs Major, 3. Operational Rules & Efficiency, 4. Encrypted Payloads & VIP Sections (`access.js`), 5. Versioning & Major Release Automation Architecture (+3 more)
+Nodes (12): And your repo actually fits the analogy unusually well, 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation), Assistant, Assistant, Assistant, I would actually call the broader concept, The DDOS ↔ PoS analogy, Turn 1 (+4 more)
 
 ### Community 24 - "test_visual_regression.py"
 Cohesion: 0.24
@@ -698,8 +697,8 @@ Cohesion: 0.06
 Nodes (31): And this is where your electronics background becomes valuable, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, **BEI student → emerging Intelligent Systems / AI Systems researcher-engineer** (+23 more)
 
 ### Community 215 - "Turn 3"
-Cohesion: 0.15
-Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
+Cohesion: 0.08
+Nodes (25): And your repo actually fits the analogy unusually well, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+17 more)
 
 ### Community 216 - "Turn 13"
 Cohesion: 0.09
@@ -774,16 +773,12 @@ Cohesion: 0.15
 Nodes (13): And one more thing, And the Google Classroom MCP idea is actually worth revisiting, Assistant, Assistant, My view of your present vs. future, **Near future:**, **Present:**, **Strong long-term trajectory:** (+5 more)
 
 ### Community 234 - "Turn 3"
-Cohesion: 0.08
-Nodes (25): And your repo actually fits the analogy unusually well, 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation), Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+17 more)
+Cohesion: 0.15
+Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
 
 ### Community 235 - "Turn 12"
 Cohesion: 0.17
 Nodes (12): Assistant, Assistant, But there is an important weakness, So I would describe the evolution this way, This also explains why your work became faster, Turn 11, Turn 12, User (+4 more)
-
-### Community 236 - "Distributed Provision Service"
-Cohesion: 0.17
-Nodes (12): And your repo actually fits the analogy unusually well, Assistant, Assistant, Assistant, Distributed Provision Service, I would actually call the broader concept, The DDOS ↔ PoS analogy, Turn 1 (+4 more)
 
 ### Community 237 - "My recommendations now"
 Cohesion: 0.18
@@ -1107,7 +1102,7 @@ Nodes (3): Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate), 
 
 ## Knowledge Gaps
 - **1571 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1566 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1741 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1739 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **185 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
