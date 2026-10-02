@@ -3571,7 +3571,7 @@
       "file_type": "code",
       "norm_label": "build_css_modules()",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L537"
+      "source_location": "L538"
     },
     {
       "id": "scripts_site_automation_bump_version",
@@ -3595,7 +3595,7 @@
       "file_type": "code",
       "norm_label": "cmd_sync()",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L623"
+      "source_location": "L624"
     },
     {
       "id": "scripts_site_automation_compute_next_version",
@@ -3631,7 +3631,7 @@
       "file_type": "code",
       "norm_label": "generate_commit_message()",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L571"
+      "source_location": "L572"
     },
     {
       "id": "scripts_site_automation_get_current_version",
@@ -3667,7 +3667,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L754"
+      "source_location": "L755"
     },
     {
       "id": "scripts_site_automation_rebuild_search_index",
@@ -3703,7 +3703,7 @@
       "file_type": "code",
       "norm_label": "run_e2e_tests()",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L548"
+      "source_location": "L549"
     },
     {
       "id": "scripts_site_automation_sync_metadata",
@@ -3739,7 +3739,7 @@
       "file_type": "code",
       "norm_label": "update_tracker()",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L494"
+      "source_location": "L495"
     },
     {
       "id": "scripts_site_automation_update_tracker_timestamp",
@@ -3751,7 +3751,7 @@
       "file_type": "code",
       "norm_label": "update_tracker_timestamp()",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L559"
+      "source_location": "L560"
     },
     {
       "id": "scripts_build_css_build_all",
@@ -5901,7 +5901,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "55.7.0"
+      "version": "55.8.0"
     },
     {
       "id": "sync",
@@ -6918,18 +6918,6 @@
       "source_location": "L154"
     },
     {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_2_proposed_navigation_model_the_4_1_streamlined_structure",
-      "label": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. proposed navigation model: the 4+1 streamlined structure",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L169"
-    },
-    {
       "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_actions_completed",
       "label": "Actions Completed",
       "_origin": "ast",
@@ -7218,30 +7206,6 @@
       "source_location": "L379"
     },
     {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_phase_1_the_adaptive_floating_header_streamlined_nav_immediate",
-      "label": "Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate)",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 1: the adaptive floating header & streamlined nav (immediate)",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L329"
-    },
-    {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_phase_3_secondary_layer_deep_huds_progressive_disclosure",
-      "label": "Phase 3: Secondary Layer & Deep HUDs (Progressive Disclosure)",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 3: secondary layer & deep huds (progressive disclosure)",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L357"
-    },
-    {
       "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_ready_for_phase_2",
       "label": "Ready for Phase 2",
       "_origin": "ast",
@@ -7290,30 +7254,6 @@
       "source_location": "L363"
     },
     {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_step_2_streamline_the_top_navigation_bar",
-      "label": "Step 2: Streamline the Top Navigation Bar",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 2: streamline the top navigation bar",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L263"
-    },
-    {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_step_3_calm_visual_styling",
-      "label": "Step 3: Calm Visual Styling",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 3: calm visual styling",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L273"
-    },
-    {
       "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_the_best_part_your_engine_already_has_the_logic_wired",
       "label": "The Best Part: Your Engine Already Has the Logic Wired!",
       "_origin": "ast",
@@ -7324,18 +7264,6 @@
       "norm_label": "the best part: your engine already has the logic wired!",
       "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
       "source_location": "L314"
-    },
-    {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_the_clean_refactor_plan_bringing_manish_s_calm_to_adt",
-      "label": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
-      "_origin": "ast",
-      "community": 202,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "the clean refactor plan (bringing manish's calm to adt)",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L325"
     },
     {
       "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_user_turn_1",
@@ -7456,18 +7384,6 @@
       "norm_label": "where real-world initiatives actually belong",
       "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
       "source_location": "L120"
-    },
-    {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat",
-      "label": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "_origin": "ast",
-      "community": 203,
-      "community_name": "Phase 2 \u2014 Featured Work Showcase \u2713",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "chat_history/2026-09-29_navigation_showcase_refactor_chat.md",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L1"
     },
     {
       "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_1_navigation_information_architecture_audit",
@@ -7638,18 +7554,6 @@
       "source_location": "L700"
     },
     {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_executive_overview_architectural_achievements",
-      "label": "Executive Overview & Architectural Achievements",
-      "_origin": "ast",
-      "community": 203,
-      "community_name": "Phase 2 \u2014 Featured Work Showcase \u2713",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "executive overview & architectural achievements",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L10"
-    },
-    {
       "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_files_modified",
       "label": "Files Modified",
       "_origin": "ast",
@@ -7674,18 +7578,6 @@
       "source_location": "L653"
     },
     {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_key_milestones_delivered",
-      "label": "Key Milestones Delivered:",
-      "_origin": "ast",
-      "community": 203,
-      "community_name": "Phase 2 \u2014 Featured Work Showcase \u2713",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "key milestones delivered:",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L14"
-    },
-    {
       "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_navbar_keymapping_resolution_summary",
       "label": "Navbar & Keymapping Resolution Summary",
       "_origin": "ast",
@@ -7708,18 +7600,6 @@
       "norm_label": "phase 2 \u2014 featured work showcase \u2713",
       "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
       "source_location": "L581"
-    },
-    {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_portfolio_navigation_showcase_information_architecture_refactoring",
-      "label": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
-      "_origin": "ast",
-      "community": 203,
-      "community_name": "Phase 2 \u2014 Featured Work Showcase \u2713",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "portfolio navigation, showcase & information architecture refactoring",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L1"
     },
     {
       "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_user_turn_10",
@@ -7828,18 +7708,6 @@
       "norm_label": "what's new on homepage",
       "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
       "source_location": "L592"
-    },
-    {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat",
-      "label": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "_origin": "ast",
-      "community": 204,
-      "community_name": "Phase 2 \u2014 Featured Work Showcase \u2713",
-      "file_type": "document",
-      "node_kind": "page",
-      "norm_label": "dev-logs/2026-09-29_navigation_showcase_refactor_chat.md",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L1"
     },
     {
       "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_1_navigation_information_architecture_audit",
@@ -8010,18 +7878,6 @@
       "source_location": "L700"
     },
     {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_executive_overview_architectural_achievements",
-      "label": "Executive Overview & Architectural Achievements",
-      "_origin": "ast",
-      "community": 204,
-      "community_name": "Phase 2 \u2014 Featured Work Showcase \u2713",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "executive overview & architectural achievements",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L10"
-    },
-    {
       "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_files_modified",
       "label": "Files Modified",
       "_origin": "ast",
@@ -8046,18 +7902,6 @@
       "source_location": "L653"
     },
     {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_key_milestones_delivered",
-      "label": "Key Milestones Delivered:",
-      "_origin": "ast",
-      "community": 204,
-      "community_name": "Phase 2 \u2014 Featured Work Showcase \u2713",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "key milestones delivered:",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L14"
-    },
-    {
       "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_navbar_keymapping_resolution_summary",
       "label": "Navbar & Keymapping Resolution Summary",
       "_origin": "ast",
@@ -8080,18 +7924,6 @@
       "norm_label": "phase 2 \u2014 featured work showcase \u2713",
       "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
       "source_location": "L581"
-    },
-    {
-      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_portfolio_navigation_showcase_information_architecture_refactoring",
-      "label": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
-      "_origin": "ast",
-      "community": 204,
-      "community_name": "Phase 2 \u2014 Featured Work Showcase \u2713",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "portfolio navigation, showcase & information architecture refactoring",
-      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L1"
     },
     {
       "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_user_turn_10",
@@ -20611,18 +20443,6 @@
       "source_location": "L154"
     },
     {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_2_proposed_navigation_model_the_4_1_streamlined_structure",
-      "label": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "2. proposed navigation model: the 4+1 streamlined structure",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L169"
-    },
-    {
       "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_actions_completed",
       "label": "Actions Completed",
       "_origin": "ast",
@@ -20911,30 +20731,6 @@
       "source_location": "L379"
     },
     {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_phase_1_the_adaptive_floating_header_streamlined_nav_immediate",
-      "label": "Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate)",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 1: the adaptive floating header & streamlined nav (immediate)",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L329"
-    },
-    {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_phase_3_secondary_layer_deep_huds_progressive_disclosure",
-      "label": "Phase 3: Secondary Layer & Deep HUDs (Progressive Disclosure)",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "phase 3: secondary layer & deep huds (progressive disclosure)",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L357"
-    },
-    {
       "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_ready_for_phase_2",
       "label": "Ready for Phase 2",
       "_origin": "ast",
@@ -20983,30 +20779,6 @@
       "source_location": "L363"
     },
     {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_step_2_streamline_the_top_navigation_bar",
-      "label": "Step 2: Streamline the Top Navigation Bar",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 2: streamline the top navigation bar",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L263"
-    },
-    {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_step_3_calm_visual_styling",
-      "label": "Step 3: Calm Visual Styling",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "step 3: calm visual styling",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L273"
-    },
-    {
       "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_the_best_part_your_engine_already_has_the_logic_wired",
       "label": "The Best Part: Your Engine Already Has the Logic Wired!",
       "_origin": "ast",
@@ -21017,18 +20789,6 @@
       "norm_label": "the best part: your engine already has the logic wired!",
       "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
       "source_location": "L314"
-    },
-    {
-      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_the_clean_refactor_plan_bringing_manish_s_calm_to_adt",
-      "label": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
-      "_origin": "ast",
-      "community": 26,
-      "community_name": "Verbatim Dialogue & Engineering Transcript",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "the clean refactor plan (bringing manish's calm to adt)",
-      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
-      "source_location": "L325"
     },
     {
       "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_user_turn_1",
@@ -25252,6 +25012,822 @@
       "source_location": "L1"
     },
     {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "label": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "2026-10-01_branch-explain-career-astrology_conversation.md",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_10_money_and_finances_ketu_in_the_2nd",
+      "label": "10. Money and finances \u2014 Ketu in the 2nd",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "10. money and finances \u2014 ketu in the 2nd",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L558"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_11_saturn_in_the_11th_networks_and_long_term_gains",
+      "label": "11. Saturn in the 11th \u2014 networks and long-term gains",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "11. saturn in the 11th \u2014 networks and long-term gains",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L590"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_12_education",
+      "label": "12. Education",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "12. education",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L627"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_13_relationships_and_marriage",
+      "label": "13. Relationships and marriage",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "13. relationships and marriage",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L651"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_14_the_navamsa_deeper_development",
+      "label": "14. The Navamsa \u2014 deeper development",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "14. the navamsa \u2014 deeper development",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L687"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_15_your_spiritual_psychological_axis",
+      "label": "15. Your spiritual/psychological axis",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "15. your spiritual/psychological axis",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L722"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_16_your_current_major_dasha_structure",
+      "label": "16. Your current major dasha structure",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "16. your current major dasha structure",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L748"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_17_yogini_dasha",
+      "label": "17. Yogini Dasha",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "17. yogini dasha",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L778"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_18_tribhagi_dasha",
+      "label": "18. Tribhagi Dasha",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "18. tribhagi dasha",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L801"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_19_the_2027_theme_from_the_screenshot",
+      "label": "19. The 2027 theme from the screenshot",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "19. the 2027 theme from the screenshot",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L823"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_1_your_overall_chart_structure",
+      "label": "1. Your overall chart structure",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "1. your overall chart structure",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L251"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_20_career_path_in_one_picture",
+      "label": "20. Career path in one picture",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "20. career path in one picture",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L841"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_21_what_could_become_a_challenge",
+      "label": "21. What could become a challenge",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "21. what could become a challenge",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L889"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_22_what_seems_to_repeat_the_most",
+      "label": "22. What seems to repeat the most",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "22. what seems to repeat the most",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L925"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_23_the_best_path_question_interpreted_carefully",
+      "label": "23. The \u201cbest path\u201d question, interpreted carefully",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "23. the \u201cbest path\u201d question, interpreted carefully",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L955"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_24_about_the_colours_and_gemstones",
+      "label": "24. About the colours and gemstones",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "24. about the colours and gemstones",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L981"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_25_my_overall_synthesis",
+      "label": "25. My overall synthesis",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "25. my overall synthesis",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L999"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_2_personality_and_basic_nature_virgo_ascendant",
+      "label": "2. Personality and basic nature \u2014 Virgo Ascendant",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. personality and basic nature \u2014 virgo ascendant",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L273"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_3_jupiter_in_your_ascendant",
+      "label": "3. Jupiter in your Ascendant",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "3. jupiter in your ascendant",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L300"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_4_moon_mars_in_the_3rd_house_one_of_the_strongest_themes",
+      "label": "4. Moon + Mars in the 3rd house \u2014 one of the strongest themes",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. moon + mars in the 3rd house \u2014 one of the strongest themes",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L330"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_4_you_will_not_stay_happy_as_a_back_room_specialist",
+      "label": "4. \u201cYou will not stay happy as a back-room specialist\u201d",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "4. \u201cyou will not stay happy as a back-room specialist\u201d",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L73"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_5_pure_technical_work_will_pull_at_you",
+      "label": "5. \u201cPure technical work will pull at you\u2026\u201d",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. \u201cpure technical work will pull at you...\u201d",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L87"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_5_your_communication_style",
+      "label": "5. Your communication style",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "5. your communication style",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L370"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_6_the_4th_house_is_extremely_important",
+      "label": "6. The 4th house is extremely important",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. the 4th house is extremely important",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L396"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_6_the_real_shift_comes_in_september_2027",
+      "label": "6. \u201cThe real shift comes in September 2027\u201d",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "6. \u201cthe real shift comes in september 2027\u201d",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L105"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_7_career_the_most_interesting_part",
+      "label": "7. Career \u2014 the most interesting part",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. career \u2014 the most interesting part",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L435"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_7_don_t_judge_yourself_by_what_the_next_twelve_months_pay",
+      "label": "7. \u201cDon't judge yourself by what the next twelve months pay\u201d",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "7. \u201cdon't judge yourself by what the next twelve months pay\u201d",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L122"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_8_does_the_chart_support_a_technical_career",
+      "label": "8. Does the chart support a technical career?",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "8. does the chart support a technical career?",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L492"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_8_saturn_in_the_11th_house",
+      "label": "8. \u201cSaturn in the 11th house\u201d",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "8. \u201csaturn in the 11th house\u201d",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L136"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_9_mars_ketu_in_the_2nd_house",
+      "label": "9. \u201cMars + Ketu in the 2nd house\u201d",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9. \u201cmars + ketu in the 2nd house\u201d",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L169"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_9_rahu_in_the_8th_house",
+      "label": "9. Rahu in the 8th house",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "9. rahu in the 8th house",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L531"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_assistant",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L9"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_assistant_229",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L229"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_assistant_245",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L245"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "label": "Branch \u00b7 Explain Career Astrology",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "branch \u00b7 explain career astrology",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_emotional_intensity",
+      "label": "Emotional intensity",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "emotional intensity",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L897"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_impatience",
+      "label": "Impatience",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "impatience",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L901"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_knowledge_technical_skill_communication_self_effort_networks",
+      "label": "**Knowledge + Technical Skill + Communication + Self-Effort + Networks**",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "**knowledge + technical skill + communication + self-effort + networks**",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L1011"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_one_thing_i_would_question_in_the_reading",
+      "label": "One thing I would question in the reading",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "one thing i would question in the reading",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L217"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_over_analysis",
+      "label": "Over-analysis",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "over-analysis",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L893"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_putting_the_entire_reading_together",
+      "label": "Putting the entire reading together",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "putting the entire reading together",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L192"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_relationship_intensity",
+      "label": "Relationship intensity",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "relationship intensity",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L917"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_technical_intellectual_foundation",
+      "label": "Technical/intellectual foundation",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "technical/intellectual foundation",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L965"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_turn_1",
+      "label": "Turn 1",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 1",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L239"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_uncertainty_around_money_security",
+      "label": "Uncertainty around money/security",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "uncertainty around money/security",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L913"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_user",
+      "label": "User",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L241"
+    },
+    {
+      "id": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_what_each_part_means",
+      "label": "What each part means",
+      "_origin": "ast",
+      "community": 362,
+      "community_name": "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what each part means",
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L15"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat",
+      "label": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "_origin": "ast",
+      "community": 363,
+      "community_name": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "chat_history/2026-09-29_navigation_showcase_refactor_chat.md",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_executive_overview_architectural_achievements",
+      "label": "Executive Overview & Architectural Achievements",
+      "_origin": "ast",
+      "community": 363,
+      "community_name": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "executive overview & architectural achievements",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_key_milestones_delivered",
+      "label": "Key Milestones Delivered:",
+      "_origin": "ast",
+      "community": 363,
+      "community_name": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "key milestones delivered:",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_portfolio_navigation_showcase_information_architecture_refactoring",
+      "label": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "_origin": "ast",
+      "community": 363,
+      "community_name": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "portfolio navigation, showcase & information architecture refactoring",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat",
+      "label": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "_origin": "ast",
+      "community": 364,
+      "community_name": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "file_type": "document",
+      "node_kind": "page",
+      "norm_label": "dev-logs/2026-09-29_navigation_showcase_refactor_chat.md",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_executive_overview_architectural_achievements",
+      "label": "Executive Overview & Architectural Achievements",
+      "_origin": "ast",
+      "community": 364,
+      "community_name": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "executive overview & architectural achievements",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L10"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_key_milestones_delivered",
+      "label": "Key Milestones Delivered:",
+      "_origin": "ast",
+      "community": 364,
+      "community_name": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "key milestones delivered:",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L14"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_portfolio_navigation_showcase_information_architecture_refactoring",
+      "label": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "_origin": "ast",
+      "community": 364,
+      "community_name": "Portfolio Navigation, Showcase & Information Architecture Refactoring",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "portfolio navigation, showcase & information architecture refactoring",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_2_proposed_navigation_model_the_4_1_streamlined_structure",
+      "label": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
+      "_origin": "ast",
+      "community": 365,
+      "community_name": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. proposed navigation model: the 4+1 streamlined structure",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L169"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_step_2_streamline_the_top_navigation_bar",
+      "label": "Step 2: Streamline the Top Navigation Bar",
+      "_origin": "ast",
+      "community": 365,
+      "community_name": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 2: streamline the top navigation bar",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L263"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_step_3_calm_visual_styling",
+      "label": "Step 3: Calm Visual Styling",
+      "_origin": "ast",
+      "community": 365,
+      "community_name": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 3: calm visual styling",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L273"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_phase_1_the_adaptive_floating_header_streamlined_nav_immediate",
+      "label": "Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate)",
+      "_origin": "ast",
+      "community": 366,
+      "community_name": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 1: the adaptive floating header & streamlined nav (immediate)",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L329"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_phase_3_secondary_layer_deep_huds_progressive_disclosure",
+      "label": "Phase 3: Secondary Layer & Deep HUDs (Progressive Disclosure)",
+      "_origin": "ast",
+      "community": 366,
+      "community_name": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 3: secondary layer & deep huds (progressive disclosure)",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L357"
+    },
+    {
+      "id": "chat_history_2026_09_29_navigation_showcase_refactor_chat_the_clean_refactor_plan_bringing_manish_s_calm_to_adt",
+      "label": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
+      "_origin": "ast",
+      "community": 366,
+      "community_name": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the clean refactor plan (bringing manish's calm to adt)",
+      "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L325"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_2_proposed_navigation_model_the_4_1_streamlined_structure",
+      "label": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
+      "_origin": "ast",
+      "community": 367,
+      "community_name": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "2. proposed navigation model: the 4+1 streamlined structure",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L169"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_step_2_streamline_the_top_navigation_bar",
+      "label": "Step 2: Streamline the Top Navigation Bar",
+      "_origin": "ast",
+      "community": 367,
+      "community_name": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 2: streamline the top navigation bar",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L263"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_step_3_calm_visual_styling",
+      "label": "Step 3: Calm Visual Styling",
+      "_origin": "ast",
+      "community": 367,
+      "community_name": "2. Proposed Navigation Model: The 4+1 Streamlined Structure",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "step 3: calm visual styling",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L273"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_phase_1_the_adaptive_floating_header_streamlined_nav_immediate",
+      "label": "Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate)",
+      "_origin": "ast",
+      "community": 368,
+      "community_name": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 1: the adaptive floating header & streamlined nav (immediate)",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L329"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_phase_3_secondary_layer_deep_huds_progressive_disclosure",
+      "label": "Phase 3: Secondary Layer & Deep HUDs (Progressive Disclosure)",
+      "_origin": "ast",
+      "community": 368,
+      "community_name": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "phase 3: secondary layer & deep huds (progressive disclosure)",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L357"
+    },
+    {
+      "id": "dev_logs_2026_09_29_navigation_showcase_refactor_chat_the_clean_refactor_plan_bringing_manish_s_calm_to_adt",
+      "label": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
+      "_origin": "ast",
+      "community": 368,
+      "community_name": "The Clean Refactor Plan (Bringing Manish's Calm to ADT)",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the clean refactor plan (bringing manish's calm to adt)",
+      "source_file": "dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
+      "source_location": "L325"
+    },
+    {
       "id": "assets_js_modules_evidence",
       "label": "evidence.js",
       "_origin": "ast",
@@ -25351,7 +25927,7 @@
       "source_location": "L444"
     },
     {
-      "id": "scripts_site_automation_rationale_495",
+      "id": "scripts_site_automation_rationale_496",
       "label": "Inserts a new major version release block into dev-\u2026",
       "_origin": "ast",
       "community": 4,
@@ -25359,7 +25935,7 @@
       "file_type": "rationale",
       "norm_label": "inserts a new major version release block into dev-...",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L495"
+      "source_location": "L496"
     },
     {
       "id": "scripts_site_automation_rationale_53",
@@ -25373,7 +25949,7 @@
       "source_location": "L53"
     },
     {
-      "id": "scripts_site_automation_rationale_538",
+      "id": "scripts_site_automation_rationale_539",
       "label": "Minifies all CSS modules in assets/css/modules/ via scripts/build_css.py.",
       "_origin": "ast",
       "community": 4,
@@ -25381,10 +25957,10 @@
       "file_type": "rationale",
       "norm_label": "minifies all css modules in assets/css/modules/ via scripts/build_css.py.",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L538"
+      "source_location": "L539"
     },
     {
-      "id": "scripts_site_automation_rationale_549",
+      "id": "scripts_site_automation_rationale_550",
       "label": "Runs the E2E smoke test suite via scripts/test_e2e.py.",
       "_origin": "ast",
       "community": 4,
@@ -25392,10 +25968,10 @@
       "file_type": "rationale",
       "norm_label": "runs the e2e smoke test suite via scripts/test_e2e.py.",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L549"
+      "source_location": "L550"
     },
     {
-      "id": "scripts_site_automation_rationale_560",
+      "id": "scripts_site_automation_rationale_561",
       "label": "Updates 'Last updated: _YYYY-MM-DD_' in dev-logs/PortfolioWebsite_TRACKER.md\u2026",
       "_origin": "ast",
       "community": 4,
@@ -25403,10 +25979,10 @@
       "file_type": "rationale",
       "norm_label": "updates 'last updated: _yyyy-mm-dd_' in dev-logs/portfoliowebsite_tracker.md...",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L560"
+      "source_location": "L561"
     },
     {
-      "id": "scripts_site_automation_rationale_572",
+      "id": "scripts_site_automation_rationale_573",
       "label": "Generates a conventional commit message based on staged and unstaged changes.",
       "_origin": "ast",
       "community": 4,
@@ -25414,10 +25990,10 @@
       "file_type": "rationale",
       "norm_label": "generates a conventional commit message based on staged and unstaged changes.",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L572"
+      "source_location": "L573"
     },
     {
-      "id": "scripts_site_automation_rationale_624",
+      "id": "scripts_site_automation_rationale_625",
       "label": "Executes the full cross-platform synchronization and pre-commit workflow.\u2026",
       "_origin": "ast",
       "community": 4,
@@ -25425,7 +26001,7 @@
       "file_type": "rationale",
       "norm_label": "executes the full cross-platform synchronization and pre-commit workflow....",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L624"
+      "source_location": "L625"
     },
     {
       "id": "scripts_site_automation_rationale_69",
@@ -32885,7 +33461,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L541",
+      "source_location": "L542",
       "weight": 1.0
     },
     {
@@ -32914,6 +33490,18 @@
     },
     {
       "source": "scripts_site_automation_bump_version",
+      "target": "scripts_site_automation_run_command",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/site_automation.py",
+      "source_location": "L468",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_site_automation_bump_version",
       "target": "scripts_site_automation_update_tracker",
       "relation": "calls",
       "_origin": "ast",
@@ -32921,7 +33509,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L475",
+      "source_location": "L476",
       "weight": 1.0
     },
     {
@@ -32933,7 +33521,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L483",
+      "source_location": "L484",
       "weight": 1.0
     },
     {
@@ -32945,7 +33533,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L634",
+      "source_location": "L635",
       "weight": 1.0
     },
     {
@@ -32957,7 +33545,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L645",
+      "source_location": "L646",
       "weight": 1.0
     },
     {
@@ -32969,7 +33557,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L655",
+      "source_location": "L656",
       "weight": 1.0
     },
     {
@@ -32981,7 +33569,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L662",
+      "source_location": "L663",
       "weight": 1.0
     },
     {
@@ -32993,7 +33581,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L669",
+      "source_location": "L670",
       "weight": 1.0
     },
     {
@@ -33005,7 +33593,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L678",
+      "source_location": "L679",
       "weight": 1.0
     },
     {
@@ -33017,7 +33605,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L689",
+      "source_location": "L690",
       "weight": 1.0
     },
     {
@@ -33029,7 +33617,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L697",
+      "source_location": "L698",
       "weight": 1.0
     },
     {
@@ -33041,7 +33629,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L707",
+      "source_location": "L708",
       "weight": 1.0
     },
     {
@@ -33053,7 +33641,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L716",
+      "source_location": "L717",
       "weight": 1.0
     },
     {
@@ -33101,7 +33689,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L576",
+      "source_location": "L577",
       "weight": 1.0
     },
     {
@@ -33113,7 +33701,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L791",
+      "source_location": "L792",
       "weight": 1.0
     },
     {
@@ -33125,7 +33713,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L794",
+      "source_location": "L795",
       "weight": 1.0
     },
     {
@@ -33137,7 +33725,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L796",
+      "source_location": "L797",
       "weight": 1.0
     },
     {
@@ -33149,7 +33737,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L799",
+      "source_location": "L800",
       "weight": 1.0
     },
     {
@@ -33161,7 +33749,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L802",
+      "source_location": "L803",
       "weight": 1.0
     },
     {
@@ -33173,7 +33761,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L805",
+      "source_location": "L806",
       "weight": 1.0
     },
     {
@@ -33185,7 +33773,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L811",
+      "source_location": "L812",
       "weight": 1.0
     },
     {
@@ -33197,7 +33785,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L814",
+      "source_location": "L815",
       "weight": 1.0
     },
     {
@@ -33209,7 +33797,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L817",
+      "source_location": "L818",
       "weight": 1.0
     },
     {
@@ -33233,7 +33821,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/site_automation.py",
-      "source_location": "L552",
+      "source_location": "L553",
       "weight": 1.0
     },
     {
@@ -39357,6 +39945,523 @@
       "confidence_score": 1.0,
       "source_file": "chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md",
       "source_location": "L96",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_1_your_overall_chart_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L251",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_2_personality_and_basic_nature_virgo_ascendant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L273",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_3_jupiter_in_your_ascendant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L300",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_4_moon_mars_in_the_3rd_house_one_of_the_strongest_themes",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L330",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_5_your_communication_style",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L370",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_6_the_4th_house_is_extremely_important",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L396",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_7_career_the_most_interesting_part",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L435",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_8_does_the_chart_support_a_technical_career",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L492",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_9_rahu_in_the_8th_house",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L531",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_10_money_and_finances_ketu_in_the_2nd",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L558",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_11_saturn_in_the_11th_networks_and_long_term_gains",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L590",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_12_education",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L627",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_13_relationships_and_marriage",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L651",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_14_the_navamsa_deeper_development",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L687",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_15_your_spiritual_psychological_axis",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L722",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_16_your_current_major_dasha_structure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L748",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_17_yogini_dasha",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L778",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_18_tribhagi_dasha",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L801",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_19_the_2027_theme_from_the_screenshot",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L823",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_20_career_path_in_one_picture",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L841",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_21_what_could_become_a_challenge",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L889",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_22_what_seems_to_repeat_the_most",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L925",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_23_the_best_path_question_interpreted_carefully",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L955",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_24_about_the_colours_and_gemstones",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L981",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_25_my_overall_synthesis",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L999",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_21_what_could_become_a_challenge",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_over_analysis",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L893",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_21_what_could_become_a_challenge",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_emotional_intensity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L897",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_21_what_could_become_a_challenge",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_impatience",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L901",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_21_what_could_become_a_challenge",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_uncertainty_around_money_security",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L913",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_21_what_could_become_a_challenge",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_relationship_intensity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L917",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_23_the_best_path_question_interpreted_carefully",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_technical_intellectual_foundation",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L965",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_25_my_overall_synthesis",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_knowledge_technical_skill_communication_self_effort_networks",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L1011",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_6_the_real_shift_comes_in_september_2027",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L105",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_7_don_t_judge_yourself_by_what_the_next_twelve_months_pay",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L122",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_8_saturn_in_the_11th_house",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L136",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_what_each_part_means",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_9_mars_ketu_in_the_2nd_house",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_putting_the_entire_reading_together",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L192",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_turn_1",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L239",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_4_you_will_not_stay_happy_as_a_back_room_specialist",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L73",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_5_pure_technical_work_will_pull_at_you",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L87",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_branch_explain_career_astrology",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_assistant",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_putting_the_entire_reading_together",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_one_thing_i_would_question_in_the_reading",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L217",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_putting_the_entire_reading_together",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_assistant_229",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L229",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_turn_1",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_user",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L241",
+      "weight": 1.0
+    },
+    {
+      "source": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_turn_1",
+      "target": "chat_history_2026_10_01_branch_explain_career_astrology_conversation_assistant_245",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "chat_history/2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md",
+      "source_location": "L245",
       "weight": 1.0
     },
     {
@@ -55801,7 +56906,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L494",
+      "source_location": "L495",
       "weight": 1.0
     },
     {
@@ -55823,7 +56928,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L537",
+      "source_location": "L538",
       "weight": 1.0
     },
     {
@@ -55834,7 +56939,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L548",
+      "source_location": "L549",
       "weight": 1.0
     },
     {
@@ -55845,7 +56950,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L559",
+      "source_location": "L560",
       "weight": 1.0
     },
     {
@@ -55856,7 +56961,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L571",
+      "source_location": "L572",
       "weight": 1.0
     },
     {
@@ -55867,7 +56972,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L623",
+      "source_location": "L624",
       "weight": 1.0
     },
     {
@@ -55889,7 +56994,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L754",
+      "source_location": "L755",
       "weight": 1.0
     },
     {
@@ -57807,14 +58912,14 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_site_automation_rationale_495",
+      "source": "scripts_site_automation_rationale_496",
       "target": "scripts_site_automation_update_tracker",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L495",
+      "source_location": "L496",
       "weight": 1.0
     },
     {
@@ -57829,58 +58934,58 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_site_automation_rationale_538",
+      "source": "scripts_site_automation_rationale_539",
       "target": "scripts_site_automation_build_css_modules",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L538",
+      "source_location": "L539",
       "weight": 1.0
     },
     {
-      "source": "scripts_site_automation_rationale_549",
+      "source": "scripts_site_automation_rationale_550",
       "target": "scripts_site_automation_run_e2e_tests",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L549",
+      "source_location": "L550",
       "weight": 1.0
     },
     {
-      "source": "scripts_site_automation_rationale_560",
+      "source": "scripts_site_automation_rationale_561",
       "target": "scripts_site_automation_update_tracker_timestamp",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L560",
+      "source_location": "L561",
       "weight": 1.0
     },
     {
-      "source": "scripts_site_automation_rationale_572",
+      "source": "scripts_site_automation_rationale_573",
       "target": "scripts_site_automation_generate_commit_message",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L572",
+      "source_location": "L573",
       "weight": 1.0
     },
     {
-      "source": "scripts_site_automation_rationale_624",
+      "source": "scripts_site_automation_rationale_625",
       "target": "scripts_site_automation_cmd_sync",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/site_automation.py",
-      "source_location": "L624",
+      "source_location": "L625",
       "weight": 1.0
     },
     {
@@ -60465,5 +61570,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "530b54a711462f3ab660ab8749e78fae459b33ff"
+  "built_at_commit": "c4b5a5271fc11c3ae8d691d6f560026ec7a2db33"
 }

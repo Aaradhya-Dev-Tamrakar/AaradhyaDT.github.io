@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for AaradhyaDT.github.io (v55.7)
+site_automation.py — Hyper-Automation Engine for AaradhyaDT.github.io (v55.8)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -465,11 +465,12 @@ def bump_version(bump_type="patch", explicit_version=None, title=None, highlight
                 f"PWA & Cache: Bumped Service Worker cache to aaradhya-portfolio-{new_v}"
             ]
             hl_json = ",\n".join([f"      {json.dumps(h)}" for h in rel_highlights])
-            clean_sha = f"rel{new_v.replace('.', '').replace('v', '')}"
+            code, stdout, _ = run_command(["git", "rev-parse", "--short", "HEAD"])
+            clean_sha = stdout.strip() if code == 0 and stdout.strip() else f"rel{new_v.replace('.', '').replace('v', '')}"
             new_block = f"  {{\n    version: '{new_v}',\n    date: '{today}',\n    sha: '{clean_sha}',\n    title: {json.dumps(rel_title)},\n    highlights: [\n{hl_json}\n    ]\n  }},"
             new_releases = re.sub(r"const SITE_RELEASES = \[\s*", f"const SITE_RELEASES = [\n{new_block}\n  ", releases_text, count=1)
             RELEASES_JS.write_text(new_releases, encoding="utf-8")
-            actions.append(f"Prepended new release block for {new_v} in releases.js")
+            actions.append(f"Prepended new release block for {new_v} (sha: {clean_sha}) in releases.js")
 
             # Update Tracker log for major bump
             update_tracker(new_v, rel_title, rel_highlights)

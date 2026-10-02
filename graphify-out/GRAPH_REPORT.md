@@ -1,16 +1,16 @@
-# Graph Report - AaradhyaDT.github.io  (2026-10-01)
+# Graph Report - AaradhyaDT.github.io  (2026-10-02)
 
 ## Corpus Check
-- 124 files · ~2,427,485 words
+- 125 files · ~2,431,990 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2444 nodes · 2763 edges · 362 communities (165 shown, 185 thin omitted)
+- 2492 nodes · 2811 edges · 369 communities (172 shown, 185 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `530b54a7`
+- Built from commit: `c4b5a527`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -365,6 +365,13 @@
 - And this changes the seven-repository picture
 - So I would change your scholarship framing slightly
 - v23 addition — latest site refinements (2026-07-18)
+- 2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md
+- Portfolio Navigation, Showcase & Information Architecture Refactoring
+- Portfolio Navigation, Showcase & Information Architecture Refactoring
+- 2. Proposed Navigation Model: The 4+1 Streamlined Structure
+- The Clean Refactor Plan (Bringing Manish's Calm to ADT)
+- 2. Proposed Navigation Model: The 4+1 Streamlined Structure
+- The Clean Refactor Plan (Bringing Manish's Calm to ADT)
 
 ## God Nodes (most connected - your core abstractions)
 1. `Verbatim Dialogue & Engineering Transcript` - 42 edges
@@ -408,7 +415,7 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (362 total, 185 thin omitted)
+## Communities (369 total, 185 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -515,8 +522,8 @@ Cohesion: 0.22
 Nodes (10): Report Utils Class, Report Renderer, __initLighthouseReport__, Report Context Class, I18n Formatter, PWA Category Renderer, Performance Category Renderer, Report UI Features (+2 more)
 
 ### Community 26 - "Verbatim Dialogue & Engineering Transcript"
-Cohesion: 0.04
-Nodes (46): 1. The Core Problems with Current IA (Information Architecture), 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant (+38 more)
+Cohesion: 0.05
+Nodes (40): 1. The Core Problems with Current IA (Information Architecture), Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+32 more)
 
 ### Community 27 - "2026-09-17_EVALUATE-REPO_CONVERSATION.md"
 Cohesion: 0.14
@@ -639,16 +646,16 @@ Cohesion: 0.06
 Nodes (29): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Guidelines (+21 more)
 
 ### Community 202 - "Verbatim Dialogue & Engineering Transcript"
-Cohesion: 0.04
-Nodes (46): 1. The Core Problems with Current IA (Information Architecture), 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant (+38 more)
+Cohesion: 0.05
+Nodes (40): 1. The Core Problems with Current IA (Information Architecture), Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+32 more)
 
 ### Community 203 - "Phase 2 — Featured Work Showcase ✓"
-Cohesion: 0.06
-Nodes (30): 1. Navigation & Information Architecture Audit, 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant (+22 more)
+Cohesion: 0.07
+Nodes (27): 1. Navigation & Information Architecture Audit, 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant (+19 more)
 
 ### Community 204 - "Phase 2 — Featured Work Showcase ✓"
-Cohesion: 0.06
-Nodes (30): 1. Navigation & Information Architecture Audit, 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant (+22 more)
+Cohesion: 0.07
+Nodes (27): 1. Navigation & Information Architecture Audit, 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant (+19 more)
 
 ### Community 205 - "SECURITY_AUDIT_VIP_TIER.md"
 Cohesion: 0.13
@@ -1070,25 +1077,53 @@ Nodes (3): Current, Earlier, The more important discovery
 Cohesion: 0.67
 Nodes (3): Current, Earlier, The more important discovery
 
+### Community 362 - "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md"
+Cohesion: 0.04
+Nodes (47): 10. Money and finances — Ketu in the 2nd, 11. Saturn in the 11th — networks and long-term gains, 12. Education, 13. Relationships and marriage, 14. The Navamsa — deeper development, 15. Your spiritual/psychological axis, 16. Your current major dasha structure, 17. Yogini Dasha (+39 more)
+
+### Community 363 - "Portfolio Navigation, Showcase & Information Architecture Refactoring"
+Cohesion: 0.50
+Nodes (3): Executive Overview & Architectural Achievements, Key Milestones Delivered:, Portfolio Navigation, Showcase & Information Architecture Refactoring
+
+### Community 364 - "Portfolio Navigation, Showcase & Information Architecture Refactoring"
+Cohesion: 0.50
+Nodes (3): Executive Overview & Architectural Achievements, Key Milestones Delivered:, Portfolio Navigation, Showcase & Information Architecture Refactoring
+
+### Community 365 - "2. Proposed Navigation Model: The 4+1 Streamlined Structure"
+Cohesion: 0.67
+Nodes (3): 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Step 2: Streamline the Top Navigation Bar, Step 3: Calm Visual Styling
+
+### Community 366 - "The Clean Refactor Plan (Bringing Manish's Calm to ADT)"
+Cohesion: 0.67
+Nodes (3): Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate), Phase 3: Secondary Layer & Deep HUDs (Progressive Disclosure), The Clean Refactor Plan (Bringing Manish's Calm to ADT)
+
+### Community 367 - "2. Proposed Navigation Model: The 4+1 Streamlined Structure"
+Cohesion: 0.67
+Nodes (3): 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Step 2: Streamline the Top Navigation Bar, Step 3: Calm Visual Styling
+
+### Community 368 - "The Clean Refactor Plan (Bringing Manish's Calm to ADT)"
+Cohesion: 0.67
+Nodes (3): Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate), Phase 3: Secondary Layer & Deep HUDs (Progressive Disclosure), The Clean Refactor Plan (Bringing Manish's Calm to ADT)
+
 ## Knowledge Gaps
-- **1530 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1525 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1699 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1571 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1566 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1740 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **185 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `This also explains why your work became faster` connect `Turn 13` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
-  _High betweenness centrality (0.022) - this node is a cross-community bridge._
-- **Why does `My recommendations now` connect `My recommendations now` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
+- **Why does `And this is the part I would preserve most carefully` connect `Turn 9` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
   _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)` connect `📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`, `Turn 3`?**
+- **Why does `Distributed Provision Service` connect `Turn 3` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`?**
   _High betweenness centrality (0.015) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _1530 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1571 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09472606246799795 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06108597285067873 - nodes in this community are weakly interconnected._
+- **Should `ui.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.07965860597439545 - nodes in this community are weakly interconnected._
