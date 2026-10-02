@@ -52,7 +52,7 @@ To avoid merge conflicts on `assets/js/last-commit.json` (bot-managed) and preve
 - **Single-Pass Sync**: Do not run separate scripts for indexing, graph updates, or staging — `.\sync.ps1` handles all tasks in one execution.
 - **Bot-Managed Files**: NEVER manually modify or stage `assets/js/last-commit.json`.
 - **Notebooks**: Do NOT execute `.ipynb` files locally. They are run manually in Google Colab or local user environments.
-- **Verification Gate**: Ensure changes pass `python scripts/verify.py` before finalizing (auto-checked by `.\sync.ps1`).
+- **Verification Gate**: Ensure changes pass `python scripts/verify.py` before finalizing (auto-checked by `.\sync.ps1`, 26 validation categories).
 - **Web Standards**: Maintain Vanilla HTML/CSS/JS architecture, high-end aesthetics, semantic markup, and cross-site link/asset integrity across all pages.
 
 ---
@@ -84,7 +84,7 @@ The repository enforces a dual-tier versioning architecture managed through `scr
 - **Trigger**: Executed via `.\sync.ps1 -Major` (with optional `-Title "..."` and `-Highlights "..."`) or `python scripts/site_automation.py bump-major`.
 - **Automation Pipeline**:
   1. **Major Integer Increment**: Reads current version from `assets/js/data/releases.js` (e.g. `v51` / `v51.28`), computes next clean integer (e.g. `v52`).
-  2. **Release Block Prepended**: Prepends a brand-new release definition to `SITE_RELEASES` in `assets/js/data/releases.js` containing version, date, sha (`rel52`), title, and highlights array.
+  2. **Release Block Prepended**: Prepends a brand-new release definition to `SITE_RELEASES` in `assets/js/data/releases.js` containing version, date, sha (dynamically resolved from `git rev-parse --short HEAD`), title, and highlights array.
   3. **Tracker Entry Formatted**: Automatically prepends a new MD009/MD026-compliant entry to `dev-logs/PortfolioWebsite_TRACKER.md` immediately following the `Last updated:` subtitle.
   4. **PWA Cache Invalidation**: Updates `CACHE_NAME = 'aaradhya-portfolio-v52'` in `sw.js` ensuring immediate client-side asset refresh on next visit.
   5. **Site-Wide Metadata Synchronization (12 Targets)**:
