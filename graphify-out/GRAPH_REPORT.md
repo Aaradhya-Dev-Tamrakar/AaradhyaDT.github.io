@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-10-02)
 
 ## Corpus Check
-- 125 files · ~2,431,990 words
+- 125 files · ~2,432,116 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2492 nodes · 2811 edges · 369 communities (172 shown, 185 thin omitted)
+- 2494 nodes · 2816 edges · 369 communities (172 shown, 185 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `c4b5a527`
+- Built from commit: `253981ed`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -240,7 +240,7 @@
 - My view of your present vs. future
 - Turn 3
 - Turn 12
-- 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)
+- Distributed Provision Service
 - My recommendations now
 - My recommendations now
 - My recommendations now
@@ -377,11 +377,11 @@
 1. `Verbatim Dialogue & Engineering Transcript` - 42 edges
 2. `Verbatim Dialogue & Engineering Transcript` - 42 edges
 3. `Turn 4` - 41 edges
-4. `main()` - 33 edges
-5. `log_pass()` - 27 edges
+4. `main()` - 34 edges
+5. `log_pass()` - 28 edges
 6. `Phase 2 — Featured Work Showcase ✓` - 27 edges
 7. `Phase 2 — Featured Work Showcase ✓` - 27 edges
-8. `log_error()` - 23 edges
+8. `log_error()` - 24 edges
 9. `Portfolio Website Tracker — v53.26` - 21 edges
 10. `log_warning()` - 16 edges
 
@@ -419,7 +419,7 @@
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
-Nodes (62): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+54 more)
+Nodes (64): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+56 more)
 
 ### Community 1 - "Portfolio Website Tracker — v53.26"
 Cohesion: 0.10
@@ -698,8 +698,8 @@ Cohesion: 0.06
 Nodes (31): And this is where your electronics background becomes valuable, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, **BEI student → emerging Intelligent Systems / AI Systems researcher-engineer** (+23 more)
 
 ### Community 215 - "Turn 3"
-Cohesion: 0.08
-Nodes (25): And your repo actually fits the analogy unusually well, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+17 more)
+Cohesion: 0.15
+Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
 
 ### Community 216 - "Turn 13"
 Cohesion: 0.09
@@ -774,16 +774,16 @@ Cohesion: 0.15
 Nodes (13): And one more thing, And the Google Classroom MCP idea is actually worth revisiting, Assistant, Assistant, My view of your present vs. future, **Near future:**, **Present:**, **Strong long-term trajectory:** (+5 more)
 
 ### Community 234 - "Turn 3"
-Cohesion: 0.15
-Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
+Cohesion: 0.08
+Nodes (25): And your repo actually fits the analogy unusually well, 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation), Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+17 more)
 
 ### Community 235 - "Turn 12"
 Cohesion: 0.17
 Nodes (12): Assistant, Assistant, But there is an important weakness, So I would describe the evolution this way, This also explains why your work became faster, Turn 11, Turn 12, User (+4 more)
 
-### Community 236 - "📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)"
+### Community 236 - "Distributed Provision Service"
 Cohesion: 0.17
-Nodes (12): And your repo actually fits the analogy unusually well, 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation), Assistant, Assistant, Assistant, I would actually call the broader concept, The DDOS ↔ PoS analogy, Turn 1 (+4 more)
+Nodes (12): And your repo actually fits the analogy unusually well, Assistant, Assistant, Assistant, Distributed Provision Service, I would actually call the broader concept, The DDOS ↔ PoS analogy, Turn 1 (+4 more)
 
 ### Community 237 - "My recommendations now"
 Cohesion: 0.18
@@ -1107,23 +1107,23 @@ Nodes (3): Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate), 
 
 ## Knowledge Gaps
 - **1571 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1566 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1740 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1741 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **185 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `And this is the part I would preserve most carefully` connect `Turn 9` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
-  _High betweenness centrality (0.018) - this node is a cross-community bridge._
-- **Why does `Distributed Provision Service` connect `Turn 3` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`?**
-  _High betweenness centrality (0.015) - this node is a cross-community bridge._
+  _High betweenness centrality (0.017) - this node is a cross-community bridge._
+- **Why does `This also explains why your work became faster` connect `Turn 13` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
+  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` connect `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` to `Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study)`, `4. Technical Specifications`, `5. Implementation Roadmap`?**
+  _High betweenness centrality (0.013) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
   _1571 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.09472606246799795 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.09134615384615384 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06108597285067873 - nodes in this community are weakly interconnected._
-- **Should `ui.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.07965860597439545 - nodes in this community are weakly interconnected._

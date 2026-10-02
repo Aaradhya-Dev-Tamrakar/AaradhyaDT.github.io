@@ -307,7 +307,7 @@
       "file_type": "code",
       "norm_label": "bold()",
       "source_file": "scripts/verify.py",
-      "source_location": "L75"
+      "source_location": "L76"
     },
     {
       "id": "scripts_verify_c",
@@ -319,7 +319,7 @@
       "file_type": "code",
       "norm_label": "_c()",
       "source_file": "scripts/verify.py",
-      "source_location": "L68"
+      "source_location": "L69"
     },
     {
       "id": "scripts_verify_check_asset_references",
@@ -331,7 +331,7 @@
       "file_type": "code",
       "norm_label": "check_asset_references()",
       "source_file": "scripts/verify.py",
-      "source_location": "L474"
+      "source_location": "L475"
     },
     {
       "id": "scripts_verify_check_cross_page_links",
@@ -343,7 +343,7 @@
       "file_type": "code",
       "norm_label": "check_cross_page_links()",
       "source_file": "scripts/verify.py",
-      "source_location": "L412"
+      "source_location": "L413"
     },
     {
       "id": "scripts_verify_check_csp_integrity",
@@ -355,7 +355,7 @@
       "file_type": "code",
       "norm_label": "check_csp_integrity()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1296"
+      "source_location": "L1326"
     },
     {
       "id": "scripts_verify_check_css_integrity",
@@ -367,7 +367,7 @@
       "file_type": "code",
       "norm_label": "check_css_integrity()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1060"
+      "source_location": "L1090"
     },
     {
       "id": "scripts_verify_check_data_consistency",
@@ -379,7 +379,7 @@
       "file_type": "code",
       "norm_label": "check_data_consistency()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1166"
+      "source_location": "L1196"
     },
     {
       "id": "scripts_verify_check_file_sizes",
@@ -391,7 +391,7 @@
       "file_type": "code",
       "norm_label": "check_file_sizes()",
       "source_file": "scripts/verify.py",
-      "source_location": "L838"
+      "source_location": "L868"
     },
     {
       "id": "scripts_verify_check_global_id_uniqueness",
@@ -403,7 +403,7 @@
       "file_type": "code",
       "norm_label": "check_global_id_uniqueness()",
       "source_file": "scripts/verify.py",
-      "source_location": "L963"
+      "source_location": "L993"
     },
     {
       "id": "scripts_verify_check_html_a11y_seo",
@@ -415,7 +415,7 @@
       "file_type": "code",
       "norm_label": "check_html_a11y_seo()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1095"
+      "source_location": "L1125"
     },
     {
       "id": "scripts_verify_check_ids",
@@ -427,7 +427,7 @@
       "file_type": "code",
       "norm_label": "check_ids()",
       "source_file": "scripts/verify.py",
-      "source_location": "L199"
+      "source_location": "L200"
     },
     {
       "id": "scripts_verify_check_internal_hrefs",
@@ -439,7 +439,7 @@
       "file_type": "code",
       "norm_label": "check_internal_hrefs()",
       "source_file": "scripts/verify.py",
-      "source_location": "L247"
+      "source_location": "L248"
     },
     {
       "id": "scripts_verify_check_js_safety",
@@ -451,7 +451,7 @@
       "file_type": "code",
       "norm_label": "check_js_safety()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1000"
+      "source_location": "L1030"
     },
     {
       "id": "scripts_verify_check_js_syntax",
@@ -463,7 +463,7 @@
       "file_type": "code",
       "norm_label": "check_js_syntax()",
       "source_file": "scripts/verify.py",
-      "source_location": "L509"
+      "source_location": "L510"
     },
     {
       "id": "scripts_verify_check_jsonld_schemas",
@@ -475,7 +475,7 @@
       "file_type": "code",
       "norm_label": "check_jsonld_schemas()",
       "source_file": "scripts/verify.py",
-      "source_location": "L796"
+      "source_location": "L826"
     },
     {
       "id": "scripts_verify_check_manifest",
@@ -487,7 +487,7 @@
       "file_type": "code",
       "norm_label": "check_manifest()",
       "source_file": "scripts/verify.py",
-      "source_location": "L766"
+      "source_location": "L796"
     },
     {
       "id": "scripts_verify_check_module_files",
@@ -499,7 +499,7 @@
       "file_type": "code",
       "norm_label": "check_module_files()",
       "source_file": "scripts/verify.py",
-      "source_location": "L699"
+      "source_location": "L729"
     },
     {
       "id": "scripts_verify_check_pwa_and_a11y_metadata",
@@ -511,7 +511,7 @@
       "file_type": "code",
       "norm_label": "check_pwa_and_a11y_metadata()",
       "source_file": "scripts/verify.py",
-      "source_location": "L373"
+      "source_location": "L374"
     },
     {
       "id": "scripts_verify_check_quantitative_claims",
@@ -523,7 +523,19 @@
       "file_type": "code",
       "norm_label": "check_quantitative_claims()",
       "source_file": "scripts/verify.py",
-      "source_location": "L98"
+      "source_location": "L99"
+    },
+    {
+      "id": "scripts_verify_check_release_shas",
+      "label": "check_release_shas()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "code",
+      "norm_label": "check_release_shas()",
+      "source_file": "scripts/verify.py",
+      "source_location": "L700"
     },
     {
       "id": "scripts_verify_check_robots_txt",
@@ -535,7 +547,7 @@
       "file_type": "code",
       "norm_label": "check_robots_txt()",
       "source_file": "scripts/verify.py",
-      "source_location": "L933"
+      "source_location": "L963"
     },
     {
       "id": "scripts_verify_check_search_index_sync",
@@ -547,7 +559,7 @@
       "file_type": "code",
       "norm_label": "check_search_index_sync()",
       "source_file": "scripts/verify.py",
-      "source_location": "L337"
+      "source_location": "L338"
     },
     {
       "id": "scripts_verify_check_sitemap_sync",
@@ -559,7 +571,7 @@
       "file_type": "code",
       "norm_label": "check_sitemap_sync()",
       "source_file": "scripts/verify.py",
-      "source_location": "L729"
+      "source_location": "L759"
     },
     {
       "id": "scripts_verify_check_sw_cache_completeness",
@@ -571,7 +583,7 @@
       "file_type": "code",
       "norm_label": "check_sw_cache_completeness()",
       "source_file": "scripts/verify.py",
-      "source_location": "L872"
+      "source_location": "L902"
     },
     {
       "id": "scripts_verify_check_tag_balance",
@@ -583,7 +595,7 @@
       "file_type": "code",
       "norm_label": "check_tag_balance()",
       "source_file": "scripts/verify.py",
-      "source_location": "L271"
+      "source_location": "L272"
     },
     {
       "id": "scripts_verify_check_tracker_hygiene",
@@ -595,7 +607,7 @@
       "file_type": "code",
       "norm_label": "check_tracker_hygiene()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1230"
+      "source_location": "L1260"
     },
     {
       "id": "scripts_verify_check_unit_tests",
@@ -607,7 +619,7 @@
       "file_type": "code",
       "norm_label": "check_unit_tests()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1256"
+      "source_location": "L1286"
     },
     {
       "id": "scripts_verify_check_version_consistency",
@@ -619,7 +631,7 @@
       "file_type": "code",
       "norm_label": "check_version_consistency()",
       "source_file": "scripts/verify.py",
-      "source_location": "L554"
+      "source_location": "L555"
     },
     {
       "id": "scripts_verify_cyan",
@@ -631,7 +643,7 @@
       "file_type": "code",
       "norm_label": "cyan()",
       "source_file": "scripts/verify.py",
-      "source_location": "L74"
+      "source_location": "L75"
     },
     {
       "id": "scripts_verify_dim",
@@ -643,7 +655,7 @@
       "file_type": "code",
       "norm_label": "dim()",
       "source_file": "scripts/verify.py",
-      "source_location": "L76"
+      "source_location": "L77"
     },
     {
       "id": "scripts_verify_get_html_files",
@@ -655,7 +667,7 @@
       "file_type": "code",
       "norm_label": "get_html_files()",
       "source_file": "scripts/verify.py",
-      "source_location": "L79"
+      "source_location": "L80"
     },
     {
       "id": "scripts_verify_green",
@@ -667,7 +679,7 @@
       "file_type": "code",
       "norm_label": "green()",
       "source_file": "scripts/verify.py",
-      "source_location": "L73"
+      "source_location": "L74"
     },
     {
       "id": "scripts_verify_log_error",
@@ -679,7 +691,7 @@
       "file_type": "code",
       "norm_label": "log_error()",
       "source_file": "scripts/verify.py",
-      "source_location": "L89"
+      "source_location": "L90"
     },
     {
       "id": "scripts_verify_log_pass",
@@ -691,7 +703,7 @@
       "file_type": "code",
       "norm_label": "log_pass()",
       "source_file": "scripts/verify.py",
-      "source_location": "L95"
+      "source_location": "L96"
     },
     {
       "id": "scripts_verify_log_warning",
@@ -703,7 +715,7 @@
       "file_type": "code",
       "norm_label": "log_warning()",
       "source_file": "scripts/verify.py",
-      "source_location": "L92"
+      "source_location": "L93"
     },
     {
       "id": "scripts_verify_main",
@@ -715,7 +727,7 @@
       "file_type": "code",
       "norm_label": "main()",
       "source_file": "scripts/verify.py",
-      "source_location": "L1323"
+      "source_location": "L1353"
     },
     {
       "id": "scripts_verify_parse_html",
@@ -727,7 +739,7 @@
       "file_type": "code",
       "norm_label": "parse_html()",
       "source_file": "scripts/verify.py",
-      "source_location": "L86"
+      "source_location": "L87"
     },
     {
       "id": "scripts_verify_read_html",
@@ -739,7 +751,7 @@
       "file_type": "code",
       "norm_label": "read_html()",
       "source_file": "scripts/verify.py",
-      "source_location": "L83"
+      "source_location": "L84"
     },
     {
       "id": "scripts_verify_red",
@@ -751,7 +763,7 @@
       "file_type": "code",
       "norm_label": "red()",
       "source_file": "scripts/verify.py",
-      "source_location": "L71"
+      "source_location": "L72"
     },
     {
       "id": "scripts_verify_yellow",
@@ -763,7 +775,7 @@
       "file_type": "code",
       "norm_label": "yellow()",
       "source_file": "scripts/verify.py",
-      "source_location": "L72"
+      "source_location": "L73"
     },
     {
       "id": "assets_js_modules_tour_closetouroverlay",
@@ -4761,249 +4773,7 @@
       "source_location": "L1"
     },
     {
-      "id": "scripts_verify_rationale_1001",
-      "label": "Check for unguarded optional function calls, duplicate listeners, and legacy\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "check for unguarded optional function calls, duplicate listeners, and legacy...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1001"
-    },
-    {
-      "id": "scripts_verify_rationale_1061",
-      "label": "Scan all CSS files for url(...) references and verify assets exist.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "scan all css files for url(...) references and verify assets exist.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1061"
-    },
-    {
-      "id": "scripts_verify_rationale_1096",
-      "label": "Verify image alt attributes, link noopener on _blank, single h1 per page,\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "verify image alt attributes, link noopener on _blank, single h1 per page,...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1096"
-    },
-    {
-      "id": "scripts_verify_rationale_1167",
-      "label": "Verify resume data in ui.js matches HTML & JSON-LD role titles and contact info.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "verify resume data in ui.js matches html & json-ld role titles and contact info.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1167"
-    },
-    {
-      "id": "scripts_verify_rationale_1231",
-      "label": "Validate Portfolio Tracker and key Markdown documents for MD009/MD026\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "validate portfolio tracker and key markdown documents for md009/md026...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1231"
-    },
-    {
-      "id": "scripts_verify_rationale_1257",
-      "label": "Execute node --test across tests/unit/ and assert all tests pass.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "execute node --test across tests/unit/ and assert all tests pass.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1257"
-    },
-    {
-      "id": "scripts_verify_rationale_1297",
-      "label": "Verify that every HTML page includes a valid Content-Security-Policy meta tag.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "verify that every html page includes a valid content-security-policy meta tag.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1297"
-    },
-    {
-      "id": "scripts_verify_rationale_200",
-      "label": "Every item must have an id; ids must be unique within the file.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "every item must have an id; ids must be unique within the file.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L200"
-    },
-    {
-      "id": "scripts_verify_rationale_248",
-      "label": "href=\"<file>.html#<id>\" anchors must resolve.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "href=\"<file>.html#<id>\" anchors must resolve.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L248"
-    },
-    {
-      "id": "scripts_verify_rationale_413",
-      "label": "Scan every href=\"*.html\" and href=\"*.html#fragment\" across all pages. Verify\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "scan every href=\"*.html\" and href=\"*.html#fragment\" across all pages. verify...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L413"
-    },
-    {
-      "id": "scripts_verify_rationale_475",
-      "label": "Scan src=, href=, data-cert=, data-download= for local asset paths. Verify each\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "scan src=, href=, data-cert=, data-download= for local asset paths. verify each...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L475"
-    },
-    {
-      "id": "scripts_verify_rationale_510",
-      "label": "Run node --check on script.js, bg-animations.js, and all modules.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "run node --check on script.js, bg-animations.js, and all modules.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L510"
-    },
-    {
-      "id": "scripts_verify_rationale_555",
-      "label": "Assert sw.js, script.js, releases.js data file, all 8 JS modules, tracker,\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "assert sw.js, script.js, releases.js data file, all 8 js modules, tracker,...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L555"
-    },
-    {
-      "id": "scripts_verify_rationale_700",
-      "label": "Parse the MODULES array from script.js and verify every listed module path\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "parse the modules array from script.js and verify every listed module path...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L700"
-    },
-    {
-      "id": "scripts_verify_rationale_730",
-      "label": "Compare sitemap.xml URLs against actual *.html files.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "compare sitemap.xml urls against actual *.html files.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L730"
-    },
-    {
-      "id": "scripts_verify_rationale_767",
-      "label": "Parse site.webmanifest as JSON. Verify required fields.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "parse site.webmanifest as json. verify required fields.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L767"
-    },
-    {
-      "id": "scripts_verify_rationale_797",
-      "label": "Extract <script type=\"application/ld+json\"> blocks, parse as JSON, verify\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "extract <script type=\"application/ld+json\"> blocks, parse as json, verify...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L797"
-    },
-    {
-      "id": "scripts_verify_rationale_80",
-      "label": "Return sorted list of site HTML files (excluding google verification).",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "return sorted list of site html files (excluding google verification).",
-      "source_file": "scripts/verify.py",
-      "source_location": "L80"
-    },
-    {
-      "id": "scripts_verify_rationale_839",
-      "label": "Warn when files exceed size thresholds.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "warn when files exceed size thresholds.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L839"
-    },
-    {
-      "id": "scripts_verify_rationale_873",
-      "label": "Parse sw.js STATIC_ASSETS array. Verify every listed file exists. Flag any\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "parse sw.js static_assets array. verify every listed file exists. flag any...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L873"
-    },
-    {
-      "id": "scripts_verify_rationale_934",
-      "label": "Verify Sitemap: directive URL and basic syntax.",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "verify sitemap: directive url and basic syntax.",
-      "source_file": "scripts/verify.py",
-      "source_location": "L934"
-    },
-    {
-      "id": "scripts_verify_rationale_964",
-      "label": "Scan all pages for id=\"\" attributes. Flag collisions that could confuse cross-\u2026",
-      "_origin": "ast",
-      "community": 0,
-      "community_name": "verify.py",
-      "file_type": "rationale",
-      "norm_label": "scan all pages for id=\"\" attributes. flag collisions that could confuse cross-...",
-      "source_file": "scripts/verify.py",
-      "source_location": "L964"
-    },
-    {
-      "id": "scripts_verify_rationale_99",
+      "id": "scripts_verify_rationale_100",
       "label": "Validate claim provenance without accepting mutable or placeholder refs.",
       "_origin": "ast",
       "community": 0,
@@ -5011,7 +4781,260 @@
       "file_type": "rationale",
       "norm_label": "validate claim provenance without accepting mutable or placeholder refs.",
       "source_file": "scripts/verify.py",
-      "source_location": "L99"
+      "source_location": "L100"
+    },
+    {
+      "id": "scripts_verify_rationale_1031",
+      "label": "Check for unguarded optional function calls, duplicate listeners, and legacy\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "check for unguarded optional function calls, duplicate listeners, and legacy...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1031"
+    },
+    {
+      "id": "scripts_verify_rationale_1091",
+      "label": "Scan all CSS files for url(...) references and verify assets exist.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "scan all css files for url(...) references and verify assets exist.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1091"
+    },
+    {
+      "id": "scripts_verify_rationale_1126",
+      "label": "Verify image alt attributes, link noopener on _blank, single h1 per page,\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "verify image alt attributes, link noopener on _blank, single h1 per page,...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1126"
+    },
+    {
+      "id": "scripts_verify_rationale_1197",
+      "label": "Verify resume data in ui.js matches HTML & JSON-LD role titles and contact info.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "verify resume data in ui.js matches html & json-ld role titles and contact info.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1197"
+    },
+    {
+      "id": "scripts_verify_rationale_1261",
+      "label": "Validate Portfolio Tracker and key Markdown documents for MD009/MD026\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "validate portfolio tracker and key markdown documents for md009/md026...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1261"
+    },
+    {
+      "id": "scripts_verify_rationale_1287",
+      "label": "Execute node --test across tests/unit/ and assert all tests pass.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "execute node --test across tests/unit/ and assert all tests pass.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1287"
+    },
+    {
+      "id": "scripts_verify_rationale_1327",
+      "label": "Verify that every HTML page includes a valid Content-Security-Policy meta tag.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "verify that every html page includes a valid content-security-policy meta tag.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1327"
+    },
+    {
+      "id": "scripts_verify_rationale_201",
+      "label": "Every item must have an id; ids must be unique within the file.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "every item must have an id; ids must be unique within the file.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L201"
+    },
+    {
+      "id": "scripts_verify_rationale_249",
+      "label": "href=\"<file>.html#<id>\" anchors must resolve.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "href=\"<file>.html#<id>\" anchors must resolve.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L249"
+    },
+    {
+      "id": "scripts_verify_rationale_414",
+      "label": "Scan every href=\"*.html\" and href=\"*.html#fragment\" across all pages. Verify\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "scan every href=\"*.html\" and href=\"*.html#fragment\" across all pages. verify...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L414"
+    },
+    {
+      "id": "scripts_verify_rationale_476",
+      "label": "Scan src=, href=, data-cert=, data-download= for local asset paths. Verify each\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "scan src=, href=, data-cert=, data-download= for local asset paths. verify each...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L476"
+    },
+    {
+      "id": "scripts_verify_rationale_511",
+      "label": "Run node --check on script.js, bg-animations.js, and all modules.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "run node --check on script.js, bg-animations.js, and all modules.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L511"
+    },
+    {
+      "id": "scripts_verify_rationale_556",
+      "label": "Assert sw.js, script.js, releases.js data file, all 8 JS modules, tracker,\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "assert sw.js, script.js, releases.js data file, all 8 js modules, tracker,...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L556"
+    },
+    {
+      "id": "scripts_verify_rationale_701",
+      "label": "Verify that every release in SITE_RELEASES has a valid git commit SHA format\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "verify that every release in site_releases has a valid git commit sha format...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L701"
+    },
+    {
+      "id": "scripts_verify_rationale_730",
+      "label": "Parse the MODULES array from script.js and verify every listed module path\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "parse the modules array from script.js and verify every listed module path...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L730"
+    },
+    {
+      "id": "scripts_verify_rationale_760",
+      "label": "Compare sitemap.xml URLs against actual *.html files.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "compare sitemap.xml urls against actual *.html files.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L760"
+    },
+    {
+      "id": "scripts_verify_rationale_797",
+      "label": "Parse site.webmanifest as JSON. Verify required fields.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "parse site.webmanifest as json. verify required fields.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L797"
+    },
+    {
+      "id": "scripts_verify_rationale_81",
+      "label": "Return sorted list of site HTML files (excluding google verification).",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "return sorted list of site html files (excluding google verification).",
+      "source_file": "scripts/verify.py",
+      "source_location": "L81"
+    },
+    {
+      "id": "scripts_verify_rationale_827",
+      "label": "Extract <script type=\"application/ld+json\"> blocks, parse as JSON, verify\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "extract <script type=\"application/ld+json\"> blocks, parse as json, verify...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L827"
+    },
+    {
+      "id": "scripts_verify_rationale_869",
+      "label": "Warn when files exceed size thresholds.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "warn when files exceed size thresholds.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L869"
+    },
+    {
+      "id": "scripts_verify_rationale_903",
+      "label": "Parse sw.js STATIC_ASSETS array. Verify every listed file exists. Flag any\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "parse sw.js static_assets array. verify every listed file exists. flag any...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L903"
+    },
+    {
+      "id": "scripts_verify_rationale_964",
+      "label": "Verify Sitemap: directive URL and basic syntax.",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "verify sitemap: directive url and basic syntax.",
+      "source_file": "scripts/verify.py",
+      "source_location": "L964"
+    },
+    {
+      "id": "scripts_verify_rationale_994",
+      "label": "Scan all pages for id=\"\" attributes. Flag collisions that could confuse cross-\u2026",
+      "_origin": "ast",
+      "community": 0,
+      "community_name": "verify.py",
+      "file_type": "rationale",
+      "norm_label": "scan all pages for id=\"\" attributes. flag collisions that could confuse cross-...",
+      "source_file": "scripts/verify.py",
+      "source_location": "L994"
     },
     {
       "id": "dev_logs_portfoliowebsite_tracker_evidence_verification_log_v20_additions",
@@ -5901,7 +5924,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "55.8.0"
+      "version": "55.9.0"
     },
     {
       "id": "sync",
@@ -13943,42 +13966,6 @@
       "source_location": "L24349"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_and_your_repo_actually_fits_the_analogy_unusually_well",
-      "label": "And your repo actually fits the analogy unusually well",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "and your repo actually fits the analogy unusually well",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L83"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L23"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_29",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L29"
-    },
-    {
       "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_334",
       "label": "Assistant",
       "_origin": "ast",
@@ -14013,18 +14000,6 @@
       "norm_label": "assistant",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
       "source_location": "L346"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_35",
-      "label": "Assistant",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "assistant",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L35"
     },
     {
       "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_352",
@@ -14123,66 +14098,6 @@
       "source_location": "L394"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_distributed_provision_service",
-      "label": "Distributed Provision Service",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "distributed provision service",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L1"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_i_would_actually_call_the_broader_concept",
-      "label": "I would actually call the broader concept",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "i would actually call the broader concept",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L120"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_the_ddos_pos_analogy",
-      "label": "The DDOS \u2194 PoS analogy",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "the ddos \u2194 pos analogy",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L41"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_1",
-      "label": "Turn 1",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "turn 1",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L9"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_2",
-      "label": "Turn 2",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "turn 2",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L17"
-    },
-    {
       "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_3",
       "label": "Turn 3",
       "_origin": "ast",
@@ -14195,18 +14110,6 @@
       "source_location": "L156"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user",
-      "label": "User",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "user",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L11"
-    },
-    {
       "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user_158",
       "label": "User",
       "_origin": "ast",
@@ -14217,30 +14120,6 @@
       "norm_label": "user",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
       "source_location": "L158"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user_19",
-      "label": "User",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "user",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L19"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_what_claude_desktop_actually_is_now",
-      "label": "What Claude-Desktop actually is now",
-      "_origin": "ast",
-      "community": 215,
-      "community_name": "Turn 3",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "what claude-desktop actually is now",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L400"
     },
     {
       "id": "dev_logs_2026_09_16_analyze_recent_repository_works_conversation_and_this_is_where_your_electronics_background_becomes_valuable",
@@ -17735,6 +17614,30 @@
       "source_location": "L9905"
     },
     {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_and_your_repo_actually_fits_the_analogy_unusually_well_746",
+      "label": "And your repo actually fits the analogy unusually well",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "and your repo actually fits the analogy unusually well",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L746"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_appendix_distributed_provision_service_chatgpt_session_continuation",
+      "label": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "\ud83d\udcce appendix: distributed provision service (chatgpt session continuation)",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L664"
+    },
+    {
       "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_1003",
       "label": "Assistant",
       "_origin": "ast",
@@ -17855,6 +17758,42 @@
       "source_location": "L1057"
     },
     {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_686",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L686"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_692",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L692"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_698",
+      "label": "Assistant",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "assistant",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L698"
+    },
+    {
       "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_997",
       "label": "Assistant",
       "_origin": "ast",
@@ -17865,6 +17804,54 @@
       "norm_label": "assistant",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
       "source_location": "L997"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_i_would_actually_call_the_broader_concept_783",
+      "label": "I would actually call the broader concept",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "i would actually call the broader concept",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L783"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_the_ddos_pos_analogy_704",
+      "label": "The DDOS \u2194 PoS analogy",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "the ddos \u2194 pos analogy",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L704"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_1_672",
+      "label": "Turn 1",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 1",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L672"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_2_680",
+      "label": "Turn 2",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "turn 2",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L680"
     },
     {
       "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_3_819",
@@ -17879,6 +17866,30 @@
       "source_location": "L819"
     },
     {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user_674",
+      "label": "User",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L674"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user_682",
+      "label": "User",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "user",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L682"
+    },
+    {
       "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user_821",
       "label": "User",
       "_origin": "ast",
@@ -17889,6 +17900,18 @@
       "norm_label": "user",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
       "source_location": "L821"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_what_claude_desktop_actually_is_now_1063",
+      "label": "What Claude-Desktop actually is now",
+      "_origin": "ast",
+      "community": 234,
+      "community_name": "Turn 3",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "what claude-desktop actually is now",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L1063"
     },
     {
       "id": "dev_logs_2026_09_16_analyze_recent_repository_works_conversation_assistant_5768",
@@ -18035,148 +18058,148 @@
       "source_location": "L5913"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_and_your_repo_actually_fits_the_analogy_unusually_well_746",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_and_your_repo_actually_fits_the_analogy_unusually_well",
       "label": "And your repo actually fits the analogy unusually well",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "and your repo actually fits the analogy unusually well",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L746"
+      "source_location": "L83"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_appendix_distributed_provision_service_chatgpt_session_continuation",
-      "label": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
-      "_origin": "ast",
-      "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
-      "file_type": "document",
-      "node_kind": "heading",
-      "norm_label": "\ud83d\udcce appendix: distributed provision service (chatgpt session continuation)",
-      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L664"
-    },
-    {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_686",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant",
       "label": "Assistant",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L686"
+      "source_location": "L23"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_692",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_29",
       "label": "Assistant",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L692"
+      "source_location": "L29"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_698",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_assistant_35",
       "label": "Assistant",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "assistant",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L698"
+      "source_location": "L35"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_i_would_actually_call_the_broader_concept_783",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_distributed_provision_service",
+      "label": "Distributed Provision Service",
+      "_origin": "ast",
+      "community": 236,
+      "community_name": "Distributed Provision Service",
+      "file_type": "document",
+      "node_kind": "heading",
+      "norm_label": "distributed provision service",
+      "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
+      "source_location": "L1"
+    },
+    {
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_i_would_actually_call_the_broader_concept",
       "label": "I would actually call the broader concept",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "i would actually call the broader concept",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L783"
+      "source_location": "L120"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_the_ddos_pos_analogy_704",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_the_ddos_pos_analogy",
       "label": "The DDOS \u2194 PoS analogy",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "the ddos \u2194 pos analogy",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L704"
+      "source_location": "L41"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_1_672",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_1",
       "label": "Turn 1",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "turn 1",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L672"
+      "source_location": "L9"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_2_680",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_turn_2",
       "label": "Turn 2",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "turn 2",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L680"
+      "source_location": "L17"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user_674",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user",
       "label": "User",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "user",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L674"
+      "source_location": "L11"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user_682",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_user_19",
       "label": "User",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "user",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L682"
+      "source_location": "L19"
     },
     {
-      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_what_claude_desktop_actually_is_now_1063",
+      "id": "dev_logs_2026_09_16_distributed_provision_service_conversation_what_claude_desktop_actually_is_now",
       "label": "What Claude-Desktop actually is now",
       "_origin": "ast",
       "community": 236,
-      "community_name": "\ud83d\udcce Appendix: Distributed Provision Service (ChatGPT Session Continuation)",
+      "community_name": "Distributed Provision Service",
       "file_type": "document",
       "node_kind": "heading",
       "norm_label": "what claude-desktop actually is now",
       "source_file": "dev-logs/2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md",
-      "source_location": "L1063"
+      "source_location": "L400"
     },
     {
       "id": "dev_logs_2026_09_16_analyze_recent_repository_works_conversation_1_preserve_the_portfolio_as_an_archaeological_record",
@@ -34049,7 +34072,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L75",
+      "source_location": "L76",
       "weight": 1.0
     },
     {
@@ -34061,7 +34084,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L478",
+      "source_location": "L479",
       "weight": 1.0
     },
     {
@@ -34073,7 +34096,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L490",
+      "source_location": "L491",
       "weight": 1.0
     },
     {
@@ -34085,7 +34108,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L499",
+      "source_location": "L500",
       "weight": 1.0
     },
     {
@@ -34097,7 +34120,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L503",
+      "source_location": "L504",
       "weight": 1.0
     },
     {
@@ -34109,7 +34132,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L416",
+      "source_location": "L417",
       "weight": 1.0
     },
     {
@@ -34121,7 +34144,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L421",
+      "source_location": "L422",
       "weight": 1.0
     },
     {
@@ -34133,7 +34156,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L455",
+      "source_location": "L456",
       "weight": 1.0
     },
     {
@@ -34145,7 +34168,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L468",
+      "source_location": "L469",
       "weight": 1.0
     },
     {
@@ -34157,7 +34180,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1302",
+      "source_location": "L1332",
       "weight": 1.0
     },
     {
@@ -34169,7 +34192,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1303",
+      "source_location": "L1333",
       "weight": 1.0
     },
     {
@@ -34181,7 +34204,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1306",
+      "source_location": "L1336",
       "weight": 1.0
     },
     {
@@ -34193,7 +34216,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1317",
+      "source_location": "L1347",
       "weight": 1.0
     },
     {
@@ -34205,7 +34228,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1087",
+      "source_location": "L1117",
       "weight": 1.0
     },
     {
@@ -34217,7 +34240,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1089",
+      "source_location": "L1119",
       "weight": 1.0
     },
     {
@@ -34229,7 +34252,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1175",
+      "source_location": "L1205",
       "weight": 1.0
     },
     {
@@ -34241,7 +34264,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1185",
+      "source_location": "L1215",
       "weight": 1.0
     },
     {
@@ -34253,7 +34276,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1202",
+      "source_location": "L1232",
       "weight": 1.0
     },
     {
@@ -34265,7 +34288,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1224",
+      "source_location": "L1254",
       "weight": 1.0
     },
     {
@@ -34277,7 +34300,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L853",
+      "source_location": "L883",
       "weight": 1.0
     },
     {
@@ -34289,7 +34312,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L862",
+      "source_location": "L892",
       "weight": 1.0
     },
     {
@@ -34301,7 +34324,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L866",
+      "source_location": "L896",
       "weight": 1.0
     },
     {
@@ -34313,7 +34336,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L979",
+      "source_location": "L1009",
       "weight": 1.0
     },
     {
@@ -34325,7 +34348,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L980",
+      "source_location": "L1010",
       "weight": 1.0
     },
     {
@@ -34337,7 +34360,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L990",
+      "source_location": "L1020",
       "weight": 1.0
     },
     {
@@ -34349,7 +34372,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L994",
+      "source_location": "L1024",
       "weight": 1.0
     },
     {
@@ -34361,7 +34384,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1099",
+      "source_location": "L1129",
       "weight": 1.0
     },
     {
@@ -34373,7 +34396,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1105",
+      "source_location": "L1135",
       "weight": 1.0
     },
     {
@@ -34385,7 +34408,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1110",
+      "source_location": "L1140",
       "weight": 1.0
     },
     {
@@ -34397,7 +34420,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1159",
+      "source_location": "L1189",
       "weight": 1.0
     },
     {
@@ -34409,7 +34432,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L203",
+      "source_location": "L204",
       "weight": 1.0
     },
     {
@@ -34421,7 +34444,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L205",
+      "source_location": "L206",
       "weight": 1.0
     },
     {
@@ -34433,7 +34456,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L226",
+      "source_location": "L227",
       "weight": 1.0
     },
     {
@@ -34445,7 +34468,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L239",
+      "source_location": "L240",
       "weight": 1.0
     },
     {
@@ -34457,7 +34480,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L250",
+      "source_location": "L251",
       "weight": 1.0
     },
     {
@@ -34469,7 +34492,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L255",
+      "source_location": "L256",
       "weight": 1.0
     },
     {
@@ -34481,7 +34504,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L261",
+      "source_location": "L262",
       "weight": 1.0
     },
     {
@@ -34493,7 +34516,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L265",
+      "source_location": "L266",
       "weight": 1.0
     },
     {
@@ -34505,7 +34528,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1028",
+      "source_location": "L1058",
       "weight": 1.0
     },
     {
@@ -34517,7 +34540,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1050",
+      "source_location": "L1080",
       "weight": 1.0
     },
     {
@@ -34529,7 +34552,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1054",
+      "source_location": "L1084",
       "weight": 1.0
     },
     {
@@ -34541,7 +34564,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L514",
+      "source_location": "L515",
       "weight": 1.0
     },
     {
@@ -34553,7 +34576,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L528",
+      "source_location": "L529",
       "weight": 1.0
     },
     {
@@ -34565,60 +34588,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L548",
+      "source_location": "L549",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_check_jsonld_schemas",
       "target": "scripts_verify_get_html_files",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L800",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_jsonld_schemas",
-      "target": "scripts_verify_parse_html",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L805",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_jsonld_schemas",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L811",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_jsonld_schemas",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L825",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_jsonld_schemas",
-      "target": "scripts_verify_log_pass",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34629,6 +34604,54 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_parse_html",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L835",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L841",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L855",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L860",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_verify_check_manifest",
       "target": "scripts_verify_log_error",
       "relation": "calls",
@@ -34637,7 +34660,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L770",
+      "source_location": "L800",
       "weight": 1.0
     },
     {
@@ -34649,7 +34672,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L784",
+      "source_location": "L814",
       "weight": 1.0
     },
     {
@@ -34661,7 +34684,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L788",
+      "source_location": "L818",
       "weight": 1.0
     },
     {
@@ -34673,11 +34696,131 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L707",
+      "source_location": "L737",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_check_module_files",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L753",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_get_html_files",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L376",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_read_html",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L379",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L381",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L390",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_pwa_and_a11y_metadata",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L407",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_quantitative_claims",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L108",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_quantitative_claims",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L153",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_quantitative_claims",
+      "target": "scripts_verify_parse_html",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L162",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_release_shas",
+      "target": "scripts_verify_log_error",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L705",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_release_shas",
       "target": "scripts_verify_log_pass",
       "relation": "calls",
       "_origin": "ast",
@@ -34689,102 +34832,6 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_get_html_files",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L375",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_read_html",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L378",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L380",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L389",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_pwa_and_a11y_metadata",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L406",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_quantitative_claims",
-      "target": "scripts_verify_log_error",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L107",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_quantitative_claims",
-      "target": "scripts_verify_log_pass",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L152",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_quantitative_claims",
-      "target": "scripts_verify_parse_html",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L161",
-      "weight": 1.0
-    },
-    {
       "source": "scripts_verify_check_robots_txt",
       "target": "scripts_verify_log_error",
       "relation": "calls",
@@ -34793,7 +34840,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L937",
+      "source_location": "L967",
       "weight": 1.0
     },
     {
@@ -34805,7 +34852,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L943",
+      "source_location": "L973",
       "weight": 1.0
     },
     {
@@ -34817,7 +34864,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L952",
+      "source_location": "L982",
       "weight": 1.0
     },
     {
@@ -34829,7 +34876,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L348",
+      "source_location": "L349",
       "weight": 1.0
     },
     {
@@ -34841,7 +34888,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L364",
+      "source_location": "L365",
       "weight": 1.0
     },
     {
@@ -34853,7 +34900,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L367",
+      "source_location": "L368",
       "weight": 1.0
     },
     {
@@ -34865,7 +34912,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L733",
+      "source_location": "L763",
       "weight": 1.0
     },
     {
@@ -34877,7 +34924,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L747",
+      "source_location": "L777",
       "weight": 1.0
     },
     {
@@ -34889,7 +34936,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L755",
+      "source_location": "L785",
       "weight": 1.0
     },
     {
@@ -34901,7 +34948,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L760",
+      "source_location": "L790",
       "weight": 1.0
     },
     {
@@ -34913,36 +34960,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L877",
+      "source_location": "L907",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_check_sw_cache_completeness",
       "target": "scripts_verify_get_html_files",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L896",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sw_cache_completeness",
-      "target": "scripts_verify_log_warning",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L900",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_check_sw_cache_completeness",
-      "target": "scripts_verify_log_pass",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -34953,6 +34976,30 @@
       "weight": 1.0
     },
     {
+      "source": "scripts_verify_check_sw_cache_completeness",
+      "target": "scripts_verify_log_warning",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L930",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_check_sw_cache_completeness",
+      "target": "scripts_verify_log_pass",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L956",
+      "weight": 1.0
+    },
+    {
       "source": "scripts_verify_check_tag_balance",
       "target": "scripts_verify_log_error",
       "relation": "calls",
@@ -34961,7 +35008,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L327",
+      "source_location": "L328",
       "weight": 1.0
     },
     {
@@ -34973,7 +35020,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L331",
+      "source_location": "L332",
       "weight": 1.0
     },
     {
@@ -34985,7 +35032,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1242",
+      "source_location": "L1272",
       "weight": 1.0
     },
     {
@@ -34997,7 +35044,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1250",
+      "source_location": "L1280",
       "weight": 1.0
     },
     {
@@ -35009,7 +35056,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1261",
+      "source_location": "L1291",
       "weight": 1.0
     },
     {
@@ -35021,7 +35068,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1282",
+      "source_location": "L1312",
       "weight": 1.0
     },
     {
@@ -35033,7 +35080,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1286",
+      "source_location": "L1316",
       "weight": 1.0
     },
     {
@@ -35045,7 +35092,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L568",
+      "source_location": "L569",
       "weight": 1.0
     },
     {
@@ -35057,7 +35104,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L693",
+      "source_location": "L694",
       "weight": 1.0
     },
     {
@@ -35069,7 +35116,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L74",
+      "source_location": "L75",
       "weight": 1.0
     },
     {
@@ -35081,7 +35128,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L76",
+      "source_location": "L77",
       "weight": 1.0
     },
     {
@@ -35093,7 +35140,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L73",
+      "source_location": "L74",
       "weight": 1.0
     },
     {
@@ -35105,7 +35152,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1335",
+      "source_location": "L1365",
       "weight": 1.0
     },
     {
@@ -35117,7 +35164,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1344",
+      "source_location": "L1374",
       "weight": 1.0
     },
     {
@@ -35129,7 +35176,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1350",
+      "source_location": "L1380",
       "weight": 1.0
     },
     {
@@ -35141,7 +35188,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1353",
+      "source_location": "L1383",
       "weight": 1.0
     },
     {
@@ -35153,7 +35200,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1354",
+      "source_location": "L1384",
       "weight": 1.0
     },
     {
@@ -35165,7 +35212,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1358",
+      "source_location": "L1388",
       "weight": 1.0
     },
     {
@@ -35177,7 +35224,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1360",
+      "source_location": "L1390",
       "weight": 1.0
     },
     {
@@ -35189,7 +35236,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1363",
+      "source_location": "L1393",
       "weight": 1.0
     },
     {
@@ -35201,7 +35248,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1366",
+      "source_location": "L1396",
       "weight": 1.0
     },
     {
@@ -35213,7 +35260,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1369",
+      "source_location": "L1399",
       "weight": 1.0
     },
     {
@@ -35225,7 +35272,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1372",
+      "source_location": "L1402",
       "weight": 1.0
     },
     {
@@ -35237,132 +35284,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1375",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_module_files",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1378",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_sitemap_sync",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1381",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_manifest",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1384",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_jsonld_schemas",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1387",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_file_sizes",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1390",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_sw_cache_completeness",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1393",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_robots_txt",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1396",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_global_id_uniqueness",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1399",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_js_safety",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
-      "source_location": "L1402",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_main",
-      "target": "scripts_verify_check_css_integrity",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "scripts/verify.py",
       "source_location": "L1405",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_main",
-      "target": "scripts_verify_check_html_a11y_seo",
+      "target": "scripts_verify_check_release_shas",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35374,7 +35301,7 @@
     },
     {
       "source": "scripts_verify_main",
-      "target": "scripts_verify_check_data_consistency",
+      "target": "scripts_verify_check_module_files",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35386,7 +35313,7 @@
     },
     {
       "source": "scripts_verify_main",
-      "target": "scripts_verify_check_tracker_hygiene",
+      "target": "scripts_verify_check_sitemap_sync",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35398,7 +35325,7 @@
     },
     {
       "source": "scripts_verify_main",
-      "target": "scripts_verify_check_unit_tests",
+      "target": "scripts_verify_check_manifest",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35410,7 +35337,7 @@
     },
     {
       "source": "scripts_verify_main",
-      "target": "scripts_verify_check_csp_integrity",
+      "target": "scripts_verify_check_jsonld_schemas",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35422,7 +35349,7 @@
     },
     {
       "source": "scripts_verify_main",
-      "target": "scripts_verify_check_quantitative_claims",
+      "target": "scripts_verify_check_file_sizes",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -35434,6 +35361,138 @@
     },
     {
       "source": "scripts_verify_main",
+      "target": "scripts_verify_check_sw_cache_completeness",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1426",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_robots_txt",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1429",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_global_id_uniqueness",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1432",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_js_safety",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1435",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_css_integrity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1438",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_html_a11y_seo",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1441",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_data_consistency",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1444",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_tracker_hygiene",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1447",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_unit_tests",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1450",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_csp_integrity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1453",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
+      "target": "scripts_verify_check_quantitative_claims",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "scripts/verify.py",
+      "source_location": "L1456",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_main",
       "target": "scripts_verify_red",
       "relation": "calls",
       "_origin": "ast",
@@ -35441,7 +35500,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1440",
+      "source_location": "L1473",
       "weight": 1.0
     },
     {
@@ -35453,7 +35512,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1442",
+      "source_location": "L1475",
       "weight": 1.0
     },
     {
@@ -35465,7 +35524,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1446",
+      "source_location": "L1479",
       "weight": 1.0
     },
     {
@@ -35477,7 +35536,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L1452",
+      "source_location": "L1485",
       "weight": 1.0
     },
     {
@@ -35489,7 +35548,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L87",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -35501,7 +35560,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L71",
+      "source_location": "L72",
       "weight": 1.0
     },
     {
@@ -35513,7 +35572,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L72",
+      "source_location": "L73",
       "weight": 1.0
     },
     {
@@ -57214,7 +57273,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1000",
+      "source_location": "L1030",
       "weight": 1.0
     },
     {
@@ -57225,7 +57284,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1060",
+      "source_location": "L1090",
       "weight": 1.0
     },
     {
@@ -57236,7 +57295,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1095",
+      "source_location": "L1125",
       "weight": 1.0
     },
     {
@@ -57247,7 +57306,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1166",
+      "source_location": "L1196",
       "weight": 1.0
     },
     {
@@ -57258,7 +57317,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1230",
+      "source_location": "L1260",
       "weight": 1.0
     },
     {
@@ -57269,7 +57328,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1256",
+      "source_location": "L1286",
       "weight": 1.0
     },
     {
@@ -57280,7 +57339,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1296",
+      "source_location": "L1326",
       "weight": 1.0
     },
     {
@@ -57291,7 +57350,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1323",
+      "source_location": "L1353",
       "weight": 1.0
     },
     {
@@ -57302,7 +57361,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L199",
+      "source_location": "L200",
       "weight": 1.0
     },
     {
@@ -57313,7 +57372,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L247",
+      "source_location": "L248",
       "weight": 1.0
     },
     {
@@ -57324,7 +57383,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L271",
+      "source_location": "L272",
       "weight": 1.0
     },
     {
@@ -57335,7 +57394,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L337",
+      "source_location": "L338",
       "weight": 1.0
     },
     {
@@ -57346,7 +57405,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L373",
+      "source_location": "L374",
       "weight": 1.0
     },
     {
@@ -57357,7 +57416,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L412",
+      "source_location": "L413",
       "weight": 1.0
     },
     {
@@ -57368,7 +57427,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L474",
+      "source_location": "L475",
       "weight": 1.0
     },
     {
@@ -57379,7 +57438,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L509",
+      "source_location": "L510",
       "weight": 1.0
     },
     {
@@ -57390,7 +57449,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L554",
+      "source_location": "L555",
       "weight": 1.0
     },
     {
@@ -57401,18 +57460,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L68",
+      "source_location": "L69",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_module_files",
+      "target": "scripts_verify_check_release_shas",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L699",
+      "source_location": "L700",
       "weight": 1.0
     },
     {
@@ -57423,23 +57482,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L71",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify",
-      "target": "scripts_verify_yellow",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
       "source_location": "L72",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_sitemap_sync",
+      "target": "scripts_verify_check_module_files",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -57450,7 +57498,7 @@
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_green",
+      "target": "scripts_verify_yellow",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -57461,7 +57509,7 @@
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_cyan",
+      "target": "scripts_verify_green",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -57472,7 +57520,7 @@
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_bold",
+      "target": "scripts_verify_cyan",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -57483,7 +57531,18 @@
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_dim",
+      "target": "scripts_verify_check_sitemap_sync",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L759",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
+      "target": "scripts_verify_bold",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -57494,29 +57553,18 @@
     },
     {
       "source": "scripts_verify",
+      "target": "scripts_verify_dim",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L77",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
       "target": "scripts_verify_check_manifest",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L766",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify",
-      "target": "scripts_verify_get_html_files",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L79",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify",
-      "target": "scripts_verify_check_jsonld_schemas",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -57527,13 +57575,35 @@
     },
     {
       "source": "scripts_verify",
+      "target": "scripts_verify_get_html_files",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L80",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
+      "target": "scripts_verify_check_jsonld_schemas",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L826",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
       "target": "scripts_verify_read_html",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L83",
+      "source_location": "L84",
       "weight": 1.0
     },
     {
@@ -57544,7 +57614,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L838",
+      "source_location": "L868",
       "weight": 1.0
     },
     {
@@ -57555,18 +57625,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L86",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify",
-      "target": "scripts_verify_check_sw_cache_completeness",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L872",
+      "source_location": "L87",
       "weight": 1.0
     },
     {
@@ -57577,7 +57636,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L89",
+      "source_location": "L90",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
+      "target": "scripts_verify_check_sw_cache_completeness",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L902",
       "weight": 1.0
     },
     {
@@ -57588,18 +57658,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L92",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify",
-      "target": "scripts_verify_check_robots_txt",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L933",
+      "source_location": "L93",
       "weight": 1.0
     },
     {
@@ -57610,12 +57669,12 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L95",
+      "source_location": "L96",
       "weight": 1.0
     },
     {
       "source": "scripts_verify",
-      "target": "scripts_verify_check_global_id_uniqueness",
+      "target": "scripts_verify_check_robots_txt",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -57632,7 +57691,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L98",
+      "source_location": "L99",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify",
+      "target": "scripts_verify_check_global_id_uniqueness",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L993",
       "weight": 1.0
     },
     {
@@ -59143,162 +59213,173 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1001",
+      "source": "scripts_verify_rationale_100",
+      "target": "scripts_verify_check_quantitative_claims",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_rationale_1031",
       "target": "scripts_verify_check_js_safety",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1001",
+      "source_location": "L1031",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1061",
+      "source": "scripts_verify_rationale_1091",
       "target": "scripts_verify_check_css_integrity",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1061",
+      "source_location": "L1091",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1096",
+      "source": "scripts_verify_rationale_1126",
       "target": "scripts_verify_check_html_a11y_seo",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1096",
+      "source_location": "L1126",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1167",
+      "source": "scripts_verify_rationale_1197",
       "target": "scripts_verify_check_data_consistency",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1167",
+      "source_location": "L1197",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1231",
+      "source": "scripts_verify_rationale_1261",
       "target": "scripts_verify_check_tracker_hygiene",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1231",
+      "source_location": "L1261",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1257",
+      "source": "scripts_verify_rationale_1287",
       "target": "scripts_verify_check_unit_tests",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1257",
+      "source_location": "L1287",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_1297",
+      "source": "scripts_verify_rationale_1327",
       "target": "scripts_verify_check_csp_integrity",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L1297",
+      "source_location": "L1327",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_200",
+      "source": "scripts_verify_rationale_201",
       "target": "scripts_verify_check_ids",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L200",
+      "source_location": "L201",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_248",
+      "source": "scripts_verify_rationale_249",
       "target": "scripts_verify_check_internal_hrefs",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L248",
+      "source_location": "L249",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_413",
+      "source": "scripts_verify_rationale_414",
       "target": "scripts_verify_check_cross_page_links",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L413",
+      "source_location": "L414",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_475",
+      "source": "scripts_verify_rationale_476",
       "target": "scripts_verify_check_asset_references",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L475",
+      "source_location": "L476",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_510",
+      "source": "scripts_verify_rationale_511",
       "target": "scripts_verify_check_js_syntax",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L510",
+      "source_location": "L511",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_555",
+      "source": "scripts_verify_rationale_556",
       "target": "scripts_verify_check_version_consistency",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L555",
+      "source_location": "L556",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_700",
-      "target": "scripts_verify_check_module_files",
+      "source": "scripts_verify_rationale_701",
+      "target": "scripts_verify_check_release_shas",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L700",
+      "source_location": "L701",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_rationale_730",
-      "target": "scripts_verify_check_sitemap_sync",
+      "target": "scripts_verify_check_module_files",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -59308,19 +59389,19 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_767",
-      "target": "scripts_verify_check_manifest",
+      "source": "scripts_verify_rationale_760",
+      "target": "scripts_verify_check_sitemap_sync",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L767",
+      "source_location": "L760",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_rationale_797",
-      "target": "scripts_verify_check_jsonld_schemas",
+      "target": "scripts_verify_check_manifest",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -59330,52 +59411,52 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_80",
+      "source": "scripts_verify_rationale_81",
       "target": "scripts_verify_get_html_files",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L80",
+      "source_location": "L81",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_839",
+      "source": "scripts_verify_rationale_827",
+      "target": "scripts_verify_check_jsonld_schemas",
+      "relation": "rationale_for",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "scripts/verify.py",
+      "source_location": "L827",
+      "weight": 1.0
+    },
+    {
+      "source": "scripts_verify_rationale_869",
       "target": "scripts_verify_check_file_sizes",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L839",
+      "source_location": "L869",
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_873",
+      "source": "scripts_verify_rationale_903",
       "target": "scripts_verify_check_sw_cache_completeness",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L873",
-      "weight": 1.0
-    },
-    {
-      "source": "scripts_verify_rationale_934",
-      "target": "scripts_verify_check_robots_txt",
-      "relation": "rationale_for",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "scripts/verify.py",
-      "source_location": "L934",
+      "source_location": "L903",
       "weight": 1.0
     },
     {
       "source": "scripts_verify_rationale_964",
-      "target": "scripts_verify_check_global_id_uniqueness",
+      "target": "scripts_verify_check_robots_txt",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -59385,14 +59466,14 @@
       "weight": 1.0
     },
     {
-      "source": "scripts_verify_rationale_99",
-      "target": "scripts_verify_check_quantitative_claims",
+      "source": "scripts_verify_rationale_994",
+      "target": "scripts_verify_check_global_id_uniqueness",
       "relation": "rationale_for",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "scripts/verify.py",
-      "source_location": "L99",
+      "source_location": "L994",
       "weight": 1.0
     },
     {
@@ -59901,7 +59982,7 @@
       "confidence_score": 0.85,
       "context": "call",
       "source_file": "scripts/verify.py",
-      "source_location": "L87",
+      "source_location": "L88",
       "weight": 1.0
     },
     {
@@ -61570,5 +61651,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "c4b5a5271fc11c3ae8d691d6f560026ec7a2db33"
+  "built_at_commit": "253981ed401e49fb13a7063d174d801dfed862be"
 }

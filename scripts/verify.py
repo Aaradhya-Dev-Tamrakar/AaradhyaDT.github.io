@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v55.8)
+aaradhyadt.github.io (v55.9)
 
-25 check categories covering HTML structure, cross-page links, asset
+26 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
 CSS URL integrity, deep a11y & SEO, version consistency across all modules,
+What's New release commit SHA integrity,
 semantic data consistency, PWA compliance, file size budgets, markdown hygiene,
 and more.
 
@@ -694,6 +695,35 @@ def check_version_consistency():
 
 
 # ════════════════════════════════════════════════════════════════════
+#  CHECK 9.5: What's New Release Commit SHA Integrity
+# ════════════════════════════════════════════════════════════════════
+def check_release_shas():
+    """Verify that every release in SITE_RELEASES has a valid git commit SHA
+    format and that no placeholder tokens (relXX, upgXX, xtoolXX, etc.) exist."""
+    cat = "release-shas"
+    if not RELEASES_JS.exists():
+        log_error(cat, "releases.js not found")
+        return
+
+    text = RELEASES_JS.read_text(encoding="utf-8")
+    sha_entries = re.findall(r"version:\s*['\"]([^'\"]+)['\"].*?sha:\s*['\"]([^'\"]+)['\"]", text, re.DOTALL)
+    if not sha_entries:
+        log_error(cat, "no release entries found in releases.js")
+        return
+
+    sha_pattern = re.compile(r"^[0-9a-f]{7,40}$", re.IGNORECASE)
+    invalid = []
+    for ver, sha in sha_entries:
+        if not sha_pattern.match(sha):
+            invalid.append(f"{ver}: '{sha}' (must be 7-40 hex SHA)")
+
+    if invalid:
+        log_error(cat, f"invalid placeholder release SHA(s) detected: {', '.join(invalid)}")
+    else:
+        log_pass(cat, f"all {len(sha_entries)} releases have valid hex commit SHAs")
+
+
+# ════════════════════════════════════════════════════════════════════
 #  CHECK 10: Module file existence
 # ════════════════════════════════════════════════════════════════════
 def check_module_files():
@@ -1333,7 +1363,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v55.8)"))
+    print(bold("  Portfolio Site Verification Suite (v55.9)"))
     print(bold("=" * 60))
     print()
 
@@ -1373,6 +1403,9 @@ def main():
 
     # 9. Version consistency
     check_version_consistency()
+
+    # 9.5. What's New release commit SHA integrity
+    check_release_shas()
 
     # 10. Module files
     check_module_files()
