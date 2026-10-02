@@ -1,6 +1,6 @@
 {
-  "sha": "7e95e9b1f25de61d6c1121e0403dbcabc4c0ab65",
-  "shortSha": "7e95e9b",
-  "date": "2026-10-01T12:59:30+05:45",
-  "message": "feat(projects): dual-pane layout with evidence on left and proof image on right"
+  "sha": "495d7c20b20f4c288c0761b026c168d051372cbe",
+  "shortSha": "495d7c2",
+  "date": "2026-10-02T12:16:55+05:45",
+  "message": "fix(releases): hook all What's New releases to valid commit history SHAs"
 }
