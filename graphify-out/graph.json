@@ -5924,7 +5924,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "55.11.0"
+      "version": "55.12.0"
     },
     {
       "id": "sync",
@@ -61662,5 +61662,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "7a66ed0914db623fcd437c8e3e9a1eca15703964"
+  "built_at_commit": "f62b94673a77ecb5f70baad73a6751e6db5c4bc0"
 }

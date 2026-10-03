@@ -3,13 +3,15 @@
 /* ── Navigation ───────────────────────────────────────────── */
 #nav,
 noscript > nav {
+  --nav-logo-slot: 250px;
+  --nav-right-slot: max-content;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 100;
   display: grid;
-  grid-template-columns: auto 1fr auto;
+  grid-template-columns: var(--nav-logo-slot) 1fr var(--nav-right-slot);
   column-gap: 1.5rem;
   align-items: center;
   padding: max(1.75rem, env(safe-area-inset-top, 1.75rem)) max(2.5rem, env(safe-area-inset-right, 2.5rem)) 1.75rem max(3rem, env(safe-area-inset-left, 3rem));
@@ -44,6 +46,9 @@ noscript > nav.scrolled {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+  width: var(--nav-logo-slot, 250px);
+  min-width: var(--nav-logo-slot, 250px);
+  justify-content: flex-start;
   transition: font-size 0.35s cubic-bezier(0.16, 1, 0.3, 1), gap 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   white-space: nowrap;
 }
@@ -54,64 +59,106 @@ noscript > nav.scrolled .nav-logo {
   gap: 0.35rem;
 }
 
-.nav-wordmark {
-  font-family: var(--mono);
-  font-size: 0.74rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  max-width: 240px;
-  opacity: 0.95;
-  overflow: hidden;
-  white-space: nowrap;
+.nav-brand-text {
   display: inline-flex;
-  align-items: center;
-  transform: translateX(0);
-  transition:
-    max-width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
-    opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
-    margin 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  align-items: baseline;
+  gap: 0.28em;
+  will-change: gap;
+  transition: gap 0.45s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.nav-wordmark::after {
-  content: "·";
-  margin: 0 0.45rem 0 0.45rem;
-  color: var(--accent);
-  font-weight: 700;
-  opacity: 0.8;
+.nav-word {
+  display: inline-flex;
+  align-items: baseline;
 }
 
-.nav-monogram {
+.nav-initial {
   font-family: var(--serif);
   font-size: inherit;
   font-weight: 400;
-  letter-spacing: 0.02em;
   color: var(--heading);
-  display: inline-flex;
-  align-items: center;
+  letter-spacing: 0.02em;
+  display: inline-block;
 }
 
-#nav.scrolled .nav-wordmark,
-noscript > nav.scrolled .nav-wordmark {
+.nav-rest {
+  font-family: var(--serif);
+  font-size: inherit;
+  font-weight: 400;
+  color: var(--muted);
+  display: inline-block;
+  max-width: 140px;
+  opacity: 0.88;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: baseline;
+  transform: scaleX(1) translateX(0);
+  transform-origin: left baseline;
+  will-change: max-width, opacity, transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition:
+    max-width 0.45s cubic-bezier(0.16, 1, 0.3, 1),
+    opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.nav-dot {
+  color: var(--accent);
+  font-family: var(--serif);
+  font-weight: 600;
+  display: inline-block;
+}
+
+#nav.scrolled .nav-rest,
+noscript > nav.scrolled .nav-rest {
   max-width: 0;
   opacity: 0;
-  margin: 0;
-  transform: translateX(-8px);
+  transform: scaleX(0.75) translateX(-4px);
   pointer-events: none;
 }
 
-.nav-logo span {
+#nav.scrolled .nav-brand-text,
+noscript > nav.scrolled .nav-brand-text {
+  gap: 0.04em;
+}
+
+@media (hover: hover) and (min-width: 901px) {
+  #nav.scrolled .nav-logo:hover .nav-rest {
+    max-width: 140px;
+    opacity: 0.95;
+    transform: scaleX(1) translateX(0);
+    pointer-events: auto;
+  }
+  #nav.scrolled .nav-logo:hover .nav-brand-text {
+    gap: 0.28em;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .nav-rest,
+  .nav-brand-text {
+    transition: none !important;
+    animation: none !important;
+  }
+  #nav.scrolled .nav-rest {
+    max-width: 0 !important;
+    opacity: 0 !important;
+    transform: none !important;
+  }
+}
+
+.nav-logo > span:not(.nav-brand-text) {
   color: var(--accent);
 }
+
 
 .nav-links {
   display: flex;
   gap: 0.5rem;
   list-style: none;
   justify-content: flex-start;
-  margin-left: 2rem;
+  margin-left: 0.5rem;
 }
 
 .nav-links a {
@@ -136,8 +183,8 @@ noscript > nav.scrolled .nav-wordmark {
 
 #nav.scrolled .nav-links a,
 noscript > nav.scrolled .nav-links a {
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .nav-links a:hover {
@@ -162,6 +209,8 @@ noscript > nav.scrolled .nav-links a {
   align-items: center;
   gap: 0.65rem;
   justify-content: flex-end;
+  justify-self: end;
+  flex-shrink: 0;
 }
 
 .nav-cta {
@@ -173,13 +222,18 @@ noscript > nav.scrolled .nav-links a {
   color: var(--accent);
   text-decoration: none;
   border: 1px solid var(--accent-a80);
-  padding: 0.55rem 1.25rem;
+  padding: 0.5rem 1.15rem;
   border-radius: 2px;
   position: relative;
   overflow: hidden;
+  height: 38px;
+  min-height: 38px;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   box-shadow: 0 0 10px var(--accent-a35);
   transition:
-    padding 0.35s cubic-bezier(0.16, 1, 0.3, 1),
     background 0.25s,
     color 0.25s,
     box-shadow 0.3s;
@@ -187,7 +241,7 @@ noscript > nav.scrolled .nav-links a {
 
 #nav.scrolled .nav-cta,
 noscript > nav.scrolled .nav-cta {
-  padding: 0.4rem 1.05rem;
+  padding: 0.5rem 1.15rem;
 }
 
 @media (hover: hover) and (min-width: 769px) {
@@ -712,6 +766,26 @@ html[data-theme="light"] #quick-nav::before {
   }
 }
 
+@media (max-width: 1050px) and (min-width: 901px) {
+  #nav,
+  noscript > nav {
+    --nav-logo-slot: 230px;
+    column-gap: 1rem;
+    padding-left: max(1.5rem, env(safe-area-inset-left, 1.5rem));
+    padding-right: max(1.5rem, env(safe-area-inset-right, 1.5rem));
+  }
+
+  .nav-links {
+    margin-left: 0;
+    gap: 0.35rem;
+  }
+
+  .nav-links a {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.72rem;
+  }
+}
+
 @media (max-width: 900px) {
   #nav,
   noscript > nav {
@@ -729,14 +803,26 @@ html[data-theme="light"] #quick-nav::before {
       backdrop-filter 0.35s ease;
   }
 
+  .nav-logo {
+    width: auto !important;
+    min-width: 0 !important;
+  }
+
   #nav.scrolled,
   noscript > nav.scrolled {
     padding-top: max(0.7rem, env(safe-area-inset-top, 0.7rem));
     padding-bottom: 0.7rem;
   }
 
-  .nav-wordmark {
-    display: none !important;
+  .nav-rest {
+    max-width: 0 !important;
+    opacity: 0 !important;
+    transform: translateX(-4px) !important;
+    pointer-events: none !important;
+  }
+
+  .nav-brand-text {
+    gap: 0.04em !important;
   }
 
   .nav-links {
