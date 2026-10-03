@@ -1,6 +1,6 @@
 {
-  "sha": "a7f7a9681a73a05d1581352cd48384bd05cb692f",
-  "shortSha": "a7f7a96",
-  "date": "2026-10-02T12:31:37+05:45",
-  "message": "docs(rules): reference @AGENTS.md from GEMINI.md and enforce release-shas"
+  "sha": "fd464e8b2cd07d2fdde918d4e902f6d47d64d402",
+  "shortSha": "fd464e8",
+  "date": "2026-10-03T08:51:56+05:45",
+  "message": "feat(nav): implement fluid wordmark collapse and 3-zone fixed-slot layout"
 }
