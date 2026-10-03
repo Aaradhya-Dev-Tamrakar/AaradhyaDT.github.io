@@ -1,10 +1,10 @@
 /* ============================================================
-   SHARED SCRIPT — aaradhyadt.github.io (v55.13)
+   SHARED SCRIPT — aaradhyadt.github.io (v55.14)
    Loaded on every page via <script src="assets/js/script.js">.
    Orchestrates core modules from assets/js/modules/
    ============================================================ */
 
-/* ── Dynamic Module Loader (v55.13) — Tiered Parallel ─────────── */
+/* ── Dynamic Module Loader (v55.14) — Tiered Parallel ─────────── */
 window.__modulesLoadedPromise = (async function () {
   // Modules grouped by dependency tier — each group loads concurrently via
   // Promise.all, but tiers execute sequentially (tier N+1 waits for tier N).
@@ -248,6 +248,19 @@ function syncQueuedContactMessages() {
 
     pending.forEach(async (formData) => {
       try {
+        const gf = (typeof SITE !== 'undefined' && SITE.googleForm) ? SITE.googleForm : null;
+        if (gf && gf.enabled && gf.actionUrl) {
+          const gfData = new FormData();
+          gfData.append(gf.entries.name, formData.name);
+          gfData.append(gf.entries.email, formData.email);
+          gfData.append(gf.entries.subject, formData.subject);
+          gfData.append(gf.entries.message, formData.message);
+          await fetch(gf.actionUrl, { method: "POST", mode: "no-cors", body: gfData });
+          showToast(`Queued message from ${formData.name} sent successfully!`);
+          if (typeof playAudioCue === 'function') playAudioCue('chime');
+          return;
+        }
+
         const FORMSPREE_ID = (typeof SITE !== 'undefined' && SITE.formspreeId) ? SITE.formspreeId : "mrejgjyd";
         const res = await fetch("https://formspree.io/f/" + FORMSPREE_ID, {
           method: "POST",

@@ -2275,7 +2275,7 @@
       "file_type": "code",
       "norm_label": "queueofflinecontactmessage()",
       "source_file": "assets/js/script.js",
-      "source_location": "L272"
+      "source_location": "L285"
     },
     {
       "id": "assets_js_script_syncqueuedcontactmessages",
@@ -5924,7 +5924,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "55.13.0"
+      "version": "55.14.0"
     },
     {
       "id": "sync",
@@ -24918,7 +24918,7 @@
       "file_type": "code",
       "norm_label": "cmdk_icons",
       "source_file": "assets/js/modules/constants.js",
-      "source_location": "L90"
+      "source_location": "L100"
     },
     {
       "id": "assets_js_modules_constants_cmdk_type_label",
@@ -24929,7 +24929,7 @@
       "file_type": "code",
       "norm_label": "cmdk_type_label",
       "source_file": "assets/js/modules/constants.js",
-      "source_location": "L82"
+      "source_location": "L92"
     },
     {
       "id": "assets_js_modules_constants_quick_nav_pages",
@@ -24940,7 +24940,7 @@
       "file_type": "code",
       "norm_label": "quick_nav_pages",
       "source_file": "assets/js/modules/constants.js",
-      "source_location": "L49"
+      "source_location": "L59"
     },
     {
       "id": "assets_js_modules_constants_site",
@@ -24962,7 +24962,7 @@
       "file_type": "code",
       "norm_label": "social_icons",
       "source_file": "assets/js/modules/constants.js",
-      "source_location": "L36"
+      "source_location": "L46"
     },
     {
       "id": "dev_logs_2026_09_16_analyze_recent_repository_works_conversation_ai_systems_intelligent_systems_engineering_21824",
@@ -33628,7 +33628,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/script.js",
-      "source_location": "L261",
+      "source_location": "L274",
       "weight": 1.0
     },
     {
@@ -38186,13 +38186,24 @@
     },
     {
       "source": "assets_js_modules_constants",
+      "target": "assets_js_modules_constants_cmdk_icons",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/constants.js",
+      "source_location": "L100",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_constants",
       "target": "assets_js_modules_constants_social_icons",
       "relation": "contains",
       "_origin": "ast",
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/constants.js",
-      "source_location": "L36",
+      "source_location": "L46",
       "weight": 1.0
     },
     {
@@ -38203,7 +38214,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/constants.js",
-      "source_location": "L49",
+      "source_location": "L59",
       "weight": 1.0
     },
     {
@@ -38225,18 +38236,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/constants.js",
-      "source_location": "L82",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_constants",
-      "target": "assets_js_modules_constants_cmdk_icons",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/constants.js",
-      "source_location": "L90",
+      "source_location": "L92",
       "weight": 1.0
     },
     {
@@ -39644,7 +39644,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/script.js",
-      "source_location": "L272",
+      "source_location": "L285",
       "weight": 1.0
     },
     {
@@ -64020,5 +64020,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "3e974a2f36762547951135fb5fc99e2ed08e5f19"
+  "built_at_commit": "90db90c7a068adaf7781087ec9a55b3b90c3bcae"
 }

@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: constants.js — aaradhyadt.github.io (v55.13)
+   MODULE: constants.js — aaradhyadt.github.io (v55.14)
    Site constants, social links, icons, and configuration metadata.
    ============================================================ */
 
@@ -7,6 +7,16 @@
 const SITE = {
   GA4_ID: 'G-P38642CDGB',
   formspreeId: 'mrejgjyd',
+  googleForm: {
+    actionUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdG9mmDTdt9enbDIByT6H_hokP5UqTvd1OmSiLuRQj8SS4ICw/formResponse',
+    entries: {
+      name: 'entry.124156067',
+      email: 'entry.1113280709',
+      subject: 'entry.967268305',
+      message: 'entry.1956799630',
+    },
+    enabled: true,
+  },
   googleClientId: '21529775347-1g1tg96qa47njo5g6fdhsuh81auqm11v.apps.googleusercontent.com',
   masterEmails: [
     'aaradhyadevtmr@gmail.com', 

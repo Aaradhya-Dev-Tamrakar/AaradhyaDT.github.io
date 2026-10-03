@@ -1,7 +1,12 @@
-# Portfolio Website Tracker — v55.13
+# Portfolio Website Tracker — v55.14
 
 Last updated: _2026-10-03_
 
+- **Headless Google Forms Contact Backend & Honeypot Bot Defense (`contact.html`, `constants.js`, `script.js`, `privacy.html`)**:
+  - **Headless Google Forms Primary Ledger (`constants.js`, `contact.html`)**: Integrated Google Forms headless response endpoint into `SITE.googleForm` in `assets/js/modules/constants.js`. Dispatches submissions directly to Google Forms via `fetch(..., { mode: 'no-cors' })`, logging entries into an immutable Google Sheet/Drive ledger with zero quota caps.
+  - **Automated Anti-Bot Honeypot Defense (`contact.html`)**: Embedded hidden honeypot field (`_hp_company`) invisible to screen readers and human users. Silently intercepts bot spam submissions without triggering network calls or leaking endpoint telemetry.
+  - **Offline Queue Resilient Synchronization (`script.js`, `contact.html`)**: Updated `syncQueuedContactMessages()` to prioritize Google Forms when re-establishing network connectivity, seamlessly falling back to Formspree, EmailJS, and `mailto:`.
+  - **Site-Wide CSP Standardization (`*.html`, `privacy.html`)**: Added `https://docs.google.com` to `connect-src` and `form-action` directives across all HTML pages, and updated Third-Party Services documentation in `privacy.html`.
 
 - **Portfolio Review Alignment, Static Hydration Synchronization & Access Gating Calibration (`index.html`, `journey.html`, `scripts/site_automation.py`, `scripts/verify.py`)**:
   - **Static Terminal & Placeholder Fallback Synchronization (`index.html`, `scripts/site_automation.py`, `scripts/verify.py`)**: Synchronized static HTML terminal fallback from stale `(v44)` to `(v55.12)` and replaced empty clock/date placeholders (`-- --- ----`, `—`) with valid static defaults (`03 Oct 2026 AD`, `Oct 3, 2026`). Integrated automated regex replacement in `site_automation.py` (`sync_metadata`) and asserted static-to-runtime parity in `scripts/verify.py` (`check_version_consistency` across 30 sources).
@@ -395,7 +400,7 @@ Last updated: _2026-10-03_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v55.13`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v55.14`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
