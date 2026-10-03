@@ -1,6 +1,6 @@
 {
-  "sha": "486652c0f41dffbd516b1a1340e5d02f78c1ec59",
-  "shortSha": "486652c",
-  "date": "2026-10-03T09:12:32+05:45",
-  "message": "fix(site): align static html fallbacks, calibrate content gating & refine hero hierarchy"
+  "sha": "62708a74ac7d9ac054e775639c0225e0d668222e",
+  "shortSha": "62708a7",
+  "date": "2026-10-03T10:45:04+05:45",
+  "message": "feat(contact): integrate headless Google Forms backend with honeypot bot defense"
 }
