@@ -1797,11 +1797,11 @@
 <button aria-expanded="false" class="journey-card-toggle" onclick="toggleJourneyCard(this)" type="button">
 <div class="journey-card-toggle-main">
 <div class="journey-meta"><span class="journey-period">v25 · Jul 2026</span><span>Feature</span></div>
-<h3 class="journey-title">Zero-Leak Multi-Tier Access Control</h3>
+<h3 class="journey-title">Client-Side Content Gating &amp; Multi-Tier Portfolio Access</h3>
 <div class="journey-tags">
 <span class="tag">Web Crypto API</span><span class="tag">AES-256-GCM</span>
 <span class="tag">PBKDF2</span><span class="tag">OAuth 2.0</span>
-<span class="tag">JWT</span><span class="tag">Client-side security</span>
+<span class="tag">JWT</span><span class="tag">Content Gating</span>
 </div>
 </div>
 <svg aria-hidden="true" class="journey-chevron" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24">
@@ -1812,14 +1812,14 @@
 <div class="journey-card-body-inner">
 <div class="journey-card-body-content">
 <ul class="journey-desc">
-<li>Built a 3-tier access system (Public / VIP / Master) where locked sections ship <em>zero</em> raw HTML — content is pre-encrypted client-side and only decrypted into memory after a passcode or Google Sign-In check passes, then wiped on logout.</li>
-<li>Key derivation via Web Crypto API PBKDF2 (100,000 iterations, SHA-256) feeding AES-256-GCM; Google Identity Services SDK handles OAuth, with client-side JWT parsing to read email/name/avatar and assign tier.</li>
+<li>Built a 3-tier access system (Public / VIP / Master) where gated sections ship pre-encrypted payloads — content is decrypted in memory via Web Crypto API after a passcode or Google Sign-In check passes, and wiped on logout.</li>
+<li>Key derivation via Web Crypto API PBKDF2 (100,000 iterations, SHA-256) feeding AES-256-GCM; Google Identity Services SDK handles client-side identity check to assign tiers without backend server dependencies.</li>
 </ul>
 <div class="journey-skill-label">Applied skillset</div>
 <div class="journey-tags">
 <span class="tag">Web Crypto API</span><span class="tag">AES-256-GCM</span>
 <span class="tag">PBKDF2</span><span class="tag">OAuth 2.0</span>
-<span class="tag">JWT</span><span class="tag">Client-side security</span>
+<span class="tag">JWT</span><span class="tag">Content Gating</span>
 </div>
 <div class="journey-links">
 <a class="journey-link" href="https://github.com/Aaradhya-Dev-Tamrakar/Aaradhya-Dev-Tamrakar.github.io/commit/539623396edbec47113fc0975b14c1c8f231da88" rel="noopener" target="_blank">View commit ↗</a>

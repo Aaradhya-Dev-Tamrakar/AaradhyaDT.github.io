@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for AaradhyaDT.github.io (v55.12)
+site_automation.py — Hyper-Automation Engine for AaradhyaDT.github.io (v55.13)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -436,6 +436,19 @@ def sync_metadata(version_tag=None):
         if new_py != py_text:
             PYPROJECT_TOML.write_text(new_py, encoding="utf-8")
             results.append(f"Updated pyproject.toml version to '{semver}'")
+
+    # 13. Update index.html static terminal fallback string
+    index_html = ROOT / "index.html"
+    if index_html.exists():
+        idx_text = index_html.read_text(encoding="utf-8")
+        new_idx = re.sub(
+            r"(Interactive Developer Terminal\s*\()(v[\d.]+)(\)\.)",
+            rf"\g<1>{clean_v}\g<3>",
+            idx_text
+        )
+        if new_idx != idx_text:
+            index_html.write_text(new_idx, encoding="utf-8")
+            results.append(f"Updated index.html static terminal fallback to '{clean_v}'")
 
     return results
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 manage_payloads.py — Developer & Agent Utility for Encrypted Sections (access.js)
-Zero-leak AES-256-GCM encryption/decryption manager with PBKDF2 key derivation.
+Client-side AES-256-GCM encryption/decryption manager with PBKDF2 key derivation for content gating.
 
 Usage:
   python scripts/manage_payloads.py list

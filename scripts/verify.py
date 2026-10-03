@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v55.12)
+aaradhyadt.github.io (v55.13)
 
 26 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -683,6 +683,16 @@ def check_version_consistency():
         else:
             log_error(cat, "terminal.js fallback versions not found")
 
+    # 14. index.html static terminal fallback version
+    idx_path = ROOT / "index.html"
+    if idx_path.exists():
+        idx_text = idx_path.read_text(encoding="utf-8")
+        m = re.search(r"Interactive Developer Terminal\s*\(v([\d.]+)\)", idx_text)
+        if m:
+            versions["index.html terminal static fallback"] = m.group(1)
+        else:
+            log_error(cat, "index.html static terminal fallback version not found")
+
     unique_versions = set(versions.values())
     if len(unique_versions) == 0:
         log_error(cat, "could not extract any version numbers")
@@ -1363,7 +1373,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v55.12)"))
+    print(bold("  Portfolio Site Verification Suite (v55.13)"))
     print(bold("=" * 60))
     print()
 

@@ -139,8 +139,8 @@ Rather than disconnected horizontal project demos, ADT's ecosystem spans an inte
 ## 9. Portfolio Website Architecture
 - **Tech Stack:** Vanilla HTML5, CSS3 Custom Properties (Design Tokens), Modular ES6 JavaScript (Zero Build Step).
 - **PWA & Offline:** Cache-first Service Worker (`sw.js`), Web App Manifest, offline form queueing with auto-sync.
-- **Security:** Web Crypto API (AES-256-GCM zero-leak payload decryption), client-side rate limiting, subresource integrity pinning.
-- **Testing & Diagnostics:** 22-category pre-commit verification suite (`scripts/verify.py`), AST syntax linting, automated CI/CD (`sync.ps1`).
+- **Content Gating & Security:** Web Crypto API (AES-256-GCM client-side payload decryption for tiered content gating), client-side rate limiting, subresource integrity pinning.
+- **Testing & Diagnostics:** 26-category pre-commit verification suite (`scripts/verify.py`), AST syntax linting, automated CI/CD (`sync.ps1`).
 
 ---
 

@@ -1,16 +1,16 @@
 # Graph Report - AaradhyaDT.github.io  (2026-10-03)
 
 ## Corpus Check
-- 125 files · ~2,431,217 words
+- 126 files · ~2,434,893 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 2494 nodes · 2817 edges · 368 communities (171 shown, 185 thin omitted)
+- 2597 nodes · 2919 edges · 373 communities (176 shown, 185 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `f62b9467`
+- Built from commit: `3e974a2f`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -240,6 +240,7 @@
 - My view of your present vs. future
 - Turn 3
 - Turn 12
+- Turn 2
 - My recommendations now
 - My recommendations now
 - My recommendations now
@@ -371,18 +372,22 @@
 - The Clean Refactor Plan (Bringing Manish's Calm to ADT)
 - 2. Proposed Navigation Model: The 4+1 Streamlined Structure
 - The Clean Refactor Plan (Bringing Manish's Calm to ADT)
+- Turn 2
+- Turn 3
+- 📎 Appendix: Portfolio Site Review (ChatGPT Session Continuation)
+- What I would change
 
 ## God Nodes (most connected - your core abstractions)
 1. `Verbatim Dialogue & Engineering Transcript` - 42 edges
 2. `Verbatim Dialogue & Engineering Transcript` - 42 edges
 3. `Turn 4` - 41 edges
 4. `main()` - 34 edges
-5. `log_pass()` - 28 edges
-6. `Phase 2 — Featured Work Showcase ✓` - 27 edges
-7. `Phase 2 — Featured Work Showcase ✓` - 27 edges
-8. `log_error()` - 24 edges
-9. `Portfolio Website Tracker — v53.26` - 21 edges
-10. `log_warning()` - 16 edges
+5. `Turn 2` - 29 edges
+6. `Turn 2` - 29 edges
+7. `log_pass()` - 28 edges
+8. `Phase 2 — Featured Work Showcase ✓` - 27 edges
+9. `Phase 2 — Featured Work Showcase ✓` - 27 edges
+10. `log_error()` - 24 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `Certificate: Introduction to Claude Cowork` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
@@ -414,7 +419,7 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (368 total, 185 thin omitted)
+## Communities (373 total, 185 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.09
@@ -780,6 +785,10 @@ Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, As
 Cohesion: 0.17
 Nodes (12): Assistant, Assistant, But there is an important weakness, So I would describe the evolution this way, This also explains why your work became faster, Turn 11, Turn 12, User (+4 more)
 
+### Community 236 - "Turn 2"
+Cohesion: 0.05
+Nodes (43): 1. Fix the static/runtime state mismatch, 2. Separate "portfolio gating" from "security", 3. Reduce the cognitive load on the first screen, 4. Watch the "student vs researcher" positioning, 5. Your Build Log is worth preserving, Assistant, Assistant, Assistant (+35 more)
+
 ### Community 237 - "My recommendations now"
 Cohesion: 0.18
 Nodes (11): 1. Preserve the portfolio as an archaeological record, 2. Create a "2026 Engineering Chronicle", 3. Track human effort separately from AI output, 4. Add a provenance layer across all your repositories, 5. Use 2027 differently from 2026, And I think there's a deeper story here, Assistant, My recommendations now (+3 more)
@@ -1100,22 +1109,38 @@ Nodes (3): 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Step 2: 
 Cohesion: 0.67
 Nodes (3): Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate), Phase 3: Secondary Layer & Deep HUDs (Progressive Disclosure), The Clean Refactor Plan (Bringing Manish's Calm to ADT)
 
+### Community 369 - "Turn 2"
+Cohesion: 0.07
+Nodes (29): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+21 more)
+
+### Community 370 - "Turn 3"
+Cohesion: 0.12
+Nodes (16): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+8 more)
+
+### Community 371 - "📎 Appendix: Portfolio Site Review (ChatGPT Session Continuation)"
+Cohesion: 0.25
+Nodes (8): 📎 Appendix: Portfolio Site Review (ChatGPT Session Continuation), Content architecture, First impression, One technical concern is more important, Overall assessment, The biggest thing I noticed, Turn 1, User
+
+### Community 372 - "What I would change"
+Cohesion: 0.33
+Nodes (6): 1. Fix the static/runtime state mismatch, 2. Separate "portfolio gating" from "security", 3. Reduce the cognitive load on the first screen, 4. Watch the "student vs researcher" positioning, 5. Your Build Log is worth preserving, What I would change
+
 ## Knowledge Gaps
-- **1571 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1566 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1739 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **1664 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1659 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1832 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **185 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `And this is the part I would preserve most carefully` connect `Turn 9` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
-  _High betweenness centrality (0.017) - this node is a cross-community bridge._
-- **Why does `This also explains why your work became faster` connect `Turn 13` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
-- **Why does `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` connect `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` to `Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study)`, `4. Technical Specifications`, `5. Implementation Roadmap`?**
+- **Why does `Portfolio Website Tracker — v53.26` connect `Portfolio Website Tracker — v53.26` to `v23 addition — latest site refinements (2026-07-18)`, `Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study)`?**
   _High betweenness centrality (0.013) - this node is a cross-community bridge._
+- **Why does `So I would change your scholarship framing slightly` connect `Turn 4` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
+- **Why does `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` connect `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` to `Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study)`, `4. Technical Specifications`, `5. Implementation Roadmap`?**
+  _High betweenness centrality (0.012) - this node is a cross-community bridge._
 - **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _1571 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _1664 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
   _Cohesion score 0.09134615384615384 - nodes in this community are weakly interconnected._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**

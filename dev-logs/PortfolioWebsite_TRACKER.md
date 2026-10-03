@@ -1,9 +1,13 @@
-# Portfolio Website Tracker — v55.12
+# Portfolio Website Tracker — v55.13
 
 Last updated: _2026-10-03_
 
 
-- **Verified Working Project Media Architecture & Multi-Format Previews (`projects.html`, `evidence.js`, `scripts/wire_project_media.py`, `assets/images/projects/`)**:
+- **Portfolio Review Alignment, Static Hydration Synchronization & Access Gating Calibration (`index.html`, `journey.html`, `scripts/site_automation.py`, `scripts/verify.py`)**:
+  - **Static Terminal & Placeholder Fallback Synchronization (`index.html`, `scripts/site_automation.py`, `scripts/verify.py`)**: Synchronized static HTML terminal fallback from stale `(v44)` to `(v55.12)` and replaced empty clock/date placeholders (`-- --- ----`, `—`) with valid static defaults (`03 Oct 2026 AD`, `Oct 3, 2026`). Integrated automated regex replacement in `site_automation.py` (`sync_metadata`) and asserted static-to-runtime parity in `scripts/verify.py` (`check_version_consistency` across 30 sources).
+  - **Client-Side Content Gating & Epistemic Calibration (`journey.html`, `index.html`, `scripts/manage_payloads.py`, `llms-full.txt`)**: Calibrated security phrasing across UI, documentation, and build logs to accurately describe the architecture as *Client-Side Content Gating & Tiered Portfolio Access with Local AES-256-GCM Decryption*, avoiding misleading confidentiality boundaries.
+  - **Hero First-Screen Cognitive Hierarchy Refinement (`index.html`)**: Enhanced landing hero with explicit domain scope (`Embedded Edge AI · Intelligent Systems · AI/ML Engineering`) paired with the distinctive researcher-in-training identity, ensuring instant recruiter and technical visitor comprehension.
+  - **Deterministic 26-Category Test Gate Verification (`scripts/verify.py`)**: Verified all 26 diagnostic categories passing cleanly with 30 synchronized version targets and zero drift.
   - **Dual-Pane Evidence & Proof Layout (`evidence.js`, `projects.html`)**: For cards with quantitative claims and provenance (`p-032`, `p-025`, `p-001`, `p-018`, `p-031`, `p-034`, `p-033`, `p-030`), automatically grouped into a 2-column `.project-evidence-row` layout with Evidence & Provenance on the left and verified working proof media on the right, switching to single-column on mobile viewports (<900px).
   - **Deterministic Media Injection (`projects.html`, `p-001` to `p-039`)**: Wired verified, non-synthetic working execution proofs into all 39 project cards (`p-001` through `p-039`) using `<picture>` with sub-250KB WebP images (`hero.webp`), fallback PNGs (`hero.png`), and descriptive, accessible `alt` text. Preserved interactive HTML5 demo video for GCSBR (`p-001`).
   - **Unified Media Preview Container & Micro-Badge UI (`projects.html`)**: Implemented responsive `.project-media-preview` container with theme-calibrated dark canvas, aspect-ratio preservation (`object-fit: contain`), micro-scale hover physics (`scale(1.015)`), and frosted "Verified Proof ↗" badge linking directly to uncompressed evidence assets.
@@ -391,7 +395,7 @@ Last updated: _2026-10-03_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v55.12`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v55.13`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
