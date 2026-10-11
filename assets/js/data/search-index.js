@@ -461,6 +461,13 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
+    "title": "Fleet-Orchestrator — Autonomous Multi-Model Agent Fleet & Swarm Engine",
+    "meta": "Python 3.14, Multi-Agent Swarm, FastAPI",
+    "href": "projects.html#p-040",
+    "text": "fleet-orchestrator — autonomous multi-model agent fleet & swarm engine autonomous multi-model agent fleet pooled across 27 copilot workers, gemini api, and antigravity. level 4 self-upgrading infrastructure with capability gap detection, adapter scaffolding, and colab a100 closed-loop retraining. 7 self-healing fleet sentinels and 297 unit tests certifying zero-drift deterministic execution. python 3.14 multi-agent swarm fastapi level 4 autonomous google colab"
+  },
+  {
+    "type": "project",
     "title": "IEEE-Xtreme Algorithmic Intelligence Archive — 662-Task Corpus & Xtreme-Bench",
     "meta": "Python 3.14, Hugging Face, LLM Benchmark",
     "href": "projects.html#p-039",

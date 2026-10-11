@@ -3967,7 +3967,7 @@
       "file_type": "code",
       "norm_label": "addcustomvipemail()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L234"
+      "source_location": "L235"
     },
     {
       "id": "assets_js_modules_access_authenticatewithpasskey",
@@ -3979,7 +3979,7 @@
       "file_type": "code",
       "norm_label": "authenticatewithpasskey()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L450"
+      "source_location": "L451"
     },
     {
       "id": "assets_js_modules_access_buffertohex",
@@ -3991,7 +3991,7 @@
       "file_type": "code",
       "norm_label": "buffertohex()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L392"
+      "source_location": "L393"
     },
     {
       "id": "assets_js_modules_access_closeaccessmodal",
@@ -4003,7 +4003,7 @@
       "file_type": "code",
       "norm_label": "closeaccessmodal()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L887"
+      "source_location": "L888"
     },
     {
       "id": "assets_js_modules_access_decrypthexpayload",
@@ -4015,7 +4015,7 @@
       "file_type": "code",
       "norm_label": "decrypthexpayload()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L77"
+      "source_location": "L78"
     },
     {
       "id": "assets_js_modules_access_getcustomvipemails",
@@ -4027,7 +4027,7 @@
       "file_type": "code",
       "norm_label": "getcustomvipemails()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L226"
+      "source_location": "L227"
     },
     {
       "id": "assets_js_modules_access_getdecryptionkey",
@@ -4039,7 +4039,7 @@
       "file_type": "code",
       "norm_label": "getdecryptionkey()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L50"
+      "source_location": "L51"
     },
     {
       "id": "assets_js_modules_access_getgoogleclientid",
@@ -4051,7 +4051,7 @@
       "file_type": "code",
       "norm_label": "getgoogleclientid()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L319"
+      "source_location": "L320"
     },
     {
       "id": "assets_js_modules_access_handlegooglecredentialresponse",
@@ -4063,7 +4063,7 @@
       "file_type": "code",
       "norm_label": "handlegooglecredentialresponse()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L267"
+      "source_location": "L268"
     },
     {
       "id": "assets_js_modules_access_hextobuffer",
@@ -4075,7 +4075,7 @@
       "file_type": "code",
       "norm_label": "hextobuffer()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L398"
+      "source_location": "L399"
     },
     {
       "id": "assets_js_modules_access_initaccesscontrol",
@@ -4087,7 +4087,7 @@
       "file_type": "code",
       "norm_label": "initaccesscontrol()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1066"
+      "source_location": "L1067"
     },
     {
       "id": "assets_js_modules_access_iswebauthnsupported",
@@ -4099,7 +4099,7 @@
       "file_type": "code",
       "norm_label": "iswebauthnsupported()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L385"
+      "source_location": "L386"
     },
     {
       "id": "assets_js_modules_access_openaccessmodal",
@@ -4111,7 +4111,7 @@
       "file_type": "code",
       "norm_label": "openaccessmodal()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L851"
+      "source_location": "L852"
     },
     {
       "id": "assets_js_modules_access_parsejwt",
@@ -4123,7 +4123,7 @@
       "file_type": "code",
       "norm_label": "parsejwt()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L209"
+      "source_location": "L210"
     },
     {
       "id": "assets_js_modules_access_promptaddvipemail",
@@ -4135,7 +4135,7 @@
       "file_type": "code",
       "norm_label": "promptaddvipemail()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L260"
+      "source_location": "L261"
     },
     {
       "id": "assets_js_modules_access_promptforgoogleclientid",
@@ -4147,7 +4147,7 @@
       "file_type": "code",
       "norm_label": "promptforgoogleclientid()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L323"
+      "source_location": "L324"
     },
     {
       "id": "assets_js_modules_access_registermasterpasskey",
@@ -4159,7 +4159,7 @@
       "file_type": "code",
       "norm_label": "registermasterpasskey()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L404"
+      "source_location": "L405"
     },
     {
       "id": "assets_js_modules_access_removecustomvipemail",
@@ -4171,7 +4171,7 @@
       "file_type": "code",
       "norm_label": "removecustomvipemail()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L251"
+      "source_location": "L252"
     },
     {
       "id": "assets_js_modules_access_renderaccessmodal",
@@ -4183,7 +4183,7 @@
       "file_type": "code",
       "norm_label": "renderaccessmodal()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L706"
+      "source_location": "L707"
     },
     {
       "id": "assets_js_modules_access_renderaccessmodal_handleauthenticate",
@@ -4195,7 +4195,7 @@
       "file_type": "code",
       "norm_label": "handleauthenticate()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L809"
+      "source_location": "L810"
     },
     {
       "id": "assets_js_modules_access_renderaccessnavbutton",
@@ -4207,7 +4207,7 @@
       "file_type": "code",
       "norm_label": "renderaccessnavbutton()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L504"
+      "source_location": "L505"
     },
     {
       "id": "assets_js_modules_access_rendergooglesigninbutton",
@@ -4219,7 +4219,7 @@
       "file_type": "code",
       "norm_label": "rendergooglesigninbutton()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L343"
+      "source_location": "L344"
     },
     {
       "id": "assets_js_modules_access_rendermastercontrolpanel",
@@ -4231,7 +4231,7 @@
       "file_type": "code",
       "norm_label": "rendermastercontrolpanel()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L922"
+      "source_location": "L923"
     },
     {
       "id": "assets_js_modules_access_showerror",
@@ -4243,7 +4243,7 @@
       "file_type": "code",
       "norm_label": "showerror()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L896"
+      "source_location": "L897"
     },
     {
       "id": "assets_js_modules_access_showtoast",
@@ -4255,7 +4255,7 @@
       "file_type": "code",
       "norm_label": "showtoast()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L905"
+      "source_location": "L906"
     },
     {
       "id": "assets_js_modules_access_updategatedcontentvisibility",
@@ -4267,7 +4267,7 @@
       "file_type": "code",
       "norm_label": "updategatedcontentvisibility()",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L565"
+      "source_location": "L566"
     },
     {
       "id": "tests_unit_test_core_helpers_test_computelivedates",
@@ -5924,7 +5924,7 @@
       "source_file": "pyproject.toml",
       "source_location": "L1",
       "type": "package",
-      "version": "55.14.0"
+      "version": "55.15.0"
     },
     {
       "id": "sync",
@@ -27483,7 +27483,7 @@
       "file_type": "code",
       "norm_label": "access_control",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L102"
+      "source_location": "L103"
     },
     {
       "id": "assets_js_modules_access_access_control_payloads",
@@ -27505,7 +27505,7 @@
       "file_type": "code",
       "norm_label": "key_cache",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L48"
+      "source_location": "L49"
     },
     {
       "id": "tests_unit_test_core_helpers_test",
@@ -31552,7 +31552,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L240",
+      "source_location": "L241",
       "weight": 1.0
     },
     {
@@ -31564,24 +31564,12 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L244",
+      "source_location": "L245",
       "weight": 1.0
     },
     {
       "source": "assets_js_modules_access_authenticatewithpasskey",
       "target": "assets_js_modules_access_iswebauthnsupported",
-      "relation": "calls",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "context": "call",
-      "source_file": "assets/js/modules/access.js",
-      "source_location": "L451",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_access_authenticatewithpasskey",
-      "target": "assets_js_modules_access_showerror",
       "relation": "calls",
       "_origin": "ast",
       "confidence": "EXTRACTED",
@@ -31593,6 +31581,18 @@
     },
     {
       "source": "assets_js_modules_access_authenticatewithpasskey",
+      "target": "assets_js_modules_access_showerror",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "assets/js/modules/access.js",
+      "source_location": "L453",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_access_authenticatewithpasskey",
       "target": "assets_js_modules_access_hextobuffer",
       "relation": "calls",
       "_origin": "ast",
@@ -31600,7 +31600,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L465",
+      "source_location": "L466",
       "weight": 1.0
     },
     {
@@ -31612,7 +31612,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L494",
+      "source_location": "L495",
       "weight": 1.0
     },
     {
@@ -31624,7 +31624,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L495",
+      "source_location": "L496",
       "weight": 1.0
     },
     {
@@ -31636,7 +31636,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L88",
+      "source_location": "L89",
       "weight": 1.0
     },
     {
@@ -31648,7 +31648,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L269",
+      "source_location": "L270",
       "weight": 1.0
     },
     {
@@ -31660,7 +31660,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L271",
+      "source_location": "L272",
       "weight": 1.0
     },
     {
@@ -31672,7 +31672,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L280",
+      "source_location": "L281",
       "weight": 1.0
     },
     {
@@ -31684,7 +31684,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L311",
+      "source_location": "L312",
       "weight": 1.0
     },
     {
@@ -31696,7 +31696,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L313",
+      "source_location": "L314",
       "weight": 1.0
     },
     {
@@ -31708,7 +31708,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1067",
+      "source_location": "L1068",
       "weight": 1.0
     },
     {
@@ -31720,7 +31720,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1068",
+      "source_location": "L1069",
       "weight": 1.0
     },
     {
@@ -31732,7 +31732,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1069",
+      "source_location": "L1070",
       "weight": 1.0
     },
     {
@@ -31744,7 +31744,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L852",
+      "source_location": "L853",
       "weight": 1.0
     },
     {
@@ -31756,7 +31756,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L883",
+      "source_location": "L884",
       "weight": 1.0
     },
     {
@@ -31768,7 +31768,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L263",
+      "source_location": "L264",
       "weight": 1.0
     },
     {
@@ -31780,7 +31780,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L325",
+      "source_location": "L326",
       "weight": 1.0
     },
     {
@@ -31792,7 +31792,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L328",
+      "source_location": "L329",
       "weight": 1.0
     },
     {
@@ -31804,7 +31804,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L339",
+      "source_location": "L340",
       "weight": 1.0
     },
     {
@@ -31816,7 +31816,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L405",
+      "source_location": "L406",
       "weight": 1.0
     },
     {
@@ -31828,7 +31828,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L406",
+      "source_location": "L407",
       "weight": 1.0
     },
     {
@@ -31840,7 +31840,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L439",
+      "source_location": "L440",
       "weight": 1.0
     },
     {
@@ -31852,7 +31852,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L253",
+      "source_location": "L254",
       "weight": 1.0
     },
     {
@@ -31864,7 +31864,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L256",
+      "source_location": "L257",
       "weight": 1.0
     },
     {
@@ -31876,7 +31876,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L844",
+      "source_location": "L845",
       "weight": 1.0
     },
     {
@@ -31888,7 +31888,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L848",
+      "source_location": "L849",
       "weight": 1.0
     },
     {
@@ -31900,7 +31900,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L814",
+      "source_location": "L815",
       "weight": 1.0
     },
     {
@@ -31912,7 +31912,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L820",
+      "source_location": "L821",
       "weight": 1.0
     },
     {
@@ -31924,7 +31924,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L822",
+      "source_location": "L823",
       "weight": 1.0
     },
     {
@@ -31936,7 +31936,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L347",
+      "source_location": "L348",
       "weight": 1.0
     },
     {
@@ -31948,7 +31948,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1010",
+      "source_location": "L1011",
       "weight": 1.0
     },
     {
@@ -31960,7 +31960,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1044",
+      "source_location": "L1045",
       "weight": 1.0
     },
     {
@@ -31972,7 +31972,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1058",
+      "source_location": "L1059",
       "weight": 1.0
     },
     {
@@ -31984,7 +31984,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L611",
+      "source_location": "L612",
       "weight": 1.0
     },
     {
@@ -31996,7 +31996,7 @@
       "confidence_score": 1.0,
       "context": "call",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L619",
+      "source_location": "L620",
       "weight": 1.0
     },
     {
@@ -37752,7 +37752,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L102",
+      "source_location": "L103",
       "weight": 1.0
     },
     {
@@ -37763,7 +37763,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L1066",
+      "source_location": "L1067",
       "weight": 1.0
     },
     {
@@ -37774,7 +37774,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L209",
+      "source_location": "L210",
       "weight": 1.0
     },
     {
@@ -37785,7 +37785,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L226",
+      "source_location": "L227",
       "weight": 1.0
     },
     {
@@ -37796,7 +37796,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L234",
+      "source_location": "L235",
       "weight": 1.0
     },
     {
@@ -37807,7 +37807,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L251",
+      "source_location": "L252",
       "weight": 1.0
     },
     {
@@ -37818,7 +37818,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L260",
+      "source_location": "L261",
       "weight": 1.0
     },
     {
@@ -37829,7 +37829,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L267",
+      "source_location": "L268",
       "weight": 1.0
     },
     {
@@ -37840,7 +37840,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L319",
+      "source_location": "L320",
       "weight": 1.0
     },
     {
@@ -37851,7 +37851,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L323",
+      "source_location": "L324",
       "weight": 1.0
     },
     {
@@ -37862,7 +37862,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L343",
+      "source_location": "L344",
       "weight": 1.0
     },
     {
@@ -37873,7 +37873,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L385",
+      "source_location": "L386",
       "weight": 1.0
     },
     {
@@ -37884,7 +37884,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L392",
+      "source_location": "L393",
       "weight": 1.0
     },
     {
@@ -37895,7 +37895,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L398",
+      "source_location": "L399",
       "weight": 1.0
     },
     {
@@ -37906,7 +37906,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L404",
+      "source_location": "L405",
       "weight": 1.0
     },
     {
@@ -37917,7 +37917,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L450",
+      "source_location": "L451",
       "weight": 1.0
     },
     {
@@ -37928,18 +37928,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L48",
-      "weight": 1.0
-    },
-    {
-      "source": "assets_js_modules_access",
-      "target": "assets_js_modules_access_getdecryptionkey",
-      "relation": "contains",
-      "_origin": "ast",
-      "confidence": "EXTRACTED",
-      "confidence_score": 1.0,
-      "source_file": "assets/js/modules/access.js",
-      "source_location": "L50",
+      "source_location": "L49",
       "weight": 1.0
     },
     {
@@ -37950,7 +37939,18 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L504",
+      "source_location": "L505",
+      "weight": 1.0
+    },
+    {
+      "source": "assets_js_modules_access",
+      "target": "assets_js_modules_access_getdecryptionkey",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "assets/js/modules/access.js",
+      "source_location": "L51",
       "weight": 1.0
     },
     {
@@ -37961,7 +37961,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L565",
+      "source_location": "L566",
       "weight": 1.0
     },
     {
@@ -37983,7 +37983,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L706",
+      "source_location": "L707",
       "weight": 1.0
     },
     {
@@ -37994,7 +37994,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L77",
+      "source_location": "L78",
       "weight": 1.0
     },
     {
@@ -38005,7 +38005,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L851",
+      "source_location": "L852",
       "weight": 1.0
     },
     {
@@ -38016,7 +38016,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L887",
+      "source_location": "L888",
       "weight": 1.0
     },
     {
@@ -38027,7 +38027,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L896",
+      "source_location": "L897",
       "weight": 1.0
     },
     {
@@ -38038,7 +38038,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L905",
+      "source_location": "L906",
       "weight": 1.0
     },
     {
@@ -38049,7 +38049,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L922",
+      "source_location": "L923",
       "weight": 1.0
     },
     {
@@ -61931,7 +61931,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L793",
+      "source_location": "L794",
       "weight": 1.0
     },
     {
@@ -61943,7 +61943,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L832",
+      "source_location": "L833",
       "weight": 1.0
     },
     {
@@ -61955,7 +61955,7 @@
       "confidence_score": 0.85,
       "context": "argument",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L837",
+      "source_location": "L838",
       "weight": 1.0
     },
     {
@@ -62363,7 +62363,7 @@
       "confidence_score": 0.85,
       "context": "collection",
       "source_file": "assets/js/modules/access.js",
-      "source_location": "L367",
+      "source_location": "L368",
       "weight": 1.0
     },
     {
@@ -64020,5 +64020,5 @@
       "source_file": "clean_codebase_payload.txt"
     }
   ],
-  "built_at_commit": "90db90c7a068adaf7781087ec9a55b3b90c3bcae"
+  "built_at_commit": "ad049f70bfeb980da769f098b1486c8df1d775a6"
 }
