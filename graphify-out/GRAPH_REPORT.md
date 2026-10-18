@@ -1,16 +1,17 @@
-# Graph Report - AaradhyaDT.github.io  (2026-10-11)
+# Graph Report - AaradhyaDT.github.io  (2026-10-18)
 
 ## Corpus Check
-- 126 files · ~2,435,728 words
+- 127 files · ~2,436,894 words
 - Verdict: corpus is large enough that graph structure adds value.
+- Unclassified: 28 file(s) not represented in the graph (top: .css 18, (none) 5, .gs 1)
 
 ## Summary
-- 2597 nodes · 2919 edges · 373 communities (176 shown, 185 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 82 edges (avg confidence: 0.86)
+- 2656 nodes · 3216 edges · 360 communities (169 shown, 191 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 102 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ad049f70`
+- Built from commit: `0afcc8b0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -22,16 +23,16 @@
 - site_automation.py
 - Lighthouse Audit Report
 - access.js
-- add_project
+- add_project.py
 - Aaradhya Dev Tamrakar
 - graph-modal.js
 - tour.js
-- sync_manifest
+- sync_drive.py
 - Aaradhya Dev Tamrakar CV
 - README.md
-- manage_payloads.py
+- json
 - PCBTraces
-- MockElement
+- test_graph_modal.test.mjs
 - Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)
 - sync.ps1
 - initGlobalSearch
@@ -44,26 +45,22 @@
 - Verbatim Dialogue & Engineering Transcript
 - 2026-09-17_EVALUATE-REPO_CONVERSATION.md
 - home-widgets.js
-- test_graph_modal.test.mjs
-- generate_cards
+- site_mcp.py
+- os
 - haptics.js
-- test_crypto.test.mjs
+- extract_index.py
 - audio.js
 - constants.js
 - Working conventions for this repo
-- QuietTestHandler
 - evidence.js
 - setup
 - Graphify Semantic Extraction Agent
 - Clean Codebase Payload
-- build_all
-- generate_pwa_icons.py
-- test_cmdk_search.test.mjs
+- pathlib
 - IEEE KEC Student Branch
 - IEEE
 - shortcuts.js
 - b/+gZfgcP9MbK6Lo6wbdtLsxl
-- Handler
 - Certificate: IEEE Volunteering Vice-Secretary
 - Introduction to Git Certificate (48697649)
 - Introduction to Python Certificate (47717251)
@@ -73,8 +70,6 @@
 - Evidence data
 - Performance Metrics
 - Multi-Tier Access Control
-- sanitize_and_payload.py
-- generate_graph_data.py
 - About | Aaradhya Dev Tamrakar
 - EU AI Act Literacy Certificate EU0028355472158
 - Poster: Workshop on Linux and Open Source Contribution
@@ -153,12 +148,6 @@
 - MnotWPDMcvlG
 - RQSPCZGZCWUnB9o7gftoMmLq4H
 - DOM Class
-- BiasAperture Project
-- Model Context Protocol Integration
-- NovaOptimizer Project
-- SPARK Project
-- Zero-Leak Access Control
-- Zero-Leak Security Model
 - Contact Page
 - OG image source README
 - Electric Vehicle Ratings, Drive Cycles, Battery Implications and Management.pdf
@@ -169,9 +158,7 @@
 - GCSBR Working Demo Poster
 - Gemini Agent Rules
 - Visual Regression Workflow
-- Google OAuth 2.0
 - Google Site Verification
-- Graphify
 - Home Page
 - Zero-Leak Multi-Tier Access Control
 - Interactive Skill Radar & ATS Resume Generator
@@ -204,7 +191,7 @@
 - UI Screenshot: Projects Page (Mobile)
 - Stamp Last Commit Workflow
 - Turn 3
-- GraphIndex
+- find_implementation.py
 - Contributing to Aaradhya's Portfolio Website
 - Verbatim Dialogue & Engineering Transcript
 - Phase 2 — Featured Work Showcase ✓
@@ -366,12 +353,8 @@
 - So I would change your scholarship framing slightly
 - v23 addition — latest site refinements (2026-07-18)
 - 2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md
+- setActiveNav
 - Portfolio Navigation, Showcase & Information Architecture Refactoring
-- Portfolio Navigation, Showcase & Information Architecture Refactoring
-- 2. Proposed Navigation Model: The 4+1 Streamlined Structure
-- The Clean Refactor Plan (Bringing Manish's Calm to ADT)
-- 2. Proposed Navigation Model: The 4+1 Streamlined Structure
-- The Clean Refactor Plan (Bringing Manish's Calm to ADT)
 - Turn 2
 - Turn 3
 - 📎 Appendix: Portfolio Site Review (ChatGPT Session Continuation)
@@ -381,7 +364,7 @@
 1. `Verbatim Dialogue & Engineering Transcript` - 42 edges
 2. `Verbatim Dialogue & Engineering Transcript` - 42 edges
 3. `Turn 4` - 41 edges
-4. `main()` - 34 edges
+4. `main()` - 36 edges
 5. `Turn 2` - 29 edges
 6. `Turn 2` - 29 edges
 7. `log_pass()` - 28 edges
@@ -390,16 +373,16 @@
 10. `log_error()` - 24 edges
 
 ## Surprising Connections (you probably didn't know these)
-- `Certificate: Introduction to Claude Cowork` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
-  assets/certificates/AI-Fluency_Foundations_of_Coworking_with_AI.webp → dev-logs/og-image/template.html
-- `Certificate: AI-Assisted Product Launch` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
-  assets/certificates/AI-Assisted_Product_Launch.webp → dev-logs/og-image/template.html
-- `Specialist Certification: EU AI Act Literacy` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
-  assets/certificates/EU_AI_Act_Literacy_EU0028355472158.webp → dev-logs/og-image/template.html
-- `Certificate: AI-Assisted Coding for Developers` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
-  assets/certificates/AI-Assisted_Coding_for_Developers_48952793.webp → dev-logs/og-image/template.html
-- `Aaradhya Dev Tamrakar Portfolio Banner` --references--> `Aaradhya Dev Tamrakar`  [EXTRACTED]
-  assets/images/og-image.jpg → dev-logs/og-image/template.html
+- `Key Milestones Delivered:` --references--> `setActiveNav()`  [INFERRED]
+  dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
+- `1. Navigation & Information Architecture Audit` --references--> `setActiveNav()`  [INFERRED]
+  chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
+- `Key Architectural Changes` --references--> `setActiveNav()`  [INFERRED]
+  chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
+- `Key Milestones Delivered:` --references--> `setActiveNav()`  [INFERRED]
+  chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
+- `1. Navigation & Information Architecture Audit` --references--> `setActiveNav()`  [INFERRED]
+  dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
 
 ## Import Cycles
 - None detected.
@@ -419,11 +402,11 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (373 total, 185 thin omitted)
+## Communities (360 total, 191 thin omitted)
 
 ### Community 0 - "verify.py"
-Cohesion: 0.09
-Nodes (64): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+56 more)
+Cohesion: 0.07
+Nodes (46): generate_payload(), sanitize_content(), find_browser(), generate_icon(), main(), bold(), _c(), check_asset_references() (+38 more)
 
 ### Community 1 - "Portfolio Website Tracker — v53.26"
 Cohesion: 0.10
@@ -431,15 +414,15 @@ Nodes (20): Evidence & Verification Log — v20 additions, Portfolio Website Tra
 
 ### Community 2 - "core.js"
 Cohesion: 0.06
-Nodes (43): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+35 more)
+Nodes (40): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+32 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
-Nodes (29): closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson(), generateResumeMarkdown() (+21 more)
+Nodes (31): renderSiteFooter(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson() (+23 more)
 
 ### Community 4 - "site_automation.py"
-Cohesion: 0.12
-Nodes (33): audit(), build_css_modules(), bump_version(), cmd_sync(), compute_next_version(), evaluate_bump_recommendation(), generate_commit_message(), get_current_version() (+25 more)
+Cohesion: 0.11
+Nodes (17): audit(), build_css_modules(), bump_version(), cmd_sync(), compute_next_version(), evaluate_bump_recommendation(), generate_commit_message(), get_current_version() (+9 more)
 
 ### Community 5 - "Lighthouse Audit Report"
 Cohesion: 0.07
@@ -449,13 +432,13 @@ Nodes (30): About Page, Achievements Page, Profile Photo, Accessibility Category
 Cohesion: 0.16
 Nodes (29): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), authenticateWithPasskey(), bufferToHex(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails() (+21 more)
 
-### Community 7 - "add_project"
-Cohesion: 0.14
-Nodes (24): BeautifulSoup, add_project(), build_card_soup(), derive_payload_slug(), encrypt_and_register_link(), get_next_project_id(), inject_card(), interactive_mode() (+16 more)
+### Community 7 - "add_project.py"
+Cohesion: 0.18
+Nodes (8): add_project(), build_card_soup(), derive_payload_slug(), get_next_project_id(), inject_card(), interactive_mode(), main(), recalculate_filter_counts()
 
 ### Community 8 - "Aaradhya Dev Tamrakar"
 Cohesion: 0.10
-Nodes (25): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developers, AI Fluency, Anthropic, Certificate: AI-Assisted Product Launch, Certificate: Introduction to Claude Cowork, Certificate: AI Fluency: Framework & Foundations, Certificate: Building a Go-To-Market Strategy (+17 more)
+Nodes (23): Aaradhya Dev Tamrakar, Certificate: AI-Assisted Coding for Developers, AI Fluency, Certificate: AI-Assisted Product Launch, Certificate: Introduction to Claude Cowork, Certificate: AI Fluency: Framework & Foundations, Certificate: Building a Go-To-Market Strategy, Certificate: Cleaning Data with Generative AI (+15 more)
 
 ### Community 9 - "graph-modal.js"
 Cohesion: 0.24
@@ -465,9 +448,9 @@ Nodes (20): bindEvents(), toggleFullscreen(), closeGraphModal(), escapeHtml(), f
 Cohesion: 0.27
 Nodes (19): closeTourOverlay(), ensureTourOverlay(), exitTour(), getTourCurrentPage(), getTourPageUrl(), initTour(), positionTourCard(), promptGuidedTour() (+11 more)
 
-### Community 11 - "sync_manifest"
-Cohesion: 0.16
-Nodes (19): Request, create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), Path, Exchanges refresh token for a fresh Google OAuth2 access token with retry. (+11 more)
+### Community 11 - "sync_drive.py"
+Cohesion: 0.13
+Nodes (9): create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), request_with_retry(), sync_manifest(), sync_notebooklm_sources() (+1 more)
 
 ### Community 12 - "Aaradhya Dev Tamrakar CV"
 Cohesion: 0.12
@@ -477,17 +460,17 @@ Nodes (16): Certificate: 9-DAYS JavaScript Bootcamp, Certificate: HTML & CSS Wor
 Cohesion: 0.12
 Nodes (16): Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`), Key Features, 📄 License (+8 more)
 
-### Community 14 - "manage_payloads.py"
-Cohesion: 0.19
-Nodes (24): handle_resource_read(), handle_tool_call(), process_request(), Fetches resource content based on URI., Executes requested tool and returns output., Routes JSON-RPC request to appropriate handler., Reads JSON-RPC messages from stdin and writes responses to stdout., run_stdio_server() (+16 more)
+### Community 14 - "json"
+Cohesion: 0.28
+Nodes (16): encrypt_and_register_link(), cmd_export(), cmd_get(), cmd_import(), cmd_list(), cmd_set(), cmd_verify(), decrypt_payload() (+8 more)
 
 ### Community 15 - "PCBTraces"
-Cohesion: 0.28
+Cohesion: 0.27
 Nodes (3): initBackgroundAnimations(), PCBTraces, SignalWaveBackground
 
-### Community 16 - "MockElement"
-Cohesion: 0.21
-Nodes (5): closeModal(), MockDocument, MockElement, openModal(), toggleModal()
+### Community 16 - "test_graph_modal.test.mjs"
+Cohesion: 0.06
+Nodes (17): CMDK_ENTRIES, SEARCH_STATIC_INDEX, decryptHexPayload(), getDecryptionKey(), KEY_CACHE, __dirname, __filename, GRAPH_DATA (+9 more)
 
 ### Community 17 - "Engineering Profile & Technical Dossier: Aaradhya Dev Tamrakar (ADT)"
 Cohesion: 0.14
@@ -506,8 +489,8 @@ Cohesion: 0.15
 Nodes (12): 1. Multi-Dimensional Scorecard, 2. Core Architectural Strengths, 3. Targeted Evolution Areas, 4. Priority Matrix & Implementation Sequencing, 5. Verification & Governance Criteria, Track 1: Imperative DOM Decomposition & Component Isolation, Track 2: Cross-Platform Sync Engine & Python CLI Parity, Track 3: Cryptographic & Auth Modernization (WebAuthn & Passkeys) (+4 more)
 
 ### Community 21 - "benchmark_bundle.py"
-Cohesion: 0.22
-Nodes (12): analyze_assets(), generate_benchmark_summary(), get_file_metrics(), main(), print_cli_report(), Path, Computes critical path totals and network latency models., Renders human-readable report with formatted terminal tables. (+4 more)
+Cohesion: 0.19
+Nodes (6): analyze_assets(), generate_benchmark_summary(), get_file_metrics(), main(), print_cli_report(), simulate_latency()
 
 ### Community 22 - "Agent Rules & Workflow Guidelines"
 Cohesion: 0.08
@@ -518,16 +501,16 @@ Cohesion: 0.17
 Nodes (12): And your repo actually fits the analogy unusually well, 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation), Assistant, Assistant, Assistant, I would actually call the broader concept, The DDOS ↔ PoS analogy, Turn 1 (+4 more)
 
 ### Community 24 - "test_visual_regression.py"
-Cohesion: 0.24
-Nodes (8): calculate_image_diff(), capture_screenshot(), find_browser_executable(), main(), QuietServerHandler, Execute browser CLI in headless mode to capture a viewport snapshot., Compare baseline and current images using Pillow. Returns: (diff_ratio,…, Locate headless Chrome, Chromium, or Edge binary on the system.
+Cohesion: 0.09
+Nodes (8): Handler, QuietTestHandler, run_e2e_suite(), calculate_image_diff(), capture_screenshot(), find_browser_executable(), main(), QuietServerHandler
 
 ### Community 25 - "Report Renderer"
 Cohesion: 0.22
 Nodes (10): Report Utils Class, Report Renderer, __initLighthouseReport__, Report Context Class, I18n Formatter, PWA Category Renderer, Performance Category Renderer, Report UI Features (+2 more)
 
 ### Community 26 - "Verbatim Dialogue & Engineering Transcript"
-Cohesion: 0.05
-Nodes (40): 1. The Core Problems with Current IA (Information Architecture), Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+32 more)
+Cohesion: 0.04
+Nodes (46): 1. The Core Problems with Current IA (Information Architecture), 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant (+38 more)
 
 ### Community 27 - "2026-09-17_EVALUATE-REPO_CONVERSATION.md"
 Cohesion: 0.14
@@ -537,21 +520,21 @@ Nodes (13): 10. What a professor/researcher is likely to notice, 11. What I woul
 Cohesion: 0.31
 Nodes (7): bootHomeWidgets(), initHeroCrestScrollFade(), initLastCommitBadge(), formatDateTime(), pad(), initLiveDates(), initStatusClock()
 
-### Community 29 - "test_graph_modal.test.mjs"
-Cohesion: 0.25
-Nodes (7): __dirname, __filename, GRAPH_DATA, graphDataPath, match, rawCode, ROOT
+### Community 29 - "site_mcp.py"
+Cohesion: 0.24
+Nodes (4): handle_resource_read(), handle_tool_call(), process_request(), run_stdio_server()
 
-### Community 30 - "generate_cards"
-Cohesion: 0.38
-Nodes (6): generate_cards(), main(), any, Generates OG SVG cards into the output directory., Renders a high-resolution 1200x630 SVG OpenGraph card with cyber/engineering…, render_svg_card()
+### Community 30 - "os"
+Cohesion: 0.27
+Nodes (3): generate_cards(), main(), render_svg_card()
 
 ### Community 31 - "haptics.js"
 Cohesion: 0.38
 Nodes (4): initScrollParallax(), initSwipeNav(), initTouchGestures(), triggerHapticFeedback()
 
-### Community 32 - "test_crypto.test.mjs"
-Cohesion: 0.33
-Nodes (3): decryptHexPayload(), getDecryptionKey(), KEY_CACHE
+### Community 32 - "extract_index.py"
+Cohesion: 0.39
+Nodes (6): extract_achievements(), extract_projects(), main(), render_block(), render_entry(), text_of()
 
 ### Community 33 - "audio.js"
 Cohesion: 0.80
@@ -581,17 +564,13 @@ Nodes (5): Edge Direction Rule, Graphify Semantic Extraction Agent, Hyperedge Ru
 Cohesion: 0.70
 Nodes (5): Payload Segment 1 (sha256:048bb6...), Payload Segment 2 (sha256:6096fe...), Payload Segment 3 (sha256:9f76e2...), Payload Segment 4 (sha256:186ab4...), Clean Codebase Payload
 
-### Community 41 - "build_all"
-Cohesion: 0.50
-Nodes (4): build_all(), minify_css(), Safely minifies CSS content without breaking modern syntax., Minifies all CSS files in assets/css/modules/.
-
-### Community 42 - "generate_pwa_icons.py"
-Cohesion: 0.60
-Nodes (4): find_browser(), generate_icon(), main(), Path
+### Community 41 - "pathlib"
+Cohesion: 0.13
+Nodes (7): build_all(), minify_css(), build_graph_data(), add_to_tree(), sort_tree(), get_file_color(), main()
 
 ### Community 44 - "IEEE KEC Student Branch"
 Cohesion: 0.50
-Nodes (4): IEEE KEC Agile Workshop 2025, IEEE KEC Electronics For All Mentorship 2025, IEEE KEC IEEE Day Organizer 2025, IEEE KEC Student Branch
+Nodes (3): IEEE KEC Agile Workshop 2025, IEEE KEC Electronics For All Mentorship 2025, IEEE KEC IEEE Day Organizer 2025
 
 ### Community 45 - "IEEE"
 Cohesion: 0.50
@@ -621,14 +600,6 @@ Nodes (3): Introduction to Python Certificate (47717251), Introduction to Python
 Cohesion: 0.67
 Nodes (3): KEC Robotics Club, PCB Design & Fabrication Workshop 2025, Laser Safety Awareness Training
 
-### Community 53 - "SimOps AI for Graduates Certificate"
-Cohesion: 1.00
-Nodes (3): SimOps AI for Graduates Certificate, SimOps Expert Certificate, SimOps Platform
-
-### Community 54 - "SimOps Fundamentals Certificate"
-Cohesion: 1.00
-Nodes (3): SimOps Fundamentals Certificate, SimOps Practitioner Certificate, SimOps (Simulation Operations)
-
 ### Community 56 - "Performance Metrics"
 Cohesion: 0.67
 Nodes (3): Best Practices Audit, Lighthouse Configuration, Performance Metrics
@@ -641,25 +612,25 @@ Nodes (3): Privacy Policy, Multi-Tier Access Control, Terms of Service
 Cohesion: 0.14
 Nodes (14): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+6 more)
 
-### Community 200 - "GraphIndex"
+### Community 200 - "find_implementation.py"
 Cohesion: 0.18
-Nodes (18): extract_code_snippet(), find_graph_path(), format_node_badge(), GraphIndex, main(), parse_line_number(), print_search_results(), Any (+10 more)
+Nodes (12): extract_code_snippet(), find_graph_path(), format_node_badge(), GraphIndex, main(), parse_line_number(), print_search_results(), run_callees_command() (+4 more)
 
 ### Community 201 - "Contributing to Aaradhya's Portfolio Website"
 Cohesion: 0.06
 Nodes (29): 1. Correction, 2. Warning, 3. Temporary Ban, 4. Permanent Ban, Attribution, Contributor Covenant Code of Conduct, Enforcement, Enforcement Guidelines (+21 more)
 
 ### Community 202 - "Verbatim Dialogue & Engineering Transcript"
-Cohesion: 0.05
-Nodes (40): 1. The Core Problems with Current IA (Information Architecture), Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+32 more)
+Cohesion: 0.04
+Nodes (46): 1. The Core Problems with Current IA (Information Architecture), 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Actions Completed, Assistant, Assistant, Assistant, Assistant, Assistant (+38 more)
 
 ### Community 203 - "Phase 2 — Featured Work Showcase ✓"
-Cohesion: 0.07
-Nodes (27): 1. Navigation & Information Architecture Audit, 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant (+19 more)
+Cohesion: 0.08
+Nodes (25): 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant, Assistant (+17 more)
 
 ### Community 204 - "Phase 2 — Featured Work Showcase ✓"
-Cohesion: 0.07
-Nodes (27): 1. Navigation & Information Architecture Audit, 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant (+19 more)
+Cohesion: 0.08
+Nodes (25): 1. Root Cause & Fix: Navbar Area Overlap on Experience & Achievements, 2. Markup & Component Consistency Audit, 2. Shortcut Keymapping Synchronization, 3. Test Suites & Diagnostics, 3. Verification & Deployment Status, Assistant, Assistant, Assistant (+17 more)
 
 ### Community 205 - "SECURITY_AUDIT_VIP_TIER.md"
 Cohesion: 0.13
@@ -1085,29 +1056,13 @@ Nodes (3): Current, Earlier, The more important discovery
 Cohesion: 0.04
 Nodes (47): 10. Money and finances — Ketu in the 2nd, 11. Saturn in the 11th — networks and long-term gains, 12. Education, 13. Relationships and marriage, 14. The Navamsa — deeper development, 15. Your spiritual/psychological axis, 16. Your current major dasha structure, 17. Yogini Dasha (+39 more)
 
-### Community 363 - "Portfolio Navigation, Showcase & Information Architecture Refactoring"
-Cohesion: 0.50
-Nodes (3): Executive Overview & Architectural Achievements, Key Milestones Delivered:, Portfolio Navigation, Showcase & Information Architecture Refactoring
+### Community 363 - "setActiveNav"
+Cohesion: 0.20
+Nodes (9): getLinkTargetPage(), setActiveNav(), 1. Navigation & Information Architecture Audit, Executive Overview & Architectural Achievements, Key Architectural Changes, Key Milestones Delivered:, Portfolio Navigation, Showcase & Information Architecture Refactoring, 1. Navigation & Information Architecture Audit (+1 more)
 
 ### Community 364 - "Portfolio Navigation, Showcase & Information Architecture Refactoring"
 Cohesion: 0.50
 Nodes (3): Executive Overview & Architectural Achievements, Key Milestones Delivered:, Portfolio Navigation, Showcase & Information Architecture Refactoring
-
-### Community 365 - "2. Proposed Navigation Model: The 4+1 Streamlined Structure"
-Cohesion: 0.67
-Nodes (3): 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Step 2: Streamline the Top Navigation Bar, Step 3: Calm Visual Styling
-
-### Community 366 - "The Clean Refactor Plan (Bringing Manish's Calm to ADT)"
-Cohesion: 0.67
-Nodes (3): Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate), Phase 3: Secondary Layer & Deep HUDs (Progressive Disclosure), The Clean Refactor Plan (Bringing Manish's Calm to ADT)
-
-### Community 367 - "2. Proposed Navigation Model: The 4+1 Streamlined Structure"
-Cohesion: 0.67
-Nodes (3): 2. Proposed Navigation Model: The 4+1 Streamlined Structure, Step 2: Streamline the Top Navigation Bar, Step 3: Calm Visual Styling
-
-### Community 368 - "The Clean Refactor Plan (Bringing Manish's Calm to ADT)"
-Cohesion: 0.67
-Nodes (3): Phase 1: The Adaptive Floating Header & Streamlined Nav (Immediate), Phase 3: Secondary Layer & Deep HUDs (Progressive Disclosure), The Clean Refactor Plan (Bringing Manish's Calm to ADT)
 
 ### Community 369 - "Turn 2"
 Cohesion: 0.07
@@ -1126,24 +1081,24 @@ Cohesion: 0.33
 Nodes (6): 1. Fix the static/runtime state mismatch, 2. Separate "portfolio gating" from "security", 3. Reduce the cognitive load on the first screen, 4. Watch the "student vs researcher" positioning, 5. Your Build Log is worth preserving, What I would change
 
 ## Knowledge Gaps
-- **1664 isolated node(s):** `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA`, `SEARCH_STATIC_INDEX`, `ACCESS_CONTROL_PAYLOADS` (+1659 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1832 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **185 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **188 isolated node(s):** `aaradhyadt-portfolio`, `ADT | Aaradhya Dev Tamrakar — Electronics Engineer & AI/ML Developer`, `Certificate: Generate a Study Guide`, `Certificate: Introduction to Python (CPE Credits)`, `Certificate: Introduction to Python (DataCamp)` (+183 more)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1851 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **191 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `Portfolio Website Tracker — v53.26` connect `Portfolio Website Tracker — v53.26` to `v23 addition — latest site refinements (2026-07-18)`, `Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study)`?**
-  _High betweenness centrality (0.013) - this node is a cross-community bridge._
-- **Why does `So I would change your scholarship framing slightly` connect `Turn 4` to `2026-09-16_DISTRIBUTED-PROVISION-SERVICE_CONVERSATION.md`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **Why does `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` connect `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` to `Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study)`, `4. Technical Specifications`, `5. Implementation Roadmap`?**
-  _High betweenness centrality (0.012) - this node is a cross-community bridge._
-- **What connects `GRAPH_DATA`, `SITE_RELEASES`, `RESUME_DATA` to the rest of the system?**
-  _1664 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Why does `This also explains why your work became faster` connect `Turn 13` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
+  _High betweenness centrality (0.019) - this node is a cross-community bridge._
+- **What connects `aaradhyadt-portfolio`, `ADT | Aaradhya Dev Tamrakar — Electronics Engineer & AI/ML Developer`, `Certificate: Generate a Study Guide` to the rest of the system?**
+  _188 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.09134615384615384 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06925624811803674 - nodes in this community are weakly interconnected._
+- **Why does `And this is the part I would preserve most carefully` connect `Turn 9` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.06108597285067873 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06377551020408163 - nodes in this community are weakly interconnected._
+- **Should `ui.js` be split into smaller, more focused modules?**
+  _Cohesion score 0.07827260458839407 - nodes in this community are weakly interconnected._
