@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v55.22",
     date: "2026-10-21",
-    sha: "4acd56e8ca9888054b2d1e5c5d6b7a86bfaa5101",
-    title: "stamp the exact version commit and release metadata (#17)",
+    sha: "a75b3a3693f156569f27b1bd54f06d0cfd14836b",
+    title: "group Fuse AIF coursework into month cards (#18)",
     highlights: []
   },
   {

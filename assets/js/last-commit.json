@@ -1,6 +1,6 @@
 {
-  "sha": "4acd56e8ca9888054b2d1e5c5d6b7a86bfaa5101",
-  "shortSha": "4acd56e",
-  "date": "2026-10-21T18:17:25+05:45",
-  "message": "fix(releases): stamp the exact version commit and release metadata (#17)"
+  "sha": "a75b3a3693f156569f27b1bd54f06d0cfd14836b",
+  "shortSha": "a75b3a3",
+  "date": "2026-10-21T22:50:03+05:45",
+  "message": "feat(projects): group Fuse AIF coursework into month cards (#18)"
 }
