@@ -190,6 +190,88 @@
       font-weight: 400;
     }
 
+    .fuse-months-grid {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      align-items: start;
+      gap: 1.25rem;
+    }
+
+    .fuse-month-card {
+      min-width: 0;
+      padding: 1.5rem;
+      background: var(--bg2);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      container: fuse-month / inline-size;
+    }
+
+    .fuse-month-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      padding-bottom: 1.1rem;
+    }
+
+    .fuse-month-title {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: 1.45rem;
+      color: var(--heading);
+    }
+
+    .fuse-month-range {
+      margin: 0;
+      font-family: var(--mono);
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+
+    .fuse-week-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 0.85rem;
+      align-items: start;
+    }
+
+    .fuse-month-card:has(details[open]) {
+      grid-column: 1 / -1;
+    }
+
+    .fuse-week-grid details.project-card {
+      min-width: 0;
+      padding: 1rem;
+      background: var(--bg);
+    }
+
+    .fuse-week-grid .project-title {
+      font-size: 0.95rem;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+    }
+
+    @container fuse-month (min-width: 32rem) {
+      .fuse-week-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 1100px) {
+      .fuse-months-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .fuse-month-card {
+        padding: 1rem;
+      }
+    }
+
     details.project-card {
       position: relative;
       display: flex;
@@ -1379,10 +1461,10 @@ Your browser doesn't support embedded video.
 </div>
 </details>
 <h2 class="projects-section-title" id="section-fuseaif">Fuse AIF<span class="projects-section-sub">Fusemachines
-            AI Fellowship — weekly coursework</span></h2><details class="project-card reveal project-card--major" data-category="aiml apps" id="p-044">
+            AI Fellowship — weekly coursework</span></h2><div class="fuse-months-grid" id="fuseMonthGrid"><article aria-labelledby="fuse-month-5-title" class="fuse-month-card" data-fuse-month="5"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-5-title">Month 5</h3><p class="fuse-month-range">Weeks 17–18</p></header><div class="fuse-week-grid"><details class="project-card reveal project-card--major" data-category="aiml apps" data-fuse-week="18" id="p-044">
 <summary class="project-summary">
 <div class="project-index">P — 044 <span class="project-date">Oct 2026</span></div>
-<h3 class="project-title">Fusemachines Week 18 — Trustworthy AI Guardrails</h3>
+<h4 class="project-title">Fusemachines Week 18 — Trustworthy AI Guardrails</h4>
 </summary>
 <div class="project-card-body">
 <ul class="project-desc-list">
@@ -1395,10 +1477,10 @@ Your browser doesn't support embedded video.
 </div>
 <a class="project-link" data-payload-link-id="proj-fuseaif-wk18-trustworthy-ai-guardrails" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml apps" id="p-043">
+</details><details class="project-card reveal" data-category="aiml apps" data-fuse-week="17" id="p-043">
 <summary class="project-summary" id="p-042">
 <div class="project-index">P — 043 <span class="project-date">Oct 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 17 — Agentic AI &amp; Telco Churn MLOps</h3>
+<h4 class="project-title">Fusemachines Wk 17 — Agentic AI &amp; Telco Churn MLOps</h4>
 </summary>
 <div class="project-card-body">
 <ul class="project-desc-list">
@@ -1411,10 +1493,10 @@ Your browser doesn't support embedded video.
 <span class="tag">FastAPI</span></div>
 <a class="project-link" data-link-label="Agentic AI MLOps" data-payload-link-id="proj-fuseaif-wk17-agentic-mlops" rel="noopener" target="_blank">Agentic AI MLOps</a>
 <a class="project-link" data-link-label="Telco Churn MLOps" data-payload-link-id="proj-fuseaif-wk17-telco-churn-mlops" rel="noopener" target="_blank">Telco Churn MLOps</a></div>
-</details><details class="project-card reveal" data-category="aiml apps" id="p-046">
+</details></div></article><article aria-labelledby="fuse-month-4-title" class="fuse-month-card" data-fuse-month="4"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-4-title">Month 4</h3><p class="fuse-month-range">Weeks 13–16</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml apps" data-fuse-week="16" id="p-046">
 <summary class="project-summary">
 <div class="project-index">P — 046 <span class="project-date">Coursework</span></div>
-<h3 class="project-title">Fusemachines Wk 16 — Verified Agentic Assistant</h3>
+<h4 class="project-title">Fusemachines Wk 16 — Verified Agentic Assistant</h4>
 </summary>
 <div class="project-card-body">
 <ul class="project-desc-list">
@@ -1427,10 +1509,10 @@ Your browser doesn't support embedded video.
 </div>
 <a class="project-link" data-payload-link-id="proj-fuseaif-wk16-agentic-assistant" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml apps" id="p-045">
+</details><details class="project-card reveal" data-category="aiml apps" data-fuse-week="15" id="p-045">
 <summary class="project-summary">
 <div class="project-index">P — 045 <span class="project-date">Coursework</span></div>
-<h3 class="project-title">Fusemachines Wk 15 — RAG AI Assistant</h3>
+<h4 class="project-title">Fusemachines Wk 15 — RAG AI Assistant</h4>
 </summary>
 <div class="project-card-body">
 <ul class="project-desc-list">
@@ -1443,10 +1525,10 @@ Your browser doesn't support embedded video.
 </div>
 <a class="project-link" data-payload-link-id="proj-fuseaif-wk15-ai-assistant-rag" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-028">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="14" id="p-028">
 <summary class="project-summary">
 <div class="project-index">P — 028 <span class="project-date">12 Aug 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 14 — Agentic Intent Routing</h3>
+<h4 class="project-title">Fusemachines Wk 14 — Agentic Intent Routing</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1475,10 +1557,10 @@ Your browser doesn't support embedded video.
 </div>
 <a class="project-link" data-payload-link-id="proj-fuse-wk14" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-027">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="13" id="p-027">
 <summary class="project-summary">
 <div class="project-index">P — 027 <span class="project-date">6 Aug 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 13 — LSTM Text Classification</h3>
+<h4 class="project-title">Fusemachines Wk 13 — LSTM Text Classification</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1506,10 +1588,10 @@ Your browser doesn't support embedded video.
 </div>
 <a class="project-link" data-payload-link-id="proj-fuse-wk13" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-024">
+</details></div></article><article aria-labelledby="fuse-month-3-title" class="fuse-month-card" data-fuse-month="3"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-3-title">Month 3</h3><p class="fuse-month-range">Weeks 9–12</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="12" id="p-024">
 <summary class="project-summary">
 <div class="project-index">P — 024 <span class="project-date">30 Jul 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 12 — NER for Customer Support</h3>
+<h4 class="project-title">Fusemachines Wk 12 — NER for Customer Support</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1537,10 +1619,10 @@ Your browser doesn't support embedded video.
 </div>
 <a class="project-link" data-payload-link-id="proj-fuse-wk12" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-022">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="11" id="p-022">
 <summary class="project-summary">
 <div class="project-index">P — 022 <span class="project-date">Jul 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 11 — Vision Transformers</h3>
+<h4 class="project-title">Fusemachines Wk 11 — Vision Transformers</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1570,10 +1652,10 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk11" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-019">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="10" id="p-019">
 <summary class="project-summary">
 <div class="project-index">P — 019 <span class="project-date">16 Jul 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 10 — Image Processing</h3>
+<h4 class="project-title">Fusemachines Wk 10 — Image Processing</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1604,10 +1686,10 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk10" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-017">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="9" id="p-017">
 <summary class="project-summary">
 <div class="project-index">P — 017 <span class="project-date">9 Jul 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 9 — NEU Steel Defect CNN</h3>
+<h4 class="project-title">Fusemachines Wk 9 — NEU Steel Defect CNN</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1636,10 +1718,10 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk9" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-016">
+</details></div></article><article aria-labelledby="fuse-month-2-title" class="fuse-month-card" data-fuse-month="2"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-2-title">Month 2</h3><p class="fuse-month-range">Weeks 5–8</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="8" id="p-016">
 <summary class="project-summary">
 <div class="project-index">P — 016 <span class="project-date">1 Jul 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 8 — Forecasting</h3>
+<h4 class="project-title">Fusemachines Wk 8 — Forecasting</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1669,10 +1751,10 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk8" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-011">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="7" id="p-011">
 <summary class="project-summary">
 <div class="project-index">P — 011 <span class="project-date">21 Jun 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 7 — Customer Segmentation</h3>
+<h4 class="project-title">Fusemachines Wk 7 — Customer Segmentation</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1702,10 +1784,10 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk7" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-009">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="6" id="p-009">
 <summary class="project-summary">
 <div class="project-index">P — 009 <span class="project-date">5 Jun 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 6 — Probabilistic Models</h3>
+<h4 class="project-title">Fusemachines Wk 6 — Probabilistic Models</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1734,10 +1816,10 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk6" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-008">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="5" id="p-008">
 <summary class="project-summary">
 <div class="project-index">P — 008 <span class="project-date">31 May 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 5 — Telco Churn Tree-Based Ensemble Pipeline</h3>
+<h4 class="project-title">Fusemachines Wk 5 — Telco Churn Tree-Based Ensemble Pipeline</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1767,10 +1849,10 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk5" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-006">
+</details></div></article><article aria-labelledby="fuse-month-1-title" class="fuse-month-card" data-fuse-month="1"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-1-title">Month 1</h3><p class="fuse-month-range">Weeks 1–4</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="4" id="p-006">
 <summary class="project-summary">
 <div class="project-index">P — 006 <span class="project-date">28 May 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 4 — Telco Churn &amp; CLV ML Pipeline</h3>
+<h4 class="project-title">Fusemachines Wk 4 — Telco Churn &amp; CLV ML Pipeline</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1799,10 +1881,10 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk4" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-005">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="3" id="p-005">
 <summary class="project-summary">
 <div class="project-index">P — 005 <span class="project-date">20 May 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 3 — Text-to-SQL Agentic Pipeline</h3>
+<h4 class="project-title">Fusemachines Wk 3 — Text-to-SQL Agentic Pipeline</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1832,10 +1914,10 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk3" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml apps" id="p-004">
+</details><details class="project-card reveal" data-category="aiml apps" data-fuse-week="2" id="p-004">
 <summary class="project-summary">
 <div class="project-index">P — 004 <span class="project-date">12 May 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 2 — Customer API App</h3>
+<h4 class="project-title">Fusemachines Wk 2 — Customer API App</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1863,10 +1945,10 @@ Your browser doesn't support embedded video.
 </div>
 <a class="project-link" data-payload-link-id="proj-fuse-wk2" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-003">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="1" id="p-003">
 <summary class="project-summary">
 <div class="project-index">P — 003 <span class="project-date">30 Apr 2026</span></div>
-<h3 class="project-title">Fusemachines Wk 1 — Cardiac Event Data Wrangling</h3>
+<h4 class="project-title">Fusemachines Wk 1 — Cardiac Event Data Wrangling</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1892,7 +1974,7 @@ Your browser doesn't support embedded video.
 </div>
 <a class="project-link" data-payload-link-id="proj-fuse-wk1" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" id="p-026">
+</details></div></article></div><details class="project-card reveal" data-category="aiml" id="p-026">
 <summary class="project-summary">
 <div class="project-index">P — 026 <span class="project-date">Jul 2026</span></div>
 <h3 class="project-title">ONM Case Study — Fusemachines Inc.</h3>
@@ -1923,21 +2005,6 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-onm" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <h2 class="projects-section-title" id="section-mcp">Model Context Protocol (MCP) &amp; Agent Infrastructure<span class="projects-section-sub">Autonomous tool bridges, local device protocols, and model context endpoints</span></h2><details class="project-card reveal" data-category="mcp apps" id="p-035">
 <summary class="project-summary">
 <div class="project-index">P — 035 <span class="project-date">Sep 2026</span></div>
@@ -2663,6 +2730,17 @@ Your browser doesn't support embedded video.
     }
 
     
+    function sectionProjectCards(heading) {
+      const cards = [];
+      let node = heading.nextElementSibling;
+      while (node && !node.classList.contains('projects-section-title')) {
+        if (node.matches('details.project-card')) cards.push(node);
+        else cards.push(...node.querySelectorAll('details.project-card'));
+        node = node.nextElementSibling;
+      }
+      return cards;
+    }
+
     function initProjectFilters() {
       const filterBar = document.getElementById('projectsFilterBar');
       const cards = document.querySelectorAll('#projectsGrid details.project-card');
@@ -2699,17 +2777,16 @@ Your browser doesn't support embedded video.
             if (match) visibleCount++;
           });
 
-          // Toggle visibility of section headers based on whether they contain visible cards
+          // Hide month containers whose weekly cards all fail the active filter.
+          document.querySelectorAll('.fuse-month-card, .fuse-months-grid').forEach(group => {
+            const hasVisible = Array.from(group.querySelectorAll('details.project-card'))
+              .some(card => card.style.display !== 'none');
+            group.style.display = hasVisible ? '' : 'none';
+          });
+
+          // Include nested weekly cards when deciding whether a section is visible.
           sections.forEach(sec => {
-            let next = sec.nextElementSibling;
-            let hasVisible = false;
-            while (next && !next.classList.contains('projects-section-title')) {
-              if (next.classList.contains('project-card') && next.style.display !== 'none') {
-                hasVisible = true;
-                break;
-              }
-              next = next.nextElementSibling;
-            }
+            const hasVisible = sectionProjectCards(sec).some(card => card.style.display !== 'none');
             sec.style.display = hasVisible ? '' : 'none';
           });
 
@@ -2732,19 +2809,9 @@ Your browser doesn't support embedded video.
     function initCourseworkHighlights() {
       const fuseSec = document.getElementById('section-fuseaif');
       if (!fuseSec) return;
-      let next = fuseSec.nextElementSibling;
-      let isFirst = true;
-      while (next && !next.classList.contains('projects-section-title')) {
-        if (next.classList.contains('project-card')) {
-          if (isFirst) {
-            next.classList.add('project-card--major');
-            isFirst = false;
-          } else {
-            next.classList.remove('project-card--major');
-          }
-        }
-        next = next.nextElementSibling;
-      }
+      sectionProjectCards(fuseSec).forEach((card, index) => {
+        card.classList.toggle('project-card--major', index === 0);
+      });
     }
 
     document.addEventListener('DOMContentLoaded', () => {

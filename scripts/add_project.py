@@ -166,6 +166,58 @@ def recalculate_filter_counts(soup: BeautifulSoup) -> dict[str, int]:
     return counts
 
 
+def group_fuse_coursework(soup: BeautifulSoup):
+    """Group weekly coursework into four-week course months without changing IDs."""
+    heading = soup.find(id="section-fuseaif")
+    if not heading:
+        return
+    siblings = []
+    for node in heading.next_siblings:
+        if node.name == "h2" and "projects-section-title" in node.get("class", []):
+            break
+        if node.name:
+            siblings.append(node)
+    months = {}
+    for node in siblings:
+        cards = [node] if "project-card" in node.get("class", []) else node.select("details.project-card")
+        for card in cards:
+            title = card.select_one(".project-title")
+            match = re.search(r"\b(?:Wk|Week)\s+(\d+)\b", title.get_text() if title else "")
+            if not match:
+                continue
+            week = int(match[1])
+            card["data-fuse-week"] = str(week)
+            title.name = "h4"
+            months.setdefault((week - 1) // 4 + 1, []).append((week, card.extract()))
+        if "fuse-months-grid" in node.get("class", []):
+            node.decompose()
+    if not months:
+        return
+    grid = soup.new_tag("div", attrs={"class": "fuse-months-grid", "id": "fuseMonthGrid"})
+    latest = True
+    for month in sorted(months, reverse=True):
+        entries = sorted(months[month], key=lambda entry: entry[0], reverse=True)
+        title_id = f"fuse-month-{month}-title"
+        group = soup.new_tag("article", attrs={"class": "fuse-month-card", "data-fuse-month": str(month), "aria-labelledby": title_id})
+        header = soup.new_tag("header", attrs={"class": "fuse-month-header"})
+        title = soup.new_tag("h3", attrs={"class": "fuse-month-title", "id": title_id})
+        title.string = f"Month {month}"
+        subtitle = soup.new_tag("p", attrs={"class": "fuse-month-range"})
+        first, last = min(week for week, _ in entries), max(week for week, _ in entries)
+        subtitle.string = f"Weeks {first}–{last}" if first != last else f"Week {first}"
+        header.extend([title, subtitle])
+        children = soup.new_tag("div", attrs={"class": "fuse-week-grid"})
+        for _, card in entries:
+            card["class"] = [c for c in card.get("class", []) if c != "project-card--major"]
+            if latest:
+                card["class"].append("project-card--major")
+                latest = False
+            children.append(card)
+        group.extend([header, children])
+        grid.append(group)
+    heading.insert_after(grid)
+
+
 def inject_card(soup: BeautifulSoup, card_soup: BeautifulSoup, section: str = "personal", position: str = "top"):
     """Injects the new card into the specified section in projects.html."""
     if section == "mcp":
@@ -183,6 +235,11 @@ def inject_card(soup: BeautifulSoup, card_soup: BeautifulSoup, section: str = "p
         raise ValueError(f"Could not find section header #{target_h2_id} in projects.html")
 
     new_node = card_soup.find("details")
+
+    if section == "fuseaif":
+        h2.insert_after(new_node)
+        group_fuse_coursework(soup)
+        return
 
     if position == "top":
         # Insert immediately following the section <h2>

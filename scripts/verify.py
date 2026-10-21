@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v55.21)
+aaradhyadt.github.io (v55.22)
 
 26 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -1250,6 +1250,8 @@ def check_data_consistency():
                     break
                 if "project-card" in classes:
                     fuse_cards.append(curr)
+                else:
+                    fuse_cards.extend(curr.select("details.project-card"))
                 curr = curr.find_next_sibling()
 
             major_fuse = [c for c in fuse_cards if "project-card--major" in c.get("class", [])]
@@ -1373,7 +1375,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v55.21)"))
+    print(bold("  Portfolio Site Verification Suite (v55.22)"))
     print(bold("=" * 60))
     print()
 
