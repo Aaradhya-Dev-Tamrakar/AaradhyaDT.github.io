@@ -182,21 +182,31 @@ def group_fuse_coursework(soup: BeautifulSoup):
         cards = [node] if "project-card" in node.get("class", []) else node.select("details.project-card")
         for card in cards:
             title = card.select_one(".project-title")
-            match = re.search(r"\b(?:Wk|Week)\s+(\d+)\b", title.get_text() if title else "")
+            canonical_title = card.get("data-project-title") or (title.get_text(" ", strip=True) if title else "")
+            match = re.search(r"\b(?:Wk|Week)\s+(\d+)\b", canonical_title)
             if not match:
                 continue
             week = int(match[1])
             card["data-fuse-week"] = str(week)
+            card["data-project-title"] = canonical_title
             title.name = "h4"
+            title.string = re.sub(r"^\s*[—–-]\s*", "", canonical_title[match.end():]).strip() or canonical_title
+            summary = card.select_one("summary")
+            if summary:
+                label = summary.select_one(".fuse-week-label")
+                if not label:
+                    label = soup.new_tag("span", attrs={"class": "fuse-week-label"})
+                    summary.insert(0, label)
+                label.string = f"Week {week}"
             months.setdefault((week - 1) // 4 + 1, []).append((week, card.extract()))
         if "fuse-months-grid" in node.get("class", []):
             node.decompose()
     if not months:
         return
     grid = soup.new_tag("div", attrs={"class": "fuse-months-grid", "id": "fuseMonthGrid"})
-    latest = True
-    for month in sorted(months, reverse=True):
-        entries = sorted(months[month], key=lambda entry: entry[0], reverse=True)
+    latest_week = max(week for entries in months.values() for week, _ in entries)
+    for month in sorted(months):
+        entries = sorted(months[month], key=lambda entry: entry[0])
         title_id = f"fuse-month-{month}-title"
         group = soup.new_tag("article", attrs={"class": "fuse-month-card", "data-fuse-month": str(month), "aria-labelledby": title_id})
         header = soup.new_tag("header", attrs={"class": "fuse-month-header"})
@@ -207,11 +217,10 @@ def group_fuse_coursework(soup: BeautifulSoup):
         subtitle.string = f"Weeks {first}–{last}" if first != last else f"Week {first}"
         header.extend([title, subtitle])
         children = soup.new_tag("div", attrs={"class": "fuse-week-grid"})
-        for _, card in entries:
+        for week, card in entries:
             card["class"] = [c for c in card.get("class", []) if c != "project-card--major"]
-            if latest:
+            if week == latest_week:
                 card["class"].append("project-card--major")
-                latest = False
             children.append(card)
         group.extend([header, children])
         grid.append(group)

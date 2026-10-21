@@ -77,7 +77,7 @@ def extract_projects():
     out = []
     for i, el in enumerate(cards):
         el_id = el.get("id") or f"proj-{i}"
-        title = text_of(el.select_one(".project-title"))
+        title = el.get("data-project-title") or text_of(el.select_one(".project-title"))
         # Mirrors the live-DOM fallback added in script.js: some cards use a
         # single .project-desc paragraph, others a .project-desc-list — the
         # live scan checks both, so this must too or the two indexes diverge.

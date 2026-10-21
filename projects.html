@@ -194,11 +194,13 @@
       grid-column: 1 / -1;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      align-items: start;
+      align-items: stretch;
       gap: 1.25rem;
     }
 
     .fuse-month-card {
+      display: flex;
+      flex-direction: column;
       min-width: 0;
       padding: 1.5rem;
       background: var(--bg2);
@@ -232,13 +234,15 @@
     }
 
     .fuse-week-grid {
+      flex: 1;
       display: grid;
       grid-template-columns: minmax(0, 1fr);
       gap: 0.85rem;
-      align-items: start;
+      align-items: stretch;
     }
 
-    .fuse-month-card:has(details[open]) {
+    .fuse-month-card:has(details[open]),
+    .fuse-month-card:last-child:nth-child(odd) {
       grid-column: 1 / -1;
     }
 
@@ -248,10 +252,30 @@
       background: var(--bg);
     }
 
-    .fuse-week-grid .project-title {
-      font-size: 0.95rem;
+    .fuse-week-grid .project-card .project-title {
+      font-size: 1rem;
       -webkit-line-clamp: 3;
       line-clamp: 3;
+    }
+
+    .fuse-week-grid details.project-card:not([open]) {
+      min-height: 9rem;
+    }
+
+    .fuse-week-grid .project-summary {
+      min-height: 6.5rem;
+    }
+
+    .fuse-week-grid .project-index {
+      display: none;
+    }
+
+    .fuse-week-label {
+      font-family: var(--mono);
+      font-size: 0.65rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
     }
 
     @container fuse-month (min-width: 32rem) {
@@ -1461,81 +1485,17 @@ Your browser doesn't support embedded video.
 </div>
 </details>
 <h2 class="projects-section-title" id="section-fuseaif">Fuse AIF<span class="projects-section-sub">Fusemachines
-            AI Fellowship — weekly coursework</span></h2><div class="fuse-months-grid" id="fuseMonthGrid"><article aria-labelledby="fuse-month-5-title" class="fuse-month-card" data-fuse-month="5"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-5-title">Month 5</h3><p class="fuse-month-range">Weeks 17–18</p></header><div class="fuse-week-grid"><details class="project-card reveal project-card--major" data-category="aiml apps" data-fuse-week="18" id="p-044">
-<summary class="project-summary">
-<div class="project-index">P — 044 <span class="project-date">Oct 2026</span></div>
-<h4 class="project-title">Fusemachines Week 18 — Trustworthy AI Guardrails</h4>
-</summary>
-<div class="project-card-body">
-<ul class="project-desc-list">
-<li>Implements input checks for personally identifiable information, prompt injection, and sensitive topics.</li>
-<li>Screens generated outputs for schema compliance, groundedness, and sensitive information leakage.</li>
-<li>Combines these checks in a fail-closed guardrail pipeline with a golden-case evaluation set.</li>
-</ul>
-<div class="project-tags">
-<span class="tag">Python</span><span class="tag">AI Safety</span><span class="tag">Prompt Injection</span><span class="tag">PII</span><span class="tag">Pydantic</span><span class="tag">LLM Guardrails</span>
-</div>
-<a class="project-link" data-payload-link-id="proj-fuseaif-wk18-trustworthy-ai-guardrails" rel="noopener" target="_blank">View on GitHub ↗</a>
-</div>
-</details><details class="project-card reveal" data-category="aiml apps" data-fuse-week="17" id="p-043">
-<summary class="project-summary" id="p-042">
-<div class="project-index">P — 043 <span class="project-date">Oct 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 17 — Agentic AI &amp; Telco Churn MLOps</h4>
-</summary>
-<div class="project-card-body">
-<ul class="project-desc-list">
-<li>Agentic assistant: Applies MLOps workflows to an autonomous technical assistant developed in earlier coursework.</li>
-<li>Tracks prompt and trace experiments with MLflow and evaluates response regressions with an LLM-as-judge workflow.</li>
-<li>Schedules recurring evaluation through an Airflow regression DAG.</li>
-<li>Telco churn: Builds a reproducible customer churn classification pipeline with experiment tracking and model registry workflows.</li><li>Serves predictions through FastAPI and monitors data quality and drift with Evidently.</li><li>Uses an Airflow DAG to orchestrate drift monitoring workflows.</li></ul>
-<div class="project-tags">
-<span class="tag">Python</span><span class="tag">MLOps</span><span class="tag">MLflow</span><span class="tag">Evidently AI</span><span class="tag">Airflow</span><span class="tag">LLM Evaluation</span>
-<span class="tag">FastAPI</span></div>
-<a class="project-link" data-link-label="Agentic AI MLOps" data-payload-link-id="proj-fuseaif-wk17-agentic-mlops" rel="noopener" target="_blank">Agentic AI MLOps</a>
-<a class="project-link" data-link-label="Telco Churn MLOps" data-payload-link-id="proj-fuseaif-wk17-telco-churn-mlops" rel="noopener" target="_blank">Telco Churn MLOps</a></div>
-</details></div></article><article aria-labelledby="fuse-month-4-title" class="fuse-month-card" data-fuse-month="4"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-4-title">Month 4</h3><p class="fuse-month-range">Weeks 13–16</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml apps" data-fuse-week="16" id="p-046">
-<summary class="project-summary">
-<div class="project-index">P — 046 <span class="project-date">Coursework</span></div>
-<h4 class="project-title">Fusemachines Wk 16 — Verified Agentic Assistant</h4>
-</summary>
-<div class="project-card-body">
-<ul class="project-desc-list">
-<li>Extends the Week 15 RAG assistant with a verified agentic loop and multi-hop tool use.</li>
-<li>Adds context-window management and context engineering to the assistant workflow.</li>
-<li>Includes failure injection and a custom evaluation harness for checking agent behavior.</li>
-</ul>
-<div class="project-tags">
-<span class="tag">Python</span><span class="tag">Agentic AI</span><span class="tag">RAG</span><span class="tag">Context Engineering</span><span class="tag">Evaluation</span><span class="tag">FastAPI</span>
-</div>
-<a class="project-link" data-payload-link-id="proj-fuseaif-wk16-agentic-assistant" rel="noopener" target="_blank">View on GitHub ↗</a>
-</div>
-</details><details class="project-card reveal" data-category="aiml apps" data-fuse-week="15" id="p-045">
-<summary class="project-summary">
-<div class="project-index">P — 045 <span class="project-date">Coursework</span></div>
-<h4 class="project-title">Fusemachines Wk 15 — RAG AI Assistant</h4>
-</summary>
-<div class="project-card-body">
-<ul class="project-desc-list">
-<li>Combines retrieval-augmented generation, structured responses, and tool calling in a FastAPI assistant.</li>
-<li>Uses Qdrant retrieval, a Streamlit interface, and provider fallbacks through Gemini, local vLLM, and Ollama.</li>
-<li>Includes response caching, retries, circuit breakers, rate limiting, and Docker Compose services.</li>
-</ul>
-<div class="project-tags">
-<span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">RAG</span><span class="tag">Qdrant</span><span class="tag">Streamlit</span><span class="tag">vLLM</span><span class="tag">Docker</span>
-</div>
-<a class="project-link" data-payload-link-id="proj-fuseaif-wk15-ai-assistant-rag" rel="noopener" target="_blank">View on GitHub ↗</a>
-</div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="14" id="p-028">
-<summary class="project-summary">
-<div class="project-index">P — 028 <span class="project-date">12 Aug 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 14 — Agentic Intent Routing</h4>
+            AI Fellowship — weekly coursework</span></h2><div class="fuse-months-grid" id="fuseMonthGrid"><article aria-labelledby="fuse-month-1-title" class="fuse-month-card" data-fuse-month="1"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-1-title">Month 1</h3><p class="fuse-month-range">Weeks 1–4</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="1" data-project-title="Fusemachines Wk 1 — Cardiac Event Data Wrangling" id="p-003">
+<summary class="project-summary"><span class="fuse-week-label">Week 1</span>
+<div class="project-index">P — 003 <span class="project-date">30 Apr 2026</span></div>
+<h4 class="project-title">Cardiac Event Data Wrangling</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk14/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<a class="project-media-link" href="assets/images/projects/fuse-wk1/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
 <picture>
-<source srcset="assets/images/projects/fuse-wk14/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 14 – Agentic Intent Routing — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk14/hero.png"/>
+<source srcset="assets/images/projects/fuse-wk1/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 1 – Cardiac Event Data Wrangling — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk1/hero.png"/>
 </picture>
 <div class="project-media-badge">
 <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
@@ -1544,30 +1504,27 @@ Your browser doesn't support embedded video.
 </a>
 </div>
 <ul class="project-desc-list">
-<li>Two candidate routing strategies for a ShopAssist AI support platform — fine-tuned BERT-family
-                encoder vs. fine-tuned LLM/SLM — classifying customer messages into 11 specialized agent
-                categories</li>
-<li>Benchmarked on 26,872 Bitext customer-support examples with a group-aware stratified split to prevent
-                instruction-text leakage across train/val/test</li>
+<li>Data wrangling and preparation pipeline for cardiac event analysis on a synthetic heart-attack-risk
+                dataset</li>
+<li>EDA, correlation heatmap, and class-imbalance analysis ahead of downstream modeling</li>
 </ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">BERT</span>
-<span class="tag">Fine-Tuning</span><span class="tag">SLM</span>
-<span class="tag">Intent Classification</span><span class="tag">Stratified Split</span>
+<span class="tag">Python</span><span class="tag">Pandas</span>
+<span class="tag">EDA</span><span class="tag">Data Wrangling</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk14" rel="noopener" target="_blank">View on GitHub ↗</a>
+<a class="project-link" data-payload-link-id="proj-fuse-wk1" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="13" id="p-027">
-<summary class="project-summary">
-<div class="project-index">P — 027 <span class="project-date">6 Aug 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 13 — LSTM Text Classification</h4>
+</details><details class="project-card reveal" data-category="aiml apps" data-fuse-week="2" data-project-title="Fusemachines Wk 2 — Customer API App" id="p-004">
+<summary class="project-summary"><span class="fuse-week-label">Week 2</span>
+<div class="project-index">P — 004 <span class="project-date">12 May 2026</span></div>
+<h4 class="project-title">Customer API App</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk13/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<a class="project-media-link" href="assets/images/projects/fuse-wk2/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
 <picture>
-<source srcset="assets/images/projects/fuse-wk13/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 13 – LSTM Text Classification — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk13/hero.png"/>
+<source srcset="assets/images/projects/fuse-wk2/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 2 – Customer API App — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk2/hero.png"/>
 </picture>
 <div class="project-media-badge">
 <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
@@ -1576,29 +1533,29 @@ Your browser doesn't support embedded video.
 </a>
 </div>
 <ul class="project-desc-list">
-<li>LSTM headline classifier on AG_NEWS (World / Sports / Business / Sci-Tech) — embedding → LSTM → FC,
-                trained top-to-bottom from a skeleton notebook</li>
-<li>PyTorch training loop with vocabulary building from scratch and a short conceptual-reflection
-                section</li>
+<li>12-Factor App compliant RESTful API for customer, order, and payment management, refactored to full
+                12-Factor compliance with a statistics module</li>
+<li>FastAPI + SQLAlchemy over PostgreSQL, Dockerized with environment-based config and centralized
+                logging</li>
 </ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">PyTorch</span>
-<span class="tag">LSTM</span><span class="tag">AG_NEWS</span>
-<span class="tag">NLP</span>
+<span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
+<span class="tag">SQLAlchemy</span><span class="tag">Pydantic</span>
+<span class="tag">Docker</span><span class="tag">12-Factor App</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk13" rel="noopener" target="_blank">View on GitHub ↗</a>
+<a class="project-link" data-payload-link-id="proj-fuse-wk2" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details></div></article><article aria-labelledby="fuse-month-3-title" class="fuse-month-card" data-fuse-month="3"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-3-title">Month 3</h3><p class="fuse-month-range">Weeks 9–12</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="12" id="p-024">
-<summary class="project-summary">
-<div class="project-index">P — 024 <span class="project-date">30 Jul 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 12 — NER for Customer Support</h4>
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="3" data-project-title="Fusemachines Wk 3 — Text-to-SQL Agentic Pipeline" id="p-005">
+<summary class="project-summary"><span class="fuse-week-label">Week 3</span>
+<div class="project-index">P — 005 <span class="project-date">20 May 2026</span></div>
+<h4 class="project-title">Text-to-SQL Agentic Pipeline</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk12/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<a class="project-media-link" href="assets/images/projects/fuse-wk3/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
 <picture>
-<source srcset="assets/images/projects/fuse-wk12/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 12 – NER for Customer Support — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk12/hero.png"/>
+<source srcset="assets/images/projects/fuse-wk3/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 3 – Text-to-SQL Agentic Pipeline — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk3/hero.png"/>
 </picture>
 <div class="project-media-badge">
 <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
@@ -1607,55 +1564,219 @@ Your browser doesn't support embedded video.
 </a>
 </div>
 <ul class="project-desc-list">
-<li>End-to-end Named Entity Recognition pipeline on CoNLL-2003 for automated customer-support ticket
-                triage and CRM routing</li>
-<li>Text preprocessing, EDA (sentence-length / word-frequency / entity distributions), and
-                `word2features` feature engineering ahead of model training</li>
+<li>Five-stage agentic Text-to-SQL system over a PostgreSQL database — Planner → Generator → Validator →
+                Executor → Summarizer</li>
+<li>100% execution success and 100% result accuracy across a 50-question benchmark, zero retries required
+              </li>
 </ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">NER</span>
-<span class="tag">CoNLL-2003</span><span class="tag">Feature Engineering</span>
-<span class="tag">NLP</span>
+<span class="tag">Python</span><span class="tag">FastAPI</span>
+<span class="tag">Streamlit</span><span class="tag">GPT-4o-mini</span>
+<span class="tag">PostgreSQL</span><span class="tag">Docker</span>
+<span class="tag">Prompt Chaining</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk12" rel="noopener" target="_blank">View on GitHub ↗</a>
-</div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="11" id="p-022">
-<summary class="project-summary">
-<div class="project-index">P — 022 <span class="project-date">Jul 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 11 — Vision Transformers</h4>
-</summary>
-<div class="project-card-body">
-<div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk11/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
-<picture>
-<source srcset="assets/images/projects/fuse-wk11/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 11 – Vision Transformers — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk11/hero.png"/>
-</picture>
-<div class="project-media-badge">
-<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-<span>Verified Proof ↗</span>
-</div>
-</a>
-</div>
-<ul class="project-desc-list">
-<li>Five-module deep computer vision stack — ResNet-50 transfer learning + GradCAM, Faster R-CNN
-                object detection, DeepLabv3+ segmentation, a from-scratch VAE, and ViT patch embedding</li>
-<li>CLIP zero-shot classification hit 92.0% on a 200-image slice, outscoring the fine-tuned ResNet-50
-                (74.1%) — deployment memo compares both for a 500-camera warehouse rollout, exported to ONNX</li>
-</ul>
-<div class="project-tags">
-<span class="tag">Python</span><span class="tag">PyTorch</span>
-<span class="tag">torchvision</span><span class="tag">timm</span>
-<span class="tag">CLIP</span><span class="tag">ONNX</span>
-<span class="tag">GradCAM</span><span class="tag">Vision Transformers</span>
-</div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk11" rel="noopener" target="_blank">View on GitHub
+<a class="project-link" data-payload-link-id="proj-fuse-wk3" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="10" id="p-019">
-<summary class="project-summary">
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="4" data-project-title="Fusemachines Wk 4 — Telco Churn &amp; CLV ML Pipeline" id="p-006">
+<summary class="project-summary"><span class="fuse-week-label">Week 4</span>
+<div class="project-index">P — 006 <span class="project-date">28 May 2026</span></div>
+<h4 class="project-title">Telco Churn &amp; CLV ML Pipeline</h4>
+</summary>
+<div class="project-card-body">
+<div class="project-media-preview">
+<a class="project-media-link" href="assets/images/projects/fuse-wk4/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<picture>
+<source srcset="assets/images/projects/fuse-wk4/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 4 – Telco Churn &amp; CLV ML Pipeline — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk4/hero.png"/>
+</picture>
+<div class="project-media-badge">
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+<span>Verified Proof ↗</span>
+</div>
+</a>
+</div>
+<ul class="project-desc-list">
+<li>Classification and regression pipeline for churn prediction and Customer Lifetime Value modeling —
+                ROC-AUC 0.841 ± 0.005</li>
+<li>Ridge Regression best for CLV (mean $1,304.70); full HTML report export via Papermill</li>
+</ul>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">scikit-learn</span>
+<span class="tag">Logistic Regression</span><span class="tag">Ridge</span>
+<span class="tag">Lasso</span><span class="tag">Pandas</span>
+<span class="tag">Papermill</span>
+</div>
+<a class="project-link" data-payload-link-id="proj-fuse-wk4" rel="noopener" target="_blank">View on GitHub
+              ↗</a>
+</div>
+</details></div></article><article aria-labelledby="fuse-month-2-title" class="fuse-month-card" data-fuse-month="2"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-2-title">Month 2</h3><p class="fuse-month-range">Weeks 5–8</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="5" data-project-title="Fusemachines Wk 5 — Telco Churn Tree-Based Ensemble Pipeline" id="p-008">
+<summary class="project-summary"><span class="fuse-week-label">Week 5</span>
+<div class="project-index">P — 008 <span class="project-date">31 May 2026</span></div>
+<h4 class="project-title">Telco Churn Tree-Based Ensemble Pipeline</h4>
+</summary>
+<div class="project-card-body">
+<div class="project-media-preview">
+<a class="project-media-link" href="assets/images/projects/fuse-wk5/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<picture>
+<source srcset="assets/images/projects/fuse-wk5/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 5 – Telco Churn Tree-Based Ensemble Pipeline — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk5/hero.png"/>
+</picture>
+<div class="project-media-badge">
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+<span>Verified Proof ↗</span>
+</div>
+</a>
+</div>
+<ul class="project-desc-list">
+<li>End-to-end classification pipeline on Telco Customer Churn (7,043 rows) with SMOTE restricted to
+                training folds only</li>
+<li>Random Forest + XGBoost with SHAP explainability; secondary tenure-prediction task with a Model Card
+              </li>
+</ul>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">XGBoost</span>
+<span class="tag">Random Forest</span><span class="tag">SHAP</span>
+<span class="tag">ImbPipeline</span><span class="tag">SMOTE</span>
+<span class="tag">Joblib</span><span class="tag">scikit-learn</span>
+</div>
+<a class="project-link" data-payload-link-id="proj-fuse-wk5" rel="noopener" target="_blank">View on GitHub
+              ↗</a>
+</div>
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="6" data-project-title="Fusemachines Wk 6 — Probabilistic Models" id="p-009">
+<summary class="project-summary"><span class="fuse-week-label">Week 6</span>
+<div class="project-index">P — 009 <span class="project-date">5 Jun 2026</span></div>
+<h4 class="project-title">Probabilistic Models</h4>
+</summary>
+<div class="project-card-body">
+<div class="project-media-preview">
+<a class="project-media-link" href="assets/images/projects/fuse-wk6/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<picture>
+<source srcset="assets/images/projects/fuse-wk6/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 6 – Probabilistic Models — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk6/hero.png"/>
+</picture>
+<div class="project-media-badge">
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+<span>Verified Proof ↗</span>
+</div>
+</a>
+</div>
+<ul class="project-desc-list">
+<li>Bayesian inference pipeline for Telco Churn using PyMC, ArviZ, and pgmpy</li>
+<li>MLE/MAP estimation, Dirichlet-multinomial updating, and a fitted PyMC Bayesian logistic regression
+                artifact</li>
+</ul>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">PyMC</span>
+<span class="tag">ArviZ</span><span class="tag">pgmpy</span>
+<span class="tag">Bayesian Inference</span><span class="tag">scikit-learn</span>
+<span class="tag">Pandas</span>
+</div>
+<a class="project-link" data-payload-link-id="proj-fuse-wk6" rel="noopener" target="_blank">View on GitHub
+              ↗</a>
+</div>
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="7" data-project-title="Fusemachines Wk 7 — Customer Segmentation" id="p-011">
+<summary class="project-summary"><span class="fuse-week-label">Week 7</span>
+<div class="project-index">P — 011 <span class="project-date">21 Jun 2026</span></div>
+<h4 class="project-title">Customer Segmentation</h4>
+</summary>
+<div class="project-card-body">
+<div class="project-media-preview">
+<a class="project-media-link" href="assets/images/projects/fuse-wk7/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<picture>
+<source srcset="assets/images/projects/fuse-wk7/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 7 – Customer Segmentation — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk7/hero.png"/>
+</picture>
+<div class="project-media-badge">
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+<span>Verified Proof ↗</span>
+</div>
+</a>
+</div>
+<ul class="project-desc-list">
+<li>Market segmentation on UCI Online Retail II (~500,000 transactions) with RFM + category-ratio feature
+                engineering</li>
+<li>Full clustering comparison — K-Means, Hierarchical, DBSCAN — validated via Silhouette and
+                Davies-Bouldin indices</li>
+</ul>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">scikit-learn</span>
+<span class="tag">K-Means</span><span class="tag">Hierarchical Clustering</span>
+<span class="tag">DBSCAN</span><span class="tag">RFM</span>
+<span class="tag">Pandas</span><span class="tag">scipy</span>
+</div>
+<a class="project-link" data-payload-link-id="proj-fuse-wk7" rel="noopener" target="_blank">View on GitHub
+              ↗</a>
+</div>
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="8" data-project-title="Fusemachines Wk 8 — Forecasting" id="p-016">
+<summary class="project-summary"><span class="fuse-week-label">Week 8</span>
+<div class="project-index">P — 016 <span class="project-date">1 Jul 2026</span></div>
+<h4 class="project-title">Forecasting</h4>
+</summary>
+<div class="project-card-body">
+<div class="project-media-preview">
+<a class="project-media-link" href="assets/images/projects/fuse-wk8/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<picture>
+<source srcset="assets/images/projects/fuse-wk8/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 8 – Forecasting — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk8/hero.png"/>
+</picture>
+<div class="project-media-badge">
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+<span>Verified Proof ↗</span>
+</div>
+</a>
+</div>
+<ul class="project-desc-list">
+<li>Time-series pipeline benchmarking nine forecasters on monthly S&amp;P 500 data (1990–2024) via
+                MASE/RMSE</li>
+<li>4-model ensemble outperformed every single model — MASE 2.44, confirmed via Diebold-Mariano test
+                (p = 0.0092)</li>
+</ul>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">statsmodels</span>
+<span class="tag">SARIMA</span><span class="tag">Holt-Winters</span>
+<span class="tag">Prophet</span><span class="tag">LightGBM</span>
+<span class="tag">LSTM</span><span class="tag">XGBoost</span>
+</div>
+<a class="project-link" data-payload-link-id="proj-fuse-wk8" rel="noopener" target="_blank">View on GitHub
+              ↗</a>
+</div>
+</details></div></article><article aria-labelledby="fuse-month-3-title" class="fuse-month-card" data-fuse-month="3"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-3-title">Month 3</h3><p class="fuse-month-range">Weeks 9–12</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="9" data-project-title="Fusemachines Wk 9 — NEU Steel Defect CNN" id="p-017">
+<summary class="project-summary"><span class="fuse-week-label">Week 9</span>
+<div class="project-index">P — 017 <span class="project-date">9 Jul 2026</span></div>
+<h4 class="project-title">NEU Steel Defect CNN</h4>
+</summary>
+<div class="project-card-body">
+<div class="project-media-preview">
+<a class="project-media-link" href="assets/images/projects/fuse-wk9/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<picture>
+<source srcset="assets/images/projects/fuse-wk9/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 9 – NEU Steel Defect CNN — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk9/hero.png"/>
+</picture>
+<div class="project-media-badge">
+<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
+<span>Verified Proof ↗</span>
+</div>
+</a>
+</div>
+<ul class="project-desc-list">
+<li>PyTorch CNN classifier for NEU-DET steel surface-defect detection — six classes, 1,800 grayscale
+                images</li>
+<li>From-scratch NN foundation → tuned CNN, 98.8%/78.9% train/val accuracy; augmentation,
+                BatchNorm, and dropout ablations plus grid-search and Optuna hyperparameter tuning</li>
+</ul>
+<div class="project-tags">
+<span class="tag">Python</span><span class="tag">PyTorch</span>
+<span class="tag">torchvision</span><span class="tag">CNN</span>
+<span class="tag">Optuna</span><span class="tag">scikit-learn</span>
+</div>
+<a class="project-link" data-payload-link-id="proj-fuse-wk9" rel="noopener" target="_blank">View on GitHub
+              ↗</a>
+</div>
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="10" data-project-title="Fusemachines Wk 10 — Image Processing" id="p-019">
+<summary class="project-summary"><span class="fuse-week-label">Week 10</span>
 <div class="project-index">P — 019 <span class="project-date">16 Jul 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 10 — Image Processing</h4>
+<h4 class="project-title">Image Processing</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1686,17 +1807,17 @@ Your browser doesn't support embedded video.
 <a class="project-link" data-payload-link-id="proj-fuse-wk10" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="9" id="p-017">
-<summary class="project-summary">
-<div class="project-index">P — 017 <span class="project-date">9 Jul 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 9 — NEU Steel Defect CNN</h4>
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="11" data-project-title="Fusemachines Wk 11 — Vision Transformers" id="p-022">
+<summary class="project-summary"><span class="fuse-week-label">Week 11</span>
+<div class="project-index">P — 022 <span class="project-date">Jul 2026</span></div>
+<h4 class="project-title">Vision Transformers</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk9/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<a class="project-media-link" href="assets/images/projects/fuse-wk11/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
 <picture>
-<source srcset="assets/images/projects/fuse-wk9/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 9 – NEU Steel Defect CNN — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk9/hero.png"/>
+<source srcset="assets/images/projects/fuse-wk11/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 11 – Vision Transformers — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk11/hero.png"/>
 </picture>
 <div class="project-media-badge">
 <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
@@ -1705,30 +1826,31 @@ Your browser doesn't support embedded video.
 </a>
 </div>
 <ul class="project-desc-list">
-<li>PyTorch CNN classifier for NEU-DET steel surface-defect detection — six classes, 1,800 grayscale
-                images</li>
-<li>From-scratch NN foundation → tuned CNN, 98.8%/78.9% train/val accuracy; augmentation,
-                BatchNorm, and dropout ablations plus grid-search and Optuna hyperparameter tuning</li>
+<li>Five-module deep computer vision stack — ResNet-50 transfer learning + GradCAM, Faster R-CNN
+                object detection, DeepLabv3+ segmentation, a from-scratch VAE, and ViT patch embedding</li>
+<li>CLIP zero-shot classification hit 92.0% on a 200-image slice, outscoring the fine-tuned ResNet-50
+                (74.1%) — deployment memo compares both for a 500-camera warehouse rollout, exported to ONNX</li>
 </ul>
 <div class="project-tags">
 <span class="tag">Python</span><span class="tag">PyTorch</span>
-<span class="tag">torchvision</span><span class="tag">CNN</span>
-<span class="tag">Optuna</span><span class="tag">scikit-learn</span>
+<span class="tag">torchvision</span><span class="tag">timm</span>
+<span class="tag">CLIP</span><span class="tag">ONNX</span>
+<span class="tag">GradCAM</span><span class="tag">Vision Transformers</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk9" rel="noopener" target="_blank">View on GitHub
+<a class="project-link" data-payload-link-id="proj-fuse-wk11" rel="noopener" target="_blank">View on GitHub
               ↗</a>
 </div>
-</details></div></article><article aria-labelledby="fuse-month-2-title" class="fuse-month-card" data-fuse-month="2"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-2-title">Month 2</h3><p class="fuse-month-range">Weeks 5–8</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="8" id="p-016">
-<summary class="project-summary">
-<div class="project-index">P — 016 <span class="project-date">1 Jul 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 8 — Forecasting</h4>
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="12" data-project-title="Fusemachines Wk 12 — NER for Customer Support" id="p-024">
+<summary class="project-summary"><span class="fuse-week-label">Week 12</span>
+<div class="project-index">P — 024 <span class="project-date">30 Jul 2026</span></div>
+<h4 class="project-title">NER for Customer Support</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk8/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<a class="project-media-link" href="assets/images/projects/fuse-wk12/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
 <picture>
-<source srcset="assets/images/projects/fuse-wk8/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 8 – Forecasting — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk8/hero.png"/>
+<source srcset="assets/images/projects/fuse-wk12/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 12 – NER for Customer Support — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk12/hero.png"/>
 </picture>
 <div class="project-media-badge">
 <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
@@ -1737,31 +1859,29 @@ Your browser doesn't support embedded video.
 </a>
 </div>
 <ul class="project-desc-list">
-<li>Time-series pipeline benchmarking nine forecasters on monthly S&amp;P 500 data (1990–2024) via
-                MASE/RMSE</li>
-<li>4-model ensemble outperformed every single model — MASE 2.44, confirmed via Diebold-Mariano test
-                (p = 0.0092)</li>
+<li>End-to-end Named Entity Recognition pipeline on CoNLL-2003 for automated customer-support ticket
+                triage and CRM routing</li>
+<li>Text preprocessing, EDA (sentence-length / word-frequency / entity distributions), and
+                `word2features` feature engineering ahead of model training</li>
 </ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">statsmodels</span>
-<span class="tag">SARIMA</span><span class="tag">Holt-Winters</span>
-<span class="tag">Prophet</span><span class="tag">LightGBM</span>
-<span class="tag">LSTM</span><span class="tag">XGBoost</span>
+<span class="tag">Python</span><span class="tag">NER</span>
+<span class="tag">CoNLL-2003</span><span class="tag">Feature Engineering</span>
+<span class="tag">NLP</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk8" rel="noopener" target="_blank">View on GitHub
-              ↗</a>
+<a class="project-link" data-payload-link-id="proj-fuse-wk12" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="7" id="p-011">
-<summary class="project-summary">
-<div class="project-index">P — 011 <span class="project-date">21 Jun 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 7 — Customer Segmentation</h4>
+</details></div></article><article aria-labelledby="fuse-month-4-title" class="fuse-month-card" data-fuse-month="4"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-4-title">Month 4</h3><p class="fuse-month-range">Weeks 13–16</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="13" data-project-title="Fusemachines Wk 13 — LSTM Text Classification" id="p-027">
+<summary class="project-summary"><span class="fuse-week-label">Week 13</span>
+<div class="project-index">P — 027 <span class="project-date">6 Aug 2026</span></div>
+<h4 class="project-title">LSTM Text Classification</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk7/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<a class="project-media-link" href="assets/images/projects/fuse-wk13/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
 <picture>
-<source srcset="assets/images/projects/fuse-wk7/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 7 – Customer Segmentation — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk7/hero.png"/>
+<source srcset="assets/images/projects/fuse-wk13/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 13 – LSTM Text Classification — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk13/hero.png"/>
 </picture>
 <div class="project-media-badge">
 <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
@@ -1770,31 +1890,29 @@ Your browser doesn't support embedded video.
 </a>
 </div>
 <ul class="project-desc-list">
-<li>Market segmentation on UCI Online Retail II (~500,000 transactions) with RFM + category-ratio feature
-                engineering</li>
-<li>Full clustering comparison — K-Means, Hierarchical, DBSCAN — validated via Silhouette and
-                Davies-Bouldin indices</li>
+<li>LSTM headline classifier on AG_NEWS (World / Sports / Business / Sci-Tech) — embedding → LSTM → FC,
+                trained top-to-bottom from a skeleton notebook</li>
+<li>PyTorch training loop with vocabulary building from scratch and a short conceptual-reflection
+                section</li>
 </ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">scikit-learn</span>
-<span class="tag">K-Means</span><span class="tag">Hierarchical Clustering</span>
-<span class="tag">DBSCAN</span><span class="tag">RFM</span>
-<span class="tag">Pandas</span><span class="tag">scipy</span>
+<span class="tag">Python</span><span class="tag">PyTorch</span>
+<span class="tag">LSTM</span><span class="tag">AG_NEWS</span>
+<span class="tag">NLP</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk7" rel="noopener" target="_blank">View on GitHub
-              ↗</a>
+<a class="project-link" data-payload-link-id="proj-fuse-wk13" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="6" id="p-009">
-<summary class="project-summary">
-<div class="project-index">P — 009 <span class="project-date">5 Jun 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 6 — Probabilistic Models</h4>
+</details><details class="project-card reveal" data-category="aiml" data-fuse-week="14" data-project-title="Fusemachines Wk 14 — Agentic Intent Routing" id="p-028">
+<summary class="project-summary"><span class="fuse-week-label">Week 14</span>
+<div class="project-index">P — 028 <span class="project-date">12 Aug 2026</span></div>
+<h4 class="project-title">Agentic Intent Routing</h4>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk6/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
+<a class="project-media-link" href="assets/images/projects/fuse-wk14/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
 <picture>
-<source srcset="assets/images/projects/fuse-wk6/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 6 – Probabilistic Models — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk6/hero.png"/>
+<source srcset="assets/images/projects/fuse-wk14/hero.webp" type="image/webp"/>
+<img alt="Fusemachines Wk 14 – Agentic Intent Routing — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk14/hero.png"/>
 </picture>
 <div class="project-media-badge">
 <svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
@@ -1803,176 +1921,82 @@ Your browser doesn't support embedded video.
 </a>
 </div>
 <ul class="project-desc-list">
-<li>Bayesian inference pipeline for Telco Churn using PyMC, ArviZ, and pgmpy</li>
-<li>MLE/MAP estimation, Dirichlet-multinomial updating, and a fitted PyMC Bayesian logistic regression
-                artifact</li>
+<li>Two candidate routing strategies for a ShopAssist AI support platform — fine-tuned BERT-family
+                encoder vs. fine-tuned LLM/SLM — classifying customer messages into 11 specialized agent
+                categories</li>
+<li>Benchmarked on 26,872 Bitext customer-support examples with a group-aware stratified split to prevent
+                instruction-text leakage across train/val/test</li>
 </ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">PyMC</span>
-<span class="tag">ArviZ</span><span class="tag">pgmpy</span>
-<span class="tag">Bayesian Inference</span><span class="tag">scikit-learn</span>
-<span class="tag">Pandas</span>
+<span class="tag">Python</span><span class="tag">BERT</span>
+<span class="tag">Fine-Tuning</span><span class="tag">SLM</span>
+<span class="tag">Intent Classification</span><span class="tag">Stratified Split</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk6" rel="noopener" target="_blank">View on GitHub
-              ↗</a>
+<a class="project-link" data-payload-link-id="proj-fuse-wk14" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="5" id="p-008">
-<summary class="project-summary">
-<div class="project-index">P — 008 <span class="project-date">31 May 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 5 — Telco Churn Tree-Based Ensemble Pipeline</h4>
+</details><details class="project-card reveal" data-category="aiml apps" data-fuse-week="15" data-project-title="Fusemachines Wk 15 — RAG AI Assistant" id="p-045">
+<summary class="project-summary"><span class="fuse-week-label">Week 15</span>
+<div class="project-index">P — 045 <span class="project-date">Coursework</span></div>
+<h4 class="project-title">RAG AI Assistant</h4>
 </summary>
 <div class="project-card-body">
-<div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk5/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
-<picture>
-<source srcset="assets/images/projects/fuse-wk5/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 5 – Telco Churn Tree-Based Ensemble Pipeline — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk5/hero.png"/>
-</picture>
-<div class="project-media-badge">
-<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-<span>Verified Proof ↗</span>
-</div>
-</a>
-</div>
 <ul class="project-desc-list">
-<li>End-to-end classification pipeline on Telco Customer Churn (7,043 rows) with SMOTE restricted to
-                training folds only</li>
-<li>Random Forest + XGBoost with SHAP explainability; secondary tenure-prediction task with a Model Card
-              </li>
+<li>Combines retrieval-augmented generation, structured responses, and tool calling in a FastAPI assistant.</li>
+<li>Uses Qdrant retrieval, a Streamlit interface, and provider fallbacks through Gemini, local vLLM, and Ollama.</li>
+<li>Includes response caching, retries, circuit breakers, rate limiting, and Docker Compose services.</li>
 </ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">XGBoost</span>
-<span class="tag">Random Forest</span><span class="tag">SHAP</span>
-<span class="tag">ImbPipeline</span><span class="tag">SMOTE</span>
-<span class="tag">Joblib</span><span class="tag">scikit-learn</span>
+<span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">RAG</span><span class="tag">Qdrant</span><span class="tag">Streamlit</span><span class="tag">vLLM</span><span class="tag">Docker</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk5" rel="noopener" target="_blank">View on GitHub
-              ↗</a>
+<a class="project-link" data-payload-link-id="proj-fuseaif-wk15-ai-assistant-rag" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details></div></article><article aria-labelledby="fuse-month-1-title" class="fuse-month-card" data-fuse-month="1"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-1-title">Month 1</h3><p class="fuse-month-range">Weeks 1–4</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml" data-fuse-week="4" id="p-006">
-<summary class="project-summary">
-<div class="project-index">P — 006 <span class="project-date">28 May 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 4 — Telco Churn &amp; CLV ML Pipeline</h4>
+</details><details class="project-card reveal" data-category="aiml apps" data-fuse-week="16" data-project-title="Fusemachines Wk 16 — Verified Agentic Assistant" id="p-046">
+<summary class="project-summary"><span class="fuse-week-label">Week 16</span>
+<div class="project-index">P — 046 <span class="project-date">Coursework</span></div>
+<h4 class="project-title">Verified Agentic Assistant</h4>
 </summary>
 <div class="project-card-body">
-<div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk4/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
-<picture>
-<source srcset="assets/images/projects/fuse-wk4/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 4 – Telco Churn &amp; CLV ML Pipeline — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk4/hero.png"/>
-</picture>
-<div class="project-media-badge">
-<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-<span>Verified Proof ↗</span>
-</div>
-</a>
-</div>
 <ul class="project-desc-list">
-<li>Classification and regression pipeline for churn prediction and Customer Lifetime Value modeling —
-                ROC-AUC 0.841 ± 0.005</li>
-<li>Ridge Regression best for CLV (mean $1,304.70); full HTML report export via Papermill</li>
+<li>Extends the Week 15 RAG assistant with a verified agentic loop and multi-hop tool use.</li>
+<li>Adds context-window management and context engineering to the assistant workflow.</li>
+<li>Includes failure injection and a custom evaluation harness for checking agent behavior.</li>
 </ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">scikit-learn</span>
-<span class="tag">Logistic Regression</span><span class="tag">Ridge</span>
-<span class="tag">Lasso</span><span class="tag">Pandas</span>
-<span class="tag">Papermill</span>
+<span class="tag">Python</span><span class="tag">Agentic AI</span><span class="tag">RAG</span><span class="tag">Context Engineering</span><span class="tag">Evaluation</span><span class="tag">FastAPI</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk4" rel="noopener" target="_blank">View on GitHub
-              ↗</a>
+<a class="project-link" data-payload-link-id="proj-fuseaif-wk16-agentic-assistant" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="3" id="p-005">
-<summary class="project-summary">
-<div class="project-index">P — 005 <span class="project-date">20 May 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 3 — Text-to-SQL Agentic Pipeline</h4>
+</details></div></article><article aria-labelledby="fuse-month-5-title" class="fuse-month-card" data-fuse-month="5"><header class="fuse-month-header"><h3 class="fuse-month-title" id="fuse-month-5-title">Month 5</h3><p class="fuse-month-range">Weeks 17–18</p></header><div class="fuse-week-grid"><details class="project-card reveal" data-category="aiml apps" data-fuse-week="17" data-project-title="Fusemachines Wk 17 — Agentic AI &amp; Telco Churn MLOps" id="p-043">
+<summary class="project-summary" id="p-042"><span class="fuse-week-label">Week 17</span>
+<div class="project-index">P — 043 <span class="project-date">Oct 2026</span></div>
+<h4 class="project-title">Agentic AI &amp; Telco Churn MLOps</h4>
 </summary>
 <div class="project-card-body">
-<div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk3/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
-<picture>
-<source srcset="assets/images/projects/fuse-wk3/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 3 – Text-to-SQL Agentic Pipeline — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk3/hero.png"/>
-</picture>
-<div class="project-media-badge">
-<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-<span>Verified Proof ↗</span>
-</div>
-</a>
-</div>
 <ul class="project-desc-list">
-<li>Five-stage agentic Text-to-SQL system over a PostgreSQL database — Planner → Generator → Validator →
-                Executor → Summarizer</li>
-<li>100% execution success and 100% result accuracy across a 50-question benchmark, zero retries required
-              </li>
-</ul>
+<li>Agentic assistant: Applies MLOps workflows to an autonomous technical assistant developed in earlier coursework.</li>
+<li>Tracks prompt and trace experiments with MLflow and evaluates response regressions with an LLM-as-judge workflow.</li>
+<li>Schedules recurring evaluation through an Airflow regression DAG.</li>
+<li>Telco churn: Builds a reproducible customer churn classification pipeline with experiment tracking and model registry workflows.</li><li>Serves predictions through FastAPI and monitors data quality and drift with Evidently.</li><li>Uses an Airflow DAG to orchestrate drift monitoring workflows.</li></ul>
 <div class="project-tags">
-<span class="tag">Python</span><span class="tag">FastAPI</span>
-<span class="tag">Streamlit</span><span class="tag">GPT-4o-mini</span>
-<span class="tag">PostgreSQL</span><span class="tag">Docker</span>
-<span class="tag">Prompt Chaining</span>
-</div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk3" rel="noopener" target="_blank">View on GitHub
-              ↗</a>
-</div>
-</details><details class="project-card reveal" data-category="aiml apps" data-fuse-week="2" id="p-004">
-<summary class="project-summary">
-<div class="project-index">P — 004 <span class="project-date">12 May 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 2 — Customer API App</h4>
+<span class="tag">Python</span><span class="tag">MLOps</span><span class="tag">MLflow</span><span class="tag">Evidently AI</span><span class="tag">Airflow</span><span class="tag">LLM Evaluation</span>
+<span class="tag">FastAPI</span></div>
+<a class="project-link" data-link-label="Agentic AI MLOps" data-payload-link-id="proj-fuseaif-wk17-agentic-mlops" rel="noopener" target="_blank">Agentic AI MLOps</a>
+<a class="project-link" data-link-label="Telco Churn MLOps" data-payload-link-id="proj-fuseaif-wk17-telco-churn-mlops" rel="noopener" target="_blank">Telco Churn MLOps</a></div>
+</details><details class="project-card reveal project-card--major" data-category="aiml apps" data-fuse-week="18" data-project-title="Fusemachines Week 18 — Trustworthy AI Guardrails" id="p-044">
+<summary class="project-summary"><span class="fuse-week-label">Week 18</span>
+<div class="project-index">P — 044 <span class="project-date">Oct 2026</span></div>
+<h4 class="project-title">Trustworthy AI Guardrails</h4>
 </summary>
 <div class="project-card-body">
-<div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk2/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
-<picture>
-<source srcset="assets/images/projects/fuse-wk2/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 2 – Customer API App — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk2/hero.png"/>
-</picture>
-<div class="project-media-badge">
-<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-<span>Verified Proof ↗</span>
-</div>
-</a>
-</div>
 <ul class="project-desc-list">
-<li>12-Factor App compliant RESTful API for customer, order, and payment management, refactored to full
-                12-Factor compliance with a statistics module</li>
-<li>FastAPI + SQLAlchemy over PostgreSQL, Dockerized with environment-based config and centralized
-                logging</li>
+<li>Implements input checks for personally identifiable information, prompt injection, and sensitive topics.</li>
+<li>Screens generated outputs for schema compliance, groundedness, and sensitive information leakage.</li>
+<li>Combines these checks in a fail-closed guardrail pipeline with a golden-case evaluation set.</li>
 </ul>
 <div class="project-tags">
-<span class="tag">FastAPI</span><span class="tag">PostgreSQL</span>
-<span class="tag">SQLAlchemy</span><span class="tag">Pydantic</span>
-<span class="tag">Docker</span><span class="tag">12-Factor App</span>
+<span class="tag">Python</span><span class="tag">AI Safety</span><span class="tag">Prompt Injection</span><span class="tag">PII</span><span class="tag">Pydantic</span><span class="tag">LLM Guardrails</span>
 </div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk2" rel="noopener" target="_blank">View on GitHub ↗</a>
-</div>
-</details><details class="project-card reveal" data-category="aiml" data-fuse-week="1" id="p-003">
-<summary class="project-summary">
-<div class="project-index">P — 003 <span class="project-date">30 Apr 2026</span></div>
-<h4 class="project-title">Fusemachines Wk 1 — Cardiac Event Data Wrangling</h4>
-</summary>
-<div class="project-card-body">
-<div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/fuse-wk1/hero.png" rel="noopener" target="_blank" title="Open full-resolution working proof">
-<picture>
-<source srcset="assets/images/projects/fuse-wk1/hero.webp" type="image/webp"/>
-<img alt="Fusemachines Wk 1 – Cardiac Event Data Wrangling — Working Execution Proof" class="project-preview-img" decoding="async" loading="lazy" src="assets/images/projects/fuse-wk1/hero.png"/>
-</picture>
-<div class="project-media-badge">
-<svg aria-hidden="true" fill="none" height="12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-<span>Verified Proof ↗</span>
-</div>
-</a>
-</div>
-<ul class="project-desc-list">
-<li>Data wrangling and preparation pipeline for cardiac event analysis on a synthetic heart-attack-risk
-                dataset</li>
-<li>EDA, correlation heatmap, and class-imbalance analysis ahead of downstream modeling</li>
-</ul>
-<div class="project-tags">
-<span class="tag">Python</span><span class="tag">Pandas</span>
-<span class="tag">EDA</span><span class="tag">Data Wrangling</span>
-</div>
-<a class="project-link" data-payload-link-id="proj-fuse-wk1" rel="noopener" target="_blank">View on GitHub ↗</a>
+<a class="project-link" data-payload-link-id="proj-fuseaif-wk18-trustworthy-ai-guardrails" rel="noopener" target="_blank">View on GitHub ↗</a>
 </div>
 </details></div></article></div><details class="project-card reveal" data-category="aiml" id="p-026">
 <summary class="project-summary">
@@ -2809,8 +2833,12 @@ Your browser doesn't support embedded video.
     function initCourseworkHighlights() {
       const fuseSec = document.getElementById('section-fuseaif');
       if (!fuseSec) return;
-      sectionProjectCards(fuseSec).forEach((card, index) => {
-        card.classList.toggle('project-card--major', index === 0);
+      const cards = sectionProjectCards(fuseSec);
+      const latest = cards.reduce((best, card) => {
+        return Number(card.dataset.fuseWeek || 0) > Number(best?.dataset.fuseWeek || 0) ? card : best;
+      }, cards[0]);
+      cards.forEach(card => {
+        card.classList.toggle('project-card--major', card === latest);
       });
     }
 

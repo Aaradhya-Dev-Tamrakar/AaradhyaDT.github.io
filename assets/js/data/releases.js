@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v55.22",
+    version: "v55.23",
     date: "2026-10-21",
     sha: "a75b3a3693f156569f27b1bd54f06d0cfd14836b",
     title: "group Fuse AIF coursework into month cards (#18)",

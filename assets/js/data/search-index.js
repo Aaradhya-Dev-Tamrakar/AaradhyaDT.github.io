@@ -335,115 +335,10 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "Fusemachines Week 18 — Trustworthy AI Guardrails",
-    "meta": "Python, AI Safety, Prompt Injection",
-    "href": "projects.html#p-044",
-    "text": "fusemachines week 18 — trustworthy ai guardrails implements input checks for personally identifiable information, prompt injection, and sensitive topics. screens generated outputs for schema compliance, groundedness, and sensitive information leakage. combines these checks in a fail-closed guardrail pipeline with a golden-case evaluation set. python ai safety prompt injection pii pydantic llm guardrails"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 17 — Agentic AI & Telco Churn MLOps",
-    "meta": "Python, MLOps, MLflow",
-    "href": "projects.html#p-043",
-    "text": "fusemachines wk 17 — agentic ai & telco churn mlops agentic assistant: applies mlops workflows to an autonomous technical assistant developed in earlier coursework. tracks prompt and trace experiments with mlflow and evaluates response regressions with an llm-as-judge workflow. schedules recurring evaluation through an airflow regression dag. telco churn: builds a reproducible customer churn classification pipeline with experiment tracking and model registry workflows. serves predictions through fastapi and monitors data quality and drift with evidently. uses an airflow dag to orchestrate drift monitoring workflows. python mlops mlflow evidently ai airflow llm evaluation fastapi"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 16 — Verified Agentic Assistant",
-    "meta": "Python, Agentic AI, RAG",
-    "href": "projects.html#p-046",
-    "text": "fusemachines wk 16 — verified agentic assistant extends the week 15 rag assistant with a verified agentic loop and multi-hop tool use. adds context-window management and context engineering to the assistant workflow. includes failure injection and a custom evaluation harness for checking agent behavior. python agentic ai rag context engineering evaluation fastapi"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 15 — RAG AI Assistant",
-    "meta": "Python, FastAPI, RAG",
-    "href": "projects.html#p-045",
-    "text": "fusemachines wk 15 — rag ai assistant combines retrieval-augmented generation, structured responses, and tool calling in a fastapi assistant. uses qdrant retrieval, a streamlit interface, and provider fallbacks through gemini, local vllm, and ollama. includes response caching, retries, circuit breakers, rate limiting, and docker compose services. python fastapi rag qdrant streamlit vllm docker"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 14 — Agentic Intent Routing",
-    "meta": "Python, BERT, Fine-Tuning",
-    "href": "projects.html#p-028",
-    "text": "fusemachines wk 14 — agentic intent routing two candidate routing strategies for a shopassist ai support platform — fine-tuned bert-family encoder vs. fine-tuned llm/slm — classifying customer messages into 11 specialized agent categories benchmarked on 26,872 bitext customer-support examples with a group-aware stratified split to prevent instruction-text leakage across train/val/test python bert fine-tuning slm intent classification stratified split"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 13 — LSTM Text Classification",
-    "meta": "Python, PyTorch, LSTM",
-    "href": "projects.html#p-027",
-    "text": "fusemachines wk 13 — lstm text classification lstm headline classifier on ag_news (world / sports / business / sci-tech) — embedding → lstm → fc, trained top-to-bottom from a skeleton notebook pytorch training loop with vocabulary building from scratch and a short conceptual-reflection section python pytorch lstm ag_news nlp"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 12 — NER for Customer Support",
-    "meta": "Python, NER, CoNLL-2003",
-    "href": "projects.html#p-024",
-    "text": "fusemachines wk 12 — ner for customer support end-to-end named entity recognition pipeline on conll-2003 for automated customer-support ticket triage and crm routing text preprocessing, eda (sentence-length / word-frequency / entity distributions), and `word2features` feature engineering ahead of model training python ner conll-2003 feature engineering nlp"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 11 — Vision Transformers",
-    "meta": "Python, PyTorch, torchvision",
-    "href": "projects.html#p-022",
-    "text": "fusemachines wk 11 — vision transformers five-module deep computer vision stack — resnet-50 transfer learning + gradcam, faster r-cnn object detection, deeplabv3+ segmentation, a from-scratch vae, and vit patch embedding clip zero-shot classification hit 92.0% on a 200-image slice, outscoring the fine-tuned resnet-50 (74.1%) — deployment memo compares both for a 500-camera warehouse rollout, exported to onnx python pytorch torchvision timm clip onnx gradcam vision transformers"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 10 — Image Processing",
-    "meta": "Python, OpenCV, NumPy",
-    "href": "projects.html#p-019",
-    "text": "fusemachines wk 10 — image processing hsv-based multi-class fruit segmentation across the fruits-360 dataset, morphological cleanup, and filter-based denoising benchmarks (gaussian, median, bilateral) from-scratch canny edge detector (96.9% pixel agreement vs. cv2.canny()), plus a full fruit-detection pipeline — harris corners, tuned hough circles, connected-component separation of touching fruit, contour-based bounding boxes python opencv numpy matplotlib hsv segmentation canny edge detection hough transform"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 9 — NEU Steel Defect CNN",
-    "meta": "Python, PyTorch, torchvision",
-    "href": "projects.html#p-017",
-    "text": "fusemachines wk 9 — neu steel defect cnn pytorch cnn classifier for neu-det steel surface-defect detection — six classes, 1,800 grayscale images from-scratch nn foundation → tuned cnn, 98.8%/78.9% train/val accuracy; augmentation, batchnorm, and dropout ablations plus grid-search and optuna hyperparameter tuning python pytorch torchvision cnn optuna scikit-learn"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 8 — Forecasting",
-    "meta": "Python, statsmodels, SARIMA",
-    "href": "projects.html#p-016",
-    "text": "fusemachines wk 8 — forecasting time-series pipeline benchmarking nine forecasters on monthly s&p 500 data (1990–2024) via mase/rmse 4-model ensemble outperformed every single model — mase 2.44, confirmed via diebold-mariano test (p = 0.0092) python statsmodels sarima holt-winters prophet lightgbm lstm xgboost"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 7 — Customer Segmentation",
-    "meta": "Python, scikit-learn, K-Means",
-    "href": "projects.html#p-011",
-    "text": "fusemachines wk 7 — customer segmentation market segmentation on uci online retail ii (~500,000 transactions) with rfm + category-ratio feature engineering full clustering comparison — k-means, hierarchical, dbscan — validated via silhouette and davies-bouldin indices python scikit-learn k-means hierarchical clustering dbscan rfm pandas scipy"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 6 — Probabilistic Models",
-    "meta": "Python, PyMC, ArviZ",
-    "href": "projects.html#p-009",
-    "text": "fusemachines wk 6 — probabilistic models bayesian inference pipeline for telco churn using pymc, arviz, and pgmpy mle/map estimation, dirichlet-multinomial updating, and a fitted pymc bayesian logistic regression artifact python pymc arviz pgmpy bayesian inference scikit-learn pandas"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 5 — Telco Churn Tree-Based Ensemble Pipeline",
-    "meta": "Python, XGBoost, Random Forest",
-    "href": "projects.html#p-008",
-    "text": "fusemachines wk 5 — telco churn tree-based ensemble pipeline end-to-end classification pipeline on telco customer churn (7,043 rows) with smote restricted to training folds only random forest + xgboost with shap explainability; secondary tenure-prediction task with a model card python xgboost random forest shap imbpipeline smote joblib scikit-learn"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 4 — Telco Churn & CLV ML Pipeline",
-    "meta": "Python, scikit-learn, Logistic Regression",
-    "href": "projects.html#p-006",
-    "text": "fusemachines wk 4 — telco churn & clv ml pipeline classification and regression pipeline for churn prediction and customer lifetime value modeling — roc-auc 0.841 ± 0.005 ridge regression best for clv (mean $1,304.70); full html report export via papermill python scikit-learn logistic regression ridge lasso pandas papermill"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Wk 3 — Text-to-SQL Agentic Pipeline",
-    "meta": "Python, FastAPI, Streamlit",
-    "href": "projects.html#p-005",
-    "text": "fusemachines wk 3 — text-to-sql agentic pipeline five-stage agentic text-to-sql system over a postgresql database — planner → generator → validator → executor → summarizer 100% execution success and 100% result accuracy across a 50-question benchmark, zero retries required python fastapi streamlit gpt-4o-mini postgresql docker prompt chaining"
+    "title": "Fusemachines Wk 1 — Cardiac Event Data Wrangling",
+    "meta": "Python, Pandas, EDA",
+    "href": "projects.html#p-003",
+    "text": "fusemachines wk 1 — cardiac event data wrangling data wrangling and preparation pipeline for cardiac event analysis on a synthetic heart-attack-risk dataset eda, correlation heatmap, and class-imbalance analysis ahead of downstream modeling python pandas eda data wrangling"
   },
   {
     "type": "project",
@@ -454,10 +349,115 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "Fusemachines Wk 1 — Cardiac Event Data Wrangling",
-    "meta": "Python, Pandas, EDA",
-    "href": "projects.html#p-003",
-    "text": "fusemachines wk 1 — cardiac event data wrangling data wrangling and preparation pipeline for cardiac event analysis on a synthetic heart-attack-risk dataset eda, correlation heatmap, and class-imbalance analysis ahead of downstream modeling python pandas eda data wrangling"
+    "title": "Fusemachines Wk 3 — Text-to-SQL Agentic Pipeline",
+    "meta": "Python, FastAPI, Streamlit",
+    "href": "projects.html#p-005",
+    "text": "fusemachines wk 3 — text-to-sql agentic pipeline five-stage agentic text-to-sql system over a postgresql database — planner → generator → validator → executor → summarizer 100% execution success and 100% result accuracy across a 50-question benchmark, zero retries required python fastapi streamlit gpt-4o-mini postgresql docker prompt chaining"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 4 — Telco Churn & CLV ML Pipeline",
+    "meta": "Python, scikit-learn, Logistic Regression",
+    "href": "projects.html#p-006",
+    "text": "fusemachines wk 4 — telco churn & clv ml pipeline classification and regression pipeline for churn prediction and customer lifetime value modeling — roc-auc 0.841 ± 0.005 ridge regression best for clv (mean $1,304.70); full html report export via papermill python scikit-learn logistic regression ridge lasso pandas papermill"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 5 — Telco Churn Tree-Based Ensemble Pipeline",
+    "meta": "Python, XGBoost, Random Forest",
+    "href": "projects.html#p-008",
+    "text": "fusemachines wk 5 — telco churn tree-based ensemble pipeline end-to-end classification pipeline on telco customer churn (7,043 rows) with smote restricted to training folds only random forest + xgboost with shap explainability; secondary tenure-prediction task with a model card python xgboost random forest shap imbpipeline smote joblib scikit-learn"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 6 — Probabilistic Models",
+    "meta": "Python, PyMC, ArviZ",
+    "href": "projects.html#p-009",
+    "text": "fusemachines wk 6 — probabilistic models bayesian inference pipeline for telco churn using pymc, arviz, and pgmpy mle/map estimation, dirichlet-multinomial updating, and a fitted pymc bayesian logistic regression artifact python pymc arviz pgmpy bayesian inference scikit-learn pandas"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 7 — Customer Segmentation",
+    "meta": "Python, scikit-learn, K-Means",
+    "href": "projects.html#p-011",
+    "text": "fusemachines wk 7 — customer segmentation market segmentation on uci online retail ii (~500,000 transactions) with rfm + category-ratio feature engineering full clustering comparison — k-means, hierarchical, dbscan — validated via silhouette and davies-bouldin indices python scikit-learn k-means hierarchical clustering dbscan rfm pandas scipy"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 8 — Forecasting",
+    "meta": "Python, statsmodels, SARIMA",
+    "href": "projects.html#p-016",
+    "text": "fusemachines wk 8 — forecasting time-series pipeline benchmarking nine forecasters on monthly s&p 500 data (1990–2024) via mase/rmse 4-model ensemble outperformed every single model — mase 2.44, confirmed via diebold-mariano test (p = 0.0092) python statsmodels sarima holt-winters prophet lightgbm lstm xgboost"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 9 — NEU Steel Defect CNN",
+    "meta": "Python, PyTorch, torchvision",
+    "href": "projects.html#p-017",
+    "text": "fusemachines wk 9 — neu steel defect cnn pytorch cnn classifier for neu-det steel surface-defect detection — six classes, 1,800 grayscale images from-scratch nn foundation → tuned cnn, 98.8%/78.9% train/val accuracy; augmentation, batchnorm, and dropout ablations plus grid-search and optuna hyperparameter tuning python pytorch torchvision cnn optuna scikit-learn"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 10 — Image Processing",
+    "meta": "Python, OpenCV, NumPy",
+    "href": "projects.html#p-019",
+    "text": "fusemachines wk 10 — image processing hsv-based multi-class fruit segmentation across the fruits-360 dataset, morphological cleanup, and filter-based denoising benchmarks (gaussian, median, bilateral) from-scratch canny edge detector (96.9% pixel agreement vs. cv2.canny()), plus a full fruit-detection pipeline — harris corners, tuned hough circles, connected-component separation of touching fruit, contour-based bounding boxes python opencv numpy matplotlib hsv segmentation canny edge detection hough transform"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 11 — Vision Transformers",
+    "meta": "Python, PyTorch, torchvision",
+    "href": "projects.html#p-022",
+    "text": "fusemachines wk 11 — vision transformers five-module deep computer vision stack — resnet-50 transfer learning + gradcam, faster r-cnn object detection, deeplabv3+ segmentation, a from-scratch vae, and vit patch embedding clip zero-shot classification hit 92.0% on a 200-image slice, outscoring the fine-tuned resnet-50 (74.1%) — deployment memo compares both for a 500-camera warehouse rollout, exported to onnx python pytorch torchvision timm clip onnx gradcam vision transformers"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 12 — NER for Customer Support",
+    "meta": "Python, NER, CoNLL-2003",
+    "href": "projects.html#p-024",
+    "text": "fusemachines wk 12 — ner for customer support end-to-end named entity recognition pipeline on conll-2003 for automated customer-support ticket triage and crm routing text preprocessing, eda (sentence-length / word-frequency / entity distributions), and `word2features` feature engineering ahead of model training python ner conll-2003 feature engineering nlp"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 13 — LSTM Text Classification",
+    "meta": "Python, PyTorch, LSTM",
+    "href": "projects.html#p-027",
+    "text": "fusemachines wk 13 — lstm text classification lstm headline classifier on ag_news (world / sports / business / sci-tech) — embedding → lstm → fc, trained top-to-bottom from a skeleton notebook pytorch training loop with vocabulary building from scratch and a short conceptual-reflection section python pytorch lstm ag_news nlp"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 14 — Agentic Intent Routing",
+    "meta": "Python, BERT, Fine-Tuning",
+    "href": "projects.html#p-028",
+    "text": "fusemachines wk 14 — agentic intent routing two candidate routing strategies for a shopassist ai support platform — fine-tuned bert-family encoder vs. fine-tuned llm/slm — classifying customer messages into 11 specialized agent categories benchmarked on 26,872 bitext customer-support examples with a group-aware stratified split to prevent instruction-text leakage across train/val/test python bert fine-tuning slm intent classification stratified split"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 15 — RAG AI Assistant",
+    "meta": "Python, FastAPI, RAG",
+    "href": "projects.html#p-045",
+    "text": "fusemachines wk 15 — rag ai assistant combines retrieval-augmented generation, structured responses, and tool calling in a fastapi assistant. uses qdrant retrieval, a streamlit interface, and provider fallbacks through gemini, local vllm, and ollama. includes response caching, retries, circuit breakers, rate limiting, and docker compose services. python fastapi rag qdrant streamlit vllm docker"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 16 — Verified Agentic Assistant",
+    "meta": "Python, Agentic AI, RAG",
+    "href": "projects.html#p-046",
+    "text": "fusemachines wk 16 — verified agentic assistant extends the week 15 rag assistant with a verified agentic loop and multi-hop tool use. adds context-window management and context engineering to the assistant workflow. includes failure injection and a custom evaluation harness for checking agent behavior. python agentic ai rag context engineering evaluation fastapi"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 17 — Agentic AI & Telco Churn MLOps",
+    "meta": "Python, MLOps, MLflow",
+    "href": "projects.html#p-043",
+    "text": "fusemachines wk 17 — agentic ai & telco churn mlops agentic assistant: applies mlops workflows to an autonomous technical assistant developed in earlier coursework. tracks prompt and trace experiments with mlflow and evaluates response regressions with an llm-as-judge workflow. schedules recurring evaluation through an airflow regression dag. telco churn: builds a reproducible customer churn classification pipeline with experiment tracking and model registry workflows. serves predictions through fastapi and monitors data quality and drift with evidently. uses an airflow dag to orchestrate drift monitoring workflows. python mlops mlflow evidently ai airflow llm evaluation fastapi"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Week 18 — Trustworthy AI Guardrails",
+    "meta": "Python, AI Safety, Prompt Injection",
+    "href": "projects.html#p-044",
+    "text": "fusemachines week 18 — trustworthy ai guardrails implements input checks for personally identifiable information, prompt injection, and sensitive topics. screens generated outputs for schema compliance, groundedness, and sensitive information leakage. combines these checks in a fail-closed guardrail pipeline with a golden-case evaluation set. python ai safety prompt injection pii pydantic llm guardrails"
   },
   {
     "type": "project",

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v55.22)
+aaradhyadt.github.io (v55.23)
 
 26 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -1259,8 +1259,10 @@ def check_data_consistency():
                 ids = [c.get("id", "unknown") for c in major_fuse]
                 log_error(cat, f"Multiple Fuse AIF cards have 'project-card--major' ({', '.join(ids)}). Only the latest should be highlighted.")
                 all_ok = False
-            elif len(major_fuse) == 1 and fuse_cards and major_fuse[0] != fuse_cards[0]:
-                log_warning(cat, f"Fuse AIF 'project-card--major' is on #{major_fuse[0].get('id')} but #{fuse_cards[0].get('id')} is the top/latest card.")
+            elif len(major_fuse) == 1 and fuse_cards:
+                latest = max(fuse_cards, key=lambda card: int(card.get("data-fuse-week", "0")))
+                if major_fuse[0] != latest:
+                    log_warning(cat, f"Fuse AIF 'project-card--major' is on #{major_fuse[0].get('id')} but #{latest.get('id')} is the latest coursework card.")
 
     if all_ok:
         log_pass(cat, "cross-surface resume titles, contact info & profile metadata consistent")
@@ -1375,7 +1377,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v55.22)"))
+    print(bold("  Portfolio Site Verification Suite (v55.23)"))
     print(bold("=" * 60))
     print()
 

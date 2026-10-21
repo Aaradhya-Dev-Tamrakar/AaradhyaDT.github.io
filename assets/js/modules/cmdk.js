@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: cmdk.js — aaradhyadt.github.io (v55.22)
+   MODULE: cmdk.js — aaradhyadt.github.io (v55.23)
    Command palette (Cmd+K) search and quick navigation.
    ============================================================ */
 
@@ -97,7 +97,7 @@ function buildSearchIndex() {
 
   document.querySelectorAll('#projectsGrid .project-card').forEach((el, i) => {
     el.id = el.id || `proj-${i}`;
-    const title = el.querySelector('.project-title')?.textContent.trim() || '';
+    const title = el.dataset.projectTitle || el.querySelector('.project-title')?.textContent.trim() || '';
     // Cards use either a single .project-desc paragraph or a
     // .project-desc-list — check both, mirroring scripts/extract_index.py,
     // so the live scan and the static snapshot never disagree.
