@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v55.17)
+   MODULE: access.js — aaradhyadt.github.io (v55.18)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -44,7 +44,10 @@ const ACCESS_CONTROL_PAYLOADS = {
   "proj-typora-mcp": "68a846910944a01ea46b482c4880b15ee82ef28c6d0c3f75d6c81fd61d168482f94726abd4d70c226118f9fa236c60b46b9195defdc11f2f0fb65919ccbfa5c3591ece82",
   "proj-ieee-xtreme-archive": "bc91b7bcb49ab65cc675f6e7def14dff49bc9fd3984e322afa29490e505c59f36bf4995092513fa50b434931f0b82dd9890ad855737f582f4774ff49fe81a0db8ac4aefe90f3c3af1f8e1ca82c301965f3a5c5765643c2c1",
   "proj-fleet-orchestrator": "8df3212e5cd751f2856d16eca6c90d6486eba8afb20a25d11128d1a237a03a23ddef09ed80193a5fa5abe65e818597d3c6e7d05c36cde3377ec0cd1dcf296bd488956f00704a2819d95052c2",
-  "proj-agent-customization-sync": "96b4e327c55084e755c927e112eb4de3380e508f99ea2a0028e630a0f15c760a3a702fff7452f3682588d31bc44d2888150251a5d4cb86eee4a4e94f54105cdb799b1873a019800881ac18c9048e4ec0060c6835b8e98c8c08aae9909b"
+  "proj-agent-customization-sync": "96b4e327c55084e755c927e112eb4de3380e508f99ea2a0028e630a0f15c760a3a702fff7452f3682588d31bc44d2888150251a5d4cb86eee4a4e94f54105cdb799b1873a019800881ac18c9048e4ec0060c6835b8e98c8c08aae9909b",
+  "proj-fuseaif-wk17-telco-churn-mlops": "7578a7c16db322dcb0e6c68e8a0e58e795dbc72ea52eb2aac88e2ba77aeaed30b1340591048a639ff0cfffd815d2fecaf9f928cf9579893d6ee69025f7c2084779683999ea40e604efd139d465d19d9676e47b1b8079080d",
+  "proj-fuseaif-wk17-agentic-mlops": "11194504f9037d0ad99116e2da06b575cd4046198a9dc29f456912083c09733be5b15f425cef99c4042324a238df112ba16be477bd51f007b2ca1dbf5c01d5e4ca4c5f3c64a0b54766d3dc42e06ec94ca1e0434a",
+  "proj-fuseaif-wk18-trustworthy-ai-guardrails": "d94436216186c5ec12e7a1fedae3d43c18174c9e7ac6f40d0e1fc5ced9bce4ba289cf439fd5816a3bac160998a6dc0f966735757dcff9a354cb5d09b631ff4639fa9ac8ea53f196975a742423337e4b9e8de20f1c2c33f949b0ef46840490b71"
 };
 
 const KEY_CACHE = new Map();

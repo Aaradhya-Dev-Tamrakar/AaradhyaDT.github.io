@@ -286,6 +286,27 @@ const SEARCH_STATIC_INDEX = {
   project: [
   {
     "type": "project",
+    "title": "Fusemachines Week 18 — Trustworthy AI Guardrails",
+    "meta": "Python, AI Safety, Prompt Injection",
+    "href": "projects.html#p-044",
+    "text": "fusemachines week 18 — trustworthy ai guardrails implements input checks for personally identifiable information, prompt injection, and sensitive topics. screens generated outputs for schema compliance, groundedness, and sensitive information leakage. combines these checks in a fail-closed guardrail pipeline with a golden-case evaluation set. python ai safety prompt injection pii pydantic llm guardrails"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Week 17 — Agentic AI MLOps",
+    "meta": "Python, MLOps, MLflow",
+    "href": "projects.html#p-043",
+    "text": "fusemachines week 17 — agentic ai mlops applies mlops workflows to an autonomous technical assistant developed in earlier coursework. tracks prompt and trace experiments with mlflow and evaluates response regressions with an llm-as-judge workflow. schedules recurring evaluation through an airflow regression dag. python mlops mlflow evidently ai airflow llm evaluation"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Week 17 — Telco Customer Churn MLOps",
+    "meta": "Python, MLOps, MLflow",
+    "href": "projects.html#p-042",
+    "text": "fusemachines week 17 — telco customer churn mlops builds a reproducible customer churn classification pipeline with experiment tracking and model registry workflows. serves predictions through fastapi and monitors data quality and drift with evidently. uses an airflow dag to orchestrate drift monitoring workflows. python mlops mlflow evidently ai airflow fastapi"
+  },
+  {
+    "type": "project",
     "title": "STRANGLER-IPU — Ingress Processing Unit Architecture",
     "meta": "Active Research · Computer Architecture, Systems Architecture, 6G Ingress",
     "href": "projects.html#p-032",
