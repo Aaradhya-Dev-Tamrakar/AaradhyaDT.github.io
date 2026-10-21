@@ -1,6 +1,6 @@
 {
-  "sha": "a4f840bb9222ea0ef94b33d04fb7dab42a302b43",
-  "shortSha": "a4f840b",
-  "date": "2026-10-21T07:31:21+05:45",
-  "message": "feat(projects): showcase Fleet Orchestrator and Fusemachines work"
+  "sha": "6abc3f527fbec1ea9d6a0b8cf2b60946950213c4",
+  "shortSha": "6abc3f5",
+  "date": "2026-10-21T17:59:23+05:45",
+  "message": "fix(access): repair VIP project links and prompt sizing (#15)"
 }
