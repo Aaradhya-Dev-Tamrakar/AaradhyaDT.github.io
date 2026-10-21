@@ -1,6 +1,6 @@
 {
-  "sha": "fb0a022d43aff8f339bb4b46ff1940f18e61e65d",
-  "shortSha": "fb0a022",
-  "date": "2026-10-21T18:06:59+05:45",
-  "message": "fix(projects): reconcile Fuse AIF coursework and combine Week 17 (#16)"
+  "sha": "4acd56e8ca9888054b2d1e5c5d6b7a86bfaa5101",
+  "shortSha": "4acd56e",
+  "date": "2026-10-21T18:17:25+05:45",
+  "message": "fix(releases): stamp the exact version commit and release metadata (#17)"
 }

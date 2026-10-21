@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v55.21",
     date: "2026-10-21",
-    sha: "fb0a022d43aff8f339bb4b46ff1940f18e61e65d",
-    title: "reconcile Fuse AIF coursework and combine Week 17 (#16)",
+    sha: "4acd56e8ca9888054b2d1e5c5d6b7a86bfaa5101",
+    title: "stamp the exact version commit and release metadata (#17)",
     highlights: []
   },
   {
