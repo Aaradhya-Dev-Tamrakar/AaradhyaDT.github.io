@@ -684,6 +684,18 @@ html[data-theme="light"] .tier-badge-master {
   transition: opacity 0.3s ease;
 }
 
+/* Let the standalone access card grow with its lock prompt at any zoom level. */
+.access-card-inner.gated-content-locked {
+  display: block;
+  padding: 0;
+}
+
+.access-card-inner.gated-content-locked > .gated-overlay {
+  position: relative;
+  inset: auto;
+  min-height: 280px;
+}
+
 html[data-theme="light"] .gated-overlay {
   background: rgba(245, 242, 236, 0.75);
 }
