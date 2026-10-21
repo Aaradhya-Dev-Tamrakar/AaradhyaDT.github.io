@@ -1,6 +1,6 @@
 {
-  "sha": "a75b3a3693f156569f27b1bd54f06d0cfd14836b",
-  "shortSha": "a75b3a3",
-  "date": "2026-10-21T22:50:03+05:45",
-  "message": "feat(projects): group Fuse AIF coursework into month cards (#18)"
+  "sha": "884c3daa0fc3ff9beaee62e29f2bbb5e3ec4f7e8",
+  "shortSha": "884c3da",
+  "date": "2026-10-21T22:57:08+05:45",
+  "message": "style(projects): align month cards and simplify weekly tiles (#19)"
 }

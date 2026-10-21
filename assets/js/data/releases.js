@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v55.23",
     date: "2026-10-21",
-    sha: "a75b3a3693f156569f27b1bd54f06d0cfd14836b",
-    title: "group Fuse AIF coursework into month cards (#18)",
+    sha: "884c3daa0fc3ff9beaee62e29f2bbb5e3ec4f7e8",
+    title: "align month cards and simplify weekly tiles (#19)",
     highlights: []
   },
   {
