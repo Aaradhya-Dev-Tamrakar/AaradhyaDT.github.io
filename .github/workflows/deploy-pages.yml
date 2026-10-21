@@ -34,6 +34,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Stamp exact release commit into the deployment artifact
+        run: python3 scripts/site_automation.py stamp-release
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 

@@ -7,13 +7,11 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: 'v55.20',
-    date: '2026-10-01',
-    sha: '0b6d021',
-    title: "Project Glasswing & Claude Platform UI Architecture",
-    highlights: [
-      "Project Glasswing collapsible wordmark on navbar scroll,"
-    ]
+    version: "v55.21",
+    date: "2026-10-21",
+    sha: "fb0a022d43aff8f339bb4b46ff1940f18e61e65d",
+    title: "reconcile Fuse AIF coursework and combine Week 17 (#16)",
+    highlights: []
   },
   {
     version: 'v54.64',

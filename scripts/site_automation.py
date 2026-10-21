@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-site_automation.py — Hyper-Automation Engine for AaradhyaDT.github.io (v55.20)
+site_automation.py — Hyper-Automation Engine for AaradhyaDT.github.io (v55.21)
 
 Provides automated workflows for:
 - Automated site verification & diagnostics (via scripts/verify.py)
@@ -453,6 +453,33 @@ def sync_metadata(version_tag=None):
     return results
 
 
+def stamp_release():
+    """Bind the current release to the commit that last changed VERSION."""
+    version = VERSION_FILE.read_text(encoding="utf-8").strip()
+    code, sha, error = run_command(["git", "log", "-1", "--format=%H", "--", "VERSION"])
+    sha = sha.strip()
+    if code or not re.fullmatch(r"[0-9a-f]{40}", sha):
+        raise RuntimeError(f"Cannot resolve the release commit: {error}")
+    code, committed_version, error = run_command(["git", "show", f"{sha}:VERSION"])
+    if code or committed_version.strip() != version:
+        raise RuntimeError("Current VERSION has not been committed; release stamping requires a committed version.")
+    code, metadata, error = run_command(["git", "show", "-s", "--format=%cI%x00%s", sha])
+    if code:
+        raise RuntimeError(f"Cannot read release commit metadata: {error}")
+    timestamp, subject = metadata.strip().split("\0", 1)
+    nepal_time = datetime.timezone(datetime.timedelta(hours=5, minutes=45))
+    date = datetime.datetime.fromisoformat(timestamp).astimezone(nepal_time).date().isoformat()
+    title = re.sub(r"^[a-z]+(?:\([^)]*\))?!?:\s*", "", subject)
+    fields = {"version": version, "date": date, "sha": sha, "title": title, "highlights": []}
+    block = "{\n" + ",\n".join(f"    {key}: {json.dumps(value, ensure_ascii=False)}" for key, value in fields.items()) + "\n  }"
+    text = RELEASES_JS.read_text(encoding="utf-8")
+    updated, count = re.subn(r"(const SITE_RELEASES = \[\s*)\{.*?\n  \}", lambda match: match[1] + block, text, count=1, flags=re.DOTALL)
+    if count != 1:
+        raise RuntimeError("Cannot locate the current release entry in releases.js")
+    RELEASES_JS.write_text(updated, encoding="utf-8")
+    return fields
+
+
 def bump_version(bump_type="patch", explicit_version=None, title=None, highlights=None):
     """Bumps version and propagates across all metadata files."""
     current_v = get_current_version()
@@ -479,7 +506,9 @@ def bump_version(bump_type="patch", explicit_version=None, title=None, highlight
             ]
             hl_json = ",\n".join([f"      {json.dumps(h)}" for h in rel_highlights])
             code, stdout, _ = run_command(["git", "rev-parse", "--short", "HEAD"])
-            clean_sha = stdout.strip() if code == 0 and stdout.strip() else f"rel{new_v.replace('.', '').replace('v', '')}"
+            if code or not re.fullmatch(r"[0-9a-f]{7,40}", stdout.strip()):
+                raise RuntimeError("Cannot create a release without a valid Git commit SHA")
+            clean_sha = stdout.strip()
             new_block = f"  {{\n    version: '{new_v}',\n    date: '{today}',\n    sha: '{clean_sha}',\n    title: {json.dumps(rel_title)},\n    highlights: [\n{hl_json}\n    ]\n  }},"
             new_releases = re.sub(r"const SITE_RELEASES = \[\s*", f"const SITE_RELEASES = [\n{new_block}\n  ", releases_text, count=1)
             RELEASES_JS.write_text(new_releases, encoding="utf-8")
@@ -775,6 +804,7 @@ def main():
     subparsers.add_parser("update-graph", help="Update Graphify AST knowledge graph")
 
     subparsers.add_parser("bump-patch", help="Auto-increment point/patch release (e.g. v49.1 -> v49.2)")
+    subparsers.add_parser("stamp-release", help="Bind current release metadata to its version-introducing commit")
     
     major_p = subparsers.add_parser("bump-major", help="Bump to next major release (e.g. v49 -> v50)")
     major_p.add_argument("--title", default=None, help="Title of release")
@@ -818,6 +848,8 @@ def main():
     elif args.command == "bump-patch":
         res = bump_version(bump_type="patch")
         print(json.dumps(res, indent=2))
+    elif args.command == "stamp-release":
+        print(json.dumps(stamp_release(), indent=2))
     elif args.command == "bump-major":
         res = bump_version(bump_type="major", title=args.title, highlights=args.highlights)
         print(json.dumps(res, indent=2))

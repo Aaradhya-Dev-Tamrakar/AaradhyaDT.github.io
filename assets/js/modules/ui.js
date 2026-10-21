@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v55.20)
+   MODULE: ui.js — aaradhyadt.github.io (v55.21)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -39,7 +39,7 @@ function openWhatsNewModal() {
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
             <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
           </svg>
-          <span>What's New — Major Releases</span>
+          <span>What's New — Releases</span>
         </div>
         <button type="button" class="access-modal-close" id="wnModalClose" aria-label="Close">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">

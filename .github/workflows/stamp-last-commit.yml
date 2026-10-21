@@ -2,7 +2,8 @@ name: Stamp last commit
 # Last updated: 2026-07-08
 
 # Runs on every push to main. Writes the triggering commit's SHA and ISO
-# date into assets/js/last-commit.json, then commits that file back.
+# date into assets/js/last-commit.json, stamps the current release metadata,
+# then commits both files back.
 #
 # Guard: the commit-back step is itself a push to main. Without the
 # "skip if last commit author is the bot" check below, that second push
@@ -27,9 +28,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          # Full history not needed — we only read github.sha, which is
-          # already known from the event context, not from git log.
-          fetch-depth: 1
+          # Resolve the commit that introduced VERSION, including no-bump pushes.
+          fetch-depth: 0
 
       - name: Write last-commit.json
         env:
@@ -46,12 +46,13 @@ jobs:
             --arg msg "$FIRST_LINE" \
             '{sha: $sha, shortSha: $shortSha, date: $date, message: $msg}' > assets/js/last-commit.json
           cat assets/js/last-commit.json
+          python3 scripts/site_automation.py stamp-release
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/js/last-commit.json
+          git add assets/js/last-commit.json assets/js/data/releases.js
           # Only commit if the file actually changed — avoids empty
           # commits when re-running or when the date format is identical
           # (won't happen in practice since SHA always changes, but cheap
