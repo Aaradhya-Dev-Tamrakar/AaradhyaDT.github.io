@@ -7,7 +7,7 @@ Automates the repetitive, error-prone tasks when adding a project to the portfol
 1. Detects existing project cards and computes next contiguous ID (e.g. p-035 / P — 035).
 2. Derives payload slug and encrypts GitHub URL using AES-256-GCM (PBKDF2) into access.js.
 3. Generates fully-accessible, semantic <details class="project-card"> HTML.
-4. Injects card into chosen section ('personal' or 'projects').
+4. Injects card into the chosen Projects, Fuse AIF, MCP, or Personal section.
 5. Recalculates all filter pill counters ('All', 'aiml', 'embedded', 'hardware', 'apps') directly from DOM.
 6. Rebuilds search index and executes verify.py verification gate.
 
@@ -170,10 +170,14 @@ def inject_card(soup: BeautifulSoup, card_soup: BeautifulSoup, section: str = "p
     """Injects the new card into the specified section in projects.html."""
     if section == "mcp":
         target_h2_id = "section-mcp"
+    elif section == "fuseaif":
+        target_h2_id = "section-fuseaif"
     elif section == "personal":
         target_h2_id = "section-personal"
-    else:
+    elif section == "projects":
         target_h2_id = "section-projects"
+    else:
+        raise ValueError(f"Unknown project section: {section}")
     h2 = soup.find("h2", id=target_h2_id)
     if not h2:
         raise ValueError(f"Could not find section header #{target_h2_id} in projects.html")
@@ -341,8 +345,8 @@ def interactive_mode():
     tags_input = input("\nTags (comma separated, e.g. 'Python, FastAPI, Win32'): ").strip()
     tags = [t.strip() for t in tags_input.split(",") if t.strip()]
 
-    section = input("\nTarget section ('personal', 'projects', or 'mcp') [personal]: ").strip().lower()
-    if section not in ["personal", "projects", "mcp"]:
+    section = input("\nTarget section ('personal', 'projects', 'fuseaif', or 'mcp') [personal]: ").strip().lower()
+    if section not in ["personal", "projects", "fuseaif", "mcp"]:
         section = "personal"
 
     tier = input("Access Tier ('vip' or 'master') [vip]: ").strip().lower()
@@ -377,7 +381,7 @@ def main():
     parser.add_argument("--tags", nargs="+", help="Project tags")
     parser.add_argument("--status", "--date", "-s", type=str, default="In Progress", help="Date or status string")
     parser.add_argument("--evidence-repo", type=str, help="Evidence repository slug (Owner/Repo)")
-    parser.add_argument("--section", choices=["personal", "projects", "mcp"], default="personal", help="Section header")
+    parser.add_argument("--section", choices=["personal", "projects", "fuseaif", "mcp"], default="personal", help="Section header")
     parser.add_argument("--tier", choices=["vip", "master"], default="vip", help="Security access tier")
     parser.add_argument("--position", choices=["top", "bottom"], default="top", help="Insertion position in section")
     parser.add_argument("--dry-run", "-d", action="store_true", help="Preview without modifying disk")

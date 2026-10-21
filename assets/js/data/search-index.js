@@ -286,27 +286,6 @@ const SEARCH_STATIC_INDEX = {
   project: [
   {
     "type": "project",
-    "title": "Fusemachines Week 18 — Trustworthy AI Guardrails",
-    "meta": "Python, AI Safety, Prompt Injection",
-    "href": "projects.html#p-044",
-    "text": "fusemachines week 18 — trustworthy ai guardrails implements input checks for personally identifiable information, prompt injection, and sensitive topics. screens generated outputs for schema compliance, groundedness, and sensitive information leakage. combines these checks in a fail-closed guardrail pipeline with a golden-case evaluation set. python ai safety prompt injection pii pydantic llm guardrails"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Week 17 — Agentic AI MLOps",
-    "meta": "Python, MLOps, MLflow",
-    "href": "projects.html#p-043",
-    "text": "fusemachines week 17 — agentic ai mlops applies mlops workflows to an autonomous technical assistant developed in earlier coursework. tracks prompt and trace experiments with mlflow and evaluates response regressions with an llm-as-judge workflow. schedules recurring evaluation through an airflow regression dag. python mlops mlflow evidently ai airflow llm evaluation"
-  },
-  {
-    "type": "project",
-    "title": "Fusemachines Week 17 — Telco Customer Churn MLOps",
-    "meta": "Python, MLOps, MLflow",
-    "href": "projects.html#p-042",
-    "text": "fusemachines week 17 — telco customer churn mlops builds a reproducible customer churn classification pipeline with experiment tracking and model registry workflows. serves predictions through fastapi and monitors data quality and drift with evidently. uses an airflow dag to orchestrate drift monitoring workflows. python mlops mlflow evidently ai airflow fastapi"
-  },
-  {
-    "type": "project",
     "title": "STRANGLER-IPU — Ingress Processing Unit Architecture",
     "meta": "Active Research · Computer Architecture, Systems Architecture, 6G Ingress",
     "href": "projects.html#p-032",
@@ -353,6 +332,34 @@ const SEARCH_STATIC_INDEX = {
     "meta": "Archived · ESP32, Wireless Mesh, Raspberry Pi 4B",
     "href": "projects.html#p-012",
     "text": "prakopnet — multi-hazard early warning system solar-powered wireless mesh multi-hazard monitoring platform for remote regions of nepal — esp32 nodes to a raspberry pi 4b gateway archived june 29, 2026; superseded by spark esp32 wireless mesh raspberry pi 4b tflite micro lstm gps fastapi edge ai archived"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Week 18 — Trustworthy AI Guardrails",
+    "meta": "Python, AI Safety, Prompt Injection",
+    "href": "projects.html#p-044",
+    "text": "fusemachines week 18 — trustworthy ai guardrails implements input checks for personally identifiable information, prompt injection, and sensitive topics. screens generated outputs for schema compliance, groundedness, and sensitive information leakage. combines these checks in a fail-closed guardrail pipeline with a golden-case evaluation set. python ai safety prompt injection pii pydantic llm guardrails"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 17 — Agentic AI & Telco Churn MLOps",
+    "meta": "Python, MLOps, MLflow",
+    "href": "projects.html#p-043",
+    "text": "fusemachines wk 17 — agentic ai & telco churn mlops agentic assistant: applies mlops workflows to an autonomous technical assistant developed in earlier coursework. tracks prompt and trace experiments with mlflow and evaluates response regressions with an llm-as-judge workflow. schedules recurring evaluation through an airflow regression dag. telco churn: builds a reproducible customer churn classification pipeline with experiment tracking and model registry workflows. serves predictions through fastapi and monitors data quality and drift with evidently. uses an airflow dag to orchestrate drift monitoring workflows. python mlops mlflow evidently ai airflow llm evaluation fastapi"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 16 — Verified Agentic Assistant",
+    "meta": "Python, Agentic AI, RAG",
+    "href": "projects.html#p-046",
+    "text": "fusemachines wk 16 — verified agentic assistant extends the week 15 rag assistant with a verified agentic loop and multi-hop tool use. adds context-window management and context engineering to the assistant workflow. includes failure injection and a custom evaluation harness for checking agent behavior. python agentic ai rag context engineering evaluation fastapi"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 15 — RAG AI Assistant",
+    "meta": "Python, FastAPI, RAG",
+    "href": "projects.html#p-045",
+    "text": "fusemachines wk 15 — rag ai assistant combines retrieval-augmented generation, structured responses, and tool calling in a fastapi assistant. uses qdrant retrieval, a streamlit interface, and provider fallbacks through gemini, local vllm, and ollama. includes response caching, retries, circuit breakers, rate limiting, and docker compose services. python fastapi rag qdrant streamlit vllm docker"
   },
   {
     "type": "project",
@@ -419,17 +426,17 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "Fusemachines Wk 4 — Telco Churn & CLV ML Pipeline",
-    "meta": "Python, scikit-learn, Logistic Regression",
-    "href": "projects.html#p-006",
-    "text": "fusemachines wk 4 — telco churn & clv ml pipeline classification and regression pipeline for churn prediction and customer lifetime value modeling — roc-auc 0.841 ± 0.005 ridge regression best for clv (mean $1,304.70); full html report export via papermill python scikit-learn logistic regression ridge lasso pandas papermill"
-  },
-  {
-    "type": "project",
     "title": "Fusemachines Wk 5 — Telco Churn Tree-Based Ensemble Pipeline",
     "meta": "Python, XGBoost, Random Forest",
     "href": "projects.html#p-008",
     "text": "fusemachines wk 5 — telco churn tree-based ensemble pipeline end-to-end classification pipeline on telco customer churn (7,043 rows) with smote restricted to training folds only random forest + xgboost with shap explainability; secondary tenure-prediction task with a model card python xgboost random forest shap imbpipeline smote joblib scikit-learn"
+  },
+  {
+    "type": "project",
+    "title": "Fusemachines Wk 4 — Telco Churn & CLV ML Pipeline",
+    "meta": "Python, scikit-learn, Logistic Regression",
+    "href": "projects.html#p-006",
+    "text": "fusemachines wk 4 — telco churn & clv ml pipeline classification and regression pipeline for churn prediction and customer lifetime value modeling — roc-auc 0.841 ± 0.005 ridge regression best for clv (mean $1,304.70); full html report export via papermill python scikit-learn logistic regression ridge lasso pandas papermill"
   },
   {
     "type": "project",

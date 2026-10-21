@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v55.19)
+   MODULE: access.js — aaradhyadt.github.io (v55.20)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -33,7 +33,7 @@ const ACCESS_CONTROL_PAYLOADS = {
   "proj-sys-optimizer": "e1e293f58b395597acc5376d51b878970f86defa09e4f9292f16b14497466a7bf5e543a10ec4112e08f580f0b65a4abf0ed693b6a33ff3a51f8352dfe83744000242a4ac7aeee66eebfdb6e96bb485ed8f85df15cd",
   "proj-md2pdf": "fa1ca4c1d0f8979b6dee3d87f24e3cf31229f8ea3d7d797d1bda50f8bfed9c25351c7399c46f11056222b13db2b6affbaf178240b74587544642ea9380a7e2799e44e235338f202e30abf5acee92fdfb29797c",
   "proj-spark": "94838fd57ff964e42bad1c97324358020b3ee23c3d1d755f7fe7042051fe83dcf65c01074a738e1c7324b3b8672edeebcdc4a38c66905834c746387cc9209d94959a5480ffadac2741c8",
-  "proj-biasaperture": "52d691c593300958cde595ebd168168f04acf6f324006d01ca692a2ff655016d81124500366ddc18266210188bf57e46ae0f4f2f672794e81398624ca9ef9d71cbac91701f62",
+  "proj-biasaperture": "a62ece770d10c9404539d44e92b31faeb47099f42a90234b98b8a41950abdb83017884cd01a16260aaa8fdc916bdabd5cf42cc992751985644602746df956af7ff7ff55677d71e5bc4cc25d61d7ad92cb90158af78fb506423377063c2158f64eb006afa34d4958d23b75c69a81363f04c9415d65568e07a340d75f4cf3c806058606fb6ccb63e1938396f09addc4a9179f4e2458c92075ea607a1f4",
   "proj-brainstorm": "6812752c1acca40a87941b756b9e2da6aff20fa0b75fea8ad2102d9934ff64504ba069401428436f3d0c4b52bf6e650f39c74bfa28ee5e47912875a44d0592eb233b7d5eb3a7a30b7e84a408f0633b",
   "proj-super-nlm": "2963c6c84a7fd7cd7dd6cb4099db4da7f4eb02c814933afd72f92dfde4fd8a6df3fc40806e3de7d5874f3b05a59167b882103a646a34cb04f9528a64fb3c1893416bd5d8c49552e542642c02eda7",
   "proj-github-pilot": "8910c900f526370d1f178458a577c8b6416543b355fa305c6bdfe603b0ad9a5e37478e9348da73d2c2322374bd08c928948fd7ecf4c833df635d8ff4aa6056b1a5ec5ee14bbd9c53a476503413f469be35",
@@ -47,7 +47,9 @@ const ACCESS_CONTROL_PAYLOADS = {
   "proj-agent-customization-sync": "96b4e327c55084e755c927e112eb4de3380e508f99ea2a0028e630a0f15c760a3a702fff7452f3682588d31bc44d2888150251a5d4cb86eee4a4e94f54105cdb799b1873a019800881ac18c9048e4ec0060c6835b8e98c8c08aae9909b",
   "proj-fuseaif-wk17-telco-churn-mlops": "7578a7c16db322dcb0e6c68e8a0e58e795dbc72ea52eb2aac88e2ba77aeaed30b1340591048a639ff0cfffd815d2fecaf9f928cf9579893d6ee69025f7c2084779683999ea40e604efd139d465d19d9676e47b1b8079080d",
   "proj-fuseaif-wk17-agentic-mlops": "11194504f9037d0ad99116e2da06b575cd4046198a9dc29f456912083c09733be5b15f425cef99c4042324a238df112ba16be477bd51f007b2ca1dbf5c01d5e4ca4c5f3c64a0b54766d3dc42e06ec94ca1e0434a",
-  "proj-fuseaif-wk18-trustworthy-ai-guardrails": "d94436216186c5ec12e7a1fedae3d43c18174c9e7ac6f40d0e1fc5ced9bce4ba289cf439fd5816a3bac160998a6dc0f966735757dcff9a354cb5d09b631ff4639fa9ac8ea53f196975a742423337e4b9e8de20f1c2c33f949b0ef46840490b71"
+  "proj-fuseaif-wk18-trustworthy-ai-guardrails": "d94436216186c5ec12e7a1fedae3d43c18174c9e7ac6f40d0e1fc5ced9bce4ba289cf439fd5816a3bac160998a6dc0f966735757dcff9a354cb5d09b631ff4639fa9ac8ea53f196975a742423337e4b9e8de20f1c2c33f949b0ef46840490b71",
+  "proj-fuseaif-wk15-ai-assistant-rag": "6bdf5361642c759b3ff540cbc5d117e85cd056bf4a396608ac74a1877b5032b030cd865e0e19d3dab1ba2c48a6597048d84d7f4365dbb5b4a69d58a182ab3ca36d8839dae56220a01e56e05f8d52b6bd5f007bac02c976",
+  "proj-fuseaif-wk16-agentic-assistant": "8494f2a492c0cc444f8f34ef2cd605ba179e402673763c70ccff61b759931e00ccbbd39c22cef420a0573f5f95d3675c3e4be1306903287c73f073d27c6821fe3fe67229e9f452d280661aec6f0a5193dbf295f416419b1d"
 };
 
 const KEY_CACHE = new Map();
@@ -610,7 +612,7 @@ async function updateGatedContentVisibility() {
         link.style.display = '';
         link.href = '#';
         link.removeAttribute('target');
-        link.innerHTML = `🔒 GitHub Repo (${linkTierLabel} Access Required)`;
+        link.textContent = `🔒 ${link.dataset.linkLabel || 'GitHub Repo'} (${linkTierLabel} Access Required)`;
         link.onclick = (e) => {
           e.preventDefault();
           openAccessModal(linkTier);
@@ -627,7 +629,7 @@ async function updateGatedContentVisibility() {
       link.href = link.dataset.resolvedHref || '#';
       link.target = '_blank';
       link.rel = 'noopener noreferrer';
-      link.innerHTML = 'View on GitHub ↗';
+      link.textContent = link.dataset.linkLabel || 'View on GitHub ↗';
       link.onclick = null;
       link.classList.remove('project-link--locked');
     }
