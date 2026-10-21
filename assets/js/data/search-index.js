@@ -461,6 +461,13 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
+    "title": "Agent-Customization-Sync — Cross-IDE Configuration Snapshot & Transpilation",
+    "meta": "Python, MCP, Cross-IDE Tooling",
+    "href": "projects.html#p-041",
+    "text": "agent-customization-sync — cross-ide configuration snapshot & transpilation creates sha-256 configuration snapshots with rolling retention and guarded restore workflows. transpiles canonical agent rules and mcp settings for cursor, claude code, vs code, and github copilot. audits cross-ide configuration drift and instruction token overhead; links shared skills with platform-appropriate filesystem links. python mcp cross-ide tooling sha-256 windows"
+  },
+  {
+    "type": "project",
     "title": "Fleet-Orchestrator — Autonomous Multi-Model Agent Fleet & Swarm Engine",
     "meta": "Python 3.14, Multi-Agent Swarm, FastAPI",
     "href": "projects.html#p-040",

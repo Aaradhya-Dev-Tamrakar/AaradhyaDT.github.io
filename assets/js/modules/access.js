@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: access.js — aaradhyadt.github.io (v55.16)
+   MODULE: access.js — aaradhyadt.github.io (v55.17)
    Access control, VIP gates, and Google OAuth integration.
    ============================================================ */
 
@@ -43,7 +43,8 @@ const ACCESS_CONTROL_PAYLOADS = {
   "proj-google-classroom-mcp": "e1e0999f244bebef86eaa370758f07e92221d780a210efe25a84abd283b9e15ba2f07dcf3a28e051162e5b1614602db3e9e773f9467401210fd9cbc7ab082c4abcf3132fd6428d972034e936cc02",
   "proj-typora-mcp": "68a846910944a01ea46b482c4880b15ee82ef28c6d0c3f75d6c81fd61d168482f94726abd4d70c226118f9fa236c60b46b9195defdc11f2f0fb65919ccbfa5c3591ece82",
   "proj-ieee-xtreme-archive": "bc91b7bcb49ab65cc675f6e7def14dff49bc9fd3984e322afa29490e505c59f36bf4995092513fa50b434931f0b82dd9890ad855737f582f4774ff49fe81a0db8ac4aefe90f3c3af1f8e1ca82c301965f3a5c5765643c2c1",
-  "proj-fleet-orchestrator": "8df3212e5cd751f2856d16eca6c90d6486eba8afb20a25d11128d1a237a03a23ddef09ed80193a5fa5abe65e818597d3c6e7d05c36cde3377ec0cd1dcf296bd488956f00704a2819d95052c2"
+  "proj-fleet-orchestrator": "8df3212e5cd751f2856d16eca6c90d6486eba8afb20a25d11128d1a237a03a23ddef09ed80193a5fa5abe65e818597d3c6e7d05c36cde3377ec0cd1dcf296bd488956f00704a2819d95052c2",
+  "proj-agent-customization-sync": "96b4e327c55084e755c927e112eb4de3380e508f99ea2a0028e630a0f15c760a3a702fff7452f3682588d31bc44d2888150251a5d4cb86eee4a4e94f54105cdb799b1873a019800881ac18c9048e4ec0060c6835b8e98c8c08aae9909b"
 };
 
 const KEY_CACHE = new Map();

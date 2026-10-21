@@ -1,102 +1,86 @@
-# Repository Architectural Evaluation & Evolution Roadmap
+# Portfolio Repository Evolution Roadmap
 
-_Date: 2026-09-08_
-_Repository: AaradhyaDT.github.io_
-_Target Baseline: v53.0.0_
-_Overall Composite Rating: 9.5 / 10 (S-Rank / Elite Tier)_
-
----
-
-## 1. Multi-Dimensional Scorecard
-
-| Dimension | Rating | Score (/10) | Highlights |
-| :--- | :---: | :---: | :--- |
-| **Automation & DevOps Pipeline** | **S+** | **9.8 / 10** | Single-pass `sync.ps1` orchestrator, 5-pillar versioning decision matrix, 6 CI workflows, automated bot stamp reconciliation. |
-| **Code Quality, Rigor & Testing** | **S** | **9.6 / 10** | 24-category `verify.py` diagnostic suite, Node.js unit tests, headless browser E2E, and Pillow visual regression. |
-| **Security & Access Architecture** | **S** | **9.5 / 10** | Zero-leak client-side AES-256-GCM authenticated encryption, PBKDF2 (100k rounds SHA-256), 3-tier RBAC with Google OAuth 2.0. |
-| **AI Agent Readiness & Tooling** | **S+** | **9.9 / 10** | Standard Model Context Protocol (MCP) server `site_mcp.py` (6 resources, 6 tools), Graphify AST knowledge graph (648 nodes, 874 edges). |
-| **Frontend Engineering & UX** | **A+** | **9.2 / 10** | Zero-framework vanilla stack, CMDK search, Dev Terminal widget, Web Audio API sound cues, haptics, BS/AD dual calendar. |
-| **Documentation & Provenance** | **S** | **9.7 / 10** | Continuous 53-release provenance in `PortfolioWebsite_TRACKER.md`, complete JSON-LD structured schemas, automated OG card generators. |
-| **Maintainability & Modularity** | **A** | **8.8 / 10** | Modular CSS/JS architecture, though large imperative DOM manipulation modules (`ui.js`, `access.js`) face scaling constraints. |
+_Reviewed: 2026-10-21_
+_Repository: `AaradhyaDT.github.io` (personal canonical repository)_
+_Verified baseline: v55.16 at `8d0377bf4b2b93f17bb51772ec67a41ebe41a9c6`_
+_Evidence tier: `EMPIRICALLY_VERIFIED` for repository state and checks listed below; proposals remain `HEURISTIC_HYPOTHESIS`._
 
 ---
 
-## 2. Core Architectural Strengths
+## 1. Current Baseline
 
-1. **Zero-Framework Web Standards**: High-performance static delivery with zero framework runtime overhead (no React, Next.js, or Tailwind bloat). Rapid first contentful paint and tiny bundle footprint.
-2. **Deterministic Version Synchronization**: 12-target atomic version propagation engine managed via `site_automation.py` eliminating version drift across Service Worker, docs, CI, manifests, and script headers.
-3. **AST Knowledge Graph & Agent Navigation**: First-class AI integration via Model Context Protocol (`mcp-server/site_mcp.py`) and Graphify AST graphs for sub-second agent context orientation without expensive search queries.
-4. **Cryptographic Secrecy for Static Sites**: Proprietary projects and private deliverables are protected with client-side Web Crypto AES-256-GCM without requiring backend servers.
+The previous version of this roadmap targeted v53 and described work that has since shipped. This revision records the observed v55.16 baseline and keeps proposed work separate from completed implementation.
 
----
+| Area | Verified state on 2026-10-21 |
+| :--- | :--- |
+| Release metadata | `assets/js/data/releases.js`, `VERSION`, and `pyproject.toml` report v55.16 / 55.16.0. |
+| Working tree | Clean `main`; local `HEAD` and `origin/main` both resolve to `8d0377bf4b2b93f17bb51772ec67a41ebe41a9c6`. |
+| Deterministic verification | `python scripts/verify.py`: all 26 categories passed, including release SHAs, version consistency, assets, search index, and unit tests. |
+| Release recommendation | `python scripts/site_automation.py evaluate-bump`: `none`; clean working tree, score 0, no trigger domains. |
+| Project catalog | Verifier reports 40 project cards, 39 achievements, and 38 journey entries. |
+| Recent documented scope | Tracker v55.16 records project onboarding, contact form backend and bot defense, portfolio content/access calibration, and site presentation work. These are tracker claims, not independent validation of every external system described there. |
+| Knowledge graph | `graphify-out/GRAPH_REPORT.md` was built from `0afcc8b0`, behind the current HEAD. Refresh it when the next architecture/specification change is made. |
 
-## 3. Targeted Evolution Areas
+This baseline does not claim a composite quality score. The former scorecard mixed dated counts and subjective ratings, so it has been removed until a reproducible rubric and fresh measurements are available.
 
-Four high-leverage technical tracks have been identified for future release cycles (v54+):
+## 2. Completed Evolution Tracks
 
-### Track 1: Imperative DOM Decomposition & Component Isolation
+The following tracks were proposed in the 2026-09-08 roadmap and are now recorded as completed based on the present repository contents. Completion of an implementation does not imply that every proposed benefit has been measured.
 
-- **Current State**:
-  - `assets/js/modules/ui.js` (~58 KB) and `assets/js/modules/access.js` (~49 KB) handle presentation, modal rendering, event wiring, and state transitions concurrently.
-  - Graphify cohesion scores (`ui.js` at `0.076`, `core.js` at `0.078`) indicate opportunities for finer functional decomposition.
-- **Target Evolution**:
-  - Extract modal sub-renderers from `ui.js`:
-    - `assets/js/modules/renderers/resume-renderer.js` (ATS Resume Generator, multi-format export).
-    - `assets/js/modules/renderers/radar-renderer.js` (Skill radar canvas and proficiency metrics).
-    - `assets/js/modules/renderers/shortcuts-renderer.js` (HUD modal and cheatsheet rendering).
-  - Extract auth UI from `access.js`:
-    - Separate raw cryptographic operations (`crypto-vault.js`) from DOM modal interactions (`access-modal.js`).
-- **Benefit**: Decreases file size per module to <25 KB, isolates unit testing targets, and improves Graphify community cohesion scores.
+| Track | Present evidence | Status |
+| :--- | :--- | :--- |
+| Cross-platform sync CLI | `scripts/site_automation.py` exposes `sync`; the repository workflow remains documented in `AGENTS.md`. | Implemented; parity and platform coverage should be assessed before claiming full behavioral equivalence. |
+| Asset waterfall / bundle benchmark | `scripts/benchmark_bundle.py` exists. | Implemented; its simulated network results are not substitutes for browser measurements on representative devices and networks. |
+| UI modal decomposition | `assets/js/modules/shortcuts.js` exists separately from `ui.js`. | Partially implemented; the earlier broader renderer extraction and <25 KB target are not established by that extraction alone. |
+| WebAuthn / passkeys | `assets/js/modules/access.js` contains enrollment and authentication flows. | Implemented in the client; the static-site trust boundary and authenticator lifecycle remain constraints to document accurately. |
 
-### Track 2: Cross-Platform Sync Engine & Python CLI Parity
+## 3. Candidate Next Work
 
-- **Current State**:
-  - The repository's primary synchronization tool is `sync.ps1`, optimized for Windows Dev Drive (ReFS) environments.
-  - While PowerShell Core (`pwsh`) is cross-platform, non-Windows environments (Linux CI runners, macOS contributors) benefit from native POSIX invocation.
-- **Target Evolution**:
-  - Build a pure Python synchronization subcommand into `site_automation.py`:
-    `python scripts/site_automation.py sync [-m "commit message"] [--skip-graph] [--no-bump]`
-  - Let `sync.ps1` act as a high-performance Windows/Dev Drive wrapper over `site_automation.py sync`, ensuring 100% feature and behavioral parity across all platforms.
-- **Benefit**: Seamless local developer experience on Linux/macOS and zero shell dependency friction in non-Windows CI pipelines.
+These are investigation candidates, not approved implementation commitments. Select work only after defining a user-facing or maintenance outcome and a measurable acceptance gate.
 
-### Track 3: Cryptographic & Auth Modernization (WebAuthn & Passkeys)
+### Candidate A: Measure real-user performance
 
-- **Current State**:
-  - Access control supports passcode derivation (`vip2026`) and Google OAuth 2.0 token verification.
-  - Passcodes are inherently subject to shared-secret distribution limitations.
-- **Target Evolution**:
-  - Prototype **WebAuthn / Passkey Authentication** for Tier 2 Master Admin:
-    - Utilize browser credentials API (`navigator.credentials.get` / `navigator.credentials.create`) with hardware-bound authenticators (YubiKey, Windows Hello, Touch ID).
-    - Combine client-side public-key credential validation with encrypted payload challenge-response.
-  - Add optional time-limited ephemeral access tokens for VIP visitors.
-- **Benefit**: Elevates Master Admin tier to hardware-grade authentication without requiring a custom server backend.
+- **Question:** Do current page weight, loading order, and rendering remain within agreed budgets on representative mobile devices and slower networks?
+- **Scope to investigate:** Capture repeatable browser traces for the landing, projects, and experience pages; separate cold-cache from warm-cache measurements; record LCP, CLS, INP where supported, transfer size, and test environment.
+- **Acceptance gate:** Publish reproducible measurements and explicit budgets before changing module loading or bundling. Keep `benchmark_bundle.py` results labeled as simulated.
+- **Evidence tier:** `HEURISTIC_HYPOTHESIS` until browser measurements are collected.
 
-### Track 4: Native ESM & Fine-Grained Module Bundling Benchmarks
+### Candidate B: Audit access-control claims and passkey lifecycle
 
-- **Current State**:
-  - The site uses a dynamic IIFE/ES module loader pattern (`script.js` injecting `<script>` tags in order).
-  - PWA service worker caches all static assets individually.
-- **Target Evolution**:
-  - Evaluate modern native ES module (`import`/`export`) architecture with HTTP/2 and speculative preloading.
-  - Introduce an optional zero-dependency roll-up/bundling benchmark step in `scripts/` to measure single-bundle vs multi-module cold load performance across varying network throttles (3G, 4G, fiber).
-- **Benefit**: Provides quantitative network waterfall metrics to justify either modular dynamic loading or lightweight bundled distribution.
+- **Question:** Do the UI, docs, and implementation consistently describe what a static client can and cannot enforce, including passkey enrollment, recovery, and local-storage behavior?
+- **Scope to investigate:** Trace the current enrollment/authentication paths, inspect failure and recovery behavior, and align user-facing language with the actual trust boundary. Do not describe client-side gating as server authorization.
+- **Acceptance gate:** Document verified behavior and limitations; add focused checks only for specific reproduced gaps.
+- **Evidence tier:** `HEURISTIC_HYPOTHESIS` pending a fresh code and behavior audit.
 
----
+### Candidate C: Improve focused module maintainability
 
-## 4. Priority Matrix & Implementation Sequencing
+- **Question:** Which module currently has the highest change risk or weakest test isolation?
+- **Scope to investigate:** Use current file sizes, dependency relationships, test coverage, and recent defect/change history. Avoid fixed file-size targets unless a measured maintenance problem supports them.
+- **Acceptance gate:** Select one bounded extraction with preserved public globals/module load order, targeted tests, and a measurable reduction in coupling or test setup.
+- **Evidence tier:** `HEURISTIC_HYPOTHESIS` pending current measurements.
 
-| Milestone | Track | Complexity | Priority | Status | Target Scope |
-| :--- | :--- | :---: | :---: | :---: | :--- |
-| **Phase 1** | Track 2: Python Sync CLI Parity | Medium | **High** | **COMPLETED** | Implemented `python scripts/site_automation.py sync` with cross-platform Git status, E2E & verification calls. |
-| **Phase 2** | Track 4: Asset Waterfall & Bundle Benchmark | Low | **High** | **COMPLETED** | Built `scripts/benchmark_bundle.py` with gzip compression metrics and simulated network waterfalls. |
-| **Phase 3** | Track 1: UI Modal Decomposition | Medium | **High** | **COMPLETED** | Extracted `shortcuts.js` from `ui.js` (-7.4 KB), updated Tier 2 loading, PWA caching, and added unit tests. |
-| **Phase 4** | Track 3: WebAuthn / Passkeys | High | **Medium** | **COMPLETED** | Integrated hardware-authenticator challenge & enrollment for Master Admin access with unit tests. |
+### Candidate D: Refresh portfolio content from verified project evidence
 
----
+- **Question:** Are recent flagship projects, achievements, and journey milestones represented with current, reviewable evidence?
+- **Scope to investigate:** Identify a specific missing or stale item and verify its source repository, status, claims, and proof assets. Preserve uncertainty where a result is planned or historical.
+- **Acceptance gate:** Update only evidence-backed content; use `scripts/add_project.py` for new project cards and verify generated links, filters, search index, and asset integrity.
+- **Evidence tier:** Determined per claim from its source evidence.
 
-## 5. Verification & Governance Criteria
+## 4. Decision and Delivery Sequence
 
-All evolutions tracked above must adhere to the core repository standards:
-- **Verification Gate**: Must pass all 24 categories in `python scripts/verify.py` with 0 errors and 0 warnings.
-- **Markdown Hygiene**: Must conform to MD009 (no trailing whitespace) and MD026 (no trailing punctuation in headings).
-- **Versioning Protocol**: Follow the 5-Pillar Decision Matrix in `site_automation.py` when determining release scope.
+1. Choose one candidate based on an observed user or maintenance need.
+2. Record a bounded scope, non-goals, evidence sources, and acceptance criteria in the appropriate tracker or issue before implementation.
+3. Inspect the active repository instructions and relevant code. Keep synthetic benchmark outputs and tracker statements distinct from independently measured behavior.
+4. Implement the smallest change that meets the acceptance criteria. For new project cards, use `scripts/add_project.py`; for architectural/specification changes, refresh Graphify.
+5. Run `python scripts/verify.py` and any task-specific checks. Record exact results and any remaining limitations in the tracker.
+6. Let `scripts/site_automation.py evaluate-bump` and the repository release workflow determine whether the change warrants a point or major release. Never invent release SHAs.
+
+## 5. Verification Record
+
+Verified on 2026-10-21 from the personal canonical repository checkout:
+
+- `python scripts/verify.py` — all 26 categories passed.
+- `python scripts/site_automation.py evaluate-bump` — recommended bump `none`; working tree clean at inspection time.
+- `git rev-parse HEAD` and `git rev-parse origin/main` — both `8d0377bf4b2b93f17bb51772ec67a41ebe41a9c6`.
+
+These checks describe the inspected repository state on that date; they do not validate future edits or external services.
