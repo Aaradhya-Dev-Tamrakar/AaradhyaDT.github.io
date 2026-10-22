@@ -1,6 +1,6 @@
 {
-  "sha": "defeb1627c53e2961e67345ca5de9852bf2ad945",
-  "shortSha": "defeb16",
-  "date": "2026-10-22T17:03:19+05:45",
-  "message": "fix(projects): restore serif titles and retain hover effects (#23)"
+  "sha": "0298b26b43366353bb537f188a1f807956fcbe30",
+  "shortSha": "0298b26",
+  "date": "2026-10-22T17:07:35+05:45",
+  "message": "fix(projects): expand and highlight exact homepage destinations (#24)"
 }

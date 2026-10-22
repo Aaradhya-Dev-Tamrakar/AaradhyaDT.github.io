@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.2",
     date: "2026-10-22",
-    sha: "defeb1627c53e2961e67345ca5de9852bf2ad945",
-    title: "restore serif titles and retain hover effects (#23)",
+    sha: "0298b26b43366353bb537f188a1f807956fcbe30",
+    title: "expand and highlight exact homepage destinations (#24)",
     highlights: []
   },
   {
