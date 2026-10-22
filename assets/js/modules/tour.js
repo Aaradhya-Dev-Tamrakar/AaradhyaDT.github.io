@@ -249,6 +249,9 @@ function renderTourStep(idx) {
 
   document.querySelectorAll('.tour-highlight').forEach(el => el.classList.remove('tour-highlight'));
   if (target !== document.body) {
+    for (let ancestor = target.parentElement; ancestor; ancestor = ancestor.parentElement) {
+      if (ancestor.tagName === 'DETAILS') ancestor.open = true;
+    }
     target.classList.add('tour-highlight');
     target.scrollIntoView({ block: 'center', behavior: tourReducedMotion() ? 'auto' : 'smooth' });
   }
