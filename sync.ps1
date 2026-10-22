@@ -39,6 +39,9 @@
 .PARAMETER Highlights
     Optional highlight strings array for major release bump.
 
+.PARAMETER PublishBranch
+    Publishes the active isolated feature branch for a pull request without main stamp polling.
+
 .PARAMETER PullOnly
     Safely pull remote changes with --autostash and LFS sync without committing or pushing.
 
@@ -126,6 +129,7 @@ param (
     [switch]$PullOnly,
     [switch]$PushOnly,
     [switch]$NoPush,
+    [switch]$PublishBranch,
     [Alias("GraphRebuild", "FullKnowledgeGraph")]
     [switch]$FullGraph,
     [Alias("SkipGraphify", "NoGraph", "NoGraphify", "Skip_Graphify")]
@@ -210,6 +214,7 @@ function Show-HelpGuide {
     Write-Host '  -NoBump                  Suppress automatic point release increment on routine sync'
     Write-Host '  -PullOnly                Safe pull with autostash and conditional LFS pull only'
     Write-Host '  -PushOnly                Push staged/committed work and sync stamp bot'
+    Write-Host '  -PublishBranch           Publish the active feature branch for a pull request'
     Write-Host '  -NoPush                  Commit locally without pushing to remote origin'
     Write-Host '  -FullGraph               Full knowledge graph rebuild (graphify . + cluster-only)'
     Write-Host '  -SkipGraph, -NoGraph     Skip Graphify AST knowledge graph update'
@@ -754,11 +759,37 @@ function Invoke-GitNetwork {
     git -c "credential.https://github.com.helper=" -c "credential.helper=manager" @Arguments
 }
 
+function Get-SyncPushBranch {
+    param(
+        [string]$ActiveBranch,
+        [switch]$PublishBranch,
+        [switch]$NoPush,
+        [switch]$PullOnly,
+        [switch]$WhatIf
+    )
+    if ($PublishBranch) {
+        if (-not $ActiveBranch -or $ActiveBranch -eq "main") {
+            throw "-PublishBranch requires an isolated feature branch."
+        }
+        return $ActiveBranch.Trim()
+    }
+    if ($ActiveBranch -ne "main" -and -not ($NoPush -or $PullOnly -or $WhatIf)) {
+        throw "Use -PublishBranch to publish the active feature branch, or -NoPush to save locally."
+    }
+    return "main"
+}
+
 # Push changes reliably across configured push URLs
 function Push-GitCommits {
     param(
         [string]$Branch = "main"
     )
+
+    # Feature branches are published without the main mirror force-push policy.
+    if ($Branch -ne "main") {
+        Invoke-GitNetwork @("push", "origin", $Branch)
+        return ($LASTEXITCODE -eq 0)
+    }
 
     $pushUrls = git remote get-url --all --push origin 2>$null
     if (-not $pushUrls -or $pushUrls.Count -le 1) {
@@ -854,6 +885,14 @@ Write-Host '  AaradhyaDT.github.io -- Git & Workflow Synchronization Suite      
 Write-Host '==========================================================================' -ForegroundColor Cyan
 
 # Step 0: Initialize Dev Drive & Tooling Runtime
+$activeBranch = git branch --show-current
+try {
+    $pushBranch = Get-SyncPushBranch -ActiveBranch $activeBranch -PublishBranch:$PublishBranch -NoPush:$NoPush -PullOnly:$PullOnly -WhatIf:$WhatIf
+}
+catch {
+    Write-Badge "Git" $_.Exception.Message "Red" "Red"
+    exit 1
+}
 $devDriveState = Initialize-DevDriveOptimizations
 $script:PythonRunner = Get-PythonRunner -DisableUv:$NoUv
 $pythonExe = Get-PythonPath
@@ -945,6 +984,14 @@ if (-not $PushOnly) {
 }
 
 # Step 4: Search Index Extraction
+if (-not $PushOnly -and $script:PythonRunner -and (Test-Path "scripts/generate_ecosystem.py")) {
+    Write-Badge "Tree" "Regenerating project ecosystem from the current inventory..." "Cyan" "White"
+    $treeOutput = Invoke-PythonScript -ScriptPath "scripts/generate_ecosystem.py" -CaptureOutput
+    if ($LASTEXITCODE -ne 0) {
+        Write-Host $treeOutput -ForegroundColor Red
+        exit 1
+    }
+}
 if (-not $SkipIndex -and -not $PushOnly) {
     if (Test-Path "scripts/extract_index.py") {
         if ($script:PythonRunner) {
@@ -1148,19 +1195,19 @@ if ($VisualRegression -and -not $PushOnly) {
 # Step 7: Push-Only Mode Check
 if ($PushOnly) {
     Write-Badge "Git" "PushOnly flag active -- pushing unpushed commits..." "Cyan" "White"
-    $pushOk = Push-GitCommits -Branch "main"
+    $pushOk = Push-GitCommits -Branch $pushBranch
     if (-not $pushOk) {
         Write-Badge "Git" "Push was rejected. Re-pulling with rebase and retrying..." "Yellow" "Yellow"
-        Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", "main")
+        Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", $pushBranch)
         if ($LASTEXITCODE -eq 0) {
-            $pushOk = Push-GitCommits -Branch "main"
+            $pushOk = Push-GitCommits -Branch $pushBranch
         }
         if (-not $pushOk) {
             Write-Badge "Git" "Rebase failed or push rejected. Please resolve manually." "Red" "Red"
             exit 1
         }
     }
-    Sync-BotStamp
+    if ($pushBranch -eq "main") { Sync-BotStamp }
     $stopwatch.Stop()
     Write-Host ''
     Write-Badge "Done" "Push-only sync complete in $([math]::Round($stopwatch.Elapsed.TotalSeconds, 2))s." "Green" "Green"
@@ -1188,7 +1235,7 @@ if ($WhatIf) {
     $msgText = if ($Message) { "$Message" } else { "No changes detected to commit" }
     Write-Host $msgText -ForegroundColor Cyan
     Write-Host '  Verification Status     : Passed' -ForegroundColor Green
-    Write-Host '  Git Push Destination    : origin main' -ForegroundColor White
+    Write-Host "  Git Push Destination    : origin $pushBranch" -ForegroundColor White
     Write-Host "  Execution Time (Preview): $([math]::Round($stopwatch.Elapsed.TotalSeconds, 2))s" -ForegroundColor Gray
     Write-Host '--------------------------------------------------------------------------' -ForegroundColor Yellow
     Write-Host '  No changes were staged, committed, or pushed.' -ForegroundColor Gray
@@ -1225,14 +1272,14 @@ if ($staged) {
     git commit -m "$Message"
 
     if (-not $NoPush) {
-        Write-Badge "Git" "Pushing commits to origin main..." "Cyan" "White"
-        $pushOk = Push-GitCommits -Branch "main"
+        Write-Badge "Git" "Pushing commits to origin $pushBranch..." "Cyan" "White"
+        $pushOk = Push-GitCommits -Branch $pushBranch
         
         if (-not $pushOk) {
             Write-Badge "Git" "Push rejected (non-fast-forward). Auto-rebasing with autostash..." "Yellow" "Yellow"
-            Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", "main")
+            Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", $pushBranch)
             if ($LASTEXITCODE -eq 0) {
-                $pushOk = Push-GitCommits -Branch "main"
+                $pushOk = Push-GitCommits -Branch $pushBranch
             }
             if (-not $pushOk) {
                 Write-Badge "Git" "Rebase encountered merge conflicts. Please resolve manually." "Red" "Red"
@@ -1241,7 +1288,7 @@ if ($staged) {
         }
 
         # Step 11: Sync Bot Stamp
-        Sync-BotStamp
+        if ($pushBranch -eq "main") { Sync-BotStamp }
     }
     else {
         Write-Badge "Git" "Skipped remote push (-NoPush flag active). Commit saved locally." "Yellow" "Yellow"
@@ -1253,14 +1300,14 @@ else {
     if ($unpushed -and -not $NoPush) {
         Write-Badge "Git" "Working tree is clean, but found unpushed local commits:" "Cyan" "Yellow"
         $unpushed | ForEach-Object { Write-Host "    $_" -ForegroundColor Gray }
-        Write-Badge "Git" "Pushing unpushed commits to origin main..." "Cyan" "White"
-        $pushOk = Push-GitCommits -Branch "main"
+        Write-Badge "Git" "Pushing unpushed commits to origin $pushBranch..." "Cyan" "White"
+        $pushOk = Push-GitCommits -Branch $pushBranch
         
         if (-not $pushOk) {
             Write-Badge "Git" "Push rejected (non-fast-forward). Auto-rebasing with autostash..." "Yellow" "Yellow"
-            Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", "main")
+            Invoke-GitNetwork @("pull", "--rebase", "--autostash", "origin", $pushBranch)
             if ($LASTEXITCODE -eq 0) {
-                $pushOk = Push-GitCommits -Branch "main"
+                $pushOk = Push-GitCommits -Branch $pushBranch
             }
             if (-not $pushOk) {
                 Write-Badge "Git" "Rebase encountered merge conflicts. Please resolve manually." "Red" "Red"
@@ -1268,7 +1315,7 @@ else {
             }
         }
         
-        Sync-BotStamp
+        if ($pushBranch -eq "main") { Sync-BotStamp }
     }
     else {
         Write-Badge "Git" "Working tree is clean. No changes to commit or push." "DarkGray" "Gray"

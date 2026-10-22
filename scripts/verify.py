@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v55.23)
+aaradhyadt.github.io (v56)
 
 26 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -1208,6 +1208,17 @@ def check_data_consistency():
     cat = "data-consistency"
     all_ok = True
 
+    ecosystem = ROOT / "scripts" / "generate_ecosystem.py"
+    result = subprocess.run(
+        [sys.executable, str(ecosystem), "--check"],
+        capture_output=True, text=True, timeout=30, check=False,
+    )
+    if result.returncode:
+        log_error(cat, "ecosystem tree is stale or invalid: " + result.stdout.strip() + result.stderr.strip())
+        all_ok = False
+    else:
+        log_pass(cat, "ecosystem tree matches the project inventory and sourced relationships")
+
     # 1. RESUME_DATA in data/resume-data.js should say Vice Chair for current leadership
     if RESUME_DATA_JS.exists():
         resume_text = RESUME_DATA_JS.read_text(encoding="utf-8")
@@ -1377,7 +1388,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v55.23)"))
+    print(bold("  Portfolio Site Verification Suite (v56)"))
     print(bold("=" * 60))
     print()
 
