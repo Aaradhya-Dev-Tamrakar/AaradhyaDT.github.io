@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.4",
     date: "2026-10-22",
-    sha: "54352b17c8c9733ba9cabc06154cee1e857138a4",
-    title: "improve themed category heading readability (#25)",
+    sha: "2295acd8d9811204d863fc7c982984d28a28f4d9",
+    title: "categorize and declutter the archive (#27)",
     highlights: []
   },
   {
