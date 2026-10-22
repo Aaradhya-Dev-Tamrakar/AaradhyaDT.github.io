@@ -300,6 +300,13 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
+    "title": "SPARK — Two-Layer Fall Detection Wearable",
+    "meta": "In Progress · ESP32-S3, MPU6050, TFLite Micro",
+    "href": "projects.html#p-018",
+    "text": "spark — two-layer fall detection wearable on-device, two-layer fall-detection wearable for eldercare: layer 1 isr threshold pre-filter ($|a| > 2.5g$, $\\delta t < 300\\text{ ms}$) on esp32-s3 + mpu-6050 at 200 hz gating an on-device tflite micro 1d cnn 1d cnn trained under leakage-free subject-grouped split on sisfall (0.9185 auc-roc, 87.81% sensitivity), quantized to an 18.5 kb int8 flatbuffer (87.7% compression vs fp32) with 56 passing unit tests central gateway with shap clinical explainability, automated pdf diagnostic reports across 4 biomechanical fall profiles, and nepal cohort data collection pipeline bei major engineering project, four-person team — proposal defended jul 9, 2026 esp32-s3 mpu6050 tflite micro int8 quantization 1d cnn shap fastapi latex in progress"
+  },
+  {
+    "type": "project",
     "title": "Gesture-Controlled Self-Balancing Robot",
     "meta": "Arduino, HC-05, MPU-6050",
     "href": "projects.html#p-001",
@@ -307,10 +314,17 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "SPARK — Two-Layer Fall Detection Wearable",
-    "meta": "In Progress · ESP32-S3, MPU6050, TFLite Micro",
-    "href": "projects.html#p-018",
-    "text": "spark — two-layer fall detection wearable on-device, two-layer fall-detection wearable for eldercare: layer 1 isr threshold pre-filter ($|a| > 2.5g$, $\\delta t < 300\\text{ ms}$) on esp32-s3 + mpu-6050 at 200 hz gating an on-device tflite micro 1d cnn 1d cnn trained under leakage-free subject-grouped split on sisfall (0.9185 auc-roc, 87.81% sensitivity), quantized to an 18.5 kb int8 flatbuffer (87.7% compression vs fp32) with 56 passing unit tests central gateway with shap clinical explainability, automated pdf diagnostic reports across 4 biomechanical fall profiles, and nepal cohort data collection pipeline bei major engineering project, four-person team — proposal defended jul 9, 2026 esp32-s3 mpu6050 tflite micro int8 quantization 1d cnn shap fastapi latex in progress"
+    "title": "PrakopNet — Multi-Hazard Early Warning System",
+    "meta": "Archived · ESP32, Wireless Mesh, Raspberry Pi 4B",
+    "href": "projects.html#p-012",
+    "text": "prakopnet — multi-hazard early warning system solar-powered wireless mesh multi-hazard monitoring platform for remote regions of nepal — esp32 nodes to a raspberry pi 4b gateway archived june 29, 2026; superseded by spark esp32 wireless mesh raspberry pi 4b tflite micro lstm gps fastapi edge ai archived"
+  },
+  {
+    "type": "project",
+    "title": "Edge AI Stability Detection System",
+    "meta": "Python, scikit-learn, RandomForest",
+    "href": "projects.html#p-007",
+    "text": "edge ai stability detection system ml system predicting platform stability from simulated imu sensor data — random forest, 99.8% test accuracy rest api via fastapi, joblib export for robotics integration with gcsbr (gesture-controlled self-balancing robot) python scikit-learn randomforest fastapi joblib imu edge ai"
   },
   {
     "type": "project",
@@ -328,10 +342,129 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "PrakopNet — Multi-Hazard Early Warning System",
-    "meta": "Archived · ESP32, Wireless Mesh, Raspberry Pi 4B",
-    "href": "projects.html#p-012",
-    "text": "prakopnet — multi-hazard early warning system solar-powered wireless mesh multi-hazard monitoring platform for remote regions of nepal — esp32 nodes to a raspberry pi 4b gateway archived june 29, 2026; superseded by spark esp32 wireless mesh raspberry pi 4b tflite micro lstm gps fastapi edge ai archived"
+    "title": "Fleet-Orchestrator — Autonomous Multi-Model Agent Fleet & Swarm Engine",
+    "meta": "Python 3.14, Multi-Agent Swarm, FastAPI",
+    "href": "projects.html#p-040",
+    "text": "fleet-orchestrator — autonomous multi-model agent fleet & swarm engine autonomous multi-model agent fleet pooled across 27 copilot workers, gemini api, and antigravity. level 4 self-upgrading infrastructure with capability gap detection, adapter scaffolding, and colab a100 closed-loop retraining. 7 self-healing fleet sentinels and 297 unit tests certifying zero-drift deterministic execution. python 3.14 multi-agent swarm fastapi level 4 autonomous google colab"
+  },
+  {
+    "type": "project",
+    "title": "Agent-Customization-Sync — Cross-IDE Configuration Snapshot & Transpilation",
+    "meta": "Python, MCP, Cross-IDE Tooling",
+    "href": "projects.html#p-041",
+    "text": "agent-customization-sync — cross-ide configuration snapshot & transpilation creates sha-256 configuration snapshots with rolling retention and guarded restore workflows. transpiles canonical agent rules and mcp settings for cursor, claude code, vs code, and github copilot. audits cross-ide configuration drift and instruction token overhead; links shared skills with platform-appropriate filesystem links. python mcp cross-ide tooling sha-256 windows"
+  },
+  {
+    "type": "project",
+    "title": "Claude Desktop Multi-Profile & Distributed Service Provisioning (DSP) Fabric",
+    "meta": "DSP Fabric, FastAPI, SQLite WAL",
+    "href": "projects.html#p-023",
+    "text": "claude desktop multi-profile & distributed service provisioning (dsp) fabric heterogeneous distributed service provisioning (dsp) fabric: inverts the ddos metaphor to coordinate useful compute across autonomous worker daemons (claude cdp, gemini, groq, ollama) via a centralized fastapi coordinator distributed state machine on sqlite wal: atomic cas task leasing (`lease_token`), capability & headroom scoring scheduler, and a self-healing supervisor loop that isolates stale nodes and reclaims stranded leases 44+ fastmcp tools across local and remote instances, multi-stage dag task pipelines with checkpoint persistence, and a chrome devtools protocol (cdp) bridge treating desktop ai guis as application-as-a-service backends dsp fabric fastapi sqlite wal atomic leasing self-healing fastmcp (44 tools) cdp bridge powershell 7"
+  },
+  {
+    "type": "project",
+    "title": "GitHub Pilot — Autonomous Multi-Account Fleet Auditor & Navigator",
+    "meta": "Python 3.10+, Typer CLI, HTTP/2 Async",
+    "href": "projects.html#p-034",
+    "text": "github pilot — autonomous multi-account fleet auditor & navigator macro-plane developer fleet orchestrator and multi-account github profile navigator operating across profiles, repositories, ci workflows, and commit signals token-zero local architecture: delegates repo auditing, rate-limit tracking, svg stats synthesis, and async http/2 scraping to deterministic local python scripts, handing ai agents ultra-compact summaries (< 1 kb) to conserve reasoning context multi-account credential resolver, automated conventional commit changelog digests, and pre-commit secret hygiene scanning python 3.10+ typer cli http/2 async token-zero developer tooling multi-account fleet auditing rich ui"
+  },
+  {
+    "type": "project",
+    "title": "Windows Pilot — Semantic UIA & MCP Desktop Automation Engine",
+    "meta": "Python 3.10+, Win32 API, UI Automation COM",
+    "href": "projects.html#p-033",
+    "text": "windows pilot — semantic uia & mcp desktop automation engine mission-critical windows desktop automation engine for autonomous ai coding agents (antigravity, claude desktop, cursor) and human operators via cli and python sdk resolution-independent microsoft ui automation (uia) com & win32 control: locates elements semantically via css-like query dsl without fragile pixel coordinates win32 foreground lock bypass ( attachthreadinput ), virtual desktop awareness with dwm uncloaking ( dwmwa_cloaked ), high-speed unicode clipboard injection, and native mcp server ( winpilot-mcp ) python 3.10+ win32 api ui automation com mcp server desktop automation virtual desktops windows 11 actionchain"
+  },
+  {
+    "type": "project",
+    "title": "Nexus — Personal AI Operating System",
+    "meta": "In Progress · React, Vite, FastAPI",
+    "href": "projects.html#p-010",
+    "text": "nexus — personal ai operating system project-centric ai operating system replacing the multi-browser/multi-account/multi-tool workflow react (vite) + fastapi + sqlite/fts5, parallel groq + gemini fan-out — v2 redesign complete june 12, 2026 react vite fastapi sqlite fts5 groq gemini python in progress"
+  },
+  {
+    "type": "project",
+    "title": "Super-NLM — Multi-Account NotebookLM Hub & MCP Server",
+    "meta": "In Progress · Python, MCP, NotebookLM",
+    "href": "projects.html#p-031",
+    "text": "super-nlm — multi-account notebooklm hub & mcp server unified dashboard aggregating google notebooklm notebooks across n google accounts simultaneously — parallel fetch, global ctrl+k search, in-app quick chat, and cross-account synthesis via a pro ai engine router built-in mcp server ( super-nlm-mcp ) with round-robin multi-account rotation and two-tiered quota cooldown (120 s burst / midnight utc daily) — enables parallel ai agents (antigravity / claude) to query notebooks without exhausting any single account's rate limit lazy auto-sharing cache invites query accounts as editors behind the scenes; notebook and profile listings served from local cache at zero api quota cost python mcp notebooklm multi-account rate-limit routing agentic round-robin fastapi in progress"
+  },
+  {
+    "type": "project",
+    "title": "Nepali OCR AI — Vision OCR, Varnavinyas Grammar & Bi-Directional Transcoder",
+    "meta": "Python 3.11, FastMCP, Devanagari OCR",
+    "href": "projects.html#p-038",
+    "text": "nepali ocr ai — vision ocr, varnavinyas grammar & bi-directional transcoder end-to-end devanagari ocr pipeline featuring adaptive text pre-processing, layout analysis, and bilingual character recognition. varnavinyas grammar engine with statistical rule correction and bidirectional preeti ↔ unicode font transcoder. automated word (.docx) document repair and standalone fastmcp microservice for ai agent document parsing. python 3.11 fastmcp devanagari ocr varnavinyas engine preeti unicode python-docx"
+  },
+  {
+    "type": "project",
+    "title": "IEEE-Xtreme Algorithmic Intelligence Archive — 662-Task Corpus & Xtreme-Bench",
+    "meta": "Python 3.14, Hugging Face, LLM Benchmark",
+    "href": "projects.html#p-039",
+    "text": "ieee-xtreme algorithmic intelligence archive — 662-task corpus & xtreme-bench autonomous cdp stealth-crawler extracting 662 olympiad problem statements with verbatim katex latex, execution matrices, and 532 verified optimal solutions. open-source xtreme-bench reasoning benchmark on hugging face hub paired with a uv -first automated evaluation harness and live pass@k leaderboard. deterministic single-warehouse rag pattern compressing 226k words into notebooklm with sub-millisecond sqlite fts5 search. python 3.14 hugging face llm benchmark competitive programming sqlite fts5 notebooklm rag"
+  },
+  {
+    "type": "project",
+    "title": "LocalSend MCP — Zero-Cloud LAN P2P File & Clipboard Transfer Bridge",
+    "meta": "Node.js ESM, @modelcontextprotocol/sdk, LocalSend v2.1",
+    "href": "projects.html#p-035",
+    "text": "localsend mcp — zero-cloud lan p2p file & clipboard transfer bridge high-performance model context protocol (mcp) server enabling ai coding agents to discover and exchange files directly with local lan/wi-fi devices. implemented over localsend protocol v2.1/v2.2 with mutual tls, udp multicast beaconing (224.0.0.167:53317), and persistent device discovery. zero-cloud local architecture: transfers files, directories, text snippets, and system clipboard state across phones and pcs with zero telemetry. node.js esm @modelcontextprotocol/sdk localsend v2.1 mtls udp multicast p2p transfer"
+  },
+  {
+    "type": "project",
+    "title": "Google Classroom MCP — Academic Coursework & Due Date Automation Bridge",
+    "meta": "Node.js ESM, MCP SDK, Google Classroom API",
+    "href": "projects.html#p-036",
+    "text": "google classroom mcp — academic coursework & due date automation bridge automated google classroom mcp server integrating college courses, coursework, assignments, and announcements directly into autonomous ai agent workflows. programmatic oauth 2.0 authentication with automatic token refresh, token caching, and quota-safe rest api batching. syncs problem sets, attached google drive files, grading rubrics, and submission status to provide real-time academic context. node.js esm mcp sdk google classroom api oauth 2.0 coursework automation drive integration"
+  },
+  {
+    "type": "project",
+    "title": "Typora MCP Server — Native Markdown Desktop Orchestration & Ingestion Engine",
+    "meta": "Node.js ESM, TypeScript, MCP SDK",
+    "href": "projects.html#p-037",
+    "text": "typora mcp server — native markdown desktop orchestration & ingestion engine native model context protocol (mcp) server providing ai agents with live process telemetry and automation for typora markdown editor on windows. win32 cim / wmi process inspection tracking running instances, open documents, process counts, and hex-encoded session crash recovery files. automated document creation, workspace folder launch, custom css theme management, and export pipeline to html. node.js esm typescript mcp sdk win32 cim typora engine markdown tooling"
+  },
+  {
+    "type": "project",
+    "title": "Alpha Android Super-App",
+    "meta": "In Progress · Kotlin, Jetpack Compose, Material3",
+    "href": "projects.html#p-002",
+    "text": "alpha android super-app modular personal super-app (kotlin/jetpack compose, material3) — gesture remote, budget tracker, multi-mode calculator calculator is the primary shipping target, play store release in progress kotlin jetpack compose material3 camerax mediapipe bluetooth spp datastore apache poi in progress"
+  },
+  {
+    "type": "project",
+    "title": "md2pdf — Desktop Markdown to PDF Converter",
+    "meta": "Python, Tkinter, Pandoc",
+    "href": "projects.html#p-029",
+    "text": "md2pdf — desktop markdown to pdf converter native desktop markdown editor and pdf conversion workstation built with python & tkinter high-fidelity conversion pipeline utilizing pandoc (commonmark/gfm ast → html) and wkhtmltopdf (webkit html → pdf engine with explicit utf-8 encoding) features adjustable margins (default 20mm), live system dependency validation across windows, macos, and linux, and clean save-destination dialogs python tkinter pandoc wkhtmltopdf markdown desktop app"
+  },
+  {
+    "type": "project",
+    "title": "NovaOptimizer — Windows Task Manager & System Optimizer",
+    "meta": "C# / .NET 10, WPF, Win32 NT Kernel",
+    "href": "projects.html#p-030",
+    "text": "novaoptimizer — windows task manager & system optimizer high-efficiency, native windows task manager and system optimizer engineered in c# / .net 10 and wpf with a minimal ~25 mb ram footprint direct nt kernel memory management: deep physical ram purging via undocumented `ntsetsysteminformation` (standby list, system working set, and process trimming) with an intelligent background watchdog turbo boost profiles (game, work, and study mode with integrated pomodoro focus timer), startup bloat auditor, hung-process watchdog, and system latency tweaks c# / .net 10 wpf win32 nt kernel memory management task manager turbo boost windows 11"
+  },
+  {
+    "type": "project",
+    "title": "Pulse Live — Real-Time Interactive Polling Platform",
+    "meta": "React 19, TypeScript, Vite",
+    "href": "projects.html#p-021",
+    "text": "pulse live — real-time interactive polling platform real-time audience engagement platform featuring instant multi-mode polling (choice, q&a, word cloud), presenter mode, and interactive voting synchronization built with react 19, typescript, and supabase websockets / database for instant live response updates, presenter display controls, and qr code joining react 19 typescript vite supabase websockets react router v7 lucide icons qr code"
+  },
+  {
+    "type": "project",
+    "title": "Cryptarithmetic Solver & API",
+    "meta": "Python, FastAPI, Backtracking",
+    "href": "projects.html#p-020",
+    "text": "cryptarithmetic solver & api column-by-column backtracking solver for alphametic puzzles (send + more = money style) — prunes invalid branches immediately on column-arithmetic failure instead of naive generate-and-test fastapi wrapper with a `metrics` mode for solve-time/branch stats, plus a powershell helper and a no-pytest unit test runner python fastapi backtracking docker algorithm design"
+  },
+  {
+    "type": "project",
+    "title": "IEEE KEC React Workshop",
+    "meta": "React, Vite, JavaScript",
+    "href": "projects.html#p-015",
+    "text": "ieee kec react workshop progressive react teaching material built for an ieee kec student-branch workshop — numbered lesson components from a basic greeting through props, a counter, and a live clock vite-scaffolded, structured as a self-contained follow-along app for first-time react learners react vite javascript teaching material"
   },
   {
     "type": "project",
@@ -465,139 +598,6 @@ const SEARCH_STATIC_INDEX = {
     "meta": "LaTeX, Organizational Analysis, Case Study",
     "href": "projects.html#p-026",
     "text": "onm case study — fusemachines inc. organization & management coursework case study on fusemachines inc.'s org structure, hr practices, and cross-functional operations based on a direct interview with the company's talent acquisition and pr managers; latex source plus compiled report latex organizational analysis case study coursework"
-  },
-  {
-    "type": "project",
-    "title": "LocalSend MCP — Zero-Cloud LAN P2P File & Clipboard Transfer Bridge",
-    "meta": "Node.js ESM, @modelcontextprotocol/sdk, LocalSend v2.1",
-    "href": "projects.html#p-035",
-    "text": "localsend mcp — zero-cloud lan p2p file & clipboard transfer bridge high-performance model context protocol (mcp) server enabling ai coding agents to discover and exchange files directly with local lan/wi-fi devices. implemented over localsend protocol v2.1/v2.2 with mutual tls, udp multicast beaconing (224.0.0.167:53317), and persistent device discovery. zero-cloud local architecture: transfers files, directories, text snippets, and system clipboard state across phones and pcs with zero telemetry. node.js esm @modelcontextprotocol/sdk localsend v2.1 mtls udp multicast p2p transfer"
-  },
-  {
-    "type": "project",
-    "title": "Google Classroom MCP — Academic Coursework & Due Date Automation Bridge",
-    "meta": "Node.js ESM, MCP SDK, Google Classroom API",
-    "href": "projects.html#p-036",
-    "text": "google classroom mcp — academic coursework & due date automation bridge automated google classroom mcp server integrating college courses, coursework, assignments, and announcements directly into autonomous ai agent workflows. programmatic oauth 2.0 authentication with automatic token refresh, token caching, and quota-safe rest api batching. syncs problem sets, attached google drive files, grading rubrics, and submission status to provide real-time academic context. node.js esm mcp sdk google classroom api oauth 2.0 coursework automation drive integration"
-  },
-  {
-    "type": "project",
-    "title": "Typora MCP Server — Native Markdown Desktop Orchestration & Ingestion Engine",
-    "meta": "Node.js ESM, TypeScript, MCP SDK",
-    "href": "projects.html#p-037",
-    "text": "typora mcp server — native markdown desktop orchestration & ingestion engine native model context protocol (mcp) server providing ai agents with live process telemetry and automation for typora markdown editor on windows. win32 cim / wmi process inspection tracking running instances, open documents, process counts, and hex-encoded session crash recovery files. automated document creation, workspace folder launch, custom css theme management, and export pipeline to html. node.js esm typescript mcp sdk win32 cim typora engine markdown tooling"
-  },
-  {
-    "type": "project",
-    "title": "Agent-Customization-Sync — Cross-IDE Configuration Snapshot & Transpilation",
-    "meta": "Python, MCP, Cross-IDE Tooling",
-    "href": "projects.html#p-041",
-    "text": "agent-customization-sync — cross-ide configuration snapshot & transpilation creates sha-256 configuration snapshots with rolling retention and guarded restore workflows. transpiles canonical agent rules and mcp settings for cursor, claude code, vs code, and github copilot. audits cross-ide configuration drift and instruction token overhead; links shared skills with platform-appropriate filesystem links. python mcp cross-ide tooling sha-256 windows"
-  },
-  {
-    "type": "project",
-    "title": "Fleet-Orchestrator — Autonomous Multi-Model Agent Fleet & Swarm Engine",
-    "meta": "Python 3.14, Multi-Agent Swarm, FastAPI",
-    "href": "projects.html#p-040",
-    "text": "fleet-orchestrator — autonomous multi-model agent fleet & swarm engine autonomous multi-model agent fleet pooled across 27 copilot workers, gemini api, and antigravity. level 4 self-upgrading infrastructure with capability gap detection, adapter scaffolding, and colab a100 closed-loop retraining. 7 self-healing fleet sentinels and 297 unit tests certifying zero-drift deterministic execution. python 3.14 multi-agent swarm fastapi level 4 autonomous google colab"
-  },
-  {
-    "type": "project",
-    "title": "IEEE-Xtreme Algorithmic Intelligence Archive — 662-Task Corpus & Xtreme-Bench",
-    "meta": "Python 3.14, Hugging Face, LLM Benchmark",
-    "href": "projects.html#p-039",
-    "text": "ieee-xtreme algorithmic intelligence archive — 662-task corpus & xtreme-bench autonomous cdp stealth-crawler extracting 662 olympiad problem statements with verbatim katex latex, execution matrices, and 532 verified optimal solutions. open-source xtreme-bench reasoning benchmark on hugging face hub paired with a uv -first automated evaluation harness and live pass@k leaderboard. deterministic single-warehouse rag pattern compressing 226k words into notebooklm with sub-millisecond sqlite fts5 search. python 3.14 hugging face llm benchmark competitive programming sqlite fts5 notebooklm rag"
-  },
-  {
-    "type": "project",
-    "title": "Nepali OCR AI — Vision OCR, Varnavinyas Grammar & Bi-Directional Transcoder",
-    "meta": "Python 3.11, FastMCP, Devanagari OCR",
-    "href": "projects.html#p-038",
-    "text": "nepali ocr ai — vision ocr, varnavinyas grammar & bi-directional transcoder end-to-end devanagari ocr pipeline featuring adaptive text pre-processing, layout analysis, and bilingual character recognition. varnavinyas grammar engine with statistical rule correction and bidirectional preeti ↔ unicode font transcoder. automated word (.docx) document repair and standalone fastmcp microservice for ai agent document parsing. python 3.11 fastmcp devanagari ocr varnavinyas engine preeti unicode python-docx"
-  },
-  {
-    "type": "project",
-    "title": "Super-NLM — Multi-Account NotebookLM Hub & MCP Server",
-    "meta": "In Progress · Python, MCP, NotebookLM",
-    "href": "projects.html#p-031",
-    "text": "super-nlm — multi-account notebooklm hub & mcp server unified dashboard aggregating google notebooklm notebooks across n google accounts simultaneously — parallel fetch, global ctrl+k search, in-app quick chat, and cross-account synthesis via a pro ai engine router built-in mcp server ( super-nlm-mcp ) with round-robin multi-account rotation and two-tiered quota cooldown (120 s burst / midnight utc daily) — enables parallel ai agents (antigravity / claude) to query notebooks without exhausting any single account's rate limit lazy auto-sharing cache invites query accounts as editors behind the scenes; notebook and profile listings served from local cache at zero api quota cost python mcp notebooklm multi-account rate-limit routing agentic round-robin fastapi in progress"
-  },
-  {
-    "type": "project",
-    "title": "GitHub Pilot — Autonomous Multi-Account Fleet Auditor & Navigator",
-    "meta": "Python 3.10+, Typer CLI, HTTP/2 Async",
-    "href": "projects.html#p-034",
-    "text": "github pilot — autonomous multi-account fleet auditor & navigator macro-plane developer fleet orchestrator and multi-account github profile navigator operating across profiles, repositories, ci workflows, and commit signals token-zero local architecture: delegates repo auditing, rate-limit tracking, svg stats synthesis, and async http/2 scraping to deterministic local python scripts, handing ai agents ultra-compact summaries (< 1 kb) to conserve reasoning context multi-account credential resolver, automated conventional commit changelog digests, and pre-commit secret hygiene scanning python 3.10+ typer cli http/2 async token-zero developer tooling multi-account fleet auditing rich ui"
-  },
-  {
-    "type": "project",
-    "title": "Windows Pilot — Semantic UIA & MCP Desktop Automation Engine",
-    "meta": "Python 3.10+, Win32 API, UI Automation COM",
-    "href": "projects.html#p-033",
-    "text": "windows pilot — semantic uia & mcp desktop automation engine mission-critical windows desktop automation engine for autonomous ai coding agents (antigravity, claude desktop, cursor) and human operators via cli and python sdk resolution-independent microsoft ui automation (uia) com & win32 control: locates elements semantically via css-like query dsl without fragile pixel coordinates win32 foreground lock bypass ( attachthreadinput ), virtual desktop awareness with dwm uncloaking ( dwmwa_cloaked ), high-speed unicode clipboard injection, and native mcp server ( winpilot-mcp ) python 3.10+ win32 api ui automation com mcp server desktop automation virtual desktops windows 11 actionchain"
-  },
-  {
-    "type": "project",
-    "title": "Claude Desktop Multi-Profile & Distributed Service Provisioning (DSP) Fabric",
-    "meta": "DSP Fabric, FastAPI, SQLite WAL",
-    "href": "projects.html#p-023",
-    "text": "claude desktop multi-profile & distributed service provisioning (dsp) fabric heterogeneous distributed service provisioning (dsp) fabric: inverts the ddos metaphor to coordinate useful compute across autonomous worker daemons (claude cdp, gemini, groq, ollama) via a centralized fastapi coordinator distributed state machine on sqlite wal: atomic cas task leasing (`lease_token`), capability & headroom scoring scheduler, and a self-healing supervisor loop that isolates stale nodes and reclaims stranded leases 44+ fastmcp tools across local and remote instances, multi-stage dag task pipelines with checkpoint persistence, and a chrome devtools protocol (cdp) bridge treating desktop ai guis as application-as-a-service backends dsp fabric fastapi sqlite wal atomic leasing self-healing fastmcp (44 tools) cdp bridge powershell 7"
-  },
-  {
-    "type": "project",
-    "title": "IEEE KEC React Workshop",
-    "meta": "React, Vite, JavaScript",
-    "href": "projects.html#p-015",
-    "text": "ieee kec react workshop progressive react teaching material built for an ieee kec student-branch workshop — numbered lesson components from a basic greeting through props, a counter, and a live clock vite-scaffolded, structured as a self-contained follow-along app for first-time react learners react vite javascript teaching material"
-  },
-  {
-    "type": "project",
-    "title": "Cryptarithmetic Solver & API",
-    "meta": "Python, FastAPI, Backtracking",
-    "href": "projects.html#p-020",
-    "text": "cryptarithmetic solver & api column-by-column backtracking solver for alphametic puzzles (send + more = money style) — prunes invalid branches immediately on column-arithmetic failure instead of naive generate-and-test fastapi wrapper with a `metrics` mode for solve-time/branch stats, plus a powershell helper and a no-pytest unit test runner python fastapi backtracking docker algorithm design"
-  },
-  {
-    "type": "project",
-    "title": "Pulse Live — Real-Time Interactive Polling Platform",
-    "meta": "React 19, TypeScript, Vite",
-    "href": "projects.html#p-021",
-    "text": "pulse live — real-time interactive polling platform real-time audience engagement platform featuring instant multi-mode polling (choice, q&a, word cloud), presenter mode, and interactive voting synchronization built with react 19, typescript, and supabase websockets / database for instant live response updates, presenter display controls, and qr code joining react 19 typescript vite supabase websockets react router v7 lucide icons qr code"
-  },
-  {
-    "type": "project",
-    "title": "Nexus — Personal AI Operating System",
-    "meta": "In Progress · React, Vite, FastAPI",
-    "href": "projects.html#p-010",
-    "text": "nexus — personal ai operating system project-centric ai operating system replacing the multi-browser/multi-account/multi-tool workflow react (vite) + fastapi + sqlite/fts5, parallel groq + gemini fan-out — v2 redesign complete june 12, 2026 react vite fastapi sqlite fts5 groq gemini python in progress"
-  },
-  {
-    "type": "project",
-    "title": "md2pdf — Desktop Markdown to PDF Converter",
-    "meta": "Python, Tkinter, Pandoc",
-    "href": "projects.html#p-029",
-    "text": "md2pdf — desktop markdown to pdf converter native desktop markdown editor and pdf conversion workstation built with python & tkinter high-fidelity conversion pipeline utilizing pandoc (commonmark/gfm ast → html) and wkhtmltopdf (webkit html → pdf engine with explicit utf-8 encoding) features adjustable margins (default 20mm), live system dependency validation across windows, macos, and linux, and clean save-destination dialogs python tkinter pandoc wkhtmltopdf markdown desktop app"
-  },
-  {
-    "type": "project",
-    "title": "NovaOptimizer — Windows Task Manager & System Optimizer",
-    "meta": "C# / .NET 10, WPF, Win32 NT Kernel",
-    "href": "projects.html#p-030",
-    "text": "novaoptimizer — windows task manager & system optimizer high-efficiency, native windows task manager and system optimizer engineered in c# / .net 10 and wpf with a minimal ~25 mb ram footprint direct nt kernel memory management: deep physical ram purging via undocumented `ntsetsysteminformation` (standby list, system working set, and process trimming) with an intelligent background watchdog turbo boost profiles (game, work, and study mode with integrated pomodoro focus timer), startup bloat auditor, hung-process watchdog, and system latency tweaks c# / .net 10 wpf win32 nt kernel memory management task manager turbo boost windows 11"
-  },
-  {
-    "type": "project",
-    "title": "Edge AI Stability Detection System",
-    "meta": "Python, scikit-learn, RandomForest",
-    "href": "projects.html#p-007",
-    "text": "edge ai stability detection system ml system predicting platform stability from simulated imu sensor data — random forest, 99.8% test accuracy rest api via fastapi, joblib export for robotics integration with gcsbr (gesture-controlled self-balancing robot) python scikit-learn randomforest fastapi joblib imu edge ai"
-  },
-  {
-    "type": "project",
-    "title": "Alpha Android Super-App",
-    "meta": "In Progress · Kotlin, Jetpack Compose, Material3",
-    "href": "projects.html#p-002",
-    "text": "alpha android super-app modular personal super-app (kotlin/jetpack compose, material3) — gesture remote, budget tracker, multi-mode calculator calculator is the primary shipping target, play store release in progress kotlin jetpack compose material3 camerax mediapipe bluetooth spp datastore apache poi in progress"
   }
 
   ]

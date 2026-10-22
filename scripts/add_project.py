@@ -237,6 +237,10 @@ def inject_card(soup: BeautifulSoup, card_soup: BeautifulSoup, section: str = "p
         target_h2_id = "section-personal"
     elif section == "projects":
         target_h2_id = "section-projects"
+    elif section == "agents":
+        target_h2_id = "section-agents"
+    elif section == "knowledge":
+        target_h2_id = "section-knowledge"
     else:
         raise ValueError(f"Unknown project section: {section}")
     h2 = soup.find("h2", id=target_h2_id)
@@ -453,7 +457,7 @@ def main():
     parser.add_argument("--tags", nargs="+", help="Project tags")
     parser.add_argument("--status", "--date", "-s", type=str, default="In Progress", help="Date or status string")
     parser.add_argument("--evidence-repo", type=str, help="Evidence repository slug (Owner/Repo)")
-    parser.add_argument("--section", choices=["personal", "projects", "fuseaif", "mcp"], default="personal", help="Section header")
+    parser.add_argument("--section", choices=["personal", "projects", "fuseaif", "mcp", "agents", "knowledge"], default="personal", help="Section header")
     parser.add_argument("--tier", choices=["vip", "master"], default="vip", help="Security access tier")
     parser.add_argument("--position", choices=["top", "bottom"], default="top", help="Insertion position in section")
     parser.add_argument("--dry-run", "-d", action="store_true", help="Preview without modifying disk")

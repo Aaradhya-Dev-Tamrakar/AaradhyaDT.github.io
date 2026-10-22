@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: cmdk.js — aaradhyadt.github.io (v56.3)
+   MODULE: cmdk.js — aaradhyadt.github.io (v56.4)
    Command palette (Cmd+K) search and quick navigation.
    ============================================================ */
 
@@ -165,6 +165,14 @@ function revealSearchTarget() {
   if (!targetId) return;
   const target = document.getElementById(targetId);
   if (!target) return;
+
+  // Reveal optional browse panels before measuring an anchor inside them.
+  for (let ancestor = target.parentElement; ancestor; ancestor = ancestor.parentElement) {
+    if (ancestor.tagName === 'DETAILS') ancestor.open = true;
+  }
+  if (target.matches('.projects-section-title') && target.style.display === 'none') {
+    document.querySelector('#projectsFilterBar [data-filter="all"]')?.click();
+  }
 
   // Achievements are split into an Academic / Extracurricular track toggle
   const itemTrack = target.dataset.track;
