@@ -23,11 +23,11 @@ const CMDK_ENTRIES = [
   { title: 'Keymap & Display Guide', type: 'section', meta: 'Home · Section', href: '/index.html#keymap', text: 'keymap key map keyboard shortcuts hotkeys reference display guide oled 400 nits navigation controls shortcuts key bindings' },
   { title: 'At a Glance: Stats & Metrics', type: 'section', meta: 'Home · Section', href: '/index.html#stats', text: 'stats statistics at a glance metrics impact 39 achievements 30 projects key numbers highlights' },
   { title: 'About Sign In with Google', type: 'section', meta: 'Home · Section', href: '/index.html#about-sign-in', text: 'access control sign in with google login level 1 authentication privacy client storage' },
-  { title: 'VIP Exclusive: Research & Specs', type: 'section', meta: 'Home · Section', href: '/index.html#vip-exclusive', text: 'vip tier exclusive research specs notes gated content passcode encryption crypto' },
+  { title: 'Additional Research Notes', type: 'section', meta: 'Home · Section', href: '/index.html#vip-exclusive', text: 'research notes specs shared access supplementary material' },
   { title: 'Master Level: System Diagnostics & Console', type: 'section', meta: 'Home · Section', href: '/index.html#master-exclusive', text: 'master tier system diagnostics master console admin controls diagnostics health' },
 
   // About Page Locations
-  { title: 'RADAR: Domain Competency Radar', type: 'section', meta: 'About · Section', href: '/about.html#skill-radar', text: 'radar domain competency radar interactive skill radar 6-axis breakdown ai/ml embedded pcb web omics data science leadership competency' },
+  { title: 'Capabilities in Context', type: 'section', meta: 'About · Section', href: '/about.html#skill-radar', text: 'capabilities project examples skills model evaluation embedded ai workflow infrastructure developer automation radar' },
   { title: 'Education: Where I Learned This', type: 'section', meta: 'About · Section', href: '/about.html#education', text: 'education where i learned this kathmandu engineering college kec ioe tribhuvan university tu bachelor bei aeronautical telecommunication coursework degree' },
   { title: 'Skills & Technical Stack', type: 'section', meta: 'About · Section', href: '/about.html#skills', text: 'skills technical stack tech stack programming languages frameworks c++ python pytorch embedded hardware software' },
   { title: 'Biography & Overview', type: 'section', meta: 'About · Section', href: '/about.html#about-intro', text: 'biography bio overview about intro philosophy firmware applied ml engineering background' },
@@ -46,7 +46,7 @@ const CMDK_ENTRIES = [
   { title: 'Share Portfolio / Profile (Web Share)', type: 'action', meta: 'Action', href: 'javascript:shareContent()', text: 'share portfolio profile link copy web share send' },
   { title: 'Keyboard Shortcuts Cheat Sheet (?)', type: 'action', meta: 'Shortcut: ?', href: 'javascript:openShortcutsModal()', text: 'keyboard shortcuts cheat sheet keymap hotkeys keys hud help modal bindings guide' },
   { title: 'Generate Tailored Resume (ATS & PDF)', type: 'action', meta: 'Action', href: 'javascript:openResumeGenerator()', text: 'generate resume tailored ats cv export pdf print resume builder' },
-  { title: 'Interactive Skill Radar Visualizer', type: 'action', meta: 'Action', href: 'javascript:initSkillRadar()', text: 'interactive skill radar visualizer radar chart skills competency' },
+  { title: 'Capabilities and Project Examples', type: 'action', meta: 'Action', href: 'javascript:initSkillRadar()', text: 'capabilities project examples skills model evaluation embedded ai workflow automation radar' },
   { title: '3D AST Knowledge Graph HUD (WebGL 2)', type: 'action', meta: 'Action', href: 'javascript:openGraphModal()', text: '3d ast knowledge graph hud webgl 2 topology code wiki graph explorer codewiki' },
   { title: 'Access Control & VIP Login', type: 'action', meta: 'Action · VIP Access', href: 'javascript:openAccessModal(1)', text: 'access control login vip higher tier passcode password security unlock' },
   { title: 'Guided Site Tour (Shift+T)', type: 'action', meta: 'Shortcut: Shift+T', href: 'javascript:startTour()', text: 'guided site tour walkthrough interactive tour help tutorial' },

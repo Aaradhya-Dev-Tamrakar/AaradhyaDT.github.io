@@ -748,7 +748,7 @@ function closeSkillRadarModal() {
   if (typeof playAudioCue === 'function') playAudioCue('close');
 }
 
-function initSkillRadar(shouldScroll) {
+function initSkillRadar(shouldScroll = true) {
   if (!shouldScroll) return;
   const section = document.getElementById('skill-radar');
   if (section) section.scrollIntoView({ behavior: 'smooth' });
