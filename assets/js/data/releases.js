@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.3",
     date: "2026-10-22",
-    sha: "0298b26b43366353bb537f188a1f807956fcbe30",
-    title: "expand and highlight exact homepage destinations (#24)",
+    sha: "54352b17c8c9733ba9cabc06154cee1e857138a4",
+    title: "improve themed category heading readability (#25)",
     highlights: []
   },
   {
