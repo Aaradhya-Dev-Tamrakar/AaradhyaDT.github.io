@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v56.2",
+    version: "v56.3",
     date: "2026-10-22",
     sha: "0298b26b43366353bb537f188a1f807956fcbe30",
     title: "expand and highlight exact homepage destinations (#24)",
