@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v56.3",
+    version: "v56.4",
     date: "2026-10-22",
     sha: "54352b17c8c9733ba9cabc06154cee1e857138a4",
     title: "improve themed category heading readability (#25)",
