@@ -232,6 +232,16 @@
   border-color: var(--accent) !important;
 }
 
+details.project-card {
+  scroll-margin-top: var(--nav-h, 72px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .search-highlight {
+    animation: none;
+  }
+}
+
 
 
 /* ── Keymap & display guide (Compact & Decluttered) ──────── */

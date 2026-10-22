@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: cmdk.js — aaradhyadt.github.io (v56.1)
+   MODULE: cmdk.js — aaradhyadt.github.io (v56.2)
    Command palette (Cmd+K) search and quick navigation.
    ============================================================ */
 
@@ -148,9 +148,20 @@ function renderCmdk() {
   document.body.appendChild(el);
 }
 
+let searchTargetTimer;
+let searchTargetVisit = 0;
+
 function revealSearchTarget() {
+  const visit = ++searchTargetVisit;
+  clearTimeout(searchTargetTimer);
+  document.querySelectorAll('.search-highlight').forEach(el => el.classList.remove('search-highlight'));
   if (!location.hash) return;
-  const targetId = decodeURIComponent(location.hash.slice(1));
+  let targetId;
+  try {
+    targetId = decodeURIComponent(location.hash.slice(1));
+  } catch {
+    return;
+  }
   if (!targetId) return;
   const target = document.getElementById(targetId);
   if (!target) return;
@@ -176,15 +187,19 @@ function revealSearchTarget() {
     project.classList.add('visible');
   }
 
+  const landingTarget = project || target;
   const isSection = target.tagName.toLowerCase() === 'section' || target.offsetHeight > 350;
-  requestAnimationFrame(() => {
-    target.scrollIntoView({
-      behavior: 'smooth',
-      block: isSection ? 'start' : 'center'
+  // Wait for fonts and the expanded details layout before measuring the destination.
+  Promise.resolve(document.fonts?.ready).then(() => requestAnimationFrame(() => {
+    if (visit !== searchTargetVisit) return;
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    landingTarget.scrollIntoView({
+      behavior: reducedMotion ? 'instant' : 'smooth',
+      block: project || isSection ? 'start' : 'center'
     });
-  });
-  target.classList.add('search-highlight');
-  setTimeout(() => target.classList.remove('search-highlight'), 1600);
+    landingTarget.classList.add('search-highlight');
+    searchTargetTimer = setTimeout(() => landingTarget.classList.remove('search-highlight'), 4000);
+  }));
 }
 
 function initGlobalSearch() {
@@ -376,6 +391,10 @@ function initGlobalSearch() {
   });
 
   window.addEventListener('hashchange', revealSearchTarget);
+  // Late-loading page assets can move cards after the initial hash jump.
+  if (document.readyState !== 'complete') {
+    window.addEventListener('load', revealSearchTarget, { once: true });
+  }
   revealSearchTarget();
 }
 
