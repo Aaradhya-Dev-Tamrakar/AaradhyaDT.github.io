@@ -1,6 +1,6 @@
 {
-  "sha": "2a9912f0619ff603ea0e67a87cc227e50061d484",
-  "shortSha": "2a9912f",
-  "date": "2026-10-22T11:59:02+05:45",
-  "message": "feat(projects): add ecosystem tree and align dropdown cards (#22)"
+  "sha": "defeb1627c53e2961e67345ca5de9852bf2ad945",
+  "shortSha": "defeb16",
+  "date": "2026-10-22T17:03:19+05:45",
+  "message": "fix(projects): restore serif titles and retain hover effects (#23)"
 }

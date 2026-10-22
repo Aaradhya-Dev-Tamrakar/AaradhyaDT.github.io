@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.1",
     date: "2026-10-22",
-    sha: "2a9912f0619ff603ea0e67a87cc227e50061d484",
-    title: "add ecosystem tree and align dropdown cards (#22)",
+    sha: "defeb1627c53e2961e67345ca5de9852bf2ad945",
+    title: "restore serif titles and retain hover effects (#23)",
     highlights: []
   },
   {
