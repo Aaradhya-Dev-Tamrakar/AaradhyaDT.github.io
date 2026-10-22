@@ -2206,6 +2206,80 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 
 
 /* ── Featured Work Grid (Phase 2 — Homepage Showcase) ──── */
+.case-study-shortcuts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin: 0 3rem 2rem;
+}
+
+.case-study-shortcuts a {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem;
+  background: var(--bg2);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--heading);
+  text-decoration: none;
+}
+
+.case-study-shortcuts span,
+.featured-context {
+  color: var(--text);
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.featured-context {
+  margin: 0.8rem 0;
+}
+
+.project-story {
+  max-width: 76ch;
+  margin-bottom: 1.5rem;
+  line-height: 1.8;
+}
+
+.project-story p + p {
+  margin-top: 0.85rem;
+}
+
+.project-story strong {
+  color: var(--heading);
+}
+
+.opportunity-note {
+  margin: 0 3rem 4rem;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: var(--bg2);
+}
+
+.opportunity-note p {
+  max-width: 65ch;
+  margin-top: 1rem;
+  line-height: 1.8;
+}
+
+.opportunity-note .hero-actions {
+  opacity: 1;
+  animation: none;
+}
+
+@media (max-width: 700px) {
+  .case-study-shortcuts {
+    grid-template-columns: 1fr;
+    margin-inline: 1.25rem;
+  }
+  .opportunity-note {
+    margin-inline: 1.25rem;
+    padding: 1.25rem;
+  }
+}
+
 .featured-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -2554,3 +2628,18 @@ html[data-theme="light"] .shortcuts-modal-card::before {
   transform: scale(0.96) !important;
 }
 
+
+/* Optional features follow the professional introduction and case studies. */
+.portfolio-extras > summary {
+  margin: 0 3rem 3rem;
+  padding: 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--heading);
+  cursor: pointer;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+@media (max-width: 700px) {
+  .portfolio-extras > summary { margin-inline: 1.25rem; }
+}

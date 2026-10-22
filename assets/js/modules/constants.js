@@ -59,17 +59,17 @@ const SOCIAL_ICONS = {
 const QUICK_NAV_PAGES = [
   {
     file: 'index.html', title: 'Home',
-    desc: 'BEI IV/II at KEC, IOE. Building intelligent systems across firmware, robotics, and machine learning.',
+    desc: 'Applied ML, AI workflow tools, and embedded engineering. Seeking AI/ML opportunities.',
     cta: 'Back to Home',
   },
   {
     file: 'projects.html', title: 'Projects',
-    desc: 'Robotics, embedded ML, and the SPARK fall-detection platform.',
+    desc: 'Case studies in model evaluation, AI infrastructure, and embedded ML.',
     cta: 'View Projects',
   },
   {
     file: 'experience.html', title: 'Experience',
-    desc: 'Fellowships, IEEE leadership, and club roles over the past two years.',
+    desc: 'Applied ML fellowship work, engineering contributions, and student leadership.',
     cta: 'View Timeline',
   },
   {

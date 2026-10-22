@@ -1,777 +1,463 @@
-/* ============================================================
-   RESUME DATA - single source for the ATS resume generator &
-   tailored preview sheet (modules/ui.js). Mirrors the official
-   master CV (assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf).
-   Loads before core modules via script.js MODULES order.
-   ============================================================ */
+/* Current portfolio CV content. Rebuild the downloadable PDF with scripts/build_cv.py. */
 const RESUME_DATA = {
-
-  name: "Aaradhya Dev Tamrakar",
-
-  subtitle: "Intelligent Systems & AI Infrastructure Researcher-in-Training | Embedded Edge AI · Near-Memory Architecture · Deterministic Verification",
-
-  contact: "Kathmandu, Nepal · aaradhyadevtmr@gmail.com · +977 9844602050 · linkedin.com/in/aaradhya-dev-tamrakar · github.com/AaradhyaDT · aaradhyadt.github.io",
-
-  summary: "Electronics, Communication and Information Engineering student at IOE, Kathmandu Engineering College (Year IV/II, Final Semester). Builds evidence-driven systems at the boundary of embedded Edge AI (ESP32-S3, INT8 quantized CNNs), near-memory computer architecture (CXL discrete-event simulation), and algorithmic fairness auditing (126-bin intersectional disparity evaluation). Fuse AI Fellow, NSSR DataCamp Fellow, IEEE KEC KTM Vice Chair. Leading SPARK — a two-layer wearable fall detection system achieving 0.9185 AUC-ROC with an 18.5 KB INT8 CNN.",
-
-  roles: {
-
-    all: {
-
-      title: "Master CV — Electronics, Embedded & AI Engineering",
-
-      sections: [
-
+  "name": "Aaradhya Dev Tamrakar",
+  "subtitle": "AI/ML Engineering | Applied ML · AI Workflows · Embedded AI",
+  "contact": "Kathmandu, Nepal · aaradhyadevtmr@gmail.com · +977 9844602050 · linkedin.com/in/aaradhya-dev-tamrakar · github.com/AaradhyaDT · aaradhyadt.github.io",
+  "summary": "Final-year electronics engineering student building applied ML systems and AI workflow tools. Uses AI for development and turns recurring work into reusable automation and deterministic checks. Work spans demographic performance auditing, multi-provider coordination, and embedded ML software. Seeking AI/ML engineering opportunities.",
+  "roles": {
+    "all": {
+      "title": "Engineering CV",
+      "sections": [
         {
-
-          title: "Education",
-
-          items: [
-
+          "title": "Education",
+          "items": [
             {
-
-              header: "Bachelor of Engineering (B.E.) in Electronics, Communication & Information",
-
-              sub: "Institute of Engineering (IOE), Kathmandu Engineering College | Year IV / Part II (Expected: January 2027)",
-
-              bullets: [
-
-                "Coursework: Machine Learning · Signals and Systems · Digital Electronics · Control Systems · Communication Systems."
-
+              "header": "Bachelor of Engineering in Electronics, Communication and Information Engineering",
+              "sub": "Kathmandu Engineering College, IOE, Tribhuvan University | Expected January 2027",
+              "bullets": [
+                "Final year. Coursework includes machine learning, signals and systems, control systems, and digital electronics."
               ]
-
             }
-
           ]
-
         },
-
         {
-
-          title: "Experience & Leadership",
-
-          items: [
-
+          "title": "Selected Engineering Projects",
+          "items": [
             {
-
-              header: "Vice Chair — IEEE KEC KTM Student Branch",
-
-              sub: "2026 – Present",
-
-              bullets: [
-
-                "Directed branch strategy, scaling initiatives and member engagement across executive committees.",
-
-                "Managed relations across the broader technical community."
-
+              "header": "BiasAperture | Demographic performance auditing",
+              "sub": "Python · AIF360 · Fairlearn · Statistical testing · Jinja2",
+              "bullets": [
+                "Co-developed a prediction-auditing and reporting pipeline as a two-person Fuse AI Fellowship capstone.",
+                "Focus: canonical binary group-rate metrics, cohort support, and traceable outputs. Statistical validation and matched model comparisons remain active work."
               ]
-
             },
-
             {
-
-              header: "Event Manager — Electronics Project Club (EPC), KEC",
-
-              sub: "2026 – Present",
-
-              bullets: [
-
-                "Coordinated logistics for club workshops and department activities."
-
+              "header": "Fleet Orchestrator | AI workflow coordination",
+              "sub": "Python · FastAPI · Provider adapters · MCP",
+              "bullets": [
+                "Built coordination tooling for multi-step AI workflows, with task state, worker adapters, scheduling, and status inspection.",
+                "Uses reusable interfaces and local tooling to reduce repeated orchestration work; runtime availability depends on providers and quotas."
               ]
-
             },
-
             {
-
-              header: "Makerspace Ambassador — KEC Makerspace",
-
-              sub: "June 2026 – Present",
-
-              bullets: [
-
-                "Shipped site-wide fixes to the Makerspace website — image repair, content consistency, UI cleanup."
-
+              "header": "SPARK | Wearable fall-detection project",
+              "sub": "ESP32-S3 · TFLite Micro · Python · Gateway APIs",
+              "bullets": [
+                "Project lead for ML modelling, gateway processing, and explainability in a four-person team; firmware and hardware have separate owners.",
+                "Offline model and software artifacts are available. Hardware, on-device, BLE, and volunteer cohort validation remain pending."
               ]
-
             },
-
             {
-
-              header: "Vice Secretary — IEEE KEC KTM Student Branch",
-
-              sub: "2025 – 2026",
-
-              bullets: [
-
-                "Streamlined operations and grew program participation by managing documentation and orchestrating workshop logistics.",
-
-                "Coordinated volunteers alongside the committee for seamless execution."
-
+              "header": "Agent-Customization-Sync | Cross-IDE configuration tooling",
+              "sub": "Python · SHA-256 · MCP configuration",
+              "bullets": [
+                "Built configuration snapshots, guarded restore, rules transpilation, and drift audits across development environments.",
+                "Audits instruction overhead and links shared skills to reduce configuration duplication."
               ]
-
-            },
-
-            {
-
-              header: "Resource Manager — Electronics Project Club (EPC), KEC",
-
-              sub: "2024 – 2026",
-
-              bullets: [
-
-                "Allocated scheduling and resources for workshops across multiple departments."
-
-              ]
-
             }
-
           ]
-
         },
-
         {
-
-          title: "Fellowships & Recognitions",
-
-          items: [
-
+          "title": "Fellowships",
+          "items": [
             {
-
-              header: "Fuse AI Fellow — Fusemachines AI Fellowship 2026",
-
-              sub: "Fusemachines | Active (Selected via competitive entrance exam in linear algebra, calculus, probability, Python, ML)",
-
-              bullets: [
-
-                "Engineered a five-stage agentic Text-to-SQL pipeline (Planner → Generator → Validator → Executor → Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
-
-                "Developed an end-to-end churn & CLV pipeline achieving 5-fold CV ROC-AUC 0.841, threshold-tuned for top-200 high-risk segment with Random Forest/XGBoost ensembles, SMOTE, and SHAP explainability.",
-
-                "Implemented probabilistic models (Bayesian estimation, Gaussian process regression via PyMC/ArviZ) and UCI Online Retail II customer segmentation (K-Means/DBSCAN).",
-
-                "Benchmarked nine time-series forecasting models and built a 4-model ensemble achieving MASE 2.44; deployed containerized REST API with FastAPI, PostgreSQL, and Docker."
-
+              "header": "Fuse AI Fellow | Fusemachines",
+              "sub": "2026 cohort",
+              "bullets": [
+                "Built applied ML and agentic coursework spanning classification, explainability, APIs, and MLOps; co-developed the BiasAperture capstone with Tisha Manandhar."
               ]
-
             },
-
             {
-
-              header: "NSSR DataCamp Fellow — Cohort 2",
-
-              sub: "Nepalese Society of Student Researchers | 2026 – Present",
-
-              bullets: [
-
-                "Secured competitive selection (April 2026) for a sponsored DataCamp Premium license in a limited cohort.",
-
-                "Delivered six applied GenAI solutions automating null filtering, deduplication, and schema normalization across workflows.",
-
-                "Completed coursework toward SQL Associate and Python Data Associate certifications in PostgreSQL, Pandas, statistics, and scikit-learn."
-
+              "header": "NSSR DataCamp Fellow | Cohort 2",
+              "sub": "2026",
+              "bullets": [
+                "Completed applied GenAI projects; continuing SQL and Python data-analysis pathways."
               ]
-
             }
-
           ]
-
         },
-
         {
-
-          title: "Projects",
-
-          items: [
-
+          "title": "Technical Skills",
+          "items": [
             {
-
-              header: "STRANGLER-IPU — Ingress Processing Unit Architecture & CXL Interconnect Modeling",
-
-              sub: "Computer Architecture · Discrete-Event Simulation · SimPy · CXL 3.0/4.0 · Near-Memory Processing · LaTeX",
-
-              bullets: [
-
-                "Architected a near-memory hardware accelerator subsystem targeting 6G Sub-THz line-rate ingest (800 Gbps – 1.6 Tbps burst) to relieve host memory-wall contention through decoupled front-end ingress offload.",
-
-                "Validated via Python SimPy discrete-event simulation across asymmetric CXL 3.0/4.0 pooled memory fabrics, achieving 4.12× tail-latency reduction and 68% host memory bus contention relief.",
-
-                "Formulated under formal architectural specifications (ARCH-SPEC-001/002), RFCs, invariant assertions, and self-compiling in-repo LaTeX technical reports."
-
-              ]
-
+              "header": "ML and evaluation",
+              "sub": "Python, scikit-learn, Pandas, NumPy, XGBoost, SHAP, AIF360, Fairlearn"
             },
-
             {
-
-              header: "SPARK — Wearable Fall Detection System (Major Project)",
-
-              sub: "ESP32-S3 · TensorFlow Lite Micro · 1D CNN INT8 · SHAP · MQTT · FastAPI · PostgreSQL (Target Demo: March 2027)",
-
-              bullets: [
-
-                "Designed a two-layer ESP32-S3 fall-detection system combining a <5ms physical threshold interrupt gate with an 18.5 KB INT8 1D CNN confirmation layer (0.9185 AUC-ROC, 87.81% sensitivity on SisFall).",
-
-                "Computed per-event local SHAP surrogate explanations at an edge gateway, generating automated clinical PDF reports across 4 biomechanical fall archetypes.",
-
-                "Led the AI, firmware, and backend work package within a 4-person team supervised by Er. Dipen Manandhar, backed by 56 automated unit tests."
-
-              ]
-
+              "header": "AI systems and backend",
+              "sub": "FastAPI, Docker, SQL, PostgreSQL, SQLite, asyncio, MCP"
             },
-
             {
-
-              header: "Gesture-Controlled Self-Balancing Robot (GCSBR) — Minor Project",
-
-              sub: "Computer Vision · Arduino · MPU6050 · Stepper Motors · Android · MATLAB",
-
-              bullets: [
-
-                "Earned a 'major project level' rating from the academic examiner.",
-
-                "Implemented PID stabilization firmware validated via a MATLAB-simulation-to-hardware pipeline.",
-
-                "Developed an Android gesture-control app (MediaPipe, CameraX, HC-05 BT) driving motors for real-time actuation."
-
-              ]
-
+              "header": "Embedded and vision",
+              "sub": "C/C++, ESP32-S3, TFLite Micro, Arduino, MediaPipe, Kotlin"
             },
-
             {
-
-              header: "Edge AI Stability Detection System",
-
-              sub: "Python · Scikit-learn · FastAPI · Joblib",
-
-              bullets: [
-
-                "Predicted platform stability from simulated IMU data using a Random Forest model, reaching 99.8% test accuracy; served via FastAPI."
-
-              ]
-
-            },
-
-            {
-
-              header: "Alpha Android Super-App",
-
-              sub: "Kotlin · Jetpack Compose · Material3 · DataStore · Apache POI",
-
-              bullets: [
-
-                "Assembled a modular Android super-app (SDK 36) with gesture control, an eSewa Gmail budget tracker, and a Material3 design system."
-
-              ]
-
-            },
-
-            {
-
-              header: "Nexus — Personal AI Operating System",
-
-              sub: "React (Vite) · FastAPI · SQLite + FTS5 · httpx · asyncio",
-
-              bullets: [
-
-                "Unified Groq (Llama 3.3 70B) and Gemini into an AI workspace via parallel fan-out routing, with SQLite + FTS5 context injection."
-
-              ]
-
+              "header": "Engineering practice",
+              "sub": "Git, automated tests, reproducible configurations, model evaluation"
             }
-            ,
-            {
-              header: "BiasAperture — Vision Fairness & Demographic Bias Audit",
-              sub: "Python · AIF360 · Fairlearn · SHAP · FairFace · UTKFace · Jinja2",
-              bullets: [
-                "Architected an evaluative framework auditing demographic bias in deployed vision classifiers across 126 race × age × gender bins.",
-                "Cross-validated disparity metrics (DPD, EOD, EOP, DIR) using AIF360 and Fairlearn with BCa bootstrap CIs and chi-squared tests; mapped to EU AI Act & NIST RMF."
-              ]
-            },
-            {
-              header: "NovaOptimizer — Windows Task Manager & System Optimizer",
-              sub: "C# / .NET 10 · WPF · Win32 NT Kernel APIs · Memory Management",
-              bullets: [
-                "Engineered native Windows optimizer and task manager with ~25 MB RAM footprint manipulating undocumented NT kernel memory APIs (Standby list & working sets).",
-                "Implemented Turbo Boost profiles (Game, Work, Study with integrated Pomodoro timer) and hung-process watchdog."
-              ]
-            }
-
           ]
-
         },
-
         {
-
-          title: "Technical Skills",
-
-          items: [
-
+          "title": "Leadership and Engineering Service",
+          "items": [
             {
-
-              header: "Programming Languages",
-
-              sub: "Python, C, C++, C#, Kotlin, SQL (PostgreSQL / SQLite), VHDL"
-
+              "header": "IEEE KEC KTM Student Branch | Vice Chair",
+              "sub": "2026–Present",
+              "bullets": [
+                "Coordinate branch planning, technical activities, and committee communication; previously Vice Secretary, 2025–2026."
+              ]
             },
-
             {
-
-              header: "Machine Learning & Data Science",
-
-              sub: "scikit-learn, NumPy, Pandas, XGBoost, Random Forest, Logistic/Ridge/SGD Classifiers, Lasso, ElasticNet, SMOTE (ImbPipeline), SHAP, GridSearchCV, Stratified K-Fold CV, Joblib, PyMC, ArviZ, pgmpy, Bayesian Inference, Gaussian Process Regression, K-Means, Hierarchical Clustering, DBSCAN, Time Series (SARIMA, Holt-Winters, Prophet, LightGBM, LSTM)"
-
+              "header": "KEC Makerspace | Ambassador",
+              "sub": "June 2026–Present",
+              "bullets": [
+                "Maintain website content and interface fixes."
+              ]
             },
-
             {
-
-              header: "Android Development",
-
-              sub: "Kotlin, Jetpack Compose, Material3, DataStore, CameraX, MediaPipe, Apache POI"
-
-            },
-
-            {
-
-              header: "Deployment & Backend",
-
-              sub: "FastAPI, REST APIs, Docker, PostgreSQL, Streamlit, asyncio, Joblib"
-
-            },
-
-            {
-
-              header: "Embedded Systems & Hardware",
-
-              sub: "Arduino, ESP32-S3, MPU6050, Stepper Motors, HC-05 BT, UART, MQTT, FPGA, Vivado"
-
-            },
-
-            {
-
-              header: "AI & Local LLM Systems",
-
-              sub: "Ollama, AnythingLLM, Prompt Chaining, Agentic Query Systems, LangChain"
-
-            },
-
-            {
-
-              header: "Tools & Environments",
-
-              sub: "Git, GitHub, VS Code, Jupyter Notebook, Google Colab, MATLAB, LaTeX / Overleaf, SSMS"
-
+              "header": "Electronics Project Club | Event Manager",
+              "sub": "2026–Present",
+              "bullets": [
+                "Coordinate event logistics and delivery; previously Resource Manager, 2024–2026."
+              ]
             }
-
           ]
-
-        },
-
-        {
-
-          title: "Certifications & Activities",
-
-          items: [
-
-            {
-
-              header: "Selected Credentials & Memberships",
-
-              sub: "IEEE WIE Nepal LaTeX Workshop (May 2026) · IEEE SPAx organizing team · Prompt Engineering Fundamentals (TechAxis) · IEEEXtreme 19.0 (Team ShadowXTREME) · PCB Design & Fabrication Workshop (KEC Robotics Club) · AWS Cloud Computing Workshop · Microsoft Learn Student Ambassador · Member of IEEE KEC KTM Student Branch, Electronics Project Club, KEC Makerspace, KEC Music Club"
-
-            }
-
-          ]
-
         }
-
       ]
-
     },
-
-    aiml: {
-
-      title: "AI / Machine Learning Engineer Resume",
-
-      sections: [
-
+    "aiml": {
+      "title": "AI/ML Engineering CV",
+      "sections": [
         {
-
-          title: "Summary",
-
-          items: [
-
+          "title": "Education",
+          "items": [
             {
-
-              header: "AI / Machine Learning Specialization",
-
-              sub: "Focus on Agentic Systems, Tree Ensembles with Explainability (SHAP), Bayesian Inference, and Edge-AI ML Pipelines.",
-
-              bullets: [
-
-                "Fusemachines AI Fellow (2026) experienced in building 5-stage Agentic Text-to-SQL workflows (100% benchmark accuracy), customer segmentation, and time-series forecasting ensembles.",
-
-                "Engineering edge AI neural network pipelines (TFLite Micro 1D CNN INT8) with local SHAP attribution for real-time safety wearables."
-
+              "header": "Bachelor of Engineering in Electronics, Communication and Information Engineering",
+              "sub": "Kathmandu Engineering College, IOE, Tribhuvan University | Expected January 2027",
+              "bullets": [
+                "Final year. Coursework includes machine learning, signals and systems, control systems, and digital electronics."
               ]
-
             }
-
           ]
-
         },
-
         {
-
-          title: "AI/ML Experience & Fellowships",
-
-          items: [
-
+          "title": "Selected Engineering Projects",
+          "items": [
             {
-
-              header: "Fuse AI Fellow — Fusemachines AI Fellowship 2026",
-
-              sub: "Fusemachines | Active (Selected via competitive entrance exam in linear algebra, calculus, probability, Python, ML)",
-
-              bullets: [
-
-                "Engineered a five-stage agentic Text-to-SQL pipeline (Planner → Generator → Validator → Executor → Summarizer) validated at 100% execution success and accuracy on a 50-question benchmark.",
-
-                "Built end-to-end churn & CLV pipeline achieving 5-fold CV ROC-AUC 0.841 with Random Forest/XGBoost ensembles, SMOTE, and SHAP explainability.",
-
-                "Implemented Bayesian estimation & Gaussian process regression via PyMC/ArviZ; segmented UCI Online Retail II customers using K-Means and DBSCAN.",
-
-                "Benchmarked 9 forecasting models with 4-model ensemble achieving MASE 2.44; deployed containerized REST APIs with FastAPI, PostgreSQL, and Docker."
-
+              "header": "BiasAperture | Demographic performance auditing",
+              "sub": "Python · AIF360 · Fairlearn · Statistical testing · Jinja2",
+              "bullets": [
+                "Co-developed a prediction-auditing and reporting pipeline as a two-person Fuse AI Fellowship capstone.",
+                "Focus: canonical binary group-rate metrics, cohort support, and traceable outputs. Statistical validation and matched model comparisons remain active work."
               ]
-
             },
-
             {
-
-              header: "NSSR DataCamp Fellow — Cohort 2",
-
-              sub: "Nepalese Society of Student Researchers | 2026 – Present",
-
-              bullets: [
-
-                "Delivered 6 applied GenAI workflow automation solutions (null filtering, deduplication, schema normalization).",
-
-                "Advanced through SQL Associate and Python Data Associate tracks across PostgreSQL, Pandas, and scikit-learn."
-
+              "header": "Fleet Orchestrator | AI workflow coordination",
+              "sub": "Python · FastAPI · Provider adapters · MCP",
+              "bullets": [
+                "Built coordination tooling for multi-step AI workflows, with task state, worker adapters, scheduling, and status inspection.",
+                "Uses reusable interfaces and local tooling to reduce repeated orchestration work; runtime availability depends on providers and quotas."
               ]
-
+            },
+            {
+              "header": "SPARK | Wearable fall-detection project",
+              "sub": "ESP32-S3 · TFLite Micro · Python · Gateway APIs",
+              "bullets": [
+                "Project lead for ML modelling, gateway processing, and explainability in a four-person team; firmware and hardware have separate owners.",
+                "Offline model and software artifacts are available. Hardware, on-device, BLE, and volunteer cohort validation remain pending."
+              ]
+            },
+            {
+              "header": "Agent-Customization-Sync | Cross-IDE configuration tooling",
+              "sub": "Python · SHA-256 · MCP configuration",
+              "bullets": [
+                "Built configuration snapshots, guarded restore, rules transpilation, and drift audits across development environments.",
+                "Audits instruction overhead and links shared skills to reduce configuration duplication."
+              ]
             }
-
           ]
-
         },
-
         {
-
-          title: "Selected Machine Learning Projects",
-
-          items: [
-
+          "title": "Fellowships",
+          "items": [
             {
-
-              header: "SPARK — Edge AI Wearable Fall Detection (Major Project)",
-
-              sub: "ESP32-S3 · TensorFlow Lite Micro · SHAP · FastAPI · PostgreSQL",
-
-              bullets: [
-
-                "Designed two-layer fall detection architecture: <5ms threshold gate + INT8 1D CNN confirmation layer under 100ms.",
-
-                "Integrated local per-event SHAP explainability on non-cloud edge gateway."
-
+              "header": "Fuse AI Fellow | Fusemachines",
+              "sub": "2026 cohort",
+              "bullets": [
+                "Built applied ML and agentic coursework spanning classification, explainability, APIs, and MLOps; co-developed the BiasAperture capstone with Tisha Manandhar."
               ]
-
             },
-
             {
-
-              header: "Edge AI Stability Detection System",
-
-              sub: "Python · Scikit-learn · FastAPI · Joblib",
-
-              bullets: [
-
-                "Trained Random Forest classifier reaching 99.8% test accuracy on simulated IMU telemetry; served via FastAPI REST endpoint."
-
+              "header": "NSSR DataCamp Fellow | Cohort 2",
+              "sub": "2026",
+              "bullets": [
+                "Completed applied GenAI projects; continuing SQL and Python data-analysis pathways."
               ]
-
-            },
-
-            {
-
-              header: "Nexus — Personal AI Operating System",
-
-              sub: "React · FastAPI · SQLite + FTS5 · LLM Fan-Out Routing",
-
-              bullets: [
-
-                "Unified Groq (Llama 3.3 70B) and Gemini models via asynchronous parallel fan-out routing with FTS5 semantic context injection."
-
-              ]
-
             }
-
           ]
-
         },
-
         {
-
-          title: "AI/ML Technical Skills",
-
-          items: [
-
+          "title": "Technical Skills",
+          "items": [
             {
-
-              header: "Core Machine Learning Stack",
-
-              sub: "Python, scikit-learn, NumPy, Pandas, XGBoost, Random Forest, SMOTE, SHAP, PyMC, ArviZ, pgmpy, K-Means, DBSCAN, Time Series (SARIMA, Prophet, LightGBM, LSTM), TensorFlow Lite Micro, FastAPI, Docker, PostgreSQL"
-
+              "header": "ML and evaluation",
+              "sub": "Python, scikit-learn, Pandas, NumPy, XGBoost, SHAP, AIF360, Fairlearn"
+            },
+            {
+              "header": "AI systems and backend",
+              "sub": "FastAPI, Docker, SQL, PostgreSQL, SQLite, asyncio, MCP"
+            },
+            {
+              "header": "Embedded and vision",
+              "sub": "C/C++, ESP32-S3, TFLite Micro, Arduino, MediaPipe, Kotlin"
+            },
+            {
+              "header": "Engineering practice",
+              "sub": "Git, automated tests, reproducible configurations, model evaluation"
             }
-
           ]
-
+        },
+        {
+          "title": "Leadership and Engineering Service",
+          "items": [
+            {
+              "header": "IEEE KEC KTM Student Branch | Vice Chair",
+              "sub": "2026–Present",
+              "bullets": [
+                "Coordinate branch planning, technical activities, and committee communication; previously Vice Secretary, 2025–2026."
+              ]
+            },
+            {
+              "header": "KEC Makerspace | Ambassador",
+              "sub": "June 2026–Present",
+              "bullets": [
+                "Maintain website content and interface fixes."
+              ]
+            },
+            {
+              "header": "Electronics Project Club | Event Manager",
+              "sub": "2026–Present",
+              "bullets": [
+                "Coordinate event logistics and delivery; previously Resource Manager, 2024–2026."
+              ]
+            }
+          ]
         }
-
       ]
-
     },
-
-    hardware: {
-
-      title: "Electronics & Embedded Systems Engineer Resume",
-
-      sections: [
-
+    "hardware": {
+      "title": "Embedded AI and Robotics CV",
+      "sections": [
         {
-
-          title: "Summary",
-
-          items: [
-
+          "title": "Education",
+          "items": [
             {
-
-              header: "Embedded Systems & Edge Hardware Specialization",
-
-              sub: "Focus on ESP32-S3, Arduino, Sensor Fusion, Robotics PID Control, and Edge-AI micro-deployments.",
-
-              bullets: [
-
-                "Electronics, Communication & Information Engineering student at IOE, Kathmandu Engineering College (Year IV/II, Final Semester).",
-
-                "Lead developer for SPARK (ESP32-S3 edge-AI fall detection) and GCSBR (examiner-rated 'major project level' self-balancing robot)."
-
+              "header": "Bachelor of Engineering in Electronics, Communication and Information Engineering",
+              "sub": "Kathmandu Engineering College, IOE, Tribhuvan University | Expected January 2027",
+              "bullets": [
+                "Final year. Coursework includes machine learning, signals and systems, control systems, and digital electronics."
               ]
-
             }
-
           ]
-
         },
-
         {
-
-          title: "Hardware & Robotics Projects",
-
-          items: [
-
+          "title": "Embedded and Robotics Projects",
+          "items": [
             {
-
-              header: "SPARK — Wearable Fall Detection System (Major Project)",
-
-              sub: "ESP32-S3 · TensorFlow Lite Micro · MPU6050 · MQTT · Gateway Architecture",
-
-              bullets: [
-
-                "Engineered two-tier detection combining a <5ms physical threshold interrupt gate with an INT8 1D CNN inference model (<100ms latency) running on ESP32-S3.",
-
-                "Constructed edge MQTT gateway on local hardware providing deterministic per-event telemetry and explainability."
-
+              "header": "SPARK | Wearable fall-detection project",
+              "sub": "ESP32-S3 · TFLite Micro · Python · Gateway APIs",
+              "bullets": [
+                "Project lead for ML modelling, gateway processing, and explainability in a four-person team; firmware and hardware have separate owners.",
+                "Offline model and software artifacts are available. Hardware, on-device, BLE, and volunteer cohort validation remain pending."
               ]
-
             },
-
             {
-
-              header: "Gesture-Controlled Self-Balancing Robot (GCSBR) — Minor Project",
-
-              sub: "Arduino · MPU6050 · Stepper Motors · PID Control · MATLAB · Android CameraX",
-
-              bullets: [
-
-                "Designed inverted pendulum PID stabilization firmware validated through a MATLAB simulation-to-hardware pipeline.",
-
-                "Built custom Android control app with MediaPipe & CameraX over HC-05 Bluetooth for real-time motor actuation.",
-
-                "Awarded 'major project level' evaluation by academic examiner."
-
+              "header": "Gesture-Controlled Self-Balancing Robot",
+              "sub": "Arduino · MediaPipe · CameraX · Bluetooth · PID",
+              "bullets": [
+                "Worked on balance control and an Android gesture interface. A hardware demonstration is available in the portfolio."
               ]
-
             }
-
           ]
-
         },
-
         {
-
-          title: "Leadership & Mentorship",
-
-          items: [
-
+          "title": "Technical Skills",
+          "items": [
             {
-
-              header: "IEEE KEC KTM Student Branch & EPC Club",
-
-              sub: "Vice Chair (2026–Present) · Event Manager (2026–Present) · Former Vice Secretary (2025–2026) · Resource Manager (2024–2026)",
-
-              bullets: [
-
-                "Directed student branch strategy, organized technical workshops in robotics, micro-controllers, PCB design, and LaTeX.",
-
-                "Managed scheduling and resources for workshops across multiple engineering departments."
-
+              "header": "ML and evaluation",
+              "sub": "Python, scikit-learn, Pandas, NumPy, XGBoost, SHAP, AIF360, Fairlearn"
+            },
+            {
+              "header": "AI systems and backend",
+              "sub": "FastAPI, Docker, SQL, PostgreSQL, SQLite, asyncio, MCP"
+            },
+            {
+              "header": "Embedded and vision",
+              "sub": "C/C++, ESP32-S3, TFLite Micro, Arduino, MediaPipe, Kotlin"
+            },
+            {
+              "header": "Engineering practice",
+              "sub": "Git, automated tests, reproducible configurations, model evaluation"
+            }
+          ]
+        },
+        {
+          "title": "Leadership and Engineering Service",
+          "items": [
+            {
+              "header": "IEEE KEC KTM Student Branch | Vice Chair",
+              "sub": "2026–Present",
+              "bullets": [
+                "Coordinate branch planning, technical activities, and committee communication; previously Vice Secretary, 2025–2026."
               ]
-
-            }
-
-          ]
-
-        },
-
-        {
-
-          title: "Embedded Technical Skills",
-
-          items: [
-
+            },
             {
-
-              header: "Hardware & Firmware Stack",
-
-              sub: "C, C++, VHDL, Arduino, ESP32-S3, MPU6050 IMU, Stepper Motors, HC-05 BT, UART, MQTT, FPGA (Vivado), MATLAB, Signals & Systems, Control Systems, Digital Electronics"
-
+              "header": "KEC Makerspace | Ambassador",
+              "sub": "June 2026–Present",
+              "bullets": [
+                "Maintain website content and interface fixes."
+              ]
+            },
+            {
+              "header": "Electronics Project Club | Event Manager",
+              "sub": "2026–Present",
+              "bullets": [
+                "Coordinate event logistics and delivery; previously Resource Manager, 2024–2026."
+              ]
             }
-
           ]
-
+        },
+        {
+          "title": "Fellowships",
+          "items": [
+            {
+              "header": "Fuse AI Fellow | Fusemachines",
+              "sub": "2026 cohort",
+              "bullets": [
+                "Built applied ML and agentic coursework spanning classification, explainability, APIs, and MLOps; co-developed the BiasAperture capstone with Tisha Manandhar."
+              ]
+            },
+            {
+              "header": "NSSR DataCamp Fellow | Cohort 2",
+              "sub": "2026",
+              "bullets": [
+                "Completed applied GenAI projects; continuing SQL and Python data-analysis pathways."
+              ]
+            }
+          ]
         }
-
       ]
-
     },
-
-    fullstack: {
-
-      title: "Software & Android Engineer Resume",
-
-      sections: [
-
+    "fullstack": {
+      "title": "AI Systems and Developer Tools CV",
+      "sections": [
         {
-
-          title: "Summary",
-
-          items: [
-
+          "title": "Education",
+          "items": [
             {
-
-              header: "Software & Mobile Development Specialization",
-
-              sub: "Specialized in Python (FastAPI/asyncio), Android (Kotlin/Jetpack Compose), Modern JavaScript, and Containerization (Docker).",
-
-              bullets: [
-
-                "Proven capability building native Android applications (Jetpack Compose, CameraX, MediaPipe) and containerized backend microservices (FastAPI, PostgreSQL, Docker)."
-
+              "header": "Bachelor of Engineering in Electronics, Communication and Information Engineering",
+              "sub": "Kathmandu Engineering College, IOE, Tribhuvan University | Expected January 2027",
+              "bullets": [
+                "Final year. Coursework includes machine learning, signals and systems, control systems, and digital electronics."
               ]
-
             }
-
           ]
-
         },
-
         {
-
-          title: "Software & App Projects",
-
-          items: [
-
+          "title": "AI and Developer Infrastructure",
+          "items": [
             {
-
-              header: "Alpha Android Super-App",
-
-              sub: "Kotlin · Jetpack Compose · Material3 · DataStore · Apache POI",
-
-              bullets: [
-
-                "Engineered a modular Android super-app targeting SDK 36 with gesture-based controls, eSewa Gmail budget parsing, and a Material3 design system."
-
+              "header": "Fleet Orchestrator | AI workflow coordination",
+              "sub": "Python · FastAPI · Provider adapters · MCP",
+              "bullets": [
+                "Built coordination tooling for multi-step AI workflows, with task state, worker adapters, scheduling, and status inspection.",
+                "Uses reusable interfaces and local tooling to reduce repeated orchestration work; runtime availability depends on providers and quotas."
               ]
-
             },
-
             {
-
-              header: "Nexus — Personal AI Operating System",
-
-              sub: "React (Vite) · FastAPI · SQLite + FTS5 · httpx · asyncio",
-
-              bullets: [
-
-                "Created an AI workspace aggregating Groq (Llama 3.3 70B) and Gemini via asynchronous fan-out routing with SQLite + FTS5 context injection."
-
+              "header": "Agent-Customization-Sync | Cross-IDE configuration tooling",
+              "sub": "Python · SHA-256 · MCP configuration",
+              "bullets": [
+                "Built configuration snapshots, guarded restore, rules transpilation, and drift audits across development environments.",
+                "Audits instruction overhead and links shared skills to reduce configuration duplication."
               ]
-
             },
-
             {
-
-              header: "Containerized Agentic REST API & Microservices",
-
-              sub: "FastAPI · PostgreSQL · Docker · asyncio",
-
-              bullets: [
-
-                "Developed containerized REST API microservices with PostgreSQL and Docker under the Fusemachines AI Fellowship, featuring high-throughput async handlers."
-
+              "header": "Fellowship ML and agent MLOps workflows",
+              "sub": "MLflow · FastAPI · Evidently · Airflow",
+              "bullets": [
+                "Implemented coursework workflows for experiment tracking, serving, monitoring, and scheduled regression evaluation."
               ]
-
             }
-
           ]
-
         },
-
         {
-
-          title: "Software Technical Skills",
-
-          items: [
-
+          "title": "Technical Skills",
+          "items": [
             {
-
-              header: "Software & App Toolstack",
-
-              sub: "Kotlin, Jetpack Compose, Material3, Python, FastAPI, Docker, PostgreSQL, SQLite, JavaScript (ES6+), React, Git, REST APIs, asyncio, Apache POI"
-
+              "header": "ML and evaluation",
+              "sub": "Python, scikit-learn, Pandas, NumPy, XGBoost, SHAP, AIF360, Fairlearn"
+            },
+            {
+              "header": "AI systems and backend",
+              "sub": "FastAPI, Docker, SQL, PostgreSQL, SQLite, asyncio, MCP"
+            },
+            {
+              "header": "Embedded and vision",
+              "sub": "C/C++, ESP32-S3, TFLite Micro, Arduino, MediaPipe, Kotlin"
+            },
+            {
+              "header": "Engineering practice",
+              "sub": "Git, automated tests, reproducible configurations, model evaluation"
             }
-
           ]
-
+        },
+        {
+          "title": "Fellowships",
+          "items": [
+            {
+              "header": "Fuse AI Fellow | Fusemachines",
+              "sub": "2026 cohort",
+              "bullets": [
+                "Built applied ML and agentic coursework spanning classification, explainability, APIs, and MLOps; co-developed the BiasAperture capstone with Tisha Manandhar."
+              ]
+            },
+            {
+              "header": "NSSR DataCamp Fellow | Cohort 2",
+              "sub": "2026",
+              "bullets": [
+                "Completed applied GenAI projects; continuing SQL and Python data-analysis pathways."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Leadership and Engineering Service",
+          "items": [
+            {
+              "header": "IEEE KEC KTM Student Branch | Vice Chair",
+              "sub": "2026–Present",
+              "bullets": [
+                "Coordinate branch planning, technical activities, and committee communication; previously Vice Secretary, 2025–2026."
+              ]
+            },
+            {
+              "header": "KEC Makerspace | Ambassador",
+              "sub": "June 2026–Present",
+              "bullets": [
+                "Maintain website content and interface fixes."
+              ]
+            },
+            {
+              "header": "Electronics Project Club | Event Manager",
+              "sub": "2026–Present",
+              "bullets": [
+                "Coordinate event logistics and delivery; previously Resource Manager, 2024–2026."
+              ]
+            }
+          ]
         }
-
       ]
-
     }
-
   }
-
 };
-

@@ -26,19 +26,8 @@
   function initLiveDates() {
     if (!window.applyLiveDates) return;
     window.applyLiveDates({
-      'live-hero-tag': function (L) { return L.heroTag; },
-      'live-focus': function (L) {
-        var propDeadline = new Date(2026, 6, 2); // Jul 2 2026
-        var defenceDate = new Date(2026, 6, 10); // Jul 10 2026
-        var now = new Date();
-        var propPart = now < propDeadline
-          ? 'SPARK proposal due Jul 2'
-          : now < defenceDate
-            ? 'SPARK proposal defended · Major Project'
-            : 'SPARK Major Project — proposal defended'
-          ;
-        return propPart + ' · ' + L.fuseLabel;
-      },
+      'live-hero-tag': function () { return 'Final-year electronics engineering student · Kathmandu'; },
+      'live-focus': function () { return 'ML evaluation · AI workflow tooling · SPARK'; },
       'live-fellowship': function (L) {
         return L.fuseLabel + ' · NSSR DataCamp (C2)';
       },

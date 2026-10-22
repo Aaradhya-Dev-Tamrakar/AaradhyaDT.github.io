@@ -25,6 +25,7 @@
     var body = card.querySelector('.project-card-body');
     if (!summary || !body || card.querySelector('.project-evidence')) return;
 
+    var verified = claim.status === 'verified';
     var metric = text(claim.metric);
     var value = text(claim.value);
     var summaryEvidence = document.createElement('div');
@@ -34,22 +35,24 @@
       '<span class="project-evidence-tier"></span>' +
       '<span class="project-evidence-summary-value"></span>';
     summaryEvidence.querySelector('.project-evidence-tier').textContent =
-      text(claim.evidence_tier) || 'Evidence';
+      verified ? (text(claim.evidence_tier) || 'Evidence') : 'Evaluation';
     summaryEvidence.querySelector('.project-evidence-summary-value').textContent =
-      [metric, value].filter(Boolean).join(' · ');
+      verified ? [metric, value].filter(Boolean).join(' · ') : 'Source review pending';
     summary.appendChild(summaryEvidence);
 
-    var panel = document.createElement('section');
+    var panel = document.createElement('details');
     panel.className = 'project-evidence' +
       (claim.status === 'needs_review' ? ' project-evidence--review' : '');
     panel.setAttribute('aria-label', 'Evidence and provenance');
-    var heading = document.createElement('h4');
+    var heading = document.createElement('summary');
     heading.className = 'project-evidence-heading';
-    heading.textContent = 'Evidence & provenance';
+    heading.textContent = 'Evaluation sources and limitations';
     panel.appendChild(heading);
     var list = document.createElement('dl');
     list.className = 'project-evidence-list';
-    addRow(list, 'Evidence tier', claim.evidence_tier);
+    addRow(list, 'Verification', verified ? 'Verified source record' : 'Source verification pending');
+    if (verified) addRow(list, 'Evidence tier', claim.evidence_tier);
+    addRow(list, verified ? 'Recorded result' : 'Historical claim under review', [metric, value].filter(Boolean).join(' · '));
 
     if (text(claim.source_commit)) {
       var commit = text(claim.source_commit);
@@ -72,6 +75,7 @@
     addRow(list, 'Benchmark / experiment', claim.verification_test);
     addRow(list, 'Method', claim.verification_method);
     addRow(list, 'Scope', claim.scope);
+    addRow(list, 'Limitations', claim.limitations);
     if (text(claim.source_path)) addRow(list, 'Source', claim.source_path);
     if (claim.status === 'needs_review') addRow(list, 'Status', 'Needs review');
     panel.appendChild(list);

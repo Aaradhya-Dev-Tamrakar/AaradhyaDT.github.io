@@ -28,7 +28,7 @@
 
   <title>ADT | Contact — Aaradhya Dev Tamrakar</title>
   <meta name="description"
-    content="Get in touch with ADT (Aaradhya Dev Tamrakar) — open to project collaborations, research discussions, internship opportunities, and IEEE-related engagements." />
+    content="Contact Aaradhya Dev Tamrakar about AI/ML engineering roles, internships, and projects in model evaluation, AI applications, or workflow infrastructure." />
   <meta name="author" content="Aaradhya Dev Tamrakar" />
   <meta name="keywords"
     content="Aaradhya, ADT, Aaradhya Dev Tamrakar, Aaradhya Dev, Aaradhya Tamrakar, Aaradhya D. Tamrakar, A. D. Tamrakar, A. Dev Tamrakar, AaradhyaDT, aaradhyadevtamrakar, Aaradhya contact, contact, collaboration, internship, Nepal engineer, IEEE contact" />
@@ -55,7 +55,7 @@
   <meta property="og:site_name" content="Aaradhya Dev Tamrakar" />
   <meta property="og:title" content="ADT | Contact — Aaradhya Dev Tamrakar" />
   <meta property="og:description"
-    content="Open to project collaborations, research discussions, internship opportunities, and IEEE-related engagements." />
+    content="Contact Aaradhya Dev Tamrakar about AI/ML engineering roles, internships, and projects in model evaluation, AI applications, or workflow infrastructure." />
   <meta property="og:image" content="https://aaradhyadt.github.io/assets/images/og-image.jpg" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
@@ -65,7 +65,7 @@
   <meta name="twitter:creator" content="@AaradhyaDT" />
   <meta name="twitter:title" content="ADT | Contact — Aaradhya Dev Tamrakar" />
   <meta name="twitter:description"
-    content="Open to project collaborations, research discussions, internship opportunities, and IEEE-related engagements." />
+    content="Contact Aaradhya Dev Tamrakar about AI/ML engineering roles, internships, and projects in model evaluation, AI applications, or workflow infrastructure." />
   <meta name="twitter:image" content="https://aaradhyadt.github.io/assets/images/og-image.jpg" />
 
   <!-- JSON-LD: Breadcrumb & ContactPage -->
@@ -586,16 +586,15 @@
   <main id="main-content">
     <header id="page-header">
       <div class="page-eyebrow">Get in Touch</div>
-      <h1 class="page-title">Let's Build Something<br /><em>Remarkable</em> Together</h1>
+      <h1 class="page-title">Let's Talk About<br /><em>AI/ML Engineering</em></h1>
     </header>
 
     <section id="contact" aria-label="Contact Aaradhya">
       <div class="contact-layout">
         <div class="reveal" id="contact-intro">
-          <p class="contact-note">
-            Open to project collaborations, research discussions, internship
-            opportunities, and IEEE-related engagements. I respond within 48 hours.
-          </p>
+          <p class="contact-note">I'm seeking AI/ML engineering roles and internships where I can contribute to model evaluation, AI applications, and workflow infrastructure. My electronics background also supports embedded ML work.</p>
+          <p class="contact-note">Based in Kathmandu, Nepal; expected graduation January 2027. Email me with the role or project, your team, and the problem you are working on. We can discuss timing and fit directly.</p>
+          <p><a class="btn-ghost" href="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" target="_blank" rel="noopener">View AI/ML CV ↗</a></p>
           <div class="contact-links">
             <a class="contact-link" href="mailto:aaradhyadevtmr@gmail.com" target="_blank" rel="noopener">
               <div class="contact-link-left">
@@ -692,7 +691,7 @@
             <div class="form-row">
               <div class="form-field">
                 <label class="form-label" for="form-name">Your Name</label>
-                <input class="form-input" id="form-name" type="text" placeholder="Aaradhya Dev Tamrakar" required />
+                <input class="form-input" id="form-name" type="text" placeholder="Your name" required />
               </div>
               <div class="form-field">
                 <label class="form-label" for="form-email">Email</label>
@@ -703,12 +702,12 @@
             <div class="form-field">
               <label class="form-label" for="form-subject">Subject</label>
               <input class="form-input" id="form-subject" type="text"
-                placeholder="Project idea / internship / collaboration" />
+                placeholder="AI/ML role / internship / engineering project" />
             </div>
             <div class="form-field">
               <label class="form-label" for="form-message">Message</label>
               <textarea class="form-textarea" id="form-message"
-                placeholder="I have an idea / opportunity / interesting problem..." required></textarea>
+                placeholder="Tell me about your team, the role or project, and the problem you want to solve." required></textarea>
             </div>
             <div class="magnetic-wrap">
               <button class="form-submit" type="submit" id="form-btn">
@@ -822,7 +821,7 @@
             btn.disabled = true;
             btn.textContent = "Sending...";
             setTimeout(() => {
-              status.innerHTML = '<div class="form-success-badge"><span>✓</span> Message sent! I\'ll respond within 48 hours.</div>';
+              status.innerHTML = '<div class="form-success-badge"><span>✓</span> Message submitted. You can also reach me directly by email.</div>';
               if (window.playAudioCue) playAudioCue('chime');
               this.reset();
               btn.disabled = false;
@@ -892,7 +891,7 @@
                 body: gfData,
               });
 
-              status.innerHTML = '<div class="form-success-badge"><span>✓</span> Message sent! I\'ll respond within 48 hours.</div>';
+              status.innerHTML = '<div class="form-success-badge"><span>✓</span> Message submitted. You can also reach me directly by email.</div>';
               if (window.playAudioCue) playAudioCue('chime');
               if (window.gtag) {
                 gtag("event", "form_submit", {
@@ -919,7 +918,7 @@
               message: formData.message,
               time: new Date().toLocaleString(),
             });
-            status.innerHTML = '<div class="form-success-badge"><span>✓</span> Message sent! I\'ll respond within 48 hours.</div>';
+            status.innerHTML = '<div class="form-success-badge"><span>✓</span> Message submitted. You can also reach me directly by email.</div>';
             if (window.playAudioCue) playAudioCue('chime');
             if (window.gtag) {
               gtag("event", "form_submit", {
@@ -943,7 +942,7 @@
               body: JSON.stringify(formData),
             });
             if (res.ok) {
-              status.innerHTML = '<div class="form-success-badge"><span>✓</span> Message sent! I\'ll respond within 48 hours.</div>';
+              status.innerHTML = '<div class="form-success-badge"><span>✓</span> Message submitted. You can also reach me directly by email.</div>';
               if (window.playAudioCue) playAudioCue('chime');
               if (window.gtag) {
                 gtag("event", "form_submit", {

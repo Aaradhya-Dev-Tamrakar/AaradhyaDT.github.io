@@ -296,21 +296,21 @@ const SEARCH_STATIC_INDEX = {
     "title": "BiasAperture — Vision Fairness & Bias Audit",
     "meta": "In Progress · AIF360, Fairlearn, FairFace",
     "href": "projects.html#p-025",
-    "text": "biasaperture — vision fairness & bias audit diagnostic & evaluative framework for auditing demographic bias in deployed facial-analysis classifiers — computes subgroup and intersectional fairness metrics in regulator-legible formats (eu ai act article 10 / nist rmf) analytical core computes dpd, eod, eop, and dir across 126 race × age × gender demographic bins using aif360 and fairlearn with $\\chi^2$ significance tests, bca bootstrap confidence intervals, and shap surrogate explainability fusemachines ai fellowship capstone, two-person engineering team with tisha manandhar aif360 fairlearn fairface utkface computer vision bias auditing statistical testing shap eu ai act nist rmf html/jinja2 in progress"
+    "text": "biasaperture — vision fairness & bias audit the problem aggregate accuracy can hide demographic performance gaps in facial-analysis models. our work co-developed with tisha manandhar as our fuse ai fellowship capstone. the pipeline ingests predictions and demographic metadata, compares binary group-rate metrics through aif360 and fairlearn, and generates standalone audit reports. engineering focus consistent metric definitions, cohort support checks, uncertainty reporting, and traceable evaluation outputs. backend agreement checks point estimates; it does not independently validate the shared statistical code. current boundary a diagnostic tool, not a debiasing method or a certification of legal compliance. statistical validation and matched model comparisons remain areas of active work. aif360 fairlearn fairface utkface computer vision bias auditing statistical testing shap eu ai act nist rmf html/jinja2 in progress"
   },
   {
     "type": "project",
     "title": "SPARK — Two-Layer Fall Detection Wearable",
     "meta": "In Progress · ESP32-S3, MPU6050, TFLite Micro",
     "href": "projects.html#p-018",
-    "text": "spark — two-layer fall detection wearable on-device, two-layer fall-detection wearable for eldercare: layer 1 isr threshold pre-filter ($|a| > 2.5g$, $\\delta t < 300\\text{ ms}$) on esp32-s3 + mpu-6050 at 200 hz gating an on-device tflite micro 1d cnn 1d cnn trained under leakage-free subject-grouped split on sisfall (0.9185 auc-roc, 87.81% sensitivity), quantized to an 18.5 kb int8 flatbuffer (87.7% compression vs fp32) with 56 passing unit tests central gateway with shap clinical explainability, automated pdf diagnostic reports across 4 biomechanical fall profiles, and nepal cohort data collection pipeline bei major engineering project, four-person team — proposal defended jul 9, 2026 esp32-s3 mpu6050 tflite micro int8 quantization 1d cnn shap fastapi latex in progress"
+    "text": "spark — two-layer fall detection wearable the problem fall-detection systems need to connect sensor data, model decisions, and useful incident records under embedded resource constraints. my contribution project lead for ml modelling, gateway processing, and explainability in a four-person team. firmware, hardware, and display-client work have separate owners. engineering focus offline sisfall model development and quantization, plus gateway parsing, storage, reporting, and api modules. the proposed wearable pairs a threshold gate with a tflite micro classifier. current boundary software and offline artifacts are available. hardware procurement, physical on-device evaluation, ble integration, and volunteer cohort studies remain pending. offline benchmark results are not clinical validation. esp32-s3 mpu6050 tflite micro int8 quantization 1d cnn shap fastapi latex in progress"
   },
   {
     "type": "project",
     "title": "Gesture-Controlled Self-Balancing Robot",
     "meta": "Arduino, HC-05, MPU-6050",
     "href": "projects.html#p-001",
-    "text": "gesture-controlled self-balancing robot two-wheeled inverted pendulum robot with real-time dual-hand mediapipe gesture control over hc-05 bluetooth examiner rated major-project level — 9.6/10 arduino hc-05 mpu-6050 nema-17 mediapipe pid matlab"
+    "text": "gesture-controlled self-balancing robot the problem a two-wheeled robot must maintain balance while responding to remote commands. my contribution worked on pid stabilization and an android gesture-control application using mediapipe, camerax, and hc-05 bluetooth. system the robot combines imu feedback, motor actuation, and real-time hand tracking. the video below shows the hardware demonstration. scope an academic robotics project. the demonstration illustrates the integrated system; it is not a standardized robustness benchmark. arduino hc-05 mpu-6050 nema-17 mediapipe pid matlab"
   },
   {
     "type": "project",
@@ -342,24 +342,24 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
-    "title": "Fleet-Orchestrator — Autonomous Multi-Model Agent Fleet & Swarm Engine",
+    "title": "Fleet Orchestrator — AI Workflow Coordination",
     "meta": "Python 3.14, Multi-Agent Swarm, FastAPI",
     "href": "projects.html#p-040",
-    "text": "fleet-orchestrator — autonomous multi-model agent fleet & swarm engine autonomous multi-model agent fleet pooled across 27 copilot workers, gemini api, and antigravity. level 4 self-upgrading infrastructure with capability gap detection, adapter scaffolding, and colab a100 closed-loop retraining. 7 self-healing fleet sentinels and 297 unit tests certifying zero-drift deterministic execution. python 3.14 multi-agent swarm fastapi level 4 autonomous google colab"
+    "text": "fleet orchestrator — ai workflow coordination the problem multi-step ai work needs task coordination, provider adapters, and failure handling beyond a sequence of chat prompts. what i built a python and fastapi coordination system with worker adapters, task scheduling, status inspection, and an mcp interface. engineering focus keep task state outside individual workers, route work through explicit interfaces, and use local routing and deterministic tooling where another model call is unnecessary. current boundary provider availability, quotas, and credentials affect execution. configured adapters and passing tests do not establish a continuously running autonomous fleet or measured token savings. python 3.14 multi-agent swarm fastapi workflow automation google colab"
   },
   {
     "type": "project",
     "title": "Agent-Customization-Sync — Cross-IDE Configuration Snapshot & Transpilation",
     "meta": "Python, MCP, Cross-IDE Tooling",
     "href": "projects.html#p-041",
-    "text": "agent-customization-sync — cross-ide configuration snapshot & transpilation creates sha-256 configuration snapshots with rolling retention and guarded restore workflows. transpiles canonical agent rules and mcp settings for cursor, claude code, vs code, and github copilot. audits cross-ide configuration drift and instruction token overhead; links shared skills with platform-appropriate filesystem links. python mcp cross-ide tooling sha-256 windows"
+    "text": "agent-customization-sync — cross-ide configuration snapshot & transpilation the problem agent instructions and mcp configurations drift when the same development setup is maintained across multiple ides. what i built a configuration tool for snapshots, guarded restore, rules transpilation, and cross-ide drift audits. engineering focus sha-256 manifests check file integrity; shared skill links reduce duplication. instruction-overhead auditing helps inspect how much static context a configuration consumes. why it matters recurring setup becomes a repeatable local operation. the configuration audit does not claim to measure total runtime tokens or model quality. python mcp cross-ide tooling sha-256 windows"
   },
   {
     "type": "project",
     "title": "Claude Desktop Multi-Profile & Distributed Service Provisioning (DSP) Fabric",
     "meta": "DSP Fabric, FastAPI, SQLite WAL",
     "href": "projects.html#p-023",
-    "text": "claude desktop multi-profile & distributed service provisioning (dsp) fabric heterogeneous distributed service provisioning (dsp) fabric: inverts the ddos metaphor to coordinate useful compute across autonomous worker daemons (claude cdp, gemini, groq, ollama) via a centralized fastapi coordinator distributed state machine on sqlite wal: atomic cas task leasing (`lease_token`), capability & headroom scoring scheduler, and a self-healing supervisor loop that isolates stale nodes and reclaims stranded leases 44+ fastmcp tools across local and remote instances, multi-stage dag task pipelines with checkpoint persistence, and a chrome devtools protocol (cdp) bridge treating desktop ai guis as application-as-a-service backends dsp fabric fastapi sqlite wal atomic leasing self-healing fastmcp (44 tools) cdp bridge powershell 7"
+    "text": "claude desktop multi-profile & distributed service provisioning (dsp) fabric the problem different ai-assisted tasks need separate desktop profiles and consistent service configuration. what i built multi-profile claude desktop tooling and service-provisioning workflows for organizing ai-assisted development environments. engineering focus reusable profile setup and service interfaces, with orchestration components kept distinct from a single conversation. scope developer tooling for a personal workflow. a configured profile is not evidence of unattended task completion. dsp fabric fastapi sqlite wal atomic leasing self-healing fastmcp (44 tools) cdp bridge powershell 7"
   },
   {
     "type": "project",
@@ -583,7 +583,7 @@ const SEARCH_STATIC_INDEX = {
     "title": "Fusemachines Wk 17 — Agentic AI & Telco Churn MLOps",
     "meta": "Python, MLOps, MLflow",
     "href": "projects.html#p-043",
-    "text": "fusemachines wk 17 — agentic ai & telco churn mlops agentic assistant: applies mlops workflows to an autonomous technical assistant developed in earlier coursework. tracks prompt and trace experiments with mlflow and evaluates response regressions with an llm-as-judge workflow. schedules recurring evaluation through an airflow regression dag. telco churn: builds a reproducible customer churn classification pipeline with experiment tracking and model registry workflows. serves predictions through fastapi and monitors data quality and drift with evidently. uses an airflow dag to orchestrate drift monitoring workflows. python mlops mlflow evidently ai airflow llm evaluation fastapi"
+    "text": "fusemachines wk 17 — agentic ai & telco churn mlops the problem ml and agent applications need a repeatable way to track experiments, serve outputs, and detect regressions. coursework implementation built telco churn and agent-assistant mlops workflows using mlflow experiment tracking, fastapi serving, evidently monitoring, and airflow scheduling. engineering focus separate training and registry workflows from serving and monitoring; track agent prompts and traces alongside regression evaluations. evaluation boundary coursework implementations. llm-as-judge scores require their own calibration; they are not independent proof of response correctness. python mlops mlflow evidently ai airflow llm evaluation fastapi"
   },
   {
     "type": "project",
