@@ -349,6 +349,12 @@ def add_project(
     # 6. Save projects.html
     PROJECTS_HTML.write_text(str(soup), encoding="utf-8")
 
+    # Keep the ecosystem's complete inventory in step with every new card.
+    subprocess.run(
+        [sys.executable, str(SCRIPTS_DIR / "generate_ecosystem.py")],
+        check=True,
+    )
+
     # 7. Rebuild search index & run verify
     index_success = False
     verify_output = ""

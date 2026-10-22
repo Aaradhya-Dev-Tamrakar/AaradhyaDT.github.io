@@ -3,7 +3,7 @@
 [![Deploy Pages](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml)
 [![Verification Suite](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml)
 [![Lighthouse Audit](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml)
-[![Version](https://img.shields.io/badge/version-v55.23-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
+[![Version](https://img.shields.io/badge/version-v56-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
 [![Zero-Framework](https://img.shields.io/badge/framework-vanilla%20HTML%2FCSS%2FJS-orange.svg)](https://aaradhyadt.github.io)
 
@@ -29,7 +29,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v55.23 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v56 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)
@@ -211,6 +211,7 @@ To run the complete 25-category diagnostic verification engine locally:
 python scripts/verify.py            # Standard verification check
 python scripts/verify.py --verbose  # Detailed check report with passes
 python scripts/extract_index.py   # Regenerates static search index
+python scripts/generate_ecosystem.py --check  # Checks project tree freshness
 python scripts/dev-serve.py        # Starts local server on http://127.0.0.1:5500
 ```
 
@@ -223,6 +224,26 @@ brainstorm manifest boundary. CI runs immediate push/PR checks and repeats the
 generated-index check after the search-index workflow completes.
 
 Alternatively, open `index.html` directly in any web browser.
+
+### Project ecosystem tree
+
+The [Projects ecosystem](https://aaradhyadt.github.io/projects.html#ecosystem)
+groups every project card by purpose. `data/ecosystem.json` defines branch
+membership, concise labels, and sourced cross-project connections. Branches are
+editorial groupings; connections describe documented integrations or workflows,
+without claiming they were executed during a portfolio build.
+
+After changing project content or the relationship data, run
+`python scripts/generate_ecosystem.py`. Project onboarding and `sync.bat` also
+regenerate the tree automatically. New cards without a curated branch appear
+under **More projects** until classified. The generator preserves existing card
+IDs and access controls; repository actions use the original card links.
+
+To publish an isolated feature branch for a pull request, use
+`sync.bat -PublishBranch -m "feat(projects): describe the change (#20)"`.
+This publishes the active feature branch and skips the stamp bot's main-branch
+polling. The wrapper rejects an ordinary push from a feature branch unless
+`-PublishBranch` is supplied.
 
 ### Automated Git Workflow & Pre-Commit Gate (`sync.ps1` / `sync.bat`)
 

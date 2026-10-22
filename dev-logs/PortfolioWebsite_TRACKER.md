@@ -1,6 +1,14 @@
-# Portfolio Website Tracker — v55.23
+# Portfolio Website Tracker — v56
 
-Last updated: _2026-10-21_
+Last updated: _2026-10-22_
+
+
+- **v56 (Major Release) — Connected Project Ecosystem.** Shipped connected project ecosystem.
+  - Explore all 45 projects across five purpose-based branches.
+  - Search projects and follow documented integrations through the detail panel.
+  - Keep project cards, repository access, and ecosystem inventory synchronized.
+  - Issue #20: generated tree, native disclosure fallback, keyboard focus handling, documented connection provenance, and the `-PublishBranch` sync option for isolated PR delivery.
+  - Local verification: 26 portfolio categories, 12 Python regression tests, 42 HTTP smoke checks, and Ruff on the new Python files passed. Browser checks covered desktop and narrow mobile layouts, light/dark themes, search, empty results, branch toggles, keyboard selection, filtered project cards, repository access prompts, and native navigation without JavaScript.
 
 - **Azmuth Neuromorphic, Temporal-Triad & 6-Universe Foresight Engine Milestone (`Fleet-Orchestrator`, `Competitive-Programming`, `brainstorm`)**:
   - **Neuromorphic Spiking Core & Tier-5 Codons**: Sequenced 6 canonical Tier-5 Super-Domain foresight genes in `codon_stream/tier5_super_domain/` with Gaussian $Z$-score normalization, thalamic habituation ($|Z| < 0.8\sigma$ suppression), and closed-form Control Barrier Function (CBF) braking scalar $\alpha_{\text{brake}}$ (`CATCH_AND_ARREST`).
@@ -406,7 +414,7 @@ Last updated: _2026-10-21_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v55.23`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v56`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
