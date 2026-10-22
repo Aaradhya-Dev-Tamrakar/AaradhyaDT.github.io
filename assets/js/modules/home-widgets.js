@@ -26,7 +26,7 @@
   function initLiveDates() {
     if (!window.applyLiveDates) return;
     window.applyLiveDates({
-      'live-hero-tag': function () { return 'Final-year electronics engineering student · Kathmandu'; },
+      'live-hero-tag': function () { return 'Electronics student · Kathmandu'; },
       'live-focus': function () { return 'ML evaluation · AI workflow tooling · SPARK'; },
       'live-fellowship': function (L) {
         return L.fuseLabel + ' · NSSR DataCamp (C2)';

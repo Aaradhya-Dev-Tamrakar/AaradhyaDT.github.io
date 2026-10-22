@@ -1,17 +1,17 @@
 # Graph Report - AaradhyaDT.github.io  (2026-10-22)
 
 ## Corpus Check
-- 136 files · ~2,443,388 words
+- 136 files · ~2,443,444 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 30 file(s) not represented in the graph (top: .css 20, (none) 5, .gs 1)
 
 ## Summary
-- 2721 nodes · 3330 edges · 368 communities (172 shown, 196 thin omitted)
+- 2721 nodes · 3329 edges · 368 communities (172 shown, 196 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 104 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `5c52c605`
+- Built from commit: `3f3bd169`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 

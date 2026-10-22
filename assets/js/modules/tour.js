@@ -484,14 +484,7 @@ function initTour() {
     else if (e.key === 'ArrowLeft') { tourBack(); }
   });
 
-  // Auto-prompt visitor for guided site tour after 3.5s on first visit
-  const PROMPT_LS_KEY = 'adt_tour_prompted';
-  if (!localStorage.getItem(PROMPT_LS_KEY) && !localStorage.getItem(TOUR_LS_ACTIVE)) {
-    setTimeout(() => {
-      if (localStorage.getItem(PROMPT_LS_KEY) || localStorage.getItem(TOUR_LS_ACTIVE)) return;
-      promptGuidedTour();
-    }, 3500);
-  }
+  // Tours remain available on request; first-time readers can focus on the work.
 }
 
 function promptGuidedTour() {

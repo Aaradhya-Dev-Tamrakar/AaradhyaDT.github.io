@@ -31,4 +31,4 @@ No new benchmark or deployment was performed. Historical quantitative claims wer
 
 ## Validation
 
-Pending final repository synchronization checks, browser review, and PDF freshness check. Publication requires a separate explicit instruction.
+The local synchronization wrapper passed all 26 verification categories and 42 HTTP smoke checks. Browser review checked the flagship deep link and case-study overflow at 375, 640, and 1280 CSS pixels and at 640 CSS pixels with DPR 2. The two-page PDF was rendered and inspected; its deterministic freshness check passed. Final touch-ups require another wrapper verification before delivery. Publication remains separate.
