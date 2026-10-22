@@ -7,6 +7,8 @@ Last updated: _2026-10-22_
   - Explore all 45 projects across five purpose-based branches.
   - Search projects and follow documented integrations through the detail panel.
   - Keep project cards, repository access, and ecosystem inventory synchronized.
+  - Issue #21: restyled existing dropdown cards with Selected Systems typography, neutral surfaces, compact tags, quiet status borders, and restrained hover shadows. The comparison with the preceding commit confirms identical card markup and inline scripts outside CSS.
+  - Card interaction checks: all 45 cards expand and collapse, the MCP filter still shows nine cards, weekly cards still widen their month when opened, and standard/weekly keyboard toggles work at mobile widths without horizontal overflow.
   - Issue #20: generated tree, native disclosure fallback, keyboard focus handling, documented connection provenance, and the `-PublishBranch` sync option for isolated PR delivery.
   - Search hints now come from existing project IDs; every displayed node label is searchable, and missing example projects fail generation.
   - Local verification: 26 portfolio categories, 13 Python regression tests, 42 HTTP smoke checks, and Ruff on the new Python files passed. Browser checks covered desktop and narrow mobile layouts, light/dark themes, search examples, empty results, branch toggles, keyboard selection, filtered project cards, repository access prompts, and native navigation without JavaScript.

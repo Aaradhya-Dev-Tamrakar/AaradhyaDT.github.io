@@ -14,7 +14,8 @@ const SITE_RELEASES = [
     highlights: [
       "Explore all 45 projects across five purpose-based branches.",
       "Search projects and follow documented integrations through the detail panel.",
-      "Keep project cards, repository access, and ecosystem inventory synchronized."
+      "Keep project cards, repository access, and ecosystem inventory synchronized.",
+      "Project dropdown cards follow the Selected Systems visual design."
     ]
   },
   {
