@@ -1,6 +1,6 @@
 {
-  "sha": "884c3daa0fc3ff9beaee62e29f2bbb5e3ec4f7e8",
-  "shortSha": "884c3da",
-  "date": "2026-10-21T22:57:08+05:45",
-  "message": "style(projects): align month cards and simplify weekly tiles (#19)"
+  "sha": "2a9912f0619ff603ea0e67a87cc227e50061d484",
+  "shortSha": "2a9912f",
+  "date": "2026-10-22T11:59:02+05:45",
+  "message": "feat(projects): add ecosystem tree and align dropdown cards (#22)"
 }

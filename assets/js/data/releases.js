@@ -7,16 +7,11 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: 'v56',
-    date: '2026-10-22',
-    sha: 'cb6e111',
-    title: "Connected Project Ecosystem",
-    highlights: [
-      "Explore all 45 projects across five purpose-based branches.",
-      "Search projects and follow documented integrations through the detail panel.",
-      "Keep project cards, repository access, and ecosystem inventory synchronized.",
-      "Project dropdown cards follow the Selected Systems visual design."
-    ]
+    version: "v56",
+    date: "2026-10-22",
+    sha: "2a9912f0619ff603ea0e67a87cc227e50061d484",
+    title: "add ecosystem tree and align dropdown cards (#22)",
+    highlights: []
   },
   {
     version: "v55.23",
