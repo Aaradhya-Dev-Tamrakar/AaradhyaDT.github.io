@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v56.4)
+aaradhyadt.github.io (v56.5)
 
 26 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -1388,7 +1388,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v56.4)"))
+    print(bold("  Portfolio Site Verification Suite (v56.5)"))
     print(bold("=" * 60))
     print()
 

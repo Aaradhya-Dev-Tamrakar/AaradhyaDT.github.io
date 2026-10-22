@@ -1,5 +1,5 @@
 /* ============================================================
-   PROJECT EVIDENCE — quantitative claim provenance display (v56.4)
+   PROJECT EVIDENCE — quantitative claim provenance display (v56.5)
    Reads the canonical machine-readable claims manifest and
    renders only fields present for the matching repository.
    ============================================================ */

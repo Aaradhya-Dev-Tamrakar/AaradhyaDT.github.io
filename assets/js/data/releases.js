@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v56.4",
+    version: "v56.5",
     date: "2026-10-22",
     sha: "2295acd8d9811204d863fc7c982984d28a28f4d9",
     title: "categorize and declutter the archive (#27)",
