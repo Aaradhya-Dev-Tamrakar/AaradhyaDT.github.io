@@ -54,6 +54,20 @@ def render_tree(page, config):
             raise ValueError("Unsupported connection evidence tier")
 
     esc = html.escape
+    labels = {
+        key: config.get('labels', {}).get(
+            key, card.select_one('.project-title').get_text(' ', strip=True).split(' — ')[0]
+        ) for key, card in cards.items()
+    }
+    examples = config.get('search_examples', [])
+    if any(key not in cards for key in examples):
+        raise ValueError('Search examples must reference existing projects')
+    example_names = [labels[key] for key in examples]
+    placeholder = 'Search project names'
+    if len(example_names) > 1:
+        placeholder = 'Try ' + ', '.join(example_names[:-1]) + ', or ' + example_names[-1]
+    elif example_names:
+        placeholder = 'Try ' + example_names[0]
     edges = esc(json.dumps(connections, ensure_ascii=False), quote=True)
     lines = [START, f'<section class="ecosystem" id="ecosystem" aria-labelledby="ecosystem-title" data-connections="{edges}">',
              '<header class="ecosystem-heading">',
@@ -64,7 +78,7 @@ def render_tree(page, config):
              '</header>',
              '<div class="ecosystem-controls" hidden>',
              '<div class="ecosystem-search"><label for="ecosystem-search">Find a project</label>',
-             '<input id="ecosystem-search" type="search" placeholder="Try NotebookLM, robotics, or SPARK" autocomplete="off" aria-controls="ecosystem-tree"/></div>',
+             f'<input id="ecosystem-search" type="search" placeholder="{esc(placeholder, quote=True)}" autocomplete="off" aria-controls="ecosystem-tree"/></div>',
              '<button type="button" class="ecosystem-button" id="ecosystem-expand" aria-controls="ecosystem-tree">Expand branches</button>',
              '<button type="button" class="ecosystem-button" id="ecosystem-reset">Reset tree</button>',
              '</div>',
@@ -81,12 +95,12 @@ def render_tree(page, config):
         for key in ids:
             card = cards[key]
             title = card.select_one('.project-title').get_text(' ', strip=True)
-            label = config.get("labels", {}).get(key, title.split(' — ')[0])
+            label = labels[key]
             week = card.get('data-fuse-week')
             if week:
                 label = f"Week {week} · {label}"
             tags = ' '.join(tag.get_text(' ', strip=True) for tag in card.select('.tag'))
-            lines.append(f'<li data-project="{key}" data-search="{esc(title + " " + tags, quote=True)}"><a class="ecosystem-node" href="#{key}"><span>{esc(label)}</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>')
+            lines.append(f'<li data-project="{key}" data-search="{esc(label + " " + title + " " + tags, quote=True)}"><a class="ecosystem-node" href="#{key}"><span>{esc(label)}</span><span class="ecosystem-node-arrow" aria-hidden="true">↗</span></a></li>')
         lines.extend(['</ul></details></li>'])
     lines.extend(['</ul>', '<p class="ecosystem-empty" hidden>No projects found. Try another name or technology.</p>',
                   '</div>', '<aside class="ecosystem-detail" aria-labelledby="ecosystem-detail-title" hidden>',

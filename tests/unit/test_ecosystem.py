@@ -35,6 +35,21 @@ class EcosystemTests(unittest.TestCase):
         before = self.page.split(engine.END, 1)[1]
         self.assertEqual(generated.split(engine.END, 1)[1], before)
 
+    def test_search_examples_are_existing_searchable_project_names(self):
+        tree = BeautifulSoup(engine.render_tree(self.page, self.config), 'html.parser')
+        placeholder = tree.select_one('#ecosystem-search')['placeholder']
+        for key in self.config['search_examples']:
+            node = tree.select_one(f'[data-project="{key}"]')
+            label = node.select_one('.ecosystem-node span').get_text()
+            self.assertIn(label, placeholder)
+            self.assertIn(label.casefold(), node['data-search'].casefold())
+        for node in tree.select('[data-project]'):
+            label = node.select_one('.ecosystem-node span').get_text()
+            self.assertIn(label.casefold(), node['data-search'].casefold())
+        self.config['search_examples'].append('nonexistent-project')
+        with self.assertRaises(ValueError):
+            engine.render_tree(self.page, self.config)
+
     def test_new_project_is_discoverable_without_manual_inventory_edits(self):
         new_card = '<details class="project-card" id="new"><h3 class="project-title">New &amp; useful</h3><a data-payload-link-id="secret">Repo</a></details>'
         page = self.page.replace('<div class="projects-grid" id="projectsGrid">', '<div class="projects-grid" id="projectsGrid">' + new_card)

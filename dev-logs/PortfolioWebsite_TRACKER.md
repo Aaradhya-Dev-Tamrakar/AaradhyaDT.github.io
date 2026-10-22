@@ -8,7 +8,8 @@ Last updated: _2026-10-22_
   - Search projects and follow documented integrations through the detail panel.
   - Keep project cards, repository access, and ecosystem inventory synchronized.
   - Issue #20: generated tree, native disclosure fallback, keyboard focus handling, documented connection provenance, and the `-PublishBranch` sync option for isolated PR delivery.
-  - Local verification: 26 portfolio categories, 12 Python regression tests, 42 HTTP smoke checks, and Ruff on the new Python files passed. Browser checks covered desktop and narrow mobile layouts, light/dark themes, search, empty results, branch toggles, keyboard selection, filtered project cards, repository access prompts, and native navigation without JavaScript.
+  - Search hints now come from existing project IDs; every displayed node label is searchable, and missing example projects fail generation.
+  - Local verification: 26 portfolio categories, 13 Python regression tests, 42 HTTP smoke checks, and Ruff on the new Python files passed. Browser checks covered desktop and narrow mobile layouts, light/dark themes, search examples, empty results, branch toggles, keyboard selection, filtered project cards, repository access prompts, and native navigation without JavaScript.
 
 - **Azmuth Neuromorphic, Temporal-Triad & 6-Universe Foresight Engine Milestone (`Fleet-Orchestrator`, `Competitive-Programming`, `brainstorm`)**:
   - **Neuromorphic Spiking Core & Tier-5 Codons**: Sequenced 6 canonical Tier-5 Super-Domain foresight genes in `codon_stream/tier5_super_domain/` with Gaussian $Z$-score normalization, thalamic habituation ($|Z| < 0.8\sigma$ suppression), and closed-form Control Barrier Function (CBF) braking scalar $\alpha_{\text{brake}}$ (`CATCH_AND_ARREST`).

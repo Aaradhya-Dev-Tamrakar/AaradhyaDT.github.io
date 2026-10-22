@@ -30,7 +30,7 @@
 .ecosystem-root strong { display: block; color: var(--heading); font-size: .9rem; font-weight: 500; }
 .ecosystem-root div > span { display: block; margin-top: .25rem; color: var(--muted); font-size: .75rem; }
 .ecosystem-tree, .ecosystem-projects, .ecosystem-tags, #ecosystem-related { list-style: none; padding: 0; margin: 0; }
-.ecosystem--interactive .ecosystem-tree { max-height: 33rem; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--accent-a40) transparent; padding: .2rem .6rem .3rem .2rem; }
+.ecosystem--interactive .ecosystem-tree { max-height: 38rem; overflow-y: auto; scrollbar-width: thin; scrollbar-color: var(--accent-a40) transparent; padding: .2rem .6rem .3rem .2rem; }
 .ecosystem-branch { position: relative; margin-left: 1.25rem; padding: .15rem 0 .15rem 1.25rem; border-left: 1px solid var(--line); }
 .ecosystem-branch::before { content: ''; position: absolute; left: 0; top: 1.5rem; width: 1rem; border-top: 1px solid var(--line); }
 .ecosystem-branch details { min-width: 0; }

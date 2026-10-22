@@ -1,4 +1,5 @@
 {
+  "search_examples": ["p-040", "p-031", "p-018"],
   "groups": [
     {
       "id": "orchestration",
