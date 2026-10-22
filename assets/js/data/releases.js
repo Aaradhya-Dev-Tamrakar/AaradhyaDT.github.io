@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v56",
+    version: "v56.1",
     date: "2026-10-22",
     sha: "2a9912f0619ff603ea0e67a87cc227e50061d484",
     title: "add ecosystem tree and align dropdown cards (#22)",

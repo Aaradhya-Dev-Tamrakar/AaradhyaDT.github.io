@@ -1,6 +1,8 @@
-# Portfolio Website Tracker — v56
+# Portfolio Website Tracker — v56.1
 
 Last updated: _2026-10-22_
+
+- **Project card typography correction (#23)**: Restored the original Playfair Display/Georgia serif titles, normal weight, original standard and weekly title sizes, and original letter spacing. Retained the hover lift, border and shadow treatment. The 26-category verification passed; browser checks confirmed the restored fonts and keyboard dropdown expansion.
 
 
 - **v56 (Major Release) — Connected Project Ecosystem.** Shipped connected project ecosystem.
@@ -417,7 +419,7 @@ Last updated: _2026-10-22_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v56`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v56.1`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |
