@@ -1,6 +1,6 @@
 {
-  "sha": "2295acd8d9811204d863fc7c982984d28a28f4d9",
-  "shortSha": "2295acd",
-  "date": "2026-10-22T17:18:12+05:45",
-  "message": "feat(projects): categorize and declutter the archive (#27)"
+  "sha": "d63d745fe469802d32354de33883ccec402a53c1",
+  "shortSha": "d63d745",
+  "date": "2026-10-22T17:22:28+05:45",
+  "message": "fix(projects): style category shortcuts as navigation tiles (#28)"
 }
