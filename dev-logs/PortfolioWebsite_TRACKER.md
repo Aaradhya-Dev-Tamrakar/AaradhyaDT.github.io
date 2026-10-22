@@ -2,6 +2,8 @@
 
 Last updated: _2026-10-22_
 
+- **Project archive organization (#26)**: Grouped all 45 unchanged project cards into six purpose-based sections. Added category shortcuts, placed fellowship coursework last, and made the ecosystem browser an optional disclosure. Expand/collapse acts on visible filtered cards. Preserved existing IDs and added agent/knowledge destinations to project onboarding. Local synchronization verification and 42 smoke checks passed.
+
 - **Project card typography correction (#23)**: Restored the original Playfair Display/Georgia serif titles, normal weight, original standard and weekly title sizes, and original letter spacing. Retained the hover lift, border and shadow treatment. The 26-category verification passed; browser checks confirmed the restored fonts and keyboard dropdown expansion.
 
 
