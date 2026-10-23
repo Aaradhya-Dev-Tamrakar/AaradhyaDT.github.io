@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.11",
     date: "2026-10-23",
-    sha: "efa32797e95e09724dfeccfa828d3ffe6cb3d05a",
-    title: "align default hyperlink color with theme accent tokens",
+    sha: "56ffe7708f7c6caa22e7f0bfca0f9d1a730434f5",
+    title: "wire interactive dropdown switcher for site tools and research sections",
     highlights: []
   },
   {
