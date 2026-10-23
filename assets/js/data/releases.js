@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v56.9",
+    version: "v56.10",
     date: "2026-10-23",
     sha: "450ca735a58e607fa9e7cf4f60c0f9544ad2120a",
     title: "unclip and space crest logo",

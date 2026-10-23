@@ -66,6 +66,18 @@ select {
               opacity 0.2s ease;
 }
 
+a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--accent-a35);
+}
+
+a:hover {
+  color: var(--heading);
+  text-decoration-color: var(--accent);
+}
+
 button,
 summary {
   cursor: pointer;
