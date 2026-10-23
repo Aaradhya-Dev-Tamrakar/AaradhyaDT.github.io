@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.8",
     date: "2026-10-23",
-    sha: "fe1dce1566398b64bfb0355d4767dce56dae305f",
-    title: "update metrics count to 30+ and add space navigation hint",
+    sha: "9b1da8a20bae2677952eac8e6aedce3b6f3915c9",
+    title: "codify systems merging trilogy (DEC-004) and update active status hub",
     highlights: []
   },
   {
