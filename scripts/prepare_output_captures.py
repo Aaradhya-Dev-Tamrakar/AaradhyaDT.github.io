@@ -73,7 +73,7 @@ def main():
 
     bias=BASE/'BiasAperture'
     add('p-025','biasaperture','Audit dossier generated 19 Oct 2026 · FairFace race evaluation',
-        bias/'report/audit_report_val_resnet_race.html',bias)
+        bias/'report/audit_report_val_resnet_race.pdf',bias,'pdf','output.pdf')
     w16=FUSE/'M4/WK16/fuseAiF_wk16_agentic_assistant'
     md=w16/'eval/results/REPORT.md'
     # Pandoc renders the saved report verbatim; no new evaluation is implied.

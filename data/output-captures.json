@@ -48,18 +48,18 @@
       "id": "p-025",
       "slug": "biasaperture",
       "caption": "Audit dossier generated 19 Oct 2026 \u00b7 FairFace race evaluation",
-      "type": "report",
-      "artifact": "output.html",
-      "source_file": "audit_report_val_resnet_race.html",
-      "source_sha256": "e4555274c51c5299420d2d892919b8debe38eaaf9997ef6465f7fca3af607cbb",
+      "type": "pdf",
+      "artifact": "output.pdf",
+      "source_file": "audit_report_val_resnet_race.pdf",
+      "source_sha256": "93089bf5c62681be903425f802fbc53d8b3c92b08955a771a04a0f89c65db36b",
       "source_revision": "c8ff9f788e738139949cf50174e8eefc82edf972",
       "source_state": "clean",
       "captured_at": "2026-10-23T05:54:50.346155+00:00",
       "dimensions": [
-        1425,
-        990
+        990,
+        1400
       ],
-      "capture_sha256": "770bbc136743109767c8d6bb743f58a7a65305953e5a5e66c2f9473a07ebd8d3"
+      "capture_sha256": "d572ca13a44bc072da40bdcc0ca217d555893d81f8b02d8b1215f26dba690cc2"
     },
     {
       "id": "p-046",
