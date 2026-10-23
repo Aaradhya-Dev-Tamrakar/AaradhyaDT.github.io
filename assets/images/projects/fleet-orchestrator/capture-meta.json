@@ -1,0 +1,18 @@
+{
+  "id": "p-040",
+  "slug": "fleet-orchestrator",
+  "caption": "Actual CPM planner output \u00b7 local example \u00b7 no jobs dispatched",
+  "type": "command",
+  "artifact": "output.html",
+  "source_file": "fleet.html",
+  "source_sha256": "1ea68662c19b5d934203b0b13c2e9d516c2b4e161a057a19745524f5fd8e540a",
+  "source_revision": "2d8287c72e5735e937c46cf2eb7d64d2a4ffdfea",
+  "source_state": "modified",
+  "captured_at": "2026-10-23T05:54:52.754939+00:00",
+  "command": "python tools/dag_planner.py plan example-dag.json",
+  "dimensions": [
+    1440,
+    656
+  ],
+  "capture_sha256": "7f6ee3248c306e993602ce425191d4089718124b8a6b80328db39c47ace3ced2"
+}

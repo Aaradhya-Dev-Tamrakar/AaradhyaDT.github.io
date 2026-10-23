@@ -1,0 +1,17 @@
+{
+  "id": "p-044",
+  "slug": "fuse-wk18",
+  "caption": "Guardrail technical report \u00b7 18 Oct 2026",
+  "type": "report",
+  "artifact": "output.html",
+  "source_file": "REPORT.html",
+  "source_sha256": "0c8a8558c14380eda3e5ecd96e68afb9ff9e6a925cc3f739544187d3979d0a43",
+  "source_revision": "93bff776d19606de88cddd588ec62647e835b3dd",
+  "source_state": "clean",
+  "captured_at": "2026-10-23T05:54:51.106093+00:00",
+  "dimensions": [
+    1425,
+    990
+  ],
+  "capture_sha256": "1a92731dccf3839eb1498290f29e8848eb7f74cb89c6256b78bd72bc78749836"
+}

@@ -1,0 +1,1491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BiasAperture — Demographic Bias Audit & Compliance Dossier</title>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Report",
+        "name": "BiasAperture Demographic Fairness Audit Dossier — FairFace ResNet-34 Multi-Task Classifier",
+        "description": "Diagnostic Demographic Bias Evaluation & Regulatory Traceability Report on FairFace Benchmark Dataset across Race axis.",
+        "datePublished": "2026-10-19 04:51:31 UTC",
+        "author": {
+            "@type": "SoftwareApplication",
+            "name": "BiasAperture",
+            "applicationCategory": "AI Diagnostic Fairness Auditing Framework"
+        },
+        "about": {
+            "@type": "Thing",
+            "name": "FairFace ResNet-34 Multi-Task Classifier"
+        }
+    }
+    </script>
+    <style>
+        :root {
+            /* 60-30-10 LaTeX palette: 60% canvas/charcoal, 30% navy structure, 10% gem accents */
+            --bg-primary: #f8fafc;
+            --bg-card: #ffffff;
+            --text-main: #1e293b;
+            --text-muted: #64748b;
+            --border-color: #cbd5e1;
+            --structure: #1b365d;
+            --brand-blue: #1b365d;
+            --accent-teal: #0f766e;
+            --accent-green: #166534;
+            --accent-red: #991b1b;
+            --accent-amber: #b45309;
+            --accent-indigo: #3730a3;
+            --tint-green: #ecfdf3;
+            --tint-red: #fdf2f2;
+            --tint-amber: #fef9e7;
+            --tint-indigo: #eef2ff;
+            --tint-navy: #f1f5f9;
+            --tint-highlight: #fef9c3;
+            --font-stack: "Latin Modern Roman", "CMU Serif", "Computer Modern Roman", "TeX Gyre Termes", "Times New Roman", "Nimbus Roman No9 L", Times, serif;
+            --font-mono: "Latin Modern Mono", "CMU Typewriter Text", "Courier New", Courier, monospace;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            margin: 0;
+            padding: 2rem;
+            line-height: 1.6;
+            text-rendering: optimizeLegibility;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: var(--bg-card);
+            padding: 2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-stack);
+            color: var(--structure);
+            font-weight: 700;
+            font-variant: small-caps;
+            letter-spacing: 0.04em;
+        }
+
+        h1 {
+            margin: 0 0 0.5rem 0;
+            font-size: 1.8rem;
+            border-bottom: 1.5px solid var(--structure);
+            padding-bottom: 0.5rem;
+        }
+
+        .meta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .meta-item {
+            background: var(--tint-navy);
+            padding: 0.75rem;
+            border-radius: 6px;
+        }
+
+        .meta-label {
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-size: 0.75rem;
+            display: block;
+            font-variant: small-caps;
+            letter-spacing: 0.05em;
+        }
+
+        .section-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            border-bottom: 1.5px solid var(--structure);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+            font-size: 1.3rem;
+        }
+
+        code, pre {
+            font-family: var(--font-mono);
+        }
+
+        /* --- LaTeX booktabs Table Styling --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.9rem;
+            border-top: 1.5px solid var(--structure);
+            border-bottom: 1.5px solid var(--structure);
+        }
+
+        th, td {
+            padding: 0.75rem 1rem;
+            text-align: left;
+            vertical-align: top;
+        }
+
+        th {
+            border-top: 1.5px solid var(--structure);
+            border-bottom: 1px solid var(--structure);
+            font-weight: 700;
+            font-variant: small-caps;
+            letter-spacing: 0.03em;
+            color: var(--structure);
+            background: none;
+        }
+
+        td {
+            border-top: 0.5px solid #e2e8f0;
+            border-bottom: 0.5px solid #e2e8f0;
+        }
+
+        tr:last-child td {
+            border-bottom: 1.5px solid var(--structure);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .badge-pass {
+            background-color: var(--tint-green);
+            color: var(--accent-green);
+        }
+
+        .badge-warn {
+            background-color: var(--tint-amber);
+            color: var(--accent-amber);
+        }
+
+        .badge-fail {
+            background-color: var(--tint-red);
+            color: var(--accent-red);
+        }
+
+        .badge-guard {
+            background-color: var(--tint-indigo);
+            color: var(--accent-indigo);
+        }
+
+        .regulatory-box {
+            background-color: var(--tint-navy);
+            border-left: 4px solid var(--brand-blue);
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 0 6px 6px 0;
+            font-size: 0.85rem;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        /* --- Executive Summary Strip --- */
+        .exec-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .exec-stat {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 4px solid var(--brand-blue);
+            border-radius: 6px;
+            padding: 1rem 1.25rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .exec-stat.exec-stat-alert {
+            border-left-color: var(--accent-red);
+        }
+
+        .exec-stat-value {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: block;
+            line-height: 1.2;
+        }
+
+        .exec-stat-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            font-weight: 600;
+        }
+
+        /* --- Inline SVG bar charts (offline-contract safe: no external
+           assets, pure inline <svg> emitted by Jinja) --- */
+        .ci-bar-cell {
+            min-width: 220px;
+        }
+
+        .metric-bars-cell {
+            min-width: 200px;
+        }
+
+        svg.inline-chart {
+            display: block;
+        }
+
+        svg.inline-chart text {
+            font-family: var(--font-stack);
+        }
+
+        /* --- Collapsed insufficient-sample summary block --- */
+        details.insufficient-block {
+            margin-top: 1rem;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            background-color: #f8fafc;
+        }
+
+        details.insufficient-block summary {
+            cursor: pointer;
+            padding: 0.75rem 1rem;
+            font-weight: 600;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            list-style: none;
+        }
+
+        details.insufficient-block summary::-webkit-details-marker {
+            display: none;
+        }
+
+        details.insufficient-block summary::before {
+            content: "▸ ";
+        }
+
+        details.insufficient-block[open] summary::before {
+            content: "▾ ";
+        }
+
+        .insufficient-list {
+            padding: 0 1rem 1rem 1rem;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .insufficient-list span.subgroup-chip {
+            display: inline-block;
+            background: #e2e8f0;
+            border-radius: 4px;
+            padding: 0.15rem 0.5rem;
+            margin: 0.15rem 0.25rem 0.15rem 0;
+        }
+
+        /* --- Plain-Language Executive Translation Card --- */
+        .plain-narrative-card {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-left: 5px solid var(--brand-blue);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+        .plain-narrative-card.verdict-FAIL {
+            border-left-color: var(--accent-red);
+        }
+        .plain-narrative-card.verdict-WARN {
+            border-left-color: var(--accent-amber);
+        }
+        .plain-narrative-card.verdict-PASS {
+            border-left-color: var(--accent-green);
+        }
+        .plain-pillar-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.25rem;
+            margin-top: 1.25rem;
+        }
+        .plain-pillar {
+            background: #f8fafc;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 1rem;
+            font-size: 0.88rem;
+        }
+        .plain-pillar-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            color: var(--structure);
+            font-size: 0.92rem;
+        }
+        .plain-pillar-num {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: var(--brand-blue);
+            color: #ffffff;
+            font-size: 0.75rem;
+            font-weight: 700;
+        }
+        .plain-pillar-text {
+            color: var(--text-main);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        /* --- Metric Explanations Guide (2x2 Grid) --- */
+        .metric-guide-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+        .metric-guide-card {
+            background: var(--tint-navy);
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+        }
+        .metric-guide-card h4 {
+            margin: 0 0 0.2rem 0;
+            font-size: 0.92rem;
+            color: var(--structure);
+        }
+        .metric-guide-card .metric-plain-name {
+            font-weight: 600;
+            color: var(--accent-teal);
+            font-size: 0.8rem;
+            margin-bottom: 0.35rem;
+            display: block;
+        }
+        .metric-guide-card .metric-desc {
+            margin: 0 0 0.5rem 0;
+            color: var(--text-main);
+            line-height: 1.45;
+        }
+        .metric-guide-card .metric-target {
+            font-family: var(--font-mono);
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            border-top: 1px dashed #cbd5e1;
+            padding-top: 0.35rem;
+            display: block;
+        }
+
+        /* --- Print & Headless PDF Compilation Standards --- */
+        @media print {
+            @page {
+                size: A4;
+                margin: 12mm 15mm;
+            }
+            body {
+                padding: 0;
+                background: #ffffff;
+                color: var(--structure);
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+            .container {
+                max-width: 100%;
+                margin: 0;
+            }
+            header, .section-card, .exec-summary, .scope-card, .plain-narrative-card, .metric-guide-card, .plain-pillar {
+                box-shadow: none !important;
+                border: 1px solid #cbd5e1 !important;
+            }
+            .exec-summary, .scope-card, .plain-narrative-card, .metric-guide-card, .plain-pillar {
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+            .section-headline {
+                break-before: page !important;
+                page-break-before: always !important;
+            }
+            .section-subgroups {
+                break-before: page !important;
+                page-break-before: always !important;
+            }
+            .section-explainability, .section-governance {
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+            /* Auto-expand collapsed details blocks so suppressed cohorts and metric guide print fully */
+            details.insufficient-block,
+            details.insufficient-block > *,
+            details.metric-guide-details,
+            details.metric-guide-details > * {
+                display: block !important;
+            }
+            details.insufficient-block summary,
+            details.metric-guide-details summary {
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+            }
+            details.insufficient-block summary::before,
+            details.metric-guide-details summary::before {
+                content: "▼ " !important;
+            }
+            table {
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+            }
+            tr {
+                break-inside: avoid !important;
+                page-break-inside: avoid !important;
+                page-break-after: auto;
+            }
+            thead {
+                display: table-header-group;
+            }
+        }
+            a { color: var(--accent-teal); text-decoration-thickness: 0.5px; text-underline-offset: 2px; }
+
+        mark { background-color: var(--tint-highlight); color: inherit; padding: 0 0.15em; }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BiasAperture — Demographic Fairness Audit Dossier</h1>
+            <p style="color: var(--text-muted); margin: 0;">Diagnostic Demographic Bias Evaluation & Regulatory Traceability Report</p>
+            <div class="meta-grid">
+                <div class="meta-item">
+                    <span class="meta-label">Audited Model</span>
+                    <strong>FairFace ResNet-34 Multi-Task Classifier</strong>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Evaluation Dataset</span>
+                    <strong>FairFace Benchmark Dataset (N=10954)</strong>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Protected Axis</span>
+                    <strong>Race</strong>
+                </div>
+                <div class="meta-item">
+                    <span class="meta-label">Audit Date</span>
+                    <strong>2026-10-19 04:51:31 UTC</strong>
+                </div>
+            </div>
+        </header>
+
+        <!-- Diagnostic Scope & Boundary Assertion -->
+        <div class="scope-card" style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-left: 4px solid var(--brand-blue); border-radius: 6px; padding: 1rem 1.25rem; margin-bottom: 1.5rem; font-size: 0.85rem; color: var(--text-main); line-height: 1.5;">
+            <strong style="color: #1e293b; display: block; margin-bottom: 0.25rem;">Diagnostic Scope & Non-Intervention Guarantee:</strong>
+            BiasAperture is engineered exclusively as an external diagnostic auditing, statistical significance testing, and regulatory traceability platform. It does <strong>not</strong> perform model retraining, in-processing debiasing, or synthetic image generation. In adherence to statistical integrity safeguards (NFR-003), demographic subgroups with fewer than 30 samples (<em>n &lt; 30</em>) have point estimates suppressed to prevent unreliable compliance claims.
+        </div>
+
+        <!-- 0. Executive Summary Strip -->
+        <div class="exec-summary">
+            <div class="exec-stat exec-stat-alert">
+                <span class="exec-stat-value">7 / 7</span>
+                <span class="exec-stat-label">Subgroups with significant disparity (p &lt; 0.05)</span>
+            </div>
+            <div class="exec-stat">
+                <span class="exec-stat-value">
+                    
+                        Overall (Table 1)
+                    
+                </span>
+                <span class="exec-stat-label">
+                    
+                        Worst disparity cohort (28 metric failures)
+                    
+                </span>
+            </div>
+            <div class="exec-stat">
+                <span class="exec-stat-value">
+                    
+                        DIR = 0.713
+                    
+                </span>
+                <span class="exec-stat-label">
+                    
+                        Worst headline metric (Overall)
+                    
+                </span>
+            </div>
+            <div class="exec-stat">
+                <span class="exec-stat-value">0</span>
+                <span class="exec-stat-label">Subgroups flagged n &lt; 30 (NFR-003)</span>
+            </div>
+        </div>
+
+        
+        <!-- Plain-Language Executive Summary (For Non-Technical Reviewers) -->
+        <div class="plain-narrative-card verdict-FAIL">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.75rem;">
+                <div>
+                    <span style="font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted);">
+                        Executive Translation • Non-Technical Review
+                    </span>
+                    <h2 style="border-bottom: none; margin: 0.25rem 0 0 0; font-size: 1.35rem;">
+                        Demographic Disparity Flagged: Remediation &amp; Review Required
+                    </h2>
+                </div>
+                <div>
+                    <span class="badge badge-fail" style="font-size: 0.9rem; padding: 0.4rem 0.8rem;">
+                        FAIL
+                    </span>
+                </div>
+            </div>
+            <p style="font-size: 0.92rem; color: var(--text-main); line-height: 1.6; margin: 0 0 1rem 0;">
+                The audit of FairFace ResNet-34 Multi-Task Classifier identified statistically verified demographic disparities affecting 7 of the 7 evaluated Race cohorts (N=10954 subjects, statistical significance p &lt; 0.05). These performance gaps exceed random statistical fluctuation, indicating systematic differences in model predictions.
+            </p>
+
+            <div class="plain-pillar-grid">
+                <!-- Pillar 1: Disparity Impact -->
+                <div class="plain-pillar">
+                    <div class="plain-pillar-header">
+                        <span class="plain-pillar-num">1</span>
+                        <span>Disparity Impact</span>
+                    </div>
+                    <p class="plain-pillar-text">
+                        The highest demographic divergence occurred for Overall (Table 1), where the Disparate Impact Ratio (DIR) was 0.713. In plain terms, subjects in this group received positive predictions at only 71.3% the rate of the benchmark group—below the standard 80% legal threshold (a 28.7% shortfall). (Observed at the global cross-group level).
+                    </p>
+                </div>
+
+                <!-- Pillar 2: Proxy Drivers -->
+                <div class="plain-pillar">
+                    <div class="plain-pillar-header">
+                        <span class="plain-pillar-num">2</span>
+                        <span>Underlying Drivers</span>
+                    </div>
+                    <p class="plain-pillar-text">
+                        Surrogate proxy attribution was not triggered because demographic disparities remained within statistical tolerances, or subject records were not supplied for secondary modeling.
+                    </p>
+                </div>
+
+                <!-- Pillar 3: Sample Reliability -->
+                <div class="plain-pillar">
+                    <div class="plain-pillar-header">
+                        <span class="plain-pillar-num">3</span>
+                        <span>Sample Reliability</span>
+                    </div>
+                    <p class="plain-pillar-text">
+                        All evaluated demographic cohorts met or exceeded the minimum sample size threshold (n ≥ 30 subjects per NFR-003), ensuring statistical reliability across all reported metrics.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+
+        <!-- 1. Executive Summary & Core Four Headline Metrics -->
+        <div class="section-card section-headline">
+            <h2>1. Headline Fairness Metrics (Core Four — Cross-Group Overview)</h2>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+                Summary metrics evaluated across all eligible demographic strata (n ≥ 30 per NFR-003). Accompanied by 95% stratified BCa bootstrap confidence intervals and Pearson's χ² test of independence. Plotted on a calibrated [0.0, 1.0] domain with null-point reference and threshold lines.
+            </p>
+            
+            
+            <!-- How to Read These Metrics Reference Guide -->
+            <details class="metric-guide-details" style="margin: 1.25rem 0; border: 1px solid var(--border-color); border-radius: 6px; background-color: #f8fafc;" open>
+                <summary style="cursor: pointer; padding: 0.75rem 1rem; font-weight: 600; font-size: 0.88rem; color: var(--structure);">
+                    📖 How to Read These Metrics (In Plain English)
+                </summary>
+                <div style="padding: 0 1rem 1rem 1rem;">
+                    <div class="metric-guide-grid">
+                        
+                        <div class="metric-guide-card">
+                            <h4>Disparate Impact Ratio (DIR)</h4>
+                            <span class="metric-plain-name">Selection Rate Ratio / 80% Rule</span>
+                            <p class="metric-desc">Compares the positive prediction rate of a demographic group against the highest-selected group. Under the US EEOC 4/5ths (80%) rule, if the highest group is selected 80% of the time, all other groups should be selected at least 64% of the time (80% of 80%). A ratio below 0.80 indicates adverse impact.</p>
+                            <span class="metric-target">Ideal = 1.00; Safe threshold ≥ 0.80 &bull; EEOC 4/5ths Rule / EU AI Act Annex IV §2(g)</span>
+                        </div>
+                        
+                        <div class="metric-guide-card">
+                            <h4>Demographic Parity Difference (DPD)</h4>
+                            <span class="metric-plain-name">Positive Rate Percentage Gap</span>
+                            <p class="metric-desc">Measures whether the model favors one group over another in raw volume of positive predictions. A difference of 0.15 means individuals from one group are 15 percentage points more likely to receive a positive prediction than individuals from another group.</p>
+                            <span class="metric-target">Ideal = 0.00; Safe threshold ≤ 0.10 &bull; EU AI Act Art. 10(2)(f) / NIST AI RMF Measure 2.11</span>
+                        </div>
+                        
+                        <div class="metric-guide-card">
+                            <h4>Equalized Odds Difference (EOD)</h4>
+                            <span class="metric-plain-name">Error Rate Equality Gap</span>
+                            <p class="metric-desc">Ensures the model is equally accurate for all demographics. It verifies that qualified individuals have an equal chance of being accepted, and unqualified individuals have an equal chance of being rejected, regardless of identity.</p>
+                            <span class="metric-target">Ideal = 0.00; Safe threshold ≤ 0.10 &bull; EU AI Act Art. 10(2)(g) / NIST AI RMF Measure 2.11</span>
+                        </div>
+                        
+                        <div class="metric-guide-card">
+                            <h4>Equal Opportunity Difference (EOP)</h4>
+                            <span class="metric-plain-name">True Positive Opportunity Gap</span>
+                            <p class="metric-desc">Focuses strictly on true positive outcomes (e.g. qualified applicants or correct identity matches). A difference of 0.08 means qualified individuals in one group are 8 percentage points less likely to be correctly recognized.</p>
+                            <span class="metric-target">Ideal = 0.00; Safe threshold ≤ 0.10 &bull; EU AI Act Art. 10(3) / NIST AI RMF Measure 2.11</span>
+                        </div>
+                        
+                    </div>
+                </div>
+            </details>
+            
+
+            <table>
+                <thead>
+                    <tr>
+                        <th title="Statistical disparity measure evaluated across demographic cohorts">Metric Name</th>
+                        <th title="Observed calculation value for this audit run">Point Estimate</th>
+                        <th title="95% Bootstrap Confidence Interval: The range within which the true value lies with 95% certainty">95% Bootstrap CI</th>
+                        <th class="ci-bar-cell" title="Visual comparison of confidence band against ideal fairness null line">CI Band vs. Null</th>
+                        <th title="Chi-squared p-value: Values under 0.05 mean the difference is statistically significant, not random noise">Significance (p-value)</th>
+                        <th title="Applicable statutory clause under EU AI Act or NIST AI RMF">Regulatory Clause</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td><strong>Demographic Parity Difference</strong></td>
+                        <td>
+                            
+                                0.192
+                            
+                        </td>
+                        <td>
+                            
+                                [0.156, 0.222]
+                            
+                        </td>
+                        <td class="ci-bar-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                <svg class="inline-chart" width="220" height="38" viewBox="0 0 220 38" role="img" aria-label="Point estimate 0.192 with 95% CI [0.156, 0.222]">
+                    <!-- Base Axis Line [0.0, 1.0] -->
+                    <line x1="10" y1="25" x2="210" y2="25" stroke="#cbd5e1" stroke-width="1" />
+                    
+                    <!-- Axis Ticks (0.0, 0.5, 1.0) -->
+                    <line x1="10" y1="23" x2="10" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="10" y="35" font-size="8" fill="#64748b" text-anchor="middle">0.0</text>
+                    
+                    <line x1="110.0" y1="23" x2="110.0" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="110.0" y="35" font-size="8" fill="#64748b" text-anchor="middle">0.5</text>
+                    
+                    <line x1="210" y1="23" x2="210" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="210" y="35" font-size="8" fill="#64748b" text-anchor="middle">1.0</text>
+
+                    
+                        <!-- Difference Metric: 0.10 Fairness Threshold Indicator (Dotted Amber) -->
+                        <line x1="30.0" y1="4" x2="30.0" y2="26" stroke="#b45309" stroke-width="1.2" stroke-dasharray="2,2" />
+                    
+
+                    <!-- CI Whisker Bar and End Caps -->
+                    <line x1="41.2" y1="14" x2="54.4" y2="14" stroke="#64748b" stroke-width="2" />
+                    <line x1="41.2" y1="10" x2="41.2" y2="18" stroke="#64748b" stroke-width="2" />
+                    <line x1="54.4" y1="10" x2="54.4" y2="18" stroke="#64748b" stroke-width="2" />
+
+                    <!-- Point Estimate: Double encoded (Diamond for breach, circle for in-tolerance) -->
+                    
+                    
+                        <rect x="44.4" y="10" width="8" height="8" transform="rotate(45 48.4 14)" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.75" />
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            
+                                p=0.0000
+                                
+                                    <span class="badge badge-fail">p &lt; 0.05</span>
+                                
+                            
+                        </td>
+                        <td><small>EU AI Act Art. 10(2)(f) / NIST Measure 2.11</small></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Equalized Odds Difference</strong></td>
+                        <td>
+                            
+                                0.053
+                            
+                        </td>
+                        <td>
+                            
+                                [0.035, 0.068]
+                            
+                        </td>
+                        <td class="ci-bar-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                <svg class="inline-chart" width="220" height="38" viewBox="0 0 220 38" role="img" aria-label="Point estimate 0.053 with 95% CI [0.035, 0.068]">
+                    <!-- Base Axis Line [0.0, 1.0] -->
+                    <line x1="10" y1="25" x2="210" y2="25" stroke="#cbd5e1" stroke-width="1" />
+                    
+                    <!-- Axis Ticks (0.0, 0.5, 1.0) -->
+                    <line x1="10" y1="23" x2="10" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="10" y="35" font-size="8" fill="#64748b" text-anchor="middle">0.0</text>
+                    
+                    <line x1="110.0" y1="23" x2="110.0" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="110.0" y="35" font-size="8" fill="#64748b" text-anchor="middle">0.5</text>
+                    
+                    <line x1="210" y1="23" x2="210" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="210" y="35" font-size="8" fill="#64748b" text-anchor="middle">1.0</text>
+
+                    
+                        <!-- Difference Metric: 0.10 Fairness Threshold Indicator (Dotted Amber) -->
+                        <line x1="30.0" y1="4" x2="30.0" y2="26" stroke="#b45309" stroke-width="1.2" stroke-dasharray="2,2" />
+                    
+
+                    <!-- CI Whisker Bar and End Caps -->
+                    <line x1="17.0" y1="14" x2="23.6" y2="14" stroke="#64748b" stroke-width="2" />
+                    <line x1="17.0" y1="10" x2="17.0" y2="18" stroke="#64748b" stroke-width="2" />
+                    <line x1="23.6" y1="10" x2="23.6" y2="18" stroke="#64748b" stroke-width="2" />
+
+                    <!-- Point Estimate: Double encoded (Diamond for breach, circle for in-tolerance) -->
+                    
+                    
+                        <rect x="16.6" y="10" width="8" height="8" transform="rotate(45 20.6 14)" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.75" />
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            
+                                p=0.0000
+                                
+                                    <span class="badge badge-fail">p &lt; 0.05</span>
+                                
+                            
+                        </td>
+                        <td><small>EU AI Act Art. 10(2)(g) / NIST Measure 2.11</small></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Equal Opportunity Difference</strong></td>
+                        <td>
+                            
+                                0.053
+                            
+                        </td>
+                        <td>
+                            
+                                [0.034, 0.069]
+                            
+                        </td>
+                        <td class="ci-bar-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                <svg class="inline-chart" width="220" height="38" viewBox="0 0 220 38" role="img" aria-label="Point estimate 0.053 with 95% CI [0.034, 0.069]">
+                    <!-- Base Axis Line [0.0, 1.0] -->
+                    <line x1="10" y1="25" x2="210" y2="25" stroke="#cbd5e1" stroke-width="1" />
+                    
+                    <!-- Axis Ticks (0.0, 0.5, 1.0) -->
+                    <line x1="10" y1="23" x2="10" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="10" y="35" font-size="8" fill="#64748b" text-anchor="middle">0.0</text>
+                    
+                    <line x1="110.0" y1="23" x2="110.0" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="110.0" y="35" font-size="8" fill="#64748b" text-anchor="middle">0.5</text>
+                    
+                    <line x1="210" y1="23" x2="210" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="210" y="35" font-size="8" fill="#64748b" text-anchor="middle">1.0</text>
+
+                    
+                        <!-- Difference Metric: 0.10 Fairness Threshold Indicator (Dotted Amber) -->
+                        <line x1="30.0" y1="4" x2="30.0" y2="26" stroke="#b45309" stroke-width="1.2" stroke-dasharray="2,2" />
+                    
+
+                    <!-- CI Whisker Bar and End Caps -->
+                    <line x1="16.8" y1="14" x2="23.8" y2="14" stroke="#64748b" stroke-width="2" />
+                    <line x1="16.8" y1="10" x2="16.8" y2="18" stroke="#64748b" stroke-width="2" />
+                    <line x1="23.8" y1="10" x2="23.8" y2="18" stroke="#64748b" stroke-width="2" />
+
+                    <!-- Point Estimate: Double encoded (Diamond for breach, circle for in-tolerance) -->
+                    
+                    
+                        <rect x="16.6" y="10" width="8" height="8" transform="rotate(45 20.6 14)" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.75" />
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            
+                                p=0.0000
+                                
+                                    <span class="badge badge-fail">p &lt; 0.05</span>
+                                
+                            
+                        </td>
+                        <td><small>EU AI Act Art. 10(3) / NIST Measure 2.11</small></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Disparate Impact Ratio</strong></td>
+                        <td>
+                            
+                                0.713
+                            
+                        </td>
+                        <td>
+                            
+                                [0.676, 0.760]
+                            
+                        </td>
+                        <td class="ci-bar-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+
+                <svg class="inline-chart" width="220" height="38" viewBox="0 0 220 38" role="img" aria-label="Point estimate 0.713 with 95% CI [0.676, 0.760]">
+                    <!-- Base Axis Line [0.0, 1.0] -->
+                    <line x1="10" y1="25" x2="210" y2="25" stroke="#cbd5e1" stroke-width="1" />
+                    
+                    <!-- Axis Ticks (0.0, 0.5, 1.0) -->
+                    <line x1="10" y1="23" x2="10" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="10" y="35" font-size="8" fill="#64748b" text-anchor="middle">0.0</text>
+                    
+                    <line x1="110.0" y1="23" x2="110.0" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="110.0" y="35" font-size="8" fill="#64748b" text-anchor="middle">0.5</text>
+                    
+                    <line x1="210" y1="23" x2="210" y2="28" stroke="#94a3b8" stroke-width="1" />
+                    <text x="210" y="35" font-size="8" fill="#64748b" text-anchor="middle">1.0</text>
+
+                    
+                        <!-- Ratio Metric (DIR): 0.80 EEOC 4/5ths Rule (Long-Dash Amber) & 1.0 Parity Line (Solid Green) -->
+                        <line x1="170.0" y1="4" x2="170.0" y2="26" stroke="#b45309" stroke-width="1.4" stroke-dasharray="4,2" />
+                        <line x1="210.0" y1="4" x2="210.0" y2="26" stroke="#166534" stroke-width="1.2" stroke-dasharray="2,2" />
+                    
+
+                    <!-- CI Whisker Bar and End Caps -->
+                    <line x1="145.20000000000002" y1="14" x2="162.0" y2="14" stroke="#64748b" stroke-width="2" />
+                    <line x1="145.20000000000002" y1="10" x2="145.20000000000002" y2="18" stroke="#64748b" stroke-width="2" />
+                    <line x1="162.0" y1="10" x2="162.0" y2="18" stroke="#64748b" stroke-width="2" />
+
+                    <!-- Point Estimate: Double encoded (Diamond for breach, circle for in-tolerance) -->
+                    
+                    
+                        <rect x="148.6" y="10" width="8" height="8" transform="rotate(45 152.6 14)" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.75" />
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            
+                                p=0.0000
+                                
+                                    <span class="badge badge-fail">p &lt; 0.05</span>
+                                
+                            
+                        </td>
+                        <td><small>EEOC 4/5ths Rule / EU AI Act Annex IV §2(g)</small></td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 2. Per-Subgroup Disparity Analysis -->
+        <div class="section-card section-subgroups">
+            <h2>2. Per-Subgroup Disparity Matrix</h2>
+            <p style="font-size: 0.9rem; color: var(--text-muted);">
+                Detailed stratification across individual demographic groups, ordered by largest deviation from the null (no-disparity) point, most significant first. Subgroups below the NFR-003 sample threshold (n &lt; 30) are strictly flagged, uncomputed to prevent small-sample estimation artifacts, and summarised separately below.
+            </p>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th title="Demographic subgroup analyzed (e.g. perceived race or age bracket)">Subgroup</th>
+                        <th title="Sample size n for this demographic subgroup">Sample Size (n)</th>
+                        <th title="Demographic Parity Difference: Positive prediction rate gap from baseline">DPD</th>
+                        <th title="Equalized Odds Difference: Error rate divergence across false positives and false negatives">EOD (Max-Gap)</th>
+                        <th title="Equal Opportunity Difference: True positive rate gap across cohorts">EOP</th>
+                        <th title="Disparate Impact Ratio: Selection rate ratio relative to benchmark group (80% legal standard)">DIR (Symmetric)</th>
+                        <th class="metric-bars-cell" title="Visual comparison of metric deviations from no-disparity point (red = statistically significant p < 0.05)">Deviation from Null (red = p &lt; 0.05)</th>
+                        <th title="Statistical integrity flag (insufficient sample guard n < 30 or valid)">Data Integrity Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    
+                    <tr>
+                        <td><strong>Middle Eastern</strong></td>
+                        <td>1209</td>
+                        <td>0.145</td>
+                        <td>0.016</td>
+                        <td>0.010</td>
+                        <td>0.784</td>
+                        <td class="metric-bars-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                <svg class="inline-chart" width="172" height="64" viewBox="0 0 172 64" role="img" aria-label="Per-metric deviation bars for 4 metrics">
+                    
+                        
+                        
+                        
+                        <text x="0" y="10" font-size="9" fill="#475569">DPD</text>
+                        <rect x="34" y="0" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="0" width="62.833333333333336" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="26" font-size="9" fill="#475569">EOD</text>
+                        <rect x="34" y="16" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="16" width="6.933333333333334" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="42" font-size="9" fill="#475569">EOP</text>
+                        <rect x="34" y="32" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="32" width="4.333333333333333" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="58" font-size="9" fill="#475569">DIR</text>
+                        <rect x="34" y="48" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="48" width="93.6" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            <span class="badge badge-pass">Audited (Valid)</span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Latino_Hispanic</strong></td>
+                        <td>1623</td>
+                        <td>0.048</td>
+                        <td>0.024</td>
+                        <td>0.024</td>
+                        <td>0.909</td>
+                        <td class="metric-bars-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                <svg class="inline-chart" width="172" height="64" viewBox="0 0 172 64" role="img" aria-label="Per-metric deviation bars for 4 metrics">
+                    
+                        
+                        
+                        
+                        <text x="0" y="10" font-size="9" fill="#475569">DPD</text>
+                        <rect x="34" y="0" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="0" width="20.8" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="26" font-size="9" fill="#475569">EOD</text>
+                        <rect x="34" y="16" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="16" width="10.4" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="42" font-size="9" fill="#475569">EOP</text>
+                        <rect x="34" y="32" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="32" width="10.4" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="58" font-size="9" fill="#475569">DIR</text>
+                        <rect x="34" y="48" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="48" width="39.43333333333332" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            <span class="badge badge-pass">Audited (Valid)</span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Indian</strong></td>
+                        <td>1516</td>
+                        <td>0.034</td>
+                        <td>0.012</td>
+                        <td>0.004</td>
+                        <td>0.936</td>
+                        <td class="metric-bars-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                <svg class="inline-chart" width="172" height="64" viewBox="0 0 172 64" role="img" aria-label="Per-metric deviation bars for 4 metrics">
+                    
+                        
+                        
+                        
+                        <text x="0" y="10" font-size="9" fill="#475569">DPD</text>
+                        <rect x="34" y="0" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="0" width="14.733333333333334" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="26" font-size="9" fill="#475569">EOD</text>
+                        <rect x="34" y="16" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="16" width="5.2" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="42" font-size="9" fill="#475569">EOP</text>
+                        <rect x="34" y="32" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="32" width="1.7333333333333334" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="58" font-size="9" fill="#475569">DIR</text>
+                        <rect x="34" y="48" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="48" width="27.73333333333331" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            <span class="badge badge-pass">Audited (Valid)</span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Black</strong></td>
+                        <td>1556</td>
+                        <td>0.026</td>
+                        <td>0.034</td>
+                        <td>0.034</td>
+                        <td>0.951</td>
+                        <td class="metric-bars-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                <svg class="inline-chart" width="172" height="64" viewBox="0 0 172 64" role="img" aria-label="Per-metric deviation bars for 4 metrics">
+                    
+                        
+                        
+                        
+                        <text x="0" y="10" font-size="9" fill="#475569">DPD</text>
+                        <rect x="34" y="0" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="0" width="11.266666666666667" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="26" font-size="9" fill="#475569">EOD</text>
+                        <rect x="34" y="16" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="16" width="14.733333333333334" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="42" font-size="9" fill="#475569">EOP</text>
+                        <rect x="34" y="32" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="32" width="14.733333333333334" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="58" font-size="9" fill="#475569">DIR</text>
+                        <rect x="34" y="48" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="48" width="21.233333333333356" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            <span class="badge badge-pass">Audited (Valid)</span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>White</strong></td>
+                        <td>2085</td>
+                        <td>0.019</td>
+                        <td>0.019</td>
+                        <td>0.019</td>
+                        <td>0.966</td>
+                        <td class="metric-bars-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                <svg class="inline-chart" width="172" height="64" viewBox="0 0 172 64" role="img" aria-label="Per-metric deviation bars for 4 metrics">
+                    
+                        
+                        
+                        
+                        <text x="0" y="10" font-size="9" fill="#475569">DPD</text>
+                        <rect x="34" y="0" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="0" width="8.233333333333334" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="26" font-size="9" fill="#475569">EOD</text>
+                        <rect x="34" y="16" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="16" width="8.233333333333334" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="42" font-size="9" fill="#475569">EOP</text>
+                        <rect x="34" y="32" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="32" width="8.233333333333334" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="58" font-size="9" fill="#475569">DIR</text>
+                        <rect x="34" y="48" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="48" width="14.733333333333347" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            <span class="badge badge-pass">Audited (Valid)</span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>East Asian</strong></td>
+                        <td>1550</td>
+                        <td>0.017</td>
+                        <td>0.018</td>
+                        <td>0.018</td>
+                        <td>0.968</td>
+                        <td class="metric-bars-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                <svg class="inline-chart" width="172" height="64" viewBox="0 0 172 64" role="img" aria-label="Per-metric deviation bars for 4 metrics">
+                    
+                        
+                        
+                        
+                        <text x="0" y="10" font-size="9" fill="#475569">DPD</text>
+                        <rect x="34" y="0" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="0" width="7.366666666666667" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="26" font-size="9" fill="#475569">EOD</text>
+                        <rect x="34" y="16" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="16" width="7.8" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="42" font-size="9" fill="#475569">EOP</text>
+                        <rect x="34" y="32" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="32" width="7.8" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="58" font-size="9" fill="#475569">DIR</text>
+                        <rect x="34" y="48" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="48" width="13.86666666666668" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            <span class="badge badge-pass">Audited (Valid)</span>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td><strong>Southeast Asian</strong></td>
+                        <td>1415</td>
+                        <td>0.013</td>
+                        <td>0.009</td>
+                        <td>0.000</td>
+                        <td>0.975</td>
+                        <td class="metric-bars-cell">
+                            
+                                
+                
+                
+                
+                
+                
+                
+                
+                <svg class="inline-chart" width="172" height="64" viewBox="0 0 172 64" role="img" aria-label="Per-metric deviation bars for 4 metrics">
+                    
+                        
+                        
+                        
+                        <text x="0" y="10" font-size="9" fill="#475569">DPD</text>
+                        <rect x="34" y="0" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="0" width="5.633333333333334" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="26" font-size="9" fill="#475569">EOD</text>
+                        <rect x="34" y="16" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="16" width="3.9" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="42" font-size="9" fill="#475569">EOP</text>
+                        <rect x="34" y="32" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="32" width="0.0" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                        
+                        
+                        
+                        <text x="0" y="58" font-size="9" fill="#475569">DIR</text>
+                        <rect x="34" y="48" width="130" height="12" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="0.5" rx="2" />
+                        
+                            
+                            <rect x="34" y="48" width="10.833333333333343" height="12" fill="#991b1b" stroke="#7f1d1d" stroke-width="0.5" rx="2" />
+                        
+                    
+                </svg>
+            
+                            
+                        </td>
+                        <td>
+                            <span class="badge badge-pass">Audited (Valid)</span>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+
+            
+        </div>
+
+        
+
+        <!-- Governance Documentation & Intended Use -->
+        <div class="section-card section-governance">
+            <h2>3. Governance Documentation &amp; Intended Use</h2>
+            <div class="regulatory-box">
+                <strong>EU AI Act (Regulation EU 2024/1689) Article 10 / Annex IV Alignment:</strong>
+                This audit dossier provides verifiable diagnostic documentation of demographic performance disparities. It does not perform model retraining or in-situ weight modifications.
+            </div>
+            <p><strong>Model Description:</strong> ImageNet-pretrained ResNet-34 terminating in an 18-unit linear multi-task head sliced for race (7), gender (2), and age (9) classification.</p>
+            <p><strong>Backend configuration:</strong> dual. Both backend executions completed.</p>
+            <p>Cross-backend agreement checks point estimates only; bootstrap, hypothesis tests, and reporting share implementation. Consult execution logs for backend failures and divergences.</p>
+        </div>
+
+        <footer>
+            <p>Generated deterministically by <strong>BiasAperture v0.1.0</strong> • Pure Standalone HTML • Zero External CDNs</p>
+        </footer>
+    </div>
+</body>
+</html>

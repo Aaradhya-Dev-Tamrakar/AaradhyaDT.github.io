@@ -1,15 +1,13 @@
-<!doctype html>
+<!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <meta name="referrer" content="strict-origin-when-cross-origin" />
-  <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://accounts.google.com https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://api.emailjs.com https://www.google-analytics.com https://analytics.google.com https://accounts.google.com https://docs.google.com; frame-src 'self' https://accounts.google.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io https://docs.google.com;" />
-
-  <!-- Speculative Rules API — Progressive enhancement for Chromium 121+ -->
-  <script>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<meta content="strict-origin-when-cross-origin" name="referrer"/>
+<meta content="default-src 'self'; script-src 'self' 'unsafe-inline' https://accounts.google.com https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://api.emailjs.com https://www.google-analytics.com https://analytics.google.com https://accounts.google.com https://docs.google.com; frame-src 'self' https://accounts.google.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io https://docs.google.com;" http-equiv="Content-Security-Policy"/>
+<!-- Speculative Rules API — Progressive enhancement for Chromium 121+ -->
+<script>
     if (typeof HTMLScriptElement !== 'undefined' && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
       var specScript = document.createElement('script');
       specScript.type = 'speculationrules';
@@ -25,15 +23,12 @@
       document.head.appendChild(specScript);
     }
   </script>
-
-  <title>ADT | About — Aaradhya Dev Tamrakar</title>
-  <meta name="description"
-    content="About ADT (Aaradhya Dev Tamrakar) — Electronics, Communication & Information Engineering student at KEC, IOE, Tribhuvan University. Bio, skills stack, education, and tools." />
-  <meta name="author" content="Aaradhya Dev Tamrakar" />
-  <meta name="keywords"
-    content="Aaradhya, ADT, Aaradhya Dev Tamrakar, Aaradhya Dev, Aaradhya Tamrakar, Aaradhya D. Tamrakar, A. D. Tamrakar, A. Dev Tamrakar, AaradhyaDT, aaradhyadevtamrakar, Aaradhya Nepal, Aaradhya bio, Aaradhya skills, electronics engineer Nepal, AI ML developer, KEC IOE, bio, skills, SPARK project" />
-  <!-- theme-color is a progressive enhancement: supported by Chrome/Edge/Safari, unsupported by Firefox (gracefully ignored). -->
-  <script>
+<title>ADT | About — Aaradhya Dev Tamrakar</title>
+<meta content="Aaradhya Dev Tamrakar: final-year electronics engineering student building applied ML, embedded AI, and reusable AI workflows. Background, engineering approach, and project examples." name="description"/>
+<meta content="Aaradhya Dev Tamrakar" name="author"/>
+<meta content="Aaradhya, ADT, Aaradhya Dev Tamrakar, Aaradhya Dev, Aaradhya Tamrakar, Aaradhya D. Tamrakar, A. D. Tamrakar, A. Dev Tamrakar, AaradhyaDT, aaradhyadevtamrakar, Aaradhya Nepal, Aaradhya bio, Aaradhya skills, electronics engineer Nepal, AI ML developer, KEC IOE, bio, skills, SPARK project" name="keywords"/>
+<!-- theme-color is a progressive enhancement: supported by Chrome/Edge/Safari, unsupported by Firefox (gracefully ignored). -->
+<script>
     (function () {
       var metaDark = document.createElement("meta");
       metaDark.name = "theme-color";
@@ -47,190 +42,174 @@
       document.head.appendChild(metaLight);
     })();
   </script>
-
-  <link rel="canonical" href="https://aaradhyadt.github.io/about.html" />
-
-  <meta property="og:type" content="profile" />
-  <meta property="og:url" content="https://aaradhyadt.github.io/about.html" />
-  <meta property="og:locale" content="en_US" />
-  <meta property="og:site_name" content="Aaradhya Dev Tamrakar" />
-  <meta property="og:title" content="ADT | About — Aaradhya Dev Tamrakar" />
-  <meta property="og:description"
-    content="Electronics, Communication & Information Engineering student at KEC, IOE, Tribhuvan University. Bio, skills stack, education, and tools." />
-  <meta property="og:image" content="https://aaradhyadt.github.io/assets/images/og-image.jpg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:site" content="@AaradhyaDT" />
-  <meta name="twitter:creator" content="@AaradhyaDT" />
-  <meta name="twitter:title" content="ADT | About — Aaradhya Dev Tamrakar" />
-  <meta name="twitter:description"
-    content="Electronics, Communication & Information Engineering student at KEC, IOE, Tribhuvan University. Bio, skills stack, education, and tools." />
-  <meta name="twitter:image" content="https://aaradhyadt.github.io/assets/images/og-image.jpg" />
-
-  <!-- JSON-LD: Breadcrumb, ProfilePage & FAQPage -->
-  <script type="application/ld+json">
-      [
-        {
-          "@context": "https://schema.org",
-          "@type": "BreadcrumbList",
-          "itemListElement": [
-            {
-              "@type": "ListItem",
-              "position": 1,
-              "name": "Home",
-              "item": "https://aaradhyadt.github.io/"
-            },
-            {
-              "@type": "ListItem",
-              "position": 2,
-              "name": "About",
-              "item": "https://aaradhyadt.github.io/about.html"
-            }
-          ]
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "ProfilePage",
-          "@id": "https://aaradhyadt.github.io/about.html#profile",
-          "name": "About ADT — Aaradhya Dev Tamrakar",
-          "mainEntity": {
-            "@id": "https://aaradhyadt.github.io/#person"
-          },
-          "dateCreated": "2026-01-01",
-          "dateModified": "2026-08-24"
-        },
-        {
-          "@context": "https://schema.org",
-          "@type": "FAQPage",
-          "@id": "https://aaradhyadt.github.io/about.html#faq",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Who is Aaradhya Dev Tamrakar (ADT)?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Aaradhya Dev Tamrakar, widely known as ADT, is an Electronics, Communication & Information Engineering student (BEI IV/II) at Kathmandu Engineering College (IOE, Tribhuvan University). He is a Fuse AI Fellow, NSSR DataCamp Fellow, and Vice Chair at IEEE KEC KTM Student Branch."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What does ADT specialize in?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ADT specializes in embedded systems, robotics, machine learning, Edge AI (ESP32-S3 / MPU6050), and full-stack web development with Python, FastAPI, and JavaScript/React."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the SPARK project by ADT?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "SPARK is ADT's major BEI engineering project — an intelligent fall-detection wearable utilizing ESP32-S3, MPU6050 IMU, and on-device ML inference for real-time elderly emergency alerting, engineered with a four-person team."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Where is ADT based?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ADT is based in Kathmandu, Nepal, studying at Kathmandu Engineering College under the Institute of Engineering (IOE), Tribhuvan University."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What fellowships and leadership roles does ADT hold?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ADT holds the Fuse AI Fellowship (Fusemachines, 2026), NSSR DataCamp Fellowship (Cohort 2), serves as Vice Chair of the IEEE KEC KTM Student Branch, Event Manager for the Electronics & Propagation Club (EPC), and KEC Makerspace Ambassador."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How does Aaradhya Dev Tamrakar (ADT) approach AI systems building and orchestration?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ADT approaches AI systems not as shallow chatbot wrappers, but via a rigorous systems leverage cycle: identifying recurring engineering friction, modeling interface contracts, building reusable FastMCP microservices, composing capabilities into compound pipelines, and enforcing zero-token deterministic verification gates."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the 6-layer vertical systems stack across ADT's ecosystem?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Rather than disconnected horizontal projects, ADT's work spans an integrated vertical systems stack: (1) Physical Sensing & Control (SPARK, GCSBR), (2) Edge AI & Perception Fairness (BiasAperture), (3) Knowledge Systems & Sync (Super-NLM), (4) Engineering Workflow Automation (GitHub-Pilot), (5) OS-Level Agentic Control (Windows-Pilot), and (6) Kernel & Computing Environment (NovaOptimizer), unified under the Brainstorm systems control plane."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the E0–E5 evidence and verification framework used in ADT's projects?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "To prevent unverified claims and eliminate abstraction drift, ADT enforces explicit evidence tiers: E4 (physically measured on hardware or public benchmarks like SPARK 0.9185 SisFall AUC-ROC), E2/E3 (committed code with unit tests or discrete-event SimPy simulations like STRANGLER-IPU), and E0/E1 (formal neurosymbolic specifications like Headless Invariant Assurance). Simulation results are never conflated with physical measurements."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How is ADT positioned for competitive scholarships and graduate research?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ADT is positioned as an emerging Intelligent Systems / AI Systems Engineering Researcher-in-Training. Grounded in an electronics/embedded engineering foundation (BEI), he demonstrates unusually high initiative, cross-layer systems execution (silicon sensors to OS kernels), and rapid AI-assisted development velocity, paired with a commitment to deepening underlying computer architecture and mathematical depth."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What is the Systems Merging Cadence (The 3 Merges)?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "ADT governs rapid AI exploration through a recurring 6–8 week expansion-and-consolidation cycle codified in DEC-004: Merge I (Structural, Aug 7, 2026) consolidated public portfolio surfaces after the R2R Conference; Merge II (Operational, Sept–Oct 2026) triaged time and pruned branches during BEI 7th semester finals; and Merge III (Epistemic, Oct 23, 2026) locked in the calm-authority student-builder identity, verified test gates, and engineering licensure alignment."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "How can I contact or collaborate with ADT?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "You can contact ADT via his official portfolio contact page (https://aaradhyadt.github.io/contact.html), direct email at aaradhyadevtmr@gmail.com, or on LinkedIn (aaradhya-dev-tamrakar) and GitHub (AaradhyaDT)."
-              }
-            }
-          ]
+<link href="https://aaradhyadt.github.io/about.html" rel="canonical"/>
+<meta content="profile" property="og:type"/>
+<meta content="https://aaradhyadt.github.io/about.html" property="og:url"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="Aaradhya Dev Tamrakar" property="og:site_name"/>
+<meta content="ADT | About — Aaradhya Dev Tamrakar" property="og:title"/>
+<meta content="Aaradhya Dev Tamrakar: final-year electronics engineering student building applied ML, embedded AI, and reusable AI workflows. Background, engineering approach, and project examples." property="og:description"/>
+<meta content="https://aaradhyadt.github.io/assets/images/og-image.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="@AaradhyaDT" name="twitter:site"/>
+<meta content="@AaradhyaDT" name="twitter:creator"/>
+<meta content="ADT | About — Aaradhya Dev Tamrakar" name="twitter:title"/>
+<meta content="Aaradhya Dev Tamrakar: final-year electronics engineering student building applied ML, embedded AI, and reusable AI workflows. Background, engineering approach, and project examples." name="twitter:description"/>
+<meta content="https://aaradhyadt.github.io/assets/images/og-image.jpg" name="twitter:image"/>
+<!-- JSON-LD: Breadcrumb, ProfilePage & FAQPage -->
+<script type="application/ld+json">[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://aaradhyadt.github.io/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://aaradhyadt.github.io/about.html"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfilePage",
+    "@id": "https://aaradhyadt.github.io/about.html#profile",
+    "name": "About ADT — Aaradhya Dev Tamrakar",
+    "mainEntity": {
+      "@id": "https://aaradhyadt.github.io/#person"
+    },
+    "dateCreated": "2026-01-01",
+    "dateModified": "2026-08-24"
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://aaradhyadt.github.io/about.html#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Who is Aaradhya Dev Tamrakar (ADT)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Aaradhya Dev Tamrakar, widely known as ADT, is an Electronics, Communication & Information Engineering student (BEI IV/II) at Kathmandu Engineering College (IOE, Tribhuvan University). He is a Fuse AI Fellow, NSSR DataCamp Fellow, and Vice Chair at IEEE KEC KTM Student Branch."
         }
-      ]
-    </script>
-
-  <link rel="manifest" href="site.webmanifest" />
-  <link rel="apple-touch-icon" href="assets/images/photo.png" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d0e11'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='400' fill='%23d4a85a'>ADT</text></svg>" />
-
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link rel="preload" as="style"
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" />
-  <link rel="stylesheet" media="print" onload="this.media = 'all'"
-    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" />
-  <noscript>
-    <link rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" />
-  </noscript>
-
-  <link rel="preload" as="image" href="assets/images/photo.webp" type="image/webp" />
-  <!-- Critical CSS modules — loaded in parallel (eliminates @import waterfall) -->
-  <link rel="stylesheet" href="assets/css/modules/tokens.css" />
-  <link rel="stylesheet" href="assets/css/modules/base.css" />
-  <link rel="stylesheet" href="assets/css/modules/layout.css" />
-  <link rel="stylesheet" href="assets/css/modules/components.css" />
-
-  <!-- Non-critical interactive CSS modules — deferred via print/onload swap -->
-  <link rel="stylesheet" href="assets/css/modules/cmdk.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/access.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/terminal.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/tour.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/graph-modal.css" media="print" onload="this.media='all'" />
-  <link rel="stylesheet" href="assets/css/modules/print.css" media="print" />
-  <!-- Page-specific: about (bio, photo, stats, skills, education, tools) -->
-  <style>
+      },
+      {
+        "@type": "Question",
+        "name": "What does ADT specialize in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ADT specializes in embedded systems, robotics, machine learning, Edge AI (ESP32-S3 / MPU6050), and full-stack web development with Python, FastAPI, and JavaScript/React."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the SPARK project by ADT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "SPARK is ADT's major BEI engineering project — an intelligent fall-detection wearable utilizing ESP32-S3, MPU6050 IMU, and on-device ML inference for real-time elderly emergency alerting, engineered with a four-person team."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is ADT based?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ADT is based in Kathmandu, Nepal, studying at Kathmandu Engineering College under the Institute of Engineering (IOE), Tribhuvan University."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What fellowships and leadership roles does ADT hold?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ADT holds the Fuse AI Fellowship (Fusemachines, 2026), NSSR DataCamp Fellowship (Cohort 2), serves as Vice Chair of the IEEE KEC KTM Student Branch, Event Manager for the Electronics & Propagation Club (EPC), and KEC Makerspace Ambassador."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How does Aaradhya Dev Tamrakar (ADT) approach AI systems building and orchestration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I use AI for reasoning and development, then turn recurring tasks into reusable tools and deterministic checks. Reducing repeated context and unnecessary model calls is a design goal; any savings claim needs a measured baseline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you approach token efficiency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I aim to reduce repeated prompting, unnecessary model calls, and repeated setup through reusable tools and deterministic automation. This is an engineering goal; quantified savings require a measured workload and baseline."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do you communicate project evidence?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I distinguish proposed work, implemented features, simulations, benchmark results, and hardware measurements. Project results need to be read alongside their evaluation conditions and limitations."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What opportunities is Aaradhya seeking?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "I am seeking AI/ML engineering opportunities involving practical ML systems, model evaluation, embedded inference, or AI workflow automation. My electronics background supports work across software and physical systems."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact or collaborate with ADT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can contact ADT via his official portfolio contact page (https://aaradhyadt.github.io/contact.html), direct email at aaradhyadevtmr@gmail.com, or on LinkedIn (aaradhya-dev-tamrakar) and GitHub (AaradhyaDT)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the Systems Merging Cadence (The 3 Merges)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "ADT governs rapid AI exploration through a recurring 6–8 week expansion-and-consolidation cycle codified in DEC-004: Merge I (Structural, Aug 7, 2026) consolidated public portfolio surfaces after the R2R Conference; Merge II (Operational, Sept–Oct 2026) triaged time and pruned branches during BEI 7th semester finals; and Merge III (Epistemic, Oct 23, 2026) locked in the calm-authority student-builder identity, verified test gates, and engineering licensure alignment."
+        }
+      }
+    ]
+  }
+]</script>
+<link href="site.webmanifest" rel="manifest"/>
+<link href="assets/images/photo.png" rel="apple-touch-icon"/>
+<link href="data:image/svg+xml,&lt;svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'&gt;&lt;rect width='32' height='32' rx='6' fill='%230d0e11'/&gt;&lt;text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='400' fill='%23d4a85a'&gt;ADT&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="preload"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" media="print" onload="this.media = 'all'" rel="stylesheet"/>
+<noscript>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet"/>
+</noscript>
+<link as="image" href="assets/images/photo.webp" rel="preload" type="image/webp"/>
+<!-- Critical CSS modules — loaded in parallel (eliminates @import waterfall) -->
+<link href="assets/css/modules/tokens.css" rel="stylesheet"/>
+<link href="assets/css/modules/base.css" rel="stylesheet"/>
+<link href="assets/css/modules/layout.css" rel="stylesheet"/>
+<link href="assets/css/modules/components.css" rel="stylesheet"/>
+<!-- Non-critical interactive CSS modules — deferred via print/onload swap -->
+<link href="assets/css/modules/cmdk.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/access.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/terminal.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/tour.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/graph-modal.css" media="print" onload="this.media='all'" rel="stylesheet"/>
+<link href="assets/css/modules/print.css" media="print" rel="stylesheet"/>
+<!-- Page-specific: about (bio, photo, stats, skills, education, tools) -->
+<style>
     html,
     body {
       background: var(--bg);
@@ -1072,733 +1051,479 @@
     }
   </style>
 </head>
-
 <body>
-  <div id="readProgressBar" aria-hidden="true"></div>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="scroll-progress" id="scrollProgress"></div>
-
-  <div class="cursor" id="cursor">
-    <div class="cursor-ring" id="cursorRing"></div>
-    <div class="cursor-dot" id="cursorDot"></div>
-  </div>
-
-  <noscript>
-    <nav aria-label="Primary navigation"><a href="index.html" class="nav-logo">ADT<span>.</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="achievements.html">Achievements</a></li>
-        <li><a href="about.html" class="active" aria-current="page">About</a></li>
-        <li><a href="journey.html">Journey</a></li>
-      </ul>
-      <div class="nav-right"><a href="contact.html" class="nav-cta">Connect</a></div>
-    </nav>
-  </noscript>
-  <div id="siteNav"></div>
-
-  <main id="main-content">
-    <header id="page-header">
-      <div class="page-eyebrow">About</div>
-      <h1 class="page-title">The <em>Engineer</em> Behind<br />the Work</h1>
-      <p class="page-sub">
+<div aria-hidden="true" id="readProgressBar"></div>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div class="scroll-progress" id="scrollProgress"></div>
+<div class="cursor" id="cursor">
+<div class="cursor-ring" id="cursorRing"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+</div>
+<noscript>
+<nav aria-label="Primary navigation"><a class="nav-logo" href="index.html">ADT<span>.</span></a>
+<ul class="nav-links">
+<li><a href="index.html">Home</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="achievements.html">Achievements</a></li>
+<li><a aria-current="page" class="active" href="about.html">About</a></li>
+<li><a href="journey.html">Journey</a></li>
+</ul>
+<div class="nav-right"><a class="nav-cta" href="contact.html">Connect</a></div>
+</nav>
+</noscript>
+<div id="siteNav"></div>
+<main id="main-content">
+<header id="page-header">
+<div class="page-eyebrow">About</div>
+<h1 class="page-title">The <em>Engineer</em> Behind<br/>the Work</h1>
+<p class="page-sub">
         Bio, technical stack, education, and the tools I build with — from
         firmware to applied ML.
       </p>
-    </header>
-
-    <section id="about-intro" aria-label="Biography">
-      <div class="about-layout">
-        <div class="about-left-col">
-          <div class="about-photo-wrap" id="about-photo-wrap">
-            <picture>
-              <source srcset="assets/images/photo.webp" type="image/webp" />
-              <img src="assets/images/photo.png" alt="Aaradhya Dev Tamrakar" class="about-photo" loading="eager"
-                decoding="async" width="768" height="1024" fetchpriority="high" />
-            </picture>
-            <div class="about-photo-ring">
-              <svg viewBox="0 0 388 668" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
-                <path class="ring-track"
-                  d="M4,0 H384 Q388,0 388,4 V664 Q388,668 384,668 H4 Q0,668 0,664 V4 Q0,0 4,0 Z" />
-                <path class="ring-arc" d="M4,0 H384 Q388,0 388,4 V664 Q388,668 384,668 H4 Q0,668 0,664 V4 Q0,0 4,0 Z"
-                  pathLength="2120" stroke-dasharray="382 2120" />
-                <path class="ring-arc-2" d="M4,0 H384 Q388,0 388,4 V664 Q388,668 384,668 H4 Q0,668 0,664 V4 Q0,0 4,0 Z"
-                  pathLength="2120" stroke-dasharray="191 2120" stroke-dashoffset="1060" />
-              </svg>
-            </div>
-          </div>
-
-          <div class="about-stats reveal">
-            <div class="stat-row">
-              <div class="stat-num" id="live-about-year">4<span>th</span></div>
-              <div class="stat-label" id="live-about-sem-label">Year at KEC<br />IOE, TU</div>
-            </div>
-            <div class="stat-row">
-              <div class="stat-num">30<span>+</span></div>
-              <div class="stat-label">Projects<br />Shipped</div>
-            </div>
-            <div class="stat-row">
-              <div class="stat-num">2</div>
-              <div class="stat-label">Fellowships<br />&amp; Grants</div>
-            </div>
-            <div class="stat-row">
-              <div class="stat-num">8</div>
-              <div class="stat-label">Roles &amp;<br />Leadership Posts</div>
-            </div>
-          </div>
-
-          <a href="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" class="about-cv" target="_blank" rel="noopener">
+</header>
+<section aria-label="Biography" id="about-intro">
+<div class="about-layout">
+<div class="about-left-col">
+<div class="about-photo-wrap" id="about-photo-wrap">
+<picture>
+<source srcset="assets/images/photo.webp" type="image/webp"/>
+<img alt="Aaradhya Dev Tamrakar" class="about-photo" decoding="async" fetchpriority="high" height="1024" loading="eager" src="assets/images/photo.png" width="768"/>
+</picture>
+<div class="about-photo-ring">
+<svg preserveaspectratio="none" viewbox="0 0 388 668" xmlns="http://www.w3.org/2000/svg">
+<path class="ring-track" d="M4,0 H384 Q388,0 388,4 V664 Q388,668 384,668 H4 Q0,668 0,664 V4 Q0,0 4,0 Z"></path>
+<path class="ring-arc" d="M4,0 H384 Q388,0 388,4 V664 Q388,668 384,668 H4 Q0,668 0,664 V4 Q0,0 4,0 Z" pathlength="2120" stroke-dasharray="382 2120"></path>
+<path class="ring-arc-2" d="M4,0 H384 Q388,0 388,4 V664 Q388,668 384,668 H4 Q0,668 0,664 V4 Q0,0 4,0 Z" pathlength="2120" stroke-dasharray="191 2120" stroke-dashoffset="1060"></path>
+</svg>
+</div>
+</div>
+<div class="about-stats reveal">
+<div class="stat-row">
+<div class="stat-num" id="live-about-year">4<span>th</span></div>
+<div class="stat-label" id="live-about-sem-label">Year at KEC<br/>IOE, TU</div>
+</div>
+<div class="stat-row">
+<div class="stat-num">15<span>+</span></div>
+<div class="stat-label">Projects<br/>Shipped</div>
+</div>
+<div class="stat-row">
+<div class="stat-num">2</div>
+<div class="stat-label">Fellowships<br/>&amp; Grants</div>
+</div>
+<div class="stat-row">
+<div class="stat-num">8</div>
+<div class="stat-label">Roles &amp;<br/>Leadership Posts</div>
+</div>
+</div>
+<a class="about-cv" href="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" rel="noopener" target="_blank">
             Download CV ↗
           </a>
-        </div>
-
-        <div class="about-text reveal">
-          <p>
-            I'm a final-semester (BEI IV/II)
-            <strong>Electronics, Communication &amp; Information Engineering</strong>
-            student at Kathmandu Engineering College, IOE, Tribhuvan University, preparing for upcoming Nepal Engineering Council (NEC) licensure.
-            My degree covers hardware systems, signals, and communications; outside the curriculum, I use modern AI tools as high-leverage accelerators
-            to explore applied machine learning, embedded systems, and developer tooling.
-          </p>
-          <p>
-            Facing the immense academic breadth of an electronics degree, I adopted a <strong>breadth-first exploration</strong> approach.
-            Through the <strong>Fuse AI Fellowship</strong> (Fusemachines, 2026), I worked across the ML lifecycle—building an agentic Text-to-SQL pipeline,
-            tree-based models with SHAP explainability, and customer segmentation workflows. My capstone, <strong>BiasAperture</strong>, is a
-            <strong>demographic performance audit tool for vision models</strong> that evaluates group-rate disparities across intersectional cohorts.
-            In parallel, as an <strong>NSSR DataCamp Fellow</strong>, I completed applied GenAI coursework and data associate tracks.
-          </p>
-          <p>
-            For my BEI major capstone, <strong>SPARK</strong>, I lead the embedded and ML architecture in our four-person team—working on
-            an on-device fall-detection wearable combining IMU kinematics with a quantized INT8 CNN for eldercare.
-            Beyond engineering builds, I serve as <strong>Vice Chair of the IEEE KEC KTM Student Branch</strong>,
-            Event Manager at the Electronics Project Club, and a Makerspace Ambassador.
-          </p>
-          <p>
-            I believe in high leverage: I use AI tools to handle repetitive boilerplate and map complex architectures far faster than manual typing allows,
-            freeing up cognitive bandwidth to understand how systems connect. Rather than accepting generated code blindly, I use my builds as an active
-            curriculum—dissecting memory limits, checking edge cases with tests, and using my holidays to methodically deepen my foundational programming
-            and systems knowledge from the ground up.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="about-creed-strip reveal" aria-label="Engineering Creed">
-      <div class="about-creed-inner card-gradient-border">
-        <div class="about-creed-img-wrap">
-          <img src="assets/images/branding/adt-gold.webp" alt="ADT — Engineering Intelligent Systems" class="about-creed-img" data-dynamic-logo width="640" height="400" loading="lazy" decoding="async" />
-        </div>
-        <div class="about-creed-content">
-          <div class="about-creed-tag">Engineering Creed</div>
-          <h2 class="about-creed-title">Engineering Intelligent Systems</h2>
-          <p class="about-creed-desc">
-            Explore broadly with modern tools. Automate the repetitive toil. Build depth by deconstructing real systems.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="divider-wrap" aria-hidden="true">
-      <div class="divider-edge divider-edge--left"></div>
-      <div class="divider"></div>
-      <div class="divider-node"></div>
-      <div class="divider"></div>
-      <div class="divider-edge divider-edge--right"></div>
-    </div>
-
-    <section id="vertical-stack" aria-label="Vertical Systems Stack &amp; Epistemic Verification">
-      <div class="section-header reveal">
-        <div class="section-num">Architecture &amp; Methodology</div>
-        <h2 class="section-title">Vertical Stack &amp; <em>Epistemic Rigor</em></h2>
-      </div>
-      <p class="stack-lead reveal">
-        Rather than building isolated surface-level apps, ADT's ecosystem operates across an
-        <strong>integrated vertical stack</strong> — bridging physical silicon kinematics and real-time firmware up to
-        operating-system kernels, multi-agent FastMCP orchestration, and machine-checkable evidence tiers.
-      </p>
-      <div class="v-stack-grid reveal">
-        <div class="v-stack-column">
-          <div class="v-stack-card">
-            <span class="v-stack-badge">Hierarchy · Layer 1 to 7</span>
-            <h3 class="v-stack-title">The 7-Layer Systems Stack</h3>
-            <div class="v-tier-list">
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Layer 1 · Physical Sensing &amp; Control</span>
-                <span class="v-tier-text">ESP32-S3 200 Hz ISR kinematics, MPU6050 IMU calibration, and PID control in <strong>SPARK</strong> &amp; <strong>GCSBR</strong>.</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Layer 2 · Edge AI &amp; Perception</span>
-                <span class="v-tier-text">18.5 KB INT8 CNN on-device inference and demographic fairness auditing across 126 bins in <strong>BiasAperture</strong>.</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Layer 3 · Knowledge Infrastructure</span>
-                <span class="v-tier-text">Multi-account persistent querying, Drive synchronization, and research ingestion in <strong>Super-NLM</strong>.</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Layer 4 · Distributed Execution &amp; Orchestration</span>
-                <span class="v-tier-text">Distributed Service Provisioning (DSP), atomic CAS task leasing, self-healing worker supervisors, and FastMCP in <strong>Claude-Desktop</strong>.</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Layer 5 · Engineering Automation</span>
-                <span class="v-tier-text">AI-assisted git synchronization, issue routing, and ergonomic tooling in <strong>GitHub-Pilot</strong> &amp; <strong>sync.ps1</strong>.</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Layer 6 · OS Agentic Control</span>
-                <span class="v-tier-text">Native desktop automation, window orchestration, and system-level task daemons in <strong>Windows-Pilot</strong>.</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Layer 7 · Kernel &amp; Environment</span>
-                <span class="v-tier-text">Win32 NT kernel working-set and standby list management in <strong>NovaOptimizer</strong> (reclaiming 1.2–3.4 GB RAM).</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="v-stack-column">
-          <div class="v-stack-card">
-            <span class="v-stack-badge">Epistemic Standard · E0 to E5</span>
-            <h3 class="v-stack-title">Evidence-Driven Verification</h3>
-            <p class="v-stack-desc">
-              Every technical claim in this ecosystem is strictly segregated by verification tier to ensure epistemic honesty and prevent abstraction drift:
-            </p>
-            <div class="v-tier-list">
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Tier E4 · Experimentally Verified</span>
-                <span class="v-tier-text">Physical hardware or benchmark execution with empirical metrics (SPARK on-device 0.9185 SisFall AUC-ROC; BiasAperture BCa bootstrap CIs).</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Tier E3 · Implemented &amp; Simulation</span>
-                <span class="v-tier-text">Committed code with unit tests, or discrete-event queueing models (STRANGLER-IPU 4.12× latency reduction via SimPy). Never presented as physical silicon.</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Tier E0/E1 · Specification &amp; Proposed</span>
-                <span class="v-tier-text">Formal interface contracts and neurosymbolic schemas awaiting empirical test (Headless Invariant Assurance via Z3 SMT).</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Operational Autonomy Metric</span>
-                <span class="v-tier-text">Evaluated against the <em>Walk-Away Benchmark</em> and <em>Autonomy Ratio</em> (Compute Time / Human Intervention Minutes) to measure true independence from human babysitting.</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="v-stack-card" style="margin-top: 1.25rem;">
-            <span class="v-stack-badge">Evolutionary Cadence · DEC-004</span>
-            <h3 class="v-stack-title">The Systems Merging Trilogy</h3>
-            <p class="v-stack-desc">
+</div>
+<div class="about-text reveal">
+<p>I'm a final-year Electronics, Communication &amp; Information Engineering student at Kathmandu Engineering College, IOE, Tribhuvan University, based in Kathmandu, Nepal. I'm seeking <strong>AI/ML engineering opportunities</strong>, with interests in model evaluation, embedded inference, and AI workflow automation.</p>
+<p>Through the <strong>Fuse AI Fellowship</strong>, I've worked on ML pipelines, model explainability, and agentic applications. My capstone, <a href="projects.html#p-025">BiasAperture</a>, examines demographic performance gaps in facial-analysis models. In <a href="projects.html#p-018">SPARK</a>, our four-person engineering project, I lead the embedded and ML architecture for a fall-detection wearable.</p>
+<p><strong>I use AI to help build systems, and build tools to make that work repeatable.</strong> My projects include <a href="projects.html#p-040">Fleet Orchestrator</a> for coordinating AI workflows and <a href="projects.html#p-041">Agent-Customization-Sync</a> for maintaining agent configurations across IDEs. My goal is to reduce repeated prompting and unnecessary model calls by turning recurring work into reusable tools and deterministic checks.</p>
+<p>Alongside engineering, I'm an NSSR DataCamp Fellow, Vice Chair of the IEEE KEC KTM Student Branch, Event Manager at the Electronics Project Club, and a Makerspace Ambassador. I value clear ownership, reproducible work, and explaining what an evaluation does and does not establish.</p>
+</div>
+</div>
+</section>
+<div aria-label="Engineering Creed" class="about-creed-strip reveal">
+<div class="about-creed-inner card-gradient-border">
+<div class="about-creed-img-wrap">
+<img alt="ADT — Engineering Intelligent Systems" class="about-creed-img" data-dynamic-logo="" decoding="async" height="400" loading="lazy" src="assets/images/branding/adt-gold.webp" width="640"/>
+</div>
+<div class="about-creed-content">
+<div class="about-creed-tag">Engineering Creed</div>
+<h2 class="about-creed-title">Engineering Intelligent Systems</h2>
+<p class="about-creed-desc">Use AI where it adds value. Turn repeatable work into tools. Check results with tests and explicit evaluation.</p>
+</div>
+</div>
+</div>
+<div aria-hidden="true" class="divider-wrap">
+<div class="divider-edge divider-edge--left"></div>
+<div class="divider"></div>
+<div class="divider-node"></div>
+<div class="divider"></div>
+<div class="divider-edge divider-edge--right"></div>
+</div>
+<section aria-label="Engineering approach" id="vertical-stack">
+<div class="section-header reveal">
+<div class="section-num">Method</div>
+<h2 class="section-title">How I <em>Build</em></h2>
+</div>
+<p class="stack-lead reveal">My engineering approach: decide what needs model reasoning, automate repeatable steps, and make the result inspectable.</p>
+<div class="v-stack-grid reveal">
+<div class="v-stack-column"><div class="v-stack-card">
+<h3 class="v-stack-title">Efficient AI workflows</h3>
+<div class="v-tier-list">
+<div class="v-tier-item"><span class="v-tier-tag">Use models deliberately</span><span class="v-tier-text">Use AI for reasoning and development; use scripts for repeatable transformations, validation, and routine automation.</span></div>
+<div class="v-tier-item"><span class="v-tier-tag">Reuse tools and context</span><span class="v-tier-text">Build reusable interfaces and configuration tooling to avoid solving the same setup problem in every session.</span></div>
+<div class="v-tier-item"><span class="v-tier-tag">Measure before claiming savings</span><span class="v-tier-text">Reducing unnecessary token use is a design goal. Quantified savings need a workload, baseline, and recorded measurement.</span></div>
+</div>
+</div><div class="v-stack-card" style="margin-top: 1.25rem;">
+<span class="v-stack-badge">Evolutionary Cadence · DEC-004</span>
+<h3 class="v-stack-title">The Systems Merging Trilogy</h3>
+<p class="v-stack-desc">
               High-velocity breadth exploration requires deliberate, recurring convergence. ADT's ecosystem matures across disciplined ~6–8 week expansion-and-consolidation cycles ("merging branches in real life"):
             </p>
-            <div class="v-tier-list">
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Merge I · The Structural Merge (Aug 7, 2026)</span>
-                <span class="v-tier-text">Initiated at the R2R Printing Foundry Conference. Consolidated scattered tools, repos, and prototypes into a unified portfolio, live release tracking, and AES-256-GCM authenticated access.</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Merge II · The Operational Merge (Sept–Oct 2026)</span>
-                <span class="v-tier-text">Executed during IOE BEI 7th semester pre-exam lockdown. Pruned branch bloat, instituted CPM critical-path scheduling, and enforced hard boundaries between academic exams and R&amp;D.</span>
-              </div>
-              <div class="v-tier-item">
-                <span class="v-tier-tag">Merge III · The Epistemic Merge (Oct 23, 2026)</span>
-                <span class="v-tier-text">Reconciled high-leverage AI prototyping with zero-AI recall reality. Established the calm-authority student-builder narrative, multi-worker fleet governance, and direct alignment for 8th sem capstone &amp; NEC licensure.</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-wrap" aria-hidden="true">
-      <div class="divider-edge divider-edge--left"></div>
-      <div class="divider"></div>
-      <div class="divider-node"></div>
-      <div class="divider"></div>
-      <div class="divider-edge divider-edge--right"></div>
-    </div>
-
-    <section id="skills" aria-label="Skills and technical stack">
-      <div class="section-header reveal">
-        <div class="section-num">Stack</div>
-        <h2 class="section-title">Tools I <em>Reach For</em></h2>
-      </div>
-      <div class="skills-layout">
-        <div class="skill-group reveal">
-          <div class="skill-group-title">Programming Languages</div>
-          <div class="skill-list">
-            <div class="skill-row">
-              <span class="skill-name">Python</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot filled"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">C / C++</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot filled"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">SQL</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot filled"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">Kotlin</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">VHDL</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">JavaScript / React</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <div class="skill-group-title">Machine Learning</div>
-          <div class="skill-list">
-            <div class="skill-row">
-              <span class="skill-name">scikit-learn / Pandas</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot filled"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">XGBoost / SHAP</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot filled"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">Clustering (K-Means/DBSCAN)</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot filled"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">PyMC / Bayesian Inference</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">FastAPI / Docker</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot filled"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="skill-group reveal">
-          <div class="skill-group-title">Embedded &amp; Android</div>
-          <div class="skill-list">
-            <div class="skill-row">
-              <span class="skill-name">Arduino / MCU</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot filled"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">FPGA / Vivado</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">Jetpack Compose</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">CameraX / MediaPipe</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot"></span>
-              </div>
-            </div>
-            <div class="skill-row">
-              <span class="skill-name">MPU6050 / ESP32-S3</span>
-              <div class="skill-dots">
-                <span class="skill-dot filled"></span><span class="skill-dot filled"></span><span
-                  class="skill-dot"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skill-radar" class="skill-radar-section" aria-label="Interactive Skill Radar">
-      <div class="section-header reveal">
-        <div class="section-num">Radar</div>
-        <h2 class="section-title">Domain Competency <em>Radar</em></h2>
-      </div>
-      <div class="skill-radar-card reveal">
-        <div class="skill-radar-header">
-          <div class="skill-radar-title-group">
-            <h2>Interactive Skill Radar</h2>
-            <p>6-Axis Breakdown of Engineering Competency, Toolstacks &amp; Signal Processing</p>
-          </div>
-          <button type="button" class="resume-print-btn" onclick="if(typeof openResumeGenerator==='function')openResumeGenerator()" aria-label="Generate ATS Resume and Export PDF">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-              <polyline points="14 2 14 8 20 8"/>
-              <line x1="16" y1="13" x2="8" y2="13"/>
-              <line x1="16" y1="17" x2="8" y2="17"/>
-              <polyline points="10 9 9 9 8 9"/>
-            </svg>
-            <span>Generate ATS Resume / Export PDF</span>
-          </button>
-        </div>
-        <div class="radar-layout-grid">
-          <div class="radar-canvas-container">
-            <canvas id="skillRadarCanvas" class="radar-canvas" width="300" height="300"></canvas>
-          </div>
-          <div class="radar-domains-list">
-            <div class="domain-item active" data-domain="0">
-              <div class="domain-item-head">
-                <span>AI/ML &amp; GenAI</span>
-                <span class="domain-score">94%</span>
-              </div>
-              <div class="domain-desc">Transformers, PyTorch, Agentic AI, RAG Pipelines, SHAP Explainability, Scikit-Learn</div>
-              <div class="domain-tech-tags">
-                <span class="domain-tech-tag">PyTorch</span>
-                <span class="domain-tech-tag">Agentic RAG</span>
-                <span class="domain-tech-tag">Transformers</span>
-                <span class="domain-tech-tag">FastAPI</span>
-              </div>
-            </div>
-            <div class="domain-item" data-domain="1">
-              <div class="domain-item-head">
-                <span>Embedded C/C++</span>
-                <span class="domain-score">90%</span>
-              </div>
-              <div class="domain-desc">FreeRTOS multi-threading, ESP32, STM32, ARM Cortex-M, SPI/I2C/UART bus tuning</div>
-              <div class="domain-tech-tags">
-                <span class="domain-tech-tag">FreeRTOS</span>
-                <span class="domain-tech-tag">ESP32</span>
-                <span class="domain-tech-tag">C++20</span>
-                <span class="domain-tech-tag">Micro-Controllers</span>
-              </div>
-            </div>
-            <div class="domain-item" data-domain="2">
-              <div class="domain-item-head">
-                <span>Electronics &amp; PCB</span>
-                <span class="domain-score">92%</span>
-              </div>
-              <div class="domain-desc">KiCAD Multi-Layer PCB layout, Active analog signal filters, IMU MPU6050 calibration</div>
-              <div class="domain-tech-tags">
-                <span class="domain-tech-tag">KiCAD</span>
-                <span class="domain-tech-tag">SPARK</span>
-                <span class="domain-tech-tag">Analog Circuits</span>
-                <span class="domain-tech-tag">PCB Design</span>
-              </div>
-            </div>
-            <div class="domain-item" data-domain="3">
-              <div class="domain-item-head">
-                <span>Full-Stack Web</span>
-                <span class="domain-score">88%</span>
-              </div>
-              <div class="domain-desc">Modern JS (ES6+), PWA Offline Caching, Web Audio API synthesis, Web Crypto PBKDF2</div>
-              <div class="domain-tech-tags">
-                <span class="domain-tech-tag">JavaScript</span>
-                <span class="domain-tech-tag">PWA</span>
-                <span class="domain-tech-tag">Web Audio API</span>
-                <span class="domain-tech-tag">REST API</span>
-              </div>
-            </div>
-            <div class="domain-item" data-domain="4">
-              <div class="domain-item-head">
-                <span>Data Science &amp; Omics</span>
-                <span class="domain-score">89%</span>
-              </div>
-              <div class="domain-desc">Pandas/NumPy, GCSBR high-dimensional biological array modeling, statistical inference</div>
-              <div class="domain-tech-tags">
-                <span class="domain-tech-tag">Pandas</span>
-                <span class="domain-tech-tag">NumPy</span>
-                <span class="domain-tech-tag">GCSBR</span>
-                <span class="domain-tech-tag">Bioinformatics</span>
-              </div>
-            </div>
-            <div class="domain-item" data-domain="5">
-              <div class="domain-item-head">
-                <span>Leadership &amp; Applied Strategy</span>
-                <span class="domain-score">91%</span>
-              </div>
-              <div class="domain-desc">IEEE event ops &amp; mentorship, security-first risk framing, agile delivery, cross-functional case studies</div>
-              <div class="domain-tech-tags">
-                <span class="domain-tech-tag">IEEE Ops</span>
-                <span class="domain-tech-tag">Mentorship</span>
-                <span class="domain-tech-tag">Security Mindset</span>
-                <span class="domain-tech-tag">Agile</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-wrap" aria-hidden="true">
-      <div class="divider-edge divider-edge--left"></div>
-      <div class="divider"></div>
-      <div class="divider-node"></div>
-      <div class="divider"></div>
-      <div class="divider-edge divider-edge--right"></div>
-    </div>
-
-    <section id="education" aria-label="Education">
-      <div class="section-header reveal">
-        <div class="section-num">Education</div>
-        <h2 class="section-title">Where I <em>Learned</em> This</h2>
-      </div>
-      <div class="edu-card reveal">
-        <div>
-          <div class="edu-degree">
+<div class="v-tier-list">
+<div class="v-tier-item">
+<span class="v-tier-tag">Merge I · The Structural Merge (Aug 7, 2026)</span>
+<span class="v-tier-text">Initiated at the R2R Printing Foundry Conference. Consolidated scattered tools, repos, and prototypes into a unified portfolio, live release tracking, and AES-256-GCM authenticated access.</span>
+</div>
+<div class="v-tier-item">
+<span class="v-tier-tag">Merge II · The Operational Merge (Sept–Oct 2026)</span>
+<span class="v-tier-text">Executed during IOE BEI 7th semester pre-exam lockdown. Pruned branch bloat, instituted CPM critical-path scheduling, and enforced hard boundaries between academic exams and R&amp;D.</span>
+</div>
+<div class="v-tier-item">
+<span class="v-tier-tag">Merge III · The Epistemic Merge (Oct 23, 2026)</span>
+<span class="v-tier-text">Reconciled high-leverage AI prototyping with zero-AI recall reality. Established the calm-authority student-builder narrative, multi-worker fleet governance, and direct alignment for 8th sem capstone &amp; NEC licensure.</span>
+</div>
+</div>
+</div></div>
+<div class="v-stack-column"><div class="v-stack-card">
+<h3 class="v-stack-title">Evaluation and verification</h3>
+<div class="v-tier-list">
+<div class="v-tier-item"><span class="v-tier-tag">Define the question</span><span class="v-tier-text">State the task, dataset, evaluation conditions, and limits before interpreting a metric.</span></div>
+<div class="v-tier-item"><span class="v-tier-tag">Make work reproducible</span><span class="v-tier-text">Use explicit configurations, tests, and traceable artifacts so results can be checked.</span></div>
+<div class="v-tier-item"><span class="v-tier-tag">Keep evidence in context</span><span class="v-tier-text">Distinguish implemented features, simulations, benchmark results, hardware measurements, and proposed work.</span></div>
+</div>
+</div></div>
+</div>
+</section>
+<div aria-hidden="true" class="divider-wrap">
+<div class="divider-edge divider-edge--left"></div>
+<div class="divider"></div>
+<div class="divider-node"></div>
+<div class="divider"></div>
+<div class="divider-edge divider-edge--right"></div>
+</div>
+<section aria-label="Skills and technical stack" id="skills">
+<div class="section-header reveal">
+<div class="section-num">Stack</div>
+<h2 class="section-title">Tools I <em>Reach For</em></h2>
+</div>
+<div class="skills-layout">
+<div class="skill-group reveal">
+<div class="skill-group-title">Programming Languages</div>
+<div class="skill-list">
+<div class="skill-row">
+<span class="skill-name">Python</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">C / C++</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">SQL</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">Kotlin</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">VHDL</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">JavaScript / React</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="skill-group reveal">
+<div class="skill-group-title">Machine Learning</div>
+<div class="skill-list">
+<div class="skill-row">
+<span class="skill-name">scikit-learn / Pandas</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">XGBoost / SHAP</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">Clustering (K-Means/DBSCAN)</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">PyMC / Bayesian Inference</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">FastAPI / Docker</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span>
+</div>
+</div>
+</div>
+</div>
+<div class="skill-group reveal">
+<div class="skill-group-title">Embedded &amp; Android</div>
+<div class="skill-list">
+<div class="skill-row">
+<span class="skill-name">Arduino / MCU</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot filled"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">FPGA / Vivado</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">Jetpack Compose</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">CameraX / MediaPipe</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span>
+</div>
+</div>
+<div class="skill-row">
+<span class="skill-name">MPU6050 / ESP32-S3</span>
+<div class="skill-dots">
+<span class="skill-dot filled"></span><span class="skill-dot filled"></span><span class="skill-dot"></span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section aria-label="Capabilities and project examples" class="skill-radar-section" id="skill-radar">
+<div class="section-header reveal"><div class="section-num">Practice</div><h2 class="section-title">Capabilities in <em>Context</em></h2></div>
+<div class="skill-radar-card reveal"><p>Explore the work behind each capability, including project status and supporting artifacts.</p><div class="radar-domains-list"><div class="domain-item"><div class="domain-item-head"><span>Model evaluation</span></div><div class="domain-desc">Vision-model demographic performance auditing and reporting. <a href="projects.html#p-025">Explore BiasAperture →</a></div></div>
+<div class="domain-item"><div class="domain-item-head"><span>Embedded AI</span></div><div class="domain-desc">Sensor processing and on-device inference for a fall-detection wearable. <a href="projects.html#p-018">Explore SPARK →</a></div></div>
+<div class="domain-item"><div class="domain-item-head"><span>AI workflow infrastructure</span></div><div class="domain-desc">Coordination tooling for multi-provider AI workflows. <a href="projects.html#p-040">Explore Fleet Orchestrator →</a></div></div>
+<div class="domain-item"><div class="domain-item-head"><span>Developer automation</span></div><div class="domain-desc">Configuration snapshots, restore, and drift audits across IDEs. <a href="projects.html#p-041">Explore Agent-Customization-Sync →</a></div></div></div></div>
+</section>
+<div aria-hidden="true" class="divider-wrap">
+<div class="divider-edge divider-edge--left"></div>
+<div class="divider"></div>
+<div class="divider-node"></div>
+<div class="divider"></div>
+<div class="divider-edge divider-edge--right"></div>
+</div>
+<section aria-label="Education" id="education">
+<div class="section-header reveal">
+<div class="section-num">Education</div>
+<h2 class="section-title">Where I <em>Learned</em> This</h2>
+</div>
+<div class="edu-card reveal">
+<div>
+<div class="edu-degree">
             Bachelor of Electronics, Communication &amp; Information
             Engineering
           </div>
-          <div class="edu-school">
+<div class="edu-school">
             Kathmandu Engineering College (KEC), IOE, Tribhuvan University
           </div>
-          <p class="edu-meta" id="live-edu-meta">
-            <strong>Year IV / Part II</strong> — 8th Semester (Final Semester) · Expected
+<p class="edu-meta" id="live-edu-meta">
+<strong>Year IV / Part II</strong> — 8th Semester (Final Semester) · Expected
             graduation <strong>January 2027</strong>. Current focus: Ingress Processing Unit (IPU)
             hardware-software co-design, Edge-AI fall detection (SPARK), and vision fairness auditing (BiasAperture).
           </p>
-        </div>
-        <div>
-          <div class="edu-subjects-title" id="live-subjects-title">8th Semester Coursework</div>
-          <div class="edu-tags" id="live-edu-tags">
-            <span class="tag">Telecommunications</span>
-            <span class="tag">Professional Practice</span>
-            <span class="tag">Energy, Environment &amp; Society</span>
-            <span class="tag">Information Systems</span>
-            <span class="tag">Elective II (EX 765)</span>
-            <span class="tag">Elective III (EX 785)</span>
-            <span class="tag">Project Part B — SPARK</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-wrap" aria-hidden="true">
-      <div class="divider-edge divider-edge--left"></div>
-      <div class="divider"></div>
-      <div class="divider-node"></div>
-      <div class="divider"></div>
-      <div class="divider-edge divider-edge--right"></div>
-    </div>
-
-    <section id="tools" aria-label="Tools and workflow">
-      <div class="section-header reveal">
-        <div class="section-num">Workflow</div>
-        <h2 class="section-title">What's in the <em>Toolbox</em></h2>
-      </div>
-      <div class="tools-row reveal">
-        <span class="tool-chip">Git &amp; GitHub</span>
-        <span class="tool-chip">VS Code</span>
-        <span class="tool-chip">Jupyter Notebook</span>
-        <span class="tool-chip">Google Colab</span>
-        <span class="tool-chip">MATLAB</span>
-        <span class="tool-chip">LaTeX / Overleaf</span>
-        <span class="tool-chip">SimPy</span>
-        <span class="tool-chip">FastAPI</span>
-        <span class="tool-chip">TFLite Micro</span>
-        <span class="tool-chip">Docker</span>
-        <span class="tool-chip">PostgreSQL</span>
-        <span class="tool-chip">Ollama (Local LLM)</span>
-        <span class="tool-chip">Vivado</span>
-      </div>
-    </section>
-
-    <div class="divider-wrap" aria-hidden="true">
-      <div class="divider-edge divider-edge--left"></div>
-      <div class="divider"></div>
-      <div class="divider-node"></div>
-      <div class="divider"></div>
-      <div class="divider-edge divider-edge--right"></div>
-    </div>
-
-    <section id="itinerary" aria-label="Schedule and itinerary">
-      <div class="section-header reveal">
-        <div class="section-num">Schedule</div>
-        <h2 class="section-title">What's on the <em>Itinerary</em></h2>
-      </div>
-      <div class="reveal itinerary-frame">
-        <!-- Top accent corners -->
-        <span class="itinerary-corner itinerary-corner--top"></span>
-        <span class="itinerary-corner itinerary-corner--bottom"></span>
-        <iframe
-          class="cal-iframe"
-          src="https://calendar.google.com/calendar/embed?src=2f44cd9255fc14fd5827f3b332671b0a3dd50fafd5c8bd5a04c57f1bb5a03aed%40group.calendar.google.com&ctz=Asia%2FKathmandu&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&mode=AGENDA&bgcolor=%23ffffff&color=%23d4a85a"
-          frameborder="0"
-          scrolling="no"
-          title="Aaradhya Dev Tamrakar — Schedule & Itinerary"
-          aria-label="Google Calendar: Aaradhya Dev Tamrakar's schedule"
-          loading="lazy"
-        ></iframe>
-      </div>
-      <p class="itinerary-note">
+</div>
+<div>
+<div class="edu-subjects-title" id="live-subjects-title">8th Semester Coursework</div>
+<div class="edu-tags" id="live-edu-tags">
+<span class="tag">Telecommunications</span>
+<span class="tag">Professional Practice</span>
+<span class="tag">Energy, Environment &amp; Society</span>
+<span class="tag">Information Systems</span>
+<span class="tag">Elective II (EX 765)</span>
+<span class="tag">Elective III (EX 785)</span>
+<span class="tag">Project Part B — SPARK</span>
+</div>
+</div>
+</div>
+</section>
+<div aria-hidden="true" class="divider-wrap">
+<div class="divider-edge divider-edge--left"></div>
+<div class="divider"></div>
+<div class="divider-node"></div>
+<div class="divider"></div>
+<div class="divider-edge divider-edge--right"></div>
+</div>
+<section aria-label="Tools and workflow" id="tools">
+<div class="section-header reveal">
+<div class="section-num">Workflow</div>
+<h2 class="section-title">What's in the <em>Toolbox</em></h2>
+</div>
+<div class="tools-row reveal">
+<span class="tool-chip">Git &amp; GitHub</span>
+<span class="tool-chip">VS Code</span>
+<span class="tool-chip">Jupyter Notebook</span>
+<span class="tool-chip">Google Colab</span>
+<span class="tool-chip">MATLAB</span>
+<span class="tool-chip">LaTeX / Overleaf</span>
+<span class="tool-chip">SimPy</span>
+<span class="tool-chip">FastAPI</span>
+<span class="tool-chip">TFLite Micro</span>
+<span class="tool-chip">Docker</span>
+<span class="tool-chip">PostgreSQL</span>
+<span class="tool-chip">Ollama (Local LLM)</span>
+<span class="tool-chip">Vivado</span>
+</div>
+</section>
+<div aria-hidden="true" class="divider-wrap">
+<div class="divider-edge divider-edge--left"></div>
+<div class="divider"></div>
+<div class="divider-node"></div>
+<div class="divider"></div>
+<div class="divider-edge divider-edge--right"></div>
+</div>
+<section aria-label="Schedule and itinerary" id="itinerary">
+<div class="section-header reveal">
+<div class="section-num">Schedule</div>
+<h2 class="section-title">What's on the <em>Itinerary</em></h2>
+</div>
+<div class="reveal itinerary-frame">
+<!-- Top accent corners -->
+<span class="itinerary-corner itinerary-corner--top"></span>
+<span class="itinerary-corner itinerary-corner--bottom"></span>
+<iframe aria-label="Google Calendar: Aaradhya Dev Tamrakar's schedule" class="cal-iframe" frameborder="0" loading="lazy" scrolling="no" src="https://calendar.google.com/calendar/embed?src=2f44cd9255fc14fd5827f3b332671b0a3dd50fafd5c8bd5a04c57f1bb5a03aed%40group.calendar.google.com&amp;ctz=Asia%2FKathmandu&amp;showTitle=0&amp;showNav=1&amp;showDate=1&amp;showPrint=0&amp;showTabs=1&amp;showCalendars=0&amp;mode=AGENDA&amp;bgcolor=%23ffffff&amp;color=%23d4a85a" title="Aaradhya Dev Tamrakar — Schedule &amp; Itinerary"></iframe>
+</div>
+<p class="itinerary-note">
         Public schedule — events may be added or removed at any time. All times are NPT (UTC+5:45).
       </p>
-    </section>
-
-    <section id="faq" aria-label="Frequently Asked Questions">
-      <div class="section-header reveal">
-        <div class="section-num">FAQ</div>
-        <h2 class="section-title">Frequently Asked <em>Questions</em></h2>
-      </div>
-      <div class="faq-grid reveal">
-        <div class="faq-card">
-          <h3>Who is Aaradhya Dev Tamrakar (ADT)?</h3>
-          <p>
+</section>
+<section aria-label="Frequently Asked Questions" id="faq">
+<div class="section-header reveal">
+<div class="section-num">FAQ</div>
+<h2 class="section-title">Frequently Asked <em>Questions</em></h2>
+</div>
+<div class="faq-grid reveal">
+<div class="faq-card">
+<h3>Who is Aaradhya Dev Tamrakar (ADT)?</h3>
+<p>
             Aaradhya Dev Tamrakar (known as <strong>ADT</strong>) is an Electronics, Communication &amp; Information Engineering student at Kathmandu Engineering College, IOE. He is a Fuse AI Fellow, NSSR DataCamp Fellow, and IEEE KEC KTM Vice Chair.
           </p>
-        </div>
-        <div class="faq-card">
-          <h3>What does ADT specialize in?</h3>
-          <p>
+</div>
+<div class="faq-card">
+<h3>What does ADT specialize in?</h3>
+<p>
             ADT builds intelligent systems at the intersection of embedded firmware (C/C++), robotics, machine learning (Python/PyTorch/scikit-learn), Edge AI (ESP32-S3), and web backends (FastAPI).
           </p>
-        </div>
-        <div class="faq-card">
-          <h3>What is the SPARK project?</h3>
-          <p>
+</div>
+<div class="faq-card">
+<h3>What is the SPARK project?</h3>
+<p>
             SPARK is ADT's major BEI engineering project — an IoT fall-detection wearable featuring an ESP32-S3 microcontroller, MPU6050 IMU sensor, and on-device ML inference for real-time safety monitoring, developed with a four-person team.
           </p>
-        </div>
-        <div class="faq-card">
-          <h3>Where is ADT based?</h3>
-          <p>
+</div>
+<div class="faq-card">
+<h3>Where is ADT based?</h3>
+<p>
             ADT is based in Kathmandu, Nepal, pursuing his Bachelor's degree at Kathmandu Engineering College, affiliated with the Institute of Engineering (IOE), Tribhuvan University.
           </p>
-        </div>
-        <div class="faq-card">
-          <h3>What fellowships and roles does ADT hold?</h3>
-          <p>
+</div>
+<div class="faq-card">
+<h3>What fellowships and roles does ADT hold?</h3>
+<p>
             ADT is a Fuse AI Fellow (Fusemachines), NSSR DataCamp Fellow, Vice Chair at IEEE KEC KTM Student Branch, EPC Event Manager, and KEC Makerspace Ambassador.
           </p>
-        </div>
-        <div class="faq-card">
-          <h3>How does ADT approach AI systems building and orchestration?</h3>
-          <p>
-            ADT approaches AI not as an isolated chatbot wrapper, but through an engineering <strong>systems leverage cycle</strong>: observe recurring friction $\longrightarrow$ model interface contracts $\longrightarrow$ engineer reusable FastMCP microservices $\longrightarrow$ compose capabilities into autonomous compound pipelines $\longrightarrow$ verify deterministically with zero-token gates.
-          </p>
-        </div>
-        <div class="faq-card">
-          <h3>What is the 7-layer vertical systems stack across ADT's ecosystem?</h3>
-          <p>
-            ADT's ecosystem spans an integrated vertical stack from physical silicon up to the OS: (1) Physical Sensing &amp; Control (SPARK, GCSBR) $\rightarrow$ (2) Perception &amp; Fairness (BiasAperture) $\rightarrow$ (3) Knowledge Systems &amp; Sync (Super-NLM) $\rightarrow$ (4) Distributed Execution &amp; DSP Fabric (Claude-Desktop) $\rightarrow$ (5) Workflow Automation (GitHub-Pilot) $\rightarrow$ (6) OS-Level Agentic Control (Windows-Pilot) $\rightarrow$ (7) Kernel &amp; Computing Environment (NovaOptimizer), unified under Brainstorm.
-          </p>
-        </div>
-        <div class="faq-card">
-          <h3>What is the E0–E5 evidence and verification framework?</h3>
-          <p>
-            To prevent unverified claims and eliminate abstraction drift, ADT maps every capability to explicit evidence tiers: E4 (physically measured on hardware or benchmarks), E2/E3 (committed code with unit tests or discrete-event SimPy simulations), and E0/E1 (formal specification). Simulation results are never conflated with physical measurements.
-          </p>
-        </div>
-        <div class="faq-card">
-          <h3>How is ADT positioned for competitive scholarships and graduate research?</h3>
-          <p>
-            ADT is positioned as an <strong>Intelligent Systems / AI Systems Engineering Researcher-in-Training</strong> who combines an electronics/embedded engineering foundation with proven systems-building initiative, rapid AI-assisted development velocity, and an active commitment to deepening foundational computer architecture and mathematical depth.
-          </p>
-        </div>
-        <div class="faq-card">
-          <h3>What is the Systems Merging Cadence (The 3 Merges)?</h3>
-          <p>
-            To prevent unconstrained architectural sprawl during rapid AI exploration, ADT follows an intentional ~6 to 8-week expansion-and-consolidation cadence (<a href="https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/blob/main/research/decisions/DEC-004-THE-SYSTEMS-MERGING-TRILOGY.md" target="_blank" rel="noopener">DEC-004</a>): <strong>Merge I (Structural)</strong> unified public portfolio surfaces after the R2R Conference; <strong>Merge II (Operational)</strong> triaged academic deadlines during BEI pre-exam lockdown; and <strong>Merge III (Epistemic)</strong> grounded AI leverage, verified test gates, and engineering licensure alignment.
-          </p>
-        </div>
-        <div class="faq-card">
-          <h3>How can I contact ADT?</h3>
-          <p>
+</div>
+<div class="faq-card">
+<h3>How does Aaradhya use AI in engineering?</h3><p>I use AI for reasoning and development, then turn recurring tasks into reusable tools and deterministic checks. Reducing repeated context and unnecessary model calls is a design goal; any savings claim needs a measured baseline.</p>
+</div>
+<div class="faq-card"><h3>How do you approach token efficiency?</h3><p>I aim to reduce repeated prompting, unnecessary model calls, and repeated setup through reusable tools and deterministic automation. This is an engineering goal; quantified savings require a measured workload and baseline.</p></div>
+<div class="faq-card"><h3>How do you communicate project evidence?</h3><p>I distinguish proposed work, implemented features, simulations, benchmark results, and hardware measurements. Project results need to be read alongside their evaluation conditions and limitations.</p></div>
+<div class="faq-card">
+<h3>What opportunities is Aaradhya seeking?</h3>
+<p>I am seeking AI/ML engineering opportunities involving practical ML systems, model evaluation, embedded inference, or AI workflow automation. My electronics background supports work across software and physical systems.</p>
+</div>
+<div class="faq-card">
+<h3>How can I contact ADT?</h3>
+<p>
             Reach out via the <a href="contact.html">Contact Page</a>, email <a href="mailto:aaradhyadevtmr@gmail.com">aaradhyadevtmr@gmail.com</a>, or via LinkedIn and GitHub (@AaradhyaDT).
           </p>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider-wrap" aria-hidden="true">
-      <div class="divider-edge divider-edge--left"></div>
-      <div class="divider"></div>
-      <div class="divider-node"></div>
-      <div class="divider"></div>
-      <div class="divider-edge divider-edge--right"></div>
-    </div>
-
-    <section id="quick-nav" aria-label="Explore the site">
-      <div class="section-header reveal">
-        <div class="section-num">Explore</div>
-        <h2 class="section-title">Where to <em>look next</em></h2>
-      </div>
-      <div class="quick-nav-grid reveal" id="quickNavGrid"></div>
-    </section>
-  </main>
-
-  <button class="back-top" id="backTop" aria-label="Back to top">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-      stroke-linejoin="round">
-      <polyline points="18 15 12 9 6 15" />
-    </svg>
-  </button>
-  <button class="back-top audio-toggle" id="audioToggle" aria-label="Toggle UI sound effects" aria-pressed="false" title="Toggle sound (Shift+A)">
-    <svg class="audio-icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-      <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
-      <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
-    </svg>
-    <svg class="audio-icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-      <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
-      <line x1="23" y1="9" x2="17" y2="15"/>
-      <line x1="17" y1="9" x2="23" y2="15"/>
-    </svg>
-  </button>
-  <div class="scroll-pct" id="scrollPct" aria-hidden="true">0%</div>
-
-  <footer role="contentinfo">
-    <noscript>
-      <div class="footer-inner" style="padding: 1.5rem 2rem; border-top: 1px solid var(--line, #30363d); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-family: var(--sans, sans-serif); font-size: 0.85rem; color: var(--muted, #8b949e);">
-        <div><strong>ADT.</strong> — Aaradhya Dev Tamrakar · Electronics &amp; AI/ML Engineer</div>
-        <div>
-          <a href="privacy.html" style="color: var(--accent, #58a6ff);">Privacy Policy</a> · <a href="terms.html" style="color: var(--accent, #58a6ff);">Terms of Service</a>
-        </div>
-      </div>
-    </noscript>
-    <div id="siteFooter"></div>
-  </footer>
-
-  <!-- Early discovery for dynamically-loaded JS modules -->
-  <link rel="preload" href="assets/js/modules/core.js" as="script" />
-  <link rel="preload" href="assets/js/modules/ui.js" as="script" />
-
-  <script src="assets/js/script.js" defer></script>
-  <!-- Live date auto-update: BEI semester + subjects -->
-  <script>
+</div>
+<div class="faq-card">
+<h3>What is the Systems Merging Cadence (The 3 Merges)?</h3>
+<p>
+            To prevent unconstrained architectural sprawl during rapid AI exploration, ADT follows an intentional ~6 to 8-week expansion-and-consolidation cadence (<a href="https://github.com/Aaradhya-Dev-Tamrakar/brainstorm/blob/main/research/decisions/DEC-004-THE-SYSTEMS-MERGING-TRILOGY.md" rel="noopener" target="_blank">DEC-004</a>): <strong>Merge I (Structural)</strong> unified public portfolio surfaces after the R2R Conference; <strong>Merge II (Operational)</strong> triaged academic deadlines during BEI pre-exam lockdown; and <strong>Merge III (Epistemic)</strong> grounded AI leverage, verified test gates, and engineering licensure alignment.
+          </p>
+</div></div>
+</section>
+<div aria-hidden="true" class="divider-wrap">
+<div class="divider-edge divider-edge--left"></div>
+<div class="divider"></div>
+<div class="divider-node"></div>
+<div class="divider"></div>
+<div class="divider-edge divider-edge--right"></div>
+</div>
+<section aria-label="Explore the site" id="quick-nav">
+<div class="section-header reveal">
+<div class="section-num">Explore</div>
+<h2 class="section-title">Where to <em>look next</em></h2>
+</div>
+<div class="quick-nav-grid reveal" id="quickNavGrid"></div>
+</section>
+</main>
+<button aria-label="Back to top" class="back-top" id="backTop">
+<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<polyline points="18 15 12 9 6 15"></polyline>
+</svg>
+</button>
+<button aria-label="Toggle UI sound effects" aria-pressed="false" class="back-top audio-toggle" id="audioToggle" title="Toggle sound (Shift+A)">
+<svg aria-hidden="true" class="audio-icon-on" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+<path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+</svg>
+<svg aria-hidden="true" class="audio-icon-off" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewbox="0 0 24 24">
+<polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+<line x1="23" x2="17" y1="9" y2="15"></line>
+<line x1="17" x2="23" y1="9" y2="15"></line>
+</svg>
+</button>
+<div aria-hidden="true" class="scroll-pct" id="scrollPct">0%</div>
+<footer role="contentinfo">
+<noscript>
+<div class="footer-inner" style="padding: 1.5rem 2rem; border-top: 1px solid var(--line, #30363d); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-family: var(--sans, sans-serif); font-size: 0.85rem; color: var(--muted, #8b949e);">
+<div><strong>ADT.</strong> — Aaradhya Dev Tamrakar · Electronics &amp; AI/ML Engineer</div>
+<div>
+<a href="privacy.html" style="color: var(--accent, #58a6ff);">Privacy Policy</a> · <a href="terms.html" style="color: var(--accent, #58a6ff);">Terms of Service</a>
+</div>
+</div>
+</noscript>
+<div id="siteFooter"></div>
+</footer>
+<!-- Early discovery for dynamically-loaded JS modules -->
+<link as="script" href="assets/js/modules/core.js" rel="preload"/>
+<link as="script" href="assets/js/modules/ui.js" rel="preload"/>
+<script defer="" src="assets/js/script.js"></script>
+<!-- Live date auto-update: BEI semester + subjects -->
+<script>
     document.addEventListener('DOMContentLoaded', function () {
       if (!window.applyLiveDates) return;
       applyLiveDates({
@@ -1825,5 +1550,4 @@
     });
   </script>
 </body>
-
 </html>

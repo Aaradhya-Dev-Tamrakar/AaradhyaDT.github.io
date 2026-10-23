@@ -1,0 +1,12 @@
+[OK] Customization Snapshot Created Successfully
+  Snapshot ID   : snapshot_20261023_055452_portfolio-example
+  Archive Path  : <example-workspace>\sample-snapshots\snapshot_20261023_055452_portfolio-example.zip
+  SHA-256 Root  : 670c26aa189ac72eda3235099d715e745b5a0beaa0159f3de3a81c4b68129326
+  Token Overhead: 20 tokens
+  Archive Size  : 718 bytes
+
+[OK] Customization State Restored Successfully
+  Snapshot ID       : snapshot_20261023_055452_portfolio-example
+  Target Directory  : <example-workspace>\sample-restored
+  Restored Files    : 1
+  Integrity Verified: PASS

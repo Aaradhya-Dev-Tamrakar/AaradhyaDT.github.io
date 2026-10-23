@@ -1,0 +1,17 @@
+{
+  "id": "p-020",
+  "slug": "crypto",
+  "caption": "Actual solver run \u00b7 SEND + MORE = MONEY and all TWO + TWO = FOUR solutions",
+  "type": "command",
+  "artifact": "output.html",
+  "source_file": "crypto.html",
+  "source_sha256": "b46a92d50e84c4747e565c28f1a6c5a43e7ff1b6917eb4e54909ca30fd9e4666",
+  "source_revision": "a7a06c4f5a4e1bf2a226226ba743d5cd0d669953",
+  "source_state": "clean",
+  "captured_at": "2026-10-23T05:54:54.015412+00:00",
+  "dimensions": [
+    1439,
+    510
+  ],
+  "capture_sha256": "0f3d42c17114626be9083197cd694099c8257d859aa31d61d9b4c14b093c0e05"
+}

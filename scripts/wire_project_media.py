@@ -203,18 +203,18 @@ Your browser doesn't support embedded video.
         slug = meta["slug"]
         raw_title = meta["title"]
         clean_title = raw_title.replace("—", "–").replace("\u2014", "–")
-        alt_text = f"{clean_title} — Working Execution Proof"
+        alt_text = f"{clean_title} — Project Artifact"
         escaped_alt = html.escape(alt_text, quote=True)
 
         preview_block = f"""<div class="project-media-preview">
-<a class="project-media-link" href="assets/images/projects/{slug}/hero.png" target="_blank" rel="noopener" title="Open full-resolution working proof">
+<a class="project-media-link" href="assets/images/projects/{slug}/hero.png" target="_blank" rel="noopener" title="Open full-resolution project artifact">
 <picture>
 <source srcset="assets/images/projects/{slug}/hero.webp" type="image/webp"/>
 <img class="project-preview-img" src="assets/images/projects/{slug}/hero.png" alt="{escaped_alt}" loading="lazy" decoding="async"/>
 </picture>
 <div class="project-media-badge">
 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6"></path><path d="M10 14L21 3"></path><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path></svg>
-<span>Verified Proof ↗</span>
+<span>View Project Artifact ↗</span>
 </div>
 </a>
 </div>

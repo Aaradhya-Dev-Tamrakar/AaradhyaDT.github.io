@@ -1,0 +1,9 @@
+$ python cli.py solve SEND MORE MONEY
+{'D': 7, 'E': 5, 'Y': 2, 'N': 6, 'R': 8, 'O': 0, 'S': 9, 'M': 1}
+
+$ python cli.py check SEND MORE MONEY 9567 1085 10652
+Valid: True
+OK: 9567 + 1085 = 10652
+
+$ python cli.py solve TWO TWO FOUR --all
+[{'O': 4, 'R': 8, 'W': 3, 'U': 6, 'T': 7, 'F': 1}, {'O': 5, 'R': 0, 'W': 6, 'U': 3, 'T': 7, 'F': 1}, {'O': 6, 'R': 2, 'W': 3, 'U': 7, 'T': 8, 'F': 1}, {'O': 6, 'R': 2, 'W': 4, 'U': 9, 'T': 8, 'F': 1}, {'O': 7, 'R': 4, 'W': 6, 'U': 3, 'T': 8, 'F': 1}, {'O': 8, 'R': 6, 'W': 2, 'U': 5, 'T': 9, 'F': 1}, {'O': 8, 'R': 6, 'W': 3, 'U': 7, 'T': 9, 'F': 1}]

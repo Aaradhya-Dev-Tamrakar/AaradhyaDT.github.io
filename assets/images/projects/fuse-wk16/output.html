@@ -1,0 +1,232 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>Verified Agent — saved evaluation report</title><style>body{margin:0;background:#10100e;color:#e8e3da;font:17px/1.6 Arial,sans-serif}
+main{max-width:1260px;margin:auto;padding:36px}h1{font:32px Georgia,serif;color:#d5b17a}
+pre{padding:24px;background:#191a17;border:1px solid #4a4031;border-radius:8px;white-space:pre-wrap;overflow-wrap:anywhere;font:17px/1.5 Consolas,monospace}
+table{border-collapse:collapse;width:100%}th,td{border:1px solid #494137;padding:10px;text-align:left}th{background:#28251f}a{color:#d5b17a}small{color:#aaa}img{max-width:100%}</style></head><body><main><h1 id="w16-agentic-evaluation-report">W16 Agentic Evaluation
+Report</h1>
+<ul>
+<li><strong>Run ID</strong>:
+<code>eval_none_cleared_20261003_154842</code></li>
+<li><strong>Fault Mode</strong>: <code>none</code></li>
+<li><strong>Tool Result Clearing Enabled</strong>:
+<code>True</code></li>
+<li><strong>Total Test Cases</strong>: 4</li>
+</ul>
+<h2 id="1-executive-summary--core-metrics">1. Executive Summary &amp;
+Core Metrics</h2>
+<table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Result</th>
+<th>Benchmark Target</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Task Completion Rate</strong></td>
+<td><strong>75.0%</strong> (3/4)</td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo><mn>80.0</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">\ge 80.0\%</annotation></semantics></math></td>
+<td>⚠️ WARN</td>
+</tr>
+<tr>
+<td><strong>Tool-Call Correctness</strong></td>
+<td><strong>91.7%</strong></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≥</mo><mn>90.0</mn><mi>%</mi></mrow><annotation encoding="application/x-tex">\ge 90.0\%</annotation></semantics></math></td>
+<td>✅ PASS</td>
+</tr>
+<tr>
+<td><strong>Mean Trajectory Length</strong></td>
+<td><strong>3.50 iters</strong></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≤</mo><mn>4.5</mn></mrow><annotation encoding="application/x-tex">\le 4.5</annotation></semantics></math>
+iters</td>
+<td>✅ OPTIMAL</td>
+</tr>
+<tr>
+<td><strong>Over-Long Trajectories</strong></td>
+<td><strong>1 cases</strong></td>
+<td><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math></td>
+<td>⚠️ FLAGGED</td>
+</tr>
+<tr>
+<td><strong>Total Tokens Consumed</strong></td>
+<td><strong>24,988</strong> (prompt: 22,790, out: 1,265, think:
+933)</td>
+<td>Bounded</td>
+<td>✅ MEASURED</td>
+</tr>
+<tr>
+<td><strong>Total Financial Cost</strong></td>
+<td><strong>$0.0047 USD</strong></td>
+<td>$&lt; $0.10 USD</td>
+<td>✅ VERIFIED</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-failure-taxonomy-breakdown">2. Failure Taxonomy Breakdown</h2>
+<table>
+<thead>
+<tr>
+<th>Failure Tier</th>
+<th>Occurrences</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Hard Failure</strong></td>
+<td>1</td>
+<td>Catastrophic halt: budget/iteration cap, loop abort, provider
+crash</td>
+</tr>
+<tr>
+<td><strong>Soft Failure</strong></td>
+<td>0</td>
+<td>Graceful halt, but missed facts, missing citations, or wrong
+terminal action</td>
+</tr>
+<tr>
+<td><strong>Cascading Soft Failure</strong></td>
+<td>0</td>
+<td>Flawed final answer caused directly by unrecovered intermediate tool
+error</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-performance-by-evaluation-category">3. Performance by
+Evaluation Category</h2>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Cases</th>
+<th>Passed</th>
+<th>Pass Rate</th>
+<th>Mean Iters</th>
+<th>Mean Cost ($)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>multihop</code></td>
+<td>1</td>
+<td>1</td>
+<td>100.0%</td>
+<td>6.00</td>
+<td>$0.0023</td>
+</tr>
+<tr>
+<td><code>single_hop</code></td>
+<td>3</td>
+<td>2</td>
+<td>66.7%</td>
+<td>2.67</td>
+<td>$0.0008</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-per-query-execution-log">4. Per-Query Execution Log</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Category</th>
+<th>Status</th>
+<th>Iters</th>
+<th>Tool Correctness</th>
+<th>Tokens</th>
+<th>Cost ($)</th>
+<th>Failure Tier</th>
+<th>Notes / Root Cause</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>single_hop_01</code></td>
+<td><code>single_hop</code></td>
+<td>✅ PASS</td>
+<td>3</td>
+<td>67%</td>
+<td>5,375</td>
+<td>$0.0011</td>
+<td><code>none</code></td>
+<td>Clean execution</td>
+</tr>
+<tr>
+<td><code>single_hop_02</code></td>
+<td><code>single_hop</code></td>
+<td>❌ FAIL</td>
+<td>3</td>
+<td>100%</td>
+<td>3,740</td>
+<td>$0.0006</td>
+<td><code>hard</code></td>
+<td>Hard termination: provider_failure</td>
+</tr>
+<tr>
+<td><code>single_hop_03</code></td>
+<td><code>single_hop</code></td>
+<td>✅ PASS</td>
+<td>2</td>
+<td>100%</td>
+<td>3,512</td>
+<td>$0.0007</td>
+<td><code>none</code></td>
+<td>Clean execution</td>
+</tr>
+<tr>
+<td><code>multihop_01</code></td>
+<td><code>multihop</code></td>
+<td>✅ PASS</td>
+<td>6</td>
+<td>100%</td>
+<td>12,361</td>
+<td>$0.0023</td>
+<td><code>none</code></td>
+<td>Clean execution</td>
+</tr>
+</tbody>
+</table>
+<h2
+id="5-comparative-analysis-w16-agentic-loop-vs-w15-single-pass-baseline">5.
+Comparative Analysis: W16 Agentic Loop vs. W15 Single-Pass Baseline</h2>
+<table>
+<thead>
+<tr>
+<th>Architecture</th>
+<th>Completion Rate</th>
+<th>Mean Iters</th>
+<th>Total Tokens</th>
+<th>Total Cost ($)</th>
+<th>Conflict Resolution</th>
+<th>Verification Gate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>W15 Classic RAG (Baseline)</strong></td>
+<td>0.0% (0/4)</td>
+<td>1.0</td>
+<td>2,568</td>
+<td>$0.0006</td>
+<td>❌ Fails on superseded docs</td>
+<td>❌ None (hallucination risk)</td>
+</tr>
+<tr>
+<td><strong>W16 Verified Agent (Ours)</strong></td>
+<td><strong>75.0%</strong> (3/4)</td>
+<td>3.50</td>
+<td>24,988 (9.7x)</td>
+<td>$0.0047 (7.4x)</td>
+<td>✅ Full precedence enforcement</td>
+<td>✅ Deterministic check</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Coordination Cost Rationale</strong>: The agentic loop uses
+approximately 9.7x tokens compared to the single-pass baseline. This
+modest cost difference buys autonomous multi-hop cross-referencing,
+self-verification, and resilience against outdated specifications.</p>
+</blockquote>
+</main></body></html>

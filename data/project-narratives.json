@@ -1,0 +1,230 @@
+{
+  "p-032": [
+    "High-volume ingest can spend host memory bandwidth moving data that later processing discards.",
+    "Developed the STRANGLER-IPU architecture proposal and Python models comparing host pipelines with processing near the ingress boundary.",
+    "Vary input rate, useful-data fraction, and interconnect capacity to identify when early reduction could offset accelerator overhead.",
+    "Architecture research and numerical modelling. Results depend on the model assumptions; silicon, energy use, and physical interconnect performance remain unmeasured."
+  ],
+  "p-012": [
+    "Remote hazard monitoring needs a way to collect sensor readings where power and connectivity are limited.",
+    "Explored a solar-powered sensor-mesh concept with ESP32 nodes and a Raspberry Pi gateway for monitoring hazards in Nepal.",
+    "The concept considered local sensing, wireless aggregation, and gateway processing as separate parts of the system.",
+    "Archived before the proposal stage. The project did not reach an implemented monitoring system; the later SPARK project became the active hardware effort."
+  ],
+  "p-007": [
+    "A balancing platform needs to distinguish stable motion from conditions that require corrective action.",
+    "Developed a Random Forest stability classifier using simulated IMU data, with a FastAPI endpoint and an exported Joblib model.",
+    "Separate the sensor-feature classifier from the API so a robotics controller can consume predictions through a defined interface.",
+    "The recorded evaluation uses simulated sensor data. Its accuracy does not establish performance on physical IMU traces or prove closed-loop robot stability."
+  ],
+  "p-013": [
+    "Antenna measurements stored in spreadsheets need a common representation before radiation patterns can be compared.",
+    "Prepared a Python analysis workflow that reads laboratory Excel measurements, interpolates sampled values, and produces polar plots.",
+    "Use SciPy interpolation and Matplotlib to make the measured angular response easier to inspect.",
+    "Communication and RF coursework. Interpolation fills the plotted curve between samples; it does not add new physical measurements or establish antenna calibration."
+  ],
+  "p-014": [
+    "Arithmetic operations need a defined sequence of register transfers and control signals in a custom processor.",
+    "Implemented a VHDL datapath and finite-state controller for GCD and exponentiation operations as Embedded Systems coursework.",
+    "Separate datapath operations from state transitions, then inspect the resulting behaviour in Vivado simulation.",
+    "The project record documents simulation in Vivado 2023.2. It does not establish operation on an FPGA board or measured hardware timing."
+  ],
+  "p-034": [
+    "Checking repository health across GitHub accounts can require repeated API requests and manual inspection of CI and commit history.",
+    "Built Python tooling for repository audits, account configuration, commit digests, and generated profile statistics.",
+    "Fetch and aggregate routine repository data locally, then pass a compact result to an assistant when interpretation is needed.",
+    "GitHub permissions, API limits, and cached data affect the result. Local aggregation avoids model calls for those operations; total token savings have not been benchmarked."
+  ],
+  "p-033": [
+    "Desktop automation tied to pixel coordinates can break when a window moves or display scaling changes.",
+    "Built a Windows automation toolkit that finds controls through UI Automation and exposes operations through Python, CLI, and MCP interfaces.",
+    "Use semantic selectors for control discovery and Win32 operations for window focus, clipboard input, and screen capture.",
+    "Windows-specific tooling. Automation depends on the accessibility information an application exposes, its window state, and the permissions of the running process."
+  ],
+  "p-010": [
+    "Project notes and model responses become difficult to follow when they are spread across unrelated browser sessions.",
+    "Built a React and FastAPI workspace that stores project history in SQLite and displays responses from configured model providers side by side.",
+    "Use SQLite FTS5 to retrieve project notes and attach relevant context to a request while keeping histories scoped to their project.",
+    "A local application with external model integrations. Provider credentials, model availability, and API failures still determine whether a request completes."
+  ],
+  "p-031": [
+    "Notebook collections spread across accounts are difficult to search, query, and maintain from one workflow.",
+    "Built a NotebookLM dashboard and MCP server that aggregate notebook listings, support notebook queries, and manage scheduled artifact work.",
+    "Cache listings, retain account ownership, and track job state so repeated navigation and scheduling do not require another planning prompt.",
+    "Notebook access depends on authentication, sharing permissions, provider quotas, and upstream service behaviour. Cached listings can lag behind the live account state."
+  ],
+  "p-038": [
+    "Scanned Nepali text and legacy Preeti encoding need different processing before they can be searched or edited as Unicode.",
+    "Built a Nepali document toolkit with OCR processing, spelling-rule checks, Preeti/Unicode conversion, and Word document repair interfaces.",
+    "Keep image recognition, character-order conversion, and text correction separate so each transformation can be inspected.",
+    "OCR depends on scan quality and the selected recognition backend. Font conversion and spelling rules do not establish document-level accuracy or guarantee correct Nepali text."
+  ],
+  "p-039": [
+    "Programming problems need statements, constraints, and reference solutions in a form that can be searched and evaluated consistently.",
+    "Developed a competitive-programming archive and evaluation tooling for collecting problem material and organizing reference solutions.",
+    "Retain mathematical notation, separate statements from solutions, and use local indexing for retrieval before model-assisted analysis.",
+    "Archive coverage and solution validation vary by task. A stored solution or an exported benchmark entry does not by itself establish an accepted submission or a measured model score."
+  ],
+  "p-035": [
+    "An assistant may need to move a generated file to a nearby device without using a cloud storage service.",
+    "Built an MCP server around the LocalSend protocol for LAN peer discovery and file, folder, or text transfer.",
+    "Preserve relative paths during folder transfer and expose discovery and transfer operations through explicit tool requests.",
+    "Transfers require reachable peers, compatible LocalSend clients, and recipient acceptance where required. Firewalls and network isolation can prevent discovery or delivery."
+  ],
+  "p-036": [
+    "Coursework context is spread across course streams, assignments, submissions, and attached resources.",
+    "Built a Node.js MCP bridge that maps assistant tool requests to Google Classroom API operations using OAuth authentication.",
+    "Keep course and coursework identifiers explicit, refresh authorized tokens, and return structured results for downstream workflows.",
+    "Available operations depend on account permissions and API quotas. The current local course-copy checks have unresolved failures, so that path still needs repair and end-to-end verification."
+  ],
+  "p-037": [
+    "A writing workflow needs to connect Markdown files, editor state, and exported documents without repeatedly locating them by hand.",
+    "Built a Windows MCP server for inspecting Typora processes, opening documents, reading recovery drafts, and managing themes and HTML exports.",
+    "Use process inspection and Typora's local files to expose document state through defined tool operations.",
+    "The integration depends on Typora's installation and local file formats. Process discovery does not guarantee that a document is saved or that every editor action can be automated."
+  ],
+  "p-002": [
+    "Personal Android tools need shared navigation and settings without coupling every feature into one screen.",
+    "Built a Kotlin and Jetpack Compose application with a calculator, budget tracking, and a camera-based gesture-control module.",
+    "Keep feature screens modular and use a common application shell for state, navigation, and Android permissions.",
+    "Feature readiness varies across the application. Camera and Bluetooth behaviour require device checks; the presence of a module does not establish a published Play Store release."
+  ],
+  "p-029": [
+    "Technical Markdown needs to preserve tables, code, and mathematical content when it becomes a shareable PDF.",
+    "Built a Python desktop editor, CLI, and MCP interface around shared Markdown-to-PDF conversion functions.",
+    "Select a renderer for the document's content and validate the output file. Pandoc, LaTeX, and HTML rendering paths have different formatting capabilities.",
+    "Conversion depends on installed tools and supported syntax. A successful command still needs visual review for pagination, fonts, diagrams, and layout."
+  ],
+  "p-030": [
+    "Windows memory-management operations need a usable interface and clear control over when system changes run.",
+    "Built a C# and WPF utility targeting .NET 8 with memory-management operations and a background monitoring workflow.",
+    "Expose working-set and standby-list operations through Windows APIs rather than relying on a model to interpret and execute shell instructions.",
+    "Some operations require elevated permissions or undocumented Windows interfaces. Their effect depends on workload and OS behaviour; reclaimed memory is not a general performance benchmark."
+  ],
+  "p-021": [
+    "A presenter needs to collect audience responses while participants and the shared display stay synchronized.",
+    "Developed a React and TypeScript polling project with choice questions, Q&A, word clouds, and QR-code joining.",
+    "Use Supabase data updates to connect voting sessions with presenter controls and the audience display.",
+    "A web application project. Concurrent attendance, reconnect behaviour, and response latency need a live session test; no capacity claim is made from the archived preview."
+  ],
+  "p-020": [
+    "Alphametic puzzles require distinct digits for letters while satisfying carries, arithmetic, and leading-zero constraints.",
+    "Built a column-by-column backtracking solver, an answer checker, and a FastAPI wrapper for puzzle requests and optional metrics.",
+    "Reject assignments as soon as a column violates the arithmetic constraints rather than enumerating every complete mapping.",
+    "The solver handles the supported addition-puzzle format. Search cost depends on the puzzle; the recorded examples do not establish a fixed solve-time guarantee."
+  ],
+  "p-015": [
+    "First-time React learners need small examples whose state changes they can trace while following a workshop.",
+    "Prepared a Vite-based teaching application for the IEEE KEC workshop, progressing from greeting and props examples to counters and a live clock.",
+    "Keep each lesson in a separate component so learners can connect a change in code with its effect in the browser.",
+    "Instructional material for an introductory workshop. The application demonstrates React concepts; it does not include the operational requirements of a deployed product."
+  ],
+  "p-003": [
+    "A model cannot support useful analysis until missing values, feature relationships, and class balance are understood.",
+    "Prepared a data-wrangling notebook for a synthetic heart-attack-risk dataset as Fuse AI Fellowship coursework.",
+    "Inspect distributions, correlations, and class imbalance before preparing the data for downstream modelling.",
+    "An exploratory analysis of synthetic data. The notebook does not establish clinical risk prediction, patient safety, or applicability to real hospital records."
+  ],
+  "p-004": [
+    "Customer, order, and payment records need consistent validation and persistence across API requests.",
+    "Built a FastAPI application with SQLAlchemy and PostgreSQL, including record-management endpoints and a statistics module.",
+    "Separate database access from request handling and use environment-based configuration, container setup, and centralized logging.",
+    "A fellowship API implementation. Deployment configuration alone does not establish production availability, access-control completeness, or performance under concurrent traffic."
+  ],
+  "p-005": [
+    "A natural-language database question needs to become valid SQL before its result can be explained to a user.",
+    "Built a PostgreSQL-backed pipeline that plans a query, generates SQL, validates it, executes it, and summarizes the result.",
+    "Separate query generation from validation and execution, then compare outputs against the assignment's reference questions and SQL.",
+    "Evaluation is bounded by the coursework schema and recorded question set. Successful queries there do not establish correctness on unfamiliar schemas or authorization to execute arbitrary SQL."
+  ],
+  "p-006": [
+    "Customer retention work combines a binary churn decision with an estimate of customer lifetime value.",
+    "Built classification and regression workflows using linear-model families, with diagnostic plots and an exported notebook report.",
+    "Compare model behaviour across the churn and value-prediction tasks rather than using one score for both objectives.",
+    "An offline coursework analysis. Results depend on the dataset, target definitions, and evaluation split; they do not demonstrate an intervention that reduces churn."
+  ],
+  "p-008": [
+    "Churn classification must account for class imbalance without allowing resampling to leak into validation data.",
+    "Built a Telco churn pipeline using tree-based ensembles, with a separate tenure-regression task and model documentation.",
+    "Restrict SMOTE to training folds and inspect feature contributions with SHAP alongside the model comparison.",
+    "Offline fellowship coursework. Explanations describe the fitted model's behaviour on the evaluated data; they do not establish causal drivers of customer churn."
+  ],
+  "p-009": [
+    "A point estimate can hide uncertainty that matters when comparing predictions or updating beliefs from new observations.",
+    "Implemented probabilistic-modelling exercises covering MLE, MAP estimation, Bayesian updating, graphical models, and PyMC logistic regression.",
+    "Retain posterior samples and use ArviZ diagnostics to inspect the fitted Bayesian model rather than reporting only a single coefficient estimate.",
+    "Coursework examples under explicit model and prior assumptions. Sampling diagnostics assess the fitted inference run; they do not prove that those assumptions match a deployment population."
+  ],
+  "p-011": [
+    "Retail transaction data has no predefined customer segments, so the feature representation shapes the groups a clustering method finds.",
+    "Built an Online Retail II segmentation workflow with RFM and category-ratio features, then compared K-Means, hierarchical clustering, and DBSCAN.",
+    "Inspect cluster structure with silhouette and Davies-Bouldin scores and relate the groups back to their transaction features.",
+    "An exploratory segmentation exercise. Internal clustering scores do not establish durable customer categories or measured campaign value."
+  ],
+  "p-016": [
+    "Time-series models must be compared on future observations without leaking information from later periods into training.",
+    "Built a forecasting notebook comparing classical and machine-learning models, an ensemble, and forecast diagnostics.",
+    "Evaluate errors with MASE and RMSE and examine whether combining forecasts changes the comparison with individual models.",
+    "The recorded environment could not fetch Yahoo Finance data and used a seeded synthetic fallback. Those results demonstrate the pipeline, not predictive performance on the real S&P 500."
+  ],
+  "p-017": [
+    "Steel surface-defect classification needs a model that learns image structure while exposing overfitting on the available dataset.",
+    "Built a PyTorch CNN workflow for the six NEU defect classes, with augmentation, normalization, and dropout experiments.",
+    "Compare training and validation behaviour while tuning the model, rather than treating training accuracy as evidence of generalization.",
+    "An offline image-classification assignment. The evaluation does not establish detection performance on a production line, unseen cameras, or a different defect distribution."
+  ],
+  "p-019": [
+    "Fruit images need to be separated into usable regions before shapes and object locations can be inspected.",
+    "Built an OpenCV workflow for HSV segmentation, morphological cleanup, denoising, and edge and feature detection.",
+    "Implement the Canny stages directly, compare them with OpenCV, and inspect how detection changes when fruit touches or image noise increases.",
+    "Classical image-processing coursework on the selected image sets. Thresholds and geometric assumptions need retuning for different lighting, backgrounds, and camera conditions."
+  ],
+  "p-022": [
+    "Classification, object detection, and segmentation answer different visual questions and need separate evaluation criteria.",
+    "Built a computer-vision coursework notebook covering ResNet transfer learning, Faster R-CNN, DeepLab segmentation, a VAE, and transformer-based image representations.",
+    "Compare learned and zero-shot representations, inspect GradCAM outputs, and consider export requirements in the assignment's deployment scenario.",
+    "Notebook experiments on selected datasets and image slices. The warehouse-camera rollout is a coursework scenario; the project does not establish operation across a deployed camera fleet."
+  ],
+  "p-024": [
+    "Text-routing workflows need entity boundaries and types before names and locations can be used as structured fields.",
+    "Built a CoNLL-2003 named-entity workflow with preprocessing, token features, a CRF model, and error analysis.",
+    "Combine word-shape and neighbouring-token features, then inspect entity-level precision and recall alongside individual mistakes.",
+    "The source dataset is general-domain annotated text. The customer-support framing is an assignment scenario; transfer to real tickets and CRM data requires separate evaluation."
+  ],
+  "p-027": [
+    "A text classifier needs to map variable-length headlines into a fixed set of topic labels.",
+    "Implemented an AG_NEWS headline classifier with a constructed vocabulary, an embedding layer, an LSTM, and a final classification layer.",
+    "Build the PyTorch training and inference flow from the supplied notebook skeleton and inspect the effect of sequence representation on predictions.",
+    "A four-topic coursework classifier with recorded notebook outputs. Performance on the assignment data does not establish robustness to new topics, languages, or changing news vocabulary."
+  ],
+  "p-028": [
+    "A support message must reach the correct handling category before a specialized assistant can respond.",
+    "Developed encoder and decoder-model routing approaches for eleven customer-support categories using the Bitext dataset.",
+    "Use a group-aware stratified split to keep repeated instruction text from crossing training and evaluation boundaries, then compare the candidate routing approaches.",
+    "An intent-classification experiment. Routing labels measure category selection; they do not establish the correctness of a downstream agent's answer or its business action."
+  ],
+  "p-045": [
+    "An assistant needs retrieved context and bounded tool use when a model response alone is insufficient.",
+    "Built a FastAPI assistant with Qdrant retrieval, structured responses, tool calling, and a Streamlit interface.",
+    "Use caching, retries, circuit breakers, and a provider fallback chain to handle repeated requests and unavailable model services.",
+    "A fellowship implementation. Retrieval quality and response correctness depend on the corpus and provider; configured fallbacks do not guarantee that an unavailable service will be replaced successfully."
+  ],
+  "p-046": [
+    "A single retrieval pass can miss information, follow outdated context, or produce citations that were never retrieved.",
+    "Extended the RAG assistant with an iterative tool-use loop, context management, and a deterministic citation-verification gate.",
+    "Clear old tool results while retaining notes, cap the loop's budget, and record trajectories and failures in a custom evaluation harness.",
+    "The saved report covers four cases and includes a provider failure. Citation checks establish source membership, not the factual correctness of every answer."
+  ],
+  "p-044": [
+    "An assistant can receive sensitive inputs and return malformed, unsupported, or sensitive outputs.",
+    "Built a guardrail pipeline with input checks for PII and prompt injection, plus output checks for schema conformity, groundedness, and leakage.",
+    "Keep checks around the generation step and use a curated evaluation set to inspect which cases are blocked, accepted, or require fallback handling.",
+    "Checks cover the implemented rules and recorded cases. They do not establish complete jailbreak resistance, comprehensive PII detection, or guaranteed factual correctness."
+  ],
+  "p-026": [
+    "An organizational case study needs evidence about how responsibilities and hiring practices work beyond a company's public description.",
+    "Prepared an Organization and Management coursework study of Fusemachines, drawing on an interview with Talent Acquisition and PR managers.",
+    "Connect the interview material to organizational structure, HR practices, and cross-functional operations in a written report with LaTeX sources.",
+    "An academic case study based on the available interview and documentation. It represents that study's scope and period, rather than an ongoing audit of the company."
+  ]
+}
