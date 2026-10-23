@@ -1,5 +1,5 @@
 /* ============================================================
-   HOME WIDGETS — index.html-only status widgets (v56.10)
+   HOME WIDGETS — index.html-only status widgets (v56.11)
    Kathmandu clock · live date labels · last-commit badge.
    Loaded globally via script.js MODULES; every widget is
    element-guarded so it no-ops on all other pages.
@@ -103,10 +103,156 @@
     onScroll();
   }
 
+  /* ── Exploration Dropdown & Panel Switcher ─────────────────
+     Ties "A closer look at how I work." (.exploration-highlight)
+     to the panels below. Clicking any card (Dev terminal, Shortcuts &
+     controls, Research & specs) toggles open ONLY that specific section.
+     Clicking an active card toggles it closed. Deep links (#terminal-section,
+     #keymap, #about-sign-in) and tour steps reveal the matching panel. */
+  function initExplorationDropdown() {
+    var toolsSec = document.getElementById('site-tools');
+    var panelsWrap = document.getElementById('explorationPanelsWrap');
+    if (!toolsSec || !panelsWrap) return;
+    if (toolsSec.dataset.dropdownBound) return;
+    toolsSec.dataset.dropdownBound = '1';
+
+    var links = Array.from(toolsSec.querySelectorAll('.exploration-link'));
+    var panels = Array.from(panelsWrap.querySelectorAll('.exploration-panel'));
+
+    function closeAllPanels() {
+      panels.forEach(function (p) {
+        p.setAttribute('hidden', '');
+        p.classList.remove('is-open');
+      });
+      links.forEach(function (lnk) {
+        lnk.classList.remove('is-active');
+        lnk.setAttribute('aria-expanded', 'false');
+        lnk.setAttribute('aria-selected', 'false');
+        var actEl = lnk.querySelector('.exploration-action');
+        if (actEl && actEl.dataset.default) {
+          actEl.textContent = actEl.dataset.default;
+        }
+      });
+    }
+
+    function openPanel(panelId, shouldScroll, focusTarget) {
+      var targetPanel = document.getElementById(panelId);
+      if (!targetPanel) return;
+
+      var wasOpen = !targetPanel.hasAttribute('hidden') && targetPanel.classList.contains('is-open');
+
+      closeAllPanels();
+
+      if (!wasOpen) {
+        targetPanel.removeAttribute('hidden');
+        targetPanel.classList.add('is-open');
+
+        var activeLink = links.find(function (lnk) {
+          return lnk.getAttribute('data-target') === panelId || lnk.getAttribute('aria-controls') === panelId;
+        });
+        if (activeLink) {
+          activeLink.classList.add('is-active');
+          activeLink.setAttribute('aria-expanded', 'true');
+          activeLink.setAttribute('aria-selected', 'true');
+          var actEl = activeLink.querySelector('.exploration-action');
+          if (actEl && actEl.dataset.active) {
+            actEl.textContent = actEl.dataset.active;
+          }
+        }
+
+        // Trigger reveal animations on contents
+        targetPanel.querySelectorAll('.reveal').forEach(function (el) {
+          el.classList.add('visible');
+        });
+
+        // Focus terminal input if opening dev terminal
+        if (panelId === 'panel-terminal') {
+          var input = targetPanel.querySelector('.terminal-input');
+          if (input && focusTarget !== false) {
+            setTimeout(function () { input.focus(); }, 150);
+          }
+        }
+
+        // Scroll into view if requested
+        if (shouldScroll) {
+          setTimeout(function () {
+            targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 60);
+        }
+
+        if (typeof playAudioCue === 'function') playAudioCue('click');
+      } else {
+        if (typeof playAudioCue === 'function') playAudioCue('pop');
+      }
+    }
+
+    // Bind link clicks
+    links.forEach(function (lnk) {
+      lnk.addEventListener('click', function (e) {
+        e.preventDefault();
+        var targetId = lnk.getAttribute('data-target') || lnk.getAttribute('aria-controls');
+        if (!targetId) {
+          var href = lnk.getAttribute('href') || '';
+          if (href.indexOf('terminal') !== -1) targetId = 'panel-terminal';
+          else if (href.indexOf('keymap') !== -1) targetId = 'panel-keymap';
+          else if (href.indexOf('about') !== -1 || href.indexOf('sign-in') !== -1) targetId = 'panel-research';
+        }
+        if (targetId) {
+          openPanel(targetId, true);
+        }
+      });
+    });
+
+    // Bind close buttons inside each panel footer
+    panelsWrap.querySelectorAll('[data-close-target]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        closeAllPanels();
+        toolsSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (typeof playAudioCue === 'function') playAudioCue('pop');
+      });
+    });
+
+    // Expose globally so tour, CMDK, or external callers can open any panel
+    window.openExplorationPanel = function (panelOrSectionId, shouldScroll) {
+      var map = {
+        'terminal': 'panel-terminal',
+        'terminal-section': 'panel-terminal',
+        'adtTerminal': 'panel-terminal',
+        'panel-terminal': 'panel-terminal',
+        'keymap': 'panel-keymap',
+        'panel-keymap': 'panel-keymap',
+        'about-sign-in': 'panel-research',
+        'vip-exclusive': 'panel-research',
+        'master-exclusive': 'panel-research',
+        'research': 'panel-research',
+        'panel-research': 'panel-research'
+      };
+      var target = map[panelOrSectionId] || panelOrSectionId;
+      openPanel(target, shouldScroll !== false);
+    };
+
+    // Check location.hash on load and on hashchange
+    function checkHash() {
+      if (!location.hash) return;
+      var hash = location.hash.replace(/^#/, '');
+      if (['terminal-section', 'adtTerminal', 'panel-terminal'].indexOf(hash) !== -1) {
+        openPanel('panel-terminal', true);
+      } else if (['keymap', 'panel-keymap'].indexOf(hash) !== -1) {
+        openPanel('panel-keymap', true);
+      } else if (['about-sign-in', 'vip-exclusive', 'master-exclusive', 'panel-research'].indexOf(hash) !== -1) {
+        openPanel('panel-research', true);
+      }
+    }
+
+    window.addEventListener('hashchange', checkHash);
+    checkHash();
+  }
+
   function bootHomeWidgets() {
     initStatusClock();
     initLastCommitBadge();
     initHeroCrestScrollFade();
+    initExplorationDropdown();
     initLiveDates(); // last — depends on core.js applyLiveDates labels
   }
 

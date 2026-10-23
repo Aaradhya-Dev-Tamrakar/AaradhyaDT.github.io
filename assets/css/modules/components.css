@@ -2637,7 +2637,7 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 
 /* Visible entry points to the homepage's interactive and research sections. */
 .exploration-highlight {
-  margin: 0 3rem 3rem;
+  margin: 0 3rem 2.5rem;
   padding: clamp(1.25rem, 3vw, 2.5rem);
   border: 1px solid var(--accent-a40);
   border-top: 3px solid var(--accent);
@@ -2655,13 +2655,118 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 .exploration-heading h2 em { color: var(--accent); font-weight: 400; }
 .exploration-heading > p:last-child { max-width: 60ch; color: var(--muted); line-height: 1.7; }
 .exploration-links { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; margin-top: 2rem; }
-.exploration-links > a { display: flex; flex-direction: column; padding: 1.4rem; min-width: 0; border: 1px solid var(--line); border-radius: 8px; background: var(--bg); color: var(--text); text-decoration: none; overflow-wrap: anywhere; }
-.exploration-links > a:hover { border-color: var(--accent); background: var(--accent-a07); }
-.exploration-links > a:focus-visible { outline: 2px solid var(--accent); outline-offset: 4px; }
-.exploration-links h3 { display: flex; justify-content: space-between; gap: .6rem; margin: 1rem 0 .5rem; color: var(--heading); font: 400 1.35rem/1.35 var(--serif); }
-.exploration-links h3 span { color: var(--accent); }
-.exploration-links p { margin: 0 0 1.5rem; color: var(--muted); font-size: .85rem; line-height: 1.7; }
-.exploration-action { margin-top: auto; }
+.exploration-links > a,
+.exploration-link {
+  display: flex;
+  flex-direction: column;
+  padding: 1.4rem;
+  min-width: 0;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  transition: border-color 0.25s ease, background-color 0.25s ease, transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.exploration-links > a:hover,
+.exploration-link:hover {
+  border-color: var(--accent);
+  background: var(--accent-a07);
+  transform: translateY(-2px);
+}
+.exploration-links > a:focus-visible,
+.exploration-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+.exploration-link.is-active {
+  border-color: var(--accent);
+  background: var(--accent-a12);
+  box-shadow: 0 4px 20px var(--accent-a20), inset 0 0 0 1px var(--accent);
+}
+.exploration-links h3 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: .6rem;
+  margin: 1rem 0 .5rem;
+  color: var(--heading);
+  font: 400 1.35rem/1.35 var(--serif);
+}
+.exploration-arrow {
+  color: var(--accent);
+  font-family: var(--mono);
+  font-size: 1rem;
+  line-height: 1;
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), color 0.2s ease;
+}
+.exploration-link.is-active .exploration-arrow {
+  transform: rotate(90deg) scale(1.15);
+}
+.exploration-links p {
+  margin: 0 0 1.5rem;
+  color: var(--muted);
+  font-size: .85rem;
+  line-height: 1.7;
+}
+.exploration-action {
+  margin-top: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.exploration-link.is-active .exploration-action {
+  color: var(--heading);
+}
+
+/* ── Exploration Panels Wrapper & Animated Reveal ──────── */
+.exploration-panels-wrap {
+  position: relative;
+  margin-bottom: 2rem;
+}
+.exploration-panel {
+  display: block;
+}
+.exploration-panel[hidden] {
+  display: none !important;
+}
+.exploration-panel:not([hidden]) {
+  animation: explorationFadeIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+@keyframes explorationFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .exploration-panel:not([hidden]) {
+    animation: none;
+  }
+}
+.exploration-panel-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem 0 3rem;
+  gap: 1rem;
+}
+.exploration-close-btn {
+  font-size: 0.72rem;
+  padding: 0.55rem 1.25rem;
+  border-radius: 4px;
+}
 @media (max-width: 760px) {
   .exploration-highlight { margin-inline: 1.25rem; }
   .exploration-links { grid-template-columns: minmax(0, 1fr); }
@@ -2673,20 +2778,4 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 }
 .cds-squish:active {
   transform: scale(0.96) !important;
-}
-
-
-/* Optional features follow the professional introduction and case studies. */
-.portfolio-extras > summary {
-  margin: 0 3rem 3rem;
-  padding: 1.25rem;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  color: var(--heading);
-  cursor: pointer;
-  font-size: 0.95rem;
-  line-height: 1.6;
-}
-@media (max-width: 700px) {
-  .portfolio-extras > summary { margin-inline: 1.25rem; }
 }

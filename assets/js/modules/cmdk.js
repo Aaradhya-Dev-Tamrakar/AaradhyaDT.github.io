@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: cmdk.js — aaradhyadt.github.io (v56.10)
+   MODULE: cmdk.js — aaradhyadt.github.io (v56.11)
    Command palette (Cmd+K) search and quick navigation.
    ============================================================ */
 
@@ -169,6 +169,14 @@ function revealSearchTarget() {
   // Reveal optional browse panels before measuring an anchor inside them.
   for (let ancestor = target.parentElement; ancestor; ancestor = ancestor.parentElement) {
     if (ancestor.tagName === 'DETAILS') ancestor.open = true;
+    if (ancestor.classList && ancestor.classList.contains('exploration-panel') && ancestor.hasAttribute('hidden')) {
+      if (typeof window.openExplorationPanel === 'function') {
+        window.openExplorationPanel(ancestor.id, false);
+      } else {
+        ancestor.removeAttribute('hidden');
+        ancestor.classList.add('is-open');
+      }
+    }
   }
   if (target.matches('.projects-section-title') && target.style.display === 'none') {
     document.querySelector('#projectsFilterBar [data-filter="all"]')?.click();

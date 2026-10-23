@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: tour.js — aaradhyadt.github.io (v56.10)
+   MODULE: tour.js — aaradhyadt.github.io (v56.11)
    Cross-page spotlight tour with keyboard navigation.
    ============================================================ */
 
@@ -208,6 +208,9 @@ function renderTourStep(idx) {
   const entry = TOUR_FLAT_STEPS[idx];
   if (!entry) { exitTour(); return; }
 
+  if (entry.sel && typeof window.openExplorationPanel === 'function') {
+    window.openExplorationPanel(entry.sel.replace(/^#/, ''), false);
+  }
   let target = document.querySelector(entry.sel);
   if (!target) target = document.body;
 
