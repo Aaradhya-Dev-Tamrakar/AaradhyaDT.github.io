@@ -10,6 +10,25 @@
     return value === null || value === undefined ? '' : String(value).trim();
   }
 
+  function layoutProjectProofs() {
+    document.querySelectorAll('.project-card-body').forEach(function (body) {
+      if (body.querySelector('.project-proof-row')) return;
+      var media = body.querySelector('.project-media-preview');
+      var narrative = body.querySelector('.project-story, .project-desc-list');
+      if (!media || !narrative) return;
+      var row = document.createElement('div');
+      row.className = 'project-proof-row';
+      var aside = document.createElement('div');
+      aside.className = 'project-proof-aside';
+      var caption = body.querySelector('[data-output-caption]');
+      body.insertBefore(row, body.firstChild);
+      row.appendChild(narrative);
+      row.appendChild(aside);
+      aside.appendChild(media);
+      if (caption) aside.appendChild(caption);
+    });
+  }
+
   function addRow(list, label, value) {
     if (!text(value)) return;
     var dt = document.createElement('dt');
@@ -82,7 +101,10 @@
 
     card.classList.add('has-evidence');
     var mediaPreview = body.querySelector('.project-media-preview');
-    if (mediaPreview) {
+    if (mediaPreview && mediaPreview.closest('.project-proof-row')) {
+      var proofRow = mediaPreview.closest('.project-proof-row');
+      body.insertBefore(panel, proofRow.nextSibling);
+    } else if (mediaPreview) {
       var row = document.createElement('div');
       row.className = 'project-evidence-row';
       body.insertBefore(row, mediaPreview);
@@ -94,6 +116,7 @@
   }
 
   function initProjectEvidence() {
+    layoutProjectProofs();
     var cards = document.querySelectorAll('details.project-card[data-evidence-repo]');
     if (!cards.length) return;
     fetch('data/quantitative-claims.json', { cache: 'no-store' })
