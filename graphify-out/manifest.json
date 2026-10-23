@@ -24,9 +24,9 @@
     "semantic_hash": ""
   },
   "assets/js/data/search-index.js": {
-    "mtime": 1792735100.341296,
-    "seen": 1792735130.6474712,
-    "ast_hash": "d93a912d24c622be4c902ab2a3450739",
+    "mtime": 1792736738.1093667,
+    "seen": 1792736751.128108,
+    "ast_hash": "8da9f73c4e421c9ba685c9b32bcf8540",
     "semantic_hash": ""
   },
   "assets/js/last-commit.json": {
@@ -96,8 +96,8 @@
     "semantic_hash": ""
   },
   "assets/js/script.js": {
-    "mtime": 1792736286.347908,
-    "seen": 1792736303.221451,
+    "mtime": 1792736737.1719153,
+    "seen": 1792736751.1281254,
     "ast_hash": "6dbafd4f4304c4fa93b0ecde45e8b77b",
     "semantic_hash": ""
   },
@@ -168,14 +168,14 @@
     "semantic_hash": ""
   },
   "scripts/verify.py": {
-    "mtime": 1792736286.347908,
-    "seen": 1792736303.2215173,
+    "mtime": 1792736737.1739776,
+    "seen": 1792736751.1281579,
     "ast_hash": "49bfa086deb23f1c5b7a3edfea191333",
     "semantic_hash": ""
   },
   "sw.js": {
-    "mtime": 1792736286.3469088,
-    "seen": 1792736303.221522,
+    "mtime": 1792736737.1719153,
+    "seen": 1792736751.1281602,
     "ast_hash": "98a911d1e3a3b7ddb089691d97bb9bfc",
     "semantic_hash": ""
   },
@@ -288,8 +288,8 @@
     "semantic_hash": ""
   },
   "dev-logs/PortfolioWebsite_TRACKER.md": {
-    "mtime": 1792736286.354436,
-    "seen": 1792736303.2216694,
+    "mtime": 1792736737.1784902,
+    "seen": 1792736751.1282218,
     "ast_hash": "2c37bc2ecef2c61fe60bc38084661cac",
     "semantic_hash": ""
   },
@@ -348,9 +348,9 @@
     "semantic_hash": ""
   },
   "projects.html": {
-    "mtime": 1792736286.7981067,
-    "seen": 1792736303.2216995,
-    "ast_hash": "c711ed1bea6971a2b67286065bda6058",
+    "mtime": 1792736737.6168375,
+    "seen": 1792736751.1282363,
+    "ast_hash": "ca6f9ea5c39ccef3374ead9a36324145",
     "semantic_hash": ""
   },
   "robots.txt": {
@@ -3003,6 +3003,24 @@
     "mtime": 1792736182.4925046,
     "seen": 1792736217.3139496,
     "ast_hash": "3542ed76a4df605e87247f6cd31cdf07",
+    "semantic_hash": ""
+  },
+  "data/project-narratives.json": {
+    "mtime": 1792736671.9771671,
+    "seen": 1792736751.1281295,
+    "ast_hash": "306e735ff524831afc6672991695b82c",
+    "semantic_hash": ""
+  },
+  "scripts/apply_project_narratives.py": {
+    "mtime": 1792736698.9232504,
+    "seen": 1792736751.128139,
+    "ast_hash": "fb93be2b4271820b2dd900151ea3e7c2",
+    "semantic_hash": ""
+  },
+  "dev-logs/2026-10-23_PROJECT_DESCRIPTIONS.md": {
+    "mtime": 1792736732.6626685,
+    "seen": 1792736751.1282196,
+    "ast_hash": "69662df147cdd0fb56790b33226bd5a2",
     "semantic_hash": ""
   }
 }

@@ -2257,7 +2257,12 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 }
 
 .project-story strong {
-  color: var(--heading);
+  color: var(--accent);
+}
+
+.project-story p > strong:first-child::after {
+  content: " - ";
+  white-space: pre;
 }
 
 .opportunity-note {
