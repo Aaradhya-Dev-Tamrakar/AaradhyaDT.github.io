@@ -1,5 +1,5 @@
 /* ============================================================
-   HOME WIDGETS — index.html-only status widgets (v56.11)
+   HOME WIDGETS — index.html-only status widgets (v56.12)
    Kathmandu clock · live date labels · last-commit badge.
    Loaded globally via script.js MODULES; every widget is
    element-guarded so it no-ops on all other pages.
@@ -165,19 +165,33 @@
           el.classList.add('visible');
         });
 
-        // Focus terminal input if opening dev terminal
+        // Scroll into view at section-header level (cleanly below fixed navbar) for all 3 options
+        if (shouldScroll) {
+          setTimeout(function () {
+            var header = targetPanel.querySelector('.section-header') || targetPanel;
+            var nav = document.querySelector('nav') || document.getElementById('navbar') || document.querySelector('.nav');
+            var navHeight = nav ? nav.offsetHeight : 76;
+            var rect = header.getBoundingClientRect();
+            var targetY = window.pageYOffset + rect.top - (navHeight + 20);
+            window.scrollTo({
+              top: Math.max(0, targetY),
+              behavior: 'smooth'
+            });
+          }, 60);
+        }
+
+        // Focus terminal input without hijacking scroll position
         if (panelId === 'panel-terminal') {
           var input = targetPanel.querySelector('.terminal-input');
           if (input && focusTarget !== false) {
-            setTimeout(function () { input.focus(); }, 150);
+            setTimeout(function () {
+              try {
+                input.focus({ preventScroll: true });
+              } catch (e) {
+                // older browsers
+              }
+            }, 350);
           }
-        }
-
-        // Scroll into view if requested
-        if (shouldScroll) {
-          setTimeout(function () {
-            targetPanel.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 60);
         }
 
         if (typeof playAudioCue === 'function') playAudioCue('click');
@@ -207,7 +221,14 @@
     panelsWrap.querySelectorAll('[data-close-target]').forEach(function (btn) {
       btn.addEventListener('click', function () {
         closeAllPanels();
-        toolsSec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var nav = document.querySelector('nav') || document.getElementById('navbar') || document.querySelector('.nav');
+        var navHeight = nav ? nav.offsetHeight : 76;
+        var rect = toolsSec.getBoundingClientRect();
+        var targetY = window.pageYOffset + rect.top - (navHeight + 20);
+        window.scrollTo({
+          top: Math.max(0, targetY),
+          behavior: 'smooth'
+        });
         if (typeof playAudioCue === 'function') playAudioCue('pop');
       });
     });

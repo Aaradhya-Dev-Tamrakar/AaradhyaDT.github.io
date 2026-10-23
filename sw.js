@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Service Worker — Aaradhya Dev Tamrakar Portfolio (v56.11)
+   Service Worker — Aaradhya Dev Tamrakar Portfolio (v56.12)
    Provides offline capability & asset caching for fast return visits.
    ========================================================================== */
 
-const CACHE_NAME = 'aaradhya-portfolio-v56.11';
+const CACHE_NAME = 'aaradhya-portfolio-v56.12';
 
 const STATIC_ASSETS = [
   './',

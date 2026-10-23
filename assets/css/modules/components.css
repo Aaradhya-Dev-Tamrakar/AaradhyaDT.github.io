@@ -2733,6 +2733,13 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 }
 .exploration-panel {
   display: block;
+  scroll-margin-top: calc(var(--nav-h, 76px) + 1.5rem);
+}
+.exploration-panel .section-header,
+#terminal-section,
+#keymap,
+.access-tier-row {
+  scroll-margin-top: calc(var(--nav-h, 76px) + 1.5rem);
 }
 .exploration-panel[hidden] {
   display: none !important;
