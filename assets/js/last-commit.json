@@ -1,6 +1,6 @@
 {
-  "sha": "6160907e06a5270d28e86f949f7795ae6babc268",
-  "shortSha": "6160907",
-  "date": "2026-10-23T21:13:31+05:45",
-  "message": "style(layout): unify section gap from section separators across site"
+  "sha": "081ca4e017dbf2a407688f80d0af10dd9787cbc6",
+  "shortSha": "081ca4e",
+  "date": "2026-10-23T21:34:25+05:45",
+  "message": "style(about): harmonize section top and bottom gaps with section separators"
 }
