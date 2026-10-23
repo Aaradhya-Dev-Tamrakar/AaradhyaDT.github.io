@@ -817,7 +817,7 @@ function computeLiveDates() {
     fuseLabel = 'Fuse AI Fellowship — not yet started';
     fuseStatus = 'upcoming';
   } else if (fuseComplete) {
-    fuseLabel = 'Fuse AI Fellowship — Completed (May–Oct 2026, 24 wks)';
+    fuseLabel = 'Fuse AI Fellowship - Completed (May–Oct 2026, 24 wks)';
     fuseStatus = 'complete';
   } else {
     var currentWk = Math.min(fuseWeek, FUSE_TOTAL); // cap display at Wk24
