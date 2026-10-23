@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v56.5",
+    version: "v56.6",
     date: "2026-10-22",
     sha: "d63d745fe469802d32354de33883ccec402a53c1",
     title: "style category shortcuts as navigation tiles (#28)",
