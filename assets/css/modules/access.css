@@ -86,7 +86,7 @@
 }
 
 .master-exclusive-section {
-  padding: 4rem 3rem;
+  padding: var(--section-separator-gap, 5.5rem) var(--section-pad-x, 3rem);
 }
 
 .master-card-inner {
@@ -1106,7 +1106,7 @@ html[data-theme="light"] .gated-overlay {
   }
 
   .master-exclusive-section {
-    padding: 2.5rem 1.25rem;
+    padding: var(--section-separator-gap, 3.5rem) var(--section-pad-x, 1.25rem);
   }
 
   .master-card-inner {
@@ -1165,7 +1165,7 @@ html[data-theme="light"] .gated-overlay {
   }
 
   .master-exclusive-section {
-    padding: 2rem 0.85rem;
+    padding: var(--section-separator-gap, 2.75rem) var(--section-pad-x, 0.85rem);
   }
 
   .master-card-inner {

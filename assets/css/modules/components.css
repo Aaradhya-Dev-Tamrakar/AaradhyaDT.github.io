@@ -1993,7 +1993,7 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 }
 
 .about-creed-strip {
-  padding: 0 3rem 4.5rem;
+  padding: 0 var(--section-pad-x, 3rem) var(--section-separator-gap, 5.5rem);
 }
 
 .about-creed-inner {
@@ -2115,8 +2115,9 @@ html[data-theme="light"] .shortcuts-modal-card::before {
     gap: 1.5rem;
   }
   .about-creed-strip {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+    padding-left: var(--section-pad-x, 1.25rem);
+    padding-right: var(--section-pad-x, 1.25rem);
+    padding-bottom: var(--section-separator-gap, 3.5rem);
   }
 }
 
@@ -2266,7 +2267,7 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 }
 
 .opportunity-note {
-  margin: 0 3rem 4rem;
+  margin: var(--section-separator-gap, 5.5rem) var(--section-pad-x, 3rem) 4rem;
   padding: 2rem;
   border: 1px solid var(--line);
   border-radius: 10px;
@@ -2290,7 +2291,8 @@ html[data-theme="light"] .shortcuts-modal-card::before {
     margin-inline: 1.25rem;
   }
   .opportunity-note {
-    margin-inline: 1.25rem;
+    margin-top: var(--section-separator-gap, 3.5rem);
+    margin-inline: var(--section-pad-x, 1.25rem);
     padding: 1.25rem;
   }
 }
@@ -2637,7 +2639,7 @@ html[data-theme="light"] .shortcuts-modal-card::before {
 
 /* Visible entry points to the homepage's interactive and research sections. */
 .exploration-highlight {
-  margin: 0 3rem 2.5rem;
+  margin: var(--section-separator-gap, 5.5rem) var(--section-pad-x, 3rem) 2.5rem;
   padding: clamp(1.25rem, 3vw, 2.5rem);
   border: 1px solid var(--accent-a40);
   border-top: 3px solid var(--accent);
@@ -2775,7 +2777,10 @@ html[data-theme="light"] .shortcuts-modal-card::before {
   border-radius: 4px;
 }
 @media (max-width: 760px) {
-  .exploration-highlight { margin-inline: 1.25rem; }
+  .exploration-highlight {
+    margin-top: var(--section-separator-gap, 3.5rem);
+    margin-inline: var(--section-pad-x, 1.25rem);
+  }
   .exploration-links { grid-template-columns: minmax(0, 1fr); }
 }
 

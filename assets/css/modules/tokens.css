@@ -73,6 +73,10 @@
   --card-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
   --nav-h: 76px;
   --surface: #171512;
+  /* ── Section & Separator Spacing Tokens ── */
+  --section-pad-y: 5.5rem;
+  --section-pad-x: 3rem;
+  --section-separator-gap: var(--section-pad-y);
   /* Theme-invariant decorative glow */
   --glow-gold: #d4a85a;
   --glow-gold-a18: rgba(212, 168, 90, 0.18);
@@ -276,6 +280,37 @@ html[data-theme="light"] .access-card-inner {
 
 ::-webkit-scrollbar-corner {
   background: var(--bg);
+}
+
+
+
+/* ── Responsive Section Spacing Tokens ────────────────────── */
+@media (max-width: 1100px) {
+  :root {
+    --section-pad-y: 4.5rem;
+    --section-pad-x: 2rem;
+  }
+}
+
+@media (max-width: 900px) {
+  :root {
+    --section-pad-y: 3.5rem;
+    --section-pad-x: 1.25rem;
+  }
+}
+
+@media (max-width: 480px) {
+  :root {
+    --section-pad-y: 2.75rem;
+    --section-pad-x: 0.85rem;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --section-pad-y: 2.25rem;
+    --section-pad-x: 0.65rem;
+  }
 }
 
 
