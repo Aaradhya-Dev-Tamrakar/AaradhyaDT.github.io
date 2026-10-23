@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.10",
     date: "2026-10-23",
-    sha: "450ca735a58e607fa9e7cf4f60c0f9544ad2120a",
-    title: "unclip and space crest logo",
+    sha: "efa32797e95e09724dfeccfa828d3ffe6cb3d05a",
+    title: "align default hyperlink color with theme accent tokens",
     highlights: []
   },
   {
