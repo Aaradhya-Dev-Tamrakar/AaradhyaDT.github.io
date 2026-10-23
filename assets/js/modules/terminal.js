@@ -37,7 +37,7 @@
       help: () => `
 <span class="term-green">Available Commands:</span><br>
   <span class="term-gold">skills</span>       - Overview of technical skillset &amp; engineering tools<br>
-  <span class="term-gold">radar</span>        - Interactive 5-Domain Skill Radar visualizer<br>
+  <span class="term-gold">radar</span>        - Capabilities and linked project examples<br>
   <span class="term-gold">graph</span>        - Interactive 3D AST Knowledge Graph HUD (WebGL 2)<br>
   <span class="term-gold">resume</span>       - Open Tailored ATS Resume Generator &amp; Multi-Format Exporter<br>
   <span class="term-gold">projects</span>     - Key engineering &amp; AI/ML projects<br>
@@ -155,8 +155,8 @@
         return `<span class="term-gold">Project filters are available on projects.html (type 'goto projects' first).</span>`;
       },
       radar: () => {
-        if (typeof initSkillRadar === 'function') initSkillRadar();
-        return '<span class="term-green">Interactive Skill Radar rendered.</span>';
+        if (typeof initSkillRadar === 'function') initSkillRadar(true);
+        return '<span class="term-green">Opening capabilities and project examples.</span>';
       },
       graph: () => {
         if (typeof openGraphModal === 'function') {
@@ -514,7 +514,7 @@
       const trimmed = rawCmd.trim();
       if (!trimmed) return;
       if (typeof triggerHapticFeedback === 'function') triggerHapticFeedback(10);
-      
+
       // Avoid duplicate consecutive entries in history
       if (history[history.length - 1] !== rawCmd) {
         history.push(rawCmd);

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8">
+<title>Agentic AI Regression Report — Evidently LLM-as-a-Judge</title>
+<style>
+body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; background: #f8f9fa; }
+h1 { color: #1a1a2e; border-bottom: 3px solid #e94560; padding-bottom: 10px; }
+h2 { color: #16213e; margin-top: 30px; }
+table { border-collapse: collapse; width: 100%; margin: 15px 0; background: white; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+th { background: #1a1a2e; color: white; padding: 12px 8px; text-align: left; font-size: 13px; }
+td { padding: 10px 8px; border-bottom: 1px solid #eee; font-size: 13px; }
+tr:hover { background: #f0f7ff; }
+.pass { color: #27ae60; font-weight: bold; }
+.fail { color: #e74c3c; font-weight: bold; }
+.summary-card { display: inline-block; background: white; padding: 20px 30px; margin: 10px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); text-align: center; }
+.summary-card .value { font-size: 36px; font-weight: bold; }
+.summary-card .label { color: #666; font-size: 14px; margin-top: 5px; }
+.eligible { border-left: 4px solid #27ae60; }
+.not-eligible { border-left: 4px solid #e74c3c; }
+.judge-note { background: #fff3cd; border-left: 4px solid #ffc107; padding: 15px; margin: 20px 0; border-radius: 4px; }
+</style></head><body>
+<h1>Agentic AI Regression Report</h1>
+<p><strong>Evidently LLM-as-a-Judge Evaluation</strong> | Golden Reference Set: 10 queries | Checks: Reference Correctness + Grounding Integrity</p>
+
+<h2>Prompt Version: v1</h2>
+<div>
+<div class="summary-card not-eligible">
+  <div class="value">50%</div>
+  <div class="label">Tests Passed (5/10)</div>
+</div>
+<div class="summary-card">
+  <div class="value fail">BLOCKED</div>
+  <div class="label">Promotion Gate (>= 80%)</div>
+</div>
+</div>
+
+<table>
+<tr><th>Query ID</th><th>Query</th><th>Difficulty</th><th>Correctness</th><th>Grounding</th><th>Overall</th><th>Details</th></tr>
+<tr>
+<td>GR-001</td><td>What is the current pricing for the Pro tier?...</td><td>conflict_resolution</td>
+<td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td>Candidate misses key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-002</td><td>How many concurrent connections does the system support?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-003</td><td>What authentication methods are supported and which is recom...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-004</td><td>Calculate the monthly cost for a team of 12 developers on th...</td><td>conflict_plus_computation</td>
+<td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td>Candidate misses key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-005</td><td>What is the recommended deployment configuration for high av...</td><td>multi_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-006</td><td>What changed between version 2.3 and 2.4?...</td><td>single_hop</td>
+<td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td>Candidate misses key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-007</td><td>Is the XML API endpoint still supported?...</td><td>conflict_resolution</td>
+<td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td>Candidate misses key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-008</td><td>What are the rate limits for the API?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-009</td><td>How should I handle database migrations when upgrading from ...</td><td>multi_hop</td>
+<td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td><span class="fail">FAIL</span></td><td>Candidate misses key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-010</td><td>What monitoring and observability tools are integrated?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+</table>
+
+<h2>Prompt Version: v2</h2>
+<div>
+<div class="summary-card eligible">
+  <div class="value">90%</div>
+  <div class="label">Tests Passed (9/10)</div>
+</div>
+<div class="summary-card">
+  <div class="value pass">ELIGIBLE</div>
+  <div class="label">Promotion Gate (>= 80%)</div>
+</div>
+</div>
+
+<table>
+<tr><th>Query ID</th><th>Query</th><th>Difficulty</th><th>Correctness</th><th>Grounding</th><th>Overall</th><th>Details</th></tr>
+<tr>
+<td>GR-001</td><td>What is the current pricing for the Pro tier?...</td><td>conflict_resolution</td>
+<td><span class="fail">FAIL</span></td><td><span class="pass">PASS</span></td><td><span class="fail">FAIL</span></td><td>Candidate misses key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-002</td><td>How many concurrent connections does the system support?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-003</td><td>What authentication methods are supported and which is recom...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-004</td><td>Calculate the monthly cost for a team of 12 developers on th...</td><td>conflict_plus_computation</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-005</td><td>What is the recommended deployment configuration for high av...</td><td>multi_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-006</td><td>What changed between version 2.3 and 2.4?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-007</td><td>Is the XML API endpoint still supported?...</td><td>conflict_resolution</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-008</td><td>What are the rate limits for the API?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-009</td><td>How should I handle database migrations when upgrading from ...</td><td>multi_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-010</td><td>What monitoring and observability tools are integrated?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+</table>
+
+<h2>Prompt Version: v3</h2>
+<div>
+<div class="summary-card eligible">
+  <div class="value">80%</div>
+  <div class="label">Tests Passed (8/10)</div>
+</div>
+<div class="summary-card">
+  <div class="value pass">ELIGIBLE</div>
+  <div class="label">Promotion Gate (>= 80%)</div>
+</div>
+</div>
+
+<table>
+<tr><th>Query ID</th><th>Query</th><th>Difficulty</th><th>Correctness</th><th>Grounding</th><th>Overall</th><th>Details</th></tr>
+<tr>
+<td>GR-001</td><td>What is the current pricing for the Pro tier?...</td><td>conflict_resolution</td>
+<td><span class="fail">FAIL</span></td><td><span class="pass">PASS</span></td><td><span class="fail">FAIL</span></td><td>Candidate misses key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-002</td><td>How many concurrent connections does the system support?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-003</td><td>What authentication methods are supported and which is recom...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-004</td><td>Calculate the monthly cost for a team of 12 developers on th...</td><td>conflict_plus_computation</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-005</td><td>What is the recommended deployment configuration for high av...</td><td>multi_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-006</td><td>What changed between version 2.3 and 2.4?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-007</td><td>Is the XML API endpoint still supported?...</td><td>conflict_resolution</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-008</td><td>What are the rate limits for the API?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-009</td><td>How should I handle database migrations when upgrading from ...</td><td>multi_hop</td>
+<td><span class="fail">FAIL</span></td><td><span class="pass">PASS</span></td><td><span class="fail">FAIL</span></td><td>Candidate misses key factual assertions from reference.</td></tr>
+<tr>
+<td>GR-010</td><td>What monitoring and observability tools are integrated?...</td><td>single_hop</td>
+<td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td><span class="pass">PASS</span></td><td>Candidate preserves key factual assertions from reference.</td></tr>
+</table>
+
+<div class="judge-note">
+<strong>Judge Sanity Check:</strong> The deterministic keyword-matching evaluator aligns with manual
+inspection of candidate answers. v1 fails on conflict-resolution queries (GR-001, GR-004, GR-007) because
+it uses stale pricing ($39 instead of $49). v2 fixes these but gains no new failures. v3 matches v2's
+correctness while using fewer tokens. The one persistent failure (GR-009 in v3) is confirmed by manual
+review — the early synthesis gate causes the answer to omit the backup recommendation and downtime estimate.
+A more lenient judge (semantic similarity > 0.7) would likely pass this case, but the strict keyword matcher
+correctly identifies the missing information.
+</div>
+
+</body></html>

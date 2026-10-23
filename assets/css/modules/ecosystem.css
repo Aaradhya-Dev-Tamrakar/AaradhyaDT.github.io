@@ -2,7 +2,8 @@
 .ecosystem {
   margin: 0 3rem 3rem;
   padding: clamp(1.25rem, 3vw, 2rem);
-  border: 1px solid var(--line);
+  border: 1px solid var(--accent-a40);
+  border-top: 3px solid var(--accent);
   border-radius: 14px;
   background: var(--bg2);
   scroll-margin-top: calc(var(--nav-h) + 1rem);
@@ -10,10 +11,11 @@
 .ecosystem [hidden] { display: none !important; }
 .ecosystem-heading { display: flex; align-items: end; justify-content: space-between; gap: 1.5rem; }
 .ecosystem-eyebrow { margin: 0 0 .65rem; color: var(--accent); font: .68rem var(--mono); letter-spacing: .12em; text-transform: uppercase; }
-.ecosystem-heading h2 { margin: 0; color: var(--heading); font: 400 clamp(1.65rem, 3vw, 2.3rem)/1.25 var(--serif); }
+.ecosystem-heading h2 { margin: 0; max-width: 19ch; color: var(--heading); font: 400 clamp(2rem, 4.5vw, 3.8rem)/1.1 var(--serif); letter-spacing: -.025em; }
+.ecosystem-heading h2 em { color: var(--accent); font-weight: 400; }
 .ecosystem-heading p:not(.ecosystem-eyebrow), .ecosystem-footer { color: var(--muted); font-size: .85rem; line-height: 1.6; }
 .ecosystem-heading p:not(.ecosystem-eyebrow) { max-width: 62ch; margin-bottom: 0; }
-.ecosystem-totals { flex-shrink: 0; font: .7rem var(--mono); }
+.ecosystem-totals { flex-shrink: 0; padding: .8rem 1rem; border: 1px solid var(--accent-a40); border-radius: 6px; font: .7rem var(--mono); }
 .ecosystem-totals span { padding: 0 .4rem; color: var(--accent); }
 .ecosystem-controls { display: flex; align-items: end; flex-wrap: wrap; gap: .65rem; margin: 1.5rem 0; }
 .ecosystem-search { flex: 1 1 15rem; }

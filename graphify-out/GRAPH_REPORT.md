@@ -1,17 +1,17 @@
-# Graph Report - AaradhyaDT.github.io  (2026-10-23)
+# Graph Report - portfolio-highlights  (2026-10-23)
 
 ## Corpus Check
-- 134 files · ~2,445,419 words
+- 154 files · ~2,532,331 words
 - Verdict: corpus is large enough that graph structure adds value.
-- Unclassified: 30 file(s) not represented in the graph (top: .css 20, (none) 5, .gs 1)
+- Unclassified: 31 file(s) not represented in the graph (top: .css 20, (none) 6, .gs 1)
 
 ## Summary
-- 2705 nodes · 3309 edges · 365 communities (170 shown, 195 thin omitted)
-- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 103 edges (avg confidence: 0.86)
+- 2751 nodes · 3385 edges · 369 communities (172 shown, 197 thin omitted)
+- Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 104 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `e17bb899`
+- Built from commit: `0e13c3aa`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -20,14 +20,14 @@
 - Portfolio Website Tracker — v53.26
 - core.js
 - ui.js
-- site_automation.py
+- re
 - Lighthouse Audit Report
 - access.js
 - add_project.py
 - Aaradhya Dev Tamrakar
 - graph-modal.js
 - tour.js
-- json
+- build_cv.py
 - Aaradhya Dev Tamrakar CV
 - README.md
 - sys
@@ -37,18 +37,18 @@
 - sync.ps1
 - initGlobalSearch
 - Repository Architectural Evaluation & Evolution Roadmap
-- benchmark_bundle.py
+- argparse
 - Agent Rules & Workflow Guidelines
-- site_mcp.py
-- test_visual_regression.py
+- json
+- pathlib
 - Report Renderer
 - Verbatim Dialogue & Engineering Transcript
 - 2026-09-17_EVALUATE-REPO_CONVERSATION.md
 - home-widgets.js
-- os
-- argparse
+- build_css.py
+- W16 Agentic Evaluation Report
 - haptics.js
-- pathlib
+- os
 - audio.js
 - constants.js
 - Working conventions for this repo
@@ -57,8 +57,8 @@
 - Graphify Semantic Extraction Agent
 - Clean Codebase Payload
 - EcosystemTests
-- 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)
-- ReleaseStampTests
+- Distributed Provision Service
+- extract_index.py
 - IEEE KEC Student Branch
 - IEEE
 - shortcuts.js
@@ -73,9 +73,10 @@
 - Evidence data
 - Performance Metrics
 - Multi-Tier Access Control
-- FuseMonthTests
+- Portfolio editorial review October 2026
 - Portfolio Navigation, Showcase & Information Architecture Refactoring
-- QuietTestHandler
+- 2026-10-23_SECTION_HIGHLIGHTS.md
+- ReleaseStampTests
 - About | Aaradhya Dev Tamrakar
 - EU AI Act Literacy Certificate EU0028355472158
 - Poster: Workshop on Linux and Open Source Contribution
@@ -146,6 +147,7 @@
 - Master Portfolio OG Image
 - SPARK Edge-AI OG Image
 - Aaradhya Dev Tamrakar Portrait (PNG)
+- FuseMonthTests
 - Boot Orchestrator
 - AI-Assisted Coding Certificate
 - AI-Assisted Product Launch Certificate
@@ -358,8 +360,10 @@
 - And this changes the seven-repository picture
 - So I would change your scholarship framing slightly
 - v23 addition — latest site refinements (2026-07-18)
+- Project output captures — 23 October 2026
 - 2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md
 - setActiveNav
+- 2026-10-23_PROJECT_DESCRIPTIONS.md
 - Turn 2
 - Turn 3
 - 📎 Appendix: Portfolio Site Review (ChatGPT Session Continuation)
@@ -407,11 +411,11 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (365 total, 195 thin omitted)
+## Communities (369 total, 197 thin omitted)
 
 ### Community 0 - "verify.py"
 Cohesion: 0.08
-Nodes (43): generate_payload(), sanitize_content(), bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity() (+35 more)
+Nodes (41): bold(), _c(), check_asset_references(), check_cross_page_links(), check_csp_integrity(), check_css_integrity(), check_data_consistency(), check_file_sizes() (+33 more)
 
 ### Community 1 - "Portfolio Website Tracker — v53.26"
 Cohesion: 0.10
@@ -423,9 +427,9 @@ Nodes (40): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), 
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
-Nodes (31): renderSiteFooter(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson() (+23 more)
+Nodes (29): renderSiteFooter(), closeResumeGenerator(), closeSkillRadarModal(), closeWhatsNewModal(), copyResumePlainText(), downloadResumeJson(), downloadResumeMarkdown(), generateResumeJson() (+21 more)
 
-### Community 4 - "site_automation.py"
+### Community 4 - "re"
 Cohesion: 0.11
 Nodes (18): audit(), build_css_modules(), bump_version(), cmd_sync(), compute_next_version(), evaluate_bump_recommendation(), generate_commit_message(), get_current_version() (+10 more)
 
@@ -438,8 +442,8 @@ Cohesion: 0.16
 Nodes (29): ACCESS_CONTROL, ACCESS_CONTROL_PAYLOADS, addCustomVipEmail(), authenticateWithPasskey(), bufferToHex(), closeAccessModal(), decryptHexPayload(), getCustomVipEmails() (+21 more)
 
 ### Community 7 - "add_project.py"
-Cohesion: 0.15
-Nodes (10): add_project(), build_card_soup(), derive_payload_slug(), encrypt_and_register_link(), get_next_project_id(), group_fuse_coursework(), inject_card(), interactive_mode() (+2 more)
+Cohesion: 0.17
+Nodes (9): add_project(), build_card_soup(), derive_payload_slug(), get_next_project_id(), group_fuse_coursework(), inject_card(), interactive_mode(), main() (+1 more)
 
 ### Community 8 - "Aaradhya Dev Tamrakar"
 Cohesion: 0.10
@@ -453,9 +457,9 @@ Nodes (20): bindEvents(), toggleFullscreen(), closeGraphModal(), escapeHtml(), f
 Cohesion: 0.27
 Nodes (19): closeTourOverlay(), ensureTourOverlay(), exitTour(), getTourCurrentPage(), getTourPageUrl(), initTour(), positionTourCard(), promptGuidedTour() (+11 more)
 
-### Community 11 - "json"
-Cohesion: 0.15
-Nodes (8): create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), request_with_retry(), sync_manifest(), update_drive_file()
+### Community 11 - "build_cv.py"
+Cohesion: 0.20
+Nodes (3): ascii_text(), build(), p()
 
 ### Community 12 - "Aaradhya Dev Tamrakar CV"
 Cohesion: 0.12
@@ -466,8 +470,8 @@ Cohesion: 0.12
 Nodes (16): Automated Git Workflow & Pre-Commit Gate (`sync.ps1`), 📈 Codebase Knowledge Graph (`Graphify`), 📬 Contact & Connect, ⌨️ Global Keyboard Navigation & Shortcuts HUD, 🔑 Google OAuth 2.0 Integration, 💻 Interactive Developer Terminal Widget (`#adtTerminal`), Key Features, 📄 License (+8 more)
 
 ### Community 14 - "sys"
-Cohesion: 0.33
-Nodes (15): cmd_export(), cmd_get(), cmd_import(), cmd_list(), cmd_set(), cmd_verify(), decrypt_payload(), derive_key() (+7 more)
+Cohesion: 0.29
+Nodes (16): encrypt_and_register_link(), cmd_export(), cmd_get(), cmd_import(), cmd_list(), cmd_set(), cmd_verify(), decrypt_payload() (+8 more)
 
 ### Community 15 - "PCBTraces"
 Cohesion: 0.27
@@ -493,21 +497,21 @@ Nodes (11): buildSearchIndex(), CMDK_ENTRIES, initGlobalSearch(), currentResults
 Cohesion: 0.15
 Nodes (12): 1. Multi-Dimensional Scorecard, 2. Core Architectural Strengths, 3. Targeted Evolution Areas, 4. Priority Matrix & Implementation Sequencing, 5. Verification & Governance Criteria, Track 1: Imperative DOM Decomposition & Component Isolation, Track 2: Cross-Platform Sync Engine & Python CLI Parity, Track 3: Cryptographic & Auth Modernization (WebAuthn & Passkeys) (+4 more)
 
-### Community 21 - "benchmark_bundle.py"
-Cohesion: 0.19
-Nodes (6): analyze_assets(), generate_benchmark_summary(), get_file_metrics(), main(), print_cli_report(), simulate_latency()
+### Community 21 - "argparse"
+Cohesion: 0.11
+Nodes (9): analyze_assets(), generate_benchmark_summary(), get_file_metrics(), main(), print_cli_report(), simulate_latency(), generate_cards(), main() (+1 more)
 
 ### Community 22 - "Agent Rules & Workflow Guidelines"
 Cohesion: 0.08
 Nodes (23): 1. Git Workflow & Automation (CRITICAL — STRICT ENFORCEMENT), 1. Patch / Point Releases (`v51.1`, `v51.2`, ...), 2. Knowledge Graph & Codebase Navigation (Graphify), 2. Major Releases (`v51`, `v52`, ...), 3. Explainable Conditions: When to Bump Minor vs Major, 3. Operational Rules & Efficiency, 4. Encrypted Payloads & VIP Sections (`access.js`), 5. Versioning & Major Release Automation Architecture (+15 more)
 
-### Community 23 - "site_mcp.py"
-Cohesion: 0.27
-Nodes (4): handle_resource_read(), handle_tool_call(), process_request(), run_stdio_server()
+### Community 23 - "json"
+Cohesion: 0.07
+Nodes (14): handle_resource_read(), handle_tool_call(), process_request(), run_stdio_server(), invariants(), main(), generated_page(), main() (+6 more)
 
-### Community 24 - "test_visual_regression.py"
-Cohesion: 0.09
-Nodes (8): Handler, sync_notebooklm_sources(), run_e2e_suite(), calculate_image_diff(), capture_screenshot(), find_browser_executable(), main(), QuietServerHandler
+### Community 24 - "pathlib"
+Cohesion: 0.06
+Nodes (17): Handler, create_drive_file(), find_drive_file_by_name(), get_oauth_credentials(), main(), obtain_access_token(), request_with_retry(), sync_manifest() (+9 more)
 
 ### Community 25 - "Report Renderer"
 Cohesion: 0.22
@@ -525,21 +529,17 @@ Nodes (13): 10. What a professor/researcher is likely to notice, 11. What I woul
 Cohesion: 0.31
 Nodes (7): bootHomeWidgets(), initHeroCrestScrollFade(), initLastCommitBadge(), formatDateTime(), pad(), initLiveDates(), initStatusClock()
 
-### Community 29 - "os"
-Cohesion: 0.13
-Nodes (9): build_all(), minify_css(), build_graph_data(), add_to_tree(), sort_tree(), get_file_color(), find_browser(), generate_icon() (+1 more)
-
-### Community 30 - "argparse"
-Cohesion: 0.18
-Nodes (6): generated_page(), main(), render_tree(), generate_cards(), main(), render_svg_card()
+### Community 30 - "W16 Agentic Evaluation Report"
+Cohesion: 0.29
+Nodes (6): 1. Executive Summary & Core Metrics, 2. Failure Taxonomy Breakdown, 3. Performance by Evaluation Category, 4. Per-Query Execution Log, 5. Comparative Analysis: W16 Agentic Loop vs. W15 Single-Pass Baseline, W16 Agentic Evaluation Report
 
 ### Community 31 - "haptics.js"
 Cohesion: 0.38
 Nodes (4): initScrollParallax(), initSwipeNav(), initTouchGestures(), triggerHapticFeedback()
 
-### Community 32 - "pathlib"
-Cohesion: 0.10
-Nodes (8): extract_achievements(), extract_projects(), main(), render_block(), render_entry(), text_of(), main(), SyncBranchTests
+### Community 32 - "os"
+Cohesion: 0.12
+Nodes (11): generate_payload(), sanitize_content(), find_browser(), generate_icon(), main(), main(), add(), page() (+3 more)
 
 ### Community 33 - "audio.js"
 Cohesion: 0.80
@@ -554,8 +554,8 @@ Cohesion: 0.33
 Nodes (5): Encrypted Sections & VIP Payloads (`access.js`), File delivery, Local Git Workflow & Auto-Sync (`sync.ps1`), Output constraints (strict), Working conventions for this repo
 
 ### Community 37 - "evidence.js"
-Cohesion: 0.90
-Nodes (4): addRow(), initProjectEvidence(), renderEvidence(), text()
+Cohesion: 0.73
+Nodes (5): addRow(), initProjectEvidence(), layoutProjectProofs(), renderEvidence(), text()
 
 ### Community 38 - "setup"
 Cohesion: 0.70
@@ -569,9 +569,13 @@ Nodes (5): Edge Direction Rule, Graphify Semantic Extraction Agent, Hyperedge Ru
 Cohesion: 0.70
 Nodes (5): Payload Segment 1 (sha256:048bb6...), Payload Segment 2 (sha256:6096fe...), Payload Segment 3 (sha256:9f76e2...), Payload Segment 4 (sha256:186ab4...), Clean Codebase Payload
 
-### Community 42 - "📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)"
+### Community 42 - "Distributed Provision Service"
 Cohesion: 0.17
-Nodes (12): And your repo actually fits the analogy unusually well, 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation), Assistant, Assistant, Assistant, I would actually call the broader concept, The DDOS ↔ PoS analogy, Turn 1 (+4 more)
+Nodes (12): And your repo actually fits the analogy unusually well, Assistant, Assistant, Assistant, Distributed Provision Service, I would actually call the broader concept, The DDOS ↔ PoS analogy, Turn 1 (+4 more)
+
+### Community 43 - "extract_index.py"
+Cohesion: 0.46
+Nodes (6): extract_achievements(), extract_projects(), main(), render_block(), render_entry(), text_of()
 
 ### Community 44 - "IEEE KEC Student Branch"
 Cohesion: 0.50
@@ -616,6 +620,10 @@ Nodes (3): Best Practices Audit, Lighthouse Configuration, Performance Metrics
 ### Community 57 - "Multi-Tier Access Control"
 Cohesion: 0.67
 Nodes (3): Privacy Policy, Multi-Tier Access Control, Terms of Service
+
+### Community 58 - "Portfolio editorial review October 2026"
+Cohesion: 0.29
+Nodes (6): Audience and scope, Decisions, Limits of this pass, Portfolio editorial review October 2026, Source inspection, Validation
 
 ### Community 59 - "Portfolio Navigation, Showcase & Information Architecture Refactoring"
 Cohesion: 0.50
@@ -686,8 +694,8 @@ Cohesion: 0.06
 Nodes (31): And this is where your electronics background becomes valuable, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, **BEI student → emerging Intelligent Systems / AI Systems researcher-engineer** (+23 more)
 
 ### Community 215 - "Turn 3"
-Cohesion: 0.08
-Nodes (25): And your repo actually fits the analogy unusually well, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+17 more)
+Cohesion: 0.15
+Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
 
 ### Community 216 - "Turn 13"
 Cohesion: 0.09
@@ -762,8 +770,8 @@ Cohesion: 0.15
 Nodes (13): And one more thing, And the Google Classroom MCP idea is actually worth revisiting, Assistant, Assistant, My view of your present vs. future, **Near future:**, **Present:**, **Strong long-term trajectory:** (+5 more)
 
 ### Community 234 - "Turn 3"
-Cohesion: 0.15
-Nodes (13): Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+5 more)
+Cohesion: 0.08
+Nodes (25): And your repo actually fits the analogy unusually well, 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation), Assistant, Assistant, Assistant, Assistant, Assistant, Assistant (+17 more)
 
 ### Community 235 - "Turn 12"
 Cohesion: 0.17
@@ -1065,6 +1073,10 @@ Nodes (3): Current, Earlier, The more important discovery
 Cohesion: 0.67
 Nodes (3): Current, Earlier, The more important discovery
 
+### Community 361 - "Project output captures — 23 October 2026"
+Cohesion: 0.50
+Nodes (3): Project output captures — 23 October 2026, Remaining source and runtime gaps, Verification
+
 ### Community 362 - "2026-10-01_BRANCH-EXPLAIN-CAREER-ASTROLOGY_CONVERSATION.md"
 Cohesion: 0.04
 Nodes (47): 10. Money and finances — Ketu in the 2nd, 11. Saturn in the 11th — networks and long-term gains, 12. Education, 13. Relationships and marriage, 14. The Navamsa — deeper development, 15. Your spiritual/psychological axis, 16. Your current major dasha structure, 17. Yogini Dasha (+39 more)
@@ -1091,23 +1103,23 @@ Nodes (6): 1. Fix the static/runtime state mismatch, 2. Separate "portfolio gati
 
 ## Knowledge Gaps
 - **188 isolated node(s):** `aaradhyadt-portfolio`, `ADT | Aaradhya Dev Tamrakar — Electronics Engineer & AI/ML Developer`, `Certificate: Generate a Study Guide`, `Certificate: Introduction to Python (CPE Credits)`, `Certificate: Introduction to Python (DataCamp)` (+183 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1871 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
-- **195 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1900 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+- **197 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `17. The most important transformation in your work` connect `Turn 2` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
-  _High betweenness centrality (0.016) - this node is a cross-community bridge._
+- **Why does `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` connect `RFC: Portfolio-OS — Open Architecture, Template & Developer SDK` to `Engineering Reference: High-Performance 3D WebGL Architecture (CodeWiki Case Study)`, `4. Technical Specifications`, `5. Implementation Roadmap`?**
+  _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **What connects `aaradhyadt-portfolio`, `ADT | Aaradhya Dev Tamrakar — Electronics Engineer & AI/ML Developer`, `Certificate: Generate a Study Guide` to the rest of the system?**
   _188 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `verify.py` be split into smaller, more focused modules?**
-  _Cohesion score 0.07997038134024435 - nodes in this community are weakly interconnected._
-- **Why does `17. The most important transformation in your work` connect `Turn 2` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
+  _Cohesion score 0.08074534161490683 - nodes in this community are weakly interconnected._
+- **Why does `And this is the part I would preserve most carefully` connect `Turn 9` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
   _High betweenness centrality (0.011) - this node is a cross-community bridge._
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
-- **Why does `Suggestions` connect `Suggestions` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
-  _High betweenness centrality (0.011) - this node is a cross-community bridge._
+- **Why does `This also explains why your work became faster` connect `Turn 13` to `2026-09-16_ANALYZE-RECENT-REPOSITORY-WORKS_CONVERSATION.md`?**
+  _High betweenness centrality (0.008) - this node is a cross-community bridge._
 - **Should `core.js` be split into smaller, more focused modules?**
   _Cohesion score 0.06377551020408163 - nodes in this community are weakly interconnected._

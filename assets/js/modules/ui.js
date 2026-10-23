@@ -22,7 +22,7 @@ function openWhatsNewModal() {
         <span class="wn-badge">${rel.version}</span>
         <span class="wn-title">${rel.title}</span>
         <div class="wn-meta">
-          <span class="wn-date">${rel.date}</span> · 
+          <span class="wn-date">${rel.date}</span> ·
           <a class="wn-sha" href="https://github.com/AaradhyaDT/AaradhyaDT.github.io/commit/${rel.sha}" target="_blank" rel="noopener">${rel.sha} ↗</a>
         </div>
       </div>
@@ -307,9 +307,10 @@ function initLightbox() {
       }
     }
 
-    if (type === 'pdf') {
+    if (type === 'pdf' || type === 'html') {
       const iframe = document.createElement('iframe');
-      iframe.src = src + '#toolbar=1&view=FitH';
+      iframe.src = type === 'pdf' ? src + '#toolbar=1&view=FitH' : src;
+      if (type === 'html') iframe.setAttribute('sandbox', 'allow-same-origin');
       iframe.title = label;
       lbBody.appendChild(iframe);
     } else {
@@ -364,8 +365,19 @@ function initLightbox() {
   });
 
   document.addEventListener('click', event => {
-    const btn = event.target.closest('.cert-btn');
+    const btn = event.target.closest('.cert-btn, .project-media-link');
     if (!btn) return;
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    if (btn.matches('.project-media-link')) {
+      const src = btn.getAttribute('href');
+      if (!src) return;
+      const path = src.split(/[?#]/)[0];
+      const type = /\.pdf$/i.test(path) ? 'pdf' : /\.html?$/i.test(path) ? 'html' : 'image';
+      const title = btn.closest('.project-card')?.querySelector('.project-title')?.textContent.trim() || 'Project proof';
+      event.preventDefault();
+      openLightbox(src, title, type);
+      return;
+    }
     event.preventDefault();
     openLightbox(btn.dataset.cert, btn.dataset.label, btn.dataset.type, btn.dataset.download, btn.dataset.verify);
   });
@@ -658,221 +670,31 @@ function initKeyNav() {
 
 /* ── Interactive Skill Radar & Domain Competency Visualizer (v48) ── */
 const SKILL_RADAR_DOMAINS = [
-  { label: 'AI/ML & GenAI', score: 0.94, desc: 'Transformers, PyTorch, Agentic AI, RAG Pipelines, SHAP Explainability, Scikit-Learn', tags: ['PyTorch', 'Agentic RAG', 'Transformers', 'FastAPI'] },
-  { label: 'Embedded C/C++', score: 0.90, desc: 'FreeRTOS multi-threading, ESP32, STM32, ARM Cortex-M, SPI/I2C/UART bus tuning', tags: ['FreeRTOS', 'ESP32', 'C++20', 'Micro-Controllers'] },
-  { label: 'Electronics & PCB', score: 0.92, desc: 'KiCAD Multi-Layer PCB layout, Active analog signal filters, IMU MPU6050 calibration', tags: ['KiCAD', 'SPARK', 'Analog Circuits', 'PCB Design'] },
-  { label: 'Full-Stack Web', score: 0.88, desc: 'Vanilla JS ES6+, PWA Offline Architecture, Node.js, WebSockets, Web Crypto, REST APIs', tags: ['JavaScript', 'PWA / Service Worker', 'WebSockets', 'Node.js'] },
-  { label: 'Data Science & Omics', score: 0.89, desc: 'Pandas/NumPy, GCSBR Signal Telemetry, Genomic eQTL Analysis, Statistical Modeling', tags: ['Data Science', 'Genomics', 'Pandas', 'Telemetry'] },
-  { label: 'Leadership & Applied Strategy', score: 0.91, desc: 'IEEE event ops & mentorship, security-first risk framing, agile delivery, cross-functional case studies', tags: ['IEEE Ops', 'Mentorship', 'Security Mindset', 'Agile'] }
+  {
+    "label": "Model evaluation",
+    "desc": "Vision-model demographic performance auditing and reporting.",
+    "href": "projects.html#p-025",
+    "project": "BiasAperture"
+  },
+  {
+    "label": "Embedded AI",
+    "desc": "Sensor processing and on-device inference for a fall-detection wearable.",
+    "href": "projects.html#p-018",
+    "project": "SPARK"
+  },
+  {
+    "label": "AI workflow infrastructure",
+    "desc": "Coordination tooling for multi-provider AI workflows.",
+    "href": "projects.html#p-040",
+    "project": "Fleet Orchestrator"
+  },
+  {
+    "label": "Developer automation",
+    "desc": "Configuration snapshots, restore, and drift audits across IDEs.",
+    "href": "projects.html#p-041",
+    "project": "Agent-Customization-Sync"
+  }
 ];
-
-function initRadarCanvas(canvasId, domainSelector) {
-  const canvas = document.getElementById(canvasId);
-  if (!canvas) return;
-  const ctx = canvas.getContext('2d');
-  if (!ctx) return;
-
-  const domains = SKILL_RADAR_DOMAINS;
-  const numSides = domains.length;
-  let activeIndex = 0;
-
-  function renderRadar() {
-    const container = canvas.parentElement;
-    const containerWidth = container ? container.clientWidth : 280;
-    const size = Math.min(300, Math.max(220, containerWidth > 0 ? containerWidth : 280));
-    const dpr = Math.min(window.devicePixelRatio || 1, 2);
-
-    if (canvas.width !== size * dpr || canvas.height !== size * dpr) {
-      canvas.width = size * dpr;
-      canvas.height = size * dpr;
-      canvas.style.width = size + 'px';
-      canvas.style.height = size + 'px';
-      canvas.style.maxWidth = '100%';
-    }
-
-    ctx.save();
-    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
-    ctx.clearRect(0, 0, size, size);
-
-    const centerX = size / 2;
-    const centerY = size / 2;
-    const radius = size * 0.25;
-
-    // Abbreviated labels for canvas (full names in domain cards)
-    const shortLabels = domains.map(d => {
-      if (d.label.length > 16) {
-        // Shorten "Leadership & Applied Strategy" → "Leadership"
-        // Shorten "Data Science & Omics" → "Data Sci & Omics"
-        const parts = d.label.split(' & ');
-        if (parts.length === 2 && d.label.length > 20) return parts[0];
-        return d.label.length > 18 ? d.label.substring(0, 16) + '…' : d.label;
-      }
-      return d.label;
-    });
-
-    function getPointCoordinates(index, scale) {
-      const angle = (Math.PI * 2 / numSides) * index - Math.PI / 2;
-      return {
-        x: centerX + Math.cos(angle) * (radius * scale),
-        y: centerY + Math.sin(angle) * (radius * scale)
-      };
-    }
-
-    // 1. Render Concentric Web Grids & Scale Tier Legends
-    const levels = 4;
-    for (let l = 1; l <= levels; l++) {
-      const levelScale = l / levels;
-      ctx.beginPath();
-      for (let i = 0; i < numSides; i++) {
-        const pt = getPointCoordinates(i, levelScale);
-        if (i === 0) ctx.moveTo(pt.x, pt.y);
-        else ctx.lineTo(pt.x, pt.y);
-      }
-      ctx.closePath();
-      ctx.strokeStyle = l === levels ? 'rgba(255, 255, 255, 0.18)' : 'rgba(255, 255, 255, 0.07)';
-      ctx.lineWidth = 1;
-      ctx.stroke();
-
-      // Tier percentage label on vertical axis
-      ctx.font = '8px "DM Mono", monospace';
-      ctx.fillStyle = 'rgba(255, 255, 255, 0.28)';
-      ctx.textAlign = 'center';
-      ctx.textBaseline = 'bottom';
-      ctx.fillText(`${l * 25}%`, centerX, centerY - (radius * levelScale) - 2);
-    }
-
-    // 2. Render Radial Spokes
-    for (let i = 0; i < numSides; i++) {
-      const pt = getPointCoordinates(i, 1);
-      ctx.beginPath();
-      ctx.moveTo(centerX, centerY);
-      ctx.lineTo(pt.x, pt.y);
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.10)';
-      ctx.stroke();
-    }
-
-    // 3. Draw Filled Data Polygon
-    ctx.beginPath();
-    for (let i = 0; i < numSides; i++) {
-      const pt = getPointCoordinates(i, domains[i].score);
-      if (i === 0) ctx.moveTo(pt.x, pt.y);
-      else ctx.lineTo(pt.x, pt.y);
-    }
-    ctx.closePath();
-
-    const grad = ctx.createRadialGradient(centerX, centerY, 8, centerX, centerY, radius);
-    grad.addColorStop(0, 'rgba(212, 168, 90, 0.45)');
-    grad.addColorStop(1, 'rgba(109, 191, 170, 0.15)');
-    ctx.fillStyle = grad;
-    ctx.fill();
-
-    ctx.strokeStyle = '#d4a85a';
-    ctx.lineWidth = 1.5;
-    ctx.stroke();
-
-    // 4. Draw Data Point Nodes
-    for (let i = 0; i < numSides; i++) {
-      const pt = getPointCoordinates(i, domains[i].score);
-      const isSelected = (i === activeIndex);
-
-      ctx.beginPath();
-      ctx.arc(pt.x, pt.y, isSelected ? 5 : 3.5, 0, Math.PI * 2);
-      ctx.fillStyle = isSelected ? '#ffffff' : '#d4a85a';
-      ctx.fill();
-      ctx.strokeStyle = isSelected ? '#d4a85a' : '#0d0e11';
-      ctx.lineWidth = 1.5;
-      ctx.stroke();
-    }
-
-    // 5. Render Outer Axis Vertex Labels & Scores
-    const labelOffset = radius + 18;
-    domains.forEach((dom, i) => {
-      const isSelected = (i === activeIndex);
-      const angle = (Math.PI * 2 / numSides) * i - Math.PI / 2;
-      const cosA = Math.cos(angle);
-      const sinA = Math.sin(angle);
-
-      let lx = centerX + cosA * labelOffset;
-      let ly = centerY + sinA * labelOffset;
-
-      const titleFont = isSelected ? '600 9.5px "DM Mono", monospace' : '500 9px "Inter", sans-serif';
-      const scoreFont = '600 8.5px "DM Mono", monospace';
-      const scoreStr = `${Math.round(dom.score * 100)}%`;
-
-      // Text alignment by position
-      if (Math.abs(cosA) < 0.3) {
-        ctx.textAlign = 'center';
-        ctx.textBaseline = sinA < 0 ? 'bottom' : 'top';
-      } else if (cosA > 0) {
-        ctx.textAlign = 'left';
-        ctx.textBaseline = 'middle';
-      } else {
-        ctx.textAlign = 'right';
-        ctx.textBaseline = 'middle';
-      }
-
-      // Clamp to canvas bounds
-      ctx.font = titleFont;
-      const tw = ctx.measureText(shortLabels[i]).width;
-      const pad = 4;
-
-      if (ctx.textAlign === 'left' && lx + tw > size - pad) lx = size - pad - tw;
-      if (ctx.textAlign === 'right' && lx - tw < pad) lx = pad + tw;
-      if (ctx.textAlign === 'center') {
-        if (lx - tw / 2 < pad) lx = pad + tw / 2;
-        if (lx + tw / 2 > size - pad) lx = size - pad - tw / 2;
-      }
-      if (ly < pad + 10) ly = pad + 10;
-      if (ly > size - pad - 10) ly = size - pad - 10;
-
-      // Domain label
-      ctx.font = titleFont;
-      ctx.fillStyle = isSelected ? '#d4a85a' : 'rgba(255, 255, 255, 0.80)';
-      ctx.fillText(shortLabels[i], lx, ly - 4);
-
-      // Score
-      ctx.font = scoreFont;
-      ctx.fillStyle = isSelected ? '#ffffff' : 'rgba(212, 168, 90, 0.9)';
-      ctx.fillText(scoreStr, lx, ly + 7);
-    });
-
-    ctx.restore();
-  }
-
-  renderRadar();
-
-  // ResizeObserver for dynamic responsiveness
-  if (typeof ResizeObserver !== 'undefined' && canvas.parentElement) {
-    if (canvas._radarResizeObs) {
-      canvas._radarResizeObs.disconnect();
-    }
-    const ro = new ResizeObserver(() => {
-      renderRadar();
-    });
-    ro.observe(canvas.parentElement);
-    canvas._radarResizeObs = ro;
-  }
-
-  // Wire domain list hover & clicks
-  const domainItems = typeof domainSelector === 'string' ? document.querySelectorAll(domainSelector) : domainSelector;
-  if (domainItems && domainItems.length) {
-    domainItems.forEach((item, idx) => {
-      item.addEventListener('mouseenter', () => {
-        activeIndex = idx;
-        domainItems.forEach(d => d.classList.remove('active'));
-        item.classList.add('active');
-        renderRadar();
-      });
-      item.addEventListener('click', () => {
-        activeIndex = idx;
-        domainItems.forEach(d => d.classList.remove('active'));
-        item.classList.add('active');
-        renderRadar();
-        if (typeof triggerHapticFeedback === 'function') triggerHapticFeedback('light');
-      });
-    });
-  }
-}
 
 function openSkillRadarModal() {
   let modal = document.getElementById('skillRadarModalOverlay');
@@ -882,7 +704,7 @@ function openSkillRadarModal() {
     modal.className = 'resume-modal-overlay';
     modal.setAttribute('role', 'dialog');
     modal.setAttribute('aria-modal', 'true');
-    modal.setAttribute('aria-label', 'Interactive Skill Radar Visualizer');
+    modal.setAttribute('aria-label', 'Capabilities and project examples');
     document.body.appendChild(modal);
   }
 
@@ -890,7 +712,7 @@ function openSkillRadarModal() {
     <div class="resume-modal-card" style="max-width: 820px;">
       <div class="resume-modal-header">
         <div class="resume-modal-title">
-          <span>5-Domain Skill Radar &amp; Competency Visualizer</span>
+          <span>Capabilities and Project Examples</span>
         </div>
         <button type="button" class="access-modal-close" id="skillRadarModalClose" aria-label="Close">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="18" height="18">
@@ -899,21 +721,16 @@ function openSkillRadarModal() {
         </button>
       </div>
       <div style="padding: 1.25rem 1.5rem 1.75rem; overflow-y: auto; max-height: calc(85vh - 70px);">
-        <div class="radar-layout-grid">
-          <div class="radar-canvas-container">
-            <canvas id="modalSkillRadarCanvas" class="radar-canvas" width="300" height="300"></canvas>
-          </div>
+        <div>
           <div class="radar-domains-list" id="modalRadarDomainsList">
             ${SKILL_RADAR_DOMAINS.map((d, i) => `
               <div class="domain-item ${i === 0 ? 'active' : ''}" data-domain="${i}">
                 <div class="domain-item-head">
                   <span>${d.label}</span>
-                  <span class="domain-score">${Math.round(d.score * 100)}%</span>
+
                 </div>
                 <div class="domain-desc">${d.desc}</div>
-                <div class="domain-tech-tags">
-                  ${d.tags.map(t => `<span class="domain-tech-tag">${t}</span>`).join('')}
-                </div>
+                <a href="${d.href}">Explore ${d.project} →</a>
               </div>
             `).join('')}
           </div>
@@ -932,7 +749,7 @@ function openSkillRadarModal() {
   document.body.style.overflow = 'hidden';
   if (typeof playAudioCue === 'function') playAudioCue('open');
 
-  initRadarCanvas('modalSkillRadarCanvas', '#modalRadarDomainsList .domain-item');
+
 }
 
 function closeSkillRadarModal() {
@@ -943,17 +760,11 @@ function closeSkillRadarModal() {
   if (typeof playAudioCue === 'function') playAudioCue('close');
 }
 
-function initSkillRadar(shouldScroll) {
-  const inlineCanvas = document.getElementById('skillRadarCanvas');
-  if (inlineCanvas) {
-    initRadarCanvas('skillRadarCanvas', '.radar-domains-list .domain-item');
-    if (shouldScroll) {
-      const sec = document.getElementById('skill-radar');
-      if (sec) sec.scrollIntoView({ behavior: 'smooth' });
-    }
-  } else if (shouldScroll) {
-    openSkillRadarModal();
-  }
+function initSkillRadar(shouldScroll = true) {
+  if (!shouldScroll) return;
+  const section = document.getElementById('skill-radar');
+  if (section) section.scrollIntoView({ behavior: 'smooth' });
+  else openSkillRadarModal();
 }
 
 /* ── Tailored ATS Resume Generator & Exporter (v43) ── */

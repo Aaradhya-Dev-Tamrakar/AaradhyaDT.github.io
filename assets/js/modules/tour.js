@@ -256,6 +256,9 @@ function renderTourStep(idx) {
 
   document.querySelectorAll('.tour-highlight').forEach(el => el.classList.remove('tour-highlight'));
   if (target !== document.body) {
+    for (let ancestor = target.parentElement; ancestor; ancestor = ancestor.parentElement) {
+      if (ancestor.tagName === 'DETAILS') ancestor.open = true;
+    }
     target.classList.add('tour-highlight');
     target.scrollIntoView({ block: 'center', behavior: tourReducedMotion() ? 'auto' : 'smooth' });
   }
@@ -506,14 +509,7 @@ function initTour() {
     }
   });
 
-  // Auto-prompt visitor for guided site tour after 3.5s on first visit
-  const PROMPT_LS_KEY = 'adt_tour_prompted';
-  if (!localStorage.getItem(PROMPT_LS_KEY) && !localStorage.getItem(TOUR_LS_ACTIVE)) {
-    setTimeout(() => {
-      if (localStorage.getItem(PROMPT_LS_KEY) || localStorage.getItem(TOUR_LS_ACTIVE)) return;
-      promptGuidedTour();
-    }, 3500);
-  }
+  // Tours remain available on request; first-time readers can focus on the work.
 }
 
 function promptGuidedTour() {

@@ -1,0 +1,17 @@
+{
+  "id": "p-041",
+  "slug": "agent-customization-sync",
+  "caption": "Actual snapshot and restore \u00b7 isolated example configuration",
+  "type": "command",
+  "artifact": "output.html",
+  "source_file": "sync.html",
+  "source_sha256": "046c61872fa8ab02386c33ad0c006593262d023443e61e84a3843bc5817c5386",
+  "source_revision": "2c013ca4001c1eaa386135036c9ee9dd3211a941",
+  "source_state": "clean",
+  "captured_at": "2026-10-23T05:54:53.357382+00:00",
+  "dimensions": [
+    1440,
+    607
+  ],
+  "capture_sha256": "3f8a7a93c938957db56ba4b546e8d0897c53b06d66b962312de352781248047d"
+}

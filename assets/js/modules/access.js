@@ -655,7 +655,7 @@ async function updateGatedContentVisibility() {
         const tierName = requiredTier === ACCESS_CONTROL.TIER_MASTER ? 'Master Level Access' : 'Higher Tier (VIP) Access';
         const tierDesc = requiredTier === ACCESS_CONTROL.TIER_MASTER
           ? 'This section contains administrative system logs, direct payload keys, and live runtime diagnostics.'
-          : 'Unlock confidential GitHub source code links, extended performance benchmarks, and private architecture specifications.';
+          : 'Some source repositories and supplementary notes are shared selectively. Contact me to discuss the work or request relevant material.';
         const previewBadges = requiredTier === ACCESS_CONTROL.TIER_MASTER
           ? `
             <div style="display:flex;justify-content:center;gap:0.6rem;flex-wrap:wrap;margin:0.8rem 0 1.25rem;">
