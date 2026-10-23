@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.12",
     date: "2026-10-23",
-    sha: "56ffe7708f7c6caa22e7f0bfca0f9d1a730434f5",
-    title: "wire interactive dropdown switcher for site tools and research sections",
+    sha: "abacd92b54fd29b4ddf87d4f99c20833356dc308",
+    title: "calibrate scroll offset to section header below navbar for all 3 switcher options",
     highlights: []
   },
   {

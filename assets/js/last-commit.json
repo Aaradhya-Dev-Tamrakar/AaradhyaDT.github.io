@@ -1,6 +1,6 @@
 {
-  "sha": "56ffe7708f7c6caa22e7f0bfca0f9d1a730434f5",
-  "shortSha": "56ffe77",
-  "date": "2026-10-23T20:32:15+05:45",
-  "message": "feat(home): wire interactive dropdown switcher for site tools and research sections"
+  "sha": "abacd92b54fd29b4ddf87d4f99c20833356dc308",
+  "shortSha": "abacd92",
+  "date": "2026-10-23T20:40:10+05:45",
+  "message": "fix(home): calibrate scroll offset to section header below navbar for all 3 switcher options"
 }
