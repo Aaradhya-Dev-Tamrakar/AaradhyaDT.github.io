@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v56.13",
+    version: "v56.14",
     date: "2026-10-23",
     sha: "6160907e06a5270d28e86f949f7795ae6babc268",
     title: "unify section gap from section separators across site",
