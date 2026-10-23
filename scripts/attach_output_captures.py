@@ -45,6 +45,10 @@ def main():
         old=card.select_one('.project-media-preview')
         if old: old.replace_with(block)
         else: card.select_one('.project-card-body').append(block)
+        story=card.select_one('.project-story')
+        if story:
+            block.extract()
+            story.insert_after(block)
         block.insert_after(caption)
         (folder/'capture-meta.json').write_text(json.dumps(record,indent=2),encoding='utf-8')
     for pid,markup in frozen.items():
