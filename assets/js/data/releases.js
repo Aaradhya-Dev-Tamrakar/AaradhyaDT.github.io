@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.7",
     date: "2026-10-23",
-    sha: "2286547baae04b4caad6b93da29ee45724728cb2",
-    title: "position as authentic systems explorer and 8th-sem engineer (#29)",
+    sha: "fe1dce1566398b64bfb0355d4767dce56dae305f",
+    title: "update metrics count to 30+ and add space navigation hint",
     highlights: []
   },
   {
