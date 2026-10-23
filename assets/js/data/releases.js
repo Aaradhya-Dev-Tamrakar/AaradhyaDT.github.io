@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v56.8",
+    version: "v56.9",
     date: "2026-10-23",
     sha: "9b1da8a20bae2677952eac8e6aedce3b6f3915c9",
     title: "codify systems merging trilogy (DEC-004) and update active status hub",

@@ -270,11 +270,13 @@
     .hero-crest-stage {
       position: relative;
       width: 100%;
+      box-sizing: border-box;
+      padding: clamp(0.75rem, 2vw, 1.25rem);
       border-radius: 6px;
       overflow: hidden;
       border: 1px solid var(--line);
       background: var(--bg2);
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
       box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.5), 0 0 16px -6px var(--accent-a12);
       transition: border-color 0.3s ease, box-shadow 0.3s ease;
     }
@@ -287,15 +289,11 @@
     .hero-center-crest-img {
       width: 100%;
       height: auto;
-      max-height: 150px;
+      max-height: 240px;
       display: block;
-      aspect-ratio: 16 / 7;
-      object-fit: cover;
-      transition: opacity 0.2s ease, transform 0.4s ease;
-    }
-
-    .hero-crest-stage:hover .hero-center-crest-img {
-      transform: scale(1.02);
+      aspect-ratio: 8 / 5;
+      object-fit: contain;
+      transition: opacity 0.2s ease;
     }
 
     .hero-crest-ambient-glow {
@@ -1420,7 +1418,7 @@
         <div class="terminal-body">
           <div class="term-line">
             <span class="term-green">Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal
-              (v56.8).</span><br />
+              (v56.9).</span><br />
             Type <span class="term-gold">'help'</span> or click the preset buttons above to explore.
           </div>
         </div>
