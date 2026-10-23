@@ -1,6 +1,6 @@
 {
-  "sha": "abacd92b54fd29b4ddf87d4f99c20833356dc308",
-  "shortSha": "abacd92",
-  "date": "2026-10-23T20:40:10+05:45",
-  "message": "fix(home): calibrate scroll offset to section header below navbar for all 3 switcher options"
+  "sha": "6160907e06a5270d28e86f949f7795ae6babc268",
+  "shortSha": "6160907",
+  "date": "2026-10-23T21:13:31+05:45",
+  "message": "style(layout): unify section gap from section separators across site"
 }

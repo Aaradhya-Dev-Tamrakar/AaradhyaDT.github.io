@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.13",
     date: "2026-10-23",
-    sha: "abacd92b54fd29b4ddf87d4f99c20833356dc308",
-    title: "calibrate scroll offset to section header below navbar for all 3 switcher options",
+    sha: "6160907e06a5270d28e86f949f7795ae6babc268",
+    title: "unify section gap from section separators across site",
     highlights: []
   },
   {
