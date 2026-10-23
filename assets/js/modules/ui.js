@@ -307,9 +307,10 @@ function initLightbox() {
       }
     }
 
-    if (type === 'pdf') {
+    if (type === 'pdf' || type === 'html') {
       const iframe = document.createElement('iframe');
-      iframe.src = src + '#toolbar=1&view=FitH';
+      iframe.src = type === 'pdf' ? src + '#toolbar=1&view=FitH' : src;
+      if (type === 'html') iframe.setAttribute('sandbox', 'allow-same-origin');
       iframe.title = label;
       lbBody.appendChild(iframe);
     } else {
@@ -364,8 +365,19 @@ function initLightbox() {
   });
 
   document.addEventListener('click', event => {
-    const btn = event.target.closest('.cert-btn');
+    const btn = event.target.closest('.cert-btn, .project-media-link');
     if (!btn) return;
+    if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+    if (btn.matches('.project-media-link')) {
+      const src = btn.getAttribute('href');
+      if (!src) return;
+      const path = src.split(/[?#]/)[0];
+      const type = /\.pdf$/i.test(path) ? 'pdf' : /\.html?$/i.test(path) ? 'html' : 'image';
+      const title = btn.closest('.project-card')?.querySelector('.project-title')?.textContent.trim() || 'Project proof';
+      event.preventDefault();
+      openLightbox(src, title, type);
+      return;
+    }
     event.preventDefault();
     openLightbox(btn.dataset.cert, btn.dataset.label, btn.dataset.type, btn.dataset.download, btn.dataset.verify);
   });
