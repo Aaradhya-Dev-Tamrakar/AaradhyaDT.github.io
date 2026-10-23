@@ -72,7 +72,7 @@ def render_tree(page, config):
     lines = [START, f'<section class="ecosystem" id="ecosystem" aria-labelledby="ecosystem-title" data-connections="{edges}">',
              '<header class="ecosystem-heading">',
              '<div><p class="ecosystem-eyebrow">Connected work</p>',
-             '<h2 id="ecosystem-title">One ecosystem. Many ways in.</h2>',
+             '<h2 id="ecosystem-title">One ecosystem.<br/><em>Many ways in.</em></h2>',
              '<p>Explore the tools, research, and learning that connect my engineering practice.</p></div>',
              f'<p class="ecosystem-totals">{len(cards)} projects <span aria-hidden="true">/</span> {len(groups)} branches</p>',
              '</header>',
