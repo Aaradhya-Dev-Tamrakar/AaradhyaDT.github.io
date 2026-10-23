@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v56.9",
     date: "2026-10-23",
-    sha: "9b1da8a20bae2677952eac8e6aedce3b6f3915c9",
-    title: "codify systems merging trilogy (DEC-004) and update active status hub",
+    sha: "450ca735a58e607fa9e7cf4f60c0f9544ad2120a",
+    title: "unclip and space crest logo",
     highlights: []
   },
   {
