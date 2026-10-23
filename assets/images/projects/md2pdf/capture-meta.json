@@ -1,0 +1,17 @@
+{
+  "id": "p-029",
+  "slug": "md2pdf",
+  "caption": "PDF produced by md2pdf \u00b7 README input \u00b7 simple renderer",
+  "type": "pdf",
+  "artifact": "output.pdf",
+  "source_file": "md2pdf-readme.pdf",
+  "source_sha256": "40ee312fcd856b16ba320d2ea1576bed509dac72254909d836315cb55a26503e",
+  "source_revision": "2a8f53632252ee24fba7b9c0362ae847aa489d3c",
+  "source_state": "clean",
+  "captured_at": "2026-10-23T05:54:54.285549+00:00",
+  "dimensions": [
+    1131,
+    1600
+  ],
+  "capture_sha256": "76732306f2cb7c415011815f15dc611d4986dc8b5742d291e5425732fa5c362d"
+}

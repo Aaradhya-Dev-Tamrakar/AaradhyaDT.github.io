@@ -1,0 +1,1 @@
+{"tasks": [{"id": "inspect", "duration": 2, "predecessors": []}, {"id": "implement", "duration": 5, "predecessors": ["inspect"]}, {"id": "document", "duration": 3, "predecessors": ["inspect"]}, {"id": "verify", "duration": 2, "predecessors": ["implement", "document"]}, {"id": "review", "duration": 1, "predecessors": ["verify"]}]}

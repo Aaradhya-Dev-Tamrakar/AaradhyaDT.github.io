@@ -436,7 +436,7 @@ const SEARCH_STATIC_INDEX = {
     "title": "md2pdf — Desktop Markdown to PDF Converter",
     "meta": "Python, Tkinter, Pandoc",
     "href": "projects.html#p-029",
-    "text": "md2pdf — desktop markdown to pdf converter native desktop markdown editor and pdf conversion workstation built with python & tkinter high-fidelity conversion pipeline utilizing pandoc (commonmark/gfm ast → html) and wkhtmltopdf (webkit html → pdf engine with explicit utf-8 encoding) features adjustable margins (default 20mm), live system dependency validation across windows, macos, and linux, and clean save-destination dialogs python tkinter pandoc wkhtmltopdf markdown desktop app"
+    "text": "md2pdf — desktop markdown to pdf converter pdf produced by md2pdf · readme input · simple renderer python tkinter pandoc wkhtmltopdf markdown desktop app"
   },
   {
     "type": "project",
@@ -457,7 +457,7 @@ const SEARCH_STATIC_INDEX = {
     "title": "Cryptarithmetic Solver & API",
     "meta": "Python, FastAPI, Backtracking",
     "href": "projects.html#p-020",
-    "text": "cryptarithmetic solver & api column-by-column backtracking solver for alphametic puzzles (send + more = money style) — prunes invalid branches immediately on column-arithmetic failure instead of naive generate-and-test fastapi wrapper with a `metrics` mode for solve-time/branch stats, plus a powershell helper and a no-pytest unit test runner python fastapi backtracking docker algorithm design"
+    "text": "cryptarithmetic solver & api actual solver run · send + more = money and all two + two = four solutions python fastapi backtracking docker algorithm design"
   },
   {
     "type": "project",
@@ -576,7 +576,7 @@ const SEARCH_STATIC_INDEX = {
     "title": "Fusemachines Wk 16 — Verified Agentic Assistant",
     "meta": "Python, Agentic AI, RAG",
     "href": "projects.html#p-046",
-    "text": "fusemachines wk 16 — verified agentic assistant extends the week 15 rag assistant with a verified agentic loop and multi-hop tool use. adds context-window management and context engineering to the assistant workflow. includes failure injection and a custom evaluation harness for checking agent behavior. python agentic ai rag context engineering evaluation fastapi"
+    "text": "fusemachines wk 16 — verified agentic assistant saved agent evaluation · run 20261003_154842 · four cases python agentic ai rag context engineering evaluation fastapi"
   },
   {
     "type": "project",
@@ -590,7 +590,7 @@ const SEARCH_STATIC_INDEX = {
     "title": "Fusemachines Week 18 — Trustworthy AI Guardrails",
     "meta": "Python, AI Safety, Prompt Injection",
     "href": "projects.html#p-044",
-    "text": "fusemachines week 18 — trustworthy ai guardrails implements input checks for personally identifiable information, prompt injection, and sensitive topics. screens generated outputs for schema compliance, groundedness, and sensitive information leakage. combines these checks in a fail-closed guardrail pipeline with a golden-case evaluation set. python ai safety prompt injection pii pydantic llm guardrails"
+    "text": "fusemachines week 18 — trustworthy ai guardrails guardrail technical report · 18 oct 2026 python ai safety prompt injection pii pydantic llm guardrails"
   },
   {
     "type": "project",

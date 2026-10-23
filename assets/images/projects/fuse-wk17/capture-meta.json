@@ -1,0 +1,17 @@
+{
+  "id": "p-043",
+  "slug": "fuse-wk17",
+  "caption": "Saved agent regression report \u00b7 prompt versions v1\u2013v3",
+  "type": "report",
+  "artifact": "output.html",
+  "source_file": "agent_regression_report.html",
+  "source_sha256": "dc8851d4ac2a5492595777f05688199c86ddab8e6a9a034ac67727ed39b445e6",
+  "source_revision": "25ca498afa365af40f6d1986bf8ce1f84bc5d25f",
+  "source_state": "clean",
+  "captured_at": "2026-10-23T05:54:50.958806+00:00",
+  "dimensions": [
+    1425,
+    990
+  ],
+  "capture_sha256": "325237600797638be9aa0cec4ffa22d0dbf670cb5b428bde18a1ef90a5629361"
+}

@@ -1,0 +1,185 @@
+{
+  "frozen_aif_assets": {
+    "assets/images/projects/fuse-wk1/hero.png": "59e390bc460de549493acc3381bdc54bbf8d39554b1624b74d081ef8c0b00d8e",
+    "assets/images/projects/fuse-wk1/hero.webp": "de0b42f874edc0a42d6140dba39c9188c3250f28800971c3abdc7e69a7874735",
+    "assets/images/projects/fuse-wk1/meta.json": "60498cc1fccbe423b5723a8b5287d9a7cee094896a9d49926bb7c9f76c1ab0a6",
+    "assets/images/projects/fuse-wk2/hero.png": "d97484923b69d90d64abdc09ecc81199249b3e909e2341ad4cddb12e1df2e864",
+    "assets/images/projects/fuse-wk2/hero.webp": "159175abda435026a5fae3623313339f3aa321053fa65025b47b0d35deb30b63",
+    "assets/images/projects/fuse-wk2/meta.json": "74e262657655c7080f43a53f9ff96f091aab3bdd42b9be92186800df9843dfc1",
+    "assets/images/projects/fuse-wk3/hero.png": "aa77b3412a536de0a0ccbee5b071c2413e669bbbc5cd3f6ac5e3f0ecfc0aaa1e",
+    "assets/images/projects/fuse-wk3/hero.webp": "336dd4b90815ed0590343339adaf2cf886d4ef8081d93a7b7a37a4bab20bb840",
+    "assets/images/projects/fuse-wk3/meta.json": "a200de8d9322aee9b28e82ad7b6a178d6ff32488f37d4fb200f8ad485b259351",
+    "assets/images/projects/fuse-wk4/hero.png": "5841785adc883550fc54a0769d7240ef80041c5c2d81e303d4434f9b08650ef7",
+    "assets/images/projects/fuse-wk4/hero.webp": "483bcd327a5bf14b5e10d7387f36f4aff0704b69804eaa12bc2a1ed21c1a6672",
+    "assets/images/projects/fuse-wk4/meta.json": "73fee5defac0340e3ffdafb8dcfbdad972666f8b5cdab75a35950392f6c3ceb0",
+    "assets/images/projects/fuse-wk5/hero.png": "8f14956cc3d3f8a5f0fce7a7339eecaa8f76a3a7da29e38635329a4e03abbdda",
+    "assets/images/projects/fuse-wk5/hero.webp": "66301aaad0fb1af8c6b9ddd80af3a173a95e159f841d54766fd97c8e5edfbb71",
+    "assets/images/projects/fuse-wk5/meta.json": "a54e5a468dc1614a1036c82bc9d7298b50b653d549cb5864a2fc72014f39f0b0",
+    "assets/images/projects/fuse-wk6/hero.png": "af4296cac96e15b1f755252135a629502ad774b81233c678a8fefdf6a11ccc18",
+    "assets/images/projects/fuse-wk6/hero.webp": "9bb51bb6ed18c77ddbc3bd183b26489f546f3fecfbf2c9a25e7b66c72b3903ba",
+    "assets/images/projects/fuse-wk6/meta.json": "8081b4c92e0776aa4a0cf92d9afa203ef54c54f27773d2ab2d665c257bfc41bb",
+    "assets/images/projects/fuse-wk7/hero.png": "d9c71bdd0d50b8a2a1aa2b306842e12ba301e4d1d358b9e0fa3ab2017214e0f8",
+    "assets/images/projects/fuse-wk7/hero.webp": "3ad7356da8698aff41eb0f6ecedb0ed23cce59b1b3a7de3d9f0d4acc535221b7",
+    "assets/images/projects/fuse-wk7/meta.json": "35d963a2822e8c901a474be7f5eaa9f02a97dce96969eda95d657ee159c240f5",
+    "assets/images/projects/fuse-wk8/hero.png": "b48fd6c2c5ed7bdd6eccf5d3a9a777e169f8073e5e4a1517258ca6b4b74bec86",
+    "assets/images/projects/fuse-wk8/hero.webp": "77c83754b0c3b512c50865550205294599e72a4b75a3e2c3c0df72766ac37a03",
+    "assets/images/projects/fuse-wk8/meta.json": "a2a71c48c6ef9c6ddd9caf664431fc2415e08536652aefb2d6af6c67270a917c",
+    "assets/images/projects/fuse-wk9/hero.png": "043b3c38fbc23ac1015a606ba2f9b10586a099c5c24b9579856250d5ae4e1090",
+    "assets/images/projects/fuse-wk9/hero.webp": "1fba448f4861b7559b883817abbf61ae2c596654bb1cdecf87101f229afb6c71",
+    "assets/images/projects/fuse-wk9/meta.json": "699edfe52b387837a8b34fb1a7533425a766bc07184733ca66a059eadb315277",
+    "assets/images/projects/fuse-wk10/hero.png": "fbfb3caf977525977921d6fa1857d9be674e0f9b8fc6c597deccac9f7a15e4b8",
+    "assets/images/projects/fuse-wk10/hero.webp": "d9654d0031fe397709f026b8fad931a5aff341a401ce19e27e9949043dd62af9",
+    "assets/images/projects/fuse-wk10/meta.json": "4dac79043b2a0e7eb86965abf36995fd0cc783f170bf1eaf4014dae46dcc01c3",
+    "assets/images/projects/fuse-wk11/hero.png": "6d7dd2248703f6f28216fab8b742495583bb3b7091f3452b7164e611c76bb461",
+    "assets/images/projects/fuse-wk11/hero.webp": "1267551ec6f2c419de8a572e16b60df7f0ae51ab02bf6661f6d826103a42d6c1",
+    "assets/images/projects/fuse-wk11/meta.json": "8dd25e74eb2d0a98cf8a1843c827976783e24544f0ee2538694ed925def6f85c",
+    "assets/images/projects/fuse-wk12/hero.png": "cc9aca48f96b0fb2870afcfe5d7da6bd7697d24b0a89ee204c6be1a2079c3827",
+    "assets/images/projects/fuse-wk12/hero.webp": "266caa6c249446eb484c0be7ad67793ff6bda73024f190b439d9fe65da50e796",
+    "assets/images/projects/fuse-wk12/meta.json": "bcde6fed0f2321a0905a5e8a86d65af876eb718c5b79ba85117364651677d2a4",
+    "assets/images/projects/fuse-wk13/hero.png": "b3c6471a534f532ba7c73fe63d22a38ab7f1a6bbda83dc1e2ae7bb868ac7e864",
+    "assets/images/projects/fuse-wk13/hero.webp": "6bf89f01d1b7a074e3d594ca0592d69f230b1bd1a20778d2f7f06229e212aeb0",
+    "assets/images/projects/fuse-wk13/meta.json": "ee3c003a08641f38757ace8630a1f20d3cdd2eccb71150b2584c780969ba44a6",
+    "assets/images/projects/fuse-wk14/hero.png": "a60355f560621546005d36c8a005faa2289857f71e7ffee669e18dfe3ae32063",
+    "assets/images/projects/fuse-wk14/hero.webp": "8922680623c7ad132f1296bcee57df167457d66103d38be4b28652163bfbecc8",
+    "assets/images/projects/fuse-wk14/meta.json": "584330eb36fc7c85ba23a37891b87f8aa9cd0f5529cda7c51ad7331f1feb360a"
+  },
+  "captures": [
+    {
+      "id": "p-025",
+      "slug": "biasaperture",
+      "caption": "Audit dossier generated 19 Oct 2026 \u00b7 FairFace race evaluation",
+      "type": "report",
+      "artifact": "output.html",
+      "source_file": "audit_report_val_resnet_race.html",
+      "source_sha256": "e4555274c51c5299420d2d892919b8debe38eaaf9997ef6465f7fca3af607cbb",
+      "source_revision": "c8ff9f788e738139949cf50174e8eefc82edf972",
+      "source_state": "clean",
+      "captured_at": "2026-10-23T05:54:50.346155+00:00",
+      "dimensions": [
+        1425,
+        990
+      ],
+      "capture_sha256": "770bbc136743109767c8d6bb743f58a7a65305953e5a5e66c2f9473a07ebd8d3"
+    },
+    {
+      "id": "p-046",
+      "slug": "fuse-wk16",
+      "caption": "Saved agent evaluation \u00b7 run 20261003_154842 \u00b7 four cases",
+      "type": "report",
+      "artifact": "output.html",
+      "source_file": "eval/results/REPORT.md",
+      "source_sha256": "c2a5fda7efa48fd83d6dab525bc82c19f486165782f95cfe2c220c59c020fba7",
+      "source_revision": "a6262a1762e92ceff58999d36804ecf998fd5cb3",
+      "source_state": "clean",
+      "captured_at": "2026-10-23T05:54:50.810022+00:00",
+      "dimensions": [
+        1425,
+        990
+      ],
+      "capture_sha256": "4564282c198666f973c040f6282854073a960ccef9063af1ad9e31ef6a486785"
+    },
+    {
+      "id": "p-043",
+      "slug": "fuse-wk17",
+      "caption": "Saved agent regression report \u00b7 prompt versions v1\u2013v3",
+      "type": "report",
+      "artifact": "output.html",
+      "source_file": "agent_regression_report.html",
+      "source_sha256": "dc8851d4ac2a5492595777f05688199c86ddab8e6a9a034ac67727ed39b445e6",
+      "source_revision": "25ca498afa365af40f6d1986bf8ce1f84bc5d25f",
+      "source_state": "clean",
+      "captured_at": "2026-10-23T05:54:50.958806+00:00",
+      "dimensions": [
+        1425,
+        990
+      ],
+      "capture_sha256": "325237600797638be9aa0cec4ffa22d0dbf670cb5b428bde18a1ef90a5629361"
+    },
+    {
+      "id": "p-044",
+      "slug": "fuse-wk18",
+      "caption": "Guardrail technical report \u00b7 18 Oct 2026",
+      "type": "report",
+      "artifact": "output.html",
+      "source_file": "REPORT.html",
+      "source_sha256": "0c8a8558c14380eda3e5ecd96e68afb9ff9e6a925cc3f739544187d3979d0a43",
+      "source_revision": "93bff776d19606de88cddd588ec62647e835b3dd",
+      "source_state": "clean",
+      "captured_at": "2026-10-23T05:54:51.106093+00:00",
+      "dimensions": [
+        1425,
+        990
+      ],
+      "capture_sha256": "1a92731dccf3839eb1498290f29e8848eb7f74cb89c6256b78bd72bc78749836"
+    },
+    {
+      "id": "p-040",
+      "slug": "fleet-orchestrator",
+      "caption": "Actual CPM planner output \u00b7 local example \u00b7 no jobs dispatched",
+      "type": "command",
+      "artifact": "output.html",
+      "source_file": "fleet.html",
+      "source_sha256": "1ea68662c19b5d934203b0b13c2e9d516c2b4e161a057a19745524f5fd8e540a",
+      "source_revision": "2d8287c72e5735e937c46cf2eb7d64d2a4ffdfea",
+      "source_state": "modified",
+      "captured_at": "2026-10-23T05:54:52.754939+00:00",
+      "command": "python tools/dag_planner.py plan example-dag.json",
+      "dimensions": [
+        1440,
+        656
+      ],
+      "capture_sha256": "7f6ee3248c306e993602ce425191d4089718124b8a6b80328db39c47ace3ced2"
+    },
+    {
+      "id": "p-041",
+      "slug": "agent-customization-sync",
+      "caption": "Actual snapshot and restore \u00b7 isolated example configuration",
+      "type": "command",
+      "artifact": "output.html",
+      "source_file": "sync.html",
+      "source_sha256": "046c61872fa8ab02386c33ad0c006593262d023443e61e84a3843bc5817c5386",
+      "source_revision": "2c013ca4001c1eaa386135036c9ee9dd3211a941",
+      "source_state": "clean",
+      "captured_at": "2026-10-23T05:54:53.357382+00:00",
+      "dimensions": [
+        1440,
+        607
+      ],
+      "capture_sha256": "3f8a7a93c938957db56ba4b546e8d0897c53b06d66b962312de352781248047d"
+    },
+    {
+      "id": "p-020",
+      "slug": "crypto",
+      "caption": "Actual solver run \u00b7 SEND + MORE = MONEY and all TWO + TWO = FOUR solutions",
+      "type": "command",
+      "artifact": "output.html",
+      "source_file": "crypto.html",
+      "source_sha256": "b46a92d50e84c4747e565c28f1a6c5a43e7ff1b6917eb4e54909ca30fd9e4666",
+      "source_revision": "a7a06c4f5a4e1bf2a226226ba743d5cd0d669953",
+      "source_state": "clean",
+      "captured_at": "2026-10-23T05:54:54.015412+00:00",
+      "dimensions": [
+        1439,
+        510
+      ],
+      "capture_sha256": "0f3d42c17114626be9083197cd694099c8257d859aa31d61d9b4c14b093c0e05"
+    },
+    {
+      "id": "p-029",
+      "slug": "md2pdf",
+      "caption": "PDF produced by md2pdf \u00b7 README input \u00b7 simple renderer",
+      "type": "pdf",
+      "artifact": "output.pdf",
+      "source_file": "md2pdf-readme.pdf",
+      "source_sha256": "40ee312fcd856b16ba320d2ea1576bed509dac72254909d836315cb55a26503e",
+      "source_revision": "2a8f53632252ee24fba7b9c0362ae847aa489d3c",
+      "source_state": "clean",
+      "captured_at": "2026-10-23T05:54:54.285549+00:00",
+      "dimensions": [
+        1131,
+        1600
+      ],
+      "capture_sha256": "76732306f2cb7c415011815f15dc611d4986dc8b5742d291e5425732fa5c362d"
+    }
+  ]
+}

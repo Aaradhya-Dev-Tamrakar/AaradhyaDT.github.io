@@ -1,6 +1,6 @@
 # Portfolio Website Tracker — v56.5
 
-Last updated: _2026-10-22_
+Last updated: _2026-10-23_
 
 - **AI/ML engineering positioning (local draft, related to #14)**: Reworked the homepage, selected project case studies, experience, contact, About, and learning archive for AI/ML opportunities. Replaced self-scored charts with project examples, distinguished source artifacts from verified results, and preserved team attribution. Rebuilt the public two-page CV from the resume-viewer content. Optional site tools and restricted notes follow the professional path in a disclosure. Local verification: 26 categories and 42 smoke checks passed. Browser review covered 375, 640, and 1280 CSS-pixel layouts, a 640-pixel DPR-2 layout, and flagship deep links. Two-page PDF rendered and freshness checked. First-visit tour prompting is disabled; tours remain available on request. Not published.
 
