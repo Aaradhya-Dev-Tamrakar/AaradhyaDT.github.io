@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: tour.js — aaradhyadt.github.io (v56.6)
+   MODULE: tour.js — aaradhyadt.github.io (v56.7)
    Cross-page spotlight tour with keyboard navigation.
    ============================================================ */
 
@@ -7,7 +7,7 @@
 const TOUR_STEPS = {
   'index.html': [
     { sel: '#hero', title: 'Welcome & Status', body: 'Welcome to ADT Portfolio — start here on any visit. Track real-time focus, role, and NPT clock in the live status widget.' },
-    { sel: '#stats', title: 'Impact & Metrics', body: 'Stat counters tracking 15+ built engineering projects, 4th-year BEI student status, and fellowship milestones.' },
+    { sel: '#stats', title: 'Impact & Metrics', body: 'Stat counters tracking 30+ built engineering projects, 4th-year BEI student status, and fellowship milestones.' },
     { sel: '#quick-nav', title: 'Quick Navigation', body: 'Explore hub to jump straight into Projects, Experience, Achievements, Journey, and About.' },
     { sel: '#terminal-section', title: 'Dev Terminal', body: 'A live interactive command line — type "help" for a full command list, or try quick preset buttons like "skills", "projects", and "matrix".' },
     { sel: '#about-sign-in', title: 'Access Control', body: 'Optional browser-only Google Sign-In to unlock additional technical research notes and VIP specs.' },
@@ -238,6 +238,13 @@ function renderTourStep(idx) {
       </div>
       <div class="tour-title">${entry.title}</div>
       <div class="tour-body">${entry.body}</div>
+      <div class="tour-hint-line" aria-label="Keyboard tip">
+        <svg class="tour-hint-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14" height="14" aria-hidden="true">
+          <rect x="2" y="6" width="20" height="12" rx="3"></rect>
+          <line x1="6" y1="14" x2="18" y2="14"></line>
+        </svg>
+        <span>Press <kbd>Space</kbd> to ${isLast ? 'Finish' : 'Next'}</span>
+      </div>
       <div class="tour-actions">
         <button type="button" class="tour-btn-secondary" id="tourBackBtn" ${isFirst ? 'disabled' : ''}>Back</button>
         <button type="button" class="tour-btn-primary" id="tourNextBtn">${isLast ? 'Finish' : 'Next'}</button>
@@ -479,9 +486,24 @@ function initTour() {
   document.addEventListener('keydown', e => {
     const overlay = document.getElementById('tourOverlay');
     if (!overlay || !overlay.classList.contains('open')) return;
-    if (e.key === 'Escape') { exitTour(); }
-    else if (e.key === 'ArrowRight') { tourAdvance(); }
-    else if (e.key === 'ArrowLeft') { tourBack(); }
+    if (['INPUT', 'TEXTAREA'].includes(e.target?.tagName)) return;
+
+    if (e.key === 'Escape') {
+      exitTour();
+    } else if (e.key === ' ' || e.code === 'Space') {
+      e.preventDefault();
+      if (document.activeElement && document.activeElement.id === 'tourBackBtn') {
+        tourBack();
+      } else if (document.activeElement && document.activeElement.id === 'tourCloseBtn') {
+        exitTour();
+      } else {
+        tourAdvance();
+      }
+    } else if (e.key === 'ArrowRight') {
+      tourAdvance();
+    } else if (e.key === 'ArrowLeft') {
+      tourBack();
+    }
   });
 
   // Auto-prompt visitor for guided site tour after 3.5s on first visit

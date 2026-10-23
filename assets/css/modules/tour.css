@@ -434,6 +434,55 @@ body.tour-active .cv-card {
   margin-bottom: 1.2rem;
 }
 
+.tour-hint-line {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 0.75rem;
+  margin-bottom: 1.15rem;
+  background: var(--accent-a07);
+  border: 1px solid var(--accent-a35);
+  border-radius: 8px;
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  color: var(--text);
+  letter-spacing: 0.02em;
+  box-shadow: inset 0 0 10px var(--accent-a07);
+}
+
+.tour-hint-icon {
+  flex-shrink: 0;
+  color: var(--accent);
+  opacity: 0.9;
+}
+
+.tour-hint-line span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  color: var(--text);
+}
+
+.tour-hint-line kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.45rem;
+  height: 1.3rem;
+  padding: 0 0.35rem;
+  font-family: var(--mono);
+  font-size: 0.68rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--accent);
+  background: var(--bg2);
+  border: 1px solid var(--accent-a45);
+  border-bottom: 2px solid var(--accent);
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.25);
+  margin: 0 0.15rem;
+}
+
 .tour-actions {
   display: flex;
   gap: 0.6rem;

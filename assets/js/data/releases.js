@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v56.6",
+    version: "v56.7",
     date: "2026-10-23",
     sha: "2286547baae04b4caad6b93da29ee45724728cb2",
     title: "position as authentic systems explorer and 8th-sem engineer (#29)",
