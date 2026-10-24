@@ -1,6 +1,6 @@
 /* ============================================================
 
-   HOME WIDGETS — index.html-only status widgets (v57.3)
+   HOME WIDGETS — index.html-only status widgets (v57.4)
 
    Kathmandu clock · live date labels · last-commit badge.
 
@@ -552,7 +552,7 @@
 
       org: 'Fusemachines',
 
-      logo: 'assets/images/logos/fusemachines.webp',
+      logo: 'assets/images/logos/fusemachines-circle.webp',
 
       url: 'experience.html#exp-fuse'
 
