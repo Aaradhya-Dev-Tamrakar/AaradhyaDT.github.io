@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v57.5",
+    version: "v57.6",
     date: "2026-10-24",
     sha: "c0caaea3320acfcd9f904f89333300a29d131e7e",
     title: "upgrade star backdrop to dual-ring interlocking Tang Lotus blades (#43) (#44)",
