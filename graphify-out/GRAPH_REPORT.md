@@ -1,17 +1,17 @@
 # Graph Report - AaradhyaDT.github.io  (2026-10-24)
 
 ## Corpus Check
-- 155 files · ~2,544,831 words
+- 157 files · ~2,555,312 words
 - Verdict: corpus is large enough that graph structure adds value.
 - Unclassified: 30 file(s) not represented in the graph (top: .css 20, (none) 5, .gs 1)
 
 ## Summary
-- 2769 nodes · 3414 edges · 374 communities (176 shown, 198 thin omitted)
+- 2783 nodes · 3426 edges · 376 communities (178 shown, 198 thin omitted)
 - Extraction: 97% EXTRACTED · 3% INFERRED · 0% AMBIGUOUS · INFERRED: 105 edges (avg confidence: 0.86)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `2d476997`
+- Built from commit: `755ccc9d`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -56,7 +56,7 @@
 - setup
 - Graphify Semantic Extraction Agent
 - Clean Codebase Payload
-- script.js
+- Portfolio site review request
 - 📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)
 - extract_index.py
 - IEEE KEC Student Branch
@@ -373,6 +373,8 @@
 - 📎 Appendix: Portfolio Site Review (ChatGPT Session Continuation)
 - What I would change
 - ADT identity placement
+- Tang Lotus Architecture: Pure SVG In-Hole Petal Socket Design & Parametric Multi-$N$ Simulation
+- Portfolio Navigation, Showcase & Information Architecture Refactoring
 
 ## God Nodes (most connected - your core abstractions)
 1. `Verbatim Dialogue & Engineering Transcript` - 42 edges
@@ -387,6 +389,8 @@
 10. `log_error()` - 24 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Key Milestones Delivered:` --references--> `setActiveNav()`  [INFERRED]
+  dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
 - `1. Navigation & Information Architecture Audit` --references--> `setActiveNav()`  [INFERRED]
   chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
 - `Key Architectural Changes` --references--> `setActiveNav()`  [INFERRED]
@@ -394,8 +398,6 @@
 - `Key Milestones Delivered:` --references--> `setActiveNav()`  [INFERRED]
   chat_history/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
 - `1. Navigation & Information Architecture Audit` --references--> `setActiveNav()`  [INFERRED]
-  dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
-- `Key Architectural Changes` --references--> `setActiveNav()`  [INFERRED]
   dev-logs/2026-09-29_NAVIGATION_SHOWCASE_REFACTOR_CHAT.md → assets/js/modules/core.js
 
 ## Import Cycles
@@ -416,7 +418,7 @@
 - **AI Agent Readiness & Tooling** — evolution_roadmap, workflow_verify [INFERRED 0.90]
 - **Serialized Codebase Payload** — clean_codebase_payload_segment_1, clean_codebase_payload_segment_2, clean_codebase_payload_segment_3, clean_codebase_payload_segment_4 [INFERRED 0.95]
 
-## Communities (374 total, 198 thin omitted)
+## Communities (376 total, 198 thin omitted)
 
 ### Community 0 - "re"
 Cohesion: 0.08
@@ -427,8 +429,8 @@ Cohesion: 0.10
 Nodes (20): Evidence & Verification Log — v20 additions, Portfolio Website Tracker — v53.26, State of Play, v21 addition — both v20-flagged unmatched PDFs closed out, v22 addition — KEC IT Club "Introduction to Git" (2024) card: closed, no source file available, v24 addition — site-optimization pass + mobile legend line-break fix (2026-07-18), v25 addition — bug-check sweep, pages 1/3/4 (2026-07-27), v26 addition — bug-check sweep, page 2 + about (2026-07-27) (+12 more)
 
 ### Community 2 - "core.js"
-Cohesion: 0.09
-Nodes (30): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+22 more)
+Cohesion: 0.06
+Nodes (40): AD_MONTHS, adToBs(), applyAccent(), applyLiveDates(), applyTheme(), BS_EPOCH_UTC, BS_MONTHS, BS_YEARS (+32 more)
 
 ### Community 3 - "ui.js"
 Cohesion: 0.08
@@ -578,9 +580,9 @@ Nodes (5): Edge Direction Rule, Graphify Semantic Extraction Agent, Hyperedge Ru
 Cohesion: 0.70
 Nodes (5): Payload Segment 1 (sha256:048bb6...), Payload Segment 2 (sha256:6096fe...), Payload Segment 3 (sha256:9f76e2...), Payload Segment 4 (sha256:186ab4...), Clean Codebase Payload
 
-### Community 41 - "script.js"
-Cohesion: 0.24
-Nodes (8): loadGA4(), scheduleGA4(), bootSite(), initNetworkStatusListeners(), initReadingProgressBar(), initServiceWorker(), queueOfflineContactMessage(), syncQueuedContactMessages()
+### Community 41 - "Portfolio site review request"
+Cohesion: 0.25
+Nodes (7): Assistant, Assistant, Assistant, Portfolio site review request, User, User, User
 
 ### Community 42 - "📎 Appendix: Distributed Provision Service (ChatGPT Session Continuation)"
 Cohesion: 0.17
@@ -1095,8 +1097,8 @@ Cohesion: 0.04
 Nodes (47): 10. Money and finances — Ketu in the 2nd, 11. Saturn in the 11th — networks and long-term gains, 12. Education, 13. Relationships and marriage, 14. The Navamsa — deeper development, 15. Your spiritual/psychological axis, 16. Your current major dasha structure, 17. Yogini Dasha (+39 more)
 
 ### Community 363 - "setActiveNav"
-Cohesion: 0.12
-Nodes (14): getCurrentPageFile(), getLinkTargetPage(), renderQuickNav(), setActiveNav(), 1. Navigation & Information Architecture Audit, Executive Overview & Architectural Achievements, Key Architectural Changes, Key Milestones Delivered: (+6 more)
+Cohesion: 0.20
+Nodes (9): getLinkTargetPage(), setActiveNav(), 1. Navigation & Information Architecture Audit, Executive Overview & Architectural Achievements, Key Architectural Changes, Key Milestones Delivered:, Portfolio Navigation, Showcase & Information Architecture Refactoring, 1. Navigation & Information Architecture Audit (+1 more)
 
 ### Community 366 - "generate_graph_data.py"
 Cohesion: 0.47
@@ -1122,9 +1124,17 @@ Nodes (6): 1. Fix the static/runtime state mismatch, 2. Separate "portfolio gati
 Cohesion: 0.50
 Nodes (3): ADT identity placement, Asset generation, Verification
 
+### Community 374 - "Tang Lotus Architecture: Pure SVG In-Hole Petal Socket Design & Parametric Multi-$N$ Simulation"
+Cohesion: 0.33
+Nodes (5): 1. Executive Summary & Epistemic Motivation, 2. Geometric Specification & Coordinate Invariants, 3. Parametric Multi-$N$ Behavioral Verification, 4. Key Architectural Insights & Decisions, Tang Lotus Architecture: Pure SVG In-Hole Petal Socket Design & Parametric Multi-$N$ Simulation
+
+### Community 375 - "Portfolio Navigation, Showcase & Information Architecture Refactoring"
+Cohesion: 0.50
+Nodes (3): Executive Overview & Architectural Achievements, Key Milestones Delivered:, Portfolio Navigation, Showcase & Information Architecture Refactoring
+
 ## Knowledge Gaps
 - **188 isolated node(s):** `aaradhyadt-portfolio`, `ADT | Aaradhya Dev Tamrakar — Electronics Engineer & AI/ML Developer`, `Certificate: Generate a Study Guide`, `Certificate: Introduction to Python (CPE Credits)`, `Certificate: Introduction to Python (DataCamp)` (+183 more)
-  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1907 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
+  These have ≤1 connection - possible missing edges or undocumented components. (Counts symbols only; 1919 node(s) total have ≤1 connection when file, concept and rationale nodes are included.)
 - **198 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
@@ -1141,6 +1151,6 @@ _Questions this graph is uniquely positioned to answer:_
 - **Should `Portfolio Website Tracker — v53.26` be split into smaller, more focused modules?**
   _Cohesion score 0.1 - nodes in this community are weakly interconnected._
 - **Should `core.js` be split into smaller, more focused modules?**
-  _Cohesion score 0.0907563025210084 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.06377551020408163 - nodes in this community are weakly interconnected._
 - **Should `ui.js` be split into smaller, more focused modules?**
   _Cohesion score 0.08412698412698413 - nodes in this community are weakly interconnected._

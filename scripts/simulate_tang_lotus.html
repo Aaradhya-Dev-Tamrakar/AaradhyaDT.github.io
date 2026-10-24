@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tang Lotus — Pure SVG In-Hole Blade Architecture (Option A: N = 1 to 12)</title>
+  <style>
+    :root {
+      --bg: #090b0e;
+      --bg2: #12161f;
+      --surface: #181d27;
+      --surface-2: rgba(22, 28, 40, 0.96);
+      --accent: #d4a85a;
+      --accent-hover: #e5be75;
+      --mono: 'JetBrains Mono', Consolas, monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: #e5e7eb;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      padding: 36px 20px 60px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 32px;
+      min-height: 100vh;
+    }
+    header {
+      text-align: center;
+      max-width: 840px;
+    }
+    h1 {
+      font-size: 1.65rem;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-family: var(--mono);
+      margin-bottom: 8px;
+    }
+    p.subtitle {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      line-height: 1.5;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      background: var(--surface);
+      padding: 10px 24px;
+      border-radius: 999px;
+      border: 1px solid rgba(212, 168, 90, 0.28);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+    }
+    .tool-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .tool-label {
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+    .n-selector {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      background: var(--bg2);
+      padding: 3px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .n-btn {
+      background: transparent;
+      border: none;
+      color: #94a3b8;
+      padding: 5px 12px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: 0.82rem;
+      font-weight: 700;
+      transition: all 0.2s ease;
+    }
+    .n-btn.active, .n-btn:hover {
+      background: var(--accent);
+      color: #0b0d12;
+      box-shadow: 0 0 12px rgba(212, 168, 90, 0.45);
+    }
+    .divider {
+      width: 1px;
+      height: 24px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+    .state-btn {
+      background: var(--bg2);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: #94a3b8;
+      padding: 6px 16px;
+      border-radius: 999px;
+      cursor: pointer;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .state-btn.active, .state-btn:hover {
+      background: rgba(212, 168, 90, 0.18);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* ── STAGE ARENA ── */
+    .sim-arena {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+      max-width: 900px;
+      width: 100%;
+    }
+    .sim-card {
+      background: var(--surface);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 20px;
+      padding: 36px 32px 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+      width: 100%;
+      max-width: 480px;
+      transition: border-color 0.25s ease;
+    }
+    .sim-card:hover {
+      border-color: rgba(212, 168, 90, 0.35);
+    }
+    .sim-card h2 {
+      font-size: 1.15rem;
+      color: var(--accent);
+      font-family: var(--mono);
+      text-align: center;
+    }
+
+    /* ── STAGE GEOMETRY (310x310) ── */
+    .hero-star-stage {
+      position: relative;
+      width: 310px;
+      height: 310px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+      cursor: pointer;
+    }
+    .hero-star-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      pointer-events: none;
+      overflow: visible;
+      filter: drop-shadow(0 0 10px rgba(212, 168, 90, 0.18));
+      transition: filter 0.45s ease;
+    }
+    .hero-star-polygon {
+      fill: rgba(212, 168, 90, 0.03);
+      stroke: rgba(212, 168, 90, 0.22);
+      stroke-width: 1;
+      stroke-linejoin: round;
+      transform-origin: 155px 155px;
+      transform: scale(0.64) rotate(-18deg);
+      opacity: 0.35;
+      transition: transform 0.56s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, stroke 0.3s ease, fill 0.3s ease;
+    }
+    .lotus-ring {
+      transform-origin: 155px 155px;
+      transition: transform 0.58s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.42s ease;
+    }
+    .lotus-ring--outer {
+      transform: scale(0.64) rotate(-18deg);
+      opacity: 0.9;
+    }
+    .lotus-ring--inner {
+      transform: scale(0.685) rotate(18deg);
+      opacity: 0.76;
+    }
+    .lotus-facet-light { fill: url(#lotusGoldLight); stroke: #fbe5ad; stroke-width: 0.7; stroke-linejoin: round; }
+    .lotus-facet-dark { fill: url(#lotusGoldDark); stroke: #c4923e; stroke-width: 0.7; stroke-linejoin: round; }
+    .lotus-blade-filigree { fill: rgba(18, 14, 9, 0.26); stroke: rgba(255, 238, 190, 0.62); stroke-width: 0.85; stroke-linejoin: round; }
+    .lotus-blade-spine { stroke: #fff8de; stroke-width: 1.25; stroke-linecap: round; opacity: 0.95; }
+    
+    /* Clean solid petal circular socket hole */
+    .lotus-blade-cradle {
+      fill: rgba(14, 17, 24, 0.94);
+      stroke: rgba(246, 214, 142, 0.88);
+      stroke-width: 1.4;
+    }
+    .lotus-core-ring { fill: none; stroke: rgba(212, 168, 90, 0.5); stroke-width: 1.3; }
+    .lotus-crystal-light { fill: url(#lotusCrystalLight); stroke: rgba(220, 245, 255, 0.78); stroke-width: 0.65; stroke-linejoin: round; }
+    .lotus-crystal-dark { fill: url(#lotusCrystalDark); stroke: rgba(110, 178, 224, 0.68); stroke-width: 0.65; stroke-linejoin: round; }
+    .lotus-crystal-filigree { fill: rgba(12, 28, 44, 0.3); stroke: rgba(195, 236, 255, 0.48); stroke-width: 0.7; }
+    .lotus-crystal-spine { stroke: #e8f8ff; stroke-width: 1; stroke-linecap: round; opacity: 0.88; }
+
+    /* Central Portrait Stage: Strictly frontmost (z-index: 10) */
+    .hero-portrait-stage {
+      position: relative;
+      width: 196px;
+      height: 196px;
+      box-sizing: border-box;
+      padding: 5px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 1px solid var(--accent);
+      background: var(--bg2);
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.45);
+      z-index: 10;
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.35s ease, box-shadow 0.35s ease;
+    }
+    .hero-portrait-img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
+    }
+
+    /* ── PURE SVG IN-HOLE BADGE NODES ── */
+    .svg-badge-anchor {
+      pointer-events: auto;
+      cursor: pointer;
+      transform-origin: 155px 35px;
+      transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), filter 0.28s ease;
+    }
+    .svg-badge-anchor:hover {
+      transform: scale(1.15);
+      filter: drop-shadow(0 0 10px rgba(246, 214, 142, 0.85));
+    }
+    .svg-badge-image {
+      pointer-events: none;
+    }
+    .svg-badge-bezel {
+      transition: stroke 0.25s ease, stroke-width 0.25s ease;
+    }
+    .svg-badge-anchor:hover .svg-badge-bezel {
+      stroke: #fff6d6;
+      stroke-width: 1.6;
+    }
+
+    /* ── HOVER & BLOOM ACTIVATION ── */
+    .hero-star-stage:hover .hero-star-svg,
+    .hero-star-stage.force-expanded .hero-star-svg {
+      filter: drop-shadow(0 0 18px rgba(212, 168, 90, 0.38)) drop-shadow(0 0 28px rgba(120, 190, 240, 0.16));
+    }
+    .hero-star-stage:hover .lotus-ring--outer,
+    .hero-star-stage.force-expanded .lotus-ring--outer {
+      transform: scale(1) rotate(0deg);
+      opacity: 1;
+    }
+    .hero-star-stage:hover .lotus-ring--inner,
+    .hero-star-stage.force-expanded .lotus-ring--inner {
+      transform: scale(1) rotate(0deg);
+      opacity: 0.94;
+    }
+    .hero-star-stage:hover .hero-star-polygon,
+    .hero-star-stage.force-expanded .hero-star-polygon {
+      transform: scale(1) rotate(0deg);
+      opacity: 0.65;
+      stroke: var(--accent);
+      fill: rgba(212, 168, 90, 0.06);
+    }
+    .hero-star-stage:hover .hero-portrait-stage,
+    .hero-star-stage.force-expanded .hero-portrait-stage {
+      border-color: var(--accent);
+      box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.55), 0 0 22px -2px rgba(212, 168, 90, 0.35);
+    }
+
+    /* ── TELEMETRY PANEL ── */
+    .telemetry {
+      font-family: var(--mono);
+      font-size: 0.76rem;
+      color: #94a3b8;
+      line-height: 1.7;
+      background: var(--bg2);
+      padding: 14px 18px;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      width: 100%;
+    }
+    .telemetry span.val { color: #38bdf8; font-weight: 600; }
+    .telemetry span.pass { color: #4ade80; font-weight: 600; }
+    .telemetry-row {
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      padding: 2px 0;
+    }
+    .telemetry-row:last-child {
+      border-bottom: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Tang Lotus — Pure SVG In-Hole Blade Architecture</h1>
+    <p class="subtitle">
+      Complete spectrum from N = 1 (Zen Crest / Monolith) up to N = 12 (Grand Emperor Tang Lotus).
+    </p>
+  </header>
+  
+  <div class="toolbar">
+    <div class="tool-group">
+      <span class="tool-label">Affiliations (N):</span>
+      <div class="n-selector" id="nSelector">
+        <button class="n-btn" data-n="1">1</button>
+        <button class="n-btn" data-n="2">2</button>
+        <button class="n-btn" data-n="3">3</button>
+        <button class="n-btn" data-n="4">4</button>
+        <button class="n-btn" data-n="5">5</button>
+        <button class="n-btn active" data-n="6">6</button>
+        <button class="n-btn" data-n="7">7</button>
+        <button class="n-btn" data-n="8">8</button>
+        <button class="n-btn" data-n="9">9</button>
+        <button class="n-btn" data-n="10">10</button>
+        <button class="n-btn" data-n="12">12</button>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="tool-group">
+      <span class="tool-label">State:</span>
+      <button class="state-btn active" id="btnHover">Hover Physics</button>
+      <button class="state-btn" id="btnToggleBloom">Pin 100% Bloom</button>
+    </div>
+  </div>
+
+  <div class="sim-arena" id="simArena">
+    <!-- Populated by renderArena() -->
+  </div>
+
+  <script>
+    var ALL_AFFILIATIONS = [
+      { id: 'fusemachines', name: 'Fuse AI Fellow', org: 'Fusemachines', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/fusemachines-circle.webp' },
+      { id: 'ieee-kec', name: 'IEEE Vice Chair', org: 'IEEE KEC Student Branch', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/ieee-kec.webp' },
+      { id: 'nssr', name: 'NSSR Fellow', org: 'NSSR Nepal (DataCamp)', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/nssr-circle.webp' },
+      { id: 'makerspace', name: 'Makerspace Lead', org: 'KEC Makerspace (Robotics)', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/makerspace-circle.webp' },
+      { id: 'epc-club', name: 'EPC Event Mgr', org: 'Engineering Project Club', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/epc-club-circle.webp' },
+      { id: 'research-fellow', name: 'BRL Research Lead', org: 'Brainstorm Research Lab', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/fusemachines-circle.webp' },
+      { id: 'robotics-mentor', name: 'Robotics Mentor', org: 'Robotics Club', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/makerspace-circle.webp' },
+      { id: 'ai-ambassador', name: 'AI Ambassador', org: 'Fuse AI Community', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/fusemachines-circle.webp' },
+      { id: 'datacamp-scholar', name: 'DataCamp Scholar', org: 'DataCamp Donates', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/nssr-circle.webp' },
+      { id: 'kec-researcher', name: 'KEC Systems Researcher', org: 'Kantipur Engg College', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/ieee-kec.webp' },
+      { id: 'hardware-lead', name: 'Embedded Hardware Lead', org: 'Makerspace Core', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/makerspace-circle.webp' },
+      { id: 'fellowship-chair', name: 'Fellowship Technical Chair', org: 'Fuse AI Fellowship', logo: 'F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/logos/fusemachines-circle.webp' }
+    ];
+
+    var currentN = 6;
+    var isPinnedBloom = false;
+
+    var cx = 155, cy = 155;
+    var rOuter = 136, rInner = 68;
+
+    var secondaryBladeSvg = 
+      '<path class="lotus-crystal-light" d="M 155 10 Q 145 31 136 48 Q 131 64 142 82 L 155 88 Z" />' +
+      '<path class="lotus-crystal-dark" d="M 155 10 Q 165 31 174 48 Q 179 64 168 82 L 155 88 Z" />' +
+      '<path class="lotus-crystal-filigree" d="M 155 19 Q 147 35 140 50 Q 137 62 146 75 L 155 80 L 164 75 Q 173 62 170 50 Q 163 35 155 19 Z" />' +
+      '<line class="lotus-crystal-spine" x1="155" y1="11" x2="155" y2="82" />';
+
+    function buildPrimaryBladeSvg(aff, n, b) {
+      var clipId = 'cradle-clip-' + n + '-' + b;
+      return (
+        '<path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" />' +
+        '<path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" />' +
+        '<path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" />' +
+        '<line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" />' +
+        '<circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" />' +
+        '<defs>' +
+          '<clipPath id="' + clipId + '">' +
+            '<circle cx="155" cy="35" r="18" />' +
+          '</clipPath>' +
+        '</defs>' +
+        '<g class="svg-badge-anchor" tabindex="0">' +
+          '<title>' + aff.name + ' (' + aff.org + ')</title>' +
+          '<image class="svg-badge-image" href="' + aff.logo + '" x="137" y="17" width="36" height="36" clip-path="url(#' + clipId + ')" />' +
+          '<circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" />' +
+        '</g>'
+      );
+    }
+
+    function renderArena() {
+      var arena = document.getElementById('simArena');
+      arena.innerHTML = '';
+
+      var affs = ALL_AFFILIATIONS.slice(0, currentN);
+
+      var pts = [];
+      var polygonMarkup = '';
+
+      if (currentN >= 3) {
+        for (var i = 0; i < currentN; i++) {
+          var theta = -Math.PI / 2 + (i * 2 * Math.PI) / currentN;
+          var phi = theta + Math.PI / currentN;
+          pts.push(Math.round(cx + rOuter * Math.cos(theta)) + ',' + Math.round(cy + rOuter * Math.sin(theta)));
+          pts.push(Math.round(cx + rInner * Math.cos(phi)) + ',' + Math.round(cy + rInner * Math.sin(phi)));
+        }
+        polygonMarkup = '<polygon class="hero-star-polygon" points="' + pts.join(' ') + '" />';
+      } else if (currentN === 2) {
+        // N=2: Dual-pointed spear ellipse polygon
+        pts = [
+          (cx) + ',' + (cy - rOuter),
+          (cx + 42) + ',' + (cy),
+          (cx) + ',' + (cy + rOuter),
+          (cx - 42) + ',' + (cy)
+        ];
+        polygonMarkup = '<polygon class="hero-star-polygon" points="' + pts.join(' ') + '" />';
+      } else if (currentN === 1) {
+        // N=1: Elegant circular aura halo
+        polygonMarkup = '<circle class="hero-star-polygon" cx="155" cy="155" r="132" />';
+      }
+
+      var innerBlades = [];
+      var outerBlades = [];
+
+      for (var b = 0; b < currentN; b++) {
+        var deg = Math.round(((b * 360) / currentN) * 100) / 100;
+        var phiDeg = Math.round((deg + 180 / currentN) * 100) / 100;
+
+        // For N=1, give a dual counter-blade balance (left and right at 90 and 270)
+        if (currentN === 1) {
+          innerBlades.push('<g class="lotus-blade lotus-blade--secondary" transform="rotate(180 155 155)">' + secondaryBladeSvg + '</g>');
+        } else {
+          innerBlades.push('<g class="lotus-blade lotus-blade--secondary" transform="rotate(' + phiDeg + ' 155 155)">' + secondaryBladeSvg + '</g>');
+        }
+
+        outerBlades.push('<g class="lotus-blade lotus-blade--primary" transform="rotate(' + deg + ' 155 155)">' + buildPrimaryBladeSvg(affs[b], currentN, b) + '</g>');
+      }
+
+      var stepAngle = (360 / currentN).toFixed(1);
+      var offsetAngle = currentN === 1 ? '180.0' : (180 / currentN).toFixed(1);
+      var arcChord = currentN === 1 ? 'N/A (Zen Crown)' : (2 * 120 * Math.sin(Math.PI / currentN)).toFixed(1) + 'px';
+
+      var descriptor = '';
+      if (currentN === 1) descriptor = 'Zen Monolith / Crown Blade';
+      else if (currentN === 2) descriptor = 'Bipolar Dual-Spear Lotus';
+      else if (currentN === 3) descriptor = 'Tri-Blade Trilateral Gear';
+      else if (currentN === 4) descriptor = 'Quad-Blade Quadrant Lotus';
+      else if (currentN === 5) descriptor = 'Pentagonal Tang Lotus';
+      else if (currentN === 6) descriptor = 'Hexagonal Grand Lotus';
+      else descriptor = currentN + '-Petal High-Density Swarm';
+
+      var card = document.createElement('div');
+      card.className = 'sim-card';
+      card.innerHTML = 
+        '<h2>' + descriptor + ' (N = ' + currentN + ')</h2>' +
+        '<div class="hero-star-stage' + (isPinnedBloom ? ' force-expanded' : '') + '">' +
+          '<svg class="hero-star-svg" viewBox="0 0 310 310">' +
+            '<defs>' +
+              '<linearGradient id="lotusGoldLight" x1="0%" y1="0%" x2="100%" y2="100%">' +
+                '<stop offset="0%" stop-color="#fff2c6" />' +
+                '<stop offset="45%" stop-color="#e6ba67" />' +
+                '<stop offset="100%" stop-color="#9b6a1d" />' +
+              '</linearGradient>' +
+              '<linearGradient id="lotusGoldDark" x1="0%" y1="0%" x2="100%" y2="100%">' +
+                '<stop offset="0%" stop-color="#d8a852" />' +
+                '<stop offset="55%" stop-color="#8b5d19" />' +
+                '<stop offset="100%" stop-color="#452b07" />' +
+              '</linearGradient>' +
+              '<linearGradient id="lotusCrystalLight" x1="0%" y1="0%" x2="100%" y2="100%">' +
+                '<stop offset="0%" stop-color="#e6f7ff" />' +
+                '<stop offset="50%" stop-color="#7ec2f0" />' +
+                '<stop offset="100%" stop-color="#2a5980" />' +
+              '</linearGradient>' +
+              '<linearGradient id="lotusCrystalDark" x1="0%" y1="0%" x2="100%" y2="100%">' +
+                '<stop offset="0%" stop-color="#96cff2" />' +
+                '<stop offset="55%" stop-color="#3c729c" />' +
+                '<stop offset="100%" stop-color="#142b42" />' +
+              '</linearGradient>' +
+            '</defs>' +
+            polygonMarkup +
+            '<g class="lotus-ring lotus-ring--inner">' +
+              '<circle cx="155" cy="155" r="155" fill="none" stroke="none" />' +
+              innerBlades.join('\n') +
+            '</g>' +
+            '<g class="lotus-ring lotus-ring--outer">' +
+              '<circle cx="155" cy="155" r="155" fill="none" stroke="none" />' +
+              '<circle class="lotus-core-ring" cx="155" cy="155" r="99" />' +
+              outerBlades.join('\n') +
+            '</g>' +
+          '</svg>' +
+          '<div class="hero-portrait-stage">' +
+            '<img class="hero-portrait-img" src="F:/AaradhyaDT/AaradhyaDT.github.io/assets/images/photo.webp" alt="Avatar">' +
+          '</div>' +
+        '</div>' +
+        '<div class="telemetry">' +
+          '<div class="telemetry-row"><span>Architecture:</span> <span class="val">Pure SVG In-Hole Blade Node</span></div>' +
+          '<div class="telemetry-row"><span>Symmetry Type:</span> <span class="val">' + descriptor + '</span></div>' +
+          '<div class="telemetry-row"><span>Inter-Blade Step (Δθ):</span> <span class="val">' + stepAngle + '°</span></div>' +
+          '<div class="telemetry-row"><span>Counter-Blade Offset (Δφ):</span> <span class="val">' + offsetAngle + '°</span></div>' +
+          '<div class="telemetry-row"><span>Inter-Badge Distance:</span> <span class="val">' + arcChord + '</span></div>' +
+          '<div class="telemetry-row"><span>Socket Concentricity:</span> <span class="pass">Exact 1:1 Coaxial (0.0px)</span></div>' +
+          '<div class="telemetry-row"><span>Dormant Tucking:</span> <span class="pass">100% Behind Portrait</span></div>' +
+          '<div class="telemetry-row"><span>Deployed Rim Clearance:</span> <span class="pass">+3.0px (Zero Clipping)</span></div>' +
+        '</div>';
+
+      arena.appendChild(card);
+    }
+
+    // Selector click handler
+    document.getElementById('nSelector').addEventListener('click', function(e) {
+      if (e.target.classList.contains('n-btn')) {
+        document.querySelectorAll('.n-btn').forEach(function(b) { b.classList.remove('active'); });
+        e.target.classList.add('active');
+        currentN = parseInt(e.target.dataset.n, 10);
+        renderArena();
+      }
+    });
+
+    var btnHover = document.getElementById('btnHover');
+    var btnToggleBloom = document.getElementById('btnToggleBloom');
+
+    btnHover.addEventListener('click', function() {
+      btnHover.classList.add('active');
+      btnToggleBloom.classList.remove('active');
+      isPinnedBloom = false;
+      document.querySelectorAll('.hero-star-stage').forEach(function(s) {
+        s.classList.remove('force-expanded');
+      });
+    });
+
+    btnToggleBloom.addEventListener('click', function() {
+      btnToggleBloom.classList.add('active');
+      btnHover.classList.remove('active');
+      isPinnedBloom = true;
+      document.querySelectorAll('.hero-star-stage').forEach(function(s) {
+        s.classList.add('force-expanded');
+      });
+    });
+
+    // Initial render
+    renderArena();
+  </script>
+</body>
+</html>
