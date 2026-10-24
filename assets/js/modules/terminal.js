@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: terminal.js — aaradhyadt.github.io (v56.14)
+   MODULE: terminal.js — aaradhyadt.github.io (v57)
    Interactive retro-futuristic dev terminal widget.
    ============================================================ */
 
@@ -174,7 +174,7 @@
       stats: () => {
         const achvCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.achievement || []).length : 39;
         const projCount = typeof SEARCH_STATIC_INDEX !== 'undefined' ? (SEARCH_STATIC_INDEX.project || []).length : 30;
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v56.14';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v57';
         return `
 <span class="term-green">[ADT PORTFOLIO TELEMETRY ${currentVer}]</span><br>
   • <span class="term-gold">Published Projects:</span> ${projCount} verified repositories &amp; systems<br>
@@ -205,7 +205,7 @@
       },
       run: (arg) => {
         const sub = (arg || '').toLowerCase().trim();
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v56.14';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v57';
         if (sub === 'spark') {
           return `
 <span class="term-green">[SPARK TELEMETRY SIMULATOR ${currentVer}]</span><br>
@@ -385,7 +385,7 @@
         } else {
           checks.push('<span class="term-red">\u2717</span> Search index: SEARCH_STATIC_INDEX not found');
         }
-        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v56.14';
+        const currentVer = (typeof SITE_RELEASES !== 'undefined' && SITE_RELEASES[0]?.version) ? SITE_RELEASES[0].version : 'v57';
         return `<span class="term-green">[SITE HEALTHCHECK ${currentVer}]</span><br>` + checks.map(c => '  ' + c).join('<br>');
       },
       sound: () => {
@@ -450,14 +450,14 @@
 <span class="term-red">● 5. Crimson Ruby:</span> Faceted ruby crystal &amp; rose gold (Autonomous Robotics: <code>accent ruby</code>)<br>
 <span class="term-cyan">● 6. Brushed Titanium:</span> High-relief steel systems crest (Foundational: <code>accent prism</code>)<br>
 <span class="term-gold">● 7. Calligraphic Ink:</span> Sumi ink on handmade parchment (Light Mode: <code>theme</code>)<br><br>
-<div style="display:flex;gap:8px;margin:10px 0;flex-wrap:wrap;">
-  <img src="assets/images/branding/adt-gold.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(212,168,90,0.5);" alt="Gold Crest" />
-  <img src="assets/images/branding/adt-emerald.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(16,185,129,0.5);" alt="Emerald Crest" />
-  <img src="assets/images/branding/adt-violet.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(168,85,247,0.5);" alt="Violet Crest" />
-  <img src="assets/images/branding/adt-cyan.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(6,182,212,0.5);" alt="Cyan Crest" />
-  <img src="assets/images/branding/adt-ruby.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(239,68,68,0.5);" alt="Ruby Crest" />
-  <img src="assets/images/branding/adt-titanium.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(255,255,255,0.3);" alt="Titanium Crest" />
-  <img src="assets/images/branding/adt-parchment.webp" style="width:84px;height:52px;object-fit:cover;border-radius:4px;border:1px solid rgba(0,0,0,0.2);" alt="Parchment Crest" />
+<div class="term-brand-gallery" aria-label="ADT logo variants">
+  <img src="assets/images/branding/adt-gold.webp" width="96" height="60" loading="lazy" alt="Gold Crest" />
+  <img src="assets/images/branding/adt-emerald.webp" width="96" height="60" loading="lazy" alt="Emerald Crest" />
+  <img src="assets/images/branding/adt-violet.webp" width="96" height="60" loading="lazy" alt="Violet Crest" />
+  <img src="assets/images/branding/adt-cyan.webp" width="96" height="60" loading="lazy" alt="Cyan Crest" />
+  <img src="assets/images/branding/adt-ruby.webp" width="96" height="60" loading="lazy" alt="Ruby Crest" />
+  <img src="assets/images/branding/adt-titanium.webp" width="96" height="60" loading="lazy" alt="Titanium Crest" />
+  <img src="assets/images/branding/adt-parchment.webp" width="96" height="60" loading="lazy" alt="Parchment Crest" />
 </div>
 <span class="term-muted">Type 'accent [theme]' to switch accents and bind logos live across the entire interface!</span>
 `;

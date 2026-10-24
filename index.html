@@ -62,7 +62,10 @@
   <meta property="og:title" content="ADT | Aaradhya Dev Tamrakar — AI/ML Engineering &amp; AI Workflows" />
   <meta property="og:description"
     content="Aaradhya Dev Tamrakar — electronics engineering student building applied ML systems, embedded AI, and efficient AI workflows. Seeking AI/ML engineering opportunities." />
-  <meta property="og:image" content="https://aaradhyadt.github.io/assets/images/og-image.jpg" />
+  <meta property="og:image" content="https://aaradhyadt.github.io/assets/images/og/og-master.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Aaradhya Dev Tamrakar - portrait, name, and ADT signature" />
+  <meta name="twitter:image:alt" content="Aaradhya Dev Tamrakar - portrait, name, and ADT signature" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta property="og:locale" content="en_US" />
@@ -75,7 +78,7 @@
   <meta name="twitter:title" content="ADT | Aaradhya Dev Tamrakar — AI/ML Engineering &amp; AI Workflows" />
   <meta name="twitter:description"
     content="Aaradhya Dev Tamrakar — electronics engineering student building applied ML systems, embedded AI, and efficient AI workflows. Seeking AI/ML engineering opportunities." />
-  <meta property="twitter:image" content="https://aaradhyadt.github.io/assets/images/og-image.jpg" />
+  <meta property="twitter:image" content="https://aaradhyadt.github.io/assets/images/og/og-master.png" />
 
   <!-- JSON-LD: Person & WebSite -->
   <script type="application/ld+json">
@@ -191,9 +194,8 @@
 
   <!-- Favicon & Touch Icons -->
   <link rel="manifest" href="site.webmanifest" />
-  <link rel="apple-touch-icon" href="assets/images/icon-192.png" />
-  <link rel="icon"
-    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230d0e11'/><text x='50%25' y='50%25' dominant-baseline='central' text-anchor='middle' font-family='Georgia,serif' font-size='13' font-weight='400' fill='%23d4a85a'>ADT</text></svg>" />
+  <link rel="apple-touch-icon" href="assets/images/branding/adt-gold-icon-192.png" />
+  <link rel="icon" type="image/png" href="assets/images/branding/adt-gold-favicon.png" />
 
   <!-- Resource preloads -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -267,40 +269,27 @@
       margin: auto 0;
     }
 
-    .hero-crest-stage {
+    .hero-portrait-stage {
       position: relative;
-      width: 100%;
+      width: min(100%, 260px);
+      aspect-ratio: 1;
       box-sizing: border-box;
-      padding: clamp(0.75rem, 2vw, 1.25rem);
-      border-radius: 6px;
+      padding: 6px;
+      border-radius: 50%;
       overflow: hidden;
-      border: 1px solid var(--line);
+      border: 1px solid var(--accent);
       background: var(--bg2);
-      margin-bottom: 1.5rem;
-      box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.5), 0 0 16px -6px var(--accent-a12);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      margin: 0 auto 1.75rem;
+      box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.3);
     }
 
-    .hero-crest-stage:hover {
-      border-color: var(--accent);
-      box-shadow: 0 10px 28px -6px rgba(0, 0, 0, 0.6), 0 0 20px var(--accent-a35);
-    }
-
-    .hero-center-crest-img {
+    .hero-portrait-img {
       width: 100%;
-      height: auto;
-      max-height: 240px;
+      height: 100%;
       display: block;
-      aspect-ratio: 8 / 5;
-      object-fit: contain;
-      transition: opacity 0.2s ease;
-    }
-
-    .hero-crest-ambient-glow {
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 50%, var(--accent-a07) 0%, transparent 70%);
-      pointer-events: none;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center top;
     }
 
     @media (max-width: 960px) {
@@ -1154,9 +1143,8 @@
         </div>
         <div class="hero-right">
           <div class="status-card card-gradient-border">
-            <div class="hero-crest-stage">
-              <img src="assets/images/branding/adt-titanium.webp" alt="ADT — Engineering Intelligent Systems" class="hero-center-crest-img" id="heroCenterCrestImg" data-dynamic-logo width="720" height="450" fetchpriority="high" loading="eager" />
-              <div class="hero-crest-ambient-glow"></div>
+            <div class="hero-portrait-stage">
+              <img src="assets/images/photo.webp" alt="Aaradhya Dev Tamrakar" class="hero-portrait-img" width="768" height="1024" fetchpriority="high" loading="eager" />
             </div>
             <div class="status-label">
               Profile at a glance
@@ -1433,7 +1421,7 @@
         <div class="terminal-body">
           <div class="term-line">
             <span class="term-green">Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal
-              (v56.14).</span><br />
+              (v57).</span><br />
             Type <span class="term-gold">'help'</span> or click the preset buttons above to explore.
           </div>
         </div>

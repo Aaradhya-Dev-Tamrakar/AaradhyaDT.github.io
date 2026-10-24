@@ -1,6 +1,12 @@
-# Portfolio Website Tracker — v56.14
+# Portfolio Website Tracker — v57
 
-Last updated: _2026-10-23_
+Last updated: _2026-10-24_
+
+
+- **v57 (Major Release) — Portrait and ADT identity placement.** Shipped portrait and adt identity placement.
+  - Portrait-led homepage, consistent ADT signatures, and unified app and social assets
+
+- **Portrait and ADT placement (#33, #34)**: Put the circular portrait in the homepage profile panel. Keep one compact navigation monogram, one linked footer signature, and the full About artwork; remove the duplicate footer wordmark, access-modal crest, and repeated shine effects. Preserve all seven variants in the terminal gallery and explicit accent selection. Align page favicons, Apple touch icons, and installed-app branding; add a padded maskable icon and a portrait/name/signature social card. Placement rules and reproducible SVG/PNG export instructions are in `dev-logs/ADT_BRAND_PLACEMENT.md`.
 
 - **Section separator spacing uniformity across site**: Harmonized vertical gaps between all section separators (`.divider-wrap`) and adjacent sections. Introduced unified design tokens (`--section-pad-y`, `--section-pad-x`, and `--section-separator-gap`) scaling responsively from desktop (`5.5rem`) down to mobile (`2.25rem`). Standardized `.divider-wrap` to zero-padding border containers while aligning horizontal insets with sections. Resolved spacing asymmetry and card crowding across `#stats`, `#work`, `#opportunities`, `#quick-nav`, `#site-tools`, `.about-creed-strip`, and gated access tiers. Rebuilt minified CSS modules and verified all 26 test categories pass cleanly.
 
@@ -427,7 +433,7 @@ Last updated: _2026-10-23_
 | Item                                      | Status                                                                                                                                           |
 | ----------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v56.14`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v57`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 | **Security & Access Control**             | **Hardened (3 Tiers)** — Web Crypto AES-256-GCM zero-leak gated payloads, GSI Google Sign-In, client-side passcode rate limiting (30s cooldown). |
 | **Live Commit Status & CI/CD**            | **Synchronized** — GitHub Actions `stamp-last-commit.yml` with rebase-retry loop stamping `assets/js/last-commit.json`.                          |

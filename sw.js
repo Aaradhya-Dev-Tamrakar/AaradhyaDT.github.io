@@ -1,9 +1,9 @@
 /* ==========================================================================
-   Service Worker — Aaradhya Dev Tamrakar Portfolio (v56.14)
+   Service Worker — Aaradhya Dev Tamrakar Portfolio (v57)
    Provides offline capability & asset caching for fast return visits.
    ========================================================================== */
 
-const CACHE_NAME = 'aaradhya-portfolio-v56.14';
+const CACHE_NAME = 'aaradhya-portfolio-v57';
 
 const STATIC_ASSETS = [
   './',
@@ -53,7 +53,11 @@ const STATIC_ASSETS = [
   './assets/js/modules/home-widgets.js',
   './data/quantitative-claims.json',
   './assets/images/photo.webp',
-  './assets/images/og-image.jpg',
+  './assets/images/og/og-master.png',
+  './assets/images/branding/adt-gold-icon-192.png',
+  './assets/images/branding/adt-gold-icon-512.png',
+  './assets/images/branding/adt-maskable.png',
+  './assets/images/branding/adt-gold-favicon.png',
   './assets/images/icon-192.png',
   './assets/images/icon-512.png',
   './assets/images/logos/ieee-kec.webp',

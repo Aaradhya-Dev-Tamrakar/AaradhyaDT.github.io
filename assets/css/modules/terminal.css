@@ -155,3 +155,19 @@
   }
 }
 
+
+/* Full artwork appears together only in the optional brand gallery. */
+.term-brand-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 12px 0;
+}
+
+.term-brand-gallery img {
+  display: block;
+  width: 96px;
+  height: 60px;
+  object-fit: contain;
+  border-radius: 3px;
+}

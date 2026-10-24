@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: core.js — aaradhyadt.github.io (v56.14)
+   MODULE: core.js — aaradhyadt.github.io (v57)
    Theme, navigation, layout, scroll, parallax, and date helpers.
    ============================================================ */
 
@@ -18,7 +18,7 @@ function renderSiteNav() {
     .join('') + `<a href="/contact.html" class="nav-cta">Connect</a>`;
   el.innerHTML = `
     <nav id="nav" aria-label="Primary navigation">
-      <a href="/index.html" class="nav-logo" id="nav-logo" aria-label="Aaradhya Dev Tamrakar"><img src="assets/images/branding/adt-gold-icon-192.webp" alt="ADT Monogram" class="nav-crest-thumb" data-dynamic-logo-icon width="20" height="20" /><span class="nav-brand-text" aria-hidden="true"><span class="nav-word"><span class="nav-initial">A</span><span class="nav-rest">aradhya</span></span><span class="nav-word"><span class="nav-initial">D</span><span class="nav-rest">ev</span></span><span class="nav-word"><span class="nav-initial">T</span><span class="nav-rest">amrakar</span></span><span class="nav-dot">.</span></span></a>
+      <a href="/index.html" class="nav-logo" id="nav-logo" aria-label="Aaradhya Dev Tamrakar"><img src="assets/images/branding/adt-gold-icon-192.webp" alt="" class="nav-crest-thumb" data-dynamic-logo-icon width="20" height="20" /><span class="nav-brand-text" aria-hidden="true"><span class="nav-word"><span class="nav-initial">A</span><span class="nav-rest">aradhya</span></span><span class="nav-word"><span class="nav-initial">D</span><span class="nav-rest">ev</span></span><span class="nav-word"><span class="nav-initial">T</span><span class="nav-rest">amrakar</span></span><span class="nav-dot">.</span></span></a>
       <ul class="nav-links" id="nav-links">
         ${navLinks}
       </ul>
@@ -220,10 +220,9 @@ function renderSiteFooter() {
   el.innerHTML = `
     <div class="footer-inner">
       <div class="footer-brand">
-        <div class="footer-crest-wrap">
-          <img src="${brandAssets.crest}" alt="ADT Engineering Crest" class="footer-crest-img" data-dynamic-logo width="88" height="55" loading="lazy" decoding="async" />
-        </div>
-        <span class="footer-logo">ADT<span>.</span></span>
+        <a href="/index.html" class="footer-crest-wrap" aria-label="Aaradhya Dev Tamrakar - home">
+          <img src="${brandAssets.crest}" alt="" class="footer-crest-img" data-dynamic-logo width="88" height="55" loading="lazy" decoding="async" />
+        </a>
         <span class="footer-tagline">Engineering Intelligent Systems · Electronics &amp; AI/ML</span>
       </div>
       <div class="footer-socials">${socialsHtml}</div>
@@ -392,7 +391,8 @@ function syncBrandLogos(theme, accent) {
       if (src && !src.endsWith(assets.crest)) {
         el.style.opacity = '0.35';
         el.src = assets.crest;
-        el.alt = assets.alt;
+        // Keep decorative images silent inside an already named home link.
+        if (el.alt) el.alt = assets.alt;
         setTimeout(() => { el.style.opacity = '1'; }, 160);
       }
     }
@@ -404,7 +404,7 @@ function syncBrandLogos(theme, accent) {
       const src = el.getAttribute('src');
       if (src && !src.endsWith(assets.icon)) {
         el.src = assets.icon;
-        el.alt = assets.alt;
+        if (el.alt) el.alt = assets.alt;
       }
     }
   });

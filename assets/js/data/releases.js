@@ -7,6 +7,15 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
+    version: 'v57',
+    date: '2026-10-24',
+    sha: '908c321',
+    title: "Portrait and ADT identity placement",
+    highlights: [
+      "Portrait-led homepage, consistent ADT signatures, and unified app and social assets"
+    ]
+  },
+  {
     version: "v56.14",
     date: "2026-10-23",
     sha: "081ca4e017dbf2a407688f80d0af10dd9787cbc6",
