@@ -30,10 +30,10 @@ All contributors and participants are expected to adhere to our [Code of Conduct
 <a id="what-can-i-contribute"></a>
 ## What You Can Contribute
 
-- 🐛 **Bug Reports & Fixes**: Broken links, visual glitches, script runtime errors, mobile responsive layout bugs.
-- ♿ **Accessibility (a11y)**: Screen-reader optimizations, ARIA label accuracy, keyboard navigation, color contrast.
-- ⚡ **Performance & SEO**: Lighthouse score improvements, asset optimizations, schema metadata enhancements.
-- 📝 **Copy & Documentation**: Typo corrections, clearer explanations, grammatical refinements.
+- **Bug Reports & Fixes**: Broken links, visual glitches, script runtime errors, mobile responsive layout bugs.
+- **Accessibility (a11y)**: Screen-reader optimizations, ARIA label accuracy, keyboard navigation, color contrast.
+- **Performance & SEO**: Lighthouse score improvements, asset optimizations, schema metadata enhancements.
+- **Copy & Documentation**: Typo corrections, clearer explanations, grammatical refinements.
 
 > **Note on Personal Data & Credentials**: Content additions relating to personal projects, achievements, certificates, or CV data are strictly managed by Aaradhya Dev Tamrakar.
 

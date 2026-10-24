@@ -9,12 +9,12 @@
 
 | Metric | Result | Benchmark Target | Status |
 |---|---|---|---|
-| **Task Completion Rate** | **75.0%** (3/4) | $\ge 80.0\%$ | ⚠️ WARN |
-| **Tool-Call Correctness** | **91.7%** | $\ge 90.0\%$ | ✅ PASS |
-| **Mean Trajectory Length** | **3.50 iters** | $\le 4.5$ iters | ✅ OPTIMAL |
-| **Over-Long Trajectories** | **1 cases** | $0$ | ⚠️ FLAGGED |
-| **Total Tokens Consumed** | **24,988** (prompt: 22,790, out: 1,265, think: 933) | Bounded | ✅ MEASURED |
-| **Total Financial Cost** | **$0.0047 USD** | $< $0.10 USD | ✅ VERIFIED |
+| **Task Completion Rate** | **75.0%** (3/4) | $\ge 80.0\%$ |  WARN |
+| **Tool-Call Correctness** | **91.7%** | $\ge 90.0\%$ |  PASS |
+| **Mean Trajectory Length** | **3.50 iters** | $\le 4.5$ iters |  OPTIMAL |
+| **Over-Long Trajectories** | **1 cases** | $0$ |  FLAGGED |
+| **Total Tokens Consumed** | **24,988** (prompt: 22,790, out: 1,265, think: 933) | Bounded |  MEASURED |
+| **Total Financial Cost** | **$0.0047 USD** | $< $0.10 USD |  VERIFIED |
 
 ## 2. Failure Taxonomy Breakdown
 
@@ -35,16 +35,16 @@
 
 | ID | Category | Status | Iters | Tool Correctness | Tokens | Cost ($) | Failure Tier | Notes / Root Cause |
 |---|---|---|---|---|---|---|---|---|
-| `single_hop_01` | `single_hop` | ✅ PASS | 3 | 67% | 5,375 | $0.0011 | `none` | Clean execution |
-| `single_hop_02` | `single_hop` | ❌ FAIL | 3 | 100% | 3,740 | $0.0006 | `hard` | Hard termination: provider_failure |
-| `single_hop_03` | `single_hop` | ✅ PASS | 2 | 100% | 3,512 | $0.0007 | `none` | Clean execution |
-| `multihop_01` | `multihop` | ✅ PASS | 6 | 100% | 12,361 | $0.0023 | `none` | Clean execution |
+| `single_hop_01` | `single_hop` |  PASS | 3 | 67% | 5,375 | $0.0011 | `none` | Clean execution |
+| `single_hop_02` | `single_hop` |  FAIL | 3 | 100% | 3,740 | $0.0006 | `hard` | Hard termination: provider_failure |
+| `single_hop_03` | `single_hop` |  PASS | 2 | 100% | 3,512 | $0.0007 | `none` | Clean execution |
+| `multihop_01` | `multihop` |  PASS | 6 | 100% | 12,361 | $0.0023 | `none` | Clean execution |
 
 ## 5. Comparative Analysis: W16 Agentic Loop vs. W15 Single-Pass Baseline
 
 | Architecture | Completion Rate | Mean Iters | Total Tokens | Total Cost ($) | Conflict Resolution | Verification Gate |
 |---|---|---|---|---|---|---|
-| **W15 Classic RAG (Baseline)** | 0.0% (0/4) | 1.0 | 2,568 | $0.0006 | ❌ Fails on superseded docs | ❌ None (hallucination risk) |
-| **W16 Verified Agent (Ours)** | **75.0%** (3/4) | 3.50 | 24,988 (9.7x) | $0.0047 (7.4x) | ✅ Full precedence enforcement | ✅ Deterministic check |
+| **W15 Classic RAG (Baseline)** | 0.0% (0/4) | 1.0 | 2,568 | $0.0006 |  Fails on superseded docs |  None (hallucination risk) |
+| **W16 Verified Agent (Ours)** | **75.0%** (3/4) | 3.50 | 24,988 (9.7x) | $0.0047 (7.4x) |  Full precedence enforcement |  Deterministic check |
 
 > **Coordination Cost Rationale**: The agentic loop uses approximately 9.7x tokens compared to the single-pass baseline. This modest cost difference buys autonomous multi-hop cross-referencing, self-verification, and resilience against outdated specifications.

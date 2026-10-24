@@ -9,11 +9,11 @@
 
 Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronics Engineer & AI/ML Developer. Built as a high-performance, responsive static web app hosted on GitHub Pages, featuring zero-leak client-side AES-256-GCM encryption, Google OAuth 2.0 authentication, dynamic command-palette search, and an interactive milestone build log.
 
-🌐 **Live Website**: [aaradhyadt.github.io](https://aaradhyadt.github.io)
+ **Live Website**: [aaradhyadt.github.io](https://aaradhyadt.github.io)
 
 ---
 
-## 📁 Repository Structure & Directory Map
+## Repository Structure & Directory Map
 
 Public source contains site assets, tooling, and curated development notes.
 Personal transcripts (`chat_history/` and `Claude_export*.md`), the generated
@@ -34,7 +34,7 @@ agent entrypoints.
 
 ```text
 .
-├── 📄 HTML Pages & Web App Manifest (Root Deployment)
+├── HTML Pages & Web App Manifest (Root Deployment)
 │   ├── index.html              # Homepage, hero section, interactive dev terminal, stats & Master Control Panel
 │   ├── about.html              # Personal background, engineering philosophy, timeline & biography
 │   ├── projects.html           # Technical showcase with VIP-gated GitHub source code links
@@ -49,7 +49,7 @@ agent entrypoints.
 │   ├── sw.js                   # PWA Service Worker (v58 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
-├── 🎨 Assets (`assets/`)
+├── Assets (`assets/`)
 │   ├── certificates/          # PDF downloads and WebP image previews for linked credentials
 │   ├── css/
 │   │   └── modules/           # Modular CSS architecture (tokens, base, layout, components, cmdk, access, terminal, tour, print)
@@ -69,30 +69,30 @@ agent entrypoints.
 │   │   └── last-commit.json    # Commit metadata stamped on push via GitHub Actions for live commit status display
 │   └── videos/                 # Project video demonstrations (e.g., GCSBR working demo) & poster stills
 │
-├── 🤖 MCP Server (`mcp-server/`)
+├── MCP Server (`mcp-server/`)
 │   ├── site_mcp.py             # Standard Model Context Protocol (MCP) server exposing site resources, telemetry & tools
 │   └── mcp_config.json         # MCP server registration config for AI IDEs & desktop clients
-├── 🛠️ Automation Scripts (`scripts/`)
+├── Automation Scripts (`scripts/`)
 │   ├── site_automation.py      # Hyper-automation engine: site telemetry, version syncing & tracker logging
 │   ├── verify.py               # 25-category diagnostic suite: cross-page links, asset references, JS syntax, versions, JSON-LD, claim provenance, size budgets
 │   ├── extract_index.py        # Python script to extract searchable items into the static command palette index
 │   └── dev-serve.py            # Local HTTP dev testing server with project root resolution, CORS headers & MIME type handling
 │
-├── 🤖 GitHub Workflows (`.github/workflows/`)
+├── GitHub Workflows (`.github/workflows/`)
 │   ├── deploy-pages.yml        # Automated GitHub Pages deployment
 │   ├── stamp-last-commit.yml   # CI bot stamping last commit hash, timestamp & message on every push (with retry loop)
 │   ├── update-search-index.yml # CI bot auto-regenerating search index on HTML content changes
 │   ├── verify.yml              # CI workflow running Node.js syntax checks & Python verification suite
 │   └── lighthouse-audit.yml    # CI automated Lighthouse accessibility and performance audit
 │
-├── 📊 Dev Logs & Knowledge Graph (`dev-logs/` & `graphify-out/`)
+├── Dev Logs & Knowledge Graph (`dev-logs/` & `graphify-out/`)
 │   ├── dev-logs/
 │   │   ├── PortfolioWebsite_TRACKER.md # Comprehensive release tracker & build log
 │   │   ├── og-image/           # Template & instructions for generating Open Graph social cards
 │   │   └── secrets/            # Git-ignored local development credentials
 │   └── graphify-out/           # Codebase knowledge graph analysis (community hubs, god nodes, AST report)
 │
-└── ⚙️ Configuration & Maintenance
+└── Configuration & Maintenance
     ├── sync.ps1                # PowerShell script for zero-conflict pulls, conventional commit generation & pushing
     ├── sync.bat                # Zero-friction batch wrapper bypassing execution policies on Windows
     ├── sitemap.xml             # XML sitemap for search engine crawlers (Google, Bing)
@@ -110,7 +110,7 @@ agent entrypoints.
 
 ---
 
-## 🔒 Multi-Tier Access Control & Security Model
+## Multi-Tier Access Control & Security Model
 
 > **Security & Threat Model Architecture Notice (Epistemic Calibration):** This access-control system is an educational and functional demonstration of in-browser cryptography, authentication flows, and encrypted content gating built natively for a static GitHub Pages architecture. It operates with two explicit engineering goals:
 > 1. **Anti-Scraping / Crawler Friction Barrier**: Gated repository links and deep project specifications are pre-encrypted into hex ciphertexts (`ACCESS_CONTROL_PAYLOADS`), ensuring unscripted web crawlers, search indexers, and automated scrapers (`curl`, raw `requests`) cannot harvest raw URLs from static HTML without a full JS runtime.
@@ -122,11 +122,11 @@ The site features a **Client-Side Gated Access Control System** supporting 3 sec
 
 | Tier       | Role                | Access Level & Capabilities                                                                                                                                                                                                                                           |
 | :--------- | :------------------ | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **Tier 0** | **Public Guest**    | Standard visitor view. Full portfolio, project descriptions, skills & certificates. GitHub source code links display as `🔒 GitHub Repo (VIP Access Required)`.                                                                                                       |
+| **Tier 0** | **Public Guest**    | Standard visitor view. Full portfolio, project descriptions, skills & certificates. GitHub source code links display as ` GitHub Repo (VIP Access Required)`.                                                                                                       |
 | **Tier 1** | **Higher Tier VIP** | Unlocked via sandbox passcode (`vip2026`) or Google Sign-In with an authorized email/domain. Grants direct access to all GitHub repository links, private project specs & extended metrics.                                                                           |
 | **Tier 2** | **Master Admin**    | Unlocked exclusively via Google Sign-In with Master email (`aaradhyadevtmr@gmail.com`). (Manual passcode authentication is disabled for Master Level). Grants Master Control Panel modal, live VIP allowlist manager, simulated tier switching & diagnostic controls. |
 
-### 🔍 Technical Security Architecture
+### Technical Security Architecture
 
 - **Zero Raw HTML Leakage**: Gated HTML content blocks are pre-encrypted into hex ciphertexts (`ACCESS_CONTROL_PAYLOADS`). Public HTML source contains no unencrypted text or hidden DOM nodes inspectable via Chrome DevTools (`F12`).
 - **Web Crypto API Encryption**: Key derivation uses PBKDF2 with SHA-256 (100,000 iterations and salt `adt_salt_2026`) with in-memory key memoization (`KEY_CACHE`). Content is encrypted using **AES-256-GCM** and decrypted dynamically into browser memory only upon successful authentication.
@@ -135,7 +135,7 @@ The site features a **Client-Side Gated Access Control System** supporting 3 sec
 
 ---
 
-## 🔑 Google OAuth 2.0 Integration
+## Google OAuth 2.0 Integration
 
 - Powered by the official **Google Identity Services SDK** (`https://accounts.google.com/gsi/client?hl=en`).
 - **Client-Side Verification**: Decodes Google ID tokens (JWT) to extract email, full name, and avatar picture.
@@ -145,7 +145,7 @@ The site features a **Client-Side Gated Access Control System** supporting 3 sec
 
 ---
 
-## 🔍 Site Search & Unified Command Palette
+## Site Search & Unified Command Palette
 
 Press **`/`** (or click the **Search** button in the navigation bar) on any page to open the unified **Command Palette**.
 
@@ -159,7 +159,7 @@ Press **`/`** (or click the **Search** button in the navigation bar) on any page
 
 ---
 
-## 💻 Interactive Developer Terminal Widget (`#adtTerminal`)
+## Interactive Developer Terminal Widget (`#adtTerminal`)
 
 Located directly on the Home page (`index.html`), the **Interactive Dev Terminal** (`adt-shell`) allows visitors to explore Aaradhya's technical profile via a CLI-style interface.
 
@@ -202,7 +202,7 @@ Located directly on the Home page (`index.html`), the **Interactive Dev Terminal
 
 ---
 
-## ⌨️ Global Keyboard Navigation & Shortcuts HUD
+## ⌨ Global Keyboard Navigation & Shortcuts HUD
 
 Press **`?`** (or **`Shift+/`**) anywhere on the site to trigger the **Keyboard Shortcuts HUD Modal**:
 
@@ -218,7 +218,7 @@ Press **`?`** (or **`Shift+/`**) anywhere on the site to trigger the **Keyboard 
 
 ---
 
-## ⚡ Local Development & Git Workflow
+## Local Development & Git Workflow
 
 ### Verification & Diagnostic Suite
 
@@ -312,11 +312,11 @@ To prevent merge conflicts with GitHub Actions commit-back bots and ensure code 
 
 ---
 
-## 📈 Codebase Knowledge Graph (`Graphify`)
+## Codebase Knowledge Graph (`Graphify`)
 
 This repository uses **Graphify** for local AST-level knowledge graph extraction, mapping code abstractions, script functions, HTML components, and cross-file dependencies.
 
-> ℹ️ **Note**: `graphify-out/` is a local analysis directory; generated cache and dated snapshots are ignored.
+> ℹ **Note**: `graphify-out/` is a local analysis directory; generated cache and dated snapshots are ignored.
 
 - **Local Report**: View metrics & god nodes locally at `graphify-out/GRAPH_REPORT.md`.
 - **Update Graph**: Regenerate the knowledge graph locally after modifying code:
@@ -327,7 +327,7 @@ This repository uses **Graphify** for local AST-level knowledge graph extraction
 
 ---
 
-## 📬 Contact & Connect
+## Contact & Connect
 
 - **Email**: `aaradhyadevtmr@gmail.com`
 - **GitHub**: [github.com/aaradhyadt](https://github.com/aaradhyadt)
@@ -336,6 +336,6 @@ This repository uses **Graphify** for local AST-level knowledge graph extraction
 
 ---
 
-## 📄 License
+## License
 
 This project is proprietary software. All rights reserved © 2026 Aaradhya Dev Tamrakar. See the [LICENSE](LICENSE) file for details.

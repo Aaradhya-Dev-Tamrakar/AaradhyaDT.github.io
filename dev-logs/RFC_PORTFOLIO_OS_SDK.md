@@ -1,4 +1,4 @@
-﻿# RFC: Portfolio-OS — Open Architecture, Template & Developer SDK
+# RFC: Portfolio-OS — Open Architecture, Template & Developer SDK
 
 **Status:** Proposed / Backlog
 **Target Milestone:** Future Initiative (v54+)

@@ -1,4 +1,4 @@
-﻿# Architectural Security Audit & Threat Model Assessment: VIP Tier & Web Crypto
+# Architectural Security Audit & Threat Model Assessment: VIP Tier & Web Crypto
 
 **Document ID:** SEC-AUDIT-2026-VIP
 **Scope:** Client-Side Access Control, Web Crypto API Implementation, Anti-Scraping Defenses

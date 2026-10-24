@@ -1,6 +1,6 @@
 # Security Policy
 
-## 🛡️ Supported Versions
+## Supported Versions
 
 We actively maintain and provide security updates for the latest deployment on the `main` branch.
 
@@ -11,7 +11,7 @@ We actively maintain and provide security updates for the latest deployment on t
 
 ---
 
-## 🔒 Threat Model & Architecture Note
+## Threat Model & Architecture Note
 
 The website features an educational client-side cryptography sandbox alongside administrative access gating:
 
@@ -22,7 +22,7 @@ For full architecture details and security analysis, refer to [`dev-logs/SECURIT
 
 ---
 
-## 🚨 Reporting a Vulnerability
+## Reporting a Vulnerability
 
 If you discover a security vulnerability or potential threat in this repository or the live website, please report it responsibly. **Please do not report security vulnerabilities through public GitHub issues.**
 

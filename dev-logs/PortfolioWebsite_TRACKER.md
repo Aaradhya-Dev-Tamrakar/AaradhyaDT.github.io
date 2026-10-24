@@ -766,7 +766,7 @@ eq$ server-side authorization*. Resolved stale reference to non-existent audit d
 
   - **Signature Brand Identity Preserved**: Kept header navbar & mobile drawer clean, unified, and strictly focused on signature Amber Gold (`#d4a85a`) & Cyber Teal (`#6dbfaa`).
 
-  - **Developer Easter Egg Customization**: Relocated the 6-theme accent color palette switcher (Gold 👑, Emerald ⚡, Violet 🔮, Cyan 🌊, Ruby 🔴, Prism 🌌) to the Interactive Dev Terminal (`accent [theme]`) and CMDK Command Palette (`Ctrl+K`).
+  - **Developer Easter Egg Customization**: Relocated the 6-theme accent color palette switcher (Gold , Emerald , Violet , Cyan , Ruby , Prism ) to the Interactive Dev Terminal (`accent [theme]`) and CMDK Command Palette (`Ctrl+K`).
 
   - **Dynamic Theme Token System**: Created CSS data-attribute overrides (`html[data-accent="..."]`) supporting both Dark & Light modes with dynamic variable inheritance across scrollbars, buttons, hero ambient glows, and terminal highlights.
 
@@ -1526,7 +1526,7 @@ Full v38 site upgrade suite implemented and verified across the portfolio:
 
 - **Synthesized Web Audio Micro-Sounds**: Zero-dependency Web Audio API sound synthesizer for interactive UI feedback (clicks, pops, chimes) with persistent audio toggle (`adt_audio_enabled`) and `Shift+A` shortcut.
 
-- **Dynamic Reading Time & Word Count Badges**: Client-side content metric engine generating glassmorphic reading time badges (`⏱️ X min read · Y words`) across `about.html`, `journey.html`, `experience.html`, `achievements.html`, and `projects.html`.
+- **Dynamic Reading Time & Word Count Badges**: Client-side content metric engine generating glassmorphic reading time badges (`⏱ X min read · Y words`) across `about.html`, `journey.html`, `experience.html`, `achievements.html`, and `projects.html`.
 
 - **Real-Time Filter Result Counters**: Live status indicator badges (`Showing N of M items`) for search and category filtering on projects and achievements lists.
 
