@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v57.9",
+    version: "v57.10",
     date: "2026-10-24",
     sha: "86bc0bb8eb8f1bb4dccd7cb656d5e77fa2f6f61b",
     title: "migrate affiliation badges to pure SVG in-hole blade architecture (#47) (#48)",

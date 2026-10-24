@@ -1,6 +1,6 @@
 /* ============================================================
 
-   HOME WIDGETS — index.html-only status widgets (v57.9)
+   HOME WIDGETS — index.html-only status widgets (v57.10)
 
    Kathmandu clock · live date labels · last-commit badge.
 
@@ -53,8 +53,6 @@
     if (!window.applyLiveDates) return;
 
     window.applyLiveDates({
-
-      'live-hero-tag': function () { return 'Electronics student · Kathmandu'; },
 
       'live-focus': function () { return 'ML evaluation · AI workflow tooling · SPARK'; },
 

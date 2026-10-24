@@ -1387,6 +1387,20 @@
 
 
 
+    .hero-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      white-space: nowrap;
+    }
+
+    .hero-location-flag {
+      display: block;
+      width: auto;
+      height: 22px;
+      flex-shrink: 0;
+    }
+
     .hero-tag::before {
 
       content: "";
@@ -2871,7 +2885,10 @@
 
         <div class="hero-left">
 
-          <div class="hero-tag" id="live-hero-tag">Electronics student · Kathmandu</div>
+          <div class="hero-tag">
+            <span>Electronics student ·</span>
+            <span class="hero-location"><img src="assets/images/branding/nepal-flag.svg" class="hero-location-flag" alt="" width="726" height="885" />Kathmandu, Nepal</span>
+          </div>
 
           <h1 class="hero-name">Aaradhya Dev<br /><em>Tamrakar</em></h1>
 
@@ -3570,7 +3587,7 @@
 
             <span class="term-green">Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal
 
-              (v57.9).</span><br />
+              (v57.10).</span><br />
 
             Type <span class="term-gold">'help'</span> or click the preset buttons above to explore.
 
