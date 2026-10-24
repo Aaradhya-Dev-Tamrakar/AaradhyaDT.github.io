@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v57",
+    version: "v57.1",
     date: "2026-10-24",
     sha: "1d30eb5ea4f765b8e4a7b422bbdc5f3616cf9f9e",
     title: "unify portrait and ADT placement (#33, #34)",
