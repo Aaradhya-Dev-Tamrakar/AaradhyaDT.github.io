@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v57.2",
     date: "2026-10-24",
-    sha: "59ae9911263aee1e44b5b866d599d9fe6883a9e1",
-    title: "keep contact links within desktop viewport",
+    sha: "0796d222e1790aec78c94d42dc655028af9d0843",
+    title: "dynamic N-sided star avatar with hover-bloom affiliation anchors (#37) (#38)",
     highlights: []
   },
   {

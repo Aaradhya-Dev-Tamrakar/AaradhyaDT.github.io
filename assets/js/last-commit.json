@@ -1,6 +1,6 @@
 {
-  "sha": "59ae9911263aee1e44b5b866d599d9fe6883a9e1",
-  "shortSha": "59ae991",
-  "date": "2026-10-24T13:07:53+05:45",
-  "message": "fix(contact): keep contact links within desktop viewport"
+  "sha": "0796d222e1790aec78c94d42dc655028af9d0843",
+  "shortSha": "0796d22",
+  "date": "2026-10-24T13:42:33+05:45",
+  "message": "feat(hero): dynamic N-sided star avatar with hover-bloom affiliation anchors (#37) (#38)"
 }
