@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v57.3",
+    version: "v57.4",
     date: "2026-10-24",
     sha: "e959f48b3348171aeb90452a33af532d8873fe53",
     title: "ensure profile photo stays frontmost with star and badge animations behind it (#39) (#40)",
