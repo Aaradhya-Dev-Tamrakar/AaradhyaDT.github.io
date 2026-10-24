@@ -1,0 +1,5 @@
+chat_history/
+clean_codebase_payload.txt
+Claude_export*.md
+dev-logs/Claude_export*.md
+.site-build/

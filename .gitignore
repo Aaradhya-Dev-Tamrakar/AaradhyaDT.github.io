@@ -35,9 +35,12 @@ env/
 .env
 
 # Local dev tooling / analysis output — not part of the deployed site
-graphify-out/cache/
-graphify-out/20*
-graphify-out/????-??-??/
+/graphify-out/
+/chat_history/
+/clean_codebase_payload.txt
+/Claude_export*.md
+/.site-build/
+/.ruff_cache/
 dev-logs/*
 !dev-logs/og-image/
 !dev-logs/og-image/**
@@ -46,6 +49,7 @@ dev-logs/*
 dev-logs/secrets/
 dev-logs/payloads_plaintext.json
 dev-logs/*.plaintext.json
+/dev-logs/Claude_export*.md
 # Visual regression temporary artifacts
 tests/visual/diffs/
 tests/visual/.tmp/

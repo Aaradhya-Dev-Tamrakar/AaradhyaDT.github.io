@@ -3,7 +3,7 @@
 [![Deploy Pages](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/deploy-pages.yml)
 [![Verification Suite](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/verify.yml)
 [![Lighthouse Audit](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml/badge.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io/actions/workflows/lighthouse-audit.yml)
-[![Version](https://img.shields.io/badge/version-v57.10-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
+[![Version](https://img.shields.io/badge/version-v58-blue.svg)](https://github.com/AaradhyaDT/AaradhyaDT.github.io)
 [![License](https://img.shields.io/badge/license-All%20Rights%20Reserved-red.svg)](LICENSE)
 [![Zero-Framework](https://img.shields.io/badge/framework-vanilla%20HTML%2FCSS%2FJS-orange.svg)](https://aaradhyadt.github.io)
 
@@ -14,6 +14,23 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 ---
 
 ## 📁 Repository Structure & Directory Map
+
+Public source contains site assets, tooling, and curated development notes.
+Personal transcripts (`chat_history/` and `Claude_export*.md`), the generated
+`clean_codebase_payload.txt`, and `graphify-out/` are local-only ignored files.
+The cleanup in issue #49 removes these from the current tree; earlier commits
+still contain their historical versions.
+
+GitHub Pages packages tracked HTML, runtime assets, public data, and site metadata
+with `python scripts/build_site.py`. The resulting `.site-build/` directory is
+the deployment artifact; agent rules, tooling, and development notes stay out of it.
+The builder refuses to overwrite an existing output directory.
+
+The graph HUD uses the committed `assets/js/data/graph-data.js`, so a fresh clone
+does not need Graphify. To refresh that data, generate a local Graphify graph,
+then run `python scripts/generate_graph_data.py`. Local graph output remains ignored.
+`AGENTS.md` remains the workflow reference; `GEMINI.md` and `CLAUDE.md` provide
+agent entrypoints.
 
 ```text
 .
@@ -29,7 +46,7 @@ Official personal portfolio website for **Aaradhya Dev Tamrakar** — Electronic
 │   ├── terms.html              # Terms of service and usage terms
 │   ├── 404.html                # Custom styled Not-Found page (excluded from sitemap, marked noindex)
 │   ├── site.webmanifest        # Progressive Web App manifest metadata (standalone app, dark theme tokens)
-│   ├── sw.js                   # PWA Service Worker (v57.10 cache-first static assets & network-first HTML)
+│   ├── sw.js                   # PWA Service Worker (v58 cache-first static assets & network-first HTML)
 │   └── google3e772e11a3eb8313.html # Google Search Console site ownership verification file
 │
 ├── 🎨 Assets (`assets/`)

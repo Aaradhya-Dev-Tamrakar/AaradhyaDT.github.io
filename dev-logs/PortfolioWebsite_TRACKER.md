@@ -1,8 +1,14 @@
-# Portfolio Website Tracker — v57.10
+# Portfolio Website Tracker — v58
 
 
 
 Last updated: _2026-10-24_
+
+
+- **v58 (Major Release) — Public site packaging and repository cleanup.** Shipped public site packaging and repository cleanup.
+  - Publish only runtime files; preserve local transcripts and graph exports outside Git
+
+- **Repository hygiene (#49)**: Archive and stop tracking the generated payload dump, raw transcripts, and Graphify exports. Keep the graph HUD runtime data and agent workflow instructions. Package tracked public runtime files into `.site-build/` for Pages instead of uploading the repository root. Earlier Git history is unchanged.
 
 
 
@@ -878,7 +884,7 @@ eq$ server-side authorization*. Resolved stale reference to non-existent audit d
 
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
 
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v57.10`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 
