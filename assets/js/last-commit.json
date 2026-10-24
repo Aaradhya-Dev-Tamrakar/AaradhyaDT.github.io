@@ -1,6 +1,6 @@
 {
-  "sha": "603579322c015f6b0875a7e5adc84407194a8341",
-  "shortSha": "6035793",
-  "date": "2026-10-24T12:57:50+05:45",
-  "message": "chore(brand): align v57 lock metadata and record verification (#34)"
+  "sha": "59ae9911263aee1e44b5b866d599d9fe6883a9e1",
+  "shortSha": "59ae991",
+  "date": "2026-10-24T13:07:53+05:45",
+  "message": "fix(contact): keep contact links within desktop viewport"
 }
