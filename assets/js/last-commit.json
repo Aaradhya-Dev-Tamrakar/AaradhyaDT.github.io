@@ -1,6 +1,6 @@
 {
-  "sha": "1d30eb5ea4f765b8e4a7b422bbdc5f3616cf9f9e",
-  "shortSha": "1d30eb5",
-  "date": "2026-10-24T12:57:02+05:45",
-  "message": "feat(brand): unify portrait and ADT placement (#33, #34)"
+  "sha": "603579322c015f6b0875a7e5adc84407194a8341",
+  "shortSha": "6035793",
+  "date": "2026-10-24T12:57:50+05:45",
+  "message": "chore(brand): align v57 lock metadata and record verification (#34)"
 }
