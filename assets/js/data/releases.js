@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v57.2",
+    version: "v57.3",
     date: "2026-10-24",
     sha: "0796d222e1790aec78c94d42dc655028af9d0843",
     title: "dynamic N-sided star avatar with hover-bloom affiliation anchors (#37) (#38)",
