@@ -1,6 +1,6 @@
 {
-  "sha": "e959f48b3348171aeb90452a33af532d8873fe53",
-  "shortSha": "e959f48",
-  "date": "2026-10-24T13:54:10+05:45",
-  "message": "fix(hero): ensure profile photo stays frontmost with star and badge animations behind it (#39) (#40)"
+  "sha": "6e16fda6d0a01cad2577ba8b3b371a0b83777cdb",
+  "shortSha": "6e16fda",
+  "date": "2026-10-24T14:18:24+05:45",
+  "message": "feat(hero): make affiliation logos circular, clearer, and update marks (#41) (#42)"
 }
