@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v57.9",
     date: "2026-10-24",
-    sha: "4c6067f0a73d3eca9a5ed5edd0255f2c11658902",
-    title: "synchronize per-petal lotus blade cascade with badge motion (#45) (#46)",
+    sha: "86bc0bb8eb8f1bb4dccd7cb656d5e77fa2f6f61b",
+    title: "migrate affiliation badges to pure SVG in-hole blade architecture (#47) (#48)",
     highlights: []
   },
   {

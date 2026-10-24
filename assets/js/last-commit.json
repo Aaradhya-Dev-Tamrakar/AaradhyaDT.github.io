@@ -1,6 +1,6 @@
 {
-  "sha": "4c6067f0a73d3eca9a5ed5edd0255f2c11658902",
-  "shortSha": "4c6067f",
-  "date": "2026-10-24T15:26:43+05:45",
-  "message": "feat(hero): synchronize per-petal lotus blade cascade with badge motion (#45) (#46)"
+  "sha": "86bc0bb8eb8f1bb4dccd7cb656d5e77fa2f6f61b",
+  "shortSha": "86bc0bb",
+  "date": "2026-10-24T15:56:24+05:45",
+  "message": "feat(hero): migrate affiliation badges to pure SVG in-hole blade architecture (#47) (#48)"
 }
