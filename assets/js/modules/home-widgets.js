@@ -1,6 +1,6 @@
 /* ============================================================
 
-   HOME WIDGETS — index.html-only status widgets (v57.4)
+   HOME WIDGETS — index.html-only status widgets (v57.5)
 
    Kathmandu clock · live date labels · last-commit badge.
 
@@ -636,21 +636,27 @@
 
     var poly = document.getElementById('heroStarPolygon');
 
+    var innerRing = document.getElementById('heroLotusInnerRing');
+
+    var outerRing = document.getElementById('heroLotusOuterRing');
+
     var badgesWrap = document.getElementById('heroStarBadges');
 
     if (!poly || !badgesWrap) return;
 
 
 
-    var cx = 160;
+    var cx = 155;
 
-    var cy = 160;
+    var cy = 155;
 
     var rOuter = 136;
 
     var rInner = Math.round(rOuter * 0.50);
 
-    var badgeDist = 126;
+    var stageW = stage.clientWidth || 310;
+
+    var badgeDist = Math.round(120 * (stageW / 310));
 
 
 
@@ -683,6 +689,46 @@
     }
 
     poly.setAttribute('points', pts.join(' '));
+
+
+
+    // Dynamically build N-sided Dual-Ring Interlocking Tang Lotus blades with coaxial 120px circle sockets
+
+    if (innerRing && outerRing) {
+
+      var innerHtml = '<circle cx="155" cy="155" r="155" fill="none" stroke="none" /><circle class="lotus-mech-ring" cx="155" cy="155" r="108" />';
+
+      var outerHtml = '<circle cx="155" cy="155" r="155" fill="none" stroke="none" /><circle class="lotus-core-ring" cx="155" cy="155" r="99" />';
+
+      for (var b = 0; b < N; b++) {
+
+        var deg = Math.round(((b * 360) / N) * 100) / 100;
+
+        var phiDeg = Math.round((deg + 180 / N) * 100) / 100;
+
+        innerHtml +=
+
+          '<g class="lotus-blade lotus-blade--secondary" transform="rotate(' + phiDeg + ' 155 155)">' +
+
+          '<path class="lotus-crystal-light" d="M 155 10 Q 145 31 136 48 Q 131 64 142 82 L 155 88 Z" /><path class="lotus-crystal-dark" d="M 155 10 Q 165 31 174 48 Q 179 64 168 82 L 155 88 Z" /><path class="lotus-crystal-filigree" d="M 155 19 Q 147 35 140 50 Q 137 62 146 75 L 155 80 L 164 75 Q 173 62 170 50 Q 163 35 155 19 Z" /><line class="lotus-crystal-spine" x1="155" y1="11" x2="155" y2="82" />' +
+
+          '</g>';
+
+        outerHtml +=
+
+          '<g class="lotus-blade lotus-blade--primary" transform="rotate(' + deg + ' 155 155)">' +
+
+          '<path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" />' +
+
+          '</g>';
+
+      }
+
+      innerRing.innerHTML = innerHtml;
+
+      outerRing.innerHTML = outerHtml;
+
+    }
 
 
 
@@ -728,9 +774,9 @@
 
       img.alt = '';
 
-      img.width = 36;
+      img.width = 38;
 
-      img.height = 36;
+      img.height = 38;
 
       img.loading = 'lazy';
 

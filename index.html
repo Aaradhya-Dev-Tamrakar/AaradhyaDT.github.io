@@ -582,7 +582,7 @@
 
 
 
-    /* ── SVG Star Backdrop ── */
+    /* ── SVG Tang Lotus Dual-Ring Mechanical Backdrop ── */
 
     .hero-star-svg {
 
@@ -598,19 +598,11 @@
 
       pointer-events: none;
 
-      transform-origin: center center;
+      overflow: visible;
 
-      transform: scale(0.68) rotate(-18deg);
+      filter: drop-shadow(0 0 10px rgba(212, 168, 90, 0.18));
 
-      opacity: 0.18;
-
-      filter: drop-shadow(0 0 12px rgba(212, 168, 90, 0.15));
-
-      transition: transform 0.52s cubic-bezier(0.22, 1, 0.36, 1),
-
-                  opacity 0.4s ease,
-
-                  filter 0.4s ease;
+      transition: filter 0.45s ease;
 
     }
 
@@ -618,15 +610,219 @@
 
     .hero-star-polygon {
 
-      fill: rgba(212, 168, 90, 0.04);
+      fill: rgba(212, 168, 90, 0.03);
 
-      stroke: var(--accent);
+      stroke: rgba(212, 168, 90, 0.22);
 
-      stroke-width: 1.5;
+      stroke-width: 1;
 
       stroke-linejoin: round;
 
-      transition: stroke 0.3s ease, fill 0.3s ease;
+      transform-origin: 155px 155px;
+
+      transform: scale(0.64) rotate(-18deg);
+
+      opacity: 0.35;
+
+      transition: transform 0.56s cubic-bezier(0.16, 1, 0.3, 1),
+
+                  opacity 0.4s ease,
+
+                  stroke 0.3s ease,
+
+                  fill 0.3s ease;
+
+    }
+
+
+
+    /* Dual Interlocking Lotus Rings */
+
+    .lotus-ring {
+
+      transform-origin: 155px 155px;
+
+      transition: transform 0.58s cubic-bezier(0.16, 1, 0.3, 1),
+
+                  opacity 0.42s ease;
+
+    }
+
+
+
+    /* Outer Golden Ring: 4-6px razor tips peeking past the 98px portrait rim */
+
+    .lotus-ring--outer {
+
+      transform: scale(0.64) rotate(-18deg);
+
+      opacity: 0.9;
+
+    }
+
+
+
+    /* Inner Crystalline Ring: counter-rotated interlocking blades */
+
+    .lotus-ring--inner {
+
+      transform: scale(0.685) rotate(18deg);
+
+      opacity: 0.76;
+
+    }
+
+
+
+    /* 3D Faceted Golden Primary Blades */
+
+    .lotus-facet-light {
+
+      fill: url(#lotusGoldLight);
+
+      stroke: #fbe5ad;
+
+      stroke-width: 0.7;
+
+      stroke-linejoin: round;
+
+    }
+
+
+
+    .lotus-facet-dark {
+
+      fill: url(#lotusGoldDark);
+
+      stroke: #c4923e;
+
+      stroke-width: 0.7;
+
+      stroke-linejoin: round;
+
+    }
+
+
+
+    .lotus-blade-filigree {
+
+      fill: rgba(18, 14, 9, 0.26);
+
+      stroke: rgba(255, 238, 190, 0.62);
+
+      stroke-width: 0.85;
+
+      stroke-linejoin: round;
+
+    }
+
+
+
+    .lotus-blade-spine {
+
+      stroke: #fff8de;
+
+      stroke-width: 1.25;
+
+      stroke-linecap: round;
+
+      opacity: 0.95;
+
+    }
+
+
+
+    .lotus-blade-cradle {
+
+      fill: rgba(14, 17, 24, 0.65);
+
+      stroke: rgba(246, 214, 142, 0.75);
+
+      stroke-width: 1.2;
+
+      stroke-dasharray: 5 3;
+
+    }
+
+
+
+    .lotus-core-ring {
+
+      fill: none;
+
+      stroke: rgba(212, 168, 90, 0.5);
+
+      stroke-width: 1.3;
+
+    }
+
+
+
+    /* 3D Faceted Crystalline Counter-Blades */
+
+    .lotus-crystal-light {
+
+      fill: url(#lotusCrystalLight);
+
+      stroke: rgba(220, 245, 255, 0.78);
+
+      stroke-width: 0.65;
+
+      stroke-linejoin: round;
+
+    }
+
+
+
+    .lotus-crystal-dark {
+
+      fill: url(#lotusCrystalDark);
+
+      stroke: rgba(110, 178, 224, 0.68);
+
+      stroke-width: 0.65;
+
+      stroke-linejoin: round;
+
+    }
+
+
+
+    .lotus-crystal-filigree {
+
+      fill: rgba(12, 28, 44, 0.3);
+
+      stroke: rgba(195, 236, 255, 0.48);
+
+      stroke-width: 0.7;
+
+    }
+
+
+
+    .lotus-crystal-spine {
+
+      stroke: #e8f8ff;
+
+      stroke-width: 1;
+
+      stroke-linecap: round;
+
+      opacity: 0.88;
+
+    }
+
+
+
+    .lotus-mech-ring {
+
+      fill: none;
+
+      stroke: rgba(135, 198, 238, 0.36);
+
+      stroke-width: 1;
+
+      stroke-dasharray: 4 5;
 
     }
 
@@ -704,7 +900,7 @@
 
 
 
-    /* Individual Star Badge */
+    /* Individual Star Badge — 100% glove-fit inside the lotus circle hole */
 
     .star-badge {
 
@@ -714,21 +910,19 @@
 
       left: 50%;
 
-      width: 40px;
+      width: 38px;
 
-      height: 40px;
+      height: 38px;
+
+      padding: 0;
 
       border-radius: 50%;
 
       box-sizing: border-box;
 
-      background: var(--surface-2, rgba(28, 36, 50, 0.9));
+      background: var(--surface-2, rgba(22, 28, 40, 0.96));
 
-      border: 1px solid rgba(255, 255, 255, 0.16);
-
-      backdrop-filter: blur(8px);
-
-      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid #f3cf82;
 
       display: flex;
 
@@ -736,7 +930,7 @@
 
       justify-content: center;
 
-      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 
       text-decoration: none;
 
@@ -744,9 +938,9 @@
 
       opacity: 0;
 
-      transform: translate(-50%, -50%) scale(0.35);
+      transform: translate(-50%, -50%) scale(0.32);
 
-      transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+      transition: transform 0.52s cubic-bezier(0.16, 1, 0.3, 1),
 
                   opacity 0.32s ease,
 
@@ -754,7 +948,7 @@
 
                   box-shadow 0.25s ease;
 
-      transition-delay: calc(var(--i, 0) * 25ms);
+      transition-delay: calc(var(--i, 0) * 28ms);
 
     }
 
@@ -762,9 +956,9 @@
 
     .star-badge-icon-wrap {
 
-      width: 32px;
+      width: 100%;
 
-      height: 32px;
+      height: 100%;
 
       border-radius: 50%;
 
@@ -794,8 +988,6 @@
 
       display: block;
 
-      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
-
     }
 
 
@@ -806,7 +998,7 @@
 
       position: absolute;
 
-      bottom: calc(100% + 7px);
+      bottom: calc(100% + 9px);
 
       left: 50%;
 
@@ -838,13 +1030,13 @@
 
       transition: opacity 0.2s ease, transform 0.2s ease;
 
-      z-index: 10;
+      z-index: 12;
 
     }
 
 
 
-    /* ── HOVER / FOCUS BLOOM ACTIVATION ── */
+    /* ── HOVER / FOCUS MECHANICAL LOTUS BLOOM ACTIVATION ── */
 
     .hero-star-stage:hover .hero-star-svg,
 
@@ -852,11 +1044,35 @@
 
     .hero-star-stage.is-expanded .hero-star-svg {
 
+      filter: drop-shadow(0 0 18px rgba(212, 168, 90, 0.38)) drop-shadow(0 0 28px rgba(120, 190, 240, 0.16));
+
+    }
+
+
+
+    .hero-star-stage:hover .lotus-ring--outer,
+
+    .hero-star-stage:focus-within .lotus-ring--outer,
+
+    .hero-star-stage.is-expanded .lotus-ring--outer {
+
       transform: scale(1) rotate(0deg);
 
-      opacity: 0.85;
+      opacity: 1;
 
-      filter: drop-shadow(0 0 16px rgba(212, 168, 90, 0.3));
+    }
+
+
+
+    .hero-star-stage:hover .lotus-ring--inner,
+
+    .hero-star-stage:focus-within .lotus-ring--inner,
+
+    .hero-star-stage.is-expanded .lotus-ring--inner {
+
+      transform: scale(1) rotate(0deg);
+
+      opacity: 0.94;
 
     }
 
@@ -868,9 +1084,13 @@
 
     .hero-star-stage.is-expanded .hero-star-polygon {
 
+      transform: scale(1) rotate(0deg);
+
+      opacity: 0.65;
+
       stroke: var(--accent);
 
-      fill: rgba(212, 168, 90, 0.08);
+      fill: rgba(212, 168, 90, 0.06);
 
     }
 
@@ -884,13 +1104,13 @@
 
       border-color: var(--accent);
 
-      box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5), 0 0 20px -4px rgba(212, 168, 90, 0.25);
+      box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.55), 0 0 22px -2px rgba(212, 168, 90, 0.35);
 
     }
 
 
 
-    /* Deployed badges glide outward to star apexes */
+    /* Deployed badges glide outward into the lotus circle holes */
 
     .hero-star-stage:hover .star-badge,
 
@@ -914,13 +1134,13 @@
 
     .star-badge:focus-visible {
 
-      border-color: var(--accent);
+      border-color: #fff6d6;
 
-      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), 0 0 14px rgba(212, 168, 90, 0.45);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5), 0 0 16px rgba(245, 208, 125, 0.75);
 
-      transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% + var(--dy, 0px))) scale(1.18);
+      transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% + var(--dy, 0px))) scale(1.14);
 
-      z-index: 5;
+      z-index: 6;
 
     }
 
@@ -942,11 +1162,11 @@
 
     html[data-theme="light"] .star-badge {
 
-      background: rgba(255, 255, 255, 0.95);
+      background: #ffffff;
 
-      border-color: rgba(0, 0, 0, 0.12);
+      border-color: #c4923e;
 
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.14);
 
     }
 
@@ -974,25 +1194,17 @@
 
       .hero-portrait-stage {
 
-        width: 172px;
+        width: 176px;
 
-        height: 172px;
+        height: 176px;
 
       }
 
       .star-badge {
 
-        width: 36px;
+        width: 34px;
 
-        height: 36px;
-
-      }
-
-      .star-badge-icon-wrap {
-
-        width: 28px;
-
-        height: 28px;
+        height: 34px;
 
       }
 
@@ -2706,11 +2918,81 @@
 
             <div class="hero-star-stage" id="heroStarStage" role="region" aria-label="Aaradhya Dev Tamrakar portrait and key affiliations">
 
-              <svg class="hero-star-svg" id="heroStarSvg" viewBox="0 0 320 320" aria-hidden="true" focusable="false">
+                                                                      <svg class="hero-star-svg" id="heroStarSvg" viewBox="0 0 310 310" aria-hidden="true" focusable="false">
 
-                <polygon class="hero-star-polygon" id="heroStarPolygon"
+                <defs>
 
-                  points="160,24 200,105 289,118 225,181 240,270 160,228 80,270 95,181 31,118 120,105" />
+                  <linearGradient id="lotusGoldLight" x1="0%" y1="0%" x2="100%" y2="100%">
+
+                    <stop offset="0%" stop-color="#fff2c6" />
+
+                    <stop offset="45%" stop-color="#e6ba67" />
+
+                    <stop offset="100%" stop-color="#9b6a1d" />
+
+                  </linearGradient>
+
+                  <linearGradient id="lotusGoldDark" x1="0%" y1="0%" x2="100%" y2="100%">
+
+                    <stop offset="0%" stop-color="#d8a852" />
+
+                    <stop offset="55%" stop-color="#8b5d19" />
+
+                    <stop offset="100%" stop-color="#452b07" />
+
+                  </linearGradient>
+
+                  <linearGradient id="lotusCrystalLight" x1="0%" y1="0%" x2="100%" y2="100%">
+
+                    <stop offset="0%" stop-color="#e6f7ff" />
+
+                    <stop offset="50%" stop-color="#7ec2f0" />
+
+                    <stop offset="100%" stop-color="#2a5980" />
+
+                  </linearGradient>
+
+                  <linearGradient id="lotusCrystalDark" x1="0%" y1="0%" x2="100%" y2="100%">
+
+                    <stop offset="0%" stop-color="#96cff2" />
+
+                    <stop offset="55%" stop-color="#3c729c" />
+
+                    <stop offset="100%" stop-color="#142b42" />
+
+                  </linearGradient>
+
+                </defs>
+
+                <polygon class="hero-star-polygon" id="heroStarPolygon" points="155,19 195,100 284,113 220,176 235,265 155,223 75,265 90,176 26,113 115,100" />
+
+                <g class="lotus-ring lotus-ring--inner" id="heroLotusInnerRing">
+
+                  <circle cx="155" cy="155" r="155" fill="none" stroke="none" />
+
+                  <circle class="lotus-mech-ring" cx="155" cy="155" r="108" />
+
+                  <g class="lotus-blade lotus-blade--secondary" transform="rotate(36.0 155 155)"><path class="lotus-crystal-light" d="M 155 10 Q 145 31 136 48 Q 131 64 142 82 L 155 88 Z" /><path class="lotus-crystal-dark" d="M 155 10 Q 165 31 174 48 Q 179 64 168 82 L 155 88 Z" /><path class="lotus-crystal-filigree" d="M 155 19 Q 147 35 140 50 Q 137 62 146 75 L 155 80 L 164 75 Q 173 62 170 50 Q 163 35 155 19 Z" /><line class="lotus-crystal-spine" x1="155" y1="11" x2="155" y2="82" /></g>
+                  <g class="lotus-blade lotus-blade--secondary" transform="rotate(108.0 155 155)"><path class="lotus-crystal-light" d="M 155 10 Q 145 31 136 48 Q 131 64 142 82 L 155 88 Z" /><path class="lotus-crystal-dark" d="M 155 10 Q 165 31 174 48 Q 179 64 168 82 L 155 88 Z" /><path class="lotus-crystal-filigree" d="M 155 19 Q 147 35 140 50 Q 137 62 146 75 L 155 80 L 164 75 Q 173 62 170 50 Q 163 35 155 19 Z" /><line class="lotus-crystal-spine" x1="155" y1="11" x2="155" y2="82" /></g>
+                  <g class="lotus-blade lotus-blade--secondary" transform="rotate(180.0 155 155)"><path class="lotus-crystal-light" d="M 155 10 Q 145 31 136 48 Q 131 64 142 82 L 155 88 Z" /><path class="lotus-crystal-dark" d="M 155 10 Q 165 31 174 48 Q 179 64 168 82 L 155 88 Z" /><path class="lotus-crystal-filigree" d="M 155 19 Q 147 35 140 50 Q 137 62 146 75 L 155 80 L 164 75 Q 173 62 170 50 Q 163 35 155 19 Z" /><line class="lotus-crystal-spine" x1="155" y1="11" x2="155" y2="82" /></g>
+                  <g class="lotus-blade lotus-blade--secondary" transform="rotate(252.0 155 155)"><path class="lotus-crystal-light" d="M 155 10 Q 145 31 136 48 Q 131 64 142 82 L 155 88 Z" /><path class="lotus-crystal-dark" d="M 155 10 Q 165 31 174 48 Q 179 64 168 82 L 155 88 Z" /><path class="lotus-crystal-filigree" d="M 155 19 Q 147 35 140 50 Q 137 62 146 75 L 155 80 L 164 75 Q 173 62 170 50 Q 163 35 155 19 Z" /><line class="lotus-crystal-spine" x1="155" y1="11" x2="155" y2="82" /></g>
+                  <g class="lotus-blade lotus-blade--secondary" transform="rotate(324.0 155 155)"><path class="lotus-crystal-light" d="M 155 10 Q 145 31 136 48 Q 131 64 142 82 L 155 88 Z" /><path class="lotus-crystal-dark" d="M 155 10 Q 165 31 174 48 Q 179 64 168 82 L 155 88 Z" /><path class="lotus-crystal-filigree" d="M 155 19 Q 147 35 140 50 Q 137 62 146 75 L 155 80 L 164 75 Q 173 62 170 50 Q 163 35 155 19 Z" /><line class="lotus-crystal-spine" x1="155" y1="11" x2="155" y2="82" /></g>
+
+                </g>
+
+                <g class="lotus-ring lotus-ring--outer" id="heroLotusOuterRing">
+
+                  <circle cx="155" cy="155" r="155" fill="none" stroke="none" />
+
+                  <circle class="lotus-core-ring" cx="155" cy="155" r="99" />
+
+                  <g class="lotus-blade lotus-blade--primary" transform="rotate(0.0 155 155)"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /></g>
+                  <g class="lotus-blade lotus-blade--primary" transform="rotate(72.0 155 155)"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /></g>
+                  <g class="lotus-blade lotus-blade--primary" transform="rotate(144.0 155 155)"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /></g>
+                  <g class="lotus-blade lotus-blade--primary" transform="rotate(216.0 155 155)"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /></g>
+                  <g class="lotus-blade lotus-blade--primary" transform="rotate(288.0 155 155)"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /></g>
+
+                </g>
 
               </svg>
 
@@ -2722,7 +3004,7 @@
 
               <div class="hero-star-badges" id="heroStarBadges">
 
-                <a href="experience.html#exp-fuse" class="star-badge" style="--dx: 0px; --dy: -126px; --i: 0;" aria-label="Fusemachines — Fuse AI Fellow">
+                <a href="experience.html#exp-fuse" class="star-badge" style="--dx: 0px; --dy: -120px; --i: 0;" aria-label="Fusemachines — Fuse AI Fellow">
 
                   <span class="star-badge-icon-wrap">
 
@@ -2734,7 +3016,7 @@
 
                 </a>
 
-                <a href="experience.html#exp-ieee-vicechair" class="star-badge" style="--dx: 120px; --dy: -39px; --i: 1;" aria-label="IEEE KEC KTM Student Branch — Vice Chair">
+                <a href="experience.html#exp-ieee-vicechair" class="star-badge" style="--dx: 114px; --dy: -37px; --i: 1;" aria-label="IEEE KEC KTM Student Branch — Vice Chair">
 
                   <span class="star-badge-icon-wrap">
 
@@ -2746,7 +3028,7 @@
 
                 </a>
 
-                <a href="experience.html#exp-nssr" class="star-badge" style="--dx: 74px; --dy: 102px; --i: 2;" aria-label="NSSR Nepal (DataCamp) — Fellow">
+                <a href="experience.html#exp-nssr" class="star-badge" style="--dx: 71px; --dy: 97px; --i: 2;" aria-label="NSSR Nepal (DataCamp) — Fellow">
 
                   <span class="star-badge-icon-wrap">
 
@@ -2758,7 +3040,7 @@
 
                 </a>
 
-                <a href="experience.html#exp-makerspace" class="star-badge" style="--dx: -74px; --dy: 102px; --i: 3;" aria-label="KEC Makerspace — Lead">
+                <a href="experience.html#exp-makerspace" class="star-badge" style="--dx: -71px; --dy: 97px; --i: 3;" aria-label="KEC Makerspace — Lead">
 
                   <span class="star-badge-icon-wrap">
 
@@ -2770,7 +3052,7 @@
 
                 </a>
 
-                <a href="experience.html#exp-epc" class="star-badge" style="--dx: -120px; --dy: -39px; --i: 4;" aria-label="Engineering Project Club — Event Manager">
+                <a href="experience.html#exp-epc" class="star-badge" style="--dx: -114px; --dy: -37px; --i: 4;" aria-label="Engineering Project Club — Event Manager">
 
                   <span class="star-badge-icon-wrap">
 
@@ -3336,7 +3618,7 @@
 
             <span class="term-green">Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal
 
-              (v57.4).</span><br />
+              (v57.5).</span><br />
 
             Type <span class="term-gold">'help'</span> or click the preset buttons above to explore.
 
