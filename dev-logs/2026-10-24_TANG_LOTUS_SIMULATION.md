@@ -59,7 +59,28 @@ The architecture was evaluated across $N \in \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12
 
 ---
 
-## 4. Key Architectural Insights & Decisions
+## 4. Architectural Comparison: Option A (Pure SVG In-Hole) vs Option B (Coaxial HTML Overlay)
+
+Both architectures were implemented and benchmarked during simulation:
+
+### Option A: Pure SVG In-Hole Blade Node (Selected Standard)
+- **DOM Placement**: Embedded directly inside `<g class="lotus-blade--primary">` as an SVG `<image>` clipped via `<clipPath>` inside `<circle class="lotus-blade-cradle">`.
+- **Motion Kinematics**: Inherits all parent SVG group transformations. When `.lotus-ring--outer` rotates and scales from dormant (`scale(0.64) rotate(-18deg)`) to deployed (`scale(1) rotate(0deg)`), the badge moves synchronously with the petal with $0.0\text{px}$ drift and zero runtime JavaScript translation math.
+- **Tucking Invariant**: Naturally rotates behind the central portrait stage (`z-index: 10`) during closing transitions.
+- **Trade-offs**: Tooltips rely on native SVG `<title>` or SVG `<text>` elements; CSS hover scaling on individual badges requires SVG `transform-origin` relative to local socket coordinates $(155, 35)$.
+
+### Option B: Coaxial HTML Overlay (Engineered Alternative)
+- **DOM Placement**: Badges are standard HTML `<a>` tags inside `.hero-star-badges` (`z-index: 4`) positioned over the SVG canvas.
+- **Motion Kinematics**: Badges are translated radially via CSS variables `--dx` and `--dy` computed as:
+  $$\text{dx} = \text{round}\left(r_{\text{socket}} \cdot \cos\left(-\frac{\pi}{2} + \frac{2\pi \cdot i}{N}\right)\right)$$
+  $$\text{dy} = \text{round}\left(r_{\text{socket}} \cdot \sin\left(-\frac{\pi}{2} + \frac{2\pi \cdot i}{N}\right)\right)$$
+  where $r_{\text{socket}} = 120\text{px}$.
+- **Strengths**: Native HTML accessibility, keyboard navigation (`:focus-visible`), standard HTML tooltips (`.star-badge-tooltip`) with rich typography, and seamless `:hover` scaling (`scale(1.14)`).
+- **Trade-offs**: Requires runtime JavaScript to recalculate and set `--dx` / `--dy` inline styles upon dynamically changing affiliations; requires cubic-bezier curve calibration (`cubic-bezier(0.16, 1, 0.3, 1)`) to visually align badge expansion with SVG petal rotation.
+
+---
+
+## 5. Key Architectural Insights & Decisions
 
 1. **Elimination of Dashed Lines**:
    - The artificial dashed orbit circles (`lotus-mech-ring`) and socket dashed borders (`lotus-blade-cradle-rim`) have been eliminated.
@@ -70,4 +91,4 @@ The architecture was evaluated across $N \in \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12
    - Hovering triggers `transform: scale(1) rotate(0deg)`, automatically unfurling all badges into their fully cleared sockets without runtime coordinate recalculation.
 
 3. **Standalone Simulation Harness**:
-   - Preserved in the repository under [`scripts/simulate_tang_lotus.html`](file:///F:/AaradhyaDT/AaradhyaDT.github.io/scripts/simulate_tang_lotus.html) for regression testing and visual review.
+   - Preserved in the repository under [`scripts/simulate_tang_lotus.html`](file:///F:/AaradhyaDT/AaradhyaDT.github.io/scripts/simulate_tang_lotus.html) for regression testing and visual review. Supports both Option A and Option B configurations across $N \in \{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12\}$.

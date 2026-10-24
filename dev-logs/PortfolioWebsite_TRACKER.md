@@ -1,4 +1,4 @@
-# Portfolio Website Tracker — v57.7
+# Portfolio Website Tracker — v57.8
 
 
 
@@ -872,7 +872,7 @@ Last updated: _2026-10-24_
 
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
 
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v57.7`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v57.8`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 
