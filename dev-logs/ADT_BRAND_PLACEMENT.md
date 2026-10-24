@@ -36,3 +36,7 @@ uv run --with playwright python scripts/generate_og_cards.py --card master --ras
 This produces `assets/images/og/og-master.svg`, its 1200 by 630-pixel PNG, and `assets/images/branding/adt-maskable.svg` with its 512-pixel PNG. The maskable composition places the entire 288-pixel square mark within the central 80-percent safe circle. Page metadata references the PNG for social-platform compatibility. Keep the manifest, Apple touch icons, static favicons, and service-worker asset list aligned when replacing these exports.
 
 Tracked in #34; homepage portrait tracked in #33.
+
+## Verification
+
+Local checks for v57 passed all 26 repository categories, 13 Python regression tests, 22 JavaScript tests, and 42 HTTP smoke checks. Chromium checks covered all ten pages at 320 and 1280 CSS pixels in dark and light themes; the six accent controls; the access modal; the seven-image gallery; and a 640-pixel layout representing 200-percent zoom on a 1280-pixel viewport. The portrait remained unchanged during theme/accent changes. The generated social and maskable PNGs were rendered from their SVG sources with Chromium and visually inspected.
