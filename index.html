@@ -1,1712 +1,3900 @@
 <!doctype html>
+
 <html lang="en">
 
+
+
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
   <meta name="referrer" content="strict-origin-when-cross-origin" />
+
   <meta http-equiv="Content-Security-Policy"
+
     content="default-src 'self'; script-src 'self' 'unsafe-inline' https://accounts.google.com https://www.googletagmanager.com https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: https: blob:; connect-src 'self' https://formspree.io https://api.emailjs.com https://www.google-analytics.com https://analytics.google.com https://accounts.google.com https://docs.google.com; frame-src 'self' https://accounts.google.com https://calendar.google.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io https://docs.google.com;" />
 
+
+
   <!-- Speculative Rules API — Progressive enhancement for Chromium 121+ -->
+
   <script>
+
     if (typeof HTMLScriptElement !== 'undefined' && HTMLScriptElement.supports && HTMLScriptElement.supports('speculationrules')) {
+
       var specScript = document.createElement('script');
+
       specScript.type = 'speculationrules';
+
       specScript.textContent = JSON.stringify({
+
         prerender: [
+
           {
+
             source: 'list',
+
             urls: ['index.html', 'projects.html', 'experience.html', 'achievements.html', 'about.html', 'journey.html', 'contact.html'],
+
             eagerness: 'moderate'
+
           }
+
         ]
+
       });
+
       document.head.appendChild(specScript);
+
     }
+
   </script>
+
+
 
   <!-- Primary SEO -->
+
   <title>
+
     ADT | Aaradhya Dev Tamrakar — AI/ML Engineering &amp; AI Workflows
+
   </title>
+
   <meta name="description"
+
     content="Aaradhya Dev Tamrakar — electronics engineering student building applied ML systems, embedded AI, and efficient AI workflows. Seeking AI/ML engineering opportunities." />
+
   <meta name="author" content="Aaradhya Dev Tamrakar" />
+
   <meta name="keywords"
+
     content="Aaradhya, ADT, Aaradhya Dev Tamrakar, Aaradhya Dev, Aaradhya Tamrakar, Aaradhya D. Tamrakar, A. D. Tamrakar, A. Dev Tamrakar, AaradhyaDT, aaradhyadevtamrakar, Aaradhya Nepal, Aaradhya engineer, electronics engineer, AI ML, embedded systems, robotics, KEC IOE, Fusemachines" />
+
   <!--
+
     theme-color injected by script (not static HTML) so Edge Tools
+
     doesn't flag the Firefox-unsupported meta tag as a warning.
+
     Works in Chrome/Edge; Firefox never supported it → no-op there.
+
   -->
+
   <script>
+
     (function () {
+
       var d = document.createElement('meta');
+
       d.name = 'theme-color';
+
       d.content = '#0f0e0c';
+
       d.media = '(prefers-color-scheme: dark)';
+
       document.head.appendChild(d);
+
       var l = document.createElement('meta');
+
       l.name = 'theme-color';
+
       l.content = '#f5f2ec';
+
       l.media = '(prefers-color-scheme: light)';
+
       document.head.appendChild(l);
+
     })();
+
   </script>
+
   <link rel="canonical" href="https://aaradhyadt.github.io/" />
 
+
+
   <!-- Open Graph -->
+
   <meta property="og:type" content="website" />
+
   <meta property="og:url" content="https://aaradhyadt.github.io/" />
+
   <meta property="og:title" content="ADT | Aaradhya Dev Tamrakar — AI/ML Engineering &amp; AI Workflows" />
+
   <meta property="og:description"
+
     content="Aaradhya Dev Tamrakar — electronics engineering student building applied ML systems, embedded AI, and efficient AI workflows. Seeking AI/ML engineering opportunities." />
+
   <meta property="og:image" content="https://aaradhyadt.github.io/assets/images/og/og-master.png" />
+
   <meta property="og:image:type" content="image/png" />
+
   <meta property="og:image:alt" content="Aaradhya Dev Tamrakar - portrait, name, and ADT signature" />
+
   <meta name="twitter:image:alt" content="Aaradhya Dev Tamrakar - portrait, name, and ADT signature" />
+
   <meta property="og:image:width" content="1200" />
+
   <meta property="og:image:height" content="630" />
+
   <meta property="og:locale" content="en_US" />
+
   <meta property="og:site_name" content="Aaradhya Dev Tamrakar" />
 
+
+
   <!-- Twitter / X -->
+
   <meta name="twitter:card" content="summary_large_image" />
+
   <meta name="twitter:site" content="@AaradhyaDT" />
+
   <meta name="twitter:creator" content="@AaradhyaDT" />
+
   <meta name="twitter:title" content="ADT | Aaradhya Dev Tamrakar — AI/ML Engineering &amp; AI Workflows" />
+
   <meta name="twitter:description"
+
     content="Aaradhya Dev Tamrakar — electronics engineering student building applied ML systems, embedded AI, and efficient AI workflows. Seeking AI/ML engineering opportunities." />
+
   <meta property="twitter:image" content="https://aaradhyadt.github.io/assets/images/og/og-master.png" />
 
+
+
   <!-- JSON-LD: Person & WebSite -->
+
   <script type="application/ld+json">
+
       {
+
         "@context": "https://schema.org",
+
         "@type": "Person",
+
         "@id": "https://aaradhyadt.github.io/#person",
+
         "name": "Aaradhya Dev Tamrakar",
+
         "alternateName": [
+
           "Aaradhya",
+
           "ADT",
+
           "A.D.T",
+
           "Aaradhya Dev",
+
           "Aaradhya Tamrakar",
+
           "Aaradhya Dev Tamrakar",
+
           "Aaradhya D. Tamrakar",
+
           "A. D. Tamrakar",
+
           "A. Dev Tamrakar",
+
           "AaradhyaDT",
+
           "aaradhyadevtamrakar"
+
         ],
+
         "url": "https://aaradhyadt.github.io/",
+
         "image": "https://aaradhyadt.github.io/assets/images/photo.png",
+
         "jobTitle": "Electronics Engineering Student | Applied ML & AI Workflows",
+
         "description": "Aaradhya Dev Tamrakar \u2014 electronics engineering student building applied ML systems, embedded AI, and efficient AI workflows. Seeking AI/ML engineering opportunities.",
+
         "email": "aaradhyadevtmr@gmail.com",
+
         "nationality": {
+
           "@type": "Country",
+
           "name": "Nepal"
+
         },
+
         "knowsLanguage": ["en", "ne"],
+
         "knowsAbout": [
+
           "Intelligent Systems",
+
           "AI Systems Engineering",
+
           "Embedded Edge AI",
+
           "Near-Memory Computing",
+
           "Operating Systems & Kernel Optimization",
+
           "Deterministic Systems Verification",
+
           "Robotics",
+
           "Machine Learning",
+
           "FastAPI",
+
           "Embedded Systems"
+
         ],
+
         "speakable": {
+
           "@type": "SpeakableSpecification",
+
           "cssSelector": [".hero-desc", ".hero-name"]
+
         },
+
         "alumniOf": {
+
           "@type": "EducationalOrganization",
+
           "name": "Kathmandu Engineering College, IOE, Tribhuvan University"
+
         },
+
         "hasCredential": [
+
           {
+
             "@type": "EducationalOccupationalCredential",
+
             "name": "Fuse AI Fellow",
+
             "credentialCategory": "Fellowship",
+
             "recognizedBy": {
+
               "@type": "Organization",
+
               "name": "Fusemachines"
+
             }
+
           },
+
           {
+
             "@type": "EducationalOccupationalCredential",
+
             "name": "NSSR DataCamp Fellow",
+
             "credentialCategory": "Fellowship",
+
             "recognizedBy": {
+
               "@type": "Organization",
+
               "name": "DataCamp"
+
             }
+
           }
+
         ],
+
         "memberOf": [
+
           {
+
             "@type": "Organization",
+
             "name": "IEEE Kathmandu Engineering College Student Branch",
+
             "member": {
+
               "@type": "OrganizationRole",
+
               "roleName": "Vice Chair"
+
             }
+
           }
+
         ],
+
         "sameAs": [
+
           "https://www.linkedin.com/in/aaradhya-dev-tamrakar",
+
           "https://github.com/AaradhyaDT",
+
           "https://github.com/Aaradhya-Dev-Tamrakar",
+
           "https://x.com/AaradhyaDT",
+
           "https://instagram.com/aaradhya_dev_tamrakar"
+
         ]
+
       }
+
     </script>
+
   <script type="application/ld+json">
+
       {
+
         "@context": "https://schema.org",
+
         "@type": "WebSite",
+
         "@id": "https://aaradhyadt.github.io/#website",
+
         "name": "ADT — Aaradhya Dev Tamrakar",
+
         "alternateName": [
+
           "Aaradhya",
+
           "ADT",
+
           "Aaradhya Portfolio",
+
           "Aaradhya Dev Tamrakar Portfolio",
+
           "Aaradhya Dev Tamrakar Website",
+
           "Aaradhya Website",
+
           "ADT Portfolio",
+
           "ADT Website"
+
         ],
+
         "url": "https://aaradhyadt.github.io/",
+
         "author": {
+
           "@id": "https://aaradhyadt.github.io/#person"
+
         }
+
       }
+
     </script>
+
+
 
   <!-- Favicon & Touch Icons -->
+
   <link rel="manifest" href="site.webmanifest" />
+
   <link rel="apple-touch-icon" href="assets/images/branding/adt-gold-icon-192.png" />
+
   <link rel="icon" type="image/png" href="assets/images/branding/adt-gold-favicon.png" />
 
+
+
   <!-- Resource preloads -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
+
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
   <link rel="preload" as="style"
+
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" />
+
   <link rel="preload" href="assets/css/modules/tokens.css" as="style" />
+
   <link rel="preload" href="assets/css/modules/base.css" as="style" />
+
   <link rel="preload" href="assets/js/modules/core.js" as="script" />
+
   <link rel="preload" href="assets/js/modules/ui.js" as="script" />
+
   <link rel="preload" href="assets/js/script.js" as="script" />
 
+
+
   <!-- Fonts — non-blocking -->
+
   <link rel="stylesheet" media="print" onload="this.media='all'"
+
     href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" />
+
   <noscript>
+
     <link rel="stylesheet"
+
       href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" />
+
   </noscript>
 
+
+
   <!-- Critical CSS modules — loaded in parallel (eliminates @import waterfall) -->
+
   <link rel="stylesheet" href="assets/css/modules/tokens.css" />
+
   <link rel="stylesheet" href="assets/css/modules/base.css" />
+
   <link rel="stylesheet" href="assets/css/modules/layout.css" />
+
   <link rel="stylesheet" href="assets/css/modules/components.css" />
 
+
+
   <!-- Non-critical interactive CSS modules — deferred via print/onload swap -->
+
   <link rel="stylesheet" href="assets/css/modules/cmdk.css" media="print" onload="this.media='all'" />
+
   <link rel="stylesheet" href="assets/css/modules/access.css" media="print" onload="this.media='all'" />
+
   <link rel="stylesheet" href="assets/css/modules/terminal.css" media="print" onload="this.media='all'" />
+
   <link rel="stylesheet" href="assets/css/modules/tour.css" media="print" onload="this.media='all'" />
+
   <link rel="stylesheet" href="assets/css/modules/graph-modal.css" media="print" onload="this.media='all'" />
+
   <link rel="stylesheet" href="assets/css/modules/print.css" media="print" />
 
+
+
   <!-- Page-specific: hero, stats strip, quick-nav cards -->
+
   <style>
+
     html {
+
       background: var(--bg);
+
     }
+
+
 
     body {
+
       background: transparent;
+
     }
+
+
 
     #bg-canvas,
+
     #pcb-canvas {
+
       display: block;
+
     }
+
+
 
     /* ── Hero ─────────────────────────────────────────────── */
+
     #hero {
+
       min-height: 100dvh;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       padding: calc(var(--nav-h, 76px) + 1.25rem) var(--section-pad-x, 3rem) var(--section-separator-gap, 5.5rem);
+
       position: relative;
+
       overflow: clip;
+
       box-sizing: border-box;
+
     }
+
+
 
     .hero-content-row {
+
       display: grid;
+
       grid-template-columns: 1.15fr 0.85fr;
+
       align-items: center;
+
       gap: 3.5rem;
+
       width: 100%;
+
       max-width: 1240px;
+
       position: relative;
+
       z-index: 1;
+
       margin: auto 0;
+
     }
+
+
+
+    /* ── Hero Star Stage (Dynamic N-Sided Star Avatar) ── */
+
+    .hero-star-stage {
+
+      position: relative;
+
+      width: min(100%, 310px);
+
+      aspect-ratio: 1;
+
+      margin: 0 auto 1.5rem;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+
+    /* Invisible radial hover-bridge to prevent mouse leave between center and deployed tips */
+
+    .hero-star-stage::before {
+
+      content: "";
+
+      position: absolute;
+
+      inset: -15px;
+
+      border-radius: 50%;
+
+      pointer-events: auto;
+
+      z-index: 0;
+
+    }
+
+
+
+    /* ── SVG Star Backdrop ── */
+
+    .hero-star-svg {
+
+      position: absolute;
+
+      inset: 0;
+
+      width: 100%;
+
+      height: 100%;
+
+      z-index: 1;
+
+      pointer-events: none;
+
+      transform-origin: center center;
+
+      transform: scale(0.68) rotate(-18deg);
+
+      opacity: 0.18;
+
+      filter: drop-shadow(0 0 12px rgba(212, 168, 90, 0.15));
+
+      transition: transform 0.52s cubic-bezier(0.22, 1, 0.36, 1),
+
+                  opacity 0.4s ease,
+
+                  filter 0.4s ease;
+
+    }
+
+
+
+    .hero-star-polygon {
+
+      fill: rgba(212, 168, 90, 0.04);
+
+      stroke: var(--accent);
+
+      stroke-width: 1.5;
+
+      stroke-linejoin: round;
+
+      transition: stroke 0.3s ease, fill 0.3s ease;
+
+    }
+
+
+
+    /* ── Circular Core Portrait Stage ── */
 
     .hero-portrait-stage {
+
       position: relative;
-      width: min(100%, 260px);
-      aspect-ratio: 1;
+
+      width: 196px;
+
+      height: 196px;
+
       box-sizing: border-box;
-      padding: 6px;
+
+      padding: 5px;
+
       border-radius: 50%;
+
       overflow: hidden;
+
       border: 1px solid var(--accent);
+
       background: var(--bg2);
-      margin: 0 auto 1.75rem;
-      box-shadow: 0 6px 20px -6px rgba(0, 0, 0, 0.3);
+
+      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.45);
+
+      z-index: 2;
+
+      cursor: pointer;
+
+      transition: transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+
+                  border-color 0.35s ease,
+
+                  box-shadow 0.35s ease;
+
     }
+
+
 
     .hero-portrait-img {
+
       width: 100%;
+
       height: 100%;
+
       display: block;
+
       border-radius: 50%;
+
       object-fit: cover;
+
       object-position: center top;
+
     }
+
+
+
+    /* ── Affiliation Logo Badges Container ── */
+
+    .hero-star-badges {
+
+      position: absolute;
+
+      inset: 0;
+
+      pointer-events: none;
+
+      z-index: 3;
+
+    }
+
+
+
+    /* Individual Star Badge */
+
+    .star-badge {
+
+      position: absolute;
+
+      top: 50%;
+
+      left: 50%;
+
+      width: 40px;
+
+      height: 40px;
+
+      border-radius: 50%;
+
+      box-sizing: border-box;
+
+      background: var(--surface-2, rgba(28, 36, 50, 0.9));
+
+      border: 1px solid rgba(255, 255, 255, 0.16);
+
+      backdrop-filter: blur(8px);
+
+      -webkit-backdrop-filter: blur(8px);
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+
+      text-decoration: none;
+
+      pointer-events: none;
+
+      opacity: 0;
+
+      transform: translate(-50%, -50%) scale(0.35);
+
+      transition: transform 0.48s cubic-bezier(0.22, 1, 0.36, 1),
+
+                  opacity 0.32s ease,
+
+                  border-color 0.25s ease,
+
+                  box-shadow 0.25s ease;
+
+      transition-delay: calc(var(--i, 0) * 25ms);
+
+    }
+
+
+
+    .star-badge-icon-wrap {
+
+      width: 24px;
+
+      height: 24px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+    }
+
+
+
+    .star-badge img {
+
+      max-width: 100%;
+
+      max-height: 100%;
+
+      object-fit: contain;
+
+      display: block;
+
+      filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+
+    }
+
+
+
+    /* Tooltip Pill */
+
+    .star-badge-tooltip {
+
+      position: absolute;
+
+      bottom: calc(100% + 7px);
+
+      left: 50%;
+
+      transform: translateX(-50%) translateY(4px);
+
+      padding: 3px 8px;
+
+      border-radius: 4px;
+
+      background: var(--bg2, #14171f);
+
+      color: var(--text-primary, #f3f4f6);
+
+      font-family: var(--mono);
+
+      font-size: 0.65rem;
+
+      letter-spacing: 0.05em;
+
+      white-space: nowrap;
+
+      pointer-events: none;
+
+      opacity: 0;
+
+      border: 1px solid var(--accent);
+
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+      transition: opacity 0.2s ease, transform 0.2s ease;
+
+      z-index: 10;
+
+    }
+
+
+
+    /* ── HOVER / FOCUS BLOOM ACTIVATION ── */
+
+    .hero-star-stage:hover .hero-star-svg,
+
+    .hero-star-stage:focus-within .hero-star-svg,
+
+    .hero-star-stage.is-expanded .hero-star-svg {
+
+      transform: scale(1) rotate(0deg);
+
+      opacity: 0.85;
+
+      filter: drop-shadow(0 0 16px rgba(212, 168, 90, 0.3));
+
+    }
+
+
+
+    .hero-star-stage:hover .hero-star-polygon,
+
+    .hero-star-stage:focus-within .hero-star-polygon,
+
+    .hero-star-stage.is-expanded .hero-star-polygon {
+
+      stroke: var(--accent);
+
+      fill: rgba(212, 168, 90, 0.08);
+
+    }
+
+
+
+    .hero-star-stage:hover .hero-portrait-stage,
+
+    .hero-star-stage:focus-within .hero-portrait-stage,
+
+    .hero-star-stage.is-expanded .hero-portrait-stage {
+
+      border-color: var(--accent);
+
+      box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.5), 0 0 20px -4px rgba(212, 168, 90, 0.25);
+
+    }
+
+
+
+    /* Deployed badges glide outward to star apexes */
+
+    .hero-star-stage:hover .star-badge,
+
+    .hero-star-stage:focus-within .star-badge,
+
+    .hero-star-stage.is-expanded .star-badge {
+
+      opacity: 1;
+
+      pointer-events: auto;
+
+      transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% + var(--dy, 0px))) scale(1);
+
+    }
+
+
+
+    /* Individual badge hover highlight */
+
+    .star-badge:hover,
+
+    .star-badge:focus-visible {
+
+      border-color: var(--accent);
+
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), 0 0 14px rgba(212, 168, 90, 0.45);
+
+      transform: translate(calc(-50% + var(--dx, 0px)), calc(-50% + var(--dy, 0px))) scale(1.18);
+
+      z-index: 5;
+
+    }
+
+
+
+    .star-badge:hover .star-badge-tooltip,
+
+    .star-badge:focus-visible .star-badge-tooltip {
+
+      opacity: 1;
+
+      transform: translateX(-50%) translateY(0);
+
+    }
+
+
+
+    /* Light Theme Harmonization */
+
+    html[data-theme="light"] .star-badge {
+
+      background: rgba(255, 255, 255, 0.95);
+
+      border-color: rgba(0, 0, 0, 0.12);
+
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    }
+
+
+
+    html[data-theme="light"] .star-badge-tooltip {
+
+      background: #ffffff;
+
+      color: #141518;
+
+      border-color: var(--accent);
+
+    }
+
+
+
+    @media (max-width: 480px) {
+
+      .hero-star-stage {
+
+        width: 280px;
+
+      }
+
+      .hero-portrait-stage {
+
+        width: 172px;
+
+        height: 172px;
+
+      }
+
+      .star-badge {
+
+        width: 36px;
+
+        height: 36px;
+
+      }
+
+    }
+
+
 
     @media (max-width: 960px) {
+
       .hero-content-row {
+
         grid-template-columns: 1fr;
+
         gap: 2.5rem;
+
       }
+
     }
+
+
 
     .hero-bg-lines {
+
       position: absolute;
+
       inset: -200px;
+
       pointer-events: none;
+
       z-index: 0;
+
       background:
+
         linear-gradient(90deg, var(--line) 1px, transparent 1px),
+
         linear-gradient(0deg, var(--line) 1px, transparent 1px);
+
       background-size: 80px 80px;
+
       -webkit-mask-image: radial-gradient(ellipse 120% 120% at 50% 50%, black 20%, transparent 75%);
+
       mask-image: radial-gradient(ellipse 120% 120% at 50% 50%, black 20%, transparent 75%);
+
     }
 
+
+
     .hero-glow {
+
       position: absolute;
+
       top: 20%;
+
       right: -10%;
+
       width: 600px;
+
       height: 600px;
+
       border-radius: 50%;
+
       background: radial-gradient(circle, var(--accent-a07) 0%, transparent 70%);
+
       pointer-events: none;
+
       z-index: 0;
+
       contain: paint;
+
       will-change: transform;
+
       animation: glow-drift 20s ease-in-out infinite;
+
     }
+
+
 
     @keyframes glow-drift {
 
+
+
       0%,
+
       100% {
+
         transform: translate(0, 0) scale(1);
+
       }
+
+
 
       33% {
+
         transform: translate(28px, -18px) scale(1.06);
+
       }
+
+
 
       66% {
+
         transform: translate(-18px, 12px) scale(.96);
+
       }
+
     }
+
+
 
     .hero-left {
+
       position: relative;
+
       z-index: 1;
+
       display: flex;
+
       flex-direction: column;
+
       justify-content: center;
+
     }
+
+
 
     .hero-tag {
+
       font-family: var(--mono);
+
       font-size: 0.68rem;
+
       font-weight: 700;
+
       letter-spacing: 0.15em;
+
       text-transform: uppercase;
+
       color: var(--accent);
+
       margin-bottom: 1.15rem;
+
       display: flex;
+
       align-items: center;
+
       gap: 0.75rem;
+
       opacity: 0;
+
       animation: fadeUp .8s .2s forwards;
+
     }
+
+
 
     .hero-tag::before {
+
       content: "";
+
       display: block;
+
       width: 32px;
+
       height: 1px;
+
       background: var(--accent);
+
     }
+
+
 
     .hero-name {
+
       font-family: var(--serif);
+
       font-size: clamp(2.8rem, 4.5vw, 4.8rem);
+
       font-weight: 300;
+
       line-height: 1.05;
+
       color: var(--heading);
+
       letter-spacing: -0.01em;
+
       opacity: 0;
+
       animation: fadeUp .9s .35s forwards;
+
     }
+
+
 
     .hero-name em {
+
       font-style: italic;
+
       color: var(--accent);
+
     }
+
+
 
     .hero-desc {
+
       margin-top: 1.25rem;
+
       font-size: 0.95rem;
+
       line-height: 1.75;
+
       color: var(--text);
+
       max-width: 500px;
+
       opacity: 0;
+
       animation: fadeUp .9s .5s forwards;
+
     }
+
+
 
     .hero-pills {
+
       margin-top: 1rem;
+
       display: flex;
+
       flex-wrap: wrap;
+
       gap: 0.55rem;
+
       max-width: 520px;
+
       opacity: 0;
+
       animation: fadeUp .9s .58s forwards;
+
     }
+
+
 
     .hero-pill {
+
       display: inline-flex;
+
       align-items: center;
+
       border: 1px solid rgba(255, 255, 255, 0.12);
+
       background: rgba(255, 255, 255, 0.02);
+
       color: var(--muted);
+
       border-radius: 999px;
+
       padding: 0.4rem 0.75rem;
+
       font-family: var(--mono);
+
       font-size: 0.62rem;
+
       letter-spacing: 0.12em;
+
       text-transform: uppercase;
+
       transition: border-color .2s ease, color .2s ease, transform .2s ease, box-shadow .2s ease;
+
     }
+
+
 
     .hero-pill:hover {
+
       color: var(--heading);
+
       border-color: var(--accent-a35);
+
       box-shadow: inset 0 0 0 1px rgba(255,255,255,0.02), 0 0 16px rgba(212,168,90,0.08);
+
       transform: translateY(-1px);
+
     }
+
+
 
     .hero-caption {
+
       margin-top: 0.75rem;
+
       font-family: var(--mono);
+
       font-size: clamp(0.72rem, 1.1vw, 0.82rem);
+
       font-style: italic;
+
       color: var(--muted, var(--text));
+
       white-space: nowrap;
+
       overflow: hidden;
+
       text-overflow: ellipsis;
+
       max-width: 100%;
+
       opacity: 0;
+
       animation: fadeUp .9s .62s forwards;
+
     }
+
+
 
     .hero-actions {
+
       margin-top: 1.75rem;
+
       display: flex;
+
       gap: 0.75rem;
+
       align-items: center;
+
       flex-wrap: wrap;
+
       opacity: 0;
+
       animation: fadeUp .9s .65s forwards;
+
     }
+
+
 
     .hero-right {
+
       position: relative;
+
       z-index: 1;
+
       opacity: 0;
+
       animation: fadeIn 1.2s .7s forwards;
+
     }
+
+
 
     @keyframes fadeUp {
+
       from {
+
         opacity: 0;
+
         transform: translateY(24px)
+
       }
 
+
+
       to {
+
         opacity: 1;
+
         transform: translateY(0)
+
       }
+
     }
+
+
 
     @keyframes fadeIn {
+
       from {
+
         opacity: 0
+
       }
+
+
 
       to {
+
         opacity: 1
+
       }
+
     }
+
+
 
     .status-card {
+
       border-radius: 8px;
+
       padding: 1.35rem 1.5rem;
+
       position: relative;
+
       background: var(--bg2);
+
       border: 1px solid rgba(255, 255, 255, .14);
+
       box-shadow: 0 16px 40px -16px rgba(0, 0, 0, .5);
+
       transition: box-shadow .35s ease, border-color .35s ease, transform .35s ease;
-      overflow: hidden;
+
+      overflow: visible;
+
     }
+
+
 
     .status-card::before {
+
       content: "";
+
       position: absolute;
+
       inset: 0;
+
+      border-radius: inherit;
+
       background: linear-gradient(135deg, rgba(212, 168, 90, 0.08), transparent 38%, rgba(0, 0, 0, 0));
+
       pointer-events: none;
+
     }
+
+
 
     .status-card:hover {
+
       box-shadow: 0 16px 40px -16px rgba(0, 0, 0, .5), 0 0 30px -8px var(--glow-gold-a30);
+
       transform: translateY(-2px);
+
     }
+
+
 
     .status-card .status-label,
+
     .status-card .status-items {
+
       position: relative;
+
       z-index: 3;
+
     }
+
+
 
     .status-label {
+
       font-family: var(--mono);
+
       font-size: 0.72rem;
+
       letter-spacing: 0.12em;
+
       text-transform: uppercase;
+
       margin-bottom: 1rem;
+
       display: flex;
+
       align-items: center;
+
       gap: 0.5rem;
+
       font-weight: 800;
+
       color: var(--accent2);
+
       text-shadow: 0 0 10px var(--glow-teal-a70);
+
       animation: label-glow 2.4s ease-in-out infinite;
+
       will-change: opacity;
+
     }
 
+
+
     html[data-theme="light"] .status-label {
+
       color: var(--accent2);
+
       text-shadow: none;
+
       animation: none;
+
     }
+
+
 
     @keyframes label-glow {
+
       0%, 100% {
+
         opacity: 0.88;
+
       }
+
       50% {
+
         opacity: 1;
+
       }
+
     }
+
+
 
     .status-clock {
+
       margin-left: auto;
+
       display: flex;
+
       flex-wrap: wrap;
+
       align-items: baseline;
+
       justify-content: flex-end;
+
       gap: 0.35rem;
+
       font-family: var(--mono);
+
       letter-spacing: 0.04em;
+
       text-transform: none;
+
       color: var(--heading);
+
       font-variant-numeric: tabular-nums;
+
       opacity: 0;
+
       animation: fadeIn .9s .8s forwards;
+
     }
+
+
 
     .status-clock #statusClockDate {
+
       font-size: 0.68rem;
+
       color: var(--muted);
+
       cursor: pointer;
+
       transition: color .2s ease;
+
     }
+
+
 
     .status-clock #statusClockDate:hover {
+
       color: var(--accent2);
+
     }
+
+
 
     .status-clock #statusClockTime {
+
       font-size: 0.78rem;
+
     }
+
+
 
     .status-clock-tz {
+
       font-size: 0.55rem;
+
       letter-spacing: 0.12em;
+
       color: var(--accent2);
+
     }
+
+
 
     .status-items {
+
       display: flex;
+
       flex-direction: column;
+
       gap: 0.65rem;
+
     }
+
+
 
     .status-item {
+
       display: flex;
+
       justify-content: space-between;
+
       align-items: flex-start;
+
       gap: 1rem;
+
       padding-bottom: 0.65rem;
+
       border-bottom: 1px solid var(--line);
+
     }
+
+
 
     .status-item:last-child {
+
       border-bottom: none;
+
       padding-bottom: 0;
+
     }
+
+
 
     .status-item-label {
+
       font-family: var(--mono);
+
       font-size: 0.62rem;
+
       letter-spacing: 0.1em;
+
       text-transform: uppercase;
+
       color: var(--text);
+
     }
+
+
 
     .status-item-value {
+
       font-family: var(--serif);
+
       font-size: 0.92rem;
+
       font-weight: 400;
+
       color: var(--heading);
+
       text-align: right;
+
       max-width: 210px;
+
       line-height: 1.35;
+
     }
+
+
 
     html[data-theme="light"] .status-card {
+
       background: #ffffff;
+
       border-color: rgba(0, 0, 0, 0.08);
+
       box-shadow: none;
+
     }
+
+
 
     html[data-theme="light"] .status-card:hover {
+
       box-shadow: none;
+
     }
+
+
 
     html[data-theme="light"] .status-label {
+
       color: var(--accent2);
+
       font-weight: 800;
+
     }
+
+
 
     html[data-theme="light"] .status-item-label {
+
       color: #383027;
+
       font-weight: 700;
+
     }
+
+
 
     html[data-theme="light"] .hero-tag {
+
       color: var(--accent);
+
       font-weight: 600;
+
     }
+
+
 
     html[data-theme="light"] .hero-tag::before {
+
       background: var(--accent);
+
     }
+
+
 
     html[data-theme="light"] .hero-desc {
+
       color: var(--text);
+
     }
+
+
 
     html[data-theme="light"] .status-clock-tz {
+
       color: var(--accent2);
+
     }
+
+
 
     /* ── Stats strip ──────────────────────────────────────── */
+
     #stats {
+
       padding: var(--section-separator-gap, 5.5rem) var(--section-pad-x, 3rem);
+
       background: transparent;
+
       position: relative;
+
     }
+
+
 
     #stats::before {
+
       content: "";
+
       position: absolute;
+
       inset: 0;
+
       z-index: 0;
+
       background: rgba(15, 14, 12, .65);
+
       pointer-events: none;
+
     }
+
+
 
     html[data-theme="light"] #stats::before {
+
       background: rgba(245, 242, 236, .78);
+
     }
+
+
 
     .stats-strip {
+
       position: relative;
+
       z-index: 1;
+
       display: grid;
+
       grid-template-columns: repeat(4, 1fr);
+
       border: 1px solid var(--line);
+
       border-radius: 4px;
+
       overflow: hidden;
+
     }
+
+
 
     .stat-cell {
+
       background: var(--bg2);
+
       padding: 2rem 1.5rem;
+
       text-align: center;
+
       border-right: 1px solid var(--line);
+
       transition: background .3s;
+
     }
+
+
 
     .stat-cell:last-child {
+
       border-right: none;
+
     }
+
+
 
     .stat-cell:hover {
+
       background: var(--bg3);
+
     }
+
+
 
     .stat-num {
+
       font-family: var(--serif);
+
       font-size: 2.6rem;
+
       font-weight: 300;
+
       color: var(--heading);
+
       line-height: 1;
+
     }
+
+
 
     .stat-num span {
+
       font-size: 1.3rem;
+
       color: var(--accent);
+
     }
+
+
 
     .stat-label {
+
       margin-top: 0.6rem;
+
       font-family: var(--mono);
+
       font-size: 0.62rem;
+
       letter-spacing: 0.1em;
+
       text-transform: uppercase;
+
       color: var(--muted);
+
     }
+
+
 
     /* ── Stats legend ─────────────────────────────────────── */
+
     .stats-legend {
+
       position: relative;
+
       z-index: 1;
+
       display: flex;
+
       flex-wrap: wrap;
+
       justify-content: center;
+
       gap: 1.25rem 2rem;
+
       margin-top: 1.5rem;
+
       padding: 0.75rem 1rem;
+
       border: 1px solid var(--line);
+
       border-radius: 4px;
+
       background: var(--bg2);
+
     }
+
+
 
     .stats-legend-item {
+
       display: flex;
+
       align-items: center;
+
       gap: 0.5rem;
+
       font-family: var(--mono);
+
       font-size: 0.62rem;
+
       letter-spacing: 0.08em;
+
       text-transform: uppercase;
+
       color: var(--muted);
+
       text-decoration: none;
+
       transition: color .2s ease, transform .15s ease;
+
     }
+
+
 
     .stats-legend-item:hover {
+
       color: var(--heading);
+
       transform: translateY(-1px);
+
     }
+
+
 
     .stats-legend-swatch {
+
       width: 10px;
+
       height: 10px;
+
       border-radius: 50%;
+
       flex-shrink: 0;
+
     }
+
+
 
     .stats-legend-swatch--projects {
+
       background: var(--accent);
+
       box-shadow: 0 0 6px var(--accent);
+
     }
+
+
 
     .stats-legend-swatch--academic {
+
       background: var(--glow-teal);
+
       box-shadow: 0 0 6px var(--glow-teal);
+
     }
+
+
 
     .stats-legend-swatch--fellowships {
+
       background: var(--glow-violet);
+
       box-shadow: 0 0 6px var(--glow-violet);
+
     }
+
+
 
     .stats-legend-swatch--roles {
+
       background: var(--glow-coral);
+
       box-shadow: 0 0 6px var(--glow-coral);
+
     }
+
+
 
     html[data-theme="light"] .stats-legend {
+
       background: #ffffff;
+
       border-color: rgba(0, 0, 0, 0.08);
+
     }
+
+
 
     html[data-theme="light"] .stats-legend-swatch {
+
       box-shadow: none;
+
     }
+
+
 
     html[data-theme="light"] .stats-legend-item:hover {
+
       color: #1f1b16;
+
     }
+
+
 
     /* ── Quick-nav cards: base styles in shared modules/layout.css.
+
        Padding values below are entangled with #stats in the same media
+
        queries, so they stay inline; #quick-nav's own numbers match
+
        layout.css exactly. ── */
 
+
+
     /* ── 16:10 & 16:9 Screen Layout Optimization ──────────────── */
+
     @media (min-width: 901px) and (max-height: 980px) {
+
       #hero {
+
         min-height: 0;
+
         padding-top: calc(var(--nav-h, 76px) + 0.75rem);
+
         padding-bottom: var(--section-separator-gap, 4.5rem);
+
         gap: 2.5rem;
+
       }
+
+
 
       .hero-tag {
+
         margin-bottom: 0.75rem;
+
       }
+
+
 
       .hero-desc {
+
         margin-top: 1rem;
+
         line-height: 1.6;
+
       }
+
+
 
       .hero-actions {
+
         margin-top: 1.5rem;
+
       }
+
+
 
       .status-card {
+
         padding: 1rem 1.25rem;
+
       }
 
+
+
       .status-label {
+
         margin-bottom: 0.75rem;
+
       }
+
+
 
       .status-items {
+
         gap: 0.5rem;
+
       }
+
+
 
       .status-item {
+
         padding-bottom: 0.5rem;
+
       }
+
+
 
       .status-item-value {
+
         font-size: 0.85rem;
+
       }
 
+
+
     }
+
+
 
     @media (max-width: 1100px) {
+
       #hero {
+
         gap: 2.5rem;
+
         padding: calc(var(--nav-h, 76px) + 1.5rem) var(--section-pad-x, 2rem) var(--section-separator-gap, 4.5rem);
+
       }
 
+
+
       #stats {
+
         padding: var(--section-separator-gap, 4.5rem) var(--section-pad-x, 2rem);
+
       }
+
     }
+
+
 
     @media (max-width: 900px) {
+
       #hero {
+
         grid-template-columns: 1fr;
+
         padding: 7rem var(--section-pad-x, 1.25rem) var(--section-separator-gap, 3.5rem);
+
         gap: 2.5rem;
+
       }
+
+
 
       .hero-left,
-      .hero-right {
-        min-width: 0;
-      }
 
       .hero-right {
-        order: 1;
+
+        min-width: 0;
+
       }
+
+
+
+      .hero-right {
+
+        order: 1;
+
+      }
+
+
 
       .hero-tag {
+
         overflow: hidden;
+
         text-overflow: ellipsis;
+
         white-space: nowrap;
+
         min-width: 0;
+
       }
 
+
+
       .hero-name {
+
         font-size: clamp(2.4rem, 9vw, 3.5rem);
+
       }
+
+
 
       .hero-desc {
+
         max-width: 100%;
+
       }
+
+
 
       .hero-caption {
+
         max-width: calc(100vw - 3rem);
+
         white-space: normal;
+
         overflow: visible;
+
         text-overflow: clip;
+
         word-break: break-word;
+
         overflow-wrap: break-word;
+
       }
+
+
 
       .status-card {
+
         padding: 1.5rem;
+
       }
+
+
 
       .status-item-value {
+
         max-width: 55%;
+
         word-break: break-word;
+
         overflow-wrap: break-word;
+
       }
+
+
 
       #stats {
+
         padding: var(--section-separator-gap, 3.5rem) var(--section-pad-x, 1.25rem);
+
       }
 
+
+
       .stats-strip {
+
         grid-template-columns: repeat(2, 1fr);
+
       }
+
+
 
       .stat-cell:nth-child(2n) {
+
         border-right: none;
+
       }
+
+
 
       .stat-cell:nth-child(-n+2) {
+
         border-bottom: 1px solid var(--line);
+
       }
+
     }
+
+
 
     @media (max-width: 480px) {
+
       #hero {
+
         padding: calc(var(--nav-h, 60px) + 1.25rem) var(--section-pad-x, 0.85rem) var(--section-separator-gap, 2.75rem);
+
         gap: 1.75rem;
+
       }
+
+
 
       .hero-tag {
+
         font-size: 0.58rem;
+
         max-width: calc(100vw - 1.7rem);
+
       }
 
+
+
       .hero-name {
+
         font-size: clamp(2rem, 9vw, 2.6rem);
+
       }
+
+
 
       .hero-caption {
+
         max-width: calc(100vw - 1.7rem);
+
         white-space: normal;
+
         overflow: visible;
+
         text-overflow: clip;
+
         word-break: break-word;
+
         overflow-wrap: break-word;
+
         font-size: 0.82rem;
+
       }
+
+
 
       .hero-actions {
+
         flex-direction: column;
+
         align-items: stretch;
+
         gap: 0.6rem;
+
       }
+
+
 
       .hero-actions .btn {
+
         width: 100%;
+
         text-align: center;
+
       }
 
+
+
       .status-card {
+
         padding: 1.1rem 0.9rem;
+
       }
+
+
 
       .status-label {
+
         flex-wrap: wrap;
+
         row-gap: 0.35rem;
+
       }
+
+
 
       .status-clock {
+
         margin-left: 0;
+
         width: 100%;
+
       }
+
+
 
       .status-item-value {
+
         font-size: 0.82rem;
+
         max-width: 60%;
+
       }
 
+
+
       #stats {
+
         padding: var(--section-separator-gap, 2.75rem) var(--section-pad-x, 0.85rem);
+
       }
+
+
 
       .stats-strip {
+
         grid-template-columns: 1fr;
+
       }
+
+
 
       .stat-cell {
+
         border-right: none !important;
+
         border-bottom: 1px solid var(--line);
+
         padding: 1.25rem 0.75rem;
+
       }
+
+
 
       .stat-cell:last-child {
+
         border-bottom: none;
+
       }
+
+
 
       .stat-num {
+
         font-size: 2rem;
+
       }
+
     }
+
+
 
     @media (max-width: 360px) {
+
       #hero {
+
         padding: calc(var(--nav-h, 56px) + 1rem) var(--section-pad-x, 0.65rem) var(--section-separator-gap, 2.25rem);
+
       }
+
+
 
       .hero-name {
+
         font-size: 1.85rem;
+
       }
+
+
 
       .status-card {
+
         padding: 0.9rem 0.75rem;
+
       }
 
+
+
       #stats {
+
         padding: var(--section-separator-gap, 2.25rem) var(--section-pad-x, 0.65rem);
+
       }
+
     }
+
+
 
     @media (prefers-reduced-motion: reduce) {
 
+
+
       .hero-tag,
+
       .hero-name,
+
       .hero-desc,
+
       .hero-actions,
+
       .hero-right {
+
         opacity: 1 !important;
+
         transform: none !important;
+
         animation: none !important;
+
       }
+
+
 
       .hero-glow {
+
         animation: none !important;
+
       }
 
+
+
       .status-clock {
+
         opacity: 1 !important;
+
         animation: none !important;
+
       }
+
     }
+
+
 
     /* CV lightbox: page-specific 80vh body sizing (vs default in modules/components.css) */
 
+
+
     .lightbox-body {
+
       flex: 1;
+
       overflow: auto;
+
       display: flex;
+
       align-items: center;
+
       justify-content: center;
+
       min-height: 80vh;
+
     }
+
+
 
     .lightbox-body iframe {
+
       width: 100%;
+
       height: 80vh;
+
       border: none;
+
       display: block;
+
     }
+
+
 
     .lightbox-body img {
+
       width: 100%;
+
       max-height: 80vh;
+
       border: none;
+
       display: block;
+
       object-fit: contain;
+
     }
+
   </style>
+
 </head>
 
+
+
 <body>
+
   <div id="readProgressBar" aria-hidden="true"></div>
+
   <a href="#main-content" class="skip-link">Skip to main content</a>
 
+
+
   <div class="scroll-progress" id="scrollProgress"></div>
+
   <canvas id="bg-canvas"></canvas>
+
   <canvas id="pcb-canvas"></canvas>
 
+
+
   <div class="cursor" id="cursor">
+
     <div class="cursor-ring" id="cursorRing"></div>
+
     <div class="cursor-dot" id="cursorDot"></div>
+
   </div>
+
+
 
   <noscript>
+
     <nav aria-label="Primary navigation"><a href="index.html" class="nav-logo">ADT<span>.</span></a>
+
       <ul class="nav-links">
+
         <li><a href="index.html" class="active" aria-current="page">Home</a></li>
+
         <li><a href="projects.html">Projects</a></li>
+
         <li><a href="experience.html">Experience</a></li>
+
         <li><a href="achievements.html">Achievements</a></li>
+
         <li><a href="about.html">About</a></li>
+
         <li><a href="journey.html">Journey</a></li>
+
       </ul>
+
       <div class="nav-right"><a href="contact.html" class="nav-cta">Connect</a></div>
+
     </nav>
+
   </noscript>
+
   <div id="siteNav"></div>
 
+
+
   <main id="main-content">
+
     <section id="hero" aria-label="Introduction">
+
       <div class="hero-bg-lines"></div>
+
       <div class="hero-glow"></div>
 
+
+
       <div class="hero-content-row">
+
         <div class="hero-left">
+
           <div class="hero-tag" id="live-hero-tag">Electronics student · Kathmandu</div>
+
           <h1 class="hero-name">Aaradhya Dev<br /><em>Tamrakar</em></h1>
+
           <p class="hero-desc">
+
             <strong style="color:var(--text);font-weight:600;display:block;margin-bottom:0.35rem;letter-spacing:-0.01em;">Building ML systems and efficient AI workflows.</strong>
+
             I build model-evaluation pipelines, AI workflow tools, and embedded ML software.
+
             I use AI to accelerate development, then turn recurring work into reusable tools
+
             and deterministic checks — reducing the need to solve the same task in another prompt.
+
           </p>
+
           <p class="hero-desc">Seeking AI/ML engineering opportunities.</p>
+
           <div class="hero-pills" aria-label="Core focus areas">
+
             <span class="hero-pill">Edge AI</span>
+
             <span class="hero-pill">AI Workflow Automation</span>
+
             <span class="hero-pill">Algorithmic Fairness</span>
+
             <span class="hero-pill">Firmware</span>
+
             <span class="hero-pill">Model Evaluation</span>
+
           </div>
+
           <p class="hero-caption">Fuse AI Fellow · IEEE KEC KTM Vice Chair</p>
+
           <div class="hero-actions">
+
             <div class="magnetic-wrap">
+
               <a href="#work" class="btn-primary" aria-label="View Aaradhya's work">Selected Work ↓</a>
+
             </div>
+
             <div class="magnetic-wrap">
+
               <a href="contact.html" class="btn-ghost" aria-label="Get in touch with Aaradhya">Get in touch →</a>
+
             </div>
+
             <div class="magnetic-wrap">
+
               <a href="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" class="cert-btn btn-ghost" download
+
                 data-cert="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" data-label="Aaradhya Dev Tamrakar CV" data-type="pdf"
+
                 aria-label="View Aaradhya's CV"
+
                 onclick="window.gtag && gtag('event','cv_download',{event_category:'engagement',event_label:'Hero CV button'})">
+
                 Download CV ↓
+
               </a>
+
             </div>
+
           </div>
+
         </div>
+
         <div class="hero-right">
+
           <div class="status-card card-gradient-border">
-            <div class="hero-portrait-stage">
-              <img src="assets/images/photo.webp" alt="Aaradhya Dev Tamrakar" class="hero-portrait-img" width="768" height="1024" fetchpriority="high" loading="eager" />
+
+            <div class="hero-star-stage" id="heroStarStage" role="region" aria-label="Aaradhya Dev Tamrakar portrait and key affiliations">
+
+              <svg class="hero-star-svg" id="heroStarSvg" viewBox="0 0 320 320" aria-hidden="true" focusable="false">
+
+                <polygon class="hero-star-polygon" id="heroStarPolygon"
+
+                  points="160,24 200,105 289,118 225,181 240,270 160,228 80,270 95,181 31,118 120,105" />
+
+              </svg>
+
+              <div class="hero-portrait-stage" id="heroPortraitStage" tabindex="0" role="button" aria-expanded="false" aria-label="Aaradhya Dev Tamrakar portrait - click to toggle affiliations view">
+
+                <img src="assets/images/photo.webp" alt="Aaradhya Dev Tamrakar" class="hero-portrait-img" width="768" height="1024" fetchpriority="high" loading="eager" />
+
+              </div>
+
+              <div class="hero-star-badges" id="heroStarBadges">
+
+                <a href="experience.html#exp-fuse" class="star-badge" style="--dx: 0px; --dy: -126px; --i: 0;" aria-label="Fusemachines — Fuse AI Fellow">
+
+                  <span class="star-badge-icon-wrap">
+
+                    <img src="assets/images/logos/fusemachines.webp" alt="" width="36" height="36" loading="lazy" decoding="async" />
+
+                  </span>
+
+                  <span class="star-badge-tooltip">Fuse AI Fellow</span>
+
+                </a>
+
+                <a href="experience.html#exp-ieee-vicechair" class="star-badge" style="--dx: 120px; --dy: -39px; --i: 1;" aria-label="IEEE KEC KTM Student Branch — Vice Chair">
+
+                  <span class="star-badge-icon-wrap">
+
+                    <img src="assets/images/logos/ieee-kec.webp" alt="" width="36" height="36" loading="lazy" decoding="async" />
+
+                  </span>
+
+                  <span class="star-badge-tooltip">IEEE Vice Chair</span>
+
+                </a>
+
+                <a href="experience.html#exp-nssr" class="star-badge" style="--dx: 74px; --dy: 102px; --i: 2;" aria-label="NSSR Nepal (DataCamp) — Fellow">
+
+                  <span class="star-badge-icon-wrap">
+
+                    <img src="assets/images/logos/nssr.webp" alt="" width="36" height="36" loading="lazy" decoding="async" />
+
+                  </span>
+
+                  <span class="star-badge-tooltip">NSSR Fellow</span>
+
+                </a>
+
+                <a href="experience.html#exp-makerspace" class="star-badge" style="--dx: -74px; --dy: 102px; --i: 3;" aria-label="KEC Makerspace — Lead">
+
+                  <span class="star-badge-icon-wrap">
+
+                    <img src="assets/images/logos/makerspace.webp" alt="" width="36" height="36" loading="lazy" decoding="async" />
+
+                  </span>
+
+                  <span class="star-badge-tooltip">Makerspace Lead</span>
+
+                </a>
+
+                <a href="experience.html#exp-epc" class="star-badge" style="--dx: -120px; --dy: -39px; --i: 4;" aria-label="Engineering Project Club — Event Manager">
+
+                  <span class="star-badge-icon-wrap">
+
+                    <img src="assets/images/logos/epc-club.webp" alt="" width="36" height="36" loading="lazy" decoding="async" />
+
+                  </span>
+
+                  <span class="star-badge-tooltip">EPC Event Mgr</span>
+
+                </a>
+
+              </div>
+
             </div>
+
             <div class="status-label">
+
               Profile at a glance
+
               <span class="status-clock" id="statusClock" aria-label="Current date and time in Kathmandu, Nepal">
+
                 <span id="statusClockDate">23 Oct 2026 AD</span><span id="statusClockTime">--:--:--</span><span
+
                   class="status-clock-tz">NPT</span>
+
               </span>
+
             </div>
+
             <div class="status-items">
+
               <div class="status-item">
+
                 <span class="status-item-label">Focus</span>
+
                 <span class="status-item-value" id="live-focus">ML evaluation · Embedded AI · Developer automation</span>
+
               </div>
+
               <div class="status-item">
+
                 <span class="status-item-label">Background</span>
+
                 <span class="status-item-value">IEEE KEC KTM Vice Chair · EPC Event Mgr · Makerspace Ambassador</span>
+
               </div>
+
               <div class="status-item">
+
                 <span class="status-item-label">Fellowship</span>
+
                 <span class="status-item-value" id="live-fellowship">Fuse AI Fellow · NSSR DataCamp (C2) — SQL Associate
+
                   next</span>
+
               </div>
+
               <div class="status-item">
+
                 <span class="status-item-label">Stack</span>
+
                 <span class="status-item-value">Python · scikit-learn · PyTorch · FastAPI · Docker · SQL · C/C++</span>
+
               </div>
+
               <div class="status-item">
+
                 <span class="status-item-label">Interests</span>
+
                 <span class="status-item-value">Applied ML · AI Workflows · Embedded Inference</span>
+
               </div>
+
               <div class="status-item">
+
                 <span class="status-item-label">Last Updated</span>
+
                 <span class="status-item-value" id="live-last-updated">Oct 23, 2026</span>
+
               </div>
+
             </div>
+
           </div>
+
         </div>
+
       </div>
+
   </section>
 
+
+
     <div class="divider-wrap" aria-hidden="true">
+
       <div class="divider-edge divider-edge--left"></div>
+
       <div class="divider"></div>
+
       <div class="divider-node"></div>
+
       <div class="divider"></div>
+
       <div class="divider-edge divider-edge--right"></div>
+
     </div>
+
+
 
     <section id="stats" class="cv-auto" aria-label="At a glance">
+
       <div class="stats-strip reveal">
+
         <div class="stat-cell">
+
           <div class="stat-num" data-count-target="30+">30<span>+</span></div>
+
           <div class="stat-label">Engineering Projects</div>
+
         </div>
+
         <div class="stat-cell">
+
           <div class="stat-num" data-count-target="4th">4<span>th</span></div>
+
           <div class="stat-label" id="live-stat-sem">Year at KEC, IOE</div>
+
         </div>
+
         <div class="stat-cell">
+
           <div class="stat-num" data-count-target="2">2</div>
+
           <div class="stat-label">Fellowships &amp; Grants</div>
+
         </div>
+
         <div class="stat-cell">
+
           <div class="stat-num" data-count-target="8">8</div>
+
           <div class="stat-label">Roles &amp; Contributions</div>
+
         </div>
+
       </div>
+
       <div class="stats-legend reveal" aria-label="Stats legend">
+
         <a href="projects.html" class="stats-legend-item">
+
           <span class="stats-legend-swatch stats-legend-swatch--projects" aria-hidden="true"></span>
+
           Projects → View All
+
         </a>
+
         <a href="about.html" class="stats-legend-item">
+
           <span class="stats-legend-swatch stats-legend-swatch--academic" aria-hidden="true"></span>
+
           Academic → About
+
         </a>
+
         <a href="experience.html" class="stats-legend-item">
+
           <span class="stats-legend-swatch stats-legend-swatch--fellowships" aria-hidden="true"></span>
+
           Fellowships → Experience
+
         </a>
+
         <a href="achievements.html" class="stats-legend-item">
+
           <span class="stats-legend-swatch stats-legend-swatch--roles" aria-hidden="true"></span>
+
           Roles → Achievements
+
         </a>
+
       </div>
+
     </section>
 
+
+
     <div class="divider-wrap" aria-hidden="true">
+
       <div class="divider-edge divider-edge--left"></div>
+
       <div class="divider"></div>
+
       <div class="divider-node"></div>
+
       <div class="divider"></div>
+
       <div class="divider-edge divider-edge--right"></div>
+
     </div>
+
+
 
     <section id="work" class="cv-auto" aria-label="Featured engineering work">
+
       <div class="section-header reveal">
+
         <div class="section-num">Work</div>
+
         <h2 class="section-title">Selected <em>Systems</em></h2>
+
       </div>
+
       <div class="featured-grid reveal">
+
         <a href="projects.html#p-025" class="featured-card">
+
           <div class="featured-card-inner">
+
             <span class="featured-index">01</span>
+
             <h3 class="featured-name">BiasAperture</h3>
+
             <p class="featured-desc">Demographic performance auditing for vision models. Fellowship capstone focused on model evaluation and reporting.</p>
+
             <p class="featured-context">Co-developed with Tisha Manandhar · Fellowship capstone</p>
+
             <div class="featured-tags">
+
               <span class="featured-tag">Fairness</span>
+
               <span class="featured-tag">Evaluation</span>
+
             </div>
+
             <span class="featured-status featured-status--active">In Progress</span>
+
           </div>
+
         </a>
+
         <a href="projects.html#p-040" class="featured-card">
+
           <div class="featured-card-inner">
+
             <span class="featured-index">02</span>
+
             <h3 class="featured-name">Fleet Orchestrator</h3>
+
             <p class="featured-desc">FastAPI coordination backend for multi-provider AI workflows, with quota-aware scheduling and MCP integration.</p>
+
             <p class="featured-context">Personal infrastructure · Task coordination and provider adapters</p>
+
             <div class="featured-tags">
+
               <span class="featured-tag">Multi-Agent</span>
+
               <span class="featured-tag">MCP</span>
+
             </div>
+
             <span class="featured-status featured-status--active">Active</span>
+
           </div>
+
         </a>
+
         <a href="projects.html#p-018" class="featured-card">
+
           <div class="featured-card-inner">
+
             <span class="featured-index">03</span>
+
             <h3 class="featured-name">SPARK</h3>
+
             <p class="featured-desc">Developing a fall-detection wearable with ESP32-S3 and TFLite Micro. Offline ML and gateway software in a four-person team.</p>
+
             <p class="featured-context">Project lead: ML and gateway work · Hardware validation pending</p>
+
             <div class="featured-tags">
+
               <span class="featured-tag">Edge AI</span>
+
               <span class="featured-tag">Embedded</span>
+
             </div>
+
             <span class="featured-status featured-status--active">In Progress</span>
+
           </div>
+
         </a>
+
         <a href="projects.html#p-041" class="featured-card">
+
           <div class="featured-card-inner">
+
             <span class="featured-index">04</span>
+
             <h3 class="featured-name">Agent-Customization-Sync</h3>
+
             <p class="featured-desc">Snapshot, restore, and audit agent rules and MCP settings across IDEs. Reusable tooling for recurring setup work.</p>
+
             <p class="featured-context">Personal tooling · Configuration drift and instruction overhead</p>
+
             <div class="featured-tags">
+
               <span class="featured-tag">AI Tooling</span>
+
               <span class="featured-tag">MCP</span>
+
             </div>
+
             <span class="featured-status featured-status--done">Shipped</span>
+
           </div>
+
         </a>
+
         <a href="projects.html#p-001" class="featured-card">
+
           <div class="featured-card-inner">
+
             <span class="featured-index">05</span>
+
             <h3 class="featured-name">GCSBR</h3>
+
             <p class="featured-desc">Gesture-controlled self-balancing robot combining MediaPipe hand tracking, Bluetooth communication, and PID control.</p>
+
             <p class="featured-context">Academic robotics · Watch the hardware demonstration</p>
+
             <div class="featured-tags">
+
               <span class="featured-tag">Robotics</span>
+
               <span class="featured-tag">PID</span>
+
             </div>
+
             <span class="featured-status featured-status--done">Completed</span>
+
           </div>
+
         </a>
+
         <a href="projects.html#p-023" class="featured-card">
+
           <div class="featured-card-inner">
+
             <span class="featured-index">06</span>
+
             <h3 class="featured-name">Claude Desktop DSP</h3>
+
             <p class="featured-desc">Multi-profile Claude Desktop tooling for organizing AI-assisted development environments and service configuration.</p>
+
             <p class="featured-context">Personal tooling · Desktop profiles and service provisioning</p>
+
             <div class="featured-tags">
+
               <span class="featured-tag">AI Infra</span>
+
               <span class="featured-tag">MCP</span>
+
             </div>
+
             <span class="featured-status featured-status--done">Shipped</span>
+
           </div>
+
         </a>
+
       </div>
+
       <div class="featured-archive-link reveal">
+
         <a href="projects.html" class="btn-ghost">View Full Project Archive (45 Systems) →</a>
+
       </div>
+
     </section>
 
+
+
     <div class="divider-wrap" aria-hidden="true">
+
       <div class="divider-edge divider-edge--left"></div>
+
       <div class="divider"></div>
+
       <div class="divider-node"></div>
+
       <div class="divider"></div>
+
       <div class="divider-edge divider-edge--right"></div>
+
     </div>
+
+
 
     <section id="opportunities" class="opportunity-note" aria-label="AI/ML engineering opportunities">
+
       <div class="section-num">Next</div>
+
       <h2 class="section-title">An ML problem to <em>work on?</em></h2>
+
       <p>I'm looking for AI/ML engineering opportunities involving evaluation, AI applications, or workflow infrastructure. Explore the case studies, review my CV, or tell me what your team is building.</p>
+
       <div class="hero-actions"><a href="contact.html" class="btn-primary">Discuss an opportunity →</a><a href="assets/docs/AARADHYA_DEV_TAMRAKAR_CV.pdf" class="btn-ghost" target="_blank" rel="noopener">View AI/ML CV ↗</a></div>
+
     </section>
+
     <section id="quick-nav" class="cv-auto" aria-label="Explore the site">
+
       <div class="section-header reveal">
+
         <div class="section-num">Explore</div>
+
         <h2 class="section-title">Where to <em>look next</em></h2>
+
       </div>
+
       <div class="quick-nav-grid reveal" id="quickNavGrid"></div>
+
     </section>
+
+
 
     <div class="divider-wrap" aria-hidden="true">
+
       <div class="divider-edge divider-edge--left"></div>
+
       <div class="divider"></div>
+
       <div class="divider-node"></div>
+
       <div class="divider"></div>
+
       <div class="divider-edge divider-edge--right"></div>
+
     </div>
+
+
 
         <section class="exploration-highlight" id="site-tools" aria-labelledby="site-tools-title">
+
       <div class="exploration-heading">
+
         <p class="exploration-eyebrow">Explore beyond the projects</p>
+
         <h2 id="site-tools-title">A closer look at <em>how I work.</em></h2>
+
         <p>Try the interactive tools, learn the shortcuts, or explore the research notes behind the work.</p>
+
       </div>
+
       <div class="exploration-links" role="tablist" aria-label="Explore tools and research">
+
         <a href="#terminal-section" class="exploration-link" role="tab" id="tab-terminal" aria-selected="false" aria-expanded="false" aria-controls="panel-terminal" data-target="panel-terminal">
+
           <span class="exploration-index">01 / INTERACT</span>
+
           <h3>Dev terminal <span class="exploration-arrow" aria-hidden="true">↗</span></h3>
+
           <p>Explore projects and skills through a command line built into this site.</p>
+
           <span class="exploration-action" data-default="Try a command" data-active="Hide section ↑">Try a command</span>
+
         </a>
+
         <a href="#keymap" class="exploration-link" role="tab" id="tab-keymap" aria-selected="false" aria-expanded="false" aria-controls="panel-keymap" data-target="panel-keymap">
+
           <span class="exploration-index">02 / NAVIGATE</span>
+
           <h3>Shortcuts &amp; controls <span class="exploration-arrow" aria-hidden="true">↗</span></h3>
+
           <p>Find the command palette, keyboard navigation, and display guide.</p>
+
           <span class="exploration-action" data-default="Find your shortcut" data-active="Hide section ↑">Find your shortcut</span>
+
         </a>
+
         <a href="#about-sign-in" class="exploration-link" role="tab" id="tab-research" aria-selected="false" aria-expanded="false" aria-controls="panel-research" data-target="panel-research">
+
           <span class="exploration-index">03 / GO DEEPER</span>
+
           <h3>Research &amp; specs <span class="exploration-arrow" aria-hidden="true">↗</span></h3>
+
           <p>Learn about optional sign-in and access to additional technical notes.</p>
+
           <span class="exploration-action" data-default="Explore research access" data-active="Hide section ↑">Explore research access</span>
+
         </a>
+
       </div>
+
     </section>
+
+
 
     <div class="exploration-panels-wrap" id="explorationPanelsWrap">
+
       <!-- 01 Dev Terminal Panel -->
+
       <div class="exploration-panel" id="panel-terminal" role="tabpanel" aria-labelledby="tab-terminal" hidden>
+
         <section id="terminal-section" class="terminal-section cv-auto" aria-label="Interactive Developer Terminal">
+
       <div class="section-header reveal">
+
         <div class="section-num">CLI</div>
+
         <h2 class="section-title">Interactive <em>Dev Terminal</em></h2>
+
       </div>
+
       <div class="terminal-card reveal" id="adtTerminal">
+
         <div class="terminal-header">
+
           <div class="terminal-dots">
+
             <span class="terminal-dot red"></span>
+
             <span class="terminal-dot yellow"></span>
+
             <span class="terminal-dot green"></span>
+
           </div>
+
           <span class="terminal-title">adt-shell — zsh — 80x24</span>
+
           <div></div>
+
         </div>
+
         <div class="terminal-quick-cmds">
+
           <button type="button" class="terminal-quick-cmd" data-cmd="help">help</button>
+
           <button type="button" class="terminal-quick-cmd" data-cmd="skills">skills</button>
+
           <button type="button" class="terminal-quick-cmd" data-cmd="projects">projects</button>
+
           <button type="button" class="terminal-quick-cmd" data-cmd="experience">experience</button>
+
           <button type="button" class="terminal-quick-cmd" data-cmd="achievements">achievements</button>
+
           <button type="button" class="terminal-quick-cmd" data-cmd="graph">graph</button>
+
           <button type="button" class="terminal-quick-cmd" data-cmd="whatsnew">whatsnew</button>
+
           <button type="button" class="terminal-quick-cmd" data-cmd="contact">contact</button>
+
           <button type="button" class="terminal-quick-cmd" data-cmd="matrix">matrix</button>
+
           <button type="button" class="terminal-quick-cmd" data-cmd="clear">clear</button>
+
         </div>
+
         <div class="terminal-body">
+
           <div class="term-line">
+
             <span class="term-green">Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal
-              (v57.1).</span><br />
+
+              (v57.2).</span><br />
+
             Type <span class="term-gold">'help'</span> or click the preset buttons above to explore.
+
           </div>
+
         </div>
+
         <div class="terminal-input-row">
+
           <span class="terminal-prompt-user"><span class="term-user">visitor@adt</span>:<span
+
               class="term-path">~</span>$</span>
+
           <input type="text" class="terminal-input" placeholder="Type a command (e.g. skills, projects, help)..."
+
             aria-label="Terminal command input" autocomplete="off" spellcheck="false" />
+
         </div>
+
       </div>
+
     </section>
+
         <div class="exploration-panel-footer">
+
           <button type="button" class="btn-ghost exploration-close-btn" data-close-target="panel-terminal">Hide section ↑</button>
+
         </div>
+
       </div>
+
+
 
       <!-- 02 Shortcuts & Controls Panel -->
+
       <div class="exploration-panel" id="panel-keymap" role="tabpanel" aria-labelledby="tab-keymap" hidden>
+
         <section id="keymap" class="cv-auto" aria-label="Keyboard shortcuts and display guidance">
+
       <div class="section-header reveal">
+
         <div class="section-num">Reference</div>
+
         <h2 class="section-title">Keymap &amp; <em>display guide</em></h2>
+
       </div>
+
       <div class="keymap-grid reveal">
+
         <div class="keymap-card">
+
           <div class="keymap-header">
+
             <h3 class="keymap-card-title">
+
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="16" height="16" aria-hidden="true">
+
                 <rect x="2" y="4" width="20" height="16" rx="2" ry="2"/>
+
                 <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M8 12h.001M12 12h.001M16 12h.001M18 12h.001M7 16h10"/>
+
               </svg>
+
               <span>Essential Controls &amp; Shortcuts</span>
+
             </h3>
+
             <div class="keymap-spec-badge" title="Tuned for 400 nits OLED displays">
+
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="13" height="13" aria-hidden="true">
+
                 <circle cx="12" cy="12" r="5"/>
+
                 <line x1="12" y1="1" x2="12" y2="3"/>
+
                 <line x1="12" y1="21" x2="12" y2="23"/>
+
                 <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+
                 <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+
                 <line x1="1" y1="12" x2="3" y2="12"/>
+
                 <line x1="21" y1="12" x2="23" y2="12"/>
+
                 <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+
                 <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+
               </svg>
+
               <span>400 nits OLED &middot; Light &ge;20% &middot; Dark &ge;50%</span>
+
             </div>
+
           </div>
+
+
 
           <div class="keymap-items">
+
             <div class="keymap-item">
+
               <div class="keymap-item-info">
+
                 <span class="keymap-item-title">Command Palette</span>
+
                 <span class="keymap-item-desc">Global search &amp; actions</span>
+
               </div>
+
               <div class="keymap-keys">
+
                 <kbd>/</kbd><span class="keymap-sep">or</span><kbd>Ctrl</kbd><span class="keymap-plus">+</span><kbd>K</kbd>
+
               </div>
+
             </div>
 
+
+
             <div class="keymap-item">
+
               <div class="keymap-item-info">
+
                 <span class="keymap-item-title">Shortcuts Cheat Sheet</span>
+
                 <span class="keymap-item-desc">Interactive visual HUD</span>
+
               </div>
+
               <div class="keymap-keys">
+
                 <kbd>?</kbd><span class="keymap-sep">or</span><kbd>Shift</kbd><span class="keymap-plus">+</span><kbd>/</kbd>
+
               </div>
+
             </div>
 
+
+
             <div class="keymap-item">
+
               <div class="keymap-item-info">
+
                 <span class="keymap-item-title">Toggle Color Mode</span>
+
                 <span class="keymap-item-desc">Dark and light contrast palettes</span>
+
               </div>
+
               <div class="keymap-keys">
+
                 <kbd>0</kbd>
+
               </div>
+
             </div>
 
+
+
             <div class="keymap-item">
+
               <div class="keymap-item-info">
+
                 <span class="keymap-item-title">Page Navigation</span>
+
                 <span class="keymap-item-desc">Jump to pages 1 (Home) &ndash; 7 (Connect)</span>
+
               </div>
+
               <div class="keymap-keys">
+
                 <kbd>1</kbd><span class="keymap-sep">&ndash;</span><kbd>7</kbd>
+
               </div>
+
             </div>
 
+
+
             <div class="keymap-item">
+
               <div class="keymap-item-info">
+
                 <span class="keymap-item-title">Guided Site Tour</span>
+
                 <span class="keymap-item-desc">Interactive spotlight walkthrough</span>
+
               </div>
+
               <div class="keymap-keys">
+
                 <kbd>Shift</kbd><span class="keymap-plus">+</span><kbd>T</kbd>
+
               </div>
+
             </div>
 
+
+
             <div class="keymap-item">
+
               <div class="keymap-item-info">
+
                 <span class="keymap-item-title">Universal Close</span>
+
                 <span class="keymap-item-desc">Dismiss any modal, palette, or drawer</span>
+
               </div>
+
               <div class="keymap-keys">
+
                 <kbd>Esc</kbd>
+
               </div>
+
             </div>
+
           </div>
+
+
 
           <div class="keymap-footer">
+
             <p class="keymap-note">Shortcuts automatically pause inside text fields. Both palettes tuned for low ambient contrast.</p>
+
             <button type="button" class="keymap-modal-btn" onclick="if(typeof openShortcutsModal==='function')openShortcutsModal();" aria-label="Open complete keyboard shortcuts HUD">
+
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="15" height="15" aria-hidden="true">
+
                 <rect x="2" y="4" width="20" height="16" rx="2" ry="2"/>
+
                 <path d="M6 8h.001M10 8h.001M14 8h.001M18 8h.001M8 12h.001M12 12h.001M16 12h.001M18 12h.001M7 16h10"/>
+
               </svg>
+
               <span>View All Shortcuts HUD</span>
+
               <kbd>?</kbd>
+
             </button>
+
           </div>
+
         </div>
+
       </div>
+
     </section>
+
         <div class="exploration-panel-footer">
+
           <button type="button" class="btn-ghost exploration-close-btn" data-close-target="panel-keymap">Hide section ↑</button>
+
         </div>
+
       </div>
+
+
 
       <!-- 03 Research & Specs Panel -->
+
       <div class="exploration-panel" id="panel-research" role="tabpanel" aria-labelledby="tab-research" hidden>
+
         <div class="access-tier-row">
+
       <section id="about-sign-in" aria-label="About Sign In With Google" class="access-tier-col">
+
         <div class="section-header reveal">
+
           <div class="section-num">Access</div>
+
           <h2 class="section-title">About <em>Sign in with Google</em></h2>
+
         </div>
+
         <div class="reveal access-card-inner">
+
           <svg viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="1.5" stroke-linecap="round"
+
             stroke-linejoin="round" class="about-signin-icon">
+
             <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+
             <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+
           </svg>
+
           <div class="about-signin-content">
+
             <p class="about-signin-lead">
+
               This site is my personal portfolio. <strong>Signing in with Google is
+
                 optional</strong> and only unlocks one extra content tier below — additional research notes and
+
               specs. It's never required to read anything else on the site.
+
             </p>
+
             <ul class="about-signin-list">
+
               <li>
+
                 Sign-in is handled <strong>entirely in your browser</strong> —
+
                 nothing is sent to a server.
+
               </li>
+
               <li>
+
                 Your name, email, and picture are used only to check which tier to show you, and stay on your
+
                 device.
+
               </li>
+
             </ul>
+
             <p class="about-signin-sub">
+
               See the <a href="privacy.html">Privacy Policy</a>
+
               for full details.
+
             </p>
+
             <p class="about-signin-note">
+
               I built this tier as a lightweight way to share deeper technical notes with recruiters and
+
               collaborators without publishing them to every visitor by default — sign-in is just the simplest
+
               gate for that, not an attempt to collect data.
+
             </p>
+
           </div>
+
         </div>
+
       </section>
+
+
 
       <!-- Higher Tier Access Gated Section -->
+
       <section id="vip-exclusive" aria-label="Exclusive Higher Tier Access" class="access-tier-col">
+
         <div class="section-header reveal">
+
           <div class="section-num">Access Tier</div>
+
           <h2 class="section-title">Additional <em>Research Notes</em> <span class="tier-badge tier-badge-vip">Shared Access</span></h2>
+
         </div>
+
         <div class="reveal access-card-inner" data-access-tier="vip" data-payload-id="index-vip">
+
         </div>
+
       </section>
+
     </div>
+
+
 
     <div class="divider-wrap" id="master-divider-1" aria-hidden="true">
+
       <div class="divider-edge divider-edge--left"></div>
+
       <div class="divider"></div>
+
       <div class="divider-node"></div>
+
       <div class="divider"></div>
+
       <div class="divider-edge divider-edge--right"></div>
+
     </div>
+
+
 
     <!-- Master Level Gated Section -->
+
     <section id="master-exclusive" aria-label="Master Level Diagnostic Console" class="master-exclusive-section">
+
       <div class="section-header reveal">
+
         <div class="section-num">Master Level</div>
+
         <h2 class="section-title">Diagnostic Console &amp; <em>Site Telemetry</em> <span
+
             class="tier-badge tier-badge-master">👑 Master Tier</span></h2>
+
       </div>
+
       <div class="reveal master-card-inner" data-access-tier="master" data-payload-id="index-master">
+
       </div>
+
     </section>
+
         <div class="exploration-panel-footer">
+
           <button type="button" class="btn-ghost exploration-close-btn" data-close-target="panel-research">Hide section ↑</button>
+
         </div>
+
       </div>
+
     </div>
+
   </main>
 
+
+
   <button class="back-top" id="backTop" aria-label="Back to top">
+
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+
       stroke-linejoin="round">
+
       <polyline points="18 15 12 9 6 15" />
+
     </svg>
+
   </button>
+
   <button class="back-top audio-toggle" id="audioToggle" aria-label="Toggle UI sound effects" aria-pressed="false" title="Toggle sound (Shift+A)">
+
     <svg class="audio-icon-on" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
       <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+
       <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+
       <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+
     </svg>
+
     <svg class="audio-icon-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+
       <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+
       <line x1="23" y1="9" x2="17" y2="15"/>
+
       <line x1="17" y1="9" x2="23" y2="15"/>
+
     </svg>
+
   </button>
+
   <div class="scroll-pct" id="scrollPct" aria-hidden="true">0%</div>
 
+
+
   <footer role="contentinfo">
+
     <noscript>
+
       <div class="footer-inner" style="padding: 1.5rem 2rem; border-top: 1px solid var(--line, #30363d); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; font-family: var(--sans, sans-serif); font-size: 0.85rem; color: var(--muted, #8b949e);">
+
         <div><strong>ADT.</strong> — Aaradhya Dev Tamrakar · Electronics &amp; AI/ML Engineer</div>
+
         <div>
+
           <a href="privacy.html" style="color: var(--accent, #58a6ff);">Privacy Policy</a> · <a href="terms.html" style="color: var(--accent, #58a6ff);">Terms of Service</a>
+
         </div>
+
       </div>
+
     </noscript>
+
     <div id="siteFooter"></div>
+
   </footer>
 
+
+
   <!-- CV lightbox -->
+
   <div id="cert-lightbox" role="dialog" aria-modal="true" aria-label="Curriculum vitae viewer">
+
     <div class="lightbox-inner">
+
       <div class="lightbox-bar">
+
         <span class="lightbox-label" id="lb-label">CV Preview</span>
+
         <div class="lightbox-actions">
+
           <a id="lb-download" class="lb-btn" title="Download CV" download>
+
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+
               stroke-linejoin="round">
+
               <path d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2" />
+
               <polyline points="7 10 12 15 17 10" />
+
               <line x1="12" y1="3" x2="12" y2="15" />
+
             </svg>
+
           </a>
+
           <a id="lb-open" class="lb-btn" title="Open in new tab" target="_blank" rel="noopener">
+
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+
               stroke-linejoin="round">
+
               <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6" />
+
               <polyline points="15 3 21 3 21 9" />
+
               <line x1="10" y1="14" x2="21" y2="3" />
+
             </svg>
+
           </a>
+
           <button id="lb-close" class="lb-btn lb-close" aria-label="Close CV viewer">
+
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+
               stroke-linejoin="round">
+
               <line x1="18" y1="6" x2="6" y2="18" />
+
               <line x1="6" y1="6" x2="18" y2="18" />
+
             </svg>
+
           </button>
+
         </div>
+
       </div>
+
       <div class="lightbox-body" id="lb-body"></div>
+
     </div>
+
   </div>
 
+
+
   <!-- Page-specific: background canvas animations (index.html only) -->
+
   <script src="assets/js/bg-animations.js" defer></script>
+
+
 
   <!-- Cert/CV lightbox logic lives in assets/js/script.js (initLightbox) -->
 
+
+
   <!-- Shared site script — must be last. Home-page widgets (Kathmandu
+
        clock, live dates, last-commit badge) live in
+
        assets/js/modules/home-widgets.js, loaded via its MODULES list. -->
+
   <script src="assets/js/script.js" defer></script>
+
 </body>
 
+
+
 </html>
+
