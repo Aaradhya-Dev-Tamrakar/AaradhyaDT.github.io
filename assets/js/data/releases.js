@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v57.6",
     date: "2026-10-24",
-    sha: "c0caaea3320acfcd9f904f89333300a29d131e7e",
-    title: "upgrade star backdrop to dual-ring interlocking Tang Lotus blades (#43) (#44)",
+    sha: "4c6067f0a73d3eca9a5ed5edd0255f2c11658902",
+    title: "synchronize per-petal lotus blade cascade with badge motion (#45) (#46)",
     highlights: []
   },
   {
