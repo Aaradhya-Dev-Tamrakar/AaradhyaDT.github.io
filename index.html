@@ -2811,6 +2811,29 @@
 
   </style>
 
+<style>
+    @media (min-width: 601px) and (max-width: 1024px) {
+      #hero .desktop-intro { display: none; }
+      #hero .tablet-intro { display: block; font-size: 1.05rem; line-height: 1.65; }
+      #hero .hero-content-row { gap: 1.5rem; }
+      #hero .hero-actions a { min-height: 44px; }
+    }
+    @media (max-width: 600px) {
+      #hero .desktop-intro { display: none; }
+      #hero .mobile-intro { display: block; font-size: 1rem; line-height: 1.65; }
+      #hero .hero-left { display: flex; flex-direction: column; }
+      #hero .hero-actions { order: 1; margin-top: 1rem; gap: 0.65rem; }
+      #hero .hero-pills { order: 2; margin-top: 1.25rem; gap: 0.5rem; }
+      #hero .hero-caption { order: 3; }
+      #hero .hero-tag { white-space: normal; flex-wrap: wrap; }
+      #hero .hero-actions a { min-height: 44px; display: inline-flex; align-items: center; }
+      #hero .mobile-intro a { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
+      #stats .stats-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      #stats .stat-cell { padding: 1rem 0.5rem; border-right: 0; }
+      #stats .stat-cell:nth-child(odd) { border-right: 1px solid var(--line); }
+      #stats .stat-cell:nth-last-child(-n+2) { border-bottom: 0; }
+    }
+</style>
 </head>
 
 
@@ -2892,7 +2915,10 @@
 
           <h1 class="hero-name">Aaradhya Dev<br /><em>Tamrakar</em></h1>
 
-          <p class="hero-desc">
+          <p class="hero-desc mobile-intro">I build ML tools, AI workflows, and embedded software. <a href="about.html">Full profile →</a></p>
+          <p class="hero-desc tablet-intro">I build model-evaluation pipelines, AI workflow tools, and embedded ML software, turning recurring work into reusable tools and deterministic checks. <a href="about.html">Full profile →</a></p>
+
+          <p class="hero-desc desktop-intro">
 
             <strong style="color:var(--text);font-weight:600;display:block;margin-bottom:0.35rem;letter-spacing:-0.01em;">Building ML systems and efficient AI workflows.</strong>
 
@@ -3587,7 +3613,7 @@
 
             <span class="term-green">Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal
 
-              (v58).</span><br />
+              (v58.1).</span><br />
 
             Type <span class="term-gold">'help'</span> or click the preset buttons above to explore.
 

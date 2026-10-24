@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: ui.js — aaradhyadt.github.io (v58)
+   MODULE: ui.js — aaradhyadt.github.io (v58.1)
    UI modals, count-up, skill radar, ATS resume, and overlays.
    ============================================================ */
 
@@ -1175,3 +1175,89 @@ window.shareContent = shareContent;
 window.initSkillRadar = initSkillRadar;
 window.openSkillRadarModal = openSkillRadarModal;
 window.closeSkillRadarModal = closeSkillRadarModal;
+
+/* Keep one set of project facts; disclose secondary reading on smaller screens. */
+function initResponsiveReading() {
+  function disclose(nodes, label, query, className = '') {
+    if (!nodes.length) return;
+    const markers = nodes.map(node => {
+      const marker = document.createComment('responsive reading position');
+      node.before(marker);
+      return marker;
+    });
+    const media = window.matchMedia(query);
+    let disclosure;
+    function update() {
+      if (media.matches && !disclosure) {
+        disclosure = document.createElement('details');
+        disclosure.className = `responsive-disclosure ${className}`;
+        const summary = document.createElement('summary');
+        summary.textContent = label;
+        disclosure.append(summary);
+        markers[0].after(disclosure);
+        let content = disclosure;
+        if (nodes.length > 1) {
+          content = document.createElement('div');
+          content.className = className === 'responsive-featured-more' ? 'featured-grid' : 'responsive-disclosure-content';
+          disclosure.append(content);
+        }
+        nodes.forEach(node => content.append(node));
+      } else if (!media.matches && disclosure) {
+        const focused = document.activeElement;
+        const summaryFocused = focused === disclosure.firstElementChild;
+        nodes.forEach((node, i) => markers[i].after(node));
+        disclosure.remove();
+        disclosure = null;
+        if (summaryFocused) {
+          const next = nodes[0].querySelector('a, button, summary, [tabindex="0"]');
+          next?.focus({ preventScroll: true });
+        } else if (nodes.some(node => node.contains(focused))) {
+          focused.focus({ preventScroll: true });
+        }
+      }
+    }
+    update();
+    media.addEventListener('change', update);
+  }
+  disclose([...document.querySelectorAll('#hero .hero-right')], 'Portrait and background', '(max-width: 600px)', 'responsive-profile');
+  disclose([...document.querySelectorAll('#hero .hero-pills')], 'Focus areas', '(max-width: 600px)', 'responsive-focus');
+  disclose([...document.querySelectorAll('#ecosystem-browser')], 'Explore project connections', '(max-width: 1024px)');
+  disclose([...document.querySelectorAll('#projects > .project-category-nav, #projects > .projects-header-bar')], 'Browse categories and filters', '(max-width: 600px)', 'responsive-browse');
+  disclose([...document.querySelectorAll('#site-tools')], 'Tools, shortcuts, and research notes', '(max-width: 600px)');
+  disclose([...document.querySelectorAll('#work > .featured-grid > .featured-card')].slice(3), 'Three more projects', '(max-width: 600px)', 'responsive-featured-more');
+  document.querySelectorAll('.project-card-body .project-story').forEach(story => {
+    const context = document.createElement('div');
+    context.className = 'project-compact-context';
+    // Retain authorship and maturity qualifications in the compact view.
+    const paragraphs = story.querySelectorAll(':scope > p');
+    [paragraphs[1], paragraphs[3]].filter(Boolean).forEach(p => context.append(p.cloneNode(true)));
+    story.before(context);
+    disclose([story], 'Full case study', '(max-width: 600px)');
+  });
+  function revealDestination() {
+    let id;
+    try { id = decodeURIComponent(location.hash.slice(1)); } catch { return; }
+    const target = document.getElementById(id);
+    let node = target;
+    let revealed = false;
+    while (node) {
+      if (node.matches('details.responsive-disclosure') && !node.open) {
+        node.open = true;
+        revealed = true;
+      }
+      node = node.parentElement;
+    }
+    if (revealed) requestAnimationFrame(() => target.scrollIntoView({ block: 'start' }));
+  }
+  revealDestination();
+  window.addEventListener('hashchange', revealDestination);
+}
+// Evidence lays out proof and narrative nodes during module initialization.
+// Apply disclosure after that layout so it cannot move a story out of its wrapper.
+if (window.__modulesLoadedPromise) {
+  window.__modulesLoadedPromise.then(initResponsiveReading);
+} else if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initResponsiveReading, { once: true });
+} else {
+  initResponsiveReading();
+}

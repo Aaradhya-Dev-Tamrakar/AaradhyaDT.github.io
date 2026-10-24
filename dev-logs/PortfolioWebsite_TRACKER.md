@@ -1,8 +1,12 @@
-# Portfolio Website Tracker — v58
+# Portfolio Website Tracker — v58.1
 
 
 
 Last updated: _2026-10-24_
+
+- **Mobile reading hierarchy (#35)**: Shorten the homepage introduction below 600px, place primary actions before focus tags, and retain the full profile destination. Add mobile problem summaries and disclosure labels to all 45 project cards; preserve their full narratives, evidence, links, and desktop presentation. Add a direct archive jump and 44px mobile navigation, filter, and project-link targets. Local validation: all 26 verification categories and 42 HTTP smoke checks passed; browser checks covered 320, 375, 390, 600, 768, and 1280px, keyboard disclosure, project deep links, and the mobile menu.
+
+- **Desktop, tablet, and mobile content (#35)**: Add a dedicated 601–1024px reading tier and two-column tablet featured work. Mobile uses curated summaries of at most 14 words, three initial featured projects, a compact stats grid, and native disclosures for background, focus areas, additional projects, browsing controls, and full case studies. Keep authorship and maturity qualifications visible in compact case studies. The full story remains the shared source for detailed copy; a deterministic summary renderer and four regression tests protect inventory, copy length, repeat generation, and evidence markup. Browser validation covers expansion by keyboard, filter state across resizing, restored desktop narratives, and overflow at 320–1280px. Changes are local pending publication.
 
 
 - **v58 (Major Release) — Public site packaging and repository cleanup.** Shipped public site packaging and repository cleanup.
@@ -884,7 +888,7 @@ eq$ server-side authorization*. Resolved stale reference to non-existent audit d
 
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
 
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.1`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 

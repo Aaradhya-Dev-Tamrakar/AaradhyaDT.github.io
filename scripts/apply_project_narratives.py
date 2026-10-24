@@ -33,7 +33,9 @@ def main():
         old.replace_with(story)
     assert invariants(soup)==before,'Project identity, links, tags, or proof markup changed'
     assert len(soup.select('.project-card .project-story'))==len(soup.select('details.project-card'))
-    path.write_text(str(soup),encoding='utf-8')
+    from apply_project_summaries import render_summaries
+    summaries=json.loads((ROOT/'data/project-summaries.json').read_text(encoding='utf-8'))
+    path.write_text(render_summaries(str(soup), summaries),encoding='utf-8')
     print(f'Updated {len(narratives)} descriptions; all project cards now have structured narratives.')
 
 

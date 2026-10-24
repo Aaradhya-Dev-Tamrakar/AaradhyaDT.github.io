@@ -1164,6 +1164,34 @@
     }
 
   </style>
+<style>
+    @media (min-width: 601px) and (max-width: 1024px) {
+      #page-header .page-sub { display: none; }
+      #page-header .mobile-intro { display: block; font-size: 1.05rem; line-height: 1.65; }
+      #page-header .mobile-archive-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
+      .project-summary .mobile-project-summary { display: block; font-size: 1rem; line-height: 1.65; margin: 0; }
+      .project-summary .mobile-project-hint { display: block; font-size: 0.85rem; color: var(--accent); }
+      details.project-card[open] .mobile-project-hint { display: none; }
+      .case-study-shortcuts { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .project-card .project-title { display: block; overflow: visible; font-size: 1.15rem; }
+      .project-card .project-link, .proj-filter-btn { min-height: 44px; }
+    }
+    @media (max-width: 600px) {
+      #page-header .page-sub { display: none; }
+      #page-header .mobile-intro { display: block; font-size: 1rem; line-height: 1.65; }
+      #page-header .mobile-archive-link { display: inline-flex; align-items: center; min-height: 44px; color: var(--accent); }
+      .project-summary .mobile-project-summary { display: block; color: var(--text-muted, var(--text)); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+      .project-summary .mobile-project-hint { display: block; color: var(--accent); font-size: 0.8rem; line-height: 1.5; }
+      details.project-card[open] .mobile-project-hint { display: none; }
+      .project-card .project-title { display: block; overflow: visible; font-size: 1.1rem; }
+      .project-card .project-desc { font-size: 1rem; line-height: 1.7; }
+      .project-card .project-summary { min-height: 44px; }
+      .project-card .project-link, .proj-filter-btn, .project-category-nav a { min-height: 44px; display: inline-flex; align-items: center; }
+      .projects-filter-bar { flex-wrap: wrap; }
+      .project-card-body { overflow-wrap: anywhere; }
+      #section-projects { scroll-margin-top: 6rem; }
+    }
+</style>
 </head>
 <body>
 <div aria-hidden="true" id="readProgressBar"></div>
@@ -1191,6 +1219,8 @@
 <header id="page-header">
 <div class="page-eyebrow">Selected Work</div>
 <h1 class="page-title">Engineering <em>Projects</em></h1>
+<p class="mobile-intro">ML, AI workflows, and embedded systems. Open a project for the full story, evidence, and links.</p>
+<a class="mobile-intro mobile-archive-link" href="#section-projects">Browse project details ↓</a>
 <p class="page-sub">Applied ML, AI workflow infrastructure, and embedded systems. Start with the selected case studies below; the full archive includes supporting tools and fellowship coursework.</p>
 <div aria-label="Project border color key" class="color-legend">
 <div class="color-legend-item">
@@ -1368,6 +1398,8 @@
 <summary class="project-summary">
 <div class="project-index">P — 032 <span class="project-status">Active Research</span></div>
 <h3 class="project-title">STRANGLER-IPU — Ingress Processing Unit Architecture</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Architecture research into reducing data near network ingress.</span><span class="tablet-copy">High-volume ingest can spend host memory bandwidth moving data that later processing discards.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1396,6 +1428,8 @@
 <summary class="project-summary">
 <div class="project-index">P — 025 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">BiasAperture — Vision Fairness &amp; Bias Audit</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Fellowship capstone for auditing demographic gaps in vision models.</span><span class="tablet-copy">Aggregate accuracy can hide demographic performance gaps in facial-analysis models.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> Aggregate accuracy can hide demographic performance gaps in facial-analysis models.</p>
@@ -1417,6 +1451,8 @@
 <summary class="project-summary">
 <div class="project-index">P — 018 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">SPARK — Two-Layer Fall Detection Wearable</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Fall-detection wearable under development in a four-person team.</span><span class="tablet-copy">Fall-detection systems need to connect sensor data, model decisions, and useful incident records under embedded resource constraints.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> Fall-detection systems need to connect sensor data, model decisions, and useful incident records under embedded resource constraints.</p>
@@ -1448,6 +1484,8 @@
 <summary class="project-summary">
 <div class="project-index">P — 001 <span class="project-date">2024</span></div>
 <h3 class="project-title">Gesture-Controlled Self-Balancing Robot</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Self-balancing robot controlled through hand gestures.</span><span class="tablet-copy">A two-wheeled robot must maintain balance while responding to remote commands.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> A two-wheeled robot must maintain balance while responding to remote commands.</p>
@@ -1483,6 +1521,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 012 <span class="project-status">Archived</span> <span class="project-date">Jun 2026</span></div>
 <h3 class="project-title">PrakopNet — Multi-Hazard Early Warning System</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Archived concept for a solar-powered hazard sensor network.</span><span class="tablet-copy">Remote hazard monitoring needs a way to collect sensor readings where power and connectivity are limited.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1510,6 +1550,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 007 <span class="project-date">May 2026</span></div>
 <h3 class="project-title">Edge AI Stability Detection System</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Stability classification using simulated IMU data.</span><span class="tablet-copy">A balancing platform needs to distinguish stable motion from conditions that require corrective action.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1539,6 +1581,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 013 <span class="project-date">Jun 2026</span></div>
 <h3 class="project-title">Antenna Lab Data Analysis</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Compare antenna radiation patterns from spreadsheet measurements.</span><span class="tablet-copy">Antenna measurements stored in spreadsheets need a common representation before radiation patterns can be compared.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1565,6 +1609,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 014 <span class="project-date">Jun 2026</span></div>
 <h3 class="project-title">Custom Processor FSM Design</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Model processor control through finite-state machines.</span><span class="tablet-copy">Arithmetic operations need a defined sequence of register transfers and control signals in a custom processor.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1592,6 +1638,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 040 <span class="project-date">Oct 2026</span></div>
 <h3 class="project-title">Fleet Orchestrator — AI Workflow Coordination</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Coordinate AI tasks, provider adapters, and failure handling.</span><span class="tablet-copy">Multi-step AI work needs task coordination, provider adapters, and failure handling beyond a sequence of chat prompts.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> Multi-step AI work needs task coordination, provider adapters, and failure handling beyond a sequence of chat prompts.</p>
@@ -1608,6 +1656,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 041 <span class="project-date">Oct 2026</span></div>
 <h3 class="project-title">Agent-Customization-Sync — Cross-IDE Configuration Snapshot &amp; Transpilation</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Snapshot and restore agent settings across IDEs.</span><span class="tablet-copy">Agent instructions and MCP configurations drift when the same development setup is maintained across multiple IDEs.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> Agent instructions and MCP configurations drift when the same development setup is maintained across multiple IDEs.</p>
@@ -1624,6 +1674,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 023 <span class="project-date">Jul–Sep 2026</span></div>
 <h3 class="project-title">Claude Desktop Multi-Profile &amp; Distributed Service Provisioning (DSP) Fabric</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Separate desktop profiles and coordinate supporting AI services.</span><span class="tablet-copy">Different AI-assisted tasks need separate desktop profiles and consistent service configuration.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> Different AI-assisted tasks need separate desktop profiles and consistent service configuration.</p>
@@ -1655,6 +1707,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 034 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">GitHub Pilot — Autonomous Multi-Account Fleet Auditor &amp; Navigator</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Inspect repository health across GitHub accounts.</span><span class="tablet-copy">Checking repository health across GitHub accounts can require repeated API requests and manual inspection of CI and commit history.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1683,6 +1737,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 033 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">Windows Pilot — Semantic UIA &amp; MCP Desktop Automation Engine</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Automate Windows through semantic UI controls.</span><span class="tablet-copy">Desktop automation tied to pixel coordinates can break when a window moves or display scaling changes.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1711,6 +1767,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 010 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">Nexus — Personal AI Operating System</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Personal workspace for project notes and model responses.</span><span class="tablet-copy">Project notes and model responses become difficult to follow when they are spread across unrelated browser sessions.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1751,6 +1809,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 031 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">Super-NLM — Multi-Account NotebookLM Hub &amp; MCP Server</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Search and manage notebooks across NotebookLM accounts.</span><span class="tablet-copy">Notebook collections spread across accounts are difficult to search, query, and maintain from one workflow.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1779,6 +1839,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 038 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">Nepali OCR AI — Vision OCR, Varnavinyas Grammar &amp; Bi-Directional Transcoder</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Process Nepali scans and convert legacy text encoding.</span><span class="tablet-copy">Scanned Nepali text and legacy Preeti encoding need different processing before they can be searched or edited as Unicode.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1806,6 +1868,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 039 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">IEEE-Xtreme Algorithmic Intelligence Archive — 662-Task Corpus &amp; Xtreme-Bench</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Search programming problems, constraints, and reference solutions.</span><span class="tablet-copy">Programming problems need statements, constraints, and reference solutions in a form that can be searched and evaluated consistently.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1832,6 +1896,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 035 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">LocalSend MCP — Zero-Cloud LAN P2P File &amp; Clipboard Transfer Bridge</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Share generated files with nearby devices through LocalSend.</span><span class="tablet-copy">An assistant may need to move a generated file to a nearby device without using a cloud storage service.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1859,6 +1925,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 036 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">Google Classroom MCP — Academic Coursework &amp; Due Date Automation Bridge</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Connect assistants to coursework, submissions, and deadlines.</span><span class="tablet-copy">Coursework context is spread across course streams, assignments, submissions, and attached resources.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1886,6 +1954,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 037 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">Typora MCP Server — Native Markdown Desktop Orchestration &amp; Ingestion Engine</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Connect Markdown files, Typora, and document exports.</span><span class="tablet-copy">A writing workflow needs to connect Markdown files, editor state, and exported documents without repeatedly locating them by hand.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1914,6 +1984,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 002 <span class="project-status">In Progress</span></div>
 <h3 class="project-title">Alpha Android Super-App</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Modular personal tools in an Android application.</span><span class="tablet-copy">Personal Android tools need shared navigation and settings without coupling every feature into one screen.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1953,6 +2025,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 029 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">md2pdf — Desktop Markdown to PDF Converter</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Convert technical Markdown into shareable PDFs.</span><span class="tablet-copy">Technical Markdown needs to preserve tables, code, and mathematical content when it becomes a shareable PDF.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview"><a class="project-media-link" href="assets/images/projects/md2pdf/output.pdf" rel="noopener" target="_blank" title="Open the full project output"><picture><source srcset="assets/images/projects/md2pdf/capture.webp" type="image/webp"/><img alt="PDF produced by md2pdf · README input · simple renderer" class="project-preview-img" decoding="async" height="1600" loading="lazy" src="assets/images/projects/md2pdf/capture.png" width="1131"/></picture><div class="project-media-badge"><span>View report ↗</span></div></a></div><p class="project-desc" data-output-caption="p-029">PDF produced by md2pdf · README input · simple renderer</p>
@@ -1969,6 +2043,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 030 <span class="project-date">Sep 2026</span></div>
 <h3 class="project-title">NovaOptimizer — Windows Task Manager &amp; System Optimizer</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Desktop controls for Windows memory-management operations.</span><span class="tablet-copy">Windows memory-management operations need a usable interface and clear control over when system changes run.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -1997,6 +2073,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 021 <span class="project-date">Jul 2026</span></div>
 <h3 class="project-title">Pulse Live — Real-Time Interactive Polling Platform</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Collect audience responses for live presentations.</span><span class="tablet-copy">A presenter needs to collect audience responses while participants and the shared display stay synchronized.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2025,6 +2103,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 020 <span class="project-date">Jul 2026</span></div>
 <h3 class="project-title">Cryptarithmetic Solver &amp; API</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Solve alphametic puzzles under digit and arithmetic constraints.</span><span class="tablet-copy">Alphametic puzzles require distinct digits for letters while satisfying carries, arithmetic, and leading-zero constraints.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview"><a class="project-media-link" href="assets/images/projects/crypto/output.html" rel="noopener" target="_blank" title="Open the full project output"><picture><source srcset="assets/images/projects/crypto/capture.webp" type="image/webp"/><img alt="Actual solver run · SEND + MORE = MONEY and all TWO + TWO = FOUR solutions" class="project-preview-img" decoding="async" height="510" loading="lazy" src="assets/images/projects/crypto/capture.png" width="1439"/></picture><div class="project-media-badge"><span>View output ↗</span></div></a></div><p class="project-desc" data-output-caption="p-020">Actual solver run · SEND + MORE = MONEY and all TWO + TWO = FOUR solutions</p>
@@ -2041,6 +2121,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 015 <span class="project-date">Jun 2026</span></div>
 <h3 class="project-title">IEEE KEC React Workshop</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Introductory React examples for a student workshop.</span><span class="tablet-copy">First-time React learners need small examples whose state changes they can trace while following a workshop.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2067,6 +2149,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 1</span>
 <div class="project-index">P — 003 <span class="project-date">30 Apr 2026</span></div>
 <h4 class="project-title">Cardiac Event Data Wrangling</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework exploring cardiac data quality and class balance.</span><span class="tablet-copy">A model cannot support useful analysis until missing values, feature relationships, and class balance are understood.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2092,6 +2176,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 2</span>
 <div class="project-index">P — 004 <span class="project-date">12 May 2026</span></div>
 <h4 class="project-title">Customer API App</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework API for customer, order, and payment records.</span><span class="tablet-copy">Customer, order, and payment records need consistent validation and persistence across API requests.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2118,6 +2204,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 3</span>
 <div class="project-index">P — 005 <span class="project-date">20 May 2026</span></div>
 <h4 class="project-title">Text-to-SQL Agentic Pipeline</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework translating database questions into SQL.</span><span class="tablet-copy">A natural-language database question needs to become valid SQL before its result can be explained to a user.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2146,6 +2234,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 4</span>
 <div class="project-index">P — 006 <span class="project-date">28 May 2026</span></div>
 <h4 class="project-title">Telco Churn &amp; CLV ML Pipeline</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework modelling churn and customer lifetime value.</span><span class="tablet-copy">Customer retention work combines a binary churn decision with an estimate of customer lifetime value.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2174,6 +2264,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 5</span>
 <div class="project-index">P — 008 <span class="project-date">31 May 2026</span></div>
 <h4 class="project-title">Telco Churn Tree-Based Ensemble Pipeline</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework comparing tree ensembles for churn classification.</span><span class="tablet-copy">Churn classification must account for class imbalance without allowing resampling to leak into validation data.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2202,6 +2294,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 6</span>
 <div class="project-index">P — 009 <span class="project-date">5 Jun 2026</span></div>
 <h4 class="project-title">Probabilistic Models</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework exploring probabilistic predictions and uncertainty.</span><span class="tablet-copy">A point estimate can hide uncertainty that matters when comparing predictions or updating beliefs from new observations.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2230,6 +2324,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 7</span>
 <div class="project-index">P — 011 <span class="project-date">21 Jun 2026</span></div>
 <h4 class="project-title">Customer Segmentation</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework clustering customers from retail transactions.</span><span class="tablet-copy">Retail transaction data has no predefined customer segments, so the feature representation shapes the groups a clustering method finds.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2258,6 +2354,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 8</span>
 <div class="project-index">P — 016 <span class="project-date">1 Jul 2026</span></div>
 <h4 class="project-title">Forecasting</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework comparing time-series forecasts on future observations.</span><span class="tablet-copy">Time-series models must be compared on future observations without leaking information from later periods into training.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2286,6 +2384,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 9</span>
 <div class="project-index">P — 017 <span class="project-date">9 Jul 2026</span></div>
 <h4 class="project-title">NEU Steel Defect CNN</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework classifying steel defects with a CNN.</span><span class="tablet-copy">Steel surface-defect classification needs a model that learns image structure while exposing overfitting on the available dataset.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2313,6 +2413,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 10</span>
 <div class="project-index">P — 019 <span class="project-date">16 Jul 2026</span></div>
 <h4 class="project-title">Image Processing</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework separating fruit images into regions and shapes.</span><span class="tablet-copy">Fruit images need to be separated into usable regions before shapes and object locations can be inspected.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2341,6 +2443,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 11</span>
 <div class="project-index">P — 022 <span class="project-date">Jul 2026</span></div>
 <h4 class="project-title">Vision Transformers</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework exploring vision classification, detection, and segmentation.</span><span class="tablet-copy">Classification, object detection, and segmentation answer different visual questions and need separate evaluation criteria.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2369,6 +2473,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 12</span>
 <div class="project-index">P — 024 <span class="project-date">30 Jul 2026</span></div>
 <h4 class="project-title">NER for Customer Support</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework extracting named entities from support text.</span><span class="tablet-copy">Text-routing workflows need entity boundaries and types before names and locations can be used as structured fields.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2395,6 +2501,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 13</span>
 <div class="project-index">P — 027 <span class="project-date">6 Aug 2026</span></div>
 <h4 class="project-title">LSTM Text Classification</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework classifying headline topics with an LSTM.</span><span class="tablet-copy">A text classifier needs to map variable-length headlines into a fixed set of topic labels.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2421,6 +2529,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 14</span>
 <div class="project-index">P — 028 <span class="project-date">12 Aug 2026</span></div>
 <h4 class="project-title">Agentic Intent Routing</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework routing support messages to specialized handlers.</span><span class="tablet-copy">A support message must reach the correct handling category before a specialized assistant can respond.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
@@ -2447,6 +2557,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 15</span>
 <div class="project-index">P — 045 <span class="project-date">Coursework</span></div>
 <h4 class="project-title">RAG AI Assistant</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework assistant using retrieval and bounded tool calls.</span><span class="tablet-copy">An assistant needs retrieved context and bounded tool use when a model response alone is insufficient.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> An assistant needs retrieved context and bounded tool use when a model response alone is insufficient.</p><p><strong>Coursework implementation</strong> Built a FastAPI assistant with Qdrant retrieval, structured responses, tool calling, and a Streamlit interface.</p><p><strong>Engineering focus</strong> Use caching, retries, circuit breakers, and a provider fallback chain to handle repeated requests and unavailable model services.</p><p><strong>Current boundary</strong> A fellowship implementation. Retrieval quality and response correctness depend on the corpus and provider; configured fallbacks do not guarantee that an unavailable service will be replaced successfully.</p></div>
@@ -2459,6 +2571,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 16</span>
 <div class="project-index">P — 046 <span class="project-date">Coursework</span></div>
 <h4 class="project-title">Verified Agentic Assistant</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework checking retrieved context and assistant citations.</span><span class="tablet-copy">A single retrieval pass can miss information, follow outdated context, or produce citations that were never retrieved.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> A single retrieval pass can miss information, follow outdated context, or produce citations that were never retrieved.</p><p><strong>Coursework implementation</strong> Extended the RAG assistant with an iterative tool-use loop, context management, and a deterministic citation-verification gate.</p><p><strong>Engineering focus</strong> Clear old tool results while retaining notes, cap the loop's budget, and record trajectories and failures in a custom evaluation harness.</p><p><strong>Current boundary</strong> The saved report covers four cases and includes a provider failure. Citation checks establish source membership, not the factual correctness of every answer.</p></div>
@@ -2471,6 +2585,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary" id="p-042"><span class="fuse-week-label">Week 17</span>
 <div class="project-index">P — 043 <span class="project-date">Oct 2026</span></div>
 <h4 class="project-title">Agentic AI &amp; Telco Churn MLOps</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework tracking and serving ML and agent applications.</span><span class="tablet-copy">ML and agent applications need a repeatable way to track experiments, serve outputs, and detect regressions.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> ML and agent applications need a repeatable way to track experiments, serve outputs, and detect regressions.</p>
@@ -2486,6 +2602,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary"><span class="fuse-week-label">Week 18</span>
 <div class="project-index">P — 044 <span class="project-date">Oct 2026</span></div>
 <h4 class="project-title">Trustworthy AI Guardrails</h4>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework checking assistant inputs and outputs with guardrails.</span><span class="tablet-copy">An assistant can receive sensitive inputs and return malformed, unsupported, or sensitive outputs.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-story project-desc"><p><strong>The problem</strong> An assistant can receive sensitive inputs and return malformed, unsupported, or sensitive outputs.</p><p><strong>Coursework implementation</strong> Built a guardrail pipeline with input checks for PII and prompt injection, plus output checks for schema conformity, groundedness, and leakage.</p><p><strong>Engineering focus</strong> Keep checks around the generation step and use a curated evaluation set to inspect which cases are blocked, accepted, or require fallback handling.</p><p><strong>Current boundary</strong> Checks cover the implemented rules and recorded cases. They do not establish complete jailbreak resistance, comprehensive PII detection, or guaranteed factual correctness.</p></div>
@@ -2498,6 +2616,8 @@ Your browser doesn't support embedded video.
 <summary class="project-summary">
 <div class="project-index">P — 026 <span class="project-date">Jul 2026</span></div>
 <h3 class="project-title">ONM Case Study — Fusemachines Inc.</h3>
+<p class="mobile-project-summary"><span class="phone-copy">Coursework examining organizational responsibilities and hiring practices.</span><span class="tablet-copy">An organizational case study needs evidence about how responsibilities and hiring practices work beyond a company&#x27;s public description.</span></p>
+<span class="mobile-project-hint">Full details, evidence &amp; links</span>
 </summary>
 <div class="project-card-body">
 <div class="project-media-preview">
