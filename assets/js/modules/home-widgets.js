@@ -1,6 +1,6 @@
 /* ============================================================
 
-   HOME WIDGETS — index.html-only status widgets (v57.8)
+   HOME WIDGETS — index.html-only status widgets (v57.9)
 
    Kathmandu clock · live date labels · last-commit badge.
 
@@ -630,7 +630,7 @@
 
     var N = affiliations.length;
 
-    if (N < 3) return;
+    if (N < 1) return;
 
 
 
@@ -640,9 +640,7 @@
 
     var outerRing = document.getElementById('heroLotusOuterRing');
 
-    var badgesWrap = document.getElementById('heroStarBadges');
-
-    if (!poly || !badgesWrap) return;
+    if (!poly) return;
 
 
 
@@ -653,10 +651,6 @@
     var rOuter = 136;
 
     var rInner = Math.round(rOuter * 0.50);
-
-    var stageW = stage.clientWidth || 310;
-
-    var badgeDist = Math.round(120 * (stageW / 310));
 
 
 
@@ -692,11 +686,11 @@
 
 
 
-    // Dynamically build N-sided Dual-Ring Interlocking Tang Lotus blades with coaxial 120px circle sockets
+    // Option A: Dynamically build N-sided Dual-Ring Interlocking Tang Lotus blades with Pure SVG In-Hole Badges
 
     if (innerRing && outerRing) {
 
-      var innerHtml = '<circle cx="155" cy="155" r="155" fill="none" stroke="none" /><circle class="lotus-mech-ring" cx="155" cy="155" r="108" />';
+      var innerHtml = '<circle cx="155" cy="155" r="155" fill="none" stroke="none" />';
 
       var outerHtml = '<circle cx="155" cy="155" r="155" fill="none" stroke="none" /><circle class="lotus-core-ring" cx="155" cy="155" r="99" />';
 
@@ -705,6 +699,10 @@
         var deg = Math.round(((b * 360) / N) * 100) / 100;
 
         var phiDeg = Math.round((deg + 180 / N) * 100) / 100;
+
+        var aff = affiliations[b];
+
+        var clipId = 'lotusBladeClip-' + b;
 
         innerHtml +=
 
@@ -720,6 +718,18 @@
 
           '<path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" />' +
 
+          '<defs><clipPath id="' + clipId + '"><circle cx="155" cy="35" r="18" /></clipPath></defs>' +
+
+          '<a href="' + aff.url + '" class="svg-badge-anchor" aria-label="' + aff.org + ' — ' + aff.name + '">' +
+
+          '<title>' + aff.name + ' (' + aff.org + ')</title>' +
+
+          '<image class="svg-badge-image" href="' + aff.logo + '" x="137" y="17" width="36" height="36" clip-path="url(#' + clipId + ')" />' +
+
+          '<circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" />' +
+
+          '</a>' +
+
           '</g>';
 
       }
@@ -729,78 +739,6 @@
       outerRing.innerHTML = outerHtml;
 
     }
-
-
-
-    // Render / update badges
-
-    badgesWrap.innerHTML = '';
-
-    affiliations.forEach(function (aff, idx) {
-
-      var angle = -Math.PI / 2 + (idx * 2 * Math.PI) / N;
-
-      var dx = Math.round(badgeDist * Math.cos(angle));
-
-      var dy = Math.round(badgeDist * Math.sin(angle));
-
-
-
-      var a = document.createElement('a');
-
-      a.href = aff.url;
-
-      a.className = 'star-badge';
-
-      a.style.setProperty('--dx', dx + 'px');
-
-      a.style.setProperty('--dy', dy + 'px');
-
-      a.style.setProperty('--i', idx);
-
-      a.setAttribute('aria-label', aff.org + ' — ' + aff.name);
-
-
-
-      var iconWrap = document.createElement('span');
-
-      iconWrap.className = 'star-badge-icon-wrap';
-
-
-
-      var img = document.createElement('img');
-
-      img.src = aff.logo;
-
-      img.alt = '';
-
-      img.width = 38;
-
-      img.height = 38;
-
-      img.loading = 'lazy';
-
-      img.decoding = 'async';
-
-      iconWrap.appendChild(img);
-
-      a.appendChild(iconWrap);
-
-
-
-      var tip = document.createElement('span');
-
-      tip.className = 'star-badge-tooltip';
-
-      tip.textContent = aff.name;
-
-      a.appendChild(tip);
-
-
-
-      badgesWrap.appendChild(a);
-
-    });
 
 
 

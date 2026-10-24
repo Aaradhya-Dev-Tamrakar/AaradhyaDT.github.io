@@ -1,8 +1,12 @@
-# Portfolio Website Tracker — v57.8
+# Portfolio Website Tracker — v57.9
 
 
 
 Last updated: _2026-10-24_
+
+
+
+- **Tang Lotus pure SVG in-hole blade architecture (#47)**: Migrated hero affiliation badges from HTML overlays to Option A pure SVG in-hole blade nodes embedded directly inside golden lotus petal cradles (.lotus-blade-cradle). Badges now rotate and bloom in 1:1 coaxial lockstep with the primary petal blades, eliminating HTML-to-SVG coordinate drift and jitter. Preserves keyboard navigation, accessible SVG <title> tooltips, and deep links to experience.html#exp-*. Removed dashed orbital guide circles in favor of solid metallic gold bevels. Verified across all 26 verification checks.
 
 
 
@@ -186,7 +190,8 @@ Last updated: _2026-10-24_
 
 - **Epistemic Calibration & Security Notice Alignment (`README.md`)**:
 
-  - **Calibrated Client-Side Cryptographic Boundary (`README.md`)**: Updated the security architecture notice under `ARCH-RFC-001` guidelines to clarify that client-side AES-256-GCM and PBKDF2 constitute educational anti-scraping and static content gating rather than server-side access control, formally noting that *client-side encryption $\neq$ server-side authorization*. Resolved stale reference to non-existent audit document and verified entire test suite across all 25 categories cleanly.
+  - **Calibrated Client-Side Cryptographic Boundary (`README.md`)**: Updated the security architecture notice under `ARCH-RFC-001` guidelines to clarify that client-side AES-256-GCM and PBKDF2 constitute educational anti-scraping and static content gating rather than server-side access control, formally noting that *client-side encryption $
+eq$ server-side authorization*. Resolved stale reference to non-existent audit document and verified entire test suite across all 25 categories cleanly.
 
 
 
@@ -378,7 +383,8 @@ Last updated: _2026-10-24_
 
   - **12-Target Version Synchronization Expansion**: Added automated synchronization and strict verification for `README.md` version badge, `pyproject.toml` project semver, `dev-logs/PortfolioWebsite_TRACKER.md` State of Play PWA cache entry, `.github/workflows/verify.yml` CI header, and `assets/js/modules/terminal.js` fallback version strings.
 
-  - **5-Pillar Decision Matrix Calibration (`site_automation.py`)**: Calibrated scoring weights so each pillar satisfies the threshold for a major release recommendation (4 pts per pillar, score >= 4), expanded trigger explanations to show pillars satisfied count (`Pillars Triggered: X/5, Confidence Score: Y/20`), and fixed git porcelain status column parsing (`line.rstrip("\r\n")`) preventing path truncation.
+  - **5-Pillar Decision Matrix Calibration (`site_automation.py`)**: Calibrated scoring weights so each pillar satisfies the threshold for a major release recommendation (4 pts per pillar, score >= 4), expanded trigger explanations to show pillars satisfied count (`Pillars Triggered: X/5, Confidence Score: Y/20`), and fixed git porcelain status column parsing (`line.rstrip("\r
+")`) preventing path truncation.
 
   - **Process Execution & Output Stream Routing (`sync.ps1`)**: Routed `Invoke-PythonScript` execution to `Out-Host` ensuring real-time stdout/stderr rendering to terminal without swallowing into function return value, and resolved array argument flattening in `Start-ThreadJob` scriptblocks via unary comma wrapping (`(,$prefix)`).
 
@@ -872,7 +878,7 @@ Last updated: _2026-10-24_
 
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
 
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v57.8`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v57.9`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 
