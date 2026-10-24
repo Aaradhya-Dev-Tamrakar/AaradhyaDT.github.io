@@ -7,13 +7,11 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: 'v58',
-    date: '2026-10-24',
-    sha: '031b97fb',
-    title: "Public site packaging and repository cleanup",
-    highlights: [
-      "Publish only runtime files; preserve local transcripts and graph exports outside Git"
-    ]
+    version: "v58",
+    date: "2026-10-24",
+    sha: "7b329132c9b1367f86d5c778f9deb5051ccd96a1",
+    title: "archive local artifacts and package public Pages files (#49)",
+    highlights: []
   },
   {
     version: "v57.10",

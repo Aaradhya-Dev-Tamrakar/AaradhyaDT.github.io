@@ -1,6 +1,6 @@
 {
-  "sha": "866f9d85d9687832bde18257d95acc74cbe8472f",
-  "shortSha": "866f9d8",
-  "date": "2026-10-24T15:58:30+05:45",
-  "message": "feat(home): place Nepal flag beside Kathmandu"
+  "sha": "7b329132c9b1367f86d5c778f9deb5051ccd96a1",
+  "shortSha": "7b32913",
+  "date": "2026-10-24T16:00:49+05:45",
+  "message": "chore(repo): archive local artifacts and package public Pages files (#49)"
 }
