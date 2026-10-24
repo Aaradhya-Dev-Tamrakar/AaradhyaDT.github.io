@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v57.4",
+    version: "v57.5",
     date: "2026-10-24",
     sha: "6e16fda6d0a01cad2577ba8b3b371a0b83777cdb",
     title: "make affiliation logos circular, clearer, and update marks (#41) (#42)",
