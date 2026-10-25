@@ -1,8 +1,10 @@
-# Portfolio Website Tracker — v58.2
+# Portfolio Website Tracker — v58.3
 
 
 
 Last updated: _2026-10-25_
+
+- **Theme-sensitive lotus polish (#52)**: Tighten portrait/control spacing, quiet the backdrop around the profile card, and remove card lift and animated perimeter. Adapt lotus shadows, blade recesses, and outlines to light and dark themes while retaining gold, blue, and original logo colors. Reserve three lines for affiliation captions. Both themes were inspected in localhost; all 26 verification categories passed before publication. Full mobile caption interaction verification remains unconfirmed.
 
 - **Tang lotus affiliation usability (#51)**: Keep all five logos upright as the blades expand, use consistent circular assets, and soften the backdrop glow. Add native portrait and affiliation buttons, keyboard opening and Escape closing, linked organization/role captions, and visible focus styling. Match the site's ghost button and serif caption formatting; stack profile fields on narrow screens and reserve room for floating controls. Local browser checks covered 320, 768, and 1280px without profile overflow, keyboard captions, toggle state, and the IEEE experience deep link. All 26 repository verification categories passed before publication.
 
@@ -890,7 +892,7 @@ eq$ server-side authorization*. Resolved stale reference to non-existent audit d
 
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
 
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.2`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.3`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 

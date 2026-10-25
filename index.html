@@ -550,7 +550,7 @@
 
       aspect-ratio: 1;
 
-      margin: 0 auto 1.5rem;
+      margin: 0 auto 0.75rem;
 
       display: flex;
 
@@ -600,7 +600,7 @@
 
       overflow: visible;
 
-      filter: drop-shadow(0 0 6px rgba(212, 168, 90, 0.12));
+      filter: var(--lotus-shadow-rest, drop-shadow(0 0 6px rgba(212, 168, 90, 0.12)));
 
       transition: filter 0.45s ease;
 
@@ -887,7 +887,7 @@
 
       background: var(--bg2);
 
-      box-shadow: 0 8px 24px -6px rgba(0, 0, 0, 0.45);
+      box-shadow: var(--lotus-portrait-rest, 0 8px 24px -6px rgba(0, 0, 0, 0.45));
 
       z-index: 10;
 
@@ -1081,7 +1081,7 @@
 
     .hero-star-stage.is-expanded .hero-star-svg {
 
-      filter: drop-shadow(0 0 10px rgba(212, 168, 90, 0.22)) drop-shadow(0 0 14px rgba(120, 190, 240, 0.09));
+      filter: var(--lotus-shadow-active, drop-shadow(0 0 10px rgba(212, 168, 90, 0.22)) drop-shadow(0 0 14px rgba(120, 190, 240, 0.09)));
 
     }
 
@@ -1153,7 +1153,7 @@
 
       border-color: var(--accent);
 
-      box-shadow: 0 10px 30px -4px rgba(0, 0, 0, 0.55), 0 0 22px -2px rgba(212, 168, 90, 0.35);
+      box-shadow: var(--lotus-portrait-active, 0 10px 30px -4px rgba(0, 0, 0, 0.55), 0 0 22px -2px rgba(212, 168, 90, 0.35));
 
     }
 
@@ -1208,6 +1208,32 @@
 
 
     /* Light Theme Harmonization */
+
+    html[data-theme="light"] .status-card {
+      --lotus-shadow-rest: drop-shadow(0 2px 3px rgba(99, 72, 30, 0.12));
+      --lotus-shadow-active: drop-shadow(0 3px 5px rgba(99, 72, 30, 0.18));
+      --lotus-portrait-rest: 0 3px 12px rgba(32, 30, 25, 0.12);
+      --lotus-portrait-active: 0 4px 16px rgba(32, 30, 25, 0.16);
+    }
+    html[data-theme="light"] .lotus-blade-cradle {
+      fill: #faf5e9;
+      stroke: #9b6a1d;
+    }
+    html[data-theme="light"] .lotus-blade-filigree {
+      fill: rgba(255, 246, 220, 0.2);
+      stroke: #8b5d19;
+    }
+    html[data-theme="light"] .lotus-facet-light { stroke: #9b6a1d; }
+    html[data-theme="light"] .lotus-crystal-light { stroke: #32678a; }
+    html[data-theme="light"] .lotus-crystal-filigree {
+      fill: rgba(227, 244, 255, 0.2);
+      stroke: #32678a;
+    }
+    html[data-theme="light"] .lotus-core-ring { stroke: rgba(139, 93, 25, 0.55); }
+    html[data-theme="light"] .hero-star-stage .hero-portrait-stage {
+      background: var(--bg2);
+      border-color: #9b6a1d;
+    }
 
     html[data-theme="light"] .star-badge {
 
@@ -1617,6 +1643,19 @@
 
 
 
+    /* Quiet the moving page backdrop immediately around the portrait card. */
+    .hero-right::before {
+      content: "";
+      position: absolute;
+      inset: -1rem;
+      z-index: -1;
+      background: var(--bg);
+      border-radius: 1rem;
+      filter: blur(18px);
+      opacity: 0.85;
+      pointer-events: none;
+    }
+
     @keyframes fadeUp {
 
       from {
@@ -1675,7 +1714,7 @@
 
       box-shadow: 0 16px 40px -16px rgba(0, 0, 0, .5);
 
-      transition: box-shadow .35s ease, border-color .35s ease, transform .35s ease;
+      transition: border-color .35s ease;
 
       overflow: visible;
 
@@ -1703,9 +1742,9 @@
 
     .status-card:hover {
 
-      box-shadow: 0 16px 40px -16px rgba(0, 0, 0, .5), 0 0 30px -8px var(--glow-gold-a30);
+      box-shadow: 0 16px 40px -16px rgba(0, 0, 0, .5);
 
-      transform: translateY(-2px);
+      transform: none;
 
     }
 
@@ -2790,8 +2829,8 @@
       position: relative;
       z-index: 3;
       text-align: center;
-      margin: 0 0 1.5rem;
-      padding-bottom: 1.25rem;
+      margin: 0 0 1.25rem;
+      padding-bottom: 1rem;
       border-bottom: 1px solid var(--line);
     }
     .hero-affiliation-toggle {
@@ -2807,7 +2846,7 @@
     .hero-affiliation-detail {
       margin: 0.75rem auto 0;
       max-width: 32ch;
-      min-height: 3.2em;
+      min-height: 4.8em;
       font-family: var(--serif);
       font-size: 0.85rem;
       font-weight: 400;
@@ -3062,7 +3101,7 @@
 
         <div class="hero-right">
 
-          <div class="status-card card-gradient-border">
+          <div class="status-card">
 
             <div class="hero-star-stage" id="heroStarStage" role="region" aria-label="Aaradhya Dev Tamrakar portrait and key affiliations">
 
@@ -3696,7 +3735,7 @@
 
             <span class="term-green">Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal
 
-              (v58.2).</span><br />
+              (v58.3).</span><br />
 
             Type <span class="term-gold">'help'</span> or click the preset buttons above to explore.
 

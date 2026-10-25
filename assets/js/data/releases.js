@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.2",
+    version: "v58.3",
     date: "2026-10-25",
     sha: "b8c42d03feee7e96438674262073f890c85f5421",
     title: "refine Tang lotus affiliation usability (#51)",
