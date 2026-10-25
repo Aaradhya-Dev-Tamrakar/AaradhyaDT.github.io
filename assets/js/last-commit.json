@@ -1,6 +1,6 @@
 {
-  "sha": "b8c42d03feee7e96438674262073f890c85f5421",
-  "shortSha": "b8c42d0",
-  "date": "2026-10-25T12:03:09+05:45",
-  "message": "fix(home): refine Tang lotus affiliation usability (#51)"
+  "sha": "10c75c334125cf41fe380ac3706d48a17d39daa8",
+  "shortSha": "10c75c3",
+  "date": "2026-10-25T12:33:02+05:45",
+  "message": "feat(home): polish theme-sensitive lotus portrait (#52)"
 }
