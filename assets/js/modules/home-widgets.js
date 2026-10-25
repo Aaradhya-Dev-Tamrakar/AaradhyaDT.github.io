@@ -1,6 +1,6 @@
 /* ============================================================
 
-   HOME WIDGETS — index.html-only status widgets (v58.1)
+   HOME WIDGETS — index.html-only status widgets (v58.2)
 
    Kathmandu clock · live date labels · last-commit badge.
 
@@ -578,7 +578,7 @@
 
       org: 'NSSR Nepal (DataCamp)',
 
-      logo: 'assets/images/logos/nssr.webp',
+      logo: 'assets/images/logos/nssr-circle.webp',
 
       url: 'experience.html#exp-nssr'
 
@@ -592,7 +592,7 @@
 
       org: 'KEC Makerspace (Robotics)',
 
-      logo: 'assets/images/logos/makerspace.webp',
+      logo: 'assets/images/logos/makerspace-circle.webp',
 
       url: 'experience.html#exp-makerspace'
 
@@ -606,7 +606,7 @@
 
       org: 'Engineering Project Club',
 
-      logo: 'assets/images/logos/epc-club.webp',
+      logo: 'assets/images/logos/epc-club-circle.webp',
 
       url: 'experience.html#exp-epc'
 
@@ -740,36 +740,67 @@
 
 
 
+    var detail = document.getElementById('heroAffiliationDetail');
+    var links = stage.querySelectorAll('.svg-badge-anchor');
+    for (var a = 0; a < links.length; a++) {
+      links[a].setAttribute('aria-describedby', 'heroAffiliationDetail');
+    }
+
     if (!stage.dataset.starBound) {
 
       stage.dataset.starBound = '1';
 
       var portrait = document.getElementById('heroPortraitStage');
+      var toggle = document.getElementById('heroAffiliationToggle');
+
+      function setExpanded(expanded) {
+        stage.classList.toggle('is-expanded', expanded);
+        stage.classList.toggle('is-collapsed', !expanded);
+        if (portrait) portrait.setAttribute('aria-expanded', String(expanded));
+        if (toggle) {
+          toggle.setAttribute('aria-expanded', String(expanded));
+          toggle.textContent = expanded ? 'Close affiliations' : 'Explore affiliations';
+        }
+      }
+
+      function toggleExpanded() {
+        setExpanded(!stage.classList.contains('is-expanded'));
+      }
+
+      function showAffiliation(event) {
+        var link = event.target.closest('.svg-badge-anchor');
+        if (link && detail) {
+          detail.textContent = link.getAttribute('aria-label');
+          if (event.type === 'focusin') setExpanded(true);
+        }
+      }
+
+      stage.addEventListener('mouseover', showAffiliation);
+      stage.addEventListener('focusin', showAffiliation);
+      stage.addEventListener('mouseleave', function () {
+        stage.classList.remove('is-collapsed');
+        if (detail && !stage.contains(document.activeElement)) {
+          detail.textContent = 'Five organizations behind my work.';
+        }
+      });
+      stage.addEventListener('focusout', function (event) {
+        if (!stage.contains(event.relatedTarget) && detail) {
+          detail.textContent = 'Five organizations behind my work.';
+        }
+      });
+      if (toggle) toggle.addEventListener('click', toggleExpanded);
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') setExpanded(false);
+      });
 
       if (portrait) {
 
-        portrait.addEventListener('click', function (e) {
-
-          if (window.matchMedia('(hover: none)').matches) {
-
-            e.preventDefault();
-
-            var isExp = stage.classList.toggle('is-expanded');
-
-            portrait.setAttribute('aria-expanded', isExp ? 'true' : 'false');
-
-          }
-
-        });
+        portrait.addEventListener('click', toggleExpanded);
 
         document.addEventListener('click', function (e) {
 
-          if (!stage.contains(e.target)) {
-
-            stage.classList.remove('is-expanded');
-
-            portrait.setAttribute('aria-expanded', 'false');
-
+          if (!stage.contains(e.target) && e.target !== toggle) {
+            setExpanded(false);
           }
 
         });

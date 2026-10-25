@@ -1,8 +1,10 @@
-# Portfolio Website Tracker — v58.1
+# Portfolio Website Tracker — v58.2
 
 
 
-Last updated: _2026-10-24_
+Last updated: _2026-10-25_
+
+- **Tang lotus affiliation usability (#51)**: Keep all five logos upright as the blades expand, use consistent circular assets, and soften the backdrop glow. Add native portrait and affiliation buttons, keyboard opening and Escape closing, linked organization/role captions, and visible focus styling. Match the site's ghost button and serif caption formatting; stack profile fields on narrow screens and reserve room for floating controls. Local browser checks covered 320, 768, and 1280px without profile overflow, keyboard captions, toggle state, and the IEEE experience deep link. All 26 repository verification categories passed before publication.
 
 - **Mobile reading hierarchy (#35)**: Shorten the homepage introduction below 600px, place primary actions before focus tags, and retain the full profile destination. Add mobile problem summaries and disclosure labels to all 45 project cards; preserve their full narratives, evidence, links, and desktop presentation. Add a direct archive jump and 44px mobile navigation, filter, and project-link targets. Local validation: all 26 verification categories and 42 HTTP smoke checks passed; browser checks covered 320, 375, 390, 600, 768, and 1280px, keyboard disclosure, project deep links, and the mobile menu.
 
@@ -888,7 +890,7 @@ eq$ server-side authorization*. Resolved stale reference to non-existent audit d
 
 | **Site Verification Suite (`verify.py`)** | **100% PASS (24/24 Categories)** — Zero errors, zero warnings. Content: 39 achievements, 30 projects, 36 journey nodes.                          |
 
-| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.1`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
+| **PWA Service Worker & Offline Caching**  | **Active (`aaradhya-portfolio-v58.2`)** — Cache-first static assets, network-first HTML navigation, offline contact form queue.                  |
 
 | **Mobile Responsiveness & CSS Cascade**   | **Optimized down to 280px viewports** — Responsive navigation drawer, fluid Explore grid, de-squished modals, auto-scaling Skill Radar canvas.   |
 

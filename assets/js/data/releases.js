@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.1",
+    version: "v58.2",
     date: "2026-10-24",
     sha: "9f674d160a3515915c4239befff95fc04b115fa9",
     title: "adapt content for mobile and tablets (#35)",

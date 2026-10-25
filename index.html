@@ -600,7 +600,7 @@
 
       overflow: visible;
 
-      filter: drop-shadow(0 0 10px rgba(212, 168, 90, 0.18));
+      filter: drop-shadow(0 0 6px rgba(212, 168, 90, 0.12));
 
       transition: filter 0.45s ease;
 
@@ -701,6 +701,28 @@
     }
 
 
+
+    /* Keep logos upright while their blade and outer ring rotate. */
+    .svg-badge-image {
+      transform-box: view-box;
+      transform-origin: 155px 35px;
+      transform: rotate(calc(18deg - var(--rot, 0deg)));
+      transition: transform 0.58s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .hero-star-stage:not(.is-collapsed):hover .svg-badge-image,
+    .hero-star-stage:not(.is-collapsed):focus-within .svg-badge-image,
+    .hero-star-stage.is-expanded .svg-badge-image {
+      transform: rotate(calc(0deg - var(--rot, 0deg)));
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .lotus-ring,
+      .lotus-blade,
+      .svg-badge-image {
+        transition: none;
+      }
+    }
 
     /* 3D Faceted Golden Primary Blades */
 
@@ -1053,21 +1075,21 @@
 
     /* ── HOVER / FOCUS MECHANICAL LOTUS BLOOM ACTIVATION ── */
 
-    .hero-star-stage:hover .hero-star-svg,
+    .hero-star-stage:not(.is-collapsed):hover .hero-star-svg,
 
-    .hero-star-stage:focus-within .hero-star-svg,
+    .hero-star-stage:not(.is-collapsed):focus-within .hero-star-svg,
 
     .hero-star-stage.is-expanded .hero-star-svg {
 
-      filter: drop-shadow(0 0 18px rgba(212, 168, 90, 0.38)) drop-shadow(0 0 28px rgba(120, 190, 240, 0.16));
+      filter: drop-shadow(0 0 10px rgba(212, 168, 90, 0.22)) drop-shadow(0 0 14px rgba(120, 190, 240, 0.09));
 
     }
 
 
 
-    .hero-star-stage:hover .lotus-ring--outer,
+    .hero-star-stage:not(.is-collapsed):hover .lotus-ring--outer,
 
-    .hero-star-stage:focus-within .lotus-ring--outer,
+    .hero-star-stage:not(.is-collapsed):focus-within .lotus-ring--outer,
 
     .hero-star-stage.is-expanded .lotus-ring--outer {
 
@@ -1079,9 +1101,9 @@
 
 
 
-    .hero-star-stage:hover .lotus-ring--inner,
+    .hero-star-stage:not(.is-collapsed):hover .lotus-ring--inner,
 
-    .hero-star-stage:focus-within .lotus-ring--inner,
+    .hero-star-stage:not(.is-collapsed):focus-within .lotus-ring--inner,
 
     .hero-star-stage.is-expanded .lotus-ring--inner {
 
@@ -1093,9 +1115,9 @@
 
 
 
-    .hero-star-stage:hover .lotus-blade,
+    .hero-star-stage:not(.is-collapsed):hover .lotus-blade,
 
-    .hero-star-stage:focus-within .lotus-blade,
+    .hero-star-stage:not(.is-collapsed):focus-within .lotus-blade,
 
     .hero-star-stage.is-expanded .lotus-blade {
 
@@ -1105,9 +1127,9 @@
 
 
 
-    .hero-star-stage:hover .hero-star-polygon,
+    .hero-star-stage:not(.is-collapsed):hover .hero-star-polygon,
 
-    .hero-star-stage:focus-within .hero-star-polygon,
+    .hero-star-stage:not(.is-collapsed):focus-within .hero-star-polygon,
 
     .hero-star-stage.is-expanded .hero-star-polygon {
 
@@ -1123,9 +1145,9 @@
 
 
 
-    .hero-star-stage:hover .hero-portrait-stage,
+    .hero-star-stage:not(.is-collapsed):hover .hero-portrait-stage,
 
-    .hero-star-stage:focus-within .hero-portrait-stage,
+    .hero-star-stage:not(.is-collapsed):focus-within .hero-portrait-stage,
 
     .hero-star-stage.is-expanded .hero-portrait-stage {
 
@@ -1139,9 +1161,9 @@
 
     /* Deployed badges glide outward into the lotus circle holes */
 
-    .hero-star-stage:hover .star-badge,
+    .hero-star-stage:not(.is-collapsed):hover .star-badge,
 
-    .hero-star-stage:focus-within .star-badge,
+    .hero-star-stage:not(.is-collapsed):focus-within .star-badge,
 
     .hero-star-stage.is-expanded .star-badge {
 
@@ -2759,6 +2781,62 @@
 
 
 
+    .svg-badge-anchor { pointer-events: auto; }
+    .svg-badge-anchor:focus-visible .svg-badge-bezel {
+      stroke: var(--heading);
+      stroke-width: 3;
+    }
+    .hero-affiliation-caption {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+      margin: 0 0 1.5rem;
+      padding-bottom: 1.25rem;
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-affiliation-toggle {
+      min-height: 44px;
+      justify-content: center;
+      cursor: pointer;
+    }
+    .hero-affiliation-toggle:focus-visible,
+    .hero-portrait-stage:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+    .hero-affiliation-detail {
+      margin: 0.75rem auto 0;
+      max-width: 32ch;
+      min-height: 3.2em;
+      font-family: var(--serif);
+      font-size: 0.85rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--muted);
+      overflow-wrap: anywhere;
+    }
+    .status-card .status-item { min-width: 0; }
+    .status-card .status-item-value {
+      min-width: 0;
+      overflow-wrap: anywhere;
+    }
+    @media (max-width: 960px) {
+      .status-card .status-item {
+        flex-direction: column;
+        gap: 0.35rem;
+      }
+      .status-card .status-item-value {
+        max-width: 100%;
+        width: 100%;
+        text-align: left;
+      }
+      .status-card .status-label { flex-wrap: wrap; gap: 0.5rem; }
+      .status-card .status-clock { margin-left: 0; width: 100%; }
+      .status-card .status-items,
+      .status-card .status-label { padding-right: 2.75rem; }
+      .hero-star-stage { max-width: 100%; }
+    }
+
     /* CV lightbox: page-specific 80vh body sizing (vs default in modules/components.css) */
 
 
@@ -2988,7 +3066,7 @@
 
             <div class="hero-star-stage" id="heroStarStage" role="region" aria-label="Aaradhya Dev Tamrakar portrait and key affiliations">
 
-                                                                      <svg class="hero-star-svg" id="heroStarSvg" viewBox="0 0 310 310" role="img" aria-label="Tang Lotus affiliation star insignia">
+              <svg class="hero-star-svg" id="heroStarSvg" viewBox="0 0 310 310" role="group" aria-label="Tang Lotus affiliation star insignia">
 
                 <defs>
 
@@ -3049,18 +3127,23 @@
                   <circle class="lotus-core-ring" cx="155" cy="155" r="99" />
                   <g class="lotus-blade lotus-blade--primary" style="--rot: 0.0deg; --i: 0;"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /><defs><clipPath id="lotusBladeClip-0"><circle cx="155" cy="35" r="18" /></clipPath></defs><a href="experience.html#exp-fuse" class="svg-badge-anchor" aria-label="Fusemachines — Fuse AI Fellow"><title>Fuse AI Fellow (Fusemachines)</title><image class="svg-badge-image" href="assets/images/logos/fusemachines-circle.webp" x="137" y="17" width="36" height="36" clip-path="url(#lotusBladeClip-0)" /><circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" /></a></g>
                   <g class="lotus-blade lotus-blade--primary" style="--rot: 72.0deg; --i: 1;"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /><defs><clipPath id="lotusBladeClip-1"><circle cx="155" cy="35" r="18" /></clipPath></defs><a href="experience.html#exp-ieee-vicechair" class="svg-badge-anchor" aria-label="IEEE KEC KTM Student Branch — Vice Chair"><title>IEEE Vice Chair (IEEE KEC KTM Student Branch)</title><image class="svg-badge-image" href="assets/images/logos/ieee-kec.webp" x="137" y="17" width="36" height="36" clip-path="url(#lotusBladeClip-1)" /><circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" /></a></g>
-                  <g class="lotus-blade lotus-blade--primary" style="--rot: 144.0deg; --i: 2;"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /><defs><clipPath id="lotusBladeClip-2"><circle cx="155" cy="35" r="18" /></clipPath></defs><a href="experience.html#exp-nssr" class="svg-badge-anchor" aria-label="NSSR Nepal (DataCamp) — Fellow"><title>NSSR Fellow (NSSR Nepal (DataCamp))</title><image class="svg-badge-image" href="assets/images/logos/nssr.webp" x="137" y="17" width="36" height="36" clip-path="url(#lotusBladeClip-2)" /><circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" /></a></g>
-                  <g class="lotus-blade lotus-blade--primary" style="--rot: 216.0deg; --i: 3;"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /><defs><clipPath id="lotusBladeClip-3"><circle cx="155" cy="35" r="18" /></clipPath></defs><a href="experience.html#exp-makerspace" class="svg-badge-anchor" aria-label="KEC Makerspace — Lead"><title>Makerspace Lead (KEC Makerspace (Robotics))</title><image class="svg-badge-image" href="assets/images/logos/makerspace.webp" x="137" y="17" width="36" height="36" clip-path="url(#lotusBladeClip-3)" /><circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" /></a></g>
-                  <g class="lotus-blade lotus-blade--primary" style="--rot: 288.0deg; --i: 4;"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /><defs><clipPath id="lotusBladeClip-4"><circle cx="155" cy="35" r="18" /></clipPath></defs><a href="experience.html#exp-epc" class="svg-badge-anchor" aria-label="Engineering Project Club — Event Manager"><title>EPC Event Mgr (Engineering Project Club)</title><image class="svg-badge-image" href="assets/images/logos/epc-club.webp" x="137" y="17" width="36" height="36" clip-path="url(#lotusBladeClip-4)" /><circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" /></a></g>
+                  <g class="lotus-blade lotus-blade--primary" style="--rot: 144.0deg; --i: 2;"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /><defs><clipPath id="lotusBladeClip-2"><circle cx="155" cy="35" r="18" /></clipPath></defs><a href="experience.html#exp-nssr" class="svg-badge-anchor" aria-label="NSSR Nepal (DataCamp) — Fellow"><title>NSSR Fellow (NSSR Nepal (DataCamp))</title><image class="svg-badge-image" href="assets/images/logos/nssr-circle.webp" x="137" y="17" width="36" height="36" clip-path="url(#lotusBladeClip-2)" /><circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" /></a></g>
+                  <g class="lotus-blade lotus-blade--primary" style="--rot: 216.0deg; --i: 3;"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /><defs><clipPath id="lotusBladeClip-3"><circle cx="155" cy="35" r="18" /></clipPath></defs><a href="experience.html#exp-makerspace" class="svg-badge-anchor" aria-label="KEC Makerspace — Lead"><title>Makerspace Lead (KEC Makerspace (Robotics))</title><image class="svg-badge-image" href="assets/images/logos/makerspace-circle.webp" x="137" y="17" width="36" height="36" clip-path="url(#lotusBladeClip-3)" /><circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" /></a></g>
+                  <g class="lotus-blade lotus-blade--primary" style="--rot: 288.0deg; --i: 4;"><path class="lotus-facet-light" d="M 155 -5 Q 141 14 125 30 Q 118 50 137 74 L 155 84 Z" /><path class="lotus-facet-dark" d="M 155 -5 Q 169 14 185 30 Q 192 50 173 74 L 155 84 Z" /><path class="lotus-blade-filigree" d="M 155 3 Q 144 19 131 32 Q 126 48 141 67 L 155 75 L 169 67 Q 184 48 179 32 Q 166 19 155 3 Z" /><line class="lotus-blade-spine" x1="155" y1="-4" x2="155" y2="16" /><circle class="lotus-blade-cradle" cx="155" cy="35" r="19.5" /><defs><clipPath id="lotusBladeClip-4"><circle cx="155" cy="35" r="18" /></clipPath></defs><a href="experience.html#exp-epc" class="svg-badge-anchor" aria-label="Engineering Project Club — Event Manager"><title>EPC Event Mgr (Engineering Project Club)</title><image class="svg-badge-image" href="assets/images/logos/epc-club-circle.webp" x="137" y="17" width="36" height="36" clip-path="url(#lotusBladeClip-4)" /><circle class="svg-badge-bezel" cx="155" cy="35" r="18.5" fill="none" stroke="#f3cf82" stroke-width="1.2" /></a></g>
                 </g>
               </svg>
 
-              <div class="hero-portrait-stage" id="heroPortraitStage" tabindex="0" role="button" aria-expanded="false" aria-label="Aaradhya Dev Tamrakar portrait - click to toggle affiliations view">
+              <button type="button" class="hero-portrait-stage" id="heroPortraitStage" aria-expanded="false" aria-controls="heroStarSvg" aria-label="Aaradhya Dev Tamrakar portrait - click to toggle affiliations view">
 
                 <img src="assets/images/photo.webp" alt="Aaradhya Dev Tamrakar" class="hero-portrait-img" width="768" height="1024" fetchpriority="high" loading="eager" />
 
-              </div>
+              </button>
 
+            </div>
+
+            <div class="hero-affiliation-caption">
+              <button type="button" class="btn-ghost hero-affiliation-toggle" id="heroAffiliationToggle" aria-controls="heroStarSvg" aria-expanded="false">Explore affiliations</button>
+              <p id="heroAffiliationDetail" class="hero-affiliation-detail" aria-live="polite">Five organizations behind my work.</p>
             </div>
 
             <div class="status-label">
@@ -3613,7 +3696,7 @@
 
             <span class="term-green">Welcome to Aaradhya Dev Tamrakar's Interactive Developer Terminal
 
-              (v58.1).</span><br />
+              (v58.2).</span><br />
 
             Type <span class="term-gold">'help'</span> or click the preset buttons above to explore.
 
