@@ -8,9 +8,9 @@
 const SITE_RELEASES = [
   {
     version: "v58.2",
-    date: "2026-10-24",
-    sha: "9f674d160a3515915c4239befff95fc04b115fa9",
-    title: "adapt content for mobile and tablets (#35)",
+    date: "2026-10-25",
+    sha: "b8c42d03feee7e96438674262073f890c85f5421",
+    title: "refine Tang lotus affiliation usability (#51)",
     highlights: []
   },
   {
