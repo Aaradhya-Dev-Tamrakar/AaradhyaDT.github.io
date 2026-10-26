@@ -8,9 +8,9 @@
 const SITE_RELEASES = [
   {
     version: "v58.4",
-    date: "2026-10-25",
-    sha: "10c75c334125cf41fe380ac3706d48a17d39daa8",
-    title: "polish theme-sensitive lotus portrait (#52)",
+    date: "2026-10-26",
+    sha: "e9fbf204ccd4450b90f68dc2238c21b48c6aeba3",
+    title: "integrate gh.bat and gh.ps1 v1.5.0 companion forwarder",
     highlights: []
   },
   {

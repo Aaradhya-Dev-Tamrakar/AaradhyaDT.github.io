@@ -1,6 +1,6 @@
 {
-  "sha": "10c75c334125cf41fe380ac3706d48a17d39daa8",
-  "shortSha": "10c75c3",
-  "date": "2026-10-25T12:33:02+05:45",
-  "message": "feat(home): polish theme-sensitive lotus portrait (#52)"
+  "sha": "e9fbf204ccd4450b90f68dc2238c21b48c6aeba3",
+  "shortSha": "e9fbf20",
+  "date": "2026-10-26T17:21:02+05:45",
+  "message": "feat(workflow): integrate gh.bat and gh.ps1 v1.5.0 companion forwarder"
 }
