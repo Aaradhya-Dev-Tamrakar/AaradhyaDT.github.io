@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.3",
+    version: "v58.4",
     date: "2026-10-25",
     sha: "10c75c334125cf41fe380ac3706d48a17d39daa8",
     title: "polish theme-sensitive lotus portrait (#52)",
