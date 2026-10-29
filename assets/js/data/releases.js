@@ -9,8 +9,8 @@ const SITE_RELEASES = [
   {
     version: "v58.7",
     date: "2026-10-29",
-    sha: "63fe9c74e38024f7ac033769c2355474edf7548b",
-    title: "sync gh.ps1 v1.6.0 with --attach media support",
+    sha: "ea2f84e708a2eee2b217433a82d5a92f472ddbf2",
+    title: "restore mobile swipe nav by fixing cascade specificity and excluding disclosure tags",
     highlights: []
   },
   {

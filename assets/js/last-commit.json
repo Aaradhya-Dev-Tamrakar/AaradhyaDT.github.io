@@ -1,6 +1,6 @@
 {
-  "sha": "63fe9c74e38024f7ac033769c2355474edf7548b",
-  "shortSha": "63fe9c7",
-  "date": "2026-10-29T09:15:22+05:45",
-  "message": "chore(tooling): sync gh.ps1 v1.6.0 with --attach media support"
+  "sha": "ea2f84e708a2eee2b217433a82d5a92f472ddbf2",
+  "shortSha": "ea2f84e",
+  "date": "2026-10-29T10:02:55+05:45",
+  "message": "fix(touch): restore mobile swipe nav by fixing cascade specificity and excluding disclosure tags"
 }
