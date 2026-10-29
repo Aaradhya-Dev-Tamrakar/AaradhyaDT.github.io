@@ -429,7 +429,7 @@ const SEARCH_STATIC_INDEX = {
     "title": "Codon Stream — 500-Gene CP Algorithmic Library",
     "meta": "C++20, Python 3.11, Algorithms",
     "href": "projects.html#p-047",
-    "text": "codon stream — 500-gene cp algorithmic library hardened 500-gene repository of competitive programming primitives, algorithmic templates, and ieeextreme contest solutions. automated schema validation, empirical fitness benchmarking, and big-o computational complexity profiling across 6 architectural tiers. 2-layer contest cartography: 11-page printable desk reference (contest_map + contest_core) within regulation limits and automated mock drill harness. c++20 python 3.11 algorithms ieeextreme automated testing"
+    "text": "codon stream — 500-gene cp algorithmic library the problem competitive programming requires reliable, pre-verified algorithmic primitives and contest templates under strict memory and runtime limits. what i built built a hardened 500-gene repository of algorithmic primitives, template implementations, and ieeextreme solutions across 6 architectural tiers. engineering focus automated schema validation, empirical fitness benchmarking, big-o complexity profiling, and a 2-layer printable contest desk reference. current boundary primitives are verified against curated test suites and regulation constraints; contest performance remains bounded by problem-specific adaptation. c++20 python 3.11 algorithms ieeextreme automated testing"
   },
   {
     "type": "project",

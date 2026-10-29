@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 verify.py — comprehensive structural integrity checker for
-aaradhyadt.github.io (v58.7)
+aaradhyadt.github.io (v58.8)
 
 26 check categories covering HTML structure, cross-page links, asset
 references, JS syntax, JS unit tests, CSP integrity, JS runtime safety,
@@ -1306,43 +1306,66 @@ def check_tracker_hygiene():
 
 
 # ════════════════════════════════════════════════════════════════════
-#  CHECK 23: JavaScript Unit Tests Execution
+#  CHECK 23: JavaScript and Python Unit Tests Execution
 # ════════════════════════════════════════════════════════════════════
 def check_unit_tests():
-    """Execute node --test across tests/unit/ and assert all tests pass."""
+    """Execute node --test and python unittest across tests/unit/ and assert all tests pass."""
     cat = "unit-tests"
     node_bin = shutil.which("node")
     if not node_bin:
-        log_warning(cat, "node binary not found on PATH — skipping unit tests")
-        return
+        log_warning(cat, "node binary not found on PATH — skipping JS unit tests")
+    else:
+        tests_dir = ROOT / "tests" / "unit"
+        if not tests_dir.exists() or not list(tests_dir.glob("*.test.mjs")):
+            log_warning(cat, "no JS unit tests found under tests/unit/")
+        else:
+            try:
+                proc = subprocess.run(
+                    [node_bin, "--test"],
+                    cwd=str(ROOT),
+                    capture_output=True,
+                    text=True,
+                    timeout=15,
+                    encoding="utf-8",
+                    errors="replace"
+                )
+                if proc.returncode != 0:
+                    err_line = proc.stderr.strip() or proc.stdout.strip()
+                    first_err = err_line.splitlines()[-1] if err_line else "non-zero exit"
+                    log_error(cat, f"JS unit tests failed: {first_err}")
+                else:
+                    m = re.search(r"pass (\d+)", proc.stdout)
+                    count_str = f" ({m.group(1)} tests passed)" if m else ""
+                    log_pass(cat, f"all JS unit tests passed cleanly{count_str}")
+            except subprocess.TimeoutExpired:
+                log_error(cat, "JS unit tests timed out after 15s")
+            except Exception as e:
+                log_error(cat, f"failed to execute JS unit tests: {e}")
 
-    tests_dir = ROOT / "tests" / "unit"
-    if not tests_dir.exists() or not list(tests_dir.glob("*.test.mjs")):
-        log_warning(cat, "no unit tests found under tests/unit/")
-        return
-
+    # Python regression tests
+    py_bin = sys.executable
     try:
-        proc = subprocess.run(
-            [node_bin, "--test"],
+        proc_py = subprocess.run(
+            [py_bin, "-m", "unittest", "discover", "-s", "tests/unit", "-p", "test_*.py"],
             cwd=str(ROOT),
             capture_output=True,
             text=True,
-            timeout=15,
+            timeout=25,
             encoding="utf-8",
             errors="replace"
         )
-        if proc.returncode != 0:
-            err_line = proc.stderr.strip() or proc.stdout.strip()
+        if proc_py.returncode != 0:
+            err_line = proc_py.stderr.strip() or proc_py.stdout.strip()
             first_err = err_line.splitlines()[-1] if err_line else "non-zero exit"
-            log_error(cat, f"unit tests failed: {first_err}")
+            log_error(cat, f"Python unit tests failed: {first_err}")
         else:
-            m = re.search(r"pass (\d+)", proc.stdout)
+            m = re.search(r"Ran (\d+) tests", proc_py.stderr)
             count_str = f" ({m.group(1)} tests passed)" if m else ""
-            log_pass(cat, f"all JS unit tests passed cleanly{count_str}")
+            log_pass(cat, f"all Python unit tests passed cleanly{count_str}")
     except subprocess.TimeoutExpired:
-        log_error(cat, "unit tests timed out after 15s")
+        log_error(cat, "Python unit tests timed out after 25s")
     except Exception as e:
-        log_error(cat, f"failed to execute unit tests: {e}")
+        log_error(cat, f"failed to execute Python unit tests: {e}")
 
 
 # ════════════════════════════════════════════════════════════════════
@@ -1388,7 +1411,7 @@ def main():
     args = parser.parse_args()
 
     print(bold("=" * 60))
-    print(bold("  Portfolio Site Verification Suite (v58.7)"))
+    print(bold("  Portfolio Site Verification Suite (v58.8)"))
     print(bold("=" * 60))
     print()
 

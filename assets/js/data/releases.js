@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.7",
+    version: "v58.8",
     date: "2026-10-29",
     sha: "ea2f84e708a2eee2b217433a82d5a92f472ddbf2",
     title: "restore mobile swipe nav by fixing cascade specificity and excluding disclosure tags",
