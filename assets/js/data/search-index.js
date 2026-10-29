@@ -426,6 +426,13 @@ const SEARCH_STATIC_INDEX = {
   },
   {
     "type": "project",
+    "title": "Codon Stream — 500-Gene CP Algorithmic Library",
+    "meta": "C++20, Python 3.11, Algorithms",
+    "href": "projects.html#p-047",
+    "text": "codon stream — 500-gene cp algorithmic library hardened 500-gene repository of competitive programming primitives, algorithmic templates, and ieeextreme contest solutions. automated schema validation, empirical fitness benchmarking, and big-o computational complexity profiling across 6 architectural tiers. 2-layer contest cartography: 11-page printable desk reference (contest_map + contest_core) within regulation limits and automated mock drill harness. c++20 python 3.11 algorithms ieeextreme automated testing"
+  },
+  {
+    "type": "project",
     "title": "Alpha Android Super-App",
     "meta": "In Progress · Kotlin, Jetpack Compose, Material3",
     "href": "projects.html#p-002",

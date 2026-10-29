@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.4",
+    version: "v58.5",
     date: "2026-10-26",
     sha: "e9fbf204ccd4450b90f68dc2238c21b48c6aeba3",
     title: "integrate gh.bat and gh.ps1 v1.5.0 companion forwarder",
