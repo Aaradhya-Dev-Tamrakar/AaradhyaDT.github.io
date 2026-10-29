@@ -288,11 +288,16 @@ function Show-WrapperHelp {
    .\gh.bat issue comment 28 --body 'Verified `pytest` 100% pass.'
 
 2. BUILT-IN GITHUB-WORKFLOW SOP SHORTCUTS
-   a) Create Issue with Native Type & Milestone (issue-create / -NewIssue):
+   a) Create Issue with Native Type, Milestone & Attachments (issue-create / -NewIssue):
       .\gh.bat issue-create --title "[Feature] Add Metric" --assignee AaradhyaDT `
-          --label "enhancement" --type Feature --milestone "M1" --body "## Overview..."
+          --label "enhancement" --type Feature --milestone "M1" --body "## Overview..." `
+          --attach "./diagram.png#Architecture Flow"
 
-   b) Toggle Issue Task Checkboxes (task / -Task):
+   b) Close Issue with Verifiable Proof & Evidence Attachments (close-verified / -CloseIssue):
+      .\gh.bat close-verified 28 --comment "Verified 100% tests pass." `
+          --attach "./test_run.log#Test Suite Output"
+
+   c) Toggle Issue Task Checkboxes (task / -Task):
       .\gh.bat task --issue 28 --list
       .\gh.bat task --issue 28 --task "metrics.py"
       .\gh.bat task --issue 28 --index 2
@@ -387,13 +392,14 @@ function Invoke-IssueCreateShortcut {
     )
 
     $title     = $null
-    $body      = $null
-    $bodyFile  = $null
-    $assignee  = $null
-    $labels    = [System.Collections.Generic.List[string]]::new()
-    $milestone = $null
-    $issueType = $null
-    $repo      = $null
+    $body        = $null
+    $bodyFile    = $null
+    $assignee    = $null
+    $labels      = [System.Collections.Generic.List[string]]::new()
+    $attachments = [System.Collections.Generic.List[string]]::new()
+    $milestone   = $null
+    $issueType   = $null
+    $repo        = $null
 
     $i = 0
     while ($i -lt $SubArgs.Count) {
@@ -413,6 +419,9 @@ function Invoke-IssueCreateShortcut {
             }
             '^(--label|-Label|-l)$' {
                 $labels.Add($SubArgs[$i + 1]); $i += 2; continue
+            }
+            '^(--attach|-Attach|--attachment)$' {
+                $attachments.Add($SubArgs[$i + 1]); $i += 2; continue
             }
             '^(--milestone|-Milestone|-m)$' {
                 $milestone = $SubArgs[$i + 1]; $i += 2; continue
@@ -454,6 +463,10 @@ function Invoke-IssueCreateShortcut {
     if ($repo) {
         $createArgs.Add("--repo")
         $createArgs.Add($repo)
+    }
+    foreach ($att in $attachments) {
+        $createArgs.Add("--attach")
+        $createArgs.Add($att)
     }
     if ($bodyFile) {
         $createArgs.Add("--body-file")
@@ -573,10 +586,11 @@ function Invoke-CloseVerifiedShortcut {
         [string[]]$SubArgs
     )
 
-    $issueNum = $null
-    $comment  = $null
-    $sha      = $null
-    $repo     = $null
+    $issueNum    = $null
+    $comment     = $null
+    $sha         = $null
+    $repo        = $null
+    $attachments = [System.Collections.Generic.List[string]]::new()
 
     $i = 0
     while ($i -lt $SubArgs.Count) {
@@ -590,6 +604,9 @@ function Invoke-CloseVerifiedShortcut {
             }
             '^(--sha|-Sha)$' {
                 $sha = $SubArgs[$i + 1]; $i += 2; continue
+            }
+            '^(--attach|-Attach|--attachment)$' {
+                $attachments.Add($SubArgs[$i + 1]); $i += 2; continue
             }
             '^(--repo|-Repo|-R)$' {
                 $repo = $SubArgs[$i + 1]; $i += 2; continue
@@ -632,6 +649,10 @@ function Invoke-CloseVerifiedShortcut {
     $commentArgs.Add($issueNum)
     $commentArgs.Add("--body-file")
     $commentArgs.Add($tmpFile)
+    foreach ($att in $attachments) {
+        $commentArgs.Add("--attach")
+        $commentArgs.Add($att)
+    }
     if ($repo) {
         $commentArgs.Add("--repo")
         $commentArgs.Add($repo)
@@ -652,6 +673,7 @@ function Invoke-CloseVerifiedShortcut {
             shortcut     = "close-verified"
             issue_number = [int]$issueNum
             commit_sha   = $sha
+            attachments  = @($attachments)
             comment_body = $finalComment
             comment_args = @($commentArgs)
             close_args   = @($closeArgs)
@@ -853,7 +875,7 @@ function Invoke-BranchCleanShortcut {
 try {
     $rawArgs = [System.Collections.Generic.List[string]]::new()
     foreach ($a in $args) {
-        if ($a -ceq "--DryRunWrapper" -or $a -ceq "-DryRunWrapper") {
+        if ($a -in @("--DryRunWrapper", "-DryRunWrapper", "-DryRun", "--dry-run")) {
             $script:DryRunWrapper = $true
             continue
         }

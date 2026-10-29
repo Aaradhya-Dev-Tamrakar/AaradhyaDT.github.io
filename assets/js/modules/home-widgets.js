@@ -1,6 +1,6 @@
 /* ============================================================
 
-   HOME WIDGETS — index.html-only status widgets (v58.5)
+   HOME WIDGETS — index.html-only status widgets (v58.6)
 
    Kathmandu clock · live date labels · last-commit badge.
 
