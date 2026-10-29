@@ -8,9 +8,9 @@
 const SITE_RELEASES = [
   {
     version: "v58.6",
-    date: "2026-10-26",
-    sha: "e9fbf204ccd4450b90f68dc2238c21b48c6aeba3",
-    title: "integrate gh.bat and gh.ps1 v1.5.0 companion forwarder",
+    date: "2026-10-29",
+    sha: "63fe9c74e38024f7ac033769c2355474edf7548b",
+    title: "sync gh.ps1 v1.6.0 with --attach media support",
     highlights: []
   },
   {

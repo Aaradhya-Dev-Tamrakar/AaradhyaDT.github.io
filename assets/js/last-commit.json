@@ -1,6 +1,6 @@
 {
-  "sha": "e9fbf204ccd4450b90f68dc2238c21b48c6aeba3",
-  "shortSha": "e9fbf20",
-  "date": "2026-10-26T17:21:02+05:45",
-  "message": "feat(workflow): integrate gh.bat and gh.ps1 v1.5.0 companion forwarder"
+  "sha": "63fe9c74e38024f7ac033769c2355474edf7548b",
+  "shortSha": "63fe9c7",
+  "date": "2026-10-29T09:15:22+05:45",
+  "message": "chore(tooling): sync gh.ps1 v1.6.0 with --attach media support"
 }
