@@ -7,7 +7,7 @@
    ============================================================ */
 const SITE_RELEASES = [
   {
-    version: "v58.6",
+    version: "v58.7",
     date: "2026-10-29",
     sha: "63fe9c74e38024f7ac033769c2355474edf7548b",
     title: "sync gh.ps1 v1.6.0 with --attach media support",

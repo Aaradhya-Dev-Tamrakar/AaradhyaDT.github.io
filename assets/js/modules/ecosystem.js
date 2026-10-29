@@ -1,4 +1,4 @@
-/* MODULE: ecosystem.js — aaradhyadt.github.io (v58.6)
+/* MODULE: ecosystem.js — aaradhyadt.github.io (v58.7)
    Progressively enhance the static, linked project tree. */
 (function initEcosystem() {
   'use strict';

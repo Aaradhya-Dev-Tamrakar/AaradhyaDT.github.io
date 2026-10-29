@@ -1,5 +1,5 @@
 /* ============================================================
-   MODULE: haptics.js — aaradhyadt.github.io (v58.6)
+   MODULE: haptics.js — aaradhyadt.github.io (v58.7)
    Touch gesture recognition and haptic feedback.
    ============================================================ */
 
@@ -186,7 +186,7 @@ function initSwipeNav() {
     if (e.touches.length !== 1) return;
     // Don't swipe when interacting with terminal, modals, or drawer
     const el = e.target;
-    if (el.closest('.terminal-card, .nav-drawer, #cmdk, #cert-lightbox, #whatsNewModal, #shortcutsModal, #accessModalOverlay, #resumeModalOverlay, #tourOverlay, #skillRadarModalOverlay, .access-modal-overlay, .resume-modal-overlay, .tour-overlay, [role="dialog"], [aria-modal="true"], .form-input, .form-textarea, input, textarea')) return;
+    if (el.closest('.terminal-card, .nav-drawer, #cmdk, #cert-lightbox, #whatsNewModal, #shortcutsModal, #accessModalOverlay, #resumeModalOverlay, #tourOverlay, #skillRadarModalOverlay, .access-modal-overlay, .resume-modal-overlay, .tour-overlay, [role="dialog"], [aria-modal="true"], .form-input, .form-textarea, input, textarea, summary, .responsive-disclosure')) return;
 
     startX = e.touches[0].clientX;
     startY = e.touches[0].clientY;
